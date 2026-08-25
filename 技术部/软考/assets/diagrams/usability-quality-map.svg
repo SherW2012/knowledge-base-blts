@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">易用性的产品属性、使用结果与相邻质量特性</title>
+  <desc id="desc">上方展示产品易用性如何影响用户使用结果，下方区分易用性、可用性和可维护性的评价对象。</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#40372f" flood-opacity="0.10"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#91887d"/></marker>
+    <style>
+      .title{font:700 39px "Microsoft YaHei","PingFang SC",sans-serif;fill:#22201d}.sub{font:20px "Microsoft YaHei","PingFang SC",sans-serif;fill:#786f66}.h{font:700 25px "Microsoft YaHei","PingFang SC",sans-serif;fill:#5d554d}.t{font:19px "Microsoft YaHei","PingFang SC",sans-serif;fill:#6d645c}.tag{font:700 19px "Microsoft YaHei","PingFang SC",sans-serif;fill:#675e55}.line{fill:none;stroke:#91887d;stroke-width:3;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1400" height="820" rx="38" fill="#fbfaf7"/>
+  <text x="70" y="78" class="title">易用性：从产品交互属性到用户使用结果</text>
+  <text x="70" y="116" class="sub">先看产品是否容易理解、学习和操作，再看用户能否高效、满意地完成任务</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="170" width="430" height="270" rx="28" fill="#e7edec" stroke="#9cadaa" stroke-width="1.8"/>
+    <rect x="900" y="170" width="430" height="270" rx="28" fill="#f0e8e4" stroke="#b89e94" stroke-width="1.8"/>
+    <rect x="570" y="240" width="260" height="130" rx="28" fill="#eee9df" stroke="#b7a98e" stroke-width="1.8"/>
+  </g>
+  <text x="285" y="220" text-anchor="middle" class="h">产品本身的易用性</text>
+  <text x="130" y="276" class="t">• 容易理解功能和提示</text><text x="130" y="318" class="t">• 容易学习并形成熟练操作</text><text x="130" y="360" class="t">• 容易控制、纠错和完成任务</text><text x="130" y="402" class="t">• 支持不同能力和条件的用户</text>
+  <text x="700" y="286" text-anchor="middle" class="h">具体使用环境</text><text x="700" y="326" text-anchor="middle" class="t">用户 · 任务 · 设备 · 场景</text>
+  <text x="1115" y="220" text-anchor="middle" class="h">用户实际使用结果</text>
+  <text x="960" y="276" class="t">• 有效性：能否正确完成任务</text><text x="960" y="318" class="t">• 操作效率：时间与操作成本</text><text x="960" y="360" class="t">• 满意度：用户的接受和感受</text><text x="960" y="402" class="t">• 学习结果：熟练度变化</text>
+  <path d="M500 305 H570" class="line"/><path d="M830 305 H900" class="line"/>
+
+  <text x="70" y="520" class="h">名称相近，但评价对象不同</text>
+  <g filter="url(#shadow)">
+    <rect x="70" y="565" width="390" height="175" rx="25" fill="#e7edec" stroke="#9cadaa" stroke-width="1.5"/>
+    <rect x="505" y="565" width="390" height="175" rx="25" fill="#ebe8ef" stroke="#a89fb0" stroke-width="1.5"/>
+    <rect x="940" y="565" width="390" height="175" rx="25" fill="#eee9df" stroke="#b7a98e" stroke-width="1.5"/>
+  </g>
+  <text x="265" y="610" text-anchor="middle" class="h">易用性 · Usability</text><text x="265" y="651" text-anchor="middle" class="t">用户是否容易学习和操作</text><text x="265" y="693" text-anchor="middle" class="tag">评价用户与系统的交互</text>
+  <text x="700" y="610" text-anchor="middle" class="h">可用性 · Availability</text><text x="700" y="651" text-anchor="middle" class="t">需要使用时服务是否正常</text><text x="700" y="693" text-anchor="middle" class="tag">评价服务的运行状态</text>
+  <text x="1135" y="610" text-anchor="middle" class="h">可维护性 · Maintainability</text><text x="1135" y="651" text-anchor="middle" class="t">是否容易诊断、修改和验证</text><text x="1135" y="693" text-anchor="middle" class="tag">评价软件的修改过程</text>
+</svg>

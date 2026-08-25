@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">敏捷开发从价值观到具体方法的层级</title>
+  <desc id="desc">敏捷宣言形成价值观，十二项原则指导实践，Scrum、XP、Kanban、Crystal和FDD提供具体实施方式</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#4f493f" flood-opacity=".10"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#918a80"/></marker>
+    <style>
+      .title{font:700 25px Inter,'Microsoft YaHei',sans-serif;fill:#292724}.subtitle{font:400 13px Inter,'Microsoft YaHei',sans-serif;fill:#7c766d}
+      .level{font:700 12px Inter,'Microsoft YaHei',sans-serif;fill:#827b72;letter-spacing:.08em}.node-title{font:700 16px Inter,'Microsoft YaHei',sans-serif}.node-sub{font:400 12px Inter,'Microsoft YaHei',sans-serif;fill:#6f6a62}.edge{stroke:#918a80;stroke-width:1.6;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="960" height="620" rx="24" fill="#fbfaf7"/>
+  <text x="48" y="50" class="title">敏捷开发从价值观到具体方法的层级</text>
+  <text x="48" y="76" class="subtitle">敏捷不是Scrum的别名，Scrum只是落实敏捷原则的一种框架</text>
+
+  <text x="64" y="129" class="level">价值观</text>
+  <rect x="166" y="102" width="628" height="76" rx="18" fill="#eee6e3" stroke="#b39b95" filter="url(#shadow)"/>
+  <text x="480" y="132" class="node-title" text-anchor="middle" fill="#6f5c54">敏捷宣言 · 四项价值</text>
+  <text x="480" y="156" class="node-sub" text-anchor="middle">互动 · 可工作软件 · 客户合作 · 响应变化</text>
+  <path d="M480 178 L480 218" class="edge"/>
+
+  <text x="64" y="262" class="level">原则</text>
+  <rect x="166" y="218" width="628" height="88" rx="18" fill="#e7ece6" stroke="#95a192"/>
+  <text x="480" y="251" class="node-title" text-anchor="middle" fill="#596657">十二项原则</text>
+  <text x="480" y="277" class="node-sub" text-anchor="middle">持续交付 · 接纳变化 · 协作 · 技术卓越 · 可持续节奏 · 定期改进</text>
+  <path d="M480 306 L480 348 M480 348 L142 348 M480 348 L818 348" class="edge"/>
+
+  <text x="64" y="391" class="level">方法与框架</text>
+  <rect x="55" y="372" width="162" height="112" rx="16" fill="#e7ebeb" stroke="#9aa7a6"/>
+  <text x="136" y="407" class="node-title" text-anchor="middle" fill="#536363">Scrum</text><text x="136" y="435" class="node-sub" text-anchor="middle">Sprint与反馈事件</text><text x="136" y="457" class="node-sub" text-anchor="middle">管理复杂产品</text>
+  <rect x="227" y="372" width="162" height="112" rx="16" fill="#ece8ee" stroke="#a097a5"/>
+  <text x="308" y="407" class="node-title" text-anchor="middle" fill="#685f6d">XP</text><text x="308" y="435" class="node-sub" text-anchor="middle">TDD · 结对 · 重构</text><text x="308" y="457" class="node-sub" text-anchor="middle">强化工程质量</text>
+  <rect x="399" y="372" width="162" height="112" rx="16" fill="#eee8df" stroke="#b7a990"/>
+  <text x="480" y="407" class="node-title" text-anchor="middle" fill="#6e624f">Kanban</text><text x="480" y="435" class="node-sub" text-anchor="middle">可视化 · WIP限制</text><text x="480" y="457" class="node-sub" text-anchor="middle">改善工作流</text>
+  <rect x="571" y="372" width="162" height="112" rx="16" fill="#e7ece6" stroke="#95a192"/>
+  <text x="652" y="407" class="node-title" text-anchor="middle" fill="#596657">Crystal</text><text x="652" y="435" class="node-sub" text-anchor="middle">按规模与关键性</text><text x="652" y="457" class="node-sub" text-anchor="middle">调整过程</text>
+  <rect x="743" y="372" width="162" height="112" rx="16" fill="#eee6e3" stroke="#b39b95"/>
+  <text x="824" y="407" class="node-title" text-anchor="middle" fill="#6f5c54">FDD</text><text x="824" y="435" class="node-sub" text-anchor="middle">领域模型与特征</text><text x="824" y="457" class="node-sub" text-anchor="middle">按特征构建</text>
+
+  <rect x="174" y="526" width="612" height="56" rx="16" fill="#f0ede6" stroke="#c8c0b4"/>
+  <text x="480" y="550" class="node-title" text-anchor="middle" fill="#5e5951">方法可以组合使用</text>
+  <text x="480" y="570" class="node-sub" text-anchor="middle">例如用Scrum组织节奏，用XP保证工程质量，用Kanban观察工作流</text>
+</svg>

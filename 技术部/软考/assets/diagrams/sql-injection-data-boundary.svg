@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="820" viewBox="0 0 1500 820" role="img" aria-labelledby="title desc">
+  <title id="title">SQL拼接与参数化查询的数据边界</title>
+  <desc id="desc">左侧字符串拼接让输入进入SQL文本，右侧参数化查询保持SQL模板和参数数据分离。</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#6f665c" flood-opacity=".12"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#8d857b"/></marker>
+    <style>
+      .title{font:700 38px 'Microsoft YaHei',sans-serif;fill:#282522}.sub{font:20px 'Microsoft YaHei',sans-serif;fill:#756d65}
+      .head{font:700 28px 'Microsoft YaHei',sans-serif;fill:#49433e}.label{font:700 21px 'Microsoft YaHei',sans-serif;fill:#514b45}.text{font:18px 'Microsoft YaHei',sans-serif;fill:#675f58}.small{font:16px 'Microsoft YaHei',sans-serif;fill:#756d65}
+      .line{stroke:#8d857b;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1500" height="820" rx="34" fill="#fbfaf7"/>
+  <text x="65" y="72" class="title">输入何时从“数据”变成SQL语法</text>
+  <text x="65" y="110" class="sub">是否调用某个API不是判断标准，关键是SQL结构与外部输入有没有保持边界</text>
+
+  <g filter="url(#shadow)">
+    <rect x="55" y="155" width="665" height="600" rx="30" fill="#f3eae6" stroke="#c9a99b"/>
+    <rect x="780" y="155" width="665" height="600" rx="30" fill="#e9f0ee" stroke="#9db8b2"/>
+  </g>
+  <text x="387" y="208" text-anchor="middle" class="head">字符串拼接</text>
+  <text x="1112" y="208" text-anchor="middle" class="head">参数化查询</text>
+
+  <rect x="105" y="250" width="235" height="92" rx="20" fill="#fbf8f4" stroke="#c9a99b"/>
+  <text x="222" y="286" text-anchor="middle" class="label">SQL片段</text><text x="222" y="316" text-anchor="middle" class="small">固定文本的一部分</text>
+  <rect x="435" y="250" width="235" height="92" rx="20" fill="#fbf8f4" stroke="#c9a99b"/>
+  <text x="552" y="286" text-anchor="middle" class="label">外部输入</text><text x="552" y="316" text-anchor="middle" class="small">原本应当只是数据</text>
+  <path d="M222 342V395H348" class="line"/><path d="M552 342V395H426" class="line"/>
+  <rect x="180" y="405" width="415" height="112" rx="22" fill="#ead9d1" stroke="#b98c7c"/>
+  <text x="387" y="446" text-anchor="middle" class="label">拼成一整段SQL文本</text>
+  <text x="387" y="478" text-anchor="middle" class="text">数据库重新解析整段文本</text>
+  <text x="387" y="504" text-anchor="middle" class="small">输入可能被识别为关键字、运算符或子句</text>
+  <path d="M387 517V580" class="line"/>
+  <rect x="180" y="590" width="415" height="105" rx="22" fill="#f6e4df" stroke="#b98c7c"/>
+  <text x="387" y="632" text-anchor="middle" class="label">语法边界被破坏</text><text x="387" y="665" text-anchor="middle" class="text">形成SQL注入风险</text>
+
+  <rect x="830" y="250" width="235" height="92" rx="20" fill="#fbf8f4" stroke="#9db8b2"/>
+  <text x="947" y="286" text-anchor="middle" class="label">SQL模板</text><text x="947" y="316" text-anchor="middle" class="small">结构中保留参数占位符</text>
+  <rect x="1160" y="250" width="235" height="92" rx="20" fill="#fbf8f4" stroke="#9db8b2"/>
+  <text x="1277" y="286" text-anchor="middle" class="label">外部输入</text><text x="1277" y="316" text-anchor="middle" class="small">通过参数接口单独传入</text>
+  <path d="M947 342V405" class="line"/><path d="M1277 342V405" class="line"/>
+  <rect x="840" y="415" width="215" height="105" rx="22" fill="#dce8e5" stroke="#8ba9a2"/>
+  <text x="947" y="456" text-anchor="middle" class="label">确定SQL结构</text><text x="947" y="489" text-anchor="middle" class="text">解析语法和占位符</text>
+  <rect x="1170" y="415" width="215" height="105" rx="22" fill="#e6e1ed" stroke="#aaa0ba"/>
+  <text x="1277" y="456" text-anchor="middle" class="label">绑定参数值</text><text x="1277" y="489" text-anchor="middle" class="text">保留数据类型和值</text>
+  <path d="M947 520V570H1070" class="line"/><path d="M1277 520V570H1155" class="line"/>
+  <rect x="905" y="580" width="415" height="115" rx="22" fill="#dce9e2" stroke="#83a494"/>
+  <text x="1112" y="623" text-anchor="middle" class="label">结构与数据保持隔离</text>
+  <text x="1112" y="656" text-anchor="middle" class="text">参数内容只能作为值，不能改写SQL语法</text>
+</svg>

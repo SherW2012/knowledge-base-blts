@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 540" role="img" aria-labelledby="title desc">
+  <title id="title">RAG 检索增强生成的完整流程</title><desc id="desc">离线把文档切块、嵌入、建向量库；在线把问题嵌入后检索出相关片段，拼进提示交给模型，生成带出处的回答</desc>
+  <defs>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#4f493f" flood-opacity=".10"/></filter>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7c7a74"/></marker>
+    <style>
+      .title{font:700 23px Inter,'Microsoft YaHei',sans-serif;fill:#292724}.subtitle{font:400 13px Inter,'Microsoft YaHei',sans-serif;fill:#7c766d}
+      .lane{font:700 13px Inter,'Microsoft YaHei',sans-serif;fill:#8b8479;letter-spacing:.04em}
+      .nt{font:700 13.5px Inter,'Microsoft YaHei',sans-serif}.ns{font:400 11px Inter,'Microsoft YaHei',sans-serif;fill:#6f6a62}
+      .eg{font:600 11px Inter,'Microsoft YaHei',sans-serif;fill:#6f5c54}.el{font:600 10.5px Inter,'Microsoft YaHei',sans-serif;fill:#716b63}
+    </style>
+  </defs>
+  <rect width="980" height="540" rx="24" fill="#fbfaf7"/>
+  <text x="48" y="46" class="title">RAG：检索增强生成的完整流程</text><text x="48" y="72" class="subtitle">模型不变，把外部知识检索出来、注入上下文，再让模型据料作答</text>
+
+  <text x="56" y="116" class="lane">① 离线建库（准备一次，之后可增量更新）</text>
+  <rect x="56" y="128" width="120" height="52" rx="11" fill="#eee9df" stroke="#6d6250" filter="url(#sh)"/><text x="116" y="152" class="nt" text-anchor="middle" fill="#6d6250">企业文档</text><text x="116" y="169" class="ns" text-anchor="middle">手册·制度·工单</text>
+  <rect x="216" y="128" width="104" height="52" rx="11" fill="#f4f2ed" stroke="#cbc7ba"/><text x="268" y="152" class="nt" text-anchor="middle">切块</text><text x="268" y="169" class="ns" text-anchor="middle">按语义分段</text>
+  <rect x="360" y="128" width="104" height="52" rx="11" fill="#f4f2ed" stroke="#cbc7ba"/><text x="412" y="152" class="nt" text-anchor="middle">嵌入</text><text x="412" y="169" class="ns" text-anchor="middle">每块变成向量</text>
+  <path d="M176 154 L 212 154" fill="none" stroke="#7c7a74" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M320 154 L 356 154" fill="none" stroke="#7c7a74" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M464 154 L 556 168" fill="none" stroke="#7c7a74" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <rect x="560" y="150" width="150" height="96" rx="14" fill="#e7ebeb" stroke="#536363" filter="url(#sh)"/><text x="635" y="192" class="nt" text-anchor="middle" fill="#4a5757">向量库</text><text x="635" y="212" class="ns" text-anchor="middle">块向量 + 原文</text><text x="635" y="230" class="ns" text-anchor="middle">支持近似最近邻检索</text>
+
+  <line x1="48" y1="278" x2="932" y2="278" stroke="#e2ded5"/>
+  <text x="56" y="308" class="lane">② 在线问答（每次提问都走一遍）</text>
+
+  <rect x="56" y="322" width="150" height="56" rx="11" fill="#e4ebe5" stroke="#5b695f" filter="url(#sh)"/><text x="131" y="346" class="nt" text-anchor="middle" fill="#4c5a4c">用户问题</text><text x="131" y="365" class="eg" text-anchor="middle">“公司年假几天？”</text>
+  <rect x="238" y="322" width="90" height="56" rx="11" fill="#f4f2ed" stroke="#cbc7ba"/><text x="283" y="346" class="nt" text-anchor="middle">嵌入</text><text x="283" y="365" class="ns" text-anchor="middle">问题→向量</text>
+  <rect x="360" y="322" width="104" height="56" rx="11" fill="#f4f2ed" stroke="#cbc7ba"/><text x="412" y="346" class="nt" text-anchor="middle">向量检索</text><text x="412" y="365" class="ns" text-anchor="middle">找最相似的块</text>
+  <rect x="500" y="322" width="170" height="56" rx="11" fill="#eee6e3" stroke="#6f5c54" filter="url(#sh)"/><text x="585" y="345" class="nt" text-anchor="middle" fill="#6f5c54">Top-k 相关片段</text><text x="585" y="364" class="eg" text-anchor="middle">《员工手册》第4章</text>
+  <rect x="704" y="322" width="96" height="56" rx="11" fill="#f4f2ed" stroke="#cbc7ba"/><text x="752" y="346" class="nt" text-anchor="middle">拼进提示</text><text x="752" y="365" class="ns" text-anchor="middle">片段+问题</text>
+  <rect x="834" y="322" width="96" height="56" rx="11" fill="#f6e6dd" stroke="#bd5d3a" filter="url(#sh)"/><text x="882" y="346" class="nt" text-anchor="middle" fill="#a2492b">模型</text><text x="882" y="365" class="ns" text-anchor="middle">据料生成</text>
+
+  <path d="M206 350 L 234 350" fill="none" stroke="#7c7a74" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M328 350 L 356 350" fill="none" stroke="#7c7a74" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M464 350 L 496 350" fill="none" stroke="#7c7a74" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M670 350 L 700 350" fill="none" stroke="#7c7a74" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M800 350 L 830 350" fill="none" stroke="#7c7a74" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M412 322 L 610 250" fill="none" stroke="#7c7a74" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ar)"/><text x="470" y="292" class="el">查向量库</text>
+
+  <rect x="500" y="430" width="430" height="58" rx="12" fill="#e7ebe3" stroke="#9da58b" filter="url(#sh)"/><text x="520" y="454" class="nt" fill="#59604e">带出处的回答</text><text x="520" y="475" class="eg">“根据《员工手册》第4章：年假 10 天。”</text>
+  <path d="M882 378 L 882 430 L 934 430" fill="none" stroke="#7c7a74" stroke-width="1.6" marker-end="url(#ar)"/>
+  <text x="56" y="452" class="ns">知识随库更新、可追溯出处、</text><text x="56" y="472" class="ns">补上模型没有的私有/最新知识，</text><text x="56" y="492" class="ns">并因“有据可依”而降低幻觉。</text>
+</svg>

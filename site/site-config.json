@@ -1,0 +1,12 @@
+{
+  "title": "BLTS 知识库",
+  "subtitle": "把分散的知识组织成可以持续生长的体系",
+  "departments": [
+    { "name": "本部", "description": "健康管理、生活习惯与日常系统", "mark": "本" },
+    { "name": "外交部", "description": "个人成长、心理模式、人际关系与人格体系", "mark": "外" },
+    { "name": "技术部", "description": "技术积累、软考、工程实践与技术壁垒", "mark": "技" },
+    { "name": "前沿部", "description": "AI 前沿、内容研究、创意与待验证方向", "mark": "前" },
+    { "name": "商务部", "description": "理财、投资、商业研究与 CFA", "mark": "商" },
+    { "name": "艺术部", "description": "审美、摄影、创作技巧与作品复盘", "mark": "艺" }
+  ]
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">OSI七层与TCP/IP协议栈</title><desc id="desc">分层的价值是规定每一层向上提供什么能力，并通过接口组合完整通信</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#4f493f" flood-opacity=".10"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7c7a74"/></marker>
+    <style>
+      .title{font:700 25px Inter,'Microsoft YaHei',sans-serif;fill:#292724}.subtitle{font:400 13px Inter,'Microsoft YaHei',sans-serif;fill:#7c766d}
+      .group{font:700 12px Inter,'Microsoft YaHei',sans-serif;fill:#8b8479;letter-spacing:.08em}.node-title{font:700 15px Inter,'Microsoft YaHei',sans-serif}.node-sub{font:400 12px Inter,'Microsoft YaHei',sans-serif;fill:#6f6a62}
+      .edge{fill:none;stroke:#7c7a74;stroke-width:1.55;marker-end:url(#arrow)}.edge-label{font:600 11px Inter,'Microsoft YaHei',sans-serif;fill:#716b63}
+      .note-title{font:700 12px Inter,'Microsoft YaHei',sans-serif;fill:#667166}.note{font:500 13px Inter,'Microsoft YaHei',sans-serif;fill:#514c45}
+    </style>
+  </defs>
+  <rect width="960" height="560" rx="24" fill="#fbfaf7"/>
+  <text x="48" y="50" class="title">OSI七层与TCP/IP协议栈</text><text x="48" y="76" class="subtitle">分层的价值是规定每一层向上提供什么能力，并通过接口组合完整通信</text>
+  
+  <rect x="70" y="112" width="390" height="43" rx="10" fill="#eee6e3" stroke="#6f5c54"/><text x="104" y="139" class="node-title" fill="#6f5c54">应用层</text><text x="235" y="139" class="node-sub">HTTP · DNS · SMTP</text><rect x="70" y="165" width="390" height="43" rx="10" fill="#eee9df" stroke="#6d6250"/><text x="104" y="192" class="node-title" fill="#6d6250">表示层</text><text x="235" y="192" class="node-sub">编码 · 压缩 · 加密表示</text><rect x="70" y="218" width="390" height="43" rx="10" fill="#ece8ee" stroke="#685f6d"/><text x="104" y="245" class="node-title" fill="#685f6d">会话层</text><text x="235" y="245" class="node-sub">会话建立与管理</text><rect x="70" y="271" width="390" height="43" rx="10" fill="#e7ebeb" stroke="#536363"/><text x="104" y="298" class="node-title" fill="#536363">传输层</text><text x="235" y="298" class="node-sub">TCP · UDP · 端口</text><rect x="70" y="324" width="390" height="43" rx="10" fill="#e4ebe5" stroke="#5b695f"/><text x="104" y="351" class="node-title" fill="#5b695f">网络层</text><text x="235" y="351" class="node-sub">IP · 路由 · IP地址</text><rect x="70" y="377" width="390" height="43" rx="10" fill="#e7ebe3" stroke="#626b56"/><text x="104" y="404" class="node-title" fill="#626b56">数据链路层</text><text x="235" y="404" class="node-sub">帧 · MAC · 局部链路</text><rect x="70" y="430" width="390" height="43" rx="10" fill="#ece9e3" stroke="#625e58"/><text x="104" y="457" class="node-title" fill="#625e58">物理层</text><text x="235" y="457" class="node-sub">比特 · 电/光/无线信号</text>
+  <rect x="565" y="112" width="325" height="96" rx="17" fill="#eee6e3" stroke="#b39b95"/><text x="727" y="150" class="node-title" text-anchor="middle" fill="#6f5c54">应用层</text><text x="727" y="177" class="node-sub" text-anchor="middle">对应OSI应用/表示/会话</text>
+  <rect x="565" y="220" width="325" height="62" rx="15" fill="#e7ebeb" stroke="#9aa7a6"/><text x="727" y="258" class="node-title" text-anchor="middle" fill="#536363">传输层 · TCP / UDP</text>
+  <rect x="565" y="294" width="325" height="62" rx="15" fill="#e4ebe5" stroke="#95a192"/><text x="727" y="332" class="node-title" text-anchor="middle" fill="#596657">网际层 · IP</text>
+  <rect x="565" y="368" width="325" height="115" rx="17" fill="#ece9e3" stroke="#aaa39a"/><text x="727" y="413" class="node-title" text-anchor="middle" fill="#625e58">网络接口层</text><text x="727" y="441" class="node-sub" text-anchor="middle">对应数据链路层与物理层</text>
+  <text x="265" y="93" class="group" text-anchor="middle">OSI 七层参考模型</text><text x="727" y="93" class="group" text-anchor="middle">TCP/IP 四层实现体系</text>
+
+  </svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800" role="img" aria-labelledby="title desc">
+  <title id="title">外观设计专利的一般申请原则与两类合案情形</title>
+  <desc id="desc">展示一件申请原则上限一项外观设计，以及同一产品相似设计和成套产品设计两类合案申请。</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#40372f" flood-opacity="0.10"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#91887d"/></marker>
+    <style>
+      .title{font:700 39px "Microsoft YaHei","PingFang SC",sans-serif;fill:#22201d}.sub{font:20px "Microsoft YaHei","PingFang SC",sans-serif;fill:#786f66}.h{font:700 25px "Microsoft YaHei","PingFang SC",sans-serif;fill:#5d554d}.t{font:19px "Microsoft YaHei","PingFang SC",sans-serif;fill:#6d645c}.tag{font:700 19px "Microsoft YaHei","PingFang SC",sans-serif;fill:#675e55}.line{fill:none;stroke:#91887d;stroke-width:3;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1400" height="800" rx="38" fill="#fbfaf7"/>
+  <text x="70" y="78" class="title">外观设计申请：一般规则与两类合案例外</text>
+  <text x="70" y="116" class="sub">先判断是否为一项设计；需要合案时，再判断属于相似设计还是成套产品</text>
+
+  <g filter="url(#shadow)"><rect x="410" y="155" width="580" height="125" rx="28" fill="#eee9df" stroke="#b7a98e" stroke-width="1.8"/></g>
+  <text x="700" y="205" text-anchor="middle" class="h">一般规则：一件申请限于一项外观设计</text>
+  <text x="700" y="245" text-anchor="middle" class="t">保护对象清楚，便于审查和确定权利边界</text>
+
+  <path d="M700 280 V335 H365 V380" class="line"/><path d="M700 335 H1035 V380" class="line"/>
+  <text x="700" y="325" text-anchor="middle" class="tag">符合法定条件时可以合案</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="380" width="590" height="290" rx="30" fill="#e7edec" stroke="#9cadaa" stroke-width="1.8"/>
+    <rect x="740" y="380" width="590" height="290" rx="30" fill="#f0e8e4" stroke="#b89e94" stroke-width="1.8"/>
+  </g>
+  <text x="365" y="430" text-anchor="middle" class="h">同一产品的多项相似设计</text>
+  <text x="130" y="482" class="t">• 各项设计用于同一种产品</text><text x="130" y="524" class="t">• 在简要说明中指定一项基本设计</text><text x="130" y="566" class="t">• 其他设计均与基本设计相似</text><text x="130" y="608" class="t">• 一件申请中的相似设计不超过10项</text>
+  <rect x="185" y="628" width="360" height="62" rx="20" fill="#dce6e4" stroke="#9cadaa"/><text x="365" y="668" text-anchor="middle" class="tag">同一产品 · 相似变化 · 基本设计</text>
+
+  <text x="1035" y="430" text-anchor="middle" class="h">同类成套产品的多项设计</text>
+  <text x="800" y="482" class="t">• 产品可以不同，但属于分类表同一大类</text><text x="800" y="524" class="t">• 习惯上同时出售或者同时使用</text><text x="800" y="566" class="t">• 各产品具有相同的设计构思</text><text x="800" y="608" class="t">• 不能只凭视觉风格接近判断</text>
+  <rect x="855" y="628" width="360" height="62" rx="20" fill="#eadeda" stroke="#b89e94"/><text x="1035" y="668" text-anchor="middle" class="tag">同一大类 · 成套使用 · 构思一致</text>
+
+  <rect x="290" y="724" width="820" height="48" rx="24" fill="#f3efe8" stroke="#cabfaf"/>
+  <text x="700" y="756" text-anchor="middle" class="tag">合案不等于合并成一张图：每项设计仍需分别表示并按顺序编号</text>
+</svg>

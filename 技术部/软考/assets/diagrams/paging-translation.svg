@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">分页地址转换</title><desc id="desc">虚拟页号用于查页表；页内偏移在转换前后保持不变</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#4f493f" flood-opacity=".10"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7c7a74"/></marker>
+    <style>
+      .title{font:700 25px Inter,'Microsoft YaHei',sans-serif;fill:#292724}.subtitle{font:400 13px Inter,'Microsoft YaHei',sans-serif;fill:#7c766d}
+      .group{font:700 12px Inter,'Microsoft YaHei',sans-serif;fill:#8b8479;letter-spacing:.08em}.node-title{font:700 15px Inter,'Microsoft YaHei',sans-serif}.node-sub{font:400 12px Inter,'Microsoft YaHei',sans-serif;fill:#6f6a62}
+      .edge{fill:none;stroke:#7c7a74;stroke-width:1.55;marker-end:url(#arrow)}.edge-label{font:600 11px Inter,'Microsoft YaHei',sans-serif;fill:#716b63}
+      .note-title{font:700 12px Inter,'Microsoft YaHei',sans-serif;fill:#667166}.note{font:500 13px Inter,'Microsoft YaHei',sans-serif;fill:#514c45}
+    </style>
+  </defs>
+  <rect width="960" height="560" rx="24" fill="#fbfaf7"/>
+  <text x="48" y="50" class="title">分页地址转换</text><text x="48" y="76" class="subtitle">虚拟页号用于查页表；页内偏移在转换前后保持不变</text>
+  
+  <rect x="48" y="122" width="245" height="106" rx="17" fill="#e7ebeb" stroke="#9aa7a6"/><text x="170" y="153" class="group" text-anchor="middle">虚拟地址</text><rect x="69" y="169" width="112" height="40" rx="9" fill="#d9e9ff"/><rect x="181" y="169" width="91" height="40" rx="9" fill="#eef5ff"/><text x="125" y="194" class="node-title" text-anchor="middle" fill="#536363">虚拟页号</text><text x="226" y="194" class="node-title" text-anchor="middle" fill="#536363">偏移</text>
+  <rect x="360" y="105" width="240" height="240" rx="20" fill="#eee9df" stroke="#b3a386"/><text x="480" y="136" class="node-title" text-anchor="middle" fill="#6d6250">当前进程的页表</text><rect x="392" y="161" width="176" height="43" rx="8" fill="#fffaf0"/><text x="480" y="188" class="node-sub" text-anchor="middle">页0 → 页框5</text><rect x="392" y="214" width="176" height="43" rx="8" fill="#fffaf0"/><text x="480" y="241" class="node-sub" text-anchor="middle">页1 → 页框2</text><rect x="392" y="267" width="176" height="43" rx="8" fill="#eee6e3"/><text x="480" y="294" class="node-sub" text-anchor="middle">页2 → 不在主存</text>
+  <rect x="667" y="122" width="245" height="106" rx="17" fill="#e7ece6" stroke="#95a192"/><text x="789" y="153" class="group" text-anchor="middle">物理地址</text><rect x="688" y="169" width="112" height="40" rx="9" fill="#dff0df"/><rect x="800" y="169" width="91" height="40" rx="9" fill="#f0f8f0"/><text x="744" y="194" class="node-title" text-anchor="middle" fill="#596657">页框号</text><text x="845" y="194" class="node-title" text-anchor="middle" fill="#596657">原偏移</text>
+  <path class="edge" d="M293 175 C325 175 330 175 360 175"/><path class="edge" d="M600 175 C625 175 638 175 667 175"/>
+  <rect x="80" y="390" width="800" height="105" rx="18" fill="#f4f2ed" stroke="#ddd7cd"/><text x="104" y="420" class="group">一次访问</text><text x="104" y="449" class="note">① CPU产生虚拟地址　② TLB或页表把虚拟页号映射为页框号　③ 拼接原页内偏移　④ 访问RAM</text><text x="104" y="476" class="node-sub">若存在位为0，则先触发缺页处理，把辅存中的页面调入空闲页框，再更新页表。</text>
+
+  </svg>

@@ -1,0 +1,15 @@
+{
+    "order":  [
+                  "00-本章导读.md",
+                  "01-大语言模型的工作原理.md",
+                  "02-推理、采样与推理模型.md",
+                  "03-LLM-API与KV-Cache.md",
+                  "04-Agent机制：Agent-Loop与Tool-Use.md",
+                  "05-上下文工程与提示工程.md",
+                  "06-工具生态与MCP.md",
+                  "07-记忆与检索：Memory、RAG与WebSearch.md",
+                  "08-Subagent与多智能体系统.md",
+                  "09-Harness工程与智能体评估.md",
+                  "10-大模型的落地路线.md"
+              ]
+}
