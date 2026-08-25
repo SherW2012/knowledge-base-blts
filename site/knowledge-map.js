@@ -358,8 +358,8 @@
     mountAll(container, opts) {
       container.querySelectorAll(".knowledge-map").forEach((host) => {
         const src = host.querySelector(".kmap-source");
-        if (!src) return;
-        const source = src.textContent;
+        const source = (src ? src.textContent : host.textContent).trim();
+        if (!source) return;
         try { new KnowledgeMap(host, source, opts); }
         catch (err) { host.innerHTML = `<div class="kmap-error">知识图谱解析失败：${escape(err.message)}</div>`; console.warn(err); }
       });

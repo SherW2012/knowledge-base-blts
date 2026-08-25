@@ -347,8 +347,10 @@
   window.KnowledgeGraph = {
     mountAll(container, opts) {
       container.querySelectorAll(".knowledge-graph").forEach((host) => {
-        const src = host.querySelector(".kg-source"); if (!src) return;
-        try { new ForceGraph(host, src.textContent, opts); }
+        const src = host.querySelector(".kg-source");
+        const source = (src ? src.textContent : host.textContent).trim();
+        if (!source) return;
+        try { new ForceGraph(host, source, opts); }
         catch (err) { host.innerHTML = `<div class="kg-error">知识图谱解析失败：${escape(err.message)}</div>`; console.warn(err); }
       });
     },
