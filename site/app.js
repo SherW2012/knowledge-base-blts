@@ -303,7 +303,15 @@ function convertSpecialCodeBlocks() {
     if (!["mermaid", "knowledge-map", "knowledge-graph"].includes(language)) return;
     const host = document.createElement("div");
     host.className = language;
-    host.textContent = code.textContent;
+    if (language === "mermaid") {
+      host.textContent = code.textContent;
+    } else {
+      const source = document.createElement("div");
+      source.className = language === "knowledge-map" ? "kmap-source" : "kg-source";
+      source.hidden = true;
+      source.textContent = code.textContent;
+      host.appendChild(source);
+    }
     code.parentElement.replaceWith(host);
   });
 }
