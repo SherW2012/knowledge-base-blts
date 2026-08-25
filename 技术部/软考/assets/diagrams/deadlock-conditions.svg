@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">死锁形成条件与资源等待闭环</title>
+  <desc id="desc">上方展示四个必要条件，下方展示两个进程分别占有一个资源并等待对方资源形成的闭环。</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#40372f" flood-opacity="0.10"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#91887d"/></marker>
+    <style>
+      .title{font:700 40px "Microsoft YaHei","PingFang SC",sans-serif;fill:#22201d}.sub{font:20px "Microsoft YaHei","PingFang SC",sans-serif;fill:#786f66}.h{font:700 25px "Microsoft YaHei","PingFang SC",sans-serif;fill:#5d554d}.t{font:19px "Microsoft YaHei","PingFang SC",sans-serif;fill:#6d645c}.label{font:700 21px "Microsoft YaHei","PingFang SC",sans-serif;fill:#665d55}.line{fill:none;stroke:#91887d;stroke-width:3;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1400" height="820" rx="38" fill="#fbfaf7"/>
+  <text x="70" y="80" class="title">死锁成立需要四个条件同时存在</text>
+  <text x="70" y="118" class="sub">破坏任意一个条件都能阻止闭环形成，但不同条件的可实施性不同</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="170" width="285" height="145" rx="24" fill="#e7edec" stroke="#9cadaa" stroke-width="1.5"/>
+    <rect x="385" y="170" width="285" height="145" rx="24" fill="#f0e8e4" stroke="#b89e94" stroke-width="1.5"/>
+    <rect x="700" y="170" width="285" height="145" rx="24" fill="#ebe8ef" stroke="#a89fb0" stroke-width="1.5"/>
+    <rect x="1015" y="170" width="315" height="145" rx="24" fill="#eee9df" stroke="#b7a98e" stroke-width="1.5"/>
+  </g>
+  <text x="212" y="220" text-anchor="middle" class="h">互斥</text><text x="212" y="258" text-anchor="middle" class="t">资源同一时刻只能</text><text x="212" y="287" text-anchor="middle" class="t">由一个进程使用</text>
+  <text x="527" y="220" text-anchor="middle" class="h">请求并保持</text><text x="527" y="258" text-anchor="middle" class="t">占有已有资源时</text><text x="527" y="287" text-anchor="middle" class="t">继续请求新资源</text>
+  <text x="842" y="220" text-anchor="middle" class="h">不可抢占</text><text x="842" y="258" text-anchor="middle" class="t">资源只能由占有者</text><text x="842" y="287" text-anchor="middle" class="t">主动释放</text>
+  <text x="1172" y="220" text-anchor="middle" class="h">循环等待</text><text x="1172" y="258" text-anchor="middle" class="t">进程等待关系</text><text x="1172" y="287" text-anchor="middle" class="t">形成首尾闭环</text>
+
+  <text x="700" y="383" text-anchor="middle" class="h">资源等待闭环</text>
+  <g filter="url(#shadow)">
+    <rect x="110" y="445" width="250" height="130" rx="65" fill="#e7edec" stroke="#9cadaa" stroke-width="2"/>
+    <rect x="1040" y="445" width="250" height="130" rx="65" fill="#ebe8ef" stroke="#a89fb0" stroke-width="2"/>
+    <rect x="475" y="415" width="180" height="105" rx="22" fill="#f0e8e4" stroke="#b89e94" stroke-width="2"/>
+    <rect x="745" y="570" width="180" height="105" rx="22" fill="#eee9df" stroke="#b7a98e" stroke-width="2"/>
+  </g>
+  <text x="235" y="500" text-anchor="middle" class="h">进程 P1</text><text x="235" y="535" text-anchor="middle" class="t">占有 R1，等待 R2</text>
+  <text x="1165" y="500" text-anchor="middle" class="h">进程 P2</text><text x="1165" y="535" text-anchor="middle" class="t">占有 R2，等待 R1</text>
+  <text x="565" y="459" text-anchor="middle" class="label">资源 R1</text><text x="565" y="490" text-anchor="middle" class="t">由 P1 占有</text>
+  <text x="835" y="614" text-anchor="middle" class="label">资源 R2</text><text x="835" y="645" text-anchor="middle" class="t">由 P2 占有</text>
+
+  <path d="M360 482 C405 450,430 448,475 462" class="line"/><text x="414" y="430" class="t">占有</text>
+  <path d="M360 535 C500 700,650 720,745 640" class="line"/><text x="520" y="704" class="t">请求</text>
+  <path d="M1040 482 C940 410,760 405,655 458" class="line"/><text x="850" y="412" class="t">请求</text>
+  <path d="M1040 535 C995 575,970 602,925 618" class="line"/><text x="975" y="615" class="t">占有</text>
+
+  <rect x="350" y="742" width="700" height="48" rx="24" fill="#f3efe8" stroke="#cabfaf"/>
+  <text x="700" y="774" text-anchor="middle" class="label">P1 等待 P2，P2 又等待 P1，所有相关进程都无法继续</text>
+</svg>
+

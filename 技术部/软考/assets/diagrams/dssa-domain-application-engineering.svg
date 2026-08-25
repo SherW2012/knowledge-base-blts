@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="880" viewBox="0 0 1450 880" role="img" aria-labelledby="title desc">
+  <title id="title">DSSA从领域工程到多个具体应用的复用过程</title>
+  <desc id="desc">左侧展示领域分析、领域设计和领域实现，中央展示领域资产库，右侧展示应用工程产生多个具体应用并反馈领域工程。</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#40372f" flood-opacity="0.10"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5 0 10Z" fill="#91887d"/></marker>
+    <style>.title{font:700 39px "Microsoft YaHei","PingFang SC",sans-serif;fill:#22201d}.sub{font:20px "Microsoft YaHei","PingFang SC",sans-serif;fill:#786f66}.h{font:700 24px "Microsoft YaHei","PingFang SC",sans-serif;fill:#5d554d}.t{font:18px "Microsoft YaHei","PingFang SC",sans-serif;fill:#6d645c}.tag{font:700 18px "Microsoft YaHei","PingFang SC",sans-serif;fill:#675e55}.line{fill:none;stroke:#91887d;stroke-width:3;marker-end:url(#arrow)}.feedback{fill:none;stroke:#a89fb0;stroke-width:3;stroke-dasharray:9 7;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="1450" height="880" rx="38" fill="#fbfaf7"/>
+  <text x="65" y="76" class="title">DSSA把领域共性沉淀为资产，再用于构造多个应用</text>
+  <text x="65" y="114" class="sub">领域工程生产复用能力，应用工程配置和扩展这些能力；应用反馈继续修正领域资产</text>
+
+  <text x="65" y="174" class="h">领域工程 · 建立DSSA</text>
+  <g filter="url(#shadow)">
+    <rect x="70" y="205" width="330" height="150" rx="28" fill="#e7edec" stroke="#9cadaa"/>
+    <rect x="70" y="405" width="330" height="150" rx="28" fill="#f0e8e4" stroke="#b89e94"/>
+    <rect x="70" y="605" width="330" height="150" rx="28" fill="#ebe8ef" stroke="#a89fb0"/>
+    <rect x="525" y="295" width="350" height="370" rx="32" fill="#eee9df" stroke="#b7a98e"/>
+  </g>
+  <text x="235" y="250" text-anchor="middle" class="h">领域分析</text><text x="120" y="292" class="t">范围 · 术语 · 共同需求</text><text x="120" y="326" class="t">变化点 · 领域模型</text>
+  <text x="235" y="450" text-anchor="middle" class="h">领域设计</text><text x="120" y="492" class="t">参考体系结构 · 构件规格</text><text x="120" y="526" class="t">接口 · 连接 · 变化机制</text>
+  <text x="235" y="650" text-anchor="middle" class="h">领域实现</text><text x="120" y="692" class="t">构件库 · 框架 · 生成器</text><text x="120" y="726" class="t">配置工具 · 测试资产</text>
+  <path d="M235 355V405" class="line"/><path d="M235 555V605" class="line"/>
+
+  <text x="700" y="350" text-anchor="middle" class="h">DSSA领域资产库</text>
+  <text x="585" y="405" class="t">• 领域模型与共同需求</text><text x="585" y="448" class="t">• 参考体系结构</text><text x="585" y="491" class="t">• 可复用构件与接口</text><text x="585" y="534" class="t">• 变化点与配置规则</text><text x="585" y="577" class="t">• 生成和组装工具</text><text x="700" y="625" text-anchor="middle" class="tag">跨多个同类产品复用</text>
+  <path d="M400 680C465 660 485 590 525 550" class="line"/>
+
+  <text x="985" y="174" class="h">应用工程 · 使用DSSA</text>
+  <g filter="url(#shadow)">
+    <rect x="1000" y="220" width="370" height="150" rx="28" fill="#f0e8e4" stroke="#b89e94"/>
+    <rect x="1000" y="430" width="370" height="110" rx="28" fill="#e7edec" stroke="#9cadaa"/>
+    <rect x="1000" y="585" width="370" height="110" rx="28" fill="#ebe8ef" stroke="#a89fb0"/>
+    <rect x="1000" y="740" width="370" height="90" rx="28" fill="#eee9df" stroke="#b7a98e"/>
+  </g>
+  <text x="1185" y="265" text-anchor="middle" class="h">具体应用需求</text><text x="1050" y="307" class="t">选择共性资产 · 配置变化点</text><text x="1050" y="341" class="t">实现该应用的特有部分</text>
+  <text x="1185" y="478" text-anchor="middle" class="h">应用A</text><text x="1185" y="513" text-anchor="middle" class="t">领域资产 + 配置A</text>
+  <text x="1185" y="633" text-anchor="middle" class="h">应用B</text><text x="1185" y="668" text-anchor="middle" class="t">领域资产 + 配置B</text>
+  <text x="1185" y="790" text-anchor="middle" class="h">后续应用</text>
+  <path d="M875 405C930 360 950 320 1000 300" class="line"/><path d="M1185 370V430" class="line"/><path d="M1185 540V585" class="line"/><path d="M1185 695V740" class="line"/>
+  <path d="M1000 790C760 850 420 845 300 755" class="feedback"/><text x="665" y="835" text-anchor="middle" class="tag">应用反馈暴露新共性、新变化点和资产缺口</text>
+</svg>

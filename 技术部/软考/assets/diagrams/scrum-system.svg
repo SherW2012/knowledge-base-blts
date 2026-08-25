@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 650" role="img" aria-labelledby="title desc">
+  <title id="title">Scrum团队、事件、工件和反馈关系</title>
+  <desc id="desc">Product Goal引导Product Backlog，团队通过Sprint事件形成满足完成定义的增量，并根据评审反馈调整待办列表</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#4f493f" flood-opacity=".10"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#8d877e"/></marker>
+    <style>
+      .title{font:700 25px Inter,'Microsoft YaHei',sans-serif;fill:#292724}.subtitle{font:400 13px Inter,'Microsoft YaHei',sans-serif;fill:#7c766d}
+      .node-title{font:700 15px Inter,'Microsoft YaHei',sans-serif}.node-sub{font:400 12px Inter,'Microsoft YaHei',sans-serif;fill:#6f6a62}.label{font:600 11px Inter,'Microsoft YaHei',sans-serif;fill:#756f67}.edge{stroke:#8d877e;stroke-width:1.6;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="960" height="650" rx="24" fill="#fbfaf7"/>
+  <text x="48" y="50" class="title">Scrum团队、事件、工件和反馈关系</text>
+  <text x="48" y="76" class="subtitle">长期产品方向进入Sprint，满足质量标准的增量产生真实反馈</text>
+
+  <rect x="54" y="116" width="220" height="92" rx="17" fill="#eee6e3" stroke="#b39b95"/>
+  <text x="164" y="148" class="node-title" text-anchor="middle" fill="#6f5c54">Product Backlog</text><text x="164" y="172" class="node-sub" text-anchor="middle">有序的产品工作</text><text x="164" y="193" class="node-sub" text-anchor="middle">承诺：Product Goal</text>
+  <path d="M274 162 L355 162" class="edge"/><text x="315" y="149" class="label" text-anchor="middle">选择工作</text>
+
+  <rect x="355" y="102" width="360" height="268" rx="24" fill="#f3f0e9" stroke="#c8c0b4" filter="url(#shadow)"/>
+  <text x="535" y="136" class="node-title" text-anchor="middle" fill="#4f4a43">Sprint · 不超过一个月</text>
+  <rect x="384" y="158" width="140" height="62" rx="13" fill="#e7ebeb" stroke="#9aa7a6"/><text x="454" y="184" class="node-title" text-anchor="middle" fill="#536363">Planning</text><text x="454" y="204" class="node-sub" text-anchor="middle">目标与计划</text>
+  <rect x="546" y="158" width="140" height="62" rx="13" fill="#e7ece6" stroke="#95a192"/><text x="616" y="184" class="node-title" text-anchor="middle" fill="#596657">开发工作</text><text x="616" y="204" class="node-sub" text-anchor="middle">Daily Scrum</text>
+  <rect x="546" y="250" width="140" height="62" rx="13" fill="#ece8ee" stroke="#a097a5"/><text x="616" y="276" class="node-title" text-anchor="middle" fill="#685f6d">Review</text><text x="616" y="296" class="node-sub" text-anchor="middle">检查产品</text>
+  <rect x="384" y="250" width="140" height="62" rx="13" fill="#eee8df" stroke="#b7a990"/><text x="454" y="276" class="node-title" text-anchor="middle" fill="#6e624f">Retrospective</text><text x="454" y="296" class="node-sub" text-anchor="middle">改进过程</text>
+  <path d="M524 189 L546 189 M616 220 L616 250 M546 281 L524 281 M454 250 L454 220" class="edge"/>
+  <text x="535" y="343" class="node-sub" text-anchor="middle">Sprint Backlog · 承诺：Sprint Goal</text>
+
+  <path d="M715 236 L793 236" class="edge"/><text x="754" y="223" class="label" text-anchor="middle">形成</text>
+  <rect x="793" y="184" width="125" height="104" rx="17" fill="#e7ece6" stroke="#95a192"/>
+  <text x="855" y="217" class="node-title" text-anchor="middle" fill="#596657">Increment</text><text x="855" y="242" class="node-sub" text-anchor="middle">可用产品增量</text><text x="855" y="267" class="node-sub" text-anchor="middle">承诺：DoD</text>
+
+  <rect x="58" y="426" width="844" height="144" rx="22" fill="#f5f2eb" stroke="#cec6ba"/>
+  <text x="480" y="459" class="node-title" text-anchor="middle" fill="#4f4a43">Scrum Team</text>
+  <rect x="92" y="480" width="230" height="64" rx="14" fill="#eee6e3" stroke="#b39b95"/><text x="207" y="506" class="node-title" text-anchor="middle" fill="#6f5c54">Product Owner</text><text x="207" y="528" class="node-sub" text-anchor="middle">价值与Product Backlog</text>
+  <rect x="365" y="480" width="230" height="64" rx="14" fill="#e7ebeb" stroke="#9aa7a6"/><text x="480" y="506" class="node-title" text-anchor="middle" fill="#536363">Developers</text><text x="480" y="528" class="node-sub" text-anchor="middle">计划并创造增量</text>
+  <rect x="638" y="480" width="230" height="64" rx="14" fill="#ece8ee" stroke="#a097a5"/><text x="753" y="506" class="node-title" text-anchor="middle" fill="#685f6d">Scrum Master</text><text x="753" y="528" class="node-sub" text-anchor="middle">促进Scrum有效实施</text>
+
+  <path d="M855 288 C855 392 164 392 164 208" class="edge"/>
+  <text x="510" y="401" class="label" text-anchor="middle">产品和环境反馈用于调整Product Backlog</text>
+  <text x="480" y="608" class="node-sub" text-anchor="middle">透明 · 检视 · 适应贯穿团队、事件与工件</text>
+</svg>

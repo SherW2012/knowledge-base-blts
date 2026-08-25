@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" role="img" aria-labelledby="title desc">
+  <title id="title">词表 logits：模型给每个候选 token 打的分</title><desc id="desc">模型对词表里每个 token 输出一个分数 logit，经 softmax 归一化成概率，再按概率采样选出一个</desc>
+  <defs>
+    <style>
+      .title{font:700 23px Inter,'Microsoft YaHei',sans-serif;fill:#292724}.subtitle{font:400 13px Inter,'Microsoft YaHei',sans-serif;fill:#7c766d}
+      .tok{font:700 15px Inter,'Microsoft YaHei',sans-serif;fill:#292724}.num{font:600 13px 'Cascadia Code',Consolas,monospace;fill:#514c45}
+      .head{font:700 12px Inter,'Microsoft YaHei',sans-serif;fill:#8b8479;letter-spacing:.04em}.ns{font:400 12.5px Inter,'Microsoft YaHei',sans-serif;fill:#6f6a62}
+    </style>
+  </defs>
+  <rect width="820" height="440" rx="24" fill="#fbfaf7"/>
+  <text x="48" y="48" class="title">词表 logits：模型给每个候选 token 打的分</text>
+  <text x="48" y="74" class="subtitle">上下文：“太阳从 ___ 升起”。模型给词表里每个 token 一个分数，再转成概率并采样</text>
+
+  <text x="60" y="118" class="head">候选 token</text><text x="170" y="118" class="head">logit 分数（条形长度）</text><text x="640" y="118" class="head">logit</text><text x="720" y="118" class="head">概率</text>
+
+  <text x="60" y="152" class="tok">东边</text><rect x="170" y="138" width="370" height="20" rx="6" fill="#e4ebe5" stroke="#5b695f"/><text x="640" y="153" class="num">8.2</text><text x="720" y="153" class="num">82%</text>
+  <text x="60" y="188" class="tok">东方</text><rect x="170" y="174" width="311" height="20" rx="6" fill="#e7ebeb" stroke="#536363"/><text x="640" y="189" class="num">6.1</text><text x="720" y="189" class="num">14%</text>
+  <text x="60" y="224" class="tok">地平线</text><rect x="170" y="210" width="238" height="20" rx="6" fill="#ece8ee" stroke="#685f6d"/><text x="640" y="225" class="num">3.5</text><text x="720" y="225" class="num">2.7%</text>
+  <text x="60" y="260" class="tok">西边</text><rect x="170" y="246" width="165" height="20" rx="6" fill="#eee9df" stroke="#6d6250"/><text x="640" y="261" class="num">0.9</text><text x="720" y="261" class="num">0.2%</text>
+  <text x="60" y="296" class="tok">香蕉</text><rect x="170" y="282" width="22" height="20" rx="6" fill="#eee6e3" stroke="#6f5c54"/><text x="640" y="297" class="num">-4.2</text><text x="720" y="297" class="num">≈0</text>
+  <text x="170" y="330" class="ns">⋯ 词表可能有十万个 token，这里只画分数最高的几个 ⋯</text>
+
+  <line x1="60" y1="352" x2="760" y2="352" stroke="#e2ded5"/>
+  <text x="60" y="384" class="ns">logit 是原始分数（可正可负、无上下限）；softmax 把它们压成一组和为 1 的概率。</text>
+  <text x="60" y="408" class="ns">再按概率采样，就选出这一步的 token —— 大概率落在“东边”，但并非绝对（见解码策略）。</text>
+</svg>

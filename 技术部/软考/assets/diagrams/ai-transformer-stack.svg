@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 600" role="img" aria-labelledby="title desc">
+  <title id="title">大语言模型的数据流</title><desc id="desc">token 序列自底向上流经词嵌入、N 层 Transformer 与输出层，最终得到词表上的 logits</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#4f493f" flood-opacity=".10"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7c7a74"/></marker>
+    <style>
+      .title{font:700 24px Inter,'Microsoft YaHei',sans-serif;fill:#292724}.subtitle{font:400 13px Inter,'Microsoft YaHei',sans-serif;fill:#7c766d}
+      .nt{font:700 15px Inter,'Microsoft YaHei',sans-serif}.ns{font:400 12px Inter,'Microsoft YaHei',sans-serif;fill:#6f6a62}
+      .edge{fill:none;stroke:#7c7a74;stroke-width:1.7;marker-end:url(#arrow)}.badge{font:700 12px Inter,'Microsoft YaHei',sans-serif;fill:#8b8479;letter-spacing:.06em}
+    </style>
+  </defs>
+  <rect width="720" height="600" rx="24" fill="#fbfaf7"/>
+  <text x="48" y="50" class="title">大语言模型的数据流</text><text x="48" y="76" class="subtitle">token 自底向上流经各层，最终在词表上给出下一个 token 的分数</text>
+
+  <rect x="150" y="104" width="420" height="46" rx="11" fill="#ece9e3" stroke="#625e58" filter="url(#shadow)"/><text x="360" y="132" class="nt" text-anchor="middle" fill="#625e58">输入 token id 序列</text>
+  <path class="edge" d="M360 150 L360 178"/>
+  <rect x="150" y="182" width="420" height="46" rx="11" fill="#e7ebeb" stroke="#536363" filter="url(#shadow)"/><text x="360" y="210" class="nt" text-anchor="middle" fill="#536363">词嵌入 + 位置编码</text>
+  <path class="edge" d="M360 228 L360 256"/>
+
+  <rect x="130" y="260" width="460" height="150" rx="16" fill="#e4ebe5" stroke="#5b695f" filter="url(#shadow)"/>
+  <text x="152" y="286" class="badge" fill="#5b695f">TRANSFORMER 层</text><text x="568" y="286" class="badge" text-anchor="end">× N 层堆叠</text>
+  <rect x="160" y="300" width="400" height="42" rx="10" fill="#eef2ee" stroke="#8fa08f"/><text x="360" y="326" class="nt" text-anchor="middle" fill="#4c5a4c">自注意力：token 之间交换信息</text>
+  <rect x="160" y="352" width="400" height="42" rx="10" fill="#eef2ee" stroke="#8fa08f"/><text x="360" y="378" class="nt" text-anchor="middle" fill="#4c5a4c">前馈网络：逐位置非线性变换</text>
+  <path class="edge" d="M360 410 L360 438"/>
+
+  <rect x="150" y="442" width="420" height="46" rx="11" fill="#eee9df" stroke="#6d6250" filter="url(#shadow)"/><text x="360" y="470" class="nt" text-anchor="middle" fill="#6d6250">输出投影层</text>
+  <path class="edge" d="M360 488 L360 516"/>
+  <rect x="150" y="520" width="420" height="46" rx="11" fill="#eee6e3" stroke="#6f5c54" filter="url(#shadow)"/><text x="360" y="548" class="nt" text-anchor="middle" fill="#6f5c54">词表 logits：每个 token 一个分数</text>
+</svg>

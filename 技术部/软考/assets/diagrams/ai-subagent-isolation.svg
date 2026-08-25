@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" role="img" aria-labelledby="title desc">
+  <title id="title">Subagent 的上下文隔离</title><desc id="desc">主 Agent 派发子任务，子 Agent 在各自独立的上下文中探索，只把精炼结论回传，避免细节污染主上下文</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#4f493f" flood-opacity=".10"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7c7a74"/></marker>
+    <style>
+      .title{font:700 24px Inter,'Microsoft YaHei',sans-serif;fill:#292724}.subtitle{font:400 13px Inter,'Microsoft YaHei',sans-serif;fill:#7c766d}
+      .nt{font:700 15px Inter,'Microsoft YaHei',sans-serif}.ns{font:400 12px Inter,'Microsoft YaHei',sans-serif;fill:#6f6a62}
+      .ctx{font:600 11.5px Inter,'Microsoft YaHei',sans-serif;fill:#8b8479}.el{font:600 11px Inter,'Microsoft YaHei',sans-serif;fill:#716b63}.edge{fill:none;stroke:#7c7a74;stroke-width:1.7;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="820" height="440" rx="24" fill="#fbfaf7"/>
+  <text x="48" y="50" class="title">Subagent 的上下文隔离</text><text x="48" y="76" class="subtitle">独立上下文 + 只回传结论，让主 Agent 调度远超自身上下文容量的工作量</text>
+
+  <rect x="60" y="150" width="250" height="200" rx="18" fill="#e4ebe5" stroke="#5b695f" filter="url(#shadow)"/>
+  <text x="185" y="188" class="nt" text-anchor="middle" fill="#4c5a4c">主 Agent</text>
+  <text x="85" y="220" class="ctx">上下文</text>
+  <rect x="84" y="230" width="202" height="34" rx="9" fill="#eef2ee" stroke="#8fa08f"/><text x="185" y="252" class="ns" text-anchor="middle">原始任务</text>
+  <rect x="84" y="272" width="202" height="34" rx="9" fill="#eef2ee" stroke="#8fa08f"/><text x="185" y="294" class="ns" text-anchor="middle">子任务 A 的结论</text>
+  <rect x="84" y="314" width="202" height="24" rx="8" fill="#eef2ee" stroke="#8fa08f"/><text x="185" y="331" class="ns" text-anchor="middle">子任务 B 的结论</text>
+
+  <rect x="520" y="106" width="250" height="130" rx="18" fill="#e7ebeb" stroke="#536363" filter="url(#shadow)"/><text x="645" y="140" class="nt" text-anchor="middle" fill="#4a5757">子 Agent A</text><text x="545" y="168" class="ctx">独立上下文</text><text x="645" y="192" class="ns" text-anchor="middle">大量探索、试错、原始资料</text><text x="645" y="214" class="ns" text-anchor="middle">完成后压缩成一句结论</text>
+
+  <rect x="520" y="266" width="250" height="130" rx="18" fill="#ece8ee" stroke="#685f6d" filter="url(#shadow)"/><text x="645" y="300" class="nt" text-anchor="middle" fill="#5b5265">子 Agent B</text><text x="545" y="328" class="ctx">独立上下文</text><text x="645" y="352" class="ns" text-anchor="middle">与主 Agent、彼此互不干扰</text><text x="645" y="374" class="ns" text-anchor="middle">只回传需要的结果</text>
+
+  <path class="edge" d="M310 210 C 410 180, 430 165, 518 165"/><text x="416" y="150" class="el" text-anchor="middle">派发子任务</text>
+  <path class="edge" d="M518 331 C 430 331, 410 300, 312 288"/><text x="416" y="330" class="el" text-anchor="middle">只回传结论</text>
+</svg>

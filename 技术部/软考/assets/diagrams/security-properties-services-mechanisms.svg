@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="900" viewBox="0 0 1450 900" role="img" aria-labelledby="title desc">
+  <title id="title">信息安全属性、安全服务和安全机制的层次关系</title>
+  <desc id="desc">展示CIA和扩展安全属性如何由安全服务支持，并由具体安全机制实现。</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#40372f" flood-opacity="0.10"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5 0 10Z" fill="#91887d"/></marker>
+    <style>.title{font:700 39px "Microsoft YaHei","PingFang SC",sans-serif;fill:#22201d}.sub{font:20px "Microsoft YaHei","PingFang SC",sans-serif;fill:#786f66}.h{font:700 25px "Microsoft YaHei","PingFang SC",sans-serif;fill:#5d554d}.t{font:18px "Microsoft YaHei","PingFang SC",sans-serif;fill:#6d645c}.tag{font:700 18px "Microsoft YaHei","PingFang SC",sans-serif;fill:#675e55}.line{fill:none;stroke:#91887d;stroke-width:3;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="1450" height="900" rx="38" fill="#fbfaf7"/>
+  <text x="65" y="76" class="title">从安全目标到安全服务，再到具体机制</text>
+  <text x="65" y="114" class="sub">三个层次回答不同问题，彼此是多对多关系，不是一项属性只对应一种技术</text>
+
+  <text x="65" y="176" class="h">安全属性 · 希望达到什么状态</text>
+  <g filter="url(#shadow)">
+    <rect x="70" y="205" width="250" height="120" rx="25" fill="#e7edec" stroke="#9cadaa"/>
+    <rect x="350" y="205" width="250" height="120" rx="25" fill="#f0e8e4" stroke="#b89e94"/>
+    <rect x="630" y="205" width="250" height="120" rx="25" fill="#ebe8ef" stroke="#a89fb0"/>
+    <rect x="910" y="205" width="470" height="120" rx="25" fill="#eee9df" stroke="#b7a98e"/>
+  </g>
+  <text x="195" y="254" text-anchor="middle" class="h">机密性</text><text x="195" y="294" text-anchor="middle" class="t">防止未授权泄露</text>
+  <text x="475" y="254" text-anchor="middle" class="h">完整性</text><text x="475" y="294" text-anchor="middle" class="t">防止或发现非法改变</text>
+  <text x="755" y="254" text-anchor="middle" class="h">可用性</text><text x="755" y="294" text-anchor="middle" class="t">需要时可以使用</text>
+  <text x="1145" y="250" text-anchor="middle" class="h">扩展属性</text><text x="1145" y="290" text-anchor="middle" class="t">真实性 · 可控性 · 可审计性 · 抗抵赖性</text>
+
+  <path d="M725 345V400" class="line"/>
+  <text x="65" y="435" class="h">安全服务 · 向参与者提供什么保护能力</text>
+  <g filter="url(#shadow)"><rect x="70" y="465" width="1310" height="130" rx="28" fill="#f3efe8" stroke="#cabfaf"/></g>
+  <text x="190" y="520" text-anchor="middle" class="h">鉴别</text><text x="450" y="520" text-anchor="middle" class="h">访问控制</text><text x="725" y="520" text-anchor="middle" class="h">数据机密性</text><text x="1000" y="520" text-anchor="middle" class="h">数据完整性</text><text x="1260" y="520" text-anchor="middle" class="h">抗抵赖</text>
+  <text x="725" y="565" text-anchor="middle" class="t">OSI安全体系结构规定的五类安全服务</text>
+
+  <path d="M725 615V670" class="line"/>
+  <text x="65" y="705" class="h">安全机制 · 具体怎样实现保护</text>
+  <g filter="url(#shadow)"><rect x="70" y="735" width="1310" height="105" rx="28" fill="#e8ece9" stroke="#9cadaa"/></g>
+  <text x="725" y="782" text-anchor="middle" class="h">加密 · 哈希 · MAC · 数字签名 · 权限校验 · 审计日志 · 冗余与故障切换</text>
+  <text x="725" y="817" text-anchor="middle" class="t">一种机制可以支持多个属性，一个属性也通常需要多种机制共同保障</text>
+</svg>
+
