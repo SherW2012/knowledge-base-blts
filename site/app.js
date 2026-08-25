@@ -300,14 +300,15 @@ function enhanceDocumentLinks(docPath) {
 function convertSpecialCodeBlocks() {
   elements.article.querySelectorAll("pre code").forEach((code) => {
     const language = [...code.classList].find((name) => name.startsWith("language-"))?.slice(9);
-    if (!["mermaid", "knowledge-map", "knowledge-graph"].includes(language)) return;
+    if (!["mermaid", "knowledge-map", "knowledge-graph", "portrait-gallery"].includes(language)) return;
     const host = document.createElement("div");
     host.className = language;
     if (language === "mermaid") {
       host.textContent = code.textContent;
     } else {
+      const sourceClass = { "knowledge-map": "kmap-source", "knowledge-graph": "kg-source", "portrait-gallery": "pg-source" };
       const source = document.createElement("div");
-      source.className = language === "knowledge-map" ? "kmap-source" : "kg-source";
+      source.className = sourceClass[language];
       source.hidden = true;
       source.textContent = code.textContent;
       host.appendChild(source);
@@ -341,6 +342,10 @@ async function renderDiagrams(docPath) {
   };
   window.KnowledgeMap?.mountAll(elements.article, { dark, onOpenDoc });
   window.KnowledgeGraph?.mountAll(elements.article, { dark, onOpenDoc });
+  window.PortraitGallery?.mountAll(elements.article, {
+    dark,
+    resolveSrc: (src) => `./content/${encodePath(resolveRelative(docPath, src))}`
+  });
 }
 
 function slugHeading(text, index) {
