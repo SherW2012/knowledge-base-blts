@@ -103,6 +103,34 @@ function cardIcon(mark) {
   return `<span class="portal-card-mark">${escapeHtml(mark)}</span>`;
 }
 
+function directDocuments(nodes, readmePath) {
+  return (nodes || []).filter((node) => node.type === "document" && node.path !== readmePath);
+}
+
+function directFolders(nodes) {
+  return (nodes || []).filter((node) => node.type === "folder");
+}
+
+function renderFolderCards(folders) {
+  return folders.map((folder, index) => `
+    <button class="portal-card topic-card" data-route="#/topic/${encodePath(folder.path)}">
+      <span class="topic-number">${String(index + 1).padStart(2, "0")}</span>
+      <span class="portal-card-body"><strong>${escapeHtml(folder.name)}</strong><small>${countDocuments([folder])} 篇文档</small></span><i>→</i>
+    </button>`).join("");
+}
+
+function renderArticleList(documents) {
+  return `
+    <div class="chapter-list article-list">
+      ${documents.map((doc) => `
+        <button class="chapter-row article-row" data-route="#/doc/${encodePath(doc.path)}">
+          <span aria-hidden="true">◆</span>
+          <span class="article-row-copy"><strong>${escapeHtml(doc.name)}</strong><small>${doc.words.toLocaleString()} 字</small></span>
+          <i>→</i>
+        </button>`).join("")}
+    </div>`;
+}
+
 function renderHome() {
   const total = state.index.departments.reduce((sum, item) => sum + item.documents, 0);
   setChrome({ breadcrumb: [{ label: "知识库总入口", route: "#/" }], meta: `${state.index.departments.length} 个部门 · ${total} 篇文档`, wide: true });
@@ -131,6 +159,9 @@ function renderHome() {
 function renderDepartment(name) {
   const item = department(name);
   if (!item) return renderNotFound();
+  const readmePath = `${item.name}/README.md`;
+  const readme = item.tree.find((node) => node.type === "document" && node.path === readmePath);
+  const standaloneDocuments = directDocuments(item.tree, readmePath);
   setChrome({
     breadcrumb: [
       { label: "知识库", route: "#/" },
@@ -139,23 +170,27 @@ function renderDepartment(name) {
     meta: `${item.documents} 篇文档 · ${item.topics.length} 个主题`,
     wide: true
   });
-  const readme = flattenDocuments(item.tree).find((doc) => doc.path === `${item.name}/README.md`);
   elements.article.innerHTML = `
     <section class="department-hero">
       ${cardIcon(item.mark)}
       <div><div class="welcome-kicker">DEPARTMENT</div><h1>${escapeHtml(item.name)}</h1><p>${escapeHtml(item.description)}</p></div>
     </section>
-    <section class="portal-section">
+    ${item.topics.length ? `<section class="portal-section">
       <div class="section-heading"><div><span>KNOWLEDGE AREAS</span><h2>主题与知识库</h2></div><p>选择一个主题进入完整目录。</p></div>
       <div class="portal-grid topics-grid">
         ${item.topics.map((topic, index) => `
           <button class="portal-card topic-card" data-route="#/topic/${encodePath(topic.path)}">
             <span class="topic-number">${String(index + 1).padStart(2, "0")}</span>
             <span class="portal-card-body"><strong>${escapeHtml(topic.name)}</strong><small>${topic.documents} 篇文档</small></span><i>→</i>
-          </button>`).join("") || `<div class="empty-state">这个部门尚未建立主题目录。</div>`}
+          </button>`).join("")}
       </div>
-      ${readme ? `<button class="quiet-link" data-route="#/doc/${encodePath(readme.path)}">查看部门说明 →</button>` : ""}
-    </section>`;
+    </section>` : ""}
+    ${standaloneDocuments.length ? `<section class="portal-section">
+      <div class="section-heading"><div><span>ARTICLES</span><h2>独立文章</h2></div><p>直接归属于${escapeHtml(item.name)}的内容。</p></div>
+      ${renderArticleList(standaloneDocuments)}
+    </section>` : ""}
+    ${!item.topics.length && !standaloneDocuments.length ? `<div class="empty-state department-empty">这个部门暂时只有说明页。</div>` : ""}
+    ${readme ? `<button class="quiet-link" data-route="#/doc/${encodePath(readme.path)}">查看部门说明 →</button>` : ""}`;
   document.title = `${item.name} · ${state.index.title}`;
   bindRoutes(elements.article);
 }
@@ -191,7 +226,11 @@ function renderTopic(topicPath) {
   const found = findTopic(topicPath);
   if (!found) return renderNotFound();
   const docs = flattenDocuments([found.topic]);
-  const readme = docs.find((doc) => doc.path === `${topicPath}/README.md`) || docs[0];
+  const readmePath = `${topicPath}/README.md`;
+  const readme = found.topic.children.find((node) => node.type === "document" && node.path === readmePath);
+  const folders = directFolders(found.topic.children);
+  const standaloneDocuments = directDocuments(found.topic.children, readmePath);
+  const startDocument = readme || standaloneDocuments[0] || docs[0];
   setChrome({ breadcrumb: folderBreadcrumb(topicPath), meta: `${docs.length} 篇文档`, wide: true });
   elements.article.innerHTML = `
     <section class="topic-hero">
@@ -199,25 +238,22 @@ function renderTopic(topicPath) {
       <div class="welcome-kicker">KNOWLEDGE AREA</div>
       <h1>${escapeHtml(found.topic.name)}</h1>
       <p>从目录进入各章节，或从主题首页开始阅读。</p>
-      ${readme ? `<button class="primary-button" data-route="#/doc/${encodePath(readme.path)}">开始阅读 <span>→</span></button>` : ""}
+      ${startDocument ? `<button class="primary-button" data-route="#/doc/${encodePath(startDocument.path)}">开始阅读 <span>→</span></button>` : ""}
     </section>
-    <section class="portal-section topic-overview">
-      <div class="section-heading"><div><span>CONTENTS</span><h2>内容结构</h2></div><p>${docs.length} 篇文档已进入统一搜索。</p></div>
-      <div class="chapter-list">
-        ${renderTopicOverview(found.topic.children || [], 0)}
+    ${folders.length ? `<section class="portal-section topic-overview">
+      <div class="section-heading"><div><span>SUBTOPICS</span><h2>子主题</h2></div><p>进入下一层目录继续浏览。</p></div>
+      <div class="portal-grid topics-grid">
+        ${renderFolderCards(folders)}
       </div>
-    </section>`;
+    </section>` : ""}
+    ${standaloneDocuments.length ? `<section class="portal-section topic-overview">
+      <div class="section-heading"><div><span>ARTICLES</span><h2>独立文章</h2></div><p>当前目录下可直接阅读的内容。</p></div>
+      ${renderArticleList(standaloneDocuments)}
+    </section>` : ""}
+    ${!folders.length && !standaloneDocuments.length && readme ? `<div class="empty-state topic-empty">这个主题暂时只有说明页。</div>` : ""}
+    ${readme ? `<button class="quiet-link" data-route="#/doc/${encodePath(readme.path)}">查看主题说明 →</button>` : ""}`;
   document.title = `${found.topic.name} · ${state.index.title}`;
   bindRoutes(elements.article);
-}
-
-function renderTopicOverview(nodes, depth) {
-  return nodes.map((node) => {
-    if (node.type === "document") {
-      return `<button class="chapter-row" style="--depth:${depth}" data-route="#/doc/${encodePath(node.path)}"><span>◆</span><strong>${escapeHtml(node.name)}</strong><small>${node.words.toLocaleString()} 字</small><i>→</i></button>`;
-    }
-    return `<div class="chapter-group" style="--depth:${depth}"><div class="chapter-group-title">${escapeHtml(node.name)}</div>${renderTopicOverview(node.children || [], depth + 1)}</div>`;
-  }).join("");
 }
 
 function resolveRelative(basePath, raw) {
