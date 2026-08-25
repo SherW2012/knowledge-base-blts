@@ -377,7 +377,8 @@ async function renderDocument(path) {
   setChrome({ breadcrumb, meta: "", toc: true });
   elements.article.classList.add("loading");
   try {
-    const response = await fetch(`./content/${encodePath(path)}`);
+    const version = encodeURIComponent(state.index.generatedAt || "latest");
+    const response = await fetch(`./content/${encodePath(path)}?v=${version}`, { cache: "no-store" });
     if (!response.ok) throw new Error(`无法读取文档（${response.status}）`);
     state.currentMarkdown = await response.text();
     const html = window.marked ? marked.parse(state.currentMarkdown) : `<pre>${escapeHtml(state.currentMarkdown)}</pre>`;
@@ -563,7 +564,7 @@ function setTheme(theme, persist = true) {
 
 async function boot() {
   try {
-    const response = await fetch("./content-index.json");
+    const response = await fetch(`./content-index.json?v=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) throw new Error("知识索引读取失败");
     state.index = await response.json();
     elements.syncText.textContent = "内容由 GitHub 自动构建";
