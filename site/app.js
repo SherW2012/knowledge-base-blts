@@ -75,9 +75,23 @@ function bindRoutes(container = document) {
   });
 }
 
+function renderBreadcrumb(items) {
+  const normalized = Array.isArray(items) ? items : [{ label: items }];
+  elements.breadcrumbs.innerHTML = normalized.map((item, index) => {
+    const separator = index ? '<span class="breadcrumb-separator" aria-hidden="true">/</span>' : "";
+    const label = escapeHtml(item.label);
+    const crumb = item.route
+      ? `<button class="breadcrumb-link" data-route="${escapeHtml(item.route)}">${label}</button>`
+      : `<span class="breadcrumb-current">${label}</span>`;
+    return `${separator}${crumb}`;
+  }).join("");
+  bindRoutes(elements.breadcrumbs);
+}
+
 function setChrome({ breadcrumb, meta, toc = false, wide = false }) {
-  elements.breadcrumbs.textContent = breadcrumb;
-  elements.meta.textContent = meta;
+  renderBreadcrumb(breadcrumb);
+  elements.meta.textContent = meta || "";
+  elements.meta.hidden = !meta;
   elements.toc.hidden = !toc;
   elements.layout.classList.toggle("portal-layout", wide);
   elements.scroll.scrollTop = 0;
@@ -90,7 +104,7 @@ function cardIcon(mark) {
 
 function renderHome() {
   const total = state.index.departments.reduce((sum, item) => sum + item.documents, 0);
-  setChrome({ breadcrumb: "知识库总入口", meta: `${state.index.departments.length} 个部门 · ${total} 篇文档`, wide: true });
+  setChrome({ breadcrumb: [{ label: "知识库总入口", route: "#/" }], meta: `${state.index.departments.length} 个部门 · ${total} 篇文档`, wide: true });
   elements.article.innerHTML = `
     <section class="portal-hero">
       <div class="welcome-kicker">BLTS KNOWLEDGE SYSTEM</div>
@@ -116,7 +130,14 @@ function renderHome() {
 function renderDepartment(name) {
   const item = department(name);
   if (!item) return renderNotFound();
-  setChrome({ breadcrumb: `知识库  /  ${item.name}`, meta: `${item.documents} 篇文档 · ${item.topics.length} 个主题`, wide: true });
+  setChrome({
+    breadcrumb: [
+      { label: "知识库", route: "#/" },
+      { label: item.name, route: `#/department/${encodeURIComponent(item.name)}` }
+    ],
+    meta: `${item.documents} 篇文档 · ${item.topics.length} 个主题`,
+    wide: true
+  });
   const readme = flattenDocuments(item.tree).find((doc) => doc.path === `${item.name}/README.md`);
   elements.article.innerHTML = `
     <section class="department-hero">
@@ -138,11 +159,31 @@ function renderDepartment(name) {
   bindRoutes(elements.article);
 }
 
+function findFolder(nodes, path) {
+  for (const node of nodes || []) {
+    if (node.type !== "folder") continue;
+    if (node.path === path) return node;
+    const nested = findFolder(node.children, path);
+    if (nested) return nested;
+  }
+  return null;
+}
+
 function findTopic(topicPath) {
   const [departmentName] = topicPath.split("/");
   const item = department(departmentName);
-  const topic = item?.tree.find((node) => node.type === "folder" && node.path === topicPath);
+  const topic = findFolder(item?.tree, topicPath);
   return topic ? { department: item, topic } : null;
+}
+
+function folderBreadcrumb(path) {
+  const rawParts = path.split("/");
+  return rawParts.map((part, index) => ({
+    label: displayName(part),
+    route: index === 0
+      ? `#/department/${encodeURIComponent(rawParts[0])}`
+      : `#/topic/${encodePath(rawParts.slice(0, index + 1).join("/"))}`
+  }));
 }
 
 function renderTopic(topicPath) {
@@ -150,7 +191,7 @@ function renderTopic(topicPath) {
   if (!found) return renderNotFound();
   const docs = flattenDocuments([found.topic]);
   const readme = docs.find((doc) => doc.path === `${topicPath}/README.md`) || docs[0];
-  setChrome({ breadcrumb: `知识库  /  ${found.department.name}  /  ${found.topic.name}`, meta: `${docs.length} 篇文档`, wide: true });
+  setChrome({ breadcrumb: folderBreadcrumb(topicPath), meta: `${docs.length} 篇文档`, wide: true });
   elements.article.innerHTML = `
     <section class="topic-hero">
       <button class="back-label" data-route="#/department/${encodeURIComponent(found.department.name)}">${escapeHtml(found.department.name)}</button>
@@ -282,8 +323,13 @@ async function renderDocument(path) {
   const doc = findDocument(path);
   if (!doc) return renderNotFound();
   state.selectedPath = path;
-  const parts = path.replace(/\.md$/i, "").split("/").map(displayName);
-  setChrome({ breadcrumb: parts.join("  /  "), meta: `约 ${doc.words.toLocaleString()} 字 · ${Math.max(1, Math.ceil(doc.words / 500))} 分钟阅读`, toc: true });
+  const rawParts = path.split("/");
+  const breadcrumb = rawParts.map((part, index) => {
+    if (index === 0) return { label: displayName(part), route: `#/department/${encodeURIComponent(part)}` };
+    if (index === rawParts.length - 1) return { label: displayName(part), route: `#/doc/${encodePath(path)}` };
+    return { label: displayName(part), route: `#/topic/${encodePath(rawParts.slice(0, index + 1).join("/"))}` };
+  });
+  setChrome({ breadcrumb, meta: "", toc: true });
   elements.article.classList.add("loading");
   try {
     const response = await fetch(`./content/${encodePath(path)}`);
@@ -305,7 +351,7 @@ async function renderDocument(path) {
 }
 
 function renderNotFound() {
-  setChrome({ breadcrumb: "知识库", meta: "路径不存在", wide: true });
+  setChrome({ breadcrumb: [{ label: "知识库", route: "#/" }], meta: "路径不存在", wide: true });
   elements.article.innerHTML = '<div class="error-card"><h2>没有找到这个页面</h2><p>目录可能已经调整，请从总入口重新进入。</p><button class="primary-button" data-route="#/">返回总入口</button></div>';
   bindRoutes(elements.article);
 }
