@@ -10,6 +10,7 @@ const elements = {
   sidebar: document.querySelector("#sidebar"),
   tree: document.querySelector("#tree"),
   search: document.querySelector("#searchInput"),
+  navContext: document.querySelector("#navContext"),
   navCaption: document.querySelector("#navCaption"),
   docCount: document.querySelector("#docCount"),
   syncDot: document.querySelector("#syncDot"),
@@ -366,6 +367,67 @@ function treeContext() {
   return state.index.departments.map((item) => ({ type: "department", name: item.name, mark: item.mark, documents: item.documents }));
 }
 
+function routeForDirectory(parts) {
+  if (!parts.length) return "#/";
+  if (parts.length === 1) return `#/department/${encodeURIComponent(parts[0])}`;
+  return `#/topic/${encodePath(parts.join("/"))}`;
+}
+
+function sidebarLocation() {
+  if (state.route.kind === "department") {
+    return { parts: [state.route.department], parentParts: [] };
+  }
+  if (state.route.kind === "topic") {
+    const parts = state.route.path.split("/");
+    return { parts, parentParts: parts.slice(0, -1) };
+  }
+  if (state.route.kind === "doc") {
+    const parts = state.route.path.split("/").slice(0, -1);
+    return { parts, parentParts: parts };
+  }
+  return null;
+}
+
+function renderSidebarContext(hidden = false) {
+  const location = hidden ? null : sidebarLocation();
+  if (!location?.parts.length) {
+    elements.navContext.hidden = true;
+    elements.navContext.innerHTML = "";
+    return;
+  }
+
+  const parentLabel = location.parentParts.length
+    ? displayName(location.parentParts.at(-1))
+    : "知识库总览";
+  const pathItems = [
+    { label: "知识库", route: "#/" },
+    ...location.parts.map((part, index) => ({
+      label: displayName(part),
+      route: index < location.parts.length - 1
+        ? routeForDirectory(location.parts.slice(0, index + 1))
+        : null
+    }))
+  ];
+
+  elements.navContext.hidden = false;
+  elements.navContext.innerHTML = `
+    <button class="nav-back" data-route="${escapeHtml(routeForDirectory(location.parentParts))}" aria-label="返回${escapeHtml(parentLabel)}">
+      <span class="nav-back-icon" aria-hidden="true">←</span>
+      <span class="nav-back-copy"><small>返回上一级</small><strong>${escapeHtml(parentLabel)}</strong></span>
+    </button>
+    <div class="nav-path" aria-label="当前位置">
+      ${pathItems.map((item, index) => {
+        const separator = index ? '<span class="nav-path-separator" aria-hidden="true">›</span>' : "";
+        const label = escapeHtml(item.label);
+        const crumb = item.route
+          ? `<button class="nav-path-link" data-route="${escapeHtml(item.route)}">${label}</button>`
+          : `<span class="nav-path-current" aria-current="page">${label}</span>`;
+        return `${separator}${crumb}`;
+      }).join("")}
+    </div>`;
+  bindRoutes(elements.navContext);
+}
+
 function countDocuments(nodes) {
   return flattenDocuments(nodes).length;
 }
@@ -405,6 +467,7 @@ function renderTree() {
   const query = elements.search.value.trim().toLowerCase();
   elements.tree.innerHTML = "";
   if (query) {
+    renderSidebarContext(true);
     const results = allDocuments().filter((doc) => [doc.title, doc.name, doc.path, doc.excerpt, ...(doc.headings || [])].join(" ").toLowerCase().includes(query));
     elements.navCaption.textContent = "搜索结果";
     elements.docCount.textContent = `${results.length} 篇`;
@@ -412,6 +475,7 @@ function renderTree() {
     results.slice(0, 80).forEach((doc) => elements.tree.appendChild(buildTreeNode(doc)));
     return;
   }
+  renderSidebarContext();
   const nodes = treeContext();
   elements.navCaption.textContent = state.route.kind === "home" ? "知识部门" : "知识目录";
   elements.docCount.textContent = state.route.kind === "home" ? `${state.index.departments.length} 个` : `${countDocuments(nodes)} 篇`;
