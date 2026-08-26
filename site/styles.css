@@ -444,7 +444,7 @@ button { -webkit-tap-highlight-color: transparent; }
 }
 .pg-tools button:hover:not(:disabled) { border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); background: var(--accent-soft); color: var(--accent-deep); }
 .pg-tools button:disabled { opacity: .35; cursor: default; }
-.pg-intro { margin: 0; padding: 13px 18px 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
+.portrait-gallery .pg-intro { margin: 0; padding: 13px 18px 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
 
 /* 地图 */
 .portrait-gallery.map-hidden .pg-map { display: none; }
@@ -518,8 +518,12 @@ button { -webkit-tap-highlight-color: transparent; }
 .pg-place.active strong { color: var(--pg-text); }
 
 /* 相册 */
-.pg-album { padding: 22px 20px 18px; }
-.pg-book { position: relative; padding-right: 44px; outline: none; }
+.pg-album { padding: 24px 22px 20px; }
+.pg-book {
+  --pg-h: min(70vh, 690px);
+  position: relative; width: min(100%, calc(var(--pg-h) * 1.46 + 44px));
+  margin: 0 auto; padding-right: 44px; outline: none;
+}
 .pg-book:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 18px; }
 .pg-book-inner {
   position: relative; display: grid; grid-template-columns: 1fr 1fr;
@@ -656,7 +660,10 @@ button { -webkit-tap-highlight-color: transparent; }
 .pg-mark:hover { transform: translateX(4px); filter: brightness(1.04); }
 .pg-mark.active { transform: translateX(6px); box-shadow: 5px 4px 12px rgb(60 45 34 / 18%); }
 
-.pg-footer { display: flex; align-items: center; gap: 14px; margin-top: 18px; padding-right: 44px; }
+.pg-footer {
+  display: flex; align-items: center; gap: 14px; margin-top: 18px;
+  width: min(100%, calc(var(--pg-h, 690px) * 1.46 + 44px)); padding-right: 44px; margin-inline: auto;
+}
 .pg-turn {
   padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px;
   background: var(--paper); color: var(--muted); font-size: 11px; font-weight: 640; cursor: pointer; transition: .15s ease;
@@ -689,9 +696,6 @@ button { -webkit-tap-highlight-color: transparent; }
 .pg-lb-close { position: absolute; right: 22px; top: 22px; width: 34px; height: 34px; font-size: 17px; }
 .pg-lb-nav:hover, .pg-lb-close:hover { background: rgb(255 255 255 / 18%); }
 
-@media (min-width: 1181px) {
-  .portrait-gallery { margin-inline: -46px; }
-}
 @media (max-width: 1000px) {
   .pg-map { grid-template-columns: minmax(0, 1fr); }
   .pg-map-side { border-left: 0; border-top: 1px solid var(--line-soft); }
@@ -743,4 +747,302 @@ button { -webkit-tap-highlight-color: transparent; }
   body, .main-area, .reading-scroll { overflow: visible; background: #fff; }
   .reading-layout, .article { display: block; width: 100%; padding: 0; }
   .knowledge-figure, .article .mermaid { break-inside: avoid; box-shadow: none; }
+}
+
+/* ---------------- 沉浸式版面 ----------------
+   相册、诗集这类模块需要整幅宽度；同页的正文仍收在易读的宽度里居中。 */
+.reading-layout.immersive {
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 0;
+  width: min(1460px, calc(100% - 56px));
+}
+.reading-layout.immersive .article > * { max-width: 900px; margin-left: auto; margin-right: auto; }
+.reading-layout.immersive .article > .portrait-gallery,
+.reading-layout.immersive .article > .poetry,
+.reading-layout.immersive .article > .poetry-shelf { max-width: none; }
+
+.portrait-gallery.is-full {
+  margin: 0; border: 0; border-radius: 0; height: 100vh;
+  display: flex; flex-direction: column; overflow-y: auto; background: var(--paper);
+}
+.portrait-gallery.is-full .pg-book { --pg-h: 78vh; }
+.portrait-gallery.is-full .pg-map { grid-template-rows: min(46vh, 460px); }
+
+/* ---------------- 诗词 ----------------
+   古风字体优先用系统楷体，缺楷体时退到宋体，再退到通用衬线。 */
+.poetry, .poetry-shelf {
+  --gu-font: "Kaiti SC", STKaiti, KaiTi, "楷体", "TW-Kai", "Noto Serif CJK SC",
+             "Source Han Serif SC", "Songti SC", STSong, SimSun, Georgia, serif;
+  --gu-paper: #f4eee1;
+  --gu-paper-2: #eae1cd;
+  --gu-ink: #2b2620;
+  --gu-ink-soft: #6d6151;
+  --gu-ink-faint: #a1937c;
+  --gu-line: #ddd1b8;
+  --gu-cinnabar: #a8352c;
+  --gu-sheen: rgb(255 255 255 / 30%);
+  --gu-fiber: rgb(122 96 58 / 4%);
+  --gu-gutter: rgb(90 70 44 / 15%);
+  --gu-turn: 820ms;
+  margin: 34px 0 38px;
+  border: 1px solid var(--gu-line);
+  border-radius: 4px;
+  color: var(--gu-ink);
+  font-family: var(--gu-font);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+[data-theme="dark"] .poetry, [data-theme="dark"] .poetry-shelf {
+  --gu-paper: #24211a;
+  --gu-paper-2: #1c1a14;
+  --gu-ink: #ece2ce;
+  --gu-ink-soft: #a89b83;
+  --gu-ink-faint: #7d7360;
+  --gu-line: #3b3629;
+  --gu-cinnabar: #c25a4b;
+  --gu-sheen: rgb(255 255 255 / 5%);
+  --gu-fiber: rgb(255 238 205 / 3%);
+  --gu-gutter: rgb(0 0 0 / 38%);
+}
+
+/* 宣纸底：一层柔光 + 两道极淡的纤维纹，叠在暖色渐变上 */
+.poetry, .poetry-shelf {
+  background:
+    radial-gradient(130% 90% at 50% 0%, var(--gu-sheen), transparent 62%),
+    repeating-linear-gradient(94deg, transparent 0 3px, var(--gu-fiber) 3px 4px),
+    repeating-linear-gradient(6deg, transparent 0 6px, var(--gu-fiber) 6px 7px),
+    linear-gradient(158deg, var(--gu-paper), var(--gu-paper-2));
+}
+
+.gu-bar {
+  display: flex; align-items: center; gap: 10px 14px; flex-wrap: wrap;
+  padding: 14px 20px; border-bottom: 1px solid var(--gu-line);
+}
+.gu-bar-title { font-size: 16px; font-weight: 500; letter-spacing: .16em; }
+.gu-bar-meta { color: var(--gu-ink-faint); font-size: 12px; letter-spacing: .1em; }
+.gu-tools { margin-left: auto; display: flex; gap: 6px; }
+.gu-tools button {
+  min-width: 32px; height: 28px; padding: 0 11px;
+  border: 1px solid var(--gu-line); border-radius: 3px;
+  background: transparent; color: var(--gu-ink-soft);
+  font-family: var(--gu-font); font-size: 12.5px; letter-spacing: .08em;
+  cursor: pointer; transition: .15s ease;
+}
+.gu-tools button:hover:not(:disabled) { border-color: var(--gu-cinnabar); color: var(--gu-cinnabar); }
+.gu-tools button.on { border-color: var(--gu-cinnabar); background: color-mix(in srgb, var(--gu-cinnabar) 12%, transparent); color: var(--gu-cinnabar); }
+.gu-tools button:disabled { opacity: .3; cursor: default; }
+
+.gu-stage { position: relative; padding: 26px 24px 6px; }
+.gu-book {
+  --gu-h: min(72vh, 700px);
+  position: relative; width: min(100%, calc(var(--gu-h) * 1.5));
+  margin: 0 auto; outline: none;
+}
+.gu-book:focus-visible { outline: 2px solid var(--gu-cinnabar); outline-offset: 8px; }
+.gu-book-inner {
+  position: relative; display: grid; grid-template-columns: 1fr 1fr;
+  aspect-ratio: 3 / 2; perspective: 2800px;
+  box-shadow: 0 30px 70px rgb(70 52 30 / 22%), 0 2px 5px rgb(70 52 30 / 14%);
+}
+[data-theme="dark"] .gu-book-inner { box-shadow: 0 30px 70px rgb(0 0 0 / 52%); }
+.gu-book-inner.single { grid-template-columns: 1fr; aspect-ratio: 3 / 4; }
+.gu-book-inner.single .gu-page-right, .gu-book-inner.single .gu-spine, .gu-book-inner.single .gu-leaf { display: none; }
+.gu-page { position: relative; min-width: 0; }
+.gu-spine {
+  position: absolute; left: 50%; top: 0; bottom: 0; width: 16px; transform: translateX(-8px); z-index: 4;
+  background: linear-gradient(90deg, transparent, var(--gu-gutter) 42%, rgb(255 255 255 / 10%) 50%, var(--gu-gutter) 58%, transparent);
+  pointer-events: none;
+}
+
+.gu-sheet {
+  position: absolute; inset: 0; overflow: hidden;
+  background:
+    radial-gradient(120% 80% at 50% 0%, var(--gu-sheen), transparent 60%),
+    repeating-linear-gradient(94deg, transparent 0 3px, var(--gu-fiber) 3px 4px),
+    linear-gradient(158deg, var(--gu-paper), var(--gu-paper-2));
+}
+.gu-page-left .gu-sheet { box-shadow: inset -20px 0 30px -24px var(--gu-gutter); }
+.gu-page-right .gu-sheet { box-shadow: inset 20px 0 30px -24px var(--gu-gutter); }
+
+/* 诗页：竖排右起，题在最右，落款印在最左 */
+/* stretch 让竖排的行长有确定值（否则内在尺寸会塌成一小块），center 把列组居中 */
+.gu-sheet-piece { display: flex; align-items: stretch; justify-content: center; padding: 34px 30px; }
+.gu-piece { writing-mode: vertical-rl; min-width: 0; max-width: 100%; text-align: start; }
+.gu-piece-title {
+  margin: 0 0 0 26px; font-size: clamp(21px, 2.3vw, 32px); font-weight: 400;
+  letter-spacing: .2em; color: var(--gu-ink);
+}
+.gu-preface {
+  margin: 0 0 0 18px; padding-block: 6px;
+  font-size: clamp(11px, 1.1vw, 13.5px); line-height: 2; letter-spacing: .12em;
+  color: var(--gu-ink-faint);
+}
+.gu-body { display: block; }
+.gu-block { display: block; }
+.gu-block + .gu-block { margin-left: 20px; }
+.poetry .gu-line {
+  margin: 0; font-size: clamp(17px, 1.85vw, 26px);
+  line-height: 2.05; letter-spacing: .16em; color: var(--gu-ink);
+}
+.gu-piece-foot {
+  margin-right: 26px; height: 100%;
+  display: flex; justify-content: flex-end; align-items: flex-start; gap: 12px;
+}
+.gu-tag {
+  display: block; margin-top: 10px; color: var(--gu-ink-faint);
+  font-size: 11px; letter-spacing: .12em;
+}
+
+/* 横排：同一份结构换个书写方向 */
+.poetry.horizontal .gu-sheet-piece { display: flex; align-items: center; justify-content: center; }
+.poetry.horizontal .gu-piece { writing-mode: horizontal-tb; width: 100%; max-height: 100%; overflow: auto; text-align: center; }
+.poetry.horizontal .gu-piece-title { margin: 0 0 18px; }
+.poetry.horizontal .gu-preface { margin: 0 0 16px; }
+.poetry.horizontal .gu-block + .gu-block { margin: 16px 0 0; }
+.poetry.horizontal .gu-line { line-height: 2.2; }
+.poetry.horizontal .gu-piece-foot { margin: 22px 0 0; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.poetry.horizontal .gu-tag { margin: 0; }
+.gu-sheet-piece.prose .gu-piece { overflow: auto; scrollbar-width: thin; }
+.gu-sheet-piece.prose .gu-line { font-size: clamp(14px, 1.25vw, 17px); line-height: 2.15; letter-spacing: .08em; }
+
+/* 朱砂印 */
+.gu-seal {
+  width: 42px; height: 42px; display: grid; place-items: center;
+  writing-mode: horizontal-tb; border-radius: 3px;
+  background: var(--gu-cinnabar); color: var(--gu-paper);
+  font-size: 21px; font-weight: 500; letter-spacing: 0; line-height: 1;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 20%);
+}
+.gu-seal.small { width: 30px; height: 30px; font-size: 15px; }
+
+/* 封面与扉页 */
+.gu-sheet-cover { padding: 0; }
+.gu-sheet-cover .gu-cover { position: absolute; inset: 0; }
+.gu-cover { position: relative; overflow: hidden; background: var(--gu-ink-deep); }
+.gu-cover-art { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.gu-cover-face { position: absolute; inset: 0; padding: 11% 12%; display: flex; align-items: flex-start; gap: 14px; }
+.gu-cover-title {
+  writing-mode: vertical-rl; margin: 0;
+  padding: 16px 10px; border: 1px solid color-mix(in srgb, var(--gu-ink-deep) 30%, transparent);
+  background: color-mix(in srgb, var(--gu-ink-paper) 92%, transparent);
+  color: var(--gu-ink-deep); font-size: clamp(22px, 3vw, 40px); font-weight: 400; letter-spacing: .22em;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 16%);
+}
+.gu-cover-sub {
+  writing-mode: vertical-rl; margin-top: 14px; margin-left: 6px;
+  color: color-mix(in srgb, var(--gu-ink-paper) 88%, transparent);
+  font-size: clamp(11px, 1.1vw, 14px); letter-spacing: .3em;
+}
+.gu-cover .gu-seal {
+  position: absolute; right: 12%; bottom: 11%;
+  background: var(--gu-cinnabar); color: var(--gu-ink-paper);
+}
+.gu-cover.small .gu-cover-face { padding: 12% 12%; }
+.gu-cover.small .gu-seal { width: 26px; height: 26px; font-size: 13px; }
+
+.gu-sheet-title { display: grid; place-items: center; padding: 40px; }
+.gu-title-block { display: grid; justify-items: center; gap: 14px; text-align: center; }
+.gu-title-name { font-size: clamp(28px, 3.4vw, 46px); font-weight: 400; letter-spacing: .24em; }
+.gu-title-sub { color: var(--gu-ink-soft); font-size: 13px; letter-spacing: .34em; }
+.gu-title-intro { max-width: 24em; color: var(--gu-ink-faint); font-size: 12.5px; line-height: 2.1; letter-spacing: .06em; }
+
+.gu-sheet-empty { display: grid; place-items: center; align-content: center; gap: 8px; padding: 40px; text-align: center; }
+.gu-empty-mark { color: var(--gu-ink-faint); font-size: 34px; opacity: .5; }
+.poetry .gu-sheet-empty p { margin: 6px 0 0; font-size: 15px; letter-spacing: .18em; }
+.gu-sheet-empty small { color: var(--gu-ink-faint); font-size: 11.5px; line-height: 2; }
+.gu-sheet-empty code { padding: 1px 5px; border-radius: 3px; background: color-mix(in srgb, var(--gu-ink) 8%, transparent); font-size: 11px; }
+
+/* 翻页 */
+.gu-leaf {
+  position: absolute; left: 50%; top: 0; width: 50%; height: 100%; z-index: 5;
+  transform-origin: left center; transform-style: preserve-3d; transition: none;
+}
+.gu-leaf.turning { transition: transform var(--gu-turn) cubic-bezier(.4, .02, .28, 1); }
+.gu-leaf-face { position: absolute; inset: 0; overflow: hidden; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.gu-leaf-back { transform: rotateY(180deg); }
+.gu-leaf-shade { position: absolute; inset: 0; opacity: 0; pointer-events: none; background: linear-gradient(90deg, rgb(0 0 0 / 40%), transparent 64%); }
+.gu-leaf.turning.forward .gu-leaf-shade { animation: gu-shade var(--gu-turn) ease-in-out; }
+.gu-leaf.turning.backward .gu-leaf-shade { animation: gu-shade var(--gu-turn) ease-in-out reverse; }
+@keyframes gu-shade { 0% { opacity: 0; } 45% { opacity: .48; } 100% { opacity: 0; } }
+.gu-page.slide-next .gu-sheet { animation: gu-slide-next .4s ease; }
+.gu-page.slide-prev .gu-sheet { animation: gu-slide-prev .4s ease; }
+@keyframes gu-slide-next { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: none; } }
+@keyframes gu-slide-prev { from { opacity: 0; transform: translateX(-24px); } to { opacity: 1; transform: none; } }
+
+/* 目次 */
+.gu-toc {
+  position: absolute; left: 24px; top: 26px; z-index: 12;
+  width: 224px; max-height: calc(100% - 52px); display: flex; flex-direction: column;
+  border: 1px solid var(--gu-line); border-radius: 3px;
+  background: color-mix(in srgb, var(--gu-paper) 96%, transparent);
+  box-shadow: 0 18px 44px rgb(70 52 30 / 22%);
+}
+.gu-toc[hidden] { display: none; }
+.gu-toc-head { padding: 12px 14px; border-bottom: 1px solid var(--gu-line); font-size: 13px; letter-spacing: .3em; }
+.gu-toc-list { flex: 1; min-height: 0; overflow-y: auto; padding: 7px; }
+.gu-toc-item {
+  width: 100%; display: flex; align-items: baseline; gap: 9px; padding: 8px 9px;
+  border: 0; border-radius: 3px; background: transparent; color: var(--gu-ink);
+  font-family: var(--gu-font); font-size: 13.5px; letter-spacing: .08em;
+  text-align: left; cursor: pointer; transition: .14s ease;
+}
+.gu-toc-item i { flex: 0 0 auto; color: var(--gu-ink-faint); font-style: normal; font-size: 11px; }
+.gu-toc-item span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gu-toc-item em { flex: 0 0 auto; color: var(--gu-ink-faint); font-style: normal; font-size: 10.5px; }
+.gu-toc-item:hover { background: color-mix(in srgb, var(--gu-ink) 6%, transparent); }
+.gu-toc-item.active { background: color-mix(in srgb, var(--gu-cinnabar) 12%, transparent); color: var(--gu-cinnabar); }
+.gu-toc-empty { margin: 14px; color: var(--gu-ink-faint); font-size: 12px; letter-spacing: .16em; text-align: center; }
+
+.gu-foot {
+  display: flex; align-items: center; gap: 16px;
+  width: min(100%, calc(var(--gu-h, 700px) * 1.5)); margin: 6px auto 0; padding: 14px 24px 20px;
+}
+.gu-turn {
+  padding: 6px 15px; border: 1px solid var(--gu-line); border-radius: 3px;
+  background: transparent; color: var(--gu-ink-soft);
+  font-family: var(--gu-font); font-size: 13px; letter-spacing: .12em; cursor: pointer; transition: .15s ease;
+}
+.gu-turn:hover:not(:disabled) { border-color: var(--gu-cinnabar); color: var(--gu-cinnabar); }
+.gu-turn:disabled { opacity: .3; cursor: default; }
+.gu-progress { flex: 1; height: 1px; background: var(--gu-line); }
+.gu-progress span { display: block; height: 100%; background: var(--gu-cinnabar); transition: width .3s ease; }
+.gu-counter { color: var(--gu-ink-faint); font-size: 12px; letter-spacing: .16em; white-space: nowrap; }
+.gu-error { padding: 20px; color: var(--gu-ink-soft); font-size: 13px; }
+
+.poetry.is-full { margin: 0; border: 0; border-radius: 0; height: 100vh; display: flex; flex-direction: column; }
+.poetry.is-full .gu-stage { flex: 1; min-height: 0; display: grid; align-items: center; }
+.poetry.is-full .gu-book { --gu-h: 80vh; }
+
+/* 书架 */
+.poetry-shelf { padding: 30px 28px 34px; }
+.poetry-shelf .gu-shelf-intro { margin: 0 0 24px; color: var(--gu-ink-soft); font-size: 14px; line-height: 2.05; letter-spacing: .05em; }
+.gu-shelf { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 26px; }
+.gu-shelf-item {
+  display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 22px; align-items: center;
+  padding: 20px; border: 1px solid var(--gu-line); border-radius: 3px;
+  background: color-mix(in srgb, var(--gu-paper) 55%, transparent);
+  color: var(--gu-ink); font-family: var(--gu-font); text-align: left; cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.gu-shelf-item:hover { transform: translateY(-3px); border-color: var(--gu-cinnabar); box-shadow: 0 18px 40px rgb(70 52 30 / 18%); }
+.gu-shelf-item .gu-cover { aspect-ratio: 300 / 420; border-radius: 2px; box-shadow: 0 10px 26px rgb(70 52 30 / 26%); }
+.gu-shelf-copy { display: grid; gap: 10px; }
+.gu-shelf-copy strong { font-size: 22px; font-weight: 400; letter-spacing: .2em; }
+.gu-shelf-copy em { color: var(--gu-ink-soft); font-style: normal; font-size: 12.5px; letter-spacing: .3em; }
+.gu-shelf-copy small { color: var(--gu-ink-faint); font-size: 12.5px; line-height: 2; letter-spacing: .04em; }
+
+@media (max-width: 1180px) {
+  .reading-layout.immersive { width: min(1100px, calc(100% - 40px)); }
+}
+@media (max-width: 800px) {
+  .reading-layout.immersive { width: min(100% - 24px, 900px); }
+  .gu-stage { padding: 16px 12px 4px; }
+  .gu-book { --gu-h: min(66vh, 560px); }
+  .gu-foot { padding: 12px 12px 16px; gap: 10px; }
+  .gu-turn { padding: 6px 11px; font-size: 12px; }
+  .gu-toc { left: 12px; top: 16px; width: 200px; }
+  .poetry-shelf { padding: 20px 16px 24px; }
+  .gu-shelf { grid-template-columns: 1fr; gap: 16px; }
+  .gu-shelf-item { grid-template-columns: 120px minmax(0, 1fr); gap: 16px; padding: 14px; }
+  .gu-shelf-copy strong { font-size: 19px; }
+  .gu-sheet-piece { padding: 22px 18px; }
 }

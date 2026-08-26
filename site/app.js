@@ -95,6 +95,7 @@ function setChrome({ breadcrumb, meta, toc = false, wide = false }) {
   elements.meta.hidden = !meta;
   elements.toc.hidden = !toc;
   elements.layout.classList.toggle("portal-layout", wide);
+  elements.layout.classList.remove("immersive");
   elements.scroll.scrollTop = 0;
   elements.progress.style.width = "0";
 }
@@ -300,13 +301,16 @@ function enhanceDocumentLinks(docPath) {
 function convertSpecialCodeBlocks() {
   elements.article.querySelectorAll("pre code").forEach((code) => {
     const language = [...code.classList].find((name) => name.startsWith("language-"))?.slice(9);
-    if (!["mermaid", "knowledge-map", "knowledge-graph", "portrait-gallery"].includes(language)) return;
+    if (!["mermaid", "knowledge-map", "knowledge-graph", "portrait-gallery", "poetry", "poetry-shelf"].includes(language)) return;
     const host = document.createElement("div");
     host.className = language;
     if (language === "mermaid") {
       host.textContent = code.textContent;
     } else {
-      const sourceClass = { "knowledge-map": "kmap-source", "knowledge-graph": "kg-source", "portrait-gallery": "pg-source" };
+      const sourceClass = {
+        "knowledge-map": "kmap-source", "knowledge-graph": "kg-source",
+        "portrait-gallery": "pg-source", "poetry": "gu-source", "poetry-shelf": "gu-source"
+      };
       const source = document.createElement("div");
       source.className = sourceClass[language];
       source.hidden = true;
@@ -346,13 +350,22 @@ async function renderDiagrams(docPath) {
     dark,
     resolveSrc: (src) => `./content/${encodePath(resolveRelative(docPath, src))}`
   });
+  window.Poetry?.mountAll(elements.article, { dark, onOpenDoc });
 }
 
 function slugHeading(text, index) {
   return `section-${index}-${text.trim().replace(/\s+/g, "-").replace(/[^\w\u4e00-\u9fff-]/g, "").slice(0, 28)}`;
 }
 
+// 相册、诗集这类沉浸式模块需要整幅版面，出现时让正文列变宽并让出右侧目录
+function applyImmersiveLayout() {
+  const immersive = !!elements.article.querySelector(".portrait-gallery, .poetry, .poetry-shelf");
+  elements.layout.classList.toggle("immersive", immersive);
+  return immersive;
+}
+
 function buildToc() {
+  if (elements.layout.classList.contains("immersive")) { elements.toc.hidden = true; elements.toc.innerHTML = ""; return; }
   const headings = [...elements.article.querySelectorAll("h2, h3")];
   elements.toc.innerHTML = "";
   if (!headings.length) { elements.toc.hidden = true; return; }
@@ -390,6 +403,7 @@ async function renderDocument(path) {
     elements.article.innerHTML = window.DOMPurify ? DOMPurify.sanitize(html, { ADD_TAGS: ["foreignObject"], ADD_ATTR: ["target"] }) : html;
     convertSpecialCodeBlocks();
     enhanceDocumentLinks(path);
+    applyImmersiveLayout();
     buildToc();
     await renderDiagrams(path);
     document.title = `${doc.title} · ${state.index.title}`;

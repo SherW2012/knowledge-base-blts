@@ -259,6 +259,7 @@
           <span class="pg-meta">${this.data.groups.length} ${unit} · ${totalPhotos} 张素材</span>
           <div class="pg-tools">
             ${this.hasMap ? '<button type="button" data-act="toggle-map">收起地图</button>' : ""}
+            <button type="button" data-act="full" title="全屏">⛶</button>
             <button type="button" data-act="prev" aria-label="上一页">‹</button>
             <button type="button" data-act="next" aria-label="下一页">›</button>
           </div>
@@ -784,6 +785,10 @@
           else if (act === "zoom-in") this.zoomBy(1.3);
           else if (act === "zoom-out") this.zoomBy(1 / 1.3);
           else if (act === "zoom-reset") { this.mapView = { k: 1, x: 0, y: 0 }; this.applyMapView(); }
+          else if (act === "full") {
+            if (document.fullscreenElement === this.host) document.exitFullscreen?.();
+            else this.host.requestFullscreen?.().catch(() => {});
+          }
           else if (act === "toggle-map") {
             const hidden = this.host.classList.toggle("map-hidden");
             action.textContent = hidden ? "展开地图" : "收起地图";
@@ -845,6 +850,11 @@
         });
       };
       window.addEventListener("resize", this.resize);
+      document.addEventListener("fullscreenchange", () => {
+        if (!this.host.isConnected) return;
+        this.host.classList.toggle("is-full", document.fullscreenElement === this.host);
+        this.resize();
+      });
     }
 
     save() {
