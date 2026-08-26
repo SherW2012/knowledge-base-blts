@@ -3,9 +3,9 @@ import path from "node:path";
 
 const root = process.cwd();
 
-// The radar engine still writes human-readable reports to its legacy location.
-// Run it first, then move those reports into the machine-data layer so department
-// knowledge directories never become storage for application runtime output.
+// Application runtime output belongs to radar-data, never to a department's
+// knowledge tree. The engine may create temporary readable reports first; this
+// wrapper moves them into the machine-data layer before the workflow commits.
 await import("./radar.mjs");
 
 const legacyRoot = path.join(root, "前沿部", "AI情报雷达");
@@ -24,4 +24,4 @@ for (const [legacyName, targetName] of [["日报", "daily"], ["周报", "weekly"
 }
 
 await rm(legacyRoot, { recursive: true, force: true });
-console.log("[radar] runtime reports moved to radar-data/reports; department knowledge tree kept clean");
+console.log("[radar] application runtime reports stored in radar-data/reports; knowledge tree remains clean");
