@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>01-lab 小红书图文母版</title>
+
+  <!-- ================================================================
+       每期只改下面这一段 window.XHS_CONFIG。
+       正文一个数组项就是一个自然段；正文内不要手写 <br>。
+       需要强调时可用：<span class="accent">强调文字</span>
+       ================================================================ -->
+  <script>
+    window.XHS_CONFIG = {
+      account: "@01-lab每日分享",
+      coverImage: "./封面配图.png",
+      coverAlt: "SWE-Bench Pro 编程评测任务，其中三项出现裂纹",
+      coverTitleLines: ["SWE-Bench Pro编程榜单，", "近三成题坏了"],
+      coverSubtitle: "700+道公开任务被复核 | 自动审计27.4% | 人工复核34.1%",
+      swipeHint: "右滑看全文",
+      pages: [
+        {
+          title: "这次审计查了什么",
+          bodyTop: 250.32,
+          paragraphs: [
+            "很多人把SWE-Bench Pro理解成一场代码考试：给模型一个代码仓库、一段需求和配套测试，让它改出补丁，既完成新功能，也不破坏原有行为。公开部分共有700+道任务，来源是项目历史里的功能改动。",
+            "OpenAI先让数据检查流程读取模型作答、任务资料与失败轨迹，从中标出286道疑似异常任务。随后，这批疑似题进入两条复核路线：Codex调查代理多轮查看仓库、测试和补丁；另一条路线由有经验的软件工程师完成，每道疑似任务交给五人分别判断，分歧再进入追加核验。",
+            "两条路线给出的数字并不相同：<span class=\"accent\">代理辅助流程认定200道任务存在破坏性问题，占27.4%；人工复核认定249道，占34.1%。</span>因此，OpenAI把整体情况概括为约三成。这份审计既看自动流程，也保留了人工判断的独立路线。"
+          ]
+        },
+        {
+          title: "问题主要出在哪",
+          bodyTop: 275.38,
+          paragraphs: [
+            "这批异常大致落在四类：<span class=\"accent\">测试条件过严</span>，功能相同却因写法不同被判错；<span class=\"accent\">题面交代不够</span>，隐藏测试会查题面没写的条件；<span class=\"accent\">测试覆盖太少</span>，不完整补丁也可能通过；<span class=\"accent\">题面带错方向</span>，文字描述与评分条件互相冲突。",
+            "原文甚至给出一个<span class=\"accent\">“差1个空格”</span>的案例：题面示例要求行首1个空格，隐藏测试却要求2个，照题写也会失败。这些情况会制造双向误差：合格代码被记为失败，不完整的补丁被记为通过。此时，分数测到的不只是编码能力，还混进了题目质量、测试写法和仓库语境。",
+            "两条路线对问题类型的判断有74%案例重合，异常并非只由某一种检查方式看到。因此，审计时不能只看模型有没有通过，还要把题面、测试、参考补丁与仓库状态放到一起核对，才能判断错误来自作答还是任务设计。"
+          ]
+        },
+        {
+          title: "分数为什么会走样",
+          bodyTop: 274.69,
+          paragraphs: [
+            "这项基准的公开部分曾出现一条很亮眼的曲线：<span class=\"accent\">前沿模型的任务通过比例在八个月里从23.3%升到80.3%。</span>数字变化很快，也因此常被拿来比较编码代理。",
+            "审计提醒了一个容易忽略的前提：只有题目、测试与参考补丁彼此对齐，分数才主要反映模型能力。若测试过严，能力较强的模型也会在合理写法上丢分；若覆盖不足，能力一般的模型也可能靠不完整改动拿到通过。",
+            "所以，80.3%不能直接翻译成“模型能处理八成日常开发任务”，27.4%和34.1%也不是在给某个模型定性。它们描述的是数据集本身的质量差异。查看模型成绩时，还要一起看任务来源、运行环境、工具权限、测试覆盖和人工复核方式。同一套模型在不同基准上的名次，也可能因为题目结构和工具配置而变化，<span class=\"accent\">单独一个总分很难承载全部信息。</span>"
+          ]
+        },
+        {
+          title: "OpenAI为什么改口",
+          bodyTop: 257.89,
+          paragraphs: [
+            "这次审计还有一段值得留意的前情。OpenAI在二月发文指出，SWE-bench Verified受到题目缺陷和训练数据暴露影响，已不适合继续衡量前沿编码能力，并建议行业转向SWE-Bench Pro。",
+            "几个月后，同一团队复核Pro公开集，发现它也有较大比例的任务异常，<span class=\"accent\">于是撤回先前建议。</span>它没有宣布榜单全部作废，也没有重算模型名次；更准确地说，是撤回背书，提醒行业谨慎读分。",
+            "OpenAI给出的后续方向包括，由有经验的软件工程师专门编写新任务，加强人工复核，并对题面、测试、补丁和失败轨迹做持续审计。对普通使用者而言，更实用的读法是把榜单当成一组线索：它能提示变化，却不能替代实际项目中的多轮测试。<span class=\"accent\">模型发布时的一项高分，也需要和真实代码库表现分开理解。</span>"
+          ]
+        }
+      ]
+    };
+  </script>
+
+  <style>
+    :root {
+      --paper: #f2ece7;
+      --ink: #5b3f33;
+      --accent: #c87c5e;
+      --black: #151515;
+      --font: "Times New Roman", "SimHei", "黑体", serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body { min-width: 320px; min-height: 100vh; overflow: hidden; background: #272321; font-family: var(--font); }
+    #stage { position: absolute; width: 1080px; height: 1440px; transform-origin: top left; }
+    body.render-mode { width: 1080px; height: 1440px; min-width: 1080px; min-height: 1440px; background: var(--paper); }
+    body.render-mode #stage { left: 0 !important; top: 0 !important; transform: none !important; }
+    .slide {
+      display: none;
+      position: relative;
+      width: 1080px;
+      height: 1440px;
+      overflow: hidden;
+      background: var(--paper);
+      color: var(--ink);
+    }
+    .slide.active { display: block; }
+    .bottom-rule { position: absolute; left: 66.28px; top: 1335.86px; width: 959.72px; height: 1.2px; background: var(--black); }
+    .section-bar { position: absolute; left: 45.71px; top: 56.38px; width: 20.57px; height: 178.91px; background: var(--accent); }
+    .section-title {
+      position: absolute;
+      left: 74px;
+      top: 56.38px;
+      width: 960px;
+      height: 178.91px;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      font-family: var(--font);
+      font-size: 74.25px;
+      line-height: 1.12;
+      font-weight: 700;
+      color: var(--ink);
+      white-space: normal;
+    }
+    .body-copy {
+      position: absolute;
+      left: 45.71px;
+      right: 53.99px;
+      bottom: 128px;
+      margin: 0;
+      padding: 0;
+      font-family: var(--font);
+      font-size: 36px;
+      line-height: 2;
+      font-weight: 700;
+      color: var(--ink);
+      word-break: normal;
+      overflow-wrap: normal;
+      line-break: strict;
+      white-space: normal;
+    }
+    .body-copy p { margin: 0 0 54px; padding: 0; }
+    .body-copy p:last-child { margin-bottom: 0; }
+    .accent { color: var(--accent); }
+    .cover .top-field { position: absolute; inset: 0 0 auto 0; height: 676.28px; background: var(--accent); }
+    .cover .account {
+      position: absolute;
+      left: 141.43px;
+      top: 63px;
+      width: 797.14px;
+      height: 62.7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font);
+      font-size: 46px;
+      line-height: 1;
+      font-weight: 700;
+      color: var(--ink);
+      z-index: 2;
+    }
+    .cover .hero { position: absolute; left: 35.61px; top: 143.75px; width: 1008.77px; height: 582.71px; object-fit: cover; object-position: center; display: block; z-index: 1; }
+    .cover .cover-title {
+      position: absolute;
+      left: 66.28px;
+      top: 765.32px;
+      width: 978.11px;
+      height: 199.02px;
+      margin: 0;
+      font-family: var(--font);
+      font-size: 78.75px;
+      line-height: 1.15;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .cover .cover-title span { display: block; }
+    .cover .subtitle-bar { position: absolute; left: 66.28px; top: 1098.63px; width: 4.05px; height: 138.66px; background: var(--ink); }
+    .cover .subtitle {
+      position: absolute;
+      left: 89.27px;
+      top: 1109.35px;
+      width: 936.73px;
+      height: 117.23px;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      font-family: var(--font);
+      font-size: 36px;
+      line-height: 1.25;
+      font-weight: 700;
+      color: var(--black);
+    }
+    .cover .swipe-hint {
+      position: absolute;
+      right: 53.99px;
+      top: 1248px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 34px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--font);
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      z-index: 2;
+    }
+    .cover .swipe-hint .arrow { letter-spacing: 0; font-size: 34px; }
+    #toolbar { position: fixed; right: 14px; top: 14px; z-index: 1000; display: flex; gap: 8px; padding: 8px; border-radius: 10px; background: rgba(25, 22, 20, .82); color: #fff; font-family: Arial, sans-serif; box-shadow: 0 6px 24px rgba(0,0,0,.22); }
+    #toolbar button { border: 0; border-radius: 7px; padding: 7px 12px; background: #f2ece7; color: #5b3f33; cursor: pointer; font-weight: 700; }
+    #page-indicator { min-width: 44px; display: grid; place-items: center; }
+    body.render-mode #toolbar { display: none; }
+  </style>
+</head>
+<body>
+  <main id="stage" aria-label="小红书五图预览"></main>
+  <nav id="toolbar" aria-label="翻页控制">
+    <button id="previous" type="button">上一张</button>
+    <span id="page-indicator">1 / 5</span>
+    <button id="next" type="button">下一张</button>
+  </nav>
+
+  <script>
+    const config = window.XHS_CONFIG;
+    const params = new URLSearchParams(location.search);
+    const renderMode = params.get("render") === "1";
+    const totalSlides = 5;
+    if (!config || !Array.isArray(config.pages) || config.pages.length !== 4) {
+      throw new Error("XHS_CONFIG 必须包含封面和四个正文页，固定共 5 图。 ");
+    }
+    document.body.classList.toggle("render-mode", renderMode);
+
+    const stage = document.getElementById("stage");
+    stage.innerHTML = `
+      <section class="slide cover" id="slide-1">
+        <div class="top-field"></div>
+        <div class="account"></div>
+        <img class="hero" alt="" />
+        <h1 class="cover-title"></h1>
+        <div class="subtitle-bar"></div>
+        <p class="subtitle"></p>
+        <div class="swipe-hint"><span class="hint-text"></span><span class="arrow">→</span></div>
+        <div class="bottom-rule"></div>
+      </section>
+      ${config.pages.map((page, index) => `
+        <section class="slide" id="slide-${index + 2}">
+          <div class="section-bar"></div>
+          <h2 class="section-title"></h2>
+          <div class="body-copy"></div>
+          <div class="bottom-rule"></div>
+        </section>`).join("")}
+    `;
+
+    const cover = document.getElementById("slide-1");
+    cover.querySelector(".account").textContent = config.account;
+    const hero = cover.querySelector(".hero");
+    hero.src = config.coverImage;
+    hero.alt = config.coverAlt || "封面配图";
+    cover.querySelector(".cover-title").innerHTML = config.coverTitleLines.map((line) => `<span>${line}</span>`).join("");
+    cover.querySelector(".subtitle").textContent = config.coverSubtitle;
+    cover.querySelector(".swipe-hint .hint-text").textContent = config.swipeHint || "右滑看全文";
+
+    config.pages.forEach((page, index) => {
+      const slide = document.getElementById(`slide-${index + 2}`);
+      slide.querySelector(".section-title").textContent = page.title;
+      const body = slide.querySelector(".body-copy");
+      body.style.top = `${page.bodyTop}px`;
+      body.innerHTML = page.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("");
+    });
+
+    let slideNumber = Math.min(totalSlides, Math.max(1, Number(params.get("slide")) || 1));
+    function showSlide(nextSlide, updateUrl = true) {
+      slideNumber = Math.min(totalSlides, Math.max(1, nextSlide));
+      document.querySelectorAll(".slide").forEach((slide) => slide.classList.remove("active"));
+      document.getElementById(`slide-${slideNumber}`).classList.add("active");
+      document.getElementById("page-indicator").textContent = `${slideNumber} / ${totalSlides}`;
+      if (!renderMode && updateUrl) {
+        const next = new URL(location.href);
+        next.searchParams.set("slide", String(slideNumber));
+        history.replaceState(null, "", next);
+      }
+      runQa();
+    }
+
+    document.getElementById("previous").addEventListener("click", () => showSlide(slideNumber - 1));
+    document.getElementById("next").addEventListener("click", () => showSlide(slideNumber + 1));
+    addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") showSlide(slideNumber - 1);
+      if (event.key === "ArrowRight") showSlide(slideNumber + 1);
+    });
+
+    function fitPreview() {
+      if (renderMode) return;
+      const scale = Math.min(innerWidth / 1080, innerHeight / 1440);
+      stage.style.transform = `scale(${scale})`;
+      stage.style.left = `${(innerWidth - 1080 * scale) / 2}px`;
+      stage.style.top = `${(innerHeight - 1440 * scale) / 2}px`;
+    }
+    addEventListener("resize", fitPreview);
+
+    function hasBoxOverflow(element) {
+      return Boolean(element && (element.scrollWidth > element.clientWidth + 0.5 || element.scrollHeight > element.clientHeight + 0.5));
+    }
+    async function runQa() {
+      await document.fonts.ready;
+      await Promise.all([...document.images].map((image) => image.complete ? Promise.resolve() : new Promise((resolve) => image.addEventListener("load", resolve, { once: true }))));
+      const active = document.getElementById(`slide-${slideNumber}`);
+      const title = active.querySelector(".section-title, .cover-title");
+      const body = active.querySelector(".body-copy");
+      const subtitle = active.querySelector(".subtitle");
+      const account = active.querySelector(".account");
+      const bottomRule = active.querySelector(".bottom-rule");
+      const bar = active.querySelector(".section-bar, .subtitle-bar");
+      const titleRect = title.getBoundingClientRect();
+      const ruleRect = bottomRule.getBoundingClientRect();
+      const bodyRect = body?.getBoundingClientRect();
+      const bodyContentBottom = body ? Math.max(...[...body.children].map((node) => node.getBoundingClientRect().bottom)) : titleRect.bottom;
+      const boxOverflow = [title, body, subtitle, account].filter(Boolean).some(hasBoxOverflow);
+      const crossesBottomRule = Boolean(body && bodyContentBottom > ruleRect.top - 24);
+      const titleBarCenterDelta = bar && active.classList.contains("cover") === false
+        ? Math.abs((titleRect.top + titleRect.height / 2) - (bar.getBoundingClientRect().top + bar.getBoundingClientRect().height / 2))
+        : 0;
+      const imageLoaded = active.classList.contains("cover") ? Boolean(hero.complete && hero.naturalWidth > 0 && hero.naturalHeight > 0) : true;
+      const coverAspect = imageLoaded && active.classList.contains("cover") ? hero.naturalWidth / hero.naturalHeight : null;
+      const coverIsExact16By9 = coverAspect === null || Math.abs(coverAspect - (16 / 9)) < 0.000001;
+      const overflow = boxOverflow || crossesBottomRule || titleBarCenterDelta > 1 || !imageLoaded || !coverIsExact16By9;
+      window.__XHS_QA__ = {
+        slide: slideNumber,
+        viewport: { width: innerWidth, height: innerHeight },
+        title: { top: titleRect.top, bottom: titleRect.bottom, scrollWidth: title.scrollWidth, clientWidth: title.clientWidth, scrollHeight: title.scrollHeight, clientHeight: title.clientHeight },
+        body: bodyRect ? { top: bodyRect.top, bottom: bodyRect.bottom, scrollWidth: body.scrollWidth, clientWidth: body.clientWidth, scrollHeight: body.scrollHeight, clientHeight: body.clientHeight, contentBottom: bodyContentBottom } : null,
+        bottomRuleTop: ruleRect.top,
+        titleBarCenterDelta,
+        imageLoaded,
+        coverAspect,
+        coverIsExact16By9,
+        overflow
+      };
+      document.title = `xhs-slide-${slideNumber}-${overflow ? "OVERFLOW" : "OK"}`;
+    }
+
+    fitPreview();
+    showSlide(slideNumber, false);
+    addEventListener("load", runQa, { once: true });
+  </script>
+</body>
+</html>
