@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "status": "ok",
-  "generatedAt": "2026-08-26T05:46:58.777Z",
+  "generatedAt": "2026-08-26T05:47:30.823Z",
   "date": "2026-08-26",
   "timezone": "Asia/Shanghai",
   "llm": {
@@ -10,15 +10,15 @@
     "model": null
   },
   "stats": {
-    "configuredSources": 39,
-    "automatedSources": 32,
-    "manualSources": 7,
-    "successfulSources": 32,
-    "failedSources": 0,
-    "scannedItems": 430,
-    "recentItems": 86,
-    "dedupedItems": 86,
-    "eventClusters": 78,
+    "configuredSources": 41,
+    "automatedSources": 35,
+    "manualSources": 6,
+    "successfulSources": 34,
+    "failedSources": 1,
+    "scannedItems": 364,
+    "recentItems": 117,
+    "dedupedItems": 117,
+    "eventClusters": 110,
     "publishedItems": 18
   },
   "sourceRuns": [
@@ -39,22 +39,6 @@
       "items": 18
     },
     {
-      "id": "deepmind-blog",
-      "name": "Google DeepMind Blog",
-      "tier": "S",
-      "kind": "feed",
-      "status": "ok",
-      "items": 18
-    },
-    {
-      "id": "microsoft-research",
-      "name": "Microsoft Research",
-      "tier": "S",
-      "kind": "feed",
-      "status": "ok",
-      "items": 10
-    },
-    {
       "id": "github-ai",
       "name": "GitHub AI & ML",
       "tier": "S",
@@ -79,34 +63,98 @@
       "items": 18
     },
     {
-      "id": "nvidia-ai",
-      "name": "NVIDIA AI Blog",
-      "tier": "S",
+      "id": "hf-trending-models",
+      "name": "Hugging Face Trending Models",
+      "tier": "A",
+      "kind": "huggingface_trending",
+      "status": "ok",
+      "items": 0
+    },
+    {
+      "id": "gh-trending",
+      "name": "GitHub Trending · AI/Agent/Tools",
+      "tier": "A",
+      "kind": "github_trending",
+      "status": "ok",
+      "items": 0
+    },
+    {
+      "id": "gh-search-skills",
+      "name": "GitHub Discovery · Agent Skills",
+      "tier": "A",
+      "kind": "github_search",
+      "status": "ok",
+      "items": 0
+    },
+    {
+      "id": "gh-search-mcp",
+      "name": "GitHub Discovery · MCP / Agent Tools",
+      "tier": "A",
+      "kind": "github_search",
+      "status": "ok",
+      "items": 0
+    },
+    {
+      "id": "gh-search-productivity",
+      "name": "GitHub Discovery · AI Productivity",
+      "tier": "A",
+      "kind": "github_search",
+      "status": "ok",
+      "items": 0
+    },
+    {
+      "id": "producthunt",
+      "name": "Product Hunt",
+      "tier": "A",
       "kind": "feed",
       "status": "ok",
       "items": 18
     },
     {
-      "id": "aws-ml",
-      "name": "AWS Machine Learning Blog",
-      "tier": "S",
+      "id": "techcrunch-ai",
+      "name": "TechCrunch AI",
+      "tier": "A",
       "kind": "feed",
       "status": "ok",
       "items": 18
     },
     {
-      "id": "cloudflare-ai",
-      "name": "Cloudflare AI",
-      "tier": "S",
+      "id": "ars-ai",
+      "name": "Ars Technica AI",
+      "tier": "A",
       "kind": "feed",
       "status": "ok",
       "items": 18
     },
     {
-      "id": "tensorflow-blog",
-      "name": "TensorFlow Blog",
-      "tier": "S",
+      "id": "simon-willison",
+      "name": "Simon Willison",
+      "tier": "A",
       "kind": "feed",
+      "status": "ok",
+      "items": 18
+    },
+    {
+      "id": "latent-space",
+      "name": "Latent Space",
+      "tier": "A",
+      "kind": "feed",
+      "status": "ok",
+      "items": 18
+    },
+    {
+      "id": "one-useful-thing",
+      "name": "One Useful Thing / Ethan Mollick",
+      "tier": "A",
+      "kind": "feed",
+      "status": "ok",
+      "items": 18
+    },
+    {
+      "id": "hackernews-ai",
+      "name": "Hacker News · AI Tool Signals",
+      "tier": "B",
+      "kind": "hackernews",
       "status": "ok",
       "items": 18
     },
@@ -143,73 +191,9 @@
       "items": 10
     },
     {
-      "id": "gh-langgraph",
-      "name": "langchain-ai/langgraph Releases",
-      "tier": "S",
-      "kind": "feed",
-      "status": "ok",
-      "items": 10
-    },
-    {
-      "id": "gh-vercel-ai",
-      "name": "vercel/ai Releases",
-      "tier": "S",
-      "kind": "feed",
-      "status": "ok",
-      "items": 10
-    },
-    {
-      "id": "gh-ollama",
-      "name": "ollama/ollama Releases",
-      "tier": "S",
-      "kind": "feed",
-      "status": "ok",
-      "items": 10
-    },
-    {
-      "id": "gh-llamacpp",
-      "name": "ggml-org/llama.cpp Releases",
-      "tier": "S",
-      "kind": "feed",
-      "status": "ok",
-      "items": 10
-    },
-    {
-      "id": "gh-vllm",
-      "name": "vllm-project/vllm Releases",
-      "tier": "S",
-      "kind": "feed",
-      "status": "ok",
-      "items": 10
-    },
-    {
-      "id": "gh-transformers",
-      "name": "huggingface/transformers Releases",
-      "tier": "S",
-      "kind": "feed",
-      "status": "ok",
-      "items": 10
-    },
-    {
-      "id": "gh-open-webui",
-      "name": "open-webui/open-webui Releases",
-      "tier": "S",
-      "kind": "feed",
-      "status": "ok",
-      "items": 10
-    },
-    {
       "id": "gh-browser-use",
       "name": "browser-use/browser-use Releases",
-      "tier": "S",
-      "kind": "feed",
-      "status": "ok",
-      "items": 10
-    },
-    {
-      "id": "gh-litellm",
-      "name": "BerriAI/litellm Releases",
-      "tier": "S",
+      "tier": "A",
       "kind": "feed",
       "status": "ok",
       "items": 10
@@ -217,70 +201,127 @@
     {
       "id": "gh-mcp-servers",
       "name": "modelcontextprotocol/servers Releases",
-      "tier": "S",
+      "tier": "A",
       "kind": "feed",
       "status": "ok",
       "items": 10
     },
     {
-      "id": "simon-willison",
-      "name": "Simon Willison",
+      "id": "gh-open-webui",
+      "name": "open-webui/open-webui Releases",
+      "tier": "A",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "gh-n8n",
+      "name": "n8n-io/n8n Releases",
+      "tier": "A",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "gh-dify",
+      "name": "langgenius/dify Releases",
+      "tier": "A",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "gh-cline",
+      "name": "cline/cline Releases",
+      "tier": "A",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "gh-ollama",
+      "name": "ollama/ollama Releases",
+      "tier": "A",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "gh-qwen",
+      "name": "QwenLM/Qwen3 Releases",
+      "tier": "A",
+      "kind": "feed",
+      "status": "error",
+      "items": 0,
+      "error": "feed parsed 0 entries"
+    },
+    {
+      "id": "coindesk",
+      "name": "CoinDesk",
       "tier": "A",
       "kind": "feed",
       "status": "ok",
       "items": 18
     },
     {
-      "id": "sebastian-raschka",
-      "name": "Sebastian Raschka / Ahead of AI",
-      "tier": "A",
-      "kind": "feed",
-      "status": "ok",
-      "items": 18
-    },
-    {
-      "id": "latent-space",
-      "name": "Latent Space",
-      "tier": "A",
-      "kind": "feed",
-      "status": "ok",
-      "items": 18
-    },
-    {
-      "id": "one-useful-thing",
-      "name": "One Useful Thing / Ethan Mollick",
-      "tier": "A",
-      "kind": "feed",
-      "status": "ok",
-      "items": 18
-    },
-    {
-      "id": "interconnects",
-      "name": "Interconnects",
-      "tier": "A",
-      "kind": "feed",
-      "status": "ok",
-      "items": 18
-    },
-    {
-      "id": "hackernews-ai",
-      "name": "Hacker News AI Signals",
+      "id": "coingecko-trending",
+      "name": "CoinGecko Trending",
       "tier": "B",
-      "kind": "hackernews",
+      "kind": "coingecko_trending",
       "status": "ok",
-      "items": 18
+      "items": 0
+    },
+    {
+      "id": "fear-greed",
+      "name": "Crypto Fear & Greed",
+      "tier": "B",
+      "kind": "fear_greed",
+      "status": "ok",
+      "items": 0
+    },
+    {
+      "id": "wealth-common-sense",
+      "name": "A Wealth of Common Sense",
+      "tier": "A",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
     },
     {
       "id": "arxiv-cs-ai",
-      "name": "arXiv cs.AI",
+      "name": "arXiv cs.AI · Low Weight",
       "tier": "B",
       "kind": "arxiv",
       "status": "ok",
       "items": 8
     },
     {
+      "id": "deepmind-blog",
+      "name": "Google DeepMind Research · Low Weight",
+      "tier": "B",
+      "kind": "feed",
+      "status": "ok",
+      "items": 18
+    },
+    {
       "id": "x-karpathy",
       "name": "@karpathy",
+      "tier": "A",
+      "kind": "manual",
+      "status": "manual",
+      "items": 0
+    },
+    {
+      "id": "x-simonw",
+      "name": "@simonw",
+      "tier": "A",
+      "kind": "manual",
+      "status": "manual",
+      "items": 0
+    },
+    {
+      "id": "x-rasbt",
+      "name": "@rasbt",
       "tier": "A",
       "kind": "manual",
       "status": "manual",
@@ -305,30 +346,6 @@
     {
       "id": "x-drjimfan",
       "name": "@DrJimFan",
-      "tier": "A",
-      "kind": "manual",
-      "status": "manual",
-      "items": 0
-    },
-    {
-      "id": "x-andrewng",
-      "name": "@AndrewYNg",
-      "tier": "A",
-      "kind": "manual",
-      "status": "manual",
-      "items": 0
-    },
-    {
-      "id": "x-ylecun",
-      "name": "@ylecun",
-      "tier": "A",
-      "kind": "manual",
-      "status": "manual",
-      "items": 0
-    },
-    {
-      "id": "x-fchollet",
-      "name": "@fchollet",
       "tier": "A",
       "kind": "manual",
       "status": "manual",
@@ -343,10 +360,10 @@
       "kind": "feed",
       "url": "https://openai.com/news/rss.xml",
       "tags": [
+        "launch",
         "model",
-        "product",
-        "research",
-        "company"
+        "agent",
+        "product"
       ]
     },
     {
@@ -356,33 +373,10 @@
       "kind": "feed",
       "url": "https://blog.google/technology/ai/rss/",
       "tags": [
+        "launch",
         "model",
-        "product",
-        "research"
-      ]
-    },
-    {
-      "id": "deepmind-blog",
-      "name": "Google DeepMind Blog",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://deepmind.google/blog/rss.xml",
-      "tags": [
-        "research",
-        "model",
-        "science"
-      ]
-    },
-    {
-      "id": "microsoft-research",
-      "name": "Microsoft Research",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://www.microsoft.com/en-us/research/feed/",
-      "tags": [
-        "research",
-        "agents",
-        "systems"
+        "agent",
+        "product"
       ]
     },
     {
@@ -392,9 +386,10 @@
       "kind": "feed",
       "url": "https://github.blog/ai-and-ml/feed/",
       "tags": [
+        "github",
+        "tool",
         "coding",
-        "agents",
-        "developer"
+        "agent"
       ]
     },
     {
@@ -404,9 +399,10 @@
       "kind": "feed",
       "url": "https://github.blog/changelog/feed/",
       "tags": [
-        "coding",
-        "developer",
-        "product"
+        "github",
+        "tool",
+        "productivity",
+        "coding"
       ]
     },
     {
@@ -416,211 +412,115 @@
       "kind": "feed",
       "url": "https://huggingface.co/blog/feed.xml",
       "tags": [
+        "model",
         "open-source",
-        "model",
-        "research"
+        "launch"
       ]
     },
     {
-      "id": "nvidia-ai",
-      "name": "NVIDIA AI Blog",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://blogs.nvidia.com/blog/category/deep-learning/feed/",
-      "tags": [
-        "infra",
-        "model",
-        "hardware"
-      ]
-    },
-    {
-      "id": "aws-ml",
-      "name": "AWS Machine Learning Blog",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://aws.amazon.com/blogs/machine-learning/feed/",
-      "tags": [
-        "infra",
-        "agents",
-        "enterprise"
-      ]
-    },
-    {
-      "id": "cloudflare-ai",
-      "name": "Cloudflare AI",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://blog.cloudflare.com/tag/ai/rss/",
-      "tags": [
-        "infra",
-        "agents",
-        "developer"
-      ]
-    },
-    {
-      "id": "tensorflow-blog",
-      "name": "TensorFlow Blog",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://blog.tensorflow.org/feeds/posts/default?alt=rss",
-      "tags": [
-        "open-source",
-        "research",
-        "developer"
-      ]
-    },
-    {
-      "id": "gh-openai-codex",
-      "name": "openai/codex Releases",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://github.com/openai/codex/releases.atom",
-      "tags": [
-        "coding",
-        "agents"
-      ]
-    },
-    {
-      "id": "gh-openai-agents",
-      "name": "openai/openai-agents-python Releases",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://github.com/openai/openai-agents-python/releases.atom",
-      "tags": [
-        "agents",
-        "developer"
-      ]
-    },
-    {
-      "id": "gh-claude-code",
-      "name": "anthropics/claude-code Releases",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://github.com/anthropics/claude-code/releases.atom",
-      "tags": [
-        "coding",
-        "agents"
-      ]
-    },
-    {
-      "id": "gh-gemini-cli",
-      "name": "google-gemini/gemini-cli Releases",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://github.com/google-gemini/gemini-cli/releases.atom",
-      "tags": [
-        "coding",
-        "agents"
-      ]
-    },
-    {
-      "id": "gh-langgraph",
-      "name": "langchain-ai/langgraph Releases",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://github.com/langchain-ai/langgraph/releases.atom",
-      "tags": [
-        "agents",
-        "developer"
-      ]
-    },
-    {
-      "id": "gh-vercel-ai",
-      "name": "vercel/ai Releases",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://github.com/vercel/ai/releases.atom",
-      "tags": [
-        "developer",
-        "agents"
-      ]
-    },
-    {
-      "id": "gh-ollama",
-      "name": "ollama/ollama Releases",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://github.com/ollama/ollama/releases.atom",
-      "tags": [
-        "local-ai",
-        "open-source"
-      ]
-    },
-    {
-      "id": "gh-llamacpp",
-      "name": "ggml-org/llama.cpp Releases",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://github.com/ggml-org/llama.cpp/releases.atom",
-      "tags": [
-        "inference",
-        "open-source"
-      ]
-    },
-    {
-      "id": "gh-vllm",
-      "name": "vllm-project/vllm Releases",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://github.com/vllm-project/vllm/releases.atom",
-      "tags": [
-        "inference",
-        "infra"
-      ]
-    },
-    {
-      "id": "gh-transformers",
-      "name": "huggingface/transformers Releases",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://github.com/huggingface/transformers/releases.atom",
+      "id": "hf-trending-models",
+      "name": "Hugging Face Trending Models",
+      "tier": "A",
+      "kind": "huggingface_trending",
+      "url": "https://huggingface.co/models?sort=trending",
       "tags": [
         "model",
+        "trending",
         "open-source"
       ]
     },
     {
-      "id": "gh-open-webui",
-      "name": "open-webui/open-webui Releases",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://github.com/open-webui/open-webui/releases.atom",
+      "id": "gh-trending",
+      "name": "GitHub Trending · AI/Agent/Tools",
+      "tier": "A",
+      "kind": "github_trending",
+      "url": "https://github.com/trending?since=daily",
       "tags": [
-        "product",
-        "open-source"
+        "github",
+        "trending",
+        "skill",
+        "tool",
+        "agent"
       ]
     },
     {
-      "id": "gh-browser-use",
-      "name": "browser-use/browser-use Releases",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://github.com/browser-use/browser-use/releases.atom",
+      "id": "gh-search-skills",
+      "name": "GitHub Discovery · Agent Skills",
+      "tier": "A",
+      "kind": "github_search",
+      "url": null,
       "tags": [
-        "agents",
-        "browser"
+        "github",
+        "skill",
+        "agent",
+        "discovery"
       ]
     },
     {
-      "id": "gh-litellm",
-      "name": "BerriAI/litellm Releases",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://github.com/BerriAI/litellm/releases.atom",
+      "id": "gh-search-mcp",
+      "name": "GitHub Discovery · MCP / Agent Tools",
+      "tier": "A",
+      "kind": "github_search",
+      "url": null,
       "tags": [
-        "infra",
-        "developer"
-      ]
-    },
-    {
-      "id": "gh-mcp-servers",
-      "name": "modelcontextprotocol/servers Releases",
-      "tier": "S",
-      "kind": "feed",
-      "url": "https://github.com/modelcontextprotocol/servers/releases.atom",
-      "tags": [
+        "github",
+        "skill",
         "mcp",
-        "agents"
+        "agent",
+        "tool"
+      ]
+    },
+    {
+      "id": "gh-search-productivity",
+      "name": "GitHub Discovery · AI Productivity",
+      "tier": "A",
+      "kind": "github_search",
+      "url": null,
+      "tags": [
+        "github",
+        "tool",
+        "productivity",
+        "automation"
+      ]
+    },
+    {
+      "id": "producthunt",
+      "name": "Product Hunt",
+      "tier": "A",
+      "kind": "feed",
+      "url": "https://www.producthunt.com/feed",
+      "tags": [
+        "tool",
+        "website",
+        "product",
+        "productivity",
+        "discovery"
+      ]
+    },
+    {
+      "id": "techcrunch-ai",
+      "name": "TechCrunch AI",
+      "tier": "A",
+      "kind": "feed",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "tags": [
+        "launch",
+        "product",
+        "startup",
+        "tool"
+      ]
+    },
+    {
+      "id": "ars-ai",
+      "name": "Ars Technica AI",
+      "tier": "A",
+      "kind": "feed",
+      "url": "https://arstechnica.com/ai/feed/",
+      "tags": [
+        "launch",
+        "product",
+        "tool",
+        "industry"
       ]
     },
     {
@@ -630,21 +530,10 @@
       "kind": "feed",
       "url": "https://simonwillison.net/atom/everything/",
       "tags": [
-        "tools",
+        "tool",
         "coding",
-        "models"
-      ]
-    },
-    {
-      "id": "sebastian-raschka",
-      "name": "Sebastian Raschka / Ahead of AI",
-      "tier": "A",
-      "kind": "feed",
-      "url": "https://magazine.sebastianraschka.com/feed",
-      "tags": [
-        "research",
         "model",
-        "education"
+        "practical"
       ]
     },
     {
@@ -654,7 +543,8 @@
       "kind": "feed",
       "url": "https://www.latent.space/feed",
       "tags": [
-        "agents",
+        "agent",
+        "tool",
         "developer",
         "industry"
       ]
@@ -666,43 +556,244 @@
       "kind": "feed",
       "url": "https://www.oneusefulthing.org/feed",
       "tags": [
-        "work",
         "productivity",
-        "industry"
-      ]
-    },
-    {
-      "id": "interconnects",
-      "name": "Interconnects",
-      "tier": "A",
-      "kind": "feed",
-      "url": "https://www.interconnects.ai/feed",
-      "tags": [
-        "model",
-        "industry",
-        "research"
+        "workflow",
+        "practical"
       ]
     },
     {
       "id": "hackernews-ai",
-      "name": "Hacker News AI Signals",
+      "name": "Hacker News · AI Tool Signals",
       "tier": "B",
       "kind": "hackernews",
       "url": "https://hacker-news.firebaseio.com/v0/topstories.json",
       "tags": [
-        "community",
+        "tool",
         "startup",
-        "developer"
+        "developer",
+        "community"
+      ]
+    },
+    {
+      "id": "gh-openai-codex",
+      "name": "openai/codex Releases",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.com/openai/codex/releases.atom",
+      "tags": [
+        "agent",
+        "coding",
+        "launch",
+        "tool"
+      ]
+    },
+    {
+      "id": "gh-openai-agents",
+      "name": "openai/openai-agents-python Releases",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.com/openai/openai-agents-python/releases.atom",
+      "tags": [
+        "agent",
+        "sdk",
+        "launch"
+      ]
+    },
+    {
+      "id": "gh-claude-code",
+      "name": "anthropics/claude-code Releases",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.com/anthropics/claude-code/releases.atom",
+      "tags": [
+        "agent",
+        "coding",
+        "launch",
+        "tool"
+      ]
+    },
+    {
+      "id": "gh-gemini-cli",
+      "name": "google-gemini/gemini-cli Releases",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.com/google-gemini/gemini-cli/releases.atom",
+      "tags": [
+        "agent",
+        "coding",
+        "launch",
+        "tool"
+      ]
+    },
+    {
+      "id": "gh-browser-use",
+      "name": "browser-use/browser-use Releases",
+      "tier": "A",
+      "kind": "feed",
+      "url": "https://github.com/browser-use/browser-use/releases.atom",
+      "tags": [
+        "agent",
+        "browser",
+        "tool"
+      ]
+    },
+    {
+      "id": "gh-mcp-servers",
+      "name": "modelcontextprotocol/servers Releases",
+      "tier": "A",
+      "kind": "feed",
+      "url": "https://github.com/modelcontextprotocol/servers/releases.atom",
+      "tags": [
+        "mcp",
+        "skill",
+        "agent",
+        "tool"
+      ]
+    },
+    {
+      "id": "gh-open-webui",
+      "name": "open-webui/open-webui Releases",
+      "tier": "A",
+      "kind": "feed",
+      "url": "https://github.com/open-webui/open-webui/releases.atom",
+      "tags": [
+        "tool",
+        "product",
+        "open-source"
+      ]
+    },
+    {
+      "id": "gh-n8n",
+      "name": "n8n-io/n8n Releases",
+      "tier": "A",
+      "kind": "feed",
+      "url": "https://github.com/n8n-io/n8n/releases.atom",
+      "tags": [
+        "productivity",
+        "workflow",
+        "automation",
+        "tool"
+      ]
+    },
+    {
+      "id": "gh-dify",
+      "name": "langgenius/dify Releases",
+      "tier": "A",
+      "kind": "feed",
+      "url": "https://github.com/langgenius/dify/releases.atom",
+      "tags": [
+        "agent",
+        "workflow",
+        "tool",
+        "open-source"
+      ]
+    },
+    {
+      "id": "gh-cline",
+      "name": "cline/cline Releases",
+      "tier": "A",
+      "kind": "feed",
+      "url": "https://github.com/cline/cline/releases.atom",
+      "tags": [
+        "agent",
+        "coding",
+        "tool"
+      ]
+    },
+    {
+      "id": "gh-ollama",
+      "name": "ollama/ollama Releases",
+      "tier": "A",
+      "kind": "feed",
+      "url": "https://github.com/ollama/ollama/releases.atom",
+      "tags": [
+        "model",
+        "local-ai",
+        "tool"
+      ]
+    },
+    {
+      "id": "gh-qwen",
+      "name": "QwenLM/Qwen3 Releases",
+      "tier": "A",
+      "kind": "feed",
+      "url": "https://github.com/QwenLM/Qwen3/releases.atom",
+      "tags": [
+        "model",
+        "launch",
+        "open-source"
+      ]
+    },
+    {
+      "id": "coindesk",
+      "name": "CoinDesk",
+      "tier": "A",
+      "kind": "feed",
+      "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
+      "tags": [
+        "finance",
+        "crypto",
+        "market"
+      ]
+    },
+    {
+      "id": "coingecko-trending",
+      "name": "CoinGecko Trending",
+      "tier": "B",
+      "kind": "coingecko_trending",
+      "url": "https://api.coingecko.com/api/v3/search/trending",
+      "tags": [
+        "finance",
+        "crypto",
+        "market",
+        "signal"
+      ]
+    },
+    {
+      "id": "fear-greed",
+      "name": "Crypto Fear & Greed",
+      "tier": "B",
+      "kind": "fear_greed",
+      "url": "https://api.alternative.me/fng/?limit=2&format=json",
+      "tags": [
+        "finance",
+        "crypto",
+        "market",
+        "signal"
+      ]
+    },
+    {
+      "id": "wealth-common-sense",
+      "name": "A Wealth of Common Sense",
+      "tier": "A",
+      "kind": "feed",
+      "url": "https://awealthofcommonsense.com/feed/",
+      "tags": [
+        "finance",
+        "stocks",
+        "tip",
+        "investing"
       ]
     },
     {
       "id": "arxiv-cs-ai",
-      "name": "arXiv cs.AI",
+      "name": "arXiv cs.AI · Low Weight",
       "tier": "B",
       "kind": "arxiv",
       "url": null,
       "tags": [
         "research"
+      ]
+    },
+    {
+      "id": "deepmind-blog",
+      "name": "Google DeepMind Research · Low Weight",
+      "tier": "B",
+      "kind": "feed",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "tags": [
+        "research",
+        "model"
       ]
     },
     {
@@ -712,8 +803,34 @@
       "kind": "manual",
       "url": "https://x.com/karpathy",
       "tags": [
+        "x-watchlist",
         "coding",
-        "models"
+        "model",
+        "agent"
+      ]
+    },
+    {
+      "id": "x-simonw",
+      "name": "@simonw",
+      "tier": "A",
+      "kind": "manual",
+      "url": "https://x.com/simonw",
+      "tags": [
+        "x-watchlist",
+        "tool",
+        "coding"
+      ]
+    },
+    {
+      "id": "x-rasbt",
+      "name": "@rasbt",
+      "tier": "A",
+      "kind": "manual",
+      "url": "https://x.com/rasbt",
+      "tags": [
+        "x-watchlist",
+        "model",
+        "education"
       ]
     },
     {
@@ -723,6 +840,7 @@
       "kind": "manual",
       "url": "https://x.com/chipro",
       "tags": [
+        "x-watchlist",
         "engineering",
         "systems"
       ]
@@ -734,8 +852,10 @@
       "kind": "manual",
       "url": "https://x.com/swyx",
       "tags": [
-        "agents",
-        "developer"
+        "x-watchlist",
+        "agent",
+        "developer",
+        "tool"
       ]
     },
     {
@@ -745,41 +865,9 @@
       "kind": "manual",
       "url": "https://x.com/DrJimFan",
       "tags": [
-        "agents",
+        "x-watchlist",
+        "agent",
         "robotics"
-      ]
-    },
-    {
-      "id": "x-andrewng",
-      "name": "@AndrewYNg",
-      "tier": "A",
-      "kind": "manual",
-      "url": "https://x.com/AndrewYNg",
-      "tags": [
-        "applications",
-        "industry"
-      ]
-    },
-    {
-      "id": "x-ylecun",
-      "name": "@ylecun",
-      "tier": "A",
-      "kind": "manual",
-      "url": "https://x.com/ylecun",
-      "tags": [
-        "research",
-        "models"
-      ]
-    },
-    {
-      "id": "x-fchollet",
-      "name": "@fchollet",
-      "tier": "A",
-      "kind": "manual",
-      "url": "https://x.com/fchollet",
-      "tags": [
-        "research",
-        "reasoning"
       ]
     }
   ],
@@ -792,7 +880,7 @@
       "description": "Recursive self-improvement (RSI) remains hard in long-horizon tasks, where growing histories obscure the task state and misalign skill invocation. We introduce Recuris, a recursive Experiential-Working Memory architecture for long-horizon agent harnesses, in which Working Memory tracks task progress and guides skill selection from Experiential Memory, grounding skill use in current needs rather than the full history. This coupling also turns execution into structured evidence that localizes failures to specific memory components. Across tasks, a fixed Meta-Agent turns that evidence into localized, validation-gated updates to Skill Memory that reshape execution and yield new evidence, forming a bounded recursive memory-evolution loop. Across four long-horizon benchmarks and ten models, Recuris improves task success in 35 of the 37 completed model-benchmark pairs, carrying frontier models to SOTA-level task success: on tau-bench it adds +17.8 points to GPT-5.6 Sol and +15.6 to Claude Opus 5, taking Opus 5 to 87.9%, and +16.6/+13.5 points on Qwen3.6-27B/35B on SkillFlow. The advantage widens as the interaction horizon grows, to +32.2 points on the longest tasks, and common long-horizon failures fall by up to 80%. These results position recursively evolving memory as a scalable foundation for RSI, enabling agents to continuously transform accumulated experience into increasingly effective long-horizon behavior. Code: https://github.com/Gen-Verse/Recuris",
       "source": {
         "id": "arxiv-cs-ai",
-        "name": "arXiv cs.AI",
+        "name": "arXiv cs.AI · Low Weight",
         "tier": "B",
         "kind": "arxiv",
         "tags": [
@@ -803,7 +891,7 @@
       "relatedSources": [
         {
           "id": "arxiv-cs-ai",
-          "name": "arXiv cs.AI",
+          "name": "arXiv cs.AI · Low Weight",
           "tier": "B",
           "kind": "arxiv",
           "tags": [
@@ -829,54 +917,6 @@
       "radarScore": 71
     },
     {
-      "id": "r1jy4z8j",
-      "title": "Agentic Resource Discovery (ARD): An open specification for agent discovery",
-      "url": "https://aws.amazon.com/blogs/machine-learning/agentic-resource-discovery-ard-an-open-specification-for-agent-discovery/",
-      "publishedAt": "2026-08-24T16:22:03.000Z",
-      "description": "<h3>How AWS Agent Registry and the Agentic Resource Discovery (ARD) specification enable cross-environment discovery for your agents</h3> <p>As organizations scale their use of artificial intelligence (AI) agents and tools, finding the right resource becomes the hard part. Teams build Model Context Protocol (MCP) servers, deploy agents, and create specialized tools, but without a central catalog, those resources stay siloed. Developers locate a resource, vet it, connect it, and maintain that connection manually. Worse, configuring an agent for one AI client doesn’t make it available to another.</p> <p>This was manageable when a team wired up a handful of tools. It doesn’t scale to a growing number of agents, MCP servers, skills, and APIs now spread across public registries and private enterprise estates.</p> <h2 id=\"aws-agent-registry-a-centralized-searchable-catalog\">AWS Agent Registry: A centralized, searchable catalog</h2> <p>AWS Agent Registry gives your organization a centralized catalog for agents, MCP servers, tools, agent skills, and custom resources. It’s built around two core concepts:</p> <ul> <li>Registries. A registry is a catalog you create in your AWS account with its own authorization configuration and approval settings. You can run a single org-wide registry or separate registries by resource type, stage, or team. With cross-account sharing, a registry can serve your entire AWS Organization.</li> <li>Registry Records. A record represents an individual resource, capturing metadata that describes what it is, what it does, and how to reach it.</li> </ul> <h2 i",
-      "source": {
-        "id": "aws-ml",
-        "name": "AWS Machine Learning Blog",
-        "tier": "S",
-        "kind": "feed",
-        "tags": [
-          "infra",
-          "agents",
-          "enterprise"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "aws-ml",
-          "name": "AWS Machine Learning Blog",
-          "tier": "S",
-          "kind": "feed",
-          "tags": [
-            "infra",
-            "agents",
-            "enterprise"
-          ]
-        }
-      ],
-      "category": "AI Coding",
-      "summary": "<h3>How AWS Agent Registry and the Agentic Resource Discovery (ARD) specification enable cross-environment discovery for your agents</h3> <p>As organizations scale their use of artificial intelligence (AI) agents and tools, finding the righ",
-      "importance": 100,
-      "novelty": 89,
-      "relevance": 94,
-      "socialPotential": 75,
-      "sourceQuality": 90,
-      "confidence": 62,
-      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
-      "whatChanged": "Agentic Resource Discovery (ARD): An open specification for agent discovery",
-      "angles": [
-        "发生了什么：用最短篇幅解释「Agentic Resource Discovery (ARD): An open specification for agent discovery」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 71
-    },
-    {
       "id": "r8v5jg8",
       "title": "GitHub Copilot app Customize tab is generally available",
       "url": "https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available",
@@ -888,9 +928,10 @@
         "tier": "S",
         "kind": "feed",
         "tags": [
-          "coding",
-          "developer",
-          "product"
+          "github",
+          "tool",
+          "productivity",
+          "coding"
         ]
       },
       "engagement": null,
@@ -901,9 +942,10 @@
           "tier": "S",
           "kind": "feed",
           "tags": [
-            "coding",
-            "developer",
-            "product"
+            "github",
+            "tool",
+            "productivity",
+            "coding"
           ]
         }
       ],
@@ -925,102 +967,6 @@
       "radarScore": 67
     },
     {
-      "id": "rblcqrc",
-      "title": "Governed reports with Amazon Quick Desktop and Amazon FSx for NetApp ONTAP",
-      "url": "https://aws.amazon.com/blogs/machine-learning/governed-reports-with-amazon-quick-desktop-and-amazon-fsx-for-netapp-ontap/",
-      "publishedAt": "2026-08-25T16:35:01.000Z",
-      "description": "<p><a href=\"https://docs.aws.amazon.com/quick/latest/userguide/amazon-quick-desktop.html\" target=\"_blank\" rel=\"noopener\">Amazon Quick Desktop</a> brings governed, AI-assisted reporting to the files your team already manages on <a href=\"https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html\" target=\"_blank\" rel=\"noopener\">Amazon FSx for NetApp ONTAP</a> (FSx for ONTAP), cutting weekly report preparation from hours to minutes. Today, producing those reports takes hours of manual effort each week. Teams re-read the same documents, reformat metrics, and copy summaries into Slack. Leaders need those updates quickly, but they also need to trust the source behind each metric, risk, and recommendation.</p> <p>In this post, you build a governed weekly reporting workflow with Amazon Quick Desktop, <a href=\"https://docs.aws.amazon.com/quick/latest/userguide/skills-and-agents-desktop.html\" target=\"_blank\" rel=\"noopener\">Amazon Quick skills</a>, Amazon FSx for NetApp ONTAP, <a href=\"https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/accessing-data-via-s3-access-points.html\" target=\"_blank\" rel=\"noopener\">Amazon Simple Storage Service (Amazon S3) access points</a>, and Slack. Amazon Quick Desktop is a native desktop application that extends Amazon Quick from the browser to the user’s computer. It provides the AI-powered capabilities of the web experience together with desktop-specific capabilities such as</p> <ul> <li>Local file access.</li> <li>Background processing.</li> <li>A personal knowledge graph.</li> </ul> <p>In Amazon Quick Desktop, you create a skill called <s",
-      "source": {
-        "id": "aws-ml",
-        "name": "AWS Machine Learning Blog",
-        "tier": "S",
-        "kind": "feed",
-        "tags": [
-          "infra",
-          "agents",
-          "enterprise"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "aws-ml",
-          "name": "AWS Machine Learning Blog",
-          "tier": "S",
-          "kind": "feed",
-          "tags": [
-            "infra",
-            "agents",
-            "enterprise"
-          ]
-        }
-      ],
-      "category": "Agent",
-      "summary": "<p><a href=\"https://docs.aws.amazon.com/quick/latest/userguide/amazon-quick-desktop.html\" target=\"_blank\" rel=\"noopener\">Amazon Quick Desktop</a> brings governed, AI-assisted reporting to the files your team already manages on <a href=\"http",
-      "importance": 92,
-      "novelty": 91,
-      "relevance": 80,
-      "socialPotential": 65,
-      "sourceQuality": 90,
-      "confidence": 62,
-      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
-      "whatChanged": "Governed reports with Amazon Quick Desktop and Amazon FSx for NetApp ONTAP",
-      "angles": [
-        "发生了什么：用最短篇幅解释「Governed reports with Amazon Quick Desktop and Amazon FSx for NetApp ONTAP」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 65
-    },
-    {
-      "id": "r15h5f6a",
-      "title": "Agentic observability with Amazon OpenSearch Service MCP Apps",
-      "url": "https://aws.amazon.com/blogs/machine-learning/agentic-observability-with-amazon-opensearch-service-mcp-apps/",
-      "publishedAt": "2026-08-25T19:00:09.000Z",
-      "description": "<p>Observability agents are fast. They query alerts, correlate logs with traces, and produce a root cause hypothesis in minutes. The part that still takes time is verification. You read the agent’s text summary, open your observability tools in a browser, navigate to the trace waterfall, check the service map to scope impact, and cross-reference what the agent told you against what you see on screen. The agent saved you the query time. It did not save you the tab-switching, context-carrying, manual-verification time. That is still your job.</p> <p>Amazon OpenSearch Service MCP Apps close that gap. MCP Apps extend the Model Context Protocol so that each tool call responds with an interactive visualization — a trace waterfall, a service topology, a log pattern view — rendered directly in your AI assistant’s chat window alongside the text response. You ask the agent to investigate. The agent queries Amazon OpenSearch Service. The response arrives with both a text explanation and the relevant dashboard widget. You verify in the same thread where you asked the question, without opening a separate browser tab or re-running a query.</p> <p>In this post, we explain how MCP Apps change your observability workflow and walk through setup step by step.</p> <h2 id=\"the-problem-verification-still-requires-leaving-the-agent-loop\">The problem: Verification still requires leaving the agent loop</h2> <p>The typical investigation loop proceeds as follows. First, the engineer asks the agent and gets a text-based root cause hypothesis. Next, they leave the IDE to open a browser and log in to a ",
-      "source": {
-        "id": "aws-ml",
-        "name": "AWS Machine Learning Blog",
-        "tier": "S",
-        "kind": "feed",
-        "tags": [
-          "infra",
-          "agents",
-          "enterprise"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "aws-ml",
-          "name": "AWS Machine Learning Blog",
-          "tier": "S",
-          "kind": "feed",
-          "tags": [
-            "infra",
-            "agents",
-            "enterprise"
-          ]
-        }
-      ],
-      "category": "Agent",
-      "summary": "<p>Observability agents are fast. They query alerts, correlate logs with traces, and produce a root cause hypothesis in minutes. The part that still takes time is verification. You read the agent’s text summary, open your observability tool",
-      "importance": 89,
-      "novelty": 92,
-      "relevance": 78,
-      "socialPotential": 62,
-      "sourceQuality": 90,
-      "confidence": 62,
-      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
-      "whatChanged": "Agentic observability with Amazon OpenSearch Service MCP Apps",
-      "angles": [
-        "发生了什么：用最短篇幅解释「Agentic observability with Amazon OpenSearch Service MCP Apps」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 64
-    },
-    {
       "id": "rcprxep",
       "title": "[AINews] Andrew Ng gets into AI Engineering",
       "url": "https://www.latent.space/p/ainews-andrew-ng-gets-into-ai-engineering",
@@ -1032,7 +978,8 @@
         "tier": "A",
         "kind": "feed",
         "tags": [
-          "agents",
+          "agent",
+          "tool",
           "developer",
           "industry"
         ]
@@ -1045,7 +992,8 @@
           "tier": "A",
           "kind": "feed",
           "tags": [
-            "agents",
+            "agent",
+            "tool",
             "developer",
             "industry"
           ]
@@ -1080,9 +1028,10 @@
         "tier": "A",
         "kind": "feed",
         "tags": [
-          "tools",
+          "tool",
           "coding",
-          "models"
+          "model",
+          "practical"
         ]
       },
       "engagement": null,
@@ -1093,9 +1042,10 @@
           "tier": "A",
           "kind": "feed",
           "tags": [
-            "tools",
+            "tool",
             "coding",
-            "models"
+            "model",
+            "practical"
           ]
         }
       ],
@@ -1128,10 +1078,10 @@
         "tier": "S",
         "kind": "feed",
         "tags": [
+          "launch",
           "model",
-          "product",
-          "research",
-          "company"
+          "agent",
+          "product"
         ]
       },
       "engagement": null,
@@ -1142,10 +1092,10 @@
           "tier": "S",
           "kind": "feed",
           "tags": [
+            "launch",
             "model",
-            "product",
-            "research",
-            "company"
+            "agent",
+            "product"
           ]
         }
       ],
@@ -1167,54 +1117,6 @@
       "radarScore": 62
     },
     {
-      "id": "r1q5a9lq",
-      "title": "Building a restaurant telephony AI host with Amazon Connect",
-      "url": "https://aws.amazon.com/blogs/machine-learning/building-a-restaurant-telephony-ai-host-with-amazon-connect/",
-      "publishedAt": "2026-08-24T16:13:09.000Z",
-      "description": "<p>At many restaurants, a large share of orders still arrive by phone, and those calls usually land on a staff member who is already taking care of customers at the counter. Callers wait on hold, orders get written down by hand, and busy periods make both worse. Adding an app or a website helps customers who prefer to order online, but it does nothing for the person who wants to call and order.</p> <p>In this post, we show you how to build a voice ordering system that answers a phone number and takes the order from greeting to confirmation, with no app, no website, and no sign-in. A caller dials a phone number, and an AI host greets them, answers menu questions, finds a nearby pickup location, and confirms the order out loud. The system uses <a href=\"https://aws.amazon.com/connect/\" target=\"_blank\" rel=\"noopener\">Amazon Connect Customer</a> for the telephony channel, <a href=\"https://aws.amazon.com/lex/\" target=\"_blank\" rel=\"noopener\">Amazon Lex V2</a> with <a href=\"https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-connect-agentic-voice/\" target=\"_blank\" rel=\"noopener\">Amazon Connect Agentic Voice</a> for real-time speech, and <a href=\"https://aws.amazon.com/products/connect/customer/ai-agents/\" target=\"_blank\" rel=\"noopener\">Amazon Connect Customer AI agents</a> to orchestrate the conversation, connected to a restaurant backend through the <a href=\"https://modelcontextprotocol.io/\" target=\"_blank\" rel=\"noopener\">Model Context Protocol (MCP)</a> and <a href=\"https://aws.amazon.com/bedrock/agentcore/\" target=\"_blank\" rel=\"noopener\">Amazon Bedrock AgentCore</a>.</p> <",
-      "source": {
-        "id": "aws-ml",
-        "name": "AWS Machine Learning Blog",
-        "tier": "S",
-        "kind": "feed",
-        "tags": [
-          "infra",
-          "agents",
-          "enterprise"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "aws-ml",
-          "name": "AWS Machine Learning Blog",
-          "tier": "S",
-          "kind": "feed",
-          "tags": [
-            "infra",
-            "agents",
-            "enterprise"
-          ]
-        }
-      ],
-      "category": "Agent",
-      "summary": "<p>At many restaurants, a large share of orders still arrive by phone, and those calls usually land on a staff member who is already taking care of customers at the counter. Callers wait on hold, orders get written down by hand, and busy pe",
-      "importance": 89,
-      "novelty": 79,
-      "relevance": 78,
-      "socialPotential": 62,
-      "sourceQuality": 90,
-      "confidence": 62,
-      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
-      "whatChanged": "Building a restaurant telephony AI host with Amazon Connect",
-      "angles": [
-        "发生了什么：用最短篇幅解释「Building a restaurant telephony AI host with Amazon Connect」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 62
-    },
-    {
       "id": "r5p4h9v",
       "title": "v2.1.246",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246",
@@ -1226,8 +1128,10 @@
         "tier": "S",
         "kind": "feed",
         "tags": [
+          "agent",
           "coding",
-          "agents"
+          "launch",
+          "tool"
         ]
       },
       "engagement": null,
@@ -1238,8 +1142,10 @@
           "tier": "S",
           "kind": "feed",
           "tags": [
+            "agent",
             "coding",
-            "agents"
+            "launch",
+            "tool"
           ]
         }
       ],
@@ -1261,92 +1167,48 @@
       "radarScore": 61
     },
     {
-      "id": "r1d1nm4c",
-      "title": "v0.3.0",
-      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.3.0",
-      "publishedAt": "2026-08-25T10:29:52.000Z",
-      "description": "<h2>Overview</h2> <p>llama.cpp 0.3.0 introduces the dots3-note multimodal model (with a new DSA-ISWA KV cache), MTP support for GLM-4.5-Air, and tensor-split (<code>-sm tensor</code>) plus multi-sequence rollback fixes for DeepSeek 4. ggml is bumped to v0.22.0 (meta-backend tensor split, per-op Metal kernels with parallel compilation, non-in-place <code>ggml_clamp</code>), while mtmd gains dots3-note vision/audio, WebP decoding and a Pillow-accurate resize. The server adds a <code>LLAMA_SERVER_SLOTS_N_DIFF</code> debug knob, and the web UI gets tabbed chat navigation.</p> <h3>New models</h3> <ul> <li>Add dots3-note model with a new DSA-ISWA KV cache type (<a href=\"https://github.com/ggml-org/llama.cpp/pull/27060\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/ggml-org/llama.cpp/pull/27060/hovercard\">#27060</a>)</li> </ul> <h3>Core changes</h3> <ul> <li>DeepSeek 4: add tensor-split mode via <code>-sm tensor</code> (<a href=\"https://github.com/ggml-org/llama.cpp/pull/26490\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/ggml-org/llama.cpp/pull/26490/hovercard\">#26490</a>)</li> <li>DeepSeek 4: fix rollback with multiple sequences (<a href=\"https://github.com/ggml-org/llama.cpp/pull/26756\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/ggml-org/llama.cpp/pull/26756/hovercard\">#26756</a>)</li> <li>Fix meta tensor split state propagation for tensor parallel (<a href=\"https://github.com/ggml-org/llama.cpp/pull/27574\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/ggml-org/llama.cpp/pull/27574/hovercard\">#27574</a>)</li> <li>GLM-4.5-Air: add MTP ",
+      "id": "r17k12t1",
+      "title": "Desktop v0.0.17",
+      "url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.17",
+      "publishedAt": "2026-08-25T09:06:36.000Z",
+      "description": "<ul> <li>Plugins, MCP, Skills, Rules, Hooks, and Tools are now one Customize hub with tabbed sections and live counts. Catalog-backed tabs show what you have installed followed by an inline Browse section, so installing something from the catalog immediately appears above — the separate Marketplace page is gone</li> <li>Redesigned the Models page: providers are grouped into Connected, Popular, and All with their auth kind and configuration status instead of per-row toggles. OAuth providers now offer a browser sign-in rather than an API key field, with a collapsed manual-key escape hatch where supported, and explicit Connect / Disconnect / Sign out actions</li> <li>Voice input moved to its own Settings → Voice page that only offers connected transcription-capable providers and preselects a default model. The composer's microphone button now appears only once a voice model is configured</li> <li>Sidebar sessions are always grouped by project, with pinned sessions leading each group and scheduled sessions marked by an inline clock. The Favorite action is now called Pin</li> <li>New, Schedule, and Customize each got their own labeled row below the logo. New starts a fresh task and puts your cursor straight in the composer</li> <li>Session search moved into a dialog behind the search icon in the logo row, and it now searches your full history instead of only the sessions already loaded in the sidebar</li> <li>Added suggested schedule templates to the Schedule page</li> <li>Add Provider opens a dialog instead of swapping out the page</li> <li>Desktop notifications are now a singl",
       "source": {
-        "id": "gh-llamacpp",
-        "name": "ggml-org/llama.cpp Releases",
-        "tier": "S",
+        "id": "gh-cline",
+        "name": "cline/cline Releases",
+        "tier": "A",
         "kind": "feed",
         "tags": [
-          "inference",
-          "open-source"
+          "agent",
+          "coding",
+          "tool"
         ]
       },
       "engagement": null,
       "relatedSources": [
         {
-          "id": "gh-llamacpp",
-          "name": "ggml-org/llama.cpp Releases",
-          "tier": "S",
+          "id": "gh-cline",
+          "name": "cline/cline Releases",
+          "tier": "A",
           "kind": "feed",
           "tags": [
-            "inference",
-            "open-source"
+            "agent",
+            "coding",
+            "tool"
           ]
         }
       ],
       "category": "AI Coding",
-      "summary": "<h2>Overview</h2> <p>llama.cpp 0.3.0 introduces the dots3-note multimodal model (with a new DSA-ISWA KV cache), MTP support for GLM-4.5-Air, and tensor-split (<code>-sm tensor</code>) plus multi-sequence rollback fixes for DeepSeek 4. ggml ",
-      "importance": 84,
-      "novelty": 83,
-      "relevance": 73,
-      "socialPotential": 60,
-      "sourceQuality": 90,
+      "summary": "<ul> <li>Plugins, MCP, Skills, Rules, Hooks, and Tools are now one Customize hub with tabbed sections and live counts. Catalog-backed tabs show what you have installed followed by an inline Browse section, so installing something from the c",
+      "importance": 77,
+      "novelty": 87,
+      "relevance": 78,
+      "socialPotential": 62,
+      "sourceQuality": 78,
       "confidence": 62,
       "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
-      "whatChanged": "v0.3.0",
+      "whatChanged": "Desktop v0.0.17",
       "angles": [
-        "发生了什么：用最短篇幅解释「v0.3.0」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 60
-    },
-    {
-      "id": "rzyak9",
-      "title": "b10618",
-      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10618",
-      "publishedAt": "2026-08-25T07:09:00.000Z",
-      "description": "<details open=\"\"> <p>grammar : parse - in char classes as literal hyphen (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5226077670\" data-permission-text=\"Title is private\" data-url=\"https://github.com/ggml-org/llama.cpp/issues/27591\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/ggml-org/llama.cpp/pull/27591/hovercard\" href=\"https://github.com/ggml-org/llama.cpp/pull/27591\">#27591</a>)</p> <ul> <li>grammar : accept \"-\" escape in character classes</li> </ul> <p>gbnf_escape_char_class() escapes '-' as \"-\" but parse_char() rejected<br> that escape, so generated tool-call grammars failed to parse.</p> <p>Assisted-by: Claude Code <a href=\"mailto:claude@anthropic.com\">claude@anthropic.com</a></p> <ul> <li>tests : add parser test for \"-\" in char classes</li> </ul> <p>Assisted-by: Claude Code <a href=\"mailto:claude@anthropic.com\">claude@anthropic.com</a></p> <ul> <li>tests : add integration test for \"-\" in char classes</li> </ul> <p>Assisted-by: Claude Code <a href=\"mailto:claude@anthropic.com\">claude@anthropic.com</a></p> <ul> <li>tests : drop integration and parser tests</li> </ul> </details> <p><strong>Website:</strong></p> <ul> <li><a href=\"https://llama.app\" rel=\"nofollow\">https://llama.app</a></li> </ul> <p><strong>Attestations:</strong></p> <ul> <li><a href=\"https://github.com/ggml-org/llama.cpp/attestations/42781020\">https://github.com/ggml-org/llama.cpp/attestations/42781020</a></li> </ul> <p><strong>macOS/iOS:</strong></p> <ul> <li><a href=\"https://github.com/ggml-org/llama.cpp/releases/download/b10618/llama-b10618-bin-macos",
-      "source": {
-        "id": "gh-llamacpp",
-        "name": "ggml-org/llama.cpp Releases",
-        "tier": "S",
-        "kind": "feed",
-        "tags": [
-          "inference",
-          "open-source"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "gh-llamacpp",
-          "name": "ggml-org/llama.cpp Releases",
-          "tier": "S",
-          "kind": "feed",
-          "tags": [
-            "inference",
-            "open-source"
-          ]
-        }
-      ],
-      "category": "AI Coding",
-      "summary": "<details open=\"\"> <p>grammar : parse - in char classes as literal hyphen (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5226077670\" data-permission-text=\"Title is private\" data-url=\"https://github.com/g",
-      "importance": 85,
-      "novelty": 76,
-      "relevance": 72,
-      "socialPotential": 64,
-      "sourceQuality": 90,
-      "confidence": 62,
-      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
-      "whatChanged": "b10618",
-      "angles": [
-        "发生了什么：用最短篇幅解释「b10618」",
+        "发生了什么：用最短篇幅解释「Desktop v0.0.17」",
         "为什么值得注意：它改变的是能力、成本还是工作流",
         "个人判断：这件事接下来最可能影响谁"
       ],
@@ -1360,13 +1222,14 @@
       "description": "Hacker News: 13 points · 12 comments",
       "source": {
         "id": "hackernews-ai",
-        "name": "Hacker News AI Signals",
+        "name": "Hacker News · AI Tool Signals",
         "tier": "B",
         "kind": "hackernews",
         "tags": [
-          "community",
+          "tool",
           "startup",
-          "developer"
+          "developer",
+          "community"
         ]
       },
       "engagement": {
@@ -1376,13 +1239,14 @@
       "relatedSources": [
         {
           "id": "hackernews-ai",
-          "name": "Hacker News AI Signals",
+          "name": "Hacker News · AI Tool Signals",
           "tier": "B",
           "kind": "hackernews",
           "tags": [
-            "community",
+            "tool",
             "startup",
-            "developer"
+            "developer",
+            "community"
           ]
         }
       ],
@@ -1404,98 +1268,102 @@
       "radarScore": 57
     },
     {
-      "id": "rr802iq",
-      "title": "Introducing new Ray capabilities on SageMaker HyperPod",
-      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-new-ray-capabilities-on-sagemaker-hyperpod/",
-      "publishedAt": "2026-08-24T19:32:14.000Z",
-      "description": "<p>Today, we are announcing new Ray capabilities on <a href=\"https://aws.amazon.com/sagemaker/hyperpod/\" target=\"_blank\" rel=\"noopener\">Amazon SageMaker HyperPod</a> that integrate Ray with the HyperPod purpose-built infrastructure for foundation model training and serving.</p> <p><a href=\"https://docs.ray.io/\" target=\"_blank\" rel=\"noopener\">Ray</a> is an open-source framework that data scientists use to scale distributed Python workloads across clusters of GPUs, from distributed training with Ray Train to model serving with Ray Serve. On Kubernetes, Ray clusters are managed by <a href=\"https://github.com/ray-project/kuberay\" target=\"_blank\" rel=\"noopener\">KubeRay</a>, an open-source operator that handles cluster lifecycle through custom resources (RayCluster, RayJob, RayService). SageMaker HyperPod provides purpose-built infrastructure for large-scale machine learning (ML) on <a href=\"https://aws.amazon.com/eks/\" target=\"_blank\" rel=\"noopener\">Amazon Elastic Kubernetes Service</a> (Amazon EKS) with built-in node health monitoring and automatic recovery. Until now, running Ray on Kubernetes required data scientists to write YAML manifests, manage Docker image rebuilds for every dependency change, set up kubectl port-forward to access their Ray Dashboard, and configure Prometheus and Grafana manually for observability.</p> <p>With this launch, data scientists can create Ray clusters, open the Ray Dashboard and <a href=\"https://docs.aws.amazon.com/prescriptive-guidance/latest/implementing-logging-monitoring-cloudwatch/amg-dashboarding-visualization.html\" target=\"_blank\" rel=\"",
+      "id": "r1rxkkm1",
+      "title": "CLI v3.0.58",
+      "url": "https://github.com/cline/cline/releases/tag/cli-v3.0.58",
+      "publishedAt": "2026-08-24T23:07:51.000Z",
+      "description": "<ul> <li>The first-launch \"Try ClinePass\" dialog no longer advertises the $4.99 first-month promo, which is ending</li> <li>The hub's event log is now capped at 64 MiB on disk. Events carrying full session snapshots could previously grow the log to tens of gigabytes on a long-running hub, since deleting rows never shrinks the file. Oldest events are dropped first and the space is returned, and pruning runs on volume as well as on a timer</li> <li>Refreshed the model catalog. Adds two providers (AgentRouter and Opper) and updates model lists and pricing across providers. The resolved default model changes for Aki.io and NanoGPT, so if you use one of those without pinning a model you will get a different default</li> </ul> <p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/cline/cline/compare/cli-v3.0.57...cli-v3.0.58\"><tt>cli-v3.0.57...cli-v3.0.58</tt></a></p>",
       "source": {
-        "id": "aws-ml",
-        "name": "AWS Machine Learning Blog",
-        "tier": "S",
+        "id": "gh-cline",
+        "name": "cline/cline Releases",
+        "tier": "A",
         "kind": "feed",
         "tags": [
-          "infra",
-          "agents",
-          "enterprise"
+          "agent",
+          "coding",
+          "tool"
         ]
       },
       "engagement": null,
       "relatedSources": [
         {
-          "id": "aws-ml",
-          "name": "AWS Machine Learning Blog",
-          "tier": "S",
+          "id": "gh-cline",
+          "name": "cline/cline Releases",
+          "tier": "A",
           "kind": "feed",
           "tags": [
-            "infra",
-            "agents",
-            "enterprise"
+            "agent",
+            "coding",
+            "tool"
           ]
         }
       ],
-      "category": "Agent",
-      "summary": "<p>Today, we are announcing new Ray capabilities on <a href=\"https://aws.amazon.com/sagemaker/hyperpod/\" target=\"_blank\" rel=\"noopener\">Amazon SageMaker HyperPod</a> that integrate Ray with the HyperPod purpose-built infrastructure for foun",
-      "importance": 76,
-      "novelty": 70,
-      "relevance": 66,
-      "socialPotential": 55,
-      "sourceQuality": 90,
+      "category": "AI Coding",
+      "summary": "<ul> <li>The first-launch \"Try ClinePass\" dialog no longer advertises the $4.99 first-month promo, which is ending</li> <li>The hub's event log is now capped at 64 MiB on disk. Events carrying full session snapshots could previously grow th",
+      "importance": 75,
+      "novelty": 77,
+      "relevance": 75,
+      "socialPotential": 63,
+      "sourceQuality": 78,
       "confidence": 62,
-      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
-      "whatChanged": "Introducing new Ray capabilities on SageMaker HyperPod",
+      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
+      "whatChanged": "CLI v3.0.58",
       "angles": [
-        "发生了什么：用最短篇幅解释「Introducing new Ray capabilities on SageMaker HyperPod」",
+        "发生了什么：用最短篇幅解释「CLI v3.0.58」",
         "为什么值得注意：它改变的是能力、成本还是工作流",
         "个人判断：这件事接下来最可能影响谁"
       ],
-      "radarScore": 55
+      "radarScore": 57
     },
     {
-      "id": "r1m1b0lb",
-      "title": "v0.33.0",
-      "url": "https://github.com/ollama/ollama/releases/tag/v0.33.0",
-      "publishedAt": "2026-08-26T02:09:34.000Z",
-      "description": "<h2>What's Changed</h2> <h3>Claude Desktop</h3> <p>Developers can now easily configure Claude Desktop to seamlessly work with Ollama as a third-party gateway provider.</p> <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://private-user-images.githubusercontent.com/29360864/641249150-c02fd93b-f599-40a9-83c3-d0555c0ac182.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODc3MjM1MTksIm5iZiI6MTc4NzcyMzIxOSwicGF0aCI6Ii8yOTM2MDg2NC82NDEyNDkxNTAtYzAyZmQ5M2ItZjU5OS00MGE5LTgzYzMtZDA1NTVjMGFjMTgyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwODI2VDA1NDY1OVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTczMWYzM2U5NjE4ZGQ1ZGVhMDlmMTc1ZDcwYWMzYTFiNDhjOTg5ZmYzMjRlYmIzMzFmYWU1NTZkMzE2YmNmOGImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.3PEnCA1Ia3lYCzjAaSbrjNRL1tHgd5S7FD6ASpA5elU\"><img width=\"1298\" height=\"780\" alt=\"image\" src=\"https://private-user-images.githubusercontent.com/29360864/641249150-c02fd93b-f599-40a9-83c3-d0555c0ac182.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODc3MjM1MTksIm5iZiI6MTc4NzcyMzIxOSwicGF0aCI6Ii8yOTM2MDg2NC82NDEyNDkxNTAtYzAyZmQ5M2ItZjU5OS00MGE5LTgzYzMtZDA1NTVjMGFjMTgyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MjYlMkZ1cy1lYXN0LTElM",
+      "id": "r1fgwqpl",
+      "title": "v1.17.0",
+      "url": "https://github.com/langgenius/dify/releases/tag/1.17.0",
+      "publishedAt": "2026-08-25T12:17:27.000Z",
+      "description": "<h2>New Features</h2> <p><strong>Agent: E2B Sandbox, Home Snapshots, and Skill Management</strong></p> <ul> <li><strong>E2B sandbox backend</strong>: agent shell/code execution can now run on <a href=\"https://e2b.dev\" rel=\"nofollow\">E2B</a> cloud sandboxes in addition to the local sandbox. Select the backend with <code>DIFY_AGENT_RUNTIME_BACKEND</code>; a new <code>docker-compose.e2b.yaml</code> ships the E2B stack, E2B traffic is authenticated, and the E2B template is synced on release (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4963662125\" data-permission-text=\"Title is private\" data-url=\"https://github.com/langgenius/dify/issues/39480\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/langgenius/dify/pull/39480/hovercard\" href=\"https://github.com/langgenius/dify/pull/39480\">#39480</a>, <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5001552227\" data-permission-text=\"Title is private\" data-url=\"https://github.com/langgenius/dify/issues/39705\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/langgenius/dify/pull/39705/hovercard\" href=\"https://github.com/langgenius/dify/pull/39705\">#39705</a>, <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5035839633\" data-permission-text=\"Title is private\" data-url=\"https://github.com/langgenius/dify/issues/39873\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/langgenius/dify/pull/39873/hovercard\" href=\"https://github.com/langgenius/dify/pull/39873\">#39873</a>, <a class=\"issue-link js-issue-link\" data-erro",
       "source": {
-        "id": "gh-ollama",
-        "name": "ollama/ollama Releases",
-        "tier": "S",
+        "id": "gh-dify",
+        "name": "langgenius/dify Releases",
+        "tier": "A",
         "kind": "feed",
         "tags": [
-          "local-ai",
+          "agent",
+          "workflow",
+          "tool",
           "open-source"
         ]
       },
       "engagement": null,
       "relatedSources": [
         {
-          "id": "gh-ollama",
-          "name": "ollama/ollama Releases",
-          "tier": "S",
+          "id": "gh-dify",
+          "name": "langgenius/dify Releases",
+          "tier": "A",
           "kind": "feed",
           "tags": [
-            "local-ai",
+            "agent",
+            "workflow",
+            "tool",
             "open-source"
           ]
         }
       ],
-      "category": "AI Coding",
-      "summary": "<h2>What's Changed</h2> <h3>Claude Desktop</h3> <p>Developers can now easily configure Claude Desktop to seamlessly work with Ollama as a third-party gateway provider.</p> <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://private-u",
-      "importance": 71,
-      "novelty": 80,
-      "relevance": 61,
-      "socialPotential": 53,
-      "sourceQuality": 90,
+      "category": "Agent",
+      "summary": "<h2>New Features</h2> <p><strong>Agent: E2B Sandbox, Home Snapshots, and Skill Management</strong></p> <ul> <li><strong>E2B sandbox backend</strong>: agent shell/code execution can now run on <a href=\"https://e2b.dev\" rel=\"nofollow\">E2B</a>",
+      "importance": 70,
+      "novelty": 78,
+      "relevance": 70,
+      "socialPotential": 61,
+      "sourceQuality": 78,
       "confidence": 62,
-      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
-      "whatChanged": "v0.33.0",
+      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
+      "whatChanged": "v1.17.0",
       "angles": [
-        "发生了什么：用最短篇幅解释「v0.33.0」",
+        "发生了什么：用最短篇幅解释「v1.17.0」",
         "为什么值得注意：它改变的是能力、成本还是工作流",
         "个人判断：这件事接下来最可能影响谁"
       ],
-      "radarScore": 54
+      "radarScore": 55
     },
     {
       "id": "r1xwj27b",
@@ -1509,8 +1377,10 @@
         "tier": "S",
         "kind": "feed",
         "tags": [
+          "agent",
           "coding",
-          "agents"
+          "launch",
+          "tool"
         ]
       },
       "engagement": null,
@@ -1521,8 +1391,10 @@
           "tier": "S",
           "kind": "feed",
           "tags": [
+            "agent",
             "coding",
-            "agents"
+            "launch",
+            "tool"
           ]
         }
       ],
@@ -1555,8 +1427,10 @@
         "tier": "S",
         "kind": "feed",
         "tags": [
+          "agent",
           "coding",
-          "agents"
+          "launch",
+          "tool"
         ]
       },
       "engagement": null,
@@ -1567,8 +1441,10 @@
           "tier": "S",
           "kind": "feed",
           "tags": [
+            "agent",
             "coding",
-            "agents"
+            "launch",
+            "tool"
           ]
         }
       ],
@@ -1597,13 +1473,14 @@
       "description": "Hacker News: 15 points · 4 comments",
       "source": {
         "id": "hackernews-ai",
-        "name": "Hacker News AI Signals",
+        "name": "Hacker News · AI Tool Signals",
         "tier": "B",
         "kind": "hackernews",
         "tags": [
-          "community",
+          "tool",
           "startup",
-          "developer"
+          "developer",
+          "community"
         ]
       },
       "engagement": {
@@ -1613,13 +1490,14 @@
       "relatedSources": [
         {
           "id": "hackernews-ai",
-          "name": "Hacker News AI Signals",
+          "name": "Hacker News · AI Tool Signals",
           "tier": "B",
           "kind": "hackernews",
           "tags": [
-            "community",
+            "tool",
             "startup",
-            "developer"
+            "developer",
+            "community"
           ]
         }
       ],
@@ -1639,6 +1517,252 @@
         "个人判断：这件事接下来最可能影响谁"
       ],
       "radarScore": 53
+    },
+    {
+      "id": "rsv9ob2",
+      "title": "Release v0.58.0-preview.0",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.58.0-preview.0",
+      "publishedAt": "2026-08-25T18:22:01.000Z",
+      "description": "<h2>What's Changed</h2> <ul> <li>Changelog for v0.57.0-preview.0 by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gemini-cli-robot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/gemini-cli-robot\">@gemini-cli-robot</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5196337316\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28918\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28918/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28918\">#28918</a></li> <li>fix(core): ensure consistent symlink evaluation in ignore path handling by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/luisfelipe-alt/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/luisfelipe-alt\">@luisfelipe-alt</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5195740976\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28915\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28915/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28915\">#28915</a></li> <li>refactor(core): remove eslint-disable and type-asserts from shellExecutionService by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hoverc",
+      "source": {
+        "id": "gh-gemini-cli",
+        "name": "google-gemini/gemini-cli Releases",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "agent",
+          "coding",
+          "launch",
+          "tool"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "gh-gemini-cli",
+          "name": "google-gemini/gemini-cli Releases",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "agent",
+            "coding",
+            "launch",
+            "tool"
+          ]
+        }
+      ],
+      "category": "AI Coding",
+      "summary": "<h2>What's Changed</h2> <ul> <li>Changelog for v0.57.0-preview.0 by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gemini-cli-robot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimen",
+      "importance": 71,
+      "novelty": 76,
+      "relevance": 61,
+      "socialPotential": 53,
+      "sourceQuality": 90,
+      "confidence": 62,
+      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
+      "whatChanged": "Release v0.58.0-preview.0",
+      "angles": [
+        "发生了什么：用最短篇幅解释「Release v0.58.0-preview.0」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 53
+    },
+    {
+      "id": "r1o0cn1t",
+      "title": "‘The world seems to be ready’: An interview with OpenAI head of product Thibault Sottiaux",
+      "url": "https://techcrunch.com/2026/08/25/the-world-seems-to-be-ready-an-interview-with-openai-head-of-product-thibault-sottiaux/",
+      "publishedAt": "2026-08-25T12:00:00.000Z",
+      "description": "TechCrunch talks agents, UX, and reporting to Greg Brockman with OpenAI's head of product.",
+      "source": {
+        "id": "techcrunch-ai",
+        "name": "TechCrunch AI",
+        "tier": "A",
+        "kind": "feed",
+        "tags": [
+          "launch",
+          "product",
+          "startup",
+          "tool"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "tier": "A",
+          "kind": "feed",
+          "tags": [
+            "launch",
+            "product",
+            "startup",
+            "tool"
+          ]
+        }
+      ],
+      "category": "Agent",
+      "summary": "TechCrunch talks agents, UX, and reporting to Greg Brockman with OpenAI's head of product.",
+      "importance": 64,
+      "novelty": 78,
+      "relevance": 66,
+      "socialPotential": 55,
+      "sourceQuality": 78,
+      "confidence": 62,
+      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
+      "whatChanged": "‘The world seems to be ready’: An interview with OpenAI head of product Thibault Sottiaux",
+      "angles": [
+        "发生了什么：用最短篇幅解释「‘The world seems to be ready’: An interview with OpenAI head of product Thibault Sottiaux」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 53
+    },
+    {
+      "id": "r1we5x4c",
+      "title": "SDK v0.0.79",
+      "url": "https://github.com/cline/cline/releases/tag/sdk%2Fsdk%2Fv0.0.79",
+      "publishedAt": "2026-08-24T23:01:12.000Z",
+      "description": "<ul> <li>The hub's durable event log is now capped at 64 MiB on disk. Event envelopes carrying full session snapshots could previously accumulate to tens of gigabytes, since row and time retention alone did not bound file size and deletes never shrink a SQLite file. Oldest events are dropped first and the file is vacuumed to return the space, and pruning now also runs after every 16 MiB appended instead of waiting for the hourly sweep</li> <li>Fixed <code>task.completed</code> telemetry being dropped for most interactive sessions. The event is now emitted from every session teardown path, exactly once per session</li> <li>Refreshed the model catalog. Adds two providers (AgentRouter and Opper) and updates model lists and pricing across providers. The resolved default model changes for Aki.io and NanoGPT, so if you use one of those without pinning a model you will get a different default</li> </ul> <p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/cline/cline/compare/sdk/sdk/v0.0.78...sdk/sdk/v0.0.79\"><tt>sdk/sdk/v0.0.78...sdk/sdk/v0.0.79</tt></a></p>",
+      "source": {
+        "id": "gh-cline",
+        "name": "cline/cline Releases",
+        "tier": "A",
+        "kind": "feed",
+        "tags": [
+          "agent",
+          "coding",
+          "tool"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "gh-cline",
+          "name": "cline/cline Releases",
+          "tier": "A",
+          "kind": "feed",
+          "tags": [
+            "agent",
+            "coding",
+            "tool"
+          ]
+        }
+      ],
+      "category": "AI Coding",
+      "summary": "<ul> <li>The hub's durable event log is now capped at 64 MiB on disk. Event envelopes carrying full session snapshots could previously accumulate to tens of gigabytes, since row and time retention alone did not bound file size and deletes n",
+      "importance": 67,
+      "novelty": 72,
+      "relevance": 68,
+      "socialPotential": 58,
+      "sourceQuality": 78,
+      "confidence": 62,
+      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
+      "whatChanged": "SDK v0.0.79",
+      "angles": [
+        "发生了什么：用最短篇幅解释「SDK v0.0.79」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 53
+    },
+    {
+      "id": "rqcdb0d",
+      "title": "Release v0.56.0-nightly.20260825.g812f7a2bc",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0-nightly.20260825.g812f7a2bc",
+      "publishedAt": "2026-08-25T01:08:28.000Z",
+      "description": "<h2>What's Changed</h2> <ul> <li>fix(a2a-server): clear stale cancellation error on new message turns by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/amelidev/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/amelidev\">@amelidev</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5208930620\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28940\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28940/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28940\">#28940</a></li> <li>fix(core): declare top-level safety checkers in write policy configuration by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/luisfelipe-alt/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/luisfelipe-alt\">@luisfelipe-alt</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5221732205\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28961\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28961/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28961\">#28961</a></li> <li>(FIX) history rollback and retry nudge optimizations by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/use",
+      "source": {
+        "id": "gh-gemini-cli",
+        "name": "google-gemini/gemini-cli Releases",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "agent",
+          "coding",
+          "launch",
+          "tool"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "gh-gemini-cli",
+          "name": "google-gemini/gemini-cli Releases",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "agent",
+            "coding",
+            "launch",
+            "tool"
+          ]
+        }
+      ],
+      "category": "AI Coding",
+      "summary": "<h2>What's Changed</h2> <ul> <li>fix(a2a-server): clear stale cancellation error on new message turns by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/amelidev/hovercard\" data-octo-click=\"hovercar",
+      "importance": 71,
+      "novelty": 68,
+      "relevance": 61,
+      "socialPotential": 53,
+      "sourceQuality": 90,
+      "confidence": 62,
+      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
+      "whatChanged": "Release v0.56.0-nightly.20260825.g812f7a2bc",
+      "angles": [
+        "发生了什么：用最短篇幅解释「Release v0.56.0-nightly.20260825.g812f7a2bc」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 52
+    },
+    {
+      "id": "r1m1b0lb",
+      "title": "v0.33.0",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.33.0",
+      "publishedAt": "2026-08-26T02:09:34.000Z",
+      "description": "<h2>What's Changed</h2> <h3>Claude Desktop</h3> <p>Developers can now easily configure Claude Desktop to seamlessly work with Ollama as a third-party gateway provider.</p> <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://private-user-images.githubusercontent.com/29360864/641249150-c02fd93b-f599-40a9-83c3-d0555c0ac182.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODc3MjM1NTIsIm5iZiI6MTc4NzcyMzI1MiwicGF0aCI6Ii8yOTM2MDg2NC82NDEyNDkxNTAtYzAyZmQ5M2ItZjU5OS00MGE5LTgzYzMtZDA1NTVjMGFjMTgyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwODI2VDA1NDczMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTllZGRlZDUzMDVkZTllY2ZmMjYxYWU4ZTBhOTcxZTZkNjdhZmMxNThlY2M0ZmE3ZWE5MDY5ODc1ZjdlZTE5MDMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.zrZnaqkQhVMvsJ-c5-h6DrY5-T0RpefyIQRHPRgUblU\"><img width=\"1298\" height=\"780\" alt=\"image\" src=\"https://private-user-images.githubusercontent.com/29360864/641249150-c02fd93b-f599-40a9-83c3-d0555c0ac182.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODc3MjM1NTIsIm5iZiI6MTc4NzcyMzI1MiwicGF0aCI6Ii8yOTM2MDg2NC82NDEyNDkxNTAtYzAyZmQ5M2ItZjU5OS00MGE5LTgzYzMtZDA1NTVjMGFjMTgyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MjYlMkZ1cy1lYXN0LTElM",
+      "source": {
+        "id": "gh-ollama",
+        "name": "ollama/ollama Releases",
+        "tier": "A",
+        "kind": "feed",
+        "tags": [
+          "model",
+          "local-ai",
+          "tool"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "gh-ollama",
+          "name": "ollama/ollama Releases",
+          "tier": "A",
+          "kind": "feed",
+          "tags": [
+            "model",
+            "local-ai",
+            "tool"
+          ]
+        }
+      ],
+      "category": "AI Coding",
+      "summary": "<h2>What's Changed</h2> <h3>Claude Desktop</h3> <p>Developers can now easily configure Claude Desktop to seamlessly work with Ollama as a third-party gateway provider.</p> <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://private-u",
+      "importance": 59,
+      "novelty": 80,
+      "relevance": 61,
+      "socialPotential": 53,
+      "sourceQuality": 78,
+      "confidence": 62,
+      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
+      "whatChanged": "v0.33.0",
+      "angles": [
+        "发生了什么：用最短篇幅解释「v0.33.0」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 51
     }
   ]
 }
