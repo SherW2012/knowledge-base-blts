@@ -1,9 +1,10 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "status": "ok",
-  "generatedAt": "2026-08-26T05:47:30.823Z",
+  "generatedAt": "2026-08-26T05:50:18.127Z",
   "date": "2026-08-26",
   "timezone": "Asia/Shanghai",
+  "focus": "launches-tools-skills-productivity-markets",
   "llm": {
     "enabled": false,
     "provider": "https://api.openai.com/v1",
@@ -13,13 +14,14 @@
     "configuredSources": 41,
     "automatedSources": 35,
     "manualSources": 6,
-    "successfulSources": 34,
-    "failedSources": 1,
-    "scannedItems": 364,
-    "recentItems": 117,
-    "dedupedItems": 117,
-    "eventClusters": 110,
-    "publishedItems": 18
+    "successfulSources": 31,
+    "failedSources": 4,
+    "scannedItems": 404,
+    "recentItems": 157,
+    "dedupedItems": 157,
+    "eventClusters": 136,
+    "publishedItems": 18,
+    "researchItems": 0
   },
   "sourceRuns": [
     {
@@ -68,7 +70,7 @@
       "tier": "A",
       "kind": "huggingface_trending",
       "status": "ok",
-      "items": 0
+      "items": 18
     },
     {
       "id": "gh-trending",
@@ -76,31 +78,34 @@
       "tier": "A",
       "kind": "github_trending",
       "status": "ok",
-      "items": 0
+      "items": 15
     },
     {
       "id": "gh-search-skills",
       "name": "GitHub Discovery · Agent Skills",
       "tier": "A",
       "kind": "github_search",
-      "status": "ok",
-      "items": 0
+      "status": "error",
+      "items": 0,
+      "error": "HTTP 403"
     },
     {
       "id": "gh-search-mcp",
       "name": "GitHub Discovery · MCP / Agent Tools",
       "tier": "A",
       "kind": "github_search",
-      "status": "ok",
-      "items": 0
+      "status": "error",
+      "items": 0,
+      "error": "HTTP 403"
     },
     {
       "id": "gh-search-productivity",
       "name": "GitHub Discovery · AI Productivity",
       "tier": "A",
       "kind": "github_search",
-      "status": "ok",
-      "items": 0
+      "status": "error",
+      "items": 0,
+      "error": "HTTP 403"
     },
     {
       "id": "producthunt",
@@ -261,7 +266,7 @@
       "tier": "A",
       "kind": "feed",
       "status": "ok",
-      "items": 18
+      "items": 16
     },
     {
       "id": "coingecko-trending",
@@ -269,7 +274,7 @@
       "tier": "B",
       "kind": "coingecko_trending",
       "status": "ok",
-      "items": 0
+      "items": 8
     },
     {
       "id": "fear-greed",
@@ -277,7 +282,7 @@
       "tier": "B",
       "kind": "fear_greed",
       "status": "ok",
-      "items": 0
+      "items": 1
     },
     {
       "id": "wealth-common-sense",
@@ -364,7 +369,8 @@
         "model",
         "agent",
         "product"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "google-ai-blog",
@@ -377,7 +383,8 @@
         "model",
         "agent",
         "product"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "github-ai",
@@ -390,7 +397,8 @@
         "tool",
         "coding",
         "agent"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "github-changelog",
@@ -403,7 +411,8 @@
         "tool",
         "productivity",
         "coding"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "huggingface-blog",
@@ -415,7 +424,8 @@
         "model",
         "open-source",
         "launch"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "hf-trending-models",
@@ -427,7 +437,8 @@
         "model",
         "trending",
         "open-source"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "gh-trending",
@@ -441,7 +452,8 @@
         "skill",
         "tool",
         "agent"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "gh-search-skills",
@@ -454,7 +466,8 @@
         "skill",
         "agent",
         "discovery"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "gh-search-mcp",
@@ -468,7 +481,8 @@
         "mcp",
         "agent",
         "tool"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "gh-search-productivity",
@@ -481,7 +495,8 @@
         "tool",
         "productivity",
         "automation"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "producthunt",
@@ -495,7 +510,8 @@
         "product",
         "productivity",
         "discovery"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "techcrunch-ai",
@@ -508,7 +524,8 @@
         "product",
         "startup",
         "tool"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "ars-ai",
@@ -521,7 +538,8 @@
         "product",
         "tool",
         "industry"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "simon-willison",
@@ -534,7 +552,8 @@
         "coding",
         "model",
         "practical"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "latent-space",
@@ -547,7 +566,8 @@
         "tool",
         "developer",
         "industry"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "one-useful-thing",
@@ -559,7 +579,8 @@
         "productivity",
         "workflow",
         "practical"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "hackernews-ai",
@@ -572,7 +593,8 @@
         "startup",
         "developer",
         "community"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "gh-openai-codex",
@@ -585,7 +607,8 @@
         "coding",
         "launch",
         "tool"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "gh-openai-agents",
@@ -597,7 +620,8 @@
         "agent",
         "sdk",
         "launch"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "gh-claude-code",
@@ -610,7 +634,8 @@
         "coding",
         "launch",
         "tool"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "gh-gemini-cli",
@@ -623,7 +648,8 @@
         "coding",
         "launch",
         "tool"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "gh-browser-use",
@@ -635,7 +661,8 @@
         "agent",
         "browser",
         "tool"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "gh-mcp-servers",
@@ -648,7 +675,8 @@
         "skill",
         "agent",
         "tool"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "gh-open-webui",
@@ -660,7 +688,8 @@
         "tool",
         "product",
         "open-source"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "gh-n8n",
@@ -673,7 +702,8 @@
         "workflow",
         "automation",
         "tool"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "gh-dify",
@@ -686,7 +716,8 @@
         "workflow",
         "tool",
         "open-source"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "gh-cline",
@@ -698,7 +729,8 @@
         "agent",
         "coding",
         "tool"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "gh-ollama",
@@ -710,7 +742,8 @@
         "model",
         "local-ai",
         "tool"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "gh-qwen",
@@ -722,7 +755,8 @@
         "model",
         "launch",
         "open-source"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "coindesk",
@@ -734,7 +768,8 @@
         "finance",
         "crypto",
         "market"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "coingecko-trending",
@@ -747,7 +782,8 @@
         "crypto",
         "market",
         "signal"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "fear-greed",
@@ -760,7 +796,8 @@
         "crypto",
         "market",
         "signal"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "wealth-common-sense",
@@ -773,7 +810,8 @@
         "stocks",
         "tip",
         "investing"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "arxiv-cs-ai",
@@ -783,7 +821,8 @@
       "url": null,
       "tags": [
         "research"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "deepmind-blog",
@@ -794,7 +833,8 @@
       "tags": [
         "research",
         "model"
-      ]
+      ],
+      "note": null
     },
     {
       "id": "x-karpathy",
@@ -807,7 +847,8 @@
         "coding",
         "model",
         "agent"
-      ]
+      ],
+      "note": "等待接入 X 官方 API"
     },
     {
       "id": "x-simonw",
@@ -819,7 +860,8 @@
         "x-watchlist",
         "tool",
         "coding"
-      ]
+      ],
+      "note": "等待接入 X 官方 API"
     },
     {
       "id": "x-rasbt",
@@ -831,7 +873,8 @@
         "x-watchlist",
         "model",
         "education"
-      ]
+      ],
+      "note": "等待接入 X 官方 API"
     },
     {
       "id": "x-chipro",
@@ -843,7 +886,8 @@
         "x-watchlist",
         "engineering",
         "systems"
-      ]
+      ],
+      "note": "等待接入 X 官方 API"
     },
     {
       "id": "x-swyx",
@@ -856,7 +900,8 @@
         "agent",
         "developer",
         "tool"
-      ]
+      ],
+      "note": "等待接入 X 官方 API"
     },
     {
       "id": "x-drjimfan",
@@ -868,103 +913,124 @@
         "x-watchlist",
         "agent",
         "robotics"
-      ]
+      ],
+      "note": "等待接入 X 官方 API"
     }
   ],
   "items": [
     {
-      "id": "rf6b5ro",
-      "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses",
-      "url": "https://arxiv.org/abs/2608.24876v1",
-      "publishedAt": "2026-08-25T17:56:35.000Z",
-      "description": "Recursive self-improvement (RSI) remains hard in long-horizon tasks, where growing histories obscure the task state and misalign skill invocation. We introduce Recuris, a recursive Experiential-Working Memory architecture for long-horizon agent harnesses, in which Working Memory tracks task progress and guides skill selection from Experiential Memory, grounding skill use in current needs rather than the full history. This coupling also turns execution into structured evidence that localizes failures to specific memory components. Across tasks, a fixed Meta-Agent turns that evidence into localized, validation-gated updates to Skill Memory that reshape execution and yield new evidence, forming a bounded recursive memory-evolution loop. Across four long-horizon benchmarks and ten models, Recuris improves task success in 35 of the 37 completed model-benchmark pairs, carrying frontier models to SOTA-level task success: on tau-bench it adds +17.8 points to GPT-5.6 Sol and +15.6 to Claude Opus 5, taking Opus 5 to 87.9%, and +16.6/+13.5 points on Qwen3.6-27B/35B on SkillFlow. The advantage widens as the interaction horizon grows, to +32.2 points on the longest tasks, and common long-horizon failures fall by up to 80%. These results position recursively evolving memory as a scalable foundation for RSI, enabling agents to continuously transform accumulated experience into increasingly effective long-horizon behavior. Code: https://github.com/Gen-Verse/Recuris",
+      "id": "rr7p30n",
+      "title": "freestylefly/awesome-gpt-image-2 — Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新",
+      "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "publishedAt": "2026-08-26T05:50:18.127Z",
+      "description": "GitHub Trending · 1698 stars today · Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
       "source": {
-        "id": "arxiv-cs-ai",
-        "name": "arXiv cs.AI · Low Weight",
-        "tier": "B",
-        "kind": "arxiv",
-        "tags": [
-          "research"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "arxiv-cs-ai",
-          "name": "arXiv cs.AI · Low Weight",
-          "tier": "B",
-          "kind": "arxiv",
-          "tags": [
-            "research"
-          ]
-        }
-      ],
-      "category": "Agent",
-      "summary": "Recursive self-improvement (RSI) remains hard in long-horizon tasks, where growing histories obscure the task state and misalign skill invocation. We introduce Recuris, a recursive Experiential-Working Memory architecture for long-horizon a",
-      "importance": 99,
-      "novelty": 100,
-      "relevance": 96,
-      "socialPotential": 78,
-      "sourceQuality": 64,
-      "confidence": 62,
-      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
-      "whatChanged": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses",
-      "angles": [
-        "发生了什么：用最短篇幅解释「Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 71
-    },
-    {
-      "id": "r8v5jg8",
-      "title": "GitHub Copilot app Customize tab is generally available",
-      "url": "https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available",
-      "publishedAt": "2026-08-25T20:05:26.000Z",
-      "description": "GitHub Copilot is more useful when it works with the tools, knowledge, and workflows your team already relies on. The new Customize tab in the GitHub Copilot app brings MCP servers, plugins, skills, and canvases together in one place. Explore featured customizations, browse by type, and find new ways to tailor Copilot to how you and your team work. With the Customize tab, you can: Discover more ways to customize Copilot across MCP servers, plugins, skills, and canvases. Start with featured customizations selected from each section. Find MCP servers faster by exploring trending options and browsing by category. Bring the tools your team uses into Copilot Featured canvases help you move from understanding work to acting on it while keeping the relevant context visible. Delegate backlog work from Azure DevOps Triage issues, prioritize backlogs, assign follow-ups, and hand work to Copilot to investigate, implement, or prepare for review. Explore every type of customization The Featured view brings selected customizations from across the GitHub Copilot app into one place, giving you a simpler starting point when you do not already know which MCP server, plugin, skill, or canvas you need. You can also browse dedicated sections for each type of customization to find options that fit the way you work. Get started Open the GitHub Copilot app and select Customize to explore featured customizations or browse by type. Install the GitHub Copilot app . The post GitHub Copilot app Customize tab is generally available appeared first on The GitHub Blog .",
-      "source": {
-        "id": "github-changelog",
-        "name": "GitHub Changelog",
-        "tier": "S",
-        "kind": "feed",
+        "id": "gh-trending",
+        "name": "GitHub Trending · AI/Agent/Tools",
+        "tier": "A",
+        "kind": "github_trending",
         "tags": [
           "github",
+          "trending",
+          "skill",
           "tool",
-          "productivity",
-          "coding"
+          "agent"
         ]
       },
-      "engagement": null,
+      "engagement": {
+        "score": 1698
+      },
+      "isCurrentSignal": true,
       "relatedSources": [
         {
-          "id": "github-changelog",
-          "name": "GitHub Changelog",
-          "tier": "S",
-          "kind": "feed",
+          "id": "gh-trending",
+          "name": "GitHub Trending · AI/Agent/Tools",
+          "tier": "A",
+          "kind": "github_trending",
           "tags": [
             "github",
+            "trending",
+            "skill",
             "tool",
-            "productivity",
-            "coding"
+            "agent"
           ]
         }
       ],
-      "category": "AI Coding",
-      "summary": "GitHub Copilot is more useful when it works with the tools, knowledge, and workflows your team already relies on. The new Customize tab in the GitHub Copilot app brings MCP servers, plugins, skills, and canvases together in one place. Explo",
-      "importance": 95,
-      "novelty": 92,
-      "relevance": 82,
-      "socialPotential": 68,
-      "sourceQuality": 90,
-      "confidence": 62,
-      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
-      "whatChanged": "GitHub Copilot app Customize tab is generally available",
+      "category": "Skill / GitHub",
+      "summary": "GitHub Trending · 1698 stars today · Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+      "importance": 77,
+      "novelty": 100,
+      "relevance": 84,
+      "socialPotential": 92,
+      "sourceQuality": 78,
+      "practicality": 100,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
+      "whatChanged": "freestylefly/awesome-gpt-image-2 — Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新",
       "angles": [
-        "发生了什么：用最短篇幅解释「GitHub Copilot app Customize tab is generally available」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
+        "今天 GitHub 上冒出来一个值得试的项目：freestylefly/awesome-gpt-image-2 — Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新",
+        "它解决的具体麻烦是什么，5 分钟能不能跑通",
+        "有没有可能变成自己的 Skill / 自动化工作流"
       ],
-      "radarScore": 67
+      "radarScore": 100
+    },
+    {
+      "id": "r1ne60iz",
+      "title": "Shubhamsaboo/awesome-llm-apps — Star Shubhamsaboo / awesome-llm-apps 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "publishedAt": "2026-08-26T05:50:18.127Z",
+      "description": "GitHub Trending · 161 stars today · Star Shubhamsaboo / awesome-llm-apps 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
+      "source": {
+        "id": "gh-trending",
+        "name": "GitHub Trending · AI/Agent/Tools",
+        "tier": "A",
+        "kind": "github_trending",
+        "tags": [
+          "github",
+          "trending",
+          "skill",
+          "tool",
+          "agent"
+        ]
+      },
+      "engagement": {
+        "score": 161
+      },
+      "isCurrentSignal": true,
+      "relatedSources": [
+        {
+          "id": "gh-trending",
+          "name": "GitHub Trending · AI/Agent/Tools",
+          "tier": "A",
+          "kind": "github_trending",
+          "tags": [
+            "github",
+            "trending",
+            "skill",
+            "tool",
+            "agent"
+          ]
+        }
+      ],
+      "category": "Skill / GitHub",
+      "summary": "GitHub Trending · 161 stars today · Star Shubhamsaboo / awesome-llm-apps 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
+      "importance": 84,
+      "novelty": 100,
+      "relevance": 95,
+      "socialPotential": 100,
+      "sourceQuality": 78,
+      "practicality": 100,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
+      "whatChanged": "Shubhamsaboo/awesome-llm-apps — Star Shubhamsaboo / awesome-llm-apps 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
+      "angles": [
+        "今天 GitHub 上冒出来一个值得试的项目：Shubhamsaboo/awesome-llm-apps — Star Shubhamsaboo / awesome-llm-apps 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
+        "它解决的具体麻烦是什么，5 分钟能不能跑通",
+        "有没有可能变成自己的 Skill / 自动化工作流"
+      ],
+      "radarScore": 100
     },
     {
       "id": "rcprxep",
@@ -985,6 +1051,7 @@
         ]
       },
       "engagement": null,
+      "isCurrentSignal": false,
       "relatedSources": [
         {
           "id": "latent-space",
@@ -999,22 +1066,232 @@
           ]
         }
       ],
-      "category": "AI Coding",
-      "summary": "We’ve lost count of how many adoption milestones have been passed since the original Rise of the AI Engineer post, but surely Andrew Ng, cofounder of Google Brain and Coursera among many other things, relaunching DeepLearning.ai with a focu",
-      "importance": 85,
-      "novelty": 89,
-      "relevance": 85,
-      "socialPotential": 67,
+      "category": "Skill / GitHub",
+      "summary": "We’ve lost count of how many adoption milestones have been passed since the original Rise of the AI Engineer post, but surely Andrew Ng, cofounder of Google Brain and Coursera among many other things, relaunching DeepLearning.ai with a focus on AI Engineering ",
+      "importance": 81,
+      "novelty": 90,
+      "relevance": 93,
+      "socialPotential": 85,
       "sourceQuality": 78,
-      "confidence": 62,
-      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
+      "practicality": 100,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
       "whatChanged": "[AINews] Andrew Ng gets into AI Engineering",
       "angles": [
-        "发生了什么：用最短篇幅解释「[AINews] Andrew Ng gets into AI Engineering」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
+        "今天 GitHub 上冒出来一个值得试的项目：[AINews] Andrew Ng gets into AI Engineering",
+        "它解决的具体麻烦是什么，5 分钟能不能跑通",
+        "有没有可能变成自己的 Skill / 自动化工作流"
       ],
-      "radarScore": 64
+      "radarScore": 100
+    },
+    {
+      "id": "rc79xnd",
+      "title": "multica-ai/andrej-karpathy-skills — Star multica-ai / andrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Ka",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "publishedAt": "2026-08-26T05:50:18.127Z",
+      "description": "GitHub Trending · 830 stars today · Star multica-ai / andrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+      "source": {
+        "id": "gh-trending",
+        "name": "GitHub Trending · AI/Agent/Tools",
+        "tier": "A",
+        "kind": "github_trending",
+        "tags": [
+          "github",
+          "trending",
+          "skill",
+          "tool",
+          "agent"
+        ]
+      },
+      "engagement": {
+        "score": 830
+      },
+      "isCurrentSignal": true,
+      "relatedSources": [
+        {
+          "id": "gh-trending",
+          "name": "GitHub Trending · AI/Agent/Tools",
+          "tier": "A",
+          "kind": "github_trending",
+          "tags": [
+            "github",
+            "trending",
+            "skill",
+            "tool",
+            "agent"
+          ]
+        }
+      ],
+      "category": "Skill / GitHub",
+      "summary": "GitHub Trending · 830 stars today · Star multica-ai / andrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+      "importance": 84,
+      "novelty": 100,
+      "relevance": 80,
+      "socialPotential": 85,
+      "sourceQuality": 78,
+      "practicality": 89,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
+      "whatChanged": "multica-ai/andrej-karpathy-skills — Star multica-ai / andrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Ka",
+      "angles": [
+        "今天 GitHub 上冒出来一个值得试的项目：multica-ai/andrej-karpathy-skills — Star multica-ai / andrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Ka",
+        "它解决的具体麻烦是什么，5 分钟能不能跑通",
+        "有没有可能变成自己的 Skill / 自动化工作流"
+      ],
+      "radarScore": 99
+    },
+    {
+      "id": "r8v5jg8",
+      "title": "GitHub Copilot app Customize tab is generally available",
+      "url": "https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available",
+      "publishedAt": "2026-08-25T20:05:26.000Z",
+      "description": "GitHub Copilot is more useful when it works with the tools, knowledge, and workflows your team already relies on. The new Customize tab in the GitHub Copilot app brings MCP servers, plugins, skills, and canvases together in one place. Explore featured customizations, browse by type, and find new ways to tailor Copilot to how you and your team work. With the Customize tab, you can: Discover more ways to customize Copilot across MCP servers, plugins, skills, and canvases. Start with featured customizations selected from each section. Find MCP servers faster by exploring trending options and browsing by category. Bring the tools your team uses into Copilot Featured canvases help you move from understanding work to acting on it while keeping the relevant context visible. Delegate backlog work from Azure DevOps Triage issues, prioritize backlogs, assign follow-ups, and hand work to Copilot to investigate, implement, or prepare for review. Explore every type of customization The Featured view brings selected customizations from across the GitHub Copilot app into one place, giving you a simpler starting point when you do not already know which MCP server, plugin, skill, or canvas you need. You can also browse dedicated sections for each type of customization to find options that fit the way you work. Get started Open the GitHub Copilot app and select Customize to explore featured customizations or browse by type. Install the GitHub Copilot app . The post GitHub Copilot app Customize tab is generally available appeared first on The GitHub Blog .",
+      "source": {
+        "id": "github-changelog",
+        "name": "GitHub Changelog",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "github",
+          "tool",
+          "productivity",
+          "coding"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "github-changelog",
+          "name": "GitHub Changelog",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "github",
+            "tool",
+            "productivity",
+            "coding"
+          ]
+        }
+      ],
+      "category": "美股 / 币圈",
+      "summary": "GitHub Copilot is more useful when it works with the tools, knowledge, and workflows your team already relies on. The new Customize tab in the GitHub Copilot app brings MCP servers, plugins, skills, and canvases together in one place. Explore featured customiz",
+      "importance": 90,
+      "novelty": 94,
+      "relevance": 96,
+      "socialPotential": 86,
+      "sourceQuality": 90,
+      "practicality": 100,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "作为市场观察和工具线索使用，关注数据、情绪与结构变化，不把单条信息当作交易建议。",
+      "whatChanged": "GitHub Copilot app Customize tab is generally available",
+      "angles": [
+        "今天市场里一个容易被忽略的小信号：GitHub Copilot app Customize tab is generally available",
+        "这个数据应该怎么看，什么情况下容易误判",
+        "只做观察：它接下来值得盯哪个指标"
+      ],
+      "radarScore": 96
+    },
+    {
+      "id": "rf6b5ro",
+      "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses",
+      "url": "https://arxiv.org/abs/2608.24876v1",
+      "publishedAt": "2026-08-25T17:56:35.000Z",
+      "description": "Recursive self-improvement (RSI) remains hard in long-horizon tasks, where growing histories obscure the task state and misalign skill invocation. We introduce Recuris, a recursive Experiential-Working Memory architecture for long-horizon agent harnesses, in which Working Memory tracks task progress and guides skill selection from Experiential Memory, grounding skill use in current needs rather than the full history. This coupling also turns execution into structured evidence that localizes failures to specific memory components. Across tasks, a fixed Meta-Agent turns that evidence into localized, validation-gated updates to Skill Memory that reshape execution and yield new evidence, forming a bounded recursive memory-evolution loop. Across four long-horizon benchmarks and ten models, Recuris improves task success in 35 of the 37 completed model-benchmark pairs, carrying frontier models to SOTA-level task success: on tau-bench it adds +17.8 points to GPT-5.6 Sol and +15.6 to Claude Opus 5, taking Opus 5 to 87.9%, and +16.6/+13.5 points on Qwen3.6-27B/35B on SkillFlow. The advantage widens as the interaction horizon grows, to +32.2 points on the longest tasks, and common long-horizon failures fall by up to 80%. These results position recursively evolving memory as a scalable foundation for RSI, enabling agents to continuously transform accumulated experience into increasingly effective long-horizon behavior. Code: https://github.com/Gen-Verse/Recuris",
+      "source": {
+        "id": "arxiv-cs-ai",
+        "name": "arXiv cs.AI · Low Weight",
+        "tier": "B",
+        "kind": "arxiv",
+        "tags": [
+          "research"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "arxiv-cs-ai",
+          "name": "arXiv cs.AI · Low Weight",
+          "tier": "B",
+          "kind": "arxiv",
+          "tags": [
+            "research"
+          ]
+        }
+      ],
+      "category": "Skill / GitHub",
+      "summary": "Recursive self-improvement (RSI) remains hard in long-horizon tasks, where growing histories obscure the task state and misalign skill invocation. We introduce Recuris, a recursive Experiential-Working Memory architecture for long-horizon agent harnesses, in w",
+      "importance": 89,
+      "novelty": 100,
+      "relevance": 82,
+      "socialPotential": 68,
+      "sourceQuality": 64,
+      "practicality": 81,
+      "researchIntensity": 24,
+      "confidence": 64,
+      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
+      "whatChanged": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses",
+      "angles": [
+        "今天 GitHub 上冒出来一个值得试的项目：Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses",
+        "它解决的具体麻烦是什么，5 分钟能不能跑通",
+        "有没有可能变成自己的 Skill / 自动化工作流"
+      ],
+      "radarScore": 95
+    },
+    {
+      "id": "r17k12t1",
+      "title": "Desktop v0.0.17",
+      "url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.17",
+      "publishedAt": "2026-08-25T09:06:36.000Z",
+      "description": "<ul> <li>Plugins, MCP, Skills, Rules, Hooks, and Tools are now one Customize hub with tabbed sections and live counts. Catalog-backed tabs show what you have installed followed by an inline Browse section, so installing something from the catalog immediately appears above — the separate Marketplace page is gone</li> <li>Redesigned the Models page: providers are grouped into Connected, Popular, and All with their auth kind and configuration status instead of per-row toggles. OAuth providers now offer a browser sign-in rather than an API key field, with a collapsed manual-key escape hatch where supported, and explicit Connect / Disconnect / Sign out actions</li> <li>Voice input moved to its own Settings → Voice page that only offers connected transcription-capable providers and preselects a default model. The composer's microphone button now appears only once a voice model is configured</li> <li>Sidebar sessions are always grouped by project, with pinned sessions leading each group and scheduled sessions marked by an inline clock. The Favorite action is now called Pin</li> <li>New, Schedule, and Customize each got their own labeled row below the logo. New starts a fresh task and puts your cursor straight in the composer</li> <li>Session search moved into a dialog behind the search icon in the logo row, and it now searches your full history instead of only the sessions already loaded in the sidebar</li> <li>Added suggested schedule templates to the Schedule page</li> <li>Add Provider opens a dialog instead of swapping out the page</li> <li>Desktop notifications are now a singl",
+      "source": {
+        "id": "gh-cline",
+        "name": "cline/cline Releases",
+        "tier": "A",
+        "kind": "feed",
+        "tags": [
+          "agent",
+          "coding",
+          "tool"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "gh-cline",
+          "name": "cline/cline Releases",
+          "tier": "A",
+          "kind": "feed",
+          "tags": [
+            "agent",
+            "coding",
+            "tool"
+          ]
+        }
+      ],
+      "category": "美股 / 币圈",
+      "summary": "<ul> <li>Plugins, MCP, Skills, Rules, Hooks, and Tools are now one Customize hub with tabbed sections and live counts. Catalog-backed tabs show what you have installed followed by an inline Browse section, so installing something from the catalog immediately a",
+      "importance": 74,
+      "novelty": 89,
+      "relevance": 100,
+      "socialPotential": 100,
+      "sourceQuality": 78,
+      "practicality": 100,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "作为市场观察和工具线索使用，关注数据、情绪与结构变化，不把单条信息当作交易建议。",
+      "whatChanged": "Desktop v0.0.17",
+      "angles": [
+        "今天市场里一个容易被忽略的小信号：Desktop v0.0.17",
+        "这个数据应该怎么看，什么情况下容易误判",
+        "只做观察：它接下来值得盯哪个指标"
+      ],
+      "radarScore": 94
     },
     {
       "id": "r164f99i",
@@ -1035,6 +1312,7 @@
         ]
       },
       "engagement": null,
+      "isCurrentSignal": false,
       "relatedSources": [
         {
           "id": "simon-willison",
@@ -1049,223 +1327,24 @@
           ]
         }
       ],
-      "category": "AI Coding",
-      "summary": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/llm-anthropic/releases/tag/0.27\">llm-anthropic 0.27</a></p> <p>This release of the Anthropic plugin for <a href=\"https://llm.datasette.io/\">LLM</a> mainly provides compatibilit",
-      "importance": 89,
-      "novelty": 79,
-      "relevance": 86,
-      "socialPotential": 74,
+      "category": "Skill / GitHub",
+      "summary": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/llm-anthropic/releases/tag/0.27\">llm-anthropic 0.27</a></p> <p>This release of the Anthropic plugin for <a href=\"https://llm.datasette.io/\">LLM</a> mainly provides compatibility with the recently ",
+      "importance": 81,
+      "novelty": 81,
+      "relevance": 84,
+      "socialPotential": 70,
       "sourceQuality": 78,
-      "confidence": 62,
-      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
+      "practicality": 89,
+      "researchIntensity": 24,
+      "confidence": 64,
+      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
       "whatChanged": "llm-anthropic 0.27",
       "angles": [
-        "发生了什么：用最短篇幅解释「llm-anthropic 0.27」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
+        "今天 GitHub 上冒出来一个值得试的项目：llm-anthropic 0.27",
+        "它解决的具体麻烦是什么，5 分钟能不能跑通",
+        "有没有可能变成自己的 Skill / 自动化工作流"
       ],
-      "radarScore": 64
-    },
-    {
-      "id": "ratlbcf",
-      "title": "Introducing the Admin plugin for ChatGPT Work and Codex",
-      "url": "https://openai.com/index/introducing-admin-plugin",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "description": "Use the Admin plugin for ChatGPT Work and Codex to analyze workspace usage, manage members and permissions, adjust limits, and act on admin requests.",
-      "source": {
-        "id": "openai-news",
-        "name": "OpenAI News",
-        "tier": "S",
-        "kind": "feed",
-        "tags": [
-          "launch",
-          "model",
-          "agent",
-          "product"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "openai-news",
-          "name": "OpenAI News",
-          "tier": "S",
-          "kind": "feed",
-          "tags": [
-            "launch",
-            "model",
-            "agent",
-            "product"
-          ]
-        }
-      ],
-      "category": "AI Coding",
-      "summary": "Use the Admin plugin for ChatGPT Work and Codex to analyze workspace usage, manage members and permissions, adjust limits, and act on admin requests.",
-      "importance": 89,
-      "novelty": 82,
-      "relevance": 78,
-      "socialPotential": 62,
-      "sourceQuality": 90,
-      "confidence": 62,
-      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
-      "whatChanged": "Introducing the Admin plugin for ChatGPT Work and Codex",
-      "angles": [
-        "发生了什么：用最短篇幅解释「Introducing the Admin plugin for ChatGPT Work and Codex」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 62
-    },
-    {
-      "id": "r5p4h9v",
-      "title": "v2.1.246",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246",
-      "publishedAt": "2026-08-25T22:31:52.000Z",
-      "description": "<h2>What's changed</h2> <ul> <li>Added a startup warning for Bash allow rules with a wildcard before the subcommand (e.g. <code>Bash(git * main)</code>), since they also match options inserted before the subcommand</li> <li>Added an Auto mode tab to <code>/permissions</code> for viewing and editing auto mode classifier rules</li> <li>Added the turn's completion time to the end-of-turn duration line, e.g. <code>✻ Sautéed for 23s · done 6:05 PM</code></li> <li>Fixed fullscreen mode showing a blank transcript after resizing the terminal and jumping to the bottom until the next keypress</li> <li>Fixed a severe transcript slowdown when a diff contained a very long single line (e.g. a base64 string); such lines now render truncated with a marker</li> <li>Fixed erratic fullscreen scrolling when positioned at an earlier message, including jump-to-bottom getting stuck mid-transcript</li> <li>Fixed background sessions failing to open after 45 seconds when Claude Code's starting directory had been deleted, the machine had slept, or the host is slow to start processes</li> <li>Fixed background sessions failing to open with \"Couldn't start the background service … EACCES\" when another Claude Code process was re-installing the npm package at that moment</li> <li>Fixed markdown rendering being disabled for a whole message when its first 500 characters contained no markdown, and for <code>+</code>/<code>N)</code> lists and setext headings</li> <li>Fixed MCP tool calls interrupted by an incoming message in headless/remote sessions being reported to the model as \"completed with no output\" in",
-      "source": {
-        "id": "gh-claude-code",
-        "name": "anthropics/claude-code Releases",
-        "tier": "S",
-        "kind": "feed",
-        "tags": [
-          "agent",
-          "coding",
-          "launch",
-          "tool"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "gh-claude-code",
-          "name": "anthropics/claude-code Releases",
-          "tier": "S",
-          "kind": "feed",
-          "tags": [
-            "agent",
-            "coding",
-            "launch",
-            "tool"
-          ]
-        }
-      ],
-      "category": "AI Coding",
-      "summary": "<h2>What's changed</h2> <ul> <li>Added a startup warning for Bash allow rules with a wildcard before the subcommand (e.g. <code>Bash(git * main)</code>), since they also match options inserted before the subcommand</li> <li>Added an Auto mo",
-      "importance": 84,
-      "novelty": 88,
-      "relevance": 73,
-      "socialPotential": 60,
-      "sourceQuality": 90,
-      "confidence": 62,
-      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
-      "whatChanged": "v2.1.246",
-      "angles": [
-        "发生了什么：用最短篇幅解释「v2.1.246」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 61
-    },
-    {
-      "id": "r17k12t1",
-      "title": "Desktop v0.0.17",
-      "url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.17",
-      "publishedAt": "2026-08-25T09:06:36.000Z",
-      "description": "<ul> <li>Plugins, MCP, Skills, Rules, Hooks, and Tools are now one Customize hub with tabbed sections and live counts. Catalog-backed tabs show what you have installed followed by an inline Browse section, so installing something from the catalog immediately appears above — the separate Marketplace page is gone</li> <li>Redesigned the Models page: providers are grouped into Connected, Popular, and All with their auth kind and configuration status instead of per-row toggles. OAuth providers now offer a browser sign-in rather than an API key field, with a collapsed manual-key escape hatch where supported, and explicit Connect / Disconnect / Sign out actions</li> <li>Voice input moved to its own Settings → Voice page that only offers connected transcription-capable providers and preselects a default model. The composer's microphone button now appears only once a voice model is configured</li> <li>Sidebar sessions are always grouped by project, with pinned sessions leading each group and scheduled sessions marked by an inline clock. The Favorite action is now called Pin</li> <li>New, Schedule, and Customize each got their own labeled row below the logo. New starts a fresh task and puts your cursor straight in the composer</li> <li>Session search moved into a dialog behind the search icon in the logo row, and it now searches your full history instead of only the sessions already loaded in the sidebar</li> <li>Added suggested schedule templates to the Schedule page</li> <li>Add Provider opens a dialog instead of swapping out the page</li> <li>Desktop notifications are now a singl",
-      "source": {
-        "id": "gh-cline",
-        "name": "cline/cline Releases",
-        "tier": "A",
-        "kind": "feed",
-        "tags": [
-          "agent",
-          "coding",
-          "tool"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "gh-cline",
-          "name": "cline/cline Releases",
-          "tier": "A",
-          "kind": "feed",
-          "tags": [
-            "agent",
-            "coding",
-            "tool"
-          ]
-        }
-      ],
-      "category": "AI Coding",
-      "summary": "<ul> <li>Plugins, MCP, Skills, Rules, Hooks, and Tools are now one Customize hub with tabbed sections and live counts. Catalog-backed tabs show what you have installed followed by an inline Browse section, so installing something from the c",
-      "importance": 77,
-      "novelty": 87,
-      "relevance": 78,
-      "socialPotential": 62,
-      "sourceQuality": 78,
-      "confidence": 62,
-      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
-      "whatChanged": "Desktop v0.0.17",
-      "angles": [
-        "发生了什么：用最短篇幅解释「Desktop v0.0.17」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 60
-    },
-    {
-      "id": "r16w5rbl",
-      "title": "Students prefer Gemini over ChatGPT and Claude for AI essays in blind tests",
-      "url": "https://studyarena.com/blog/chatgpt-vs-claude-vs-gemini-college-essays-2026",
-      "publishedAt": "2026-08-26T03:23:50.000Z",
-      "description": "Hacker News: 13 points · 12 comments",
-      "source": {
-        "id": "hackernews-ai",
-        "name": "Hacker News · AI Tool Signals",
-        "tier": "B",
-        "kind": "hackernews",
-        "tags": [
-          "tool",
-          "startup",
-          "developer",
-          "community"
-        ]
-      },
-      "engagement": {
-        "score": 13,
-        "comments": 12
-      },
-      "relatedSources": [
-        {
-          "id": "hackernews-ai",
-          "name": "Hacker News · AI Tool Signals",
-          "tier": "B",
-          "kind": "hackernews",
-          "tags": [
-            "tool",
-            "startup",
-            "developer",
-            "community"
-          ]
-        }
-      ],
-      "category": "AI Coding",
-      "summary": "Hacker News: 13 points · 12 comments",
-      "importance": 69,
-      "novelty": 91,
-      "relevance": 71,
-      "socialPotential": 65,
-      "sourceQuality": 64,
-      "confidence": 62,
-      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
-      "whatChanged": "Students prefer Gemini over ChatGPT and Claude for AI essays in blind tests",
-      "angles": [
-        "发生了什么：用最短篇幅解释「Students prefer Gemini over ChatGPT and Claude for AI essays in blind tests」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 57
+      "radarScore": 94
     },
     {
       "id": "r1rxkkm1",
@@ -1285,6 +1364,7 @@
         ]
       },
       "engagement": null,
+      "isCurrentSignal": false,
       "relatedSources": [
         {
           "id": "gh-cline",
@@ -1298,325 +1378,24 @@
           ]
         }
       ],
-      "category": "AI Coding",
-      "summary": "<ul> <li>The first-launch \"Try ClinePass\" dialog no longer advertises the $4.99 first-month promo, which is ending</li> <li>The hub's event log is now capped at 64 MiB on disk. Events carrying full session snapshots could previously grow th",
-      "importance": 75,
-      "novelty": 77,
-      "relevance": 75,
-      "socialPotential": 63,
+      "category": "工具 / 网站",
+      "summary": "<ul> <li>The first-launch \"Try ClinePass\" dialog no longer advertises the $4.99 first-month promo, which is ending</li> <li>The hub's event log is now capped at 64 MiB on disk. Events carrying full session snapshots could previously grow the log to tens of gig",
+      "importance": 73,
+      "novelty": 80,
+      "relevance": 85,
+      "socialPotential": 75,
       "sourceQuality": 78,
-      "confidence": 62,
-      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
+      "practicality": 100,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "它可能直接降低某个任务的时间或门槛，适合快速试用后决定是否进入工具箱。",
       "whatChanged": "CLI v3.0.58",
       "angles": [
-        "发生了什么：用最短篇幅解释「CLI v3.0.58」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
+        "发现一个可能真能省时间的新工具：CLI v3.0.58",
+        "它替代了原来哪一步手工操作",
+        "免费版够不够用，值不值得长期留在工具箱"
       ],
-      "radarScore": 57
-    },
-    {
-      "id": "r1fgwqpl",
-      "title": "v1.17.0",
-      "url": "https://github.com/langgenius/dify/releases/tag/1.17.0",
-      "publishedAt": "2026-08-25T12:17:27.000Z",
-      "description": "<h2>New Features</h2> <p><strong>Agent: E2B Sandbox, Home Snapshots, and Skill Management</strong></p> <ul> <li><strong>E2B sandbox backend</strong>: agent shell/code execution can now run on <a href=\"https://e2b.dev\" rel=\"nofollow\">E2B</a> cloud sandboxes in addition to the local sandbox. Select the backend with <code>DIFY_AGENT_RUNTIME_BACKEND</code>; a new <code>docker-compose.e2b.yaml</code> ships the E2B stack, E2B traffic is authenticated, and the E2B template is synced on release (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4963662125\" data-permission-text=\"Title is private\" data-url=\"https://github.com/langgenius/dify/issues/39480\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/langgenius/dify/pull/39480/hovercard\" href=\"https://github.com/langgenius/dify/pull/39480\">#39480</a>, <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5001552227\" data-permission-text=\"Title is private\" data-url=\"https://github.com/langgenius/dify/issues/39705\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/langgenius/dify/pull/39705/hovercard\" href=\"https://github.com/langgenius/dify/pull/39705\">#39705</a>, <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5035839633\" data-permission-text=\"Title is private\" data-url=\"https://github.com/langgenius/dify/issues/39873\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/langgenius/dify/pull/39873/hovercard\" href=\"https://github.com/langgenius/dify/pull/39873\">#39873</a>, <a class=\"issue-link js-issue-link\" data-erro",
-      "source": {
-        "id": "gh-dify",
-        "name": "langgenius/dify Releases",
-        "tier": "A",
-        "kind": "feed",
-        "tags": [
-          "agent",
-          "workflow",
-          "tool",
-          "open-source"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "gh-dify",
-          "name": "langgenius/dify Releases",
-          "tier": "A",
-          "kind": "feed",
-          "tags": [
-            "agent",
-            "workflow",
-            "tool",
-            "open-source"
-          ]
-        }
-      ],
-      "category": "Agent",
-      "summary": "<h2>New Features</h2> <p><strong>Agent: E2B Sandbox, Home Snapshots, and Skill Management</strong></p> <ul> <li><strong>E2B sandbox backend</strong>: agent shell/code execution can now run on <a href=\"https://e2b.dev\" rel=\"nofollow\">E2B</a>",
-      "importance": 70,
-      "novelty": 78,
-      "relevance": 70,
-      "socialPotential": 61,
-      "sourceQuality": 78,
-      "confidence": 62,
-      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
-      "whatChanged": "v1.17.0",
-      "angles": [
-        "发生了什么：用最短篇幅解释「v1.17.0」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 55
-    },
-    {
-      "id": "r1xwj27b",
-      "title": "Release v0.59.0-nightly.20260826.g64b5b79a6",
-      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0-nightly.20260826.g64b5b79a6",
-      "publishedAt": "2026-08-26T01:07:54.000Z",
-      "description": "<h2>What's Changed</h2> <ul> <li>Changelog for v0.58.0-preview.0 by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gemini-cli-robot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/gemini-cli-robot\">@gemini-cli-robot</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5249203210\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/29082\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/29082/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/29082\">#29082</a></li> <li>chore(release): bump version to 0.59.0-nightly.20260825.g812f7a2bc by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gemini-cli-robot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/gemini-cli-robot\">@gemini-cli-robot</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5249318862\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/29083\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/29083/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/29083\">#29083</a></li> </ul> <p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/google-gemini/gemini-cli/compare/v0.56.0-nightly.20260825.g812f7a2bc...v",
-      "source": {
-        "id": "gh-gemini-cli",
-        "name": "google-gemini/gemini-cli Releases",
-        "tier": "S",
-        "kind": "feed",
-        "tags": [
-          "agent",
-          "coding",
-          "launch",
-          "tool"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "gh-gemini-cli",
-          "name": "google-gemini/gemini-cli Releases",
-          "tier": "S",
-          "kind": "feed",
-          "tags": [
-            "agent",
-            "coding",
-            "launch",
-            "tool"
-          ]
-        }
-      ],
-      "category": "AI Coding",
-      "summary": "<h2>What's Changed</h2> <ul> <li>Changelog for v0.58.0-preview.0 by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gemini-cli-robot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimen",
-      "importance": 71,
-      "novelty": 80,
-      "relevance": 61,
-      "socialPotential": 53,
-      "sourceQuality": 90,
-      "confidence": 62,
-      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
-      "whatChanged": "Release v0.59.0-nightly.20260826.g64b5b79a6",
-      "angles": [
-        "发生了什么：用最短篇幅解释「Release v0.59.0-nightly.20260826.g64b5b79a6」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 54
-    },
-    {
-      "id": "r8vx5jc",
-      "title": "Release v0.57.0",
-      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.57.0",
-      "publishedAt": "2026-08-25T18:37:14.000Z",
-      "description": "<h2>What's Changed</h2> <ul> <li>fix(core): dynamically resolve Cloud Workstations proxy redirect URI for OAuth flows by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/amelidev/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/amelidev\">@amelidev</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5065028989\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28688\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28688/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28688\">#28688</a></li> <li>fix(core): resolve swallowed directory mismatch in IDE connections by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/amelidev/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/amelidev\">@amelidev</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5093479506\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28729\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28729/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28729\">#28729</a></li> <li>Feat/eval validate by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/ved015/hovercard\" data-octo-click=\"hoverc",
-      "source": {
-        "id": "gh-gemini-cli",
-        "name": "google-gemini/gemini-cli Releases",
-        "tier": "S",
-        "kind": "feed",
-        "tags": [
-          "agent",
-          "coding",
-          "launch",
-          "tool"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "gh-gemini-cli",
-          "name": "google-gemini/gemini-cli Releases",
-          "tier": "S",
-          "kind": "feed",
-          "tags": [
-            "agent",
-            "coding",
-            "launch",
-            "tool"
-          ]
-        }
-      ],
-      "category": "AI Coding",
-      "summary": "<h2>What's Changed</h2> <ul> <li>fix(core): dynamically resolve Cloud Workstations proxy redirect URI for OAuth flows by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/amelidev/hovercard\" data-octo",
-      "importance": 71,
-      "novelty": 77,
-      "relevance": 61,
-      "socialPotential": 53,
-      "sourceQuality": 90,
-      "confidence": 62,
-      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
-      "whatChanged": "Release v0.57.0",
-      "angles": [
-        "发生了什么：用最短篇幅解释「Release v0.57.0」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 54
-    },
-    {
-      "id": "r1olsg20",
-      "title": "Agentic Context Management: Memory and Cost as Architecture Problems",
-      "url": "https://arxiv.org/abs/2607.21503",
-      "publishedAt": "2026-08-26T02:35:25.000Z",
-      "description": "Hacker News: 15 points · 4 comments",
-      "source": {
-        "id": "hackernews-ai",
-        "name": "Hacker News · AI Tool Signals",
-        "tier": "B",
-        "kind": "hackernews",
-        "tags": [
-          "tool",
-          "startup",
-          "developer",
-          "community"
-        ]
-      },
-      "engagement": {
-        "score": 15,
-        "comments": 4
-      },
-      "relatedSources": [
-        {
-          "id": "hackernews-ai",
-          "name": "Hacker News · AI Tool Signals",
-          "tier": "B",
-          "kind": "hackernews",
-          "tags": [
-            "tool",
-            "startup",
-            "developer",
-            "community"
-          ]
-        }
-      ],
-      "category": "AI Coding",
-      "summary": "Hacker News: 15 points · 4 comments",
-      "importance": 61,
-      "novelty": 85,
-      "relevance": 64,
-      "socialPotential": 60,
-      "sourceQuality": 64,
-      "confidence": 62,
-      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
-      "whatChanged": "Agentic Context Management: Memory and Cost as Architecture Problems",
-      "angles": [
-        "发生了什么：用最短篇幅解释「Agentic Context Management: Memory and Cost as Architecture Problems」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 53
-    },
-    {
-      "id": "rsv9ob2",
-      "title": "Release v0.58.0-preview.0",
-      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.58.0-preview.0",
-      "publishedAt": "2026-08-25T18:22:01.000Z",
-      "description": "<h2>What's Changed</h2> <ul> <li>Changelog for v0.57.0-preview.0 by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gemini-cli-robot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/gemini-cli-robot\">@gemini-cli-robot</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5196337316\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28918\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28918/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28918\">#28918</a></li> <li>fix(core): ensure consistent symlink evaluation in ignore path handling by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/luisfelipe-alt/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/luisfelipe-alt\">@luisfelipe-alt</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5195740976\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28915\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28915/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28915\">#28915</a></li> <li>refactor(core): remove eslint-disable and type-asserts from shellExecutionService by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hoverc",
-      "source": {
-        "id": "gh-gemini-cli",
-        "name": "google-gemini/gemini-cli Releases",
-        "tier": "S",
-        "kind": "feed",
-        "tags": [
-          "agent",
-          "coding",
-          "launch",
-          "tool"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "gh-gemini-cli",
-          "name": "google-gemini/gemini-cli Releases",
-          "tier": "S",
-          "kind": "feed",
-          "tags": [
-            "agent",
-            "coding",
-            "launch",
-            "tool"
-          ]
-        }
-      ],
-      "category": "AI Coding",
-      "summary": "<h2>What's Changed</h2> <ul> <li>Changelog for v0.57.0-preview.0 by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gemini-cli-robot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimen",
-      "importance": 71,
-      "novelty": 76,
-      "relevance": 61,
-      "socialPotential": 53,
-      "sourceQuality": 90,
-      "confidence": 62,
-      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
-      "whatChanged": "Release v0.58.0-preview.0",
-      "angles": [
-        "发生了什么：用最短篇幅解释「Release v0.58.0-preview.0」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 53
-    },
-    {
-      "id": "r1o0cn1t",
-      "title": "‘The world seems to be ready’: An interview with OpenAI head of product Thibault Sottiaux",
-      "url": "https://techcrunch.com/2026/08/25/the-world-seems-to-be-ready-an-interview-with-openai-head-of-product-thibault-sottiaux/",
-      "publishedAt": "2026-08-25T12:00:00.000Z",
-      "description": "TechCrunch talks agents, UX, and reporting to Greg Brockman with OpenAI's head of product.",
-      "source": {
-        "id": "techcrunch-ai",
-        "name": "TechCrunch AI",
-        "tier": "A",
-        "kind": "feed",
-        "tags": [
-          "launch",
-          "product",
-          "startup",
-          "tool"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "techcrunch-ai",
-          "name": "TechCrunch AI",
-          "tier": "A",
-          "kind": "feed",
-          "tags": [
-            "launch",
-            "product",
-            "startup",
-            "tool"
-          ]
-        }
-      ],
-      "category": "Agent",
-      "summary": "TechCrunch talks agents, UX, and reporting to Greg Brockman with OpenAI's head of product.",
-      "importance": 64,
-      "novelty": 78,
-      "relevance": 66,
-      "socialPotential": 55,
-      "sourceQuality": 78,
-      "confidence": 62,
-      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
-      "whatChanged": "‘The world seems to be ready’: An interview with OpenAI head of product Thibault Sottiaux",
-      "angles": [
-        "发生了什么：用最短篇幅解释「‘The world seems to be ready’: An interview with OpenAI head of product Thibault Sottiaux」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 53
+      "radarScore": 93
     },
     {
       "id": "r1we5x4c",
@@ -1636,6 +1415,7 @@
         ]
       },
       "engagement": null,
+      "isCurrentSignal": false,
       "relatedSources": [
         {
           "id": "gh-cline",
@@ -1649,120 +1429,441 @@
           ]
         }
       ],
-      "category": "AI Coding",
-      "summary": "<ul> <li>The hub's durable event log is now capped at 64 MiB on disk. Event envelopes carrying full session snapshots could previously accumulate to tens of gigabytes, since row and time retention alone did not bound file size and deletes n",
-      "importance": 67,
-      "novelty": 72,
-      "relevance": 68,
-      "socialPotential": 58,
+      "category": "工具 / 网站",
+      "summary": "<ul> <li>The hub's durable event log is now capped at 64 MiB on disk. Event envelopes carrying full session snapshots could previously accumulate to tens of gigabytes, since row and time retention alone did not bound file size and deletes never shrink a SQLite",
+      "importance": 66,
+      "novelty": 76,
+      "relevance": 84,
+      "socialPotential": 76,
       "sourceQuality": 78,
-      "confidence": 62,
-      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
+      "practicality": 100,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "它可能直接降低某个任务的时间或门槛，适合快速试用后决定是否进入工具箱。",
       "whatChanged": "SDK v0.0.79",
       "angles": [
-        "发生了什么：用最短篇幅解释「SDK v0.0.79」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
+        "发现一个可能真能省时间的新工具：SDK v0.0.79",
+        "它替代了原来哪一步手工操作",
+        "免费版够不够用，值不值得长期留在工具箱"
       ],
-      "radarScore": 53
+      "radarScore": 91
     },
     {
-      "id": "rqcdb0d",
-      "title": "Release v0.56.0-nightly.20260825.g812f7a2bc",
-      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0-nightly.20260825.g812f7a2bc",
-      "publishedAt": "2026-08-25T01:08:28.000Z",
-      "description": "<h2>What's Changed</h2> <ul> <li>fix(a2a-server): clear stale cancellation error on new message turns by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/amelidev/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/amelidev\">@amelidev</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5208930620\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28940\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28940/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28940\">#28940</a></li> <li>fix(core): declare top-level safety checkers in write policy configuration by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/luisfelipe-alt/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/luisfelipe-alt\">@luisfelipe-alt</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5221732205\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28961\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28961/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28961\">#28961</a></li> <li>(FIX) history rollback and retry nudge optimizations by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/use",
+      "id": "r1g4xbph",
+      "title": "v0.11.1",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.11.1",
+      "publishedAt": "2026-08-25T21:17:57.000Z",
+      "description": "<h3>Added</h3> <ul> <li>🚦 <strong>Human in the loop tool approval.</strong> Where an administrator has turned it on, you can switch a conversation from letting tools run freely to being asked first, so a model that wants to use a tool stops and waits for you to allow or deny it, one call at a time in a saved conversation, by button or by keyboard shortcut, with your choice remembered for this conversation and for future ones, switching back to running freely releasing anything already waiting, and automations, channel replies, and temporary chats unaffected. <a href=\"https://github.com/open-webui/open-webui/commit/7d99b2716a0472b2100b3a71825d8eb3fcbbe877\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/ec36972c2b5a8d48713f1a240b0ed305e535b4cc\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/653562d660398c32a9a193450bbbee300d7195c3\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/fa94a5ab2431edba064150651a14dd4992ef29e8\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/55c202e841e76cd69679206cd0ecb4a65b039ea4\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/30f82788bc75e6965da3766e3bf43840dd971eed\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/bbfdbd59f29e246db1d8b5c2401bc7b11aa32c99\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/7fc5fa1ff3f6cd6f0efcbf847064ca8d21620ba6\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/3eb65f47151af4fb4ccfaf33d6e77154546e7259\">Commit</a>, <a href=\"https://github.com/open-we",
       "source": {
-        "id": "gh-gemini-cli",
-        "name": "google-gemini/gemini-cli Releases",
-        "tier": "S",
-        "kind": "feed",
-        "tags": [
-          "agent",
-          "coding",
-          "launch",
-          "tool"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "gh-gemini-cli",
-          "name": "google-gemini/gemini-cli Releases",
-          "tier": "S",
-          "kind": "feed",
-          "tags": [
-            "agent",
-            "coding",
-            "launch",
-            "tool"
-          ]
-        }
-      ],
-      "category": "AI Coding",
-      "summary": "<h2>What's Changed</h2> <ul> <li>fix(a2a-server): clear stale cancellation error on new message turns by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/amelidev/hovercard\" data-octo-click=\"hovercar",
-      "importance": 71,
-      "novelty": 68,
-      "relevance": 61,
-      "socialPotential": 53,
-      "sourceQuality": 90,
-      "confidence": 62,
-      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
-      "whatChanged": "Release v0.56.0-nightly.20260825.g812f7a2bc",
-      "angles": [
-        "发生了什么：用最短篇幅解释「Release v0.56.0-nightly.20260825.g812f7a2bc」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 52
-    },
-    {
-      "id": "r1m1b0lb",
-      "title": "v0.33.0",
-      "url": "https://github.com/ollama/ollama/releases/tag/v0.33.0",
-      "publishedAt": "2026-08-26T02:09:34.000Z",
-      "description": "<h2>What's Changed</h2> <h3>Claude Desktop</h3> <p>Developers can now easily configure Claude Desktop to seamlessly work with Ollama as a third-party gateway provider.</p> <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://private-user-images.githubusercontent.com/29360864/641249150-c02fd93b-f599-40a9-83c3-d0555c0ac182.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODc3MjM1NTIsIm5iZiI6MTc4NzcyMzI1MiwicGF0aCI6Ii8yOTM2MDg2NC82NDEyNDkxNTAtYzAyZmQ5M2ItZjU5OS00MGE5LTgzYzMtZDA1NTVjMGFjMTgyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwODI2VDA1NDczMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTllZGRlZDUzMDVkZTllY2ZmMjYxYWU4ZTBhOTcxZTZkNjdhZmMxNThlY2M0ZmE3ZWE5MDY5ODc1ZjdlZTE5MDMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.zrZnaqkQhVMvsJ-c5-h6DrY5-T0RpefyIQRHPRgUblU\"><img width=\"1298\" height=\"780\" alt=\"image\" src=\"https://private-user-images.githubusercontent.com/29360864/641249150-c02fd93b-f599-40a9-83c3-d0555c0ac182.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODc3MjM1NTIsIm5iZiI6MTc4NzcyMzI1MiwicGF0aCI6Ii8yOTM2MDg2NC82NDEyNDkxNTAtYzAyZmQ5M2ItZjU5OS00MGE5LTgzYzMtZDA1NTVjMGFjMTgyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MjYlMkZ1cy1lYXN0LTElM",
-      "source": {
-        "id": "gh-ollama",
-        "name": "ollama/ollama Releases",
+        "id": "gh-open-webui",
+        "name": "open-webui/open-webui Releases",
         "tier": "A",
         "kind": "feed",
         "tags": [
-          "model",
-          "local-ai",
-          "tool"
+          "tool",
+          "product",
+          "open-source"
         ]
       },
       "engagement": null,
+      "isCurrentSignal": false,
       "relatedSources": [
         {
-          "id": "gh-ollama",
-          "name": "ollama/ollama Releases",
+          "id": "gh-open-webui",
+          "name": "open-webui/open-webui Releases",
           "tier": "A",
           "kind": "feed",
           "tags": [
-            "model",
-            "local-ai",
-            "tool"
+            "tool",
+            "product",
+            "open-source"
           ]
         }
       ],
-      "category": "AI Coding",
-      "summary": "<h2>What's Changed</h2> <h3>Claude Desktop</h3> <p>Developers can now easily configure Claude Desktop to seamlessly work with Ollama as a third-party gateway provider.</p> <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://private-u",
-      "importance": 59,
-      "novelty": 80,
-      "relevance": 61,
-      "socialPotential": 53,
+      "category": "效率 / 工作流",
+      "summary": "<h3>Added</h3> <ul> <li>🚦 <strong>Human in the loop tool approval.</strong> Where an administrator has turned it on, you can switch a conversation from letting tools run freely to being asked first, so a model that wants to use a tool stops and waits for you ",
+      "importance": 49,
+      "novelty": 79,
+      "relevance": 80,
+      "socialPotential": 78,
       "sourceQuality": 78,
-      "confidence": 62,
-      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
-      "whatChanged": "v0.33.0",
+      "practicality": 100,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "重点不是技术原理，而是它能否减少重复操作、缩短流程或提升个人产出。",
+      "whatChanged": "v0.11.1",
       "angles": [
-        "发生了什么：用最短篇幅解释「v0.33.0」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
+        "我又找到一个能少做几步的工作流：v0.11.1",
+        "把它放进自己的日常流程，能省下多少时间",
+        "哪些人最适合直接抄这个用法"
       ],
-      "radarScore": 51
+      "radarScore": 87
+    },
+    {
+      "id": "rcfds8c",
+      "title": "5 ways to upgrade your home decor with Google Search",
+      "url": "https://blog.google/products-and-platforms/products/search/home-decor-tips/",
+      "publishedAt": "2026-08-25T16:00:00.000Z",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Home_Decor.max-600x600.format-webp.webp\">Learn how to use Google Search tools to find home decor inspiration, shop for furniture, and tackle DIY projects.",
+      "source": {
+        "id": "google-ai-blog",
+        "name": "Google AI Blog",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "launch",
+          "model",
+          "agent",
+          "product"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "google-ai-blog",
+          "name": "Google AI Blog",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "launch",
+            "model",
+            "agent",
+            "product"
+          ]
+        }
+      ],
+      "category": "工具 / 网站",
+      "summary": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Home_Decor.max-600x600.format-webp.webp\">Learn how to use Google Search tools to find home decor inspiration, shop for furniture, and tackle DIY projects.",
+      "importance": 56,
+      "novelty": 76,
+      "relevance": 68,
+      "socialPotential": 66,
+      "sourceQuality": 90,
+      "practicality": 98,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "它可能直接降低某个任务的时间或门槛，适合快速试用后决定是否进入工具箱。",
+      "whatChanged": "5 ways to upgrade your home decor with Google Search",
+      "angles": [
+        "发现一个可能真能省时间的新工具：5 ways to upgrade your home decor with Google Search",
+        "它替代了原来哪一步手工操作",
+        "免费版够不够用，值不值得长期留在工具箱"
+      ],
+      "radarScore": 85
+    },
+    {
+      "id": "rxhk8b4",
+      "title": "session-indexer",
+      "url": "https://www.producthunt.com/products/session-indexer",
+      "publishedAt": "2026-08-24T09:32:05.000Z",
+      "description": "<p> Semantic search over your own Claude Code session history </p> <p> <a href=\"https://www.producthunt.com/products/session-indexer?utm_campaign=producthunt-atom-posts-feed&amp;utm_medium=rss-feed&amp;utm_source=producthunt-atom-posts-feed\">Discussion</a> | <a href=\"https://www.producthunt.com/r/p/1230655?app_id=339\">Link</a> </p>",
+      "source": {
+        "id": "producthunt",
+        "name": "Product Hunt",
+        "tier": "A",
+        "kind": "feed",
+        "tags": [
+          "tool",
+          "website",
+          "product",
+          "productivity",
+          "discovery"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "producthunt",
+          "name": "Product Hunt",
+          "tier": "A",
+          "kind": "feed",
+          "tags": [
+            "tool",
+            "website",
+            "product",
+            "productivity",
+            "discovery"
+          ]
+        }
+      ],
+      "category": "效率 / 工作流",
+      "summary": "<p> Semantic search over your own Claude Code session history </p> <p> <a href=\"https://www.producthunt.com/products/session-indexer?utm_campaign=producthunt-atom-posts-feed&amp;utm_medium=rss-feed&amp;utm_source=producthunt-atom-posts-feed\">Discussion</a> | <",
+      "importance": 60,
+      "novelty": 70,
+      "relevance": 75,
+      "socialPotential": 70,
+      "sourceQuality": 78,
+      "practicality": 99,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "重点不是技术原理，而是它能否减少重复操作、缩短流程或提升个人产出。",
+      "whatChanged": "session-indexer",
+      "angles": [
+        "我又找到一个能少做几步的工作流：session-indexer",
+        "把它放进自己的日常流程，能省下多少时间",
+        "哪些人最适合直接抄这个用法"
+      ],
+      "radarScore": 85
+    },
+    {
+      "id": "r16w5rbl",
+      "title": "Students prefer Gemini over ChatGPT and Claude for AI essays in blind tests",
+      "url": "https://studyarena.com/blog/chatgpt-vs-claude-vs-gemini-college-essays-2026",
+      "publishedAt": "2026-08-26T03:23:50.000Z",
+      "description": "Hacker News · 15 points · 15 comments",
+      "source": {
+        "id": "hackernews-ai",
+        "name": "Hacker News · AI Tool Signals",
+        "tier": "B",
+        "kind": "hackernews",
+        "tags": [
+          "tool",
+          "startup",
+          "developer",
+          "community"
+        ]
+      },
+      "engagement": {
+        "score": 15,
+        "comments": 15
+      },
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "hackernews-ai",
+          "name": "Hacker News · AI Tool Signals",
+          "tier": "B",
+          "kind": "hackernews",
+          "tags": [
+            "tool",
+            "startup",
+            "developer",
+            "community"
+          ]
+        }
+      ],
+      "category": "工具 / 网站",
+      "summary": "Hacker News · 15 points · 15 comments",
+      "importance": 67,
+      "novelty": 98,
+      "relevance": 66,
+      "socialPotential": 66,
+      "sourceQuality": 64,
+      "practicality": 77,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "它可能直接降低某个任务的时间或门槛，适合快速试用后决定是否进入工具箱。",
+      "whatChanged": "Students prefer Gemini over ChatGPT and Claude for AI essays in blind tests",
+      "angles": [
+        "发现一个可能真能省时间的新工具：Students prefer Gemini over ChatGPT and Claude for AI essays in blind tests",
+        "它替代了原来哪一步手工操作",
+        "免费版够不够用，值不值得长期留在工具箱"
+      ],
+      "radarScore": 84
+    },
+    {
+      "id": "r39fr5q",
+      "title": "SPO++: Stream-Aligned Policy Optimization for Asynchronous Agentic RL",
+      "url": "https://arxiv.org/abs/2608.24870v1",
+      "publishedAt": "2026-08-25T17:52:19.000Z",
+      "description": "Group-relative reinforcement learning waits for sibling rollouts of the same prompt, which is costly for long and variable tool-use trajectories. Single-stream Policy Optimization (SPO) removes this dependency with a persistent prompt-level value estimate, but its recipe whitens one advantage per trajectory before optimizing a token-mean actor loss. We show that trajectory centering generally does not center the token-weighted quantity consumed by the actor, and fix the mismatch by standardizing terminal-outcome advantages under the action-token measure. We additionally organize prompt evidence by the policy event that generated it rather than learner receipt order. Across matched runs on ALFWorld at two model scales and on Math-TIR, SPO++ improves online learning efficiency over SPO. A paired ablation identifies action-token-measure normalization as the strongest tested component.",
+      "source": {
+        "id": "arxiv-cs-ai",
+        "name": "arXiv cs.AI · Low Weight",
+        "tier": "B",
+        "kind": "arxiv",
+        "tags": [
+          "research"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "arxiv-cs-ai",
+          "name": "arXiv cs.AI · Low Weight",
+          "tier": "B",
+          "kind": "arxiv",
+          "tags": [
+            "research"
+          ]
+        }
+      ],
+      "category": "工具 / 网站",
+      "summary": "Group-relative reinforcement learning waits for sibling rollouts of the same prompt, which is costly for long and variable tool-use trajectories. Single-stream Policy Optimization (SPO) removes this dependency with a persistent prompt-level value estimate, but",
+      "importance": 60,
+      "novelty": 85,
+      "relevance": 70,
+      "socialPotential": 64,
+      "sourceQuality": 64,
+      "practicality": 90,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "它可能直接降低某个任务的时间或门槛，适合快速试用后决定是否进入工具箱。",
+      "whatChanged": "SPO++: Stream-Aligned Policy Optimization for Asynchronous Agentic RL",
+      "angles": [
+        "发现一个可能真能省时间的新工具：SPO++: Stream-Aligned Policy Optimization for Asynchronous Agentic RL",
+        "它替代了原来哪一步手工操作",
+        "免费版够不够用，值不值得长期留在工具箱"
+      ],
+      "radarScore": 84
+    },
+    {
+      "id": "r1mjtfad",
+      "title": "v1.16.1 - Bug Fixes and Security Enhancements",
+      "url": "https://github.com/langgenius/dify/releases/tag/1.16.1",
+      "publishedAt": "2026-08-25T12:17:47.000Z",
+      "description": "<h2>What's Changed</h2> <h3>New Features</h3> <p><strong>Tool Multi-Select Input</strong></p> <ul> <li>Workflow tool nodes now support multi-select dropdown inputs, allowing users to choose multiple values from a predefined list when configuring tool parameters. (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4935910649\" data-permission-text=\"Title is private\" data-url=\"https://github.com/langgenius/dify/issues/39346\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/langgenius/dify/pull/39346/hovercard\" href=\"https://github.com/langgenius/dify/pull/39346\">#39346</a>)</li> </ul> <p><strong>Workflow Node Locator</strong></p> <ul> <li>You can now click a node_id in workflow run logs or error messages to locate and highlight the corresponding node in the workflow editor canvas. (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4773369324\" data-permission-text=\"Title is private\" data-url=\"https://github.com/langgenius/dify/issues/38187\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/langgenius/dify/pull/38187/hovercard\" href=\"https://github.com/langgenius/dify/pull/38187\">#38187</a>)</li> </ul> <p><strong>Workflow Block Selector Improvements</strong></p> <ul> <li>The block selector panel now features improved keyboard navigation, category previews, and a more intuitive search experience when adding nodes to workflows. (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4917623861\" data-permission-text=\"Title is private\" data-url=\"https://github.com/langgenius/",
+      "source": {
+        "id": "gh-dify",
+        "name": "langgenius/dify Releases",
+        "tier": "A",
+        "kind": "feed",
+        "tags": [
+          "agent",
+          "workflow",
+          "tool",
+          "open-source"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "gh-dify",
+          "name": "langgenius/dify Releases",
+          "tier": "A",
+          "kind": "feed",
+          "tags": [
+            "agent",
+            "workflow",
+            "tool",
+            "open-source"
+          ]
+        }
+      ],
+      "category": "效率 / 工作流",
+      "summary": "<h2>What's Changed</h2> <h3>New Features</h3> <p><strong>Tool Multi-Select Input</strong></p> <ul> <li>Workflow tool nodes now support multi-select dropdown inputs, allowing users to choose multiple values from a predefined list when configuring tool parameter",
+      "importance": 52,
+      "novelty": 75,
+      "relevance": 72,
+      "socialPotential": 66,
+      "sourceQuality": 78,
+      "practicality": 98,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "重点不是技术原理，而是它能否减少重复操作、缩短流程或提升个人产出。",
+      "whatChanged": "v1.16.1 - Bug Fixes and Security Enhancements",
+      "angles": [
+        "我又找到一个能少做几步的工作流：v1.16.1 - Bug Fixes and Security Enhancements",
+        "把它放进自己的日常流程，能省下多少时间",
+        "哪些人最适合直接抄这个用法"
+      ],
+      "radarScore": 83
+    },
+    {
+      "id": "r1gzis5z",
+      "title": "Granite 4.2 LLMs: How They're Built",
+      "url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+      "publishedAt": "2026-08-25T15:14:14.000Z",
+      "description": "",
+      "source": {
+        "id": "huggingface-blog",
+        "name": "Hugging Face Blog",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "model",
+          "open-source",
+          "launch"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "huggingface-blog",
+          "name": "Hugging Face Blog",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "model",
+            "open-source",
+            "launch"
+          ]
+        }
+      ],
+      "category": "模型 / Agent 上新",
+      "summary": "Hugging Face Blog 出现了一个值得进一步确认的新信号。",
+      "importance": 56,
+      "novelty": 76,
+      "relevance": 48,
+      "socialPotential": 42,
+      "sourceQuality": 90,
+      "practicality": 48,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "这是能力边界或 Agent 使用方式的直接变化，优先判断它能不能马上改变现有工作流。",
+      "whatChanged": "Granite 4.2 LLMs: How They're Built",
+      "angles": [
+        "发生了什么：Granite 4.2 LLMs: How They're Built",
+        "这次变化最值得普通用户注意的是什么",
+        "我会不会把它加入自己的 AI 工作流"
+      ],
+      "radarScore": 67
+    },
+    {
+      "id": "rylzopw",
+      "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
+      "url": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing",
+      "publishedAt": "2026-08-25T11:39:24.000Z",
+      "description": "",
+      "source": {
+        "id": "huggingface-blog",
+        "name": "Hugging Face Blog",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "model",
+          "open-source",
+          "launch"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "huggingface-blog",
+          "name": "Hugging Face Blog",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "model",
+            "open-source",
+            "launch"
+          ]
+        }
+      ],
+      "category": "模型 / Agent 上新",
+      "summary": "Hugging Face Blog 出现了一个值得进一步确认的新信号。",
+      "importance": 56,
+      "novelty": 74,
+      "relevance": 48,
+      "socialPotential": 42,
+      "sourceQuality": 90,
+      "practicality": 48,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "这是能力边界或 Agent 使用方式的直接变化，优先判断它能不能马上改变现有工作流。",
+      "whatChanged": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
+      "angles": [
+        "发生了什么：Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
+        "这次变化最值得普通用户注意的是什么",
+        "我会不会把它加入自己的 AI 工作流"
+      ],
+      "radarScore": 67
     }
   ]
 }
