@@ -37,7 +37,7 @@
   {"id":"fear-greed","name":"Crypto Fear & Greed","tier":"B","kind":"fear_greed","url":"https://api.alternative.me/fng/?limit=2&format=json","tags":["finance","crypto","market","signal"],"enabled":true},
   {"id":"wealth-common-sense","name":"A Wealth of Common Sense","tier":"A","kind":"feed","url":"https://awealthofcommonsense.com/feed/","tags":["finance","stocks","tip","investing"],"enabled":true},
 
-  {"id":"arxiv-cs-ai","name":"arXiv cs.AI · Low Weight","tier":"B","kind":"arxiv","query":"cat:cs.AI","tags":["research"],"enabled":true},
+  {"id":"arxiv-cs-ai","name":"arXiv cs.AI · Low Weight","tier":"B","kind":"arxiv","query":"cat:cs.AI","tags":["research"],"enabled":false},
   {"id":"deepmind-blog","name":"Google DeepMind Research · Low Weight","tier":"B","kind":"feed","url":"https://deepmind.google/blog/rss.xml","tags":["research","model"],"enabled":true},
 
   {"id":"x-karpathy","name":"@karpathy","tier":"A","kind":"manual","url":"https://x.com/karpathy","tags":["x-watchlist","coding","model","agent"],"note":"等待接入 X 官方 API","enabled":true},
