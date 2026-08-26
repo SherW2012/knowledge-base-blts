@@ -1,6 +1,12 @@
 name: Update AI intelligence radar
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "radar/**"
+      - "scripts/radar.mjs"
+      - ".github/workflows/radar.yml"
   schedule:
     - cron: "30 23 * * *"
   workflow_dispatch:
