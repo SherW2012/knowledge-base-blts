@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "status": "ok",
-  "generatedAt": "2026-08-26T05:53:13.060Z",
+  "generatedAt": "2026-08-26T05:53:54.674Z",
   "date": "2026-08-26",
   "timezone": "Asia/Shanghai",
   "focus": "launches-tools-skills-productivity-markets",
@@ -877,7 +877,7 @@
       "id": "rr7p30n",
       "title": "freestylefly/awesome-gpt-image-2 — Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新",
       "url": "https://github.com/freestylefly/awesome-gpt-image-2",
-      "publishedAt": "2026-08-26T05:53:13.060Z",
+      "publishedAt": "2026-08-26T05:53:54.674Z",
       "description": "GitHub Trending · 1698 stars today · Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
       "source": {
         "id": "gh-trending",
@@ -934,7 +934,7 @@
       "id": "r1ne60iz",
       "title": "Shubhamsaboo/awesome-llm-apps — Star Shubhamsaboo / awesome-llm-apps 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
       "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
-      "publishedAt": "2026-08-26T05:53:13.060Z",
+      "publishedAt": "2026-08-26T05:53:54.674Z",
       "description": "GitHub Trending · 161 stars today · Star Shubhamsaboo / awesome-llm-apps 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
       "source": {
         "id": "gh-trending",
@@ -982,6 +982,110 @@
       "whatChanged": "Shubhamsaboo/awesome-llm-apps — Star Shubhamsaboo / awesome-llm-apps 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
       "angles": [
         "今天 GitHub 上冒出来一个值得试的项目：Shubhamsaboo/awesome-llm-apps — Star Shubhamsaboo / awesome-llm-apps 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
+        "它解决的具体麻烦是什么，5 分钟能不能跑通",
+        "有没有可能变成自己的 Skill / 自动化工作流"
+      ],
+      "radarScore": 100
+    },
+    {
+      "id": "r8v5jg8",
+      "title": "GitHub Copilot app Customize tab is generally available",
+      "url": "https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available",
+      "publishedAt": "2026-08-25T20:05:26.000Z",
+      "description": "GitHub Copilot is more useful when it works with the tools, knowledge, and workflows your team already relies on. The new Customize tab in the GitHub Copilot app brings MCP servers, plugins, skills, and canvases together in one place. Explore featured customizations, browse by type, and find new ways to tailor Copilot to how you and your team work. With the Customize tab, you can: Discover more ways to customize Copilot across MCP servers, plugins, skills, and canvases. Start with featured customizations selected from each section. Find MCP servers faster by exploring trending options and browsing by category. Bring the tools your team uses into Copilot Featured canvases help you move from understanding work to acting on it while keeping the relevant context visible. Delegate backlog work from Azure DevOps Triage issues, prioritize backlogs, assign follow-ups, and hand work to Copilot to investigate, implement, or prepare for review. Explore every type of customization The Featured view brings selected customizations from across the GitHub Copilot app into one place, giving you a simpler starting point when you do not already know which MCP server, plugin, skill, or canvas you need. You can also browse dedicated sections for each type of customization to find options that fit the way you work. Get started Open the GitHub Copilot app and select Customize to explore featured customizations or browse by type. Install the GitHub Copilot app . The post GitHub Copilot app Customize tab is generally available appeared first on The GitHub Blog .",
+      "source": {
+        "id": "github-changelog",
+        "name": "GitHub Changelog",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "github",
+          "tool",
+          "productivity",
+          "coding"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "github-changelog",
+          "name": "GitHub Changelog",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "github",
+            "tool",
+            "productivity",
+            "coding"
+          ]
+        }
+      ],
+      "category": "Skill / GitHub",
+      "summary": "GitHub Copilot is more useful when it works with the tools, knowledge, and workflows your team already relies on. The new Customize tab in the GitHub Copilot app brings MCP servers, plugins, skills, and canvases together in one place. Explore featured customiz",
+      "importance": 90,
+      "novelty": 94,
+      "relevance": 96,
+      "socialPotential": 86,
+      "sourceQuality": 90,
+      "practicality": 100,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
+      "whatChanged": "GitHub Copilot app Customize tab is generally available",
+      "angles": [
+        "今天 GitHub 上冒出来一个值得试的项目：GitHub Copilot app Customize tab is generally available",
+        "它解决的具体麻烦是什么，5 分钟能不能跑通",
+        "有没有可能变成自己的 Skill / 自动化工作流"
+      ],
+      "radarScore": 100
+    },
+    {
+      "id": "r17k12t1",
+      "title": "Desktop v0.0.17",
+      "url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.17",
+      "publishedAt": "2026-08-25T09:06:36.000Z",
+      "description": "<ul> <li>Plugins, MCP, Skills, Rules, Hooks, and Tools are now one Customize hub with tabbed sections and live counts. Catalog-backed tabs show what you have installed followed by an inline Browse section, so installing something from the catalog immediately appears above — the separate Marketplace page is gone</li> <li>Redesigned the Models page: providers are grouped into Connected, Popular, and All with their auth kind and configuration status instead of per-row toggles. OAuth providers now offer a browser sign-in rather than an API key field, with a collapsed manual-key escape hatch where supported, and explicit Connect / Disconnect / Sign out actions</li> <li>Voice input moved to its own Settings → Voice page that only offers connected transcription-capable providers and preselects a default model. The composer's microphone button now appears only once a voice model is configured</li> <li>Sidebar sessions are always grouped by project, with pinned sessions leading each group and scheduled sessions marked by an inline clock. The Favorite action is now called Pin</li> <li>New, Schedule, and Customize each got their own labeled row below the logo. New starts a fresh task and puts your cursor straight in the composer</li> <li>Session search moved into a dialog behind the search icon in the logo row, and it now searches your full history instead of only the sessions already loaded in the sidebar</li> <li>Added suggested schedule templates to the Schedule page</li> <li>Add Provider opens a dialog instead of swapping out the page</li> <li>Desktop notifications are now a singl",
+      "source": {
+        "id": "gh-cline",
+        "name": "cline/cline Releases",
+        "tier": "A",
+        "kind": "feed",
+        "tags": [
+          "agent",
+          "coding",
+          "tool"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "gh-cline",
+          "name": "cline/cline Releases",
+          "tier": "A",
+          "kind": "feed",
+          "tags": [
+            "agent",
+            "coding",
+            "tool"
+          ]
+        }
+      ],
+      "category": "Skill / GitHub",
+      "summary": "<ul> <li>Plugins, MCP, Skills, Rules, Hooks, and Tools are now one Customize hub with tabbed sections and live counts. Catalog-backed tabs show what you have installed followed by an inline Browse section, so installing something from the catalog immediately a",
+      "importance": 74,
+      "novelty": 89,
+      "relevance": 100,
+      "socialPotential": 100,
+      "sourceQuality": 78,
+      "practicality": 100,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
+      "whatChanged": "Desktop v0.0.17",
+      "angles": [
+        "今天 GitHub 上冒出来一个值得试的项目：Desktop v0.0.17",
         "它解决的具体麻烦是什么，5 分钟能不能跑通",
         "有没有可能变成自己的 Skill / 自动化工作流"
       ],
@@ -1044,7 +1148,7 @@
       "id": "rc79xnd",
       "title": "multica-ai/andrej-karpathy-skills — Star multica-ai / andrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Ka",
       "url": "https://github.com/multica-ai/andrej-karpathy-skills",
-      "publishedAt": "2026-08-26T05:53:13.060Z",
+      "publishedAt": "2026-08-26T05:53:54.674Z",
       "description": "GitHub Trending · 830 stars today · Star multica-ai / andrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
       "source": {
         "id": "gh-trending",
@@ -1098,163 +1202,6 @@
       "radarScore": 99
     },
     {
-      "id": "r8v5jg8",
-      "title": "GitHub Copilot app Customize tab is generally available",
-      "url": "https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available",
-      "publishedAt": "2026-08-25T20:05:26.000Z",
-      "description": "GitHub Copilot is more useful when it works with the tools, knowledge, and workflows your team already relies on. The new Customize tab in the GitHub Copilot app brings MCP servers, plugins, skills, and canvases together in one place. Explore featured customizations, browse by type, and find new ways to tailor Copilot to how you and your team work. With the Customize tab, you can: Discover more ways to customize Copilot across MCP servers, plugins, skills, and canvases. Start with featured customizations selected from each section. Find MCP servers faster by exploring trending options and browsing by category. Bring the tools your team uses into Copilot Featured canvases help you move from understanding work to acting on it while keeping the relevant context visible. Delegate backlog work from Azure DevOps Triage issues, prioritize backlogs, assign follow-ups, and hand work to Copilot to investigate, implement, or prepare for review. Explore every type of customization The Featured view brings selected customizations from across the GitHub Copilot app into one place, giving you a simpler starting point when you do not already know which MCP server, plugin, skill, or canvas you need. You can also browse dedicated sections for each type of customization to find options that fit the way you work. Get started Open the GitHub Copilot app and select Customize to explore featured customizations or browse by type. Install the GitHub Copilot app . The post GitHub Copilot app Customize tab is generally available appeared first on The GitHub Blog .",
-      "source": {
-        "id": "github-changelog",
-        "name": "GitHub Changelog",
-        "tier": "S",
-        "kind": "feed",
-        "tags": [
-          "github",
-          "tool",
-          "productivity",
-          "coding"
-        ]
-      },
-      "engagement": null,
-      "isCurrentSignal": false,
-      "relatedSources": [
-        {
-          "id": "github-changelog",
-          "name": "GitHub Changelog",
-          "tier": "S",
-          "kind": "feed",
-          "tags": [
-            "github",
-            "tool",
-            "productivity",
-            "coding"
-          ]
-        }
-      ],
-      "category": "美股 / 币圈",
-      "summary": "GitHub Copilot is more useful when it works with the tools, knowledge, and workflows your team already relies on. The new Customize tab in the GitHub Copilot app brings MCP servers, plugins, skills, and canvases together in one place. Explore featured customiz",
-      "importance": 90,
-      "novelty": 94,
-      "relevance": 96,
-      "socialPotential": 86,
-      "sourceQuality": 90,
-      "practicality": 100,
-      "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "作为市场观察和工具线索使用，关注数据、情绪与结构变化，不把单条信息当作交易建议。",
-      "whatChanged": "GitHub Copilot app Customize tab is generally available",
-      "angles": [
-        "今天市场里一个容易被忽略的小信号：GitHub Copilot app Customize tab is generally available",
-        "这个数据应该怎么看，什么情况下容易误判",
-        "只做观察：它接下来值得盯哪个指标"
-      ],
-      "radarScore": 96
-    },
-    {
-      "id": "r17k12t1",
-      "title": "Desktop v0.0.17",
-      "url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.17",
-      "publishedAt": "2026-08-25T09:06:36.000Z",
-      "description": "<ul> <li>Plugins, MCP, Skills, Rules, Hooks, and Tools are now one Customize hub with tabbed sections and live counts. Catalog-backed tabs show what you have installed followed by an inline Browse section, so installing something from the catalog immediately appears above — the separate Marketplace page is gone</li> <li>Redesigned the Models page: providers are grouped into Connected, Popular, and All with their auth kind and configuration status instead of per-row toggles. OAuth providers now offer a browser sign-in rather than an API key field, with a collapsed manual-key escape hatch where supported, and explicit Connect / Disconnect / Sign out actions</li> <li>Voice input moved to its own Settings → Voice page that only offers connected transcription-capable providers and preselects a default model. The composer's microphone button now appears only once a voice model is configured</li> <li>Sidebar sessions are always grouped by project, with pinned sessions leading each group and scheduled sessions marked by an inline clock. The Favorite action is now called Pin</li> <li>New, Schedule, and Customize each got their own labeled row below the logo. New starts a fresh task and puts your cursor straight in the composer</li> <li>Session search moved into a dialog behind the search icon in the logo row, and it now searches your full history instead of only the sessions already loaded in the sidebar</li> <li>Added suggested schedule templates to the Schedule page</li> <li>Add Provider opens a dialog instead of swapping out the page</li> <li>Desktop notifications are now a singl",
-      "source": {
-        "id": "gh-cline",
-        "name": "cline/cline Releases",
-        "tier": "A",
-        "kind": "feed",
-        "tags": [
-          "agent",
-          "coding",
-          "tool"
-        ]
-      },
-      "engagement": null,
-      "isCurrentSignal": false,
-      "relatedSources": [
-        {
-          "id": "gh-cline",
-          "name": "cline/cline Releases",
-          "tier": "A",
-          "kind": "feed",
-          "tags": [
-            "agent",
-            "coding",
-            "tool"
-          ]
-        }
-      ],
-      "category": "美股 / 币圈",
-      "summary": "<ul> <li>Plugins, MCP, Skills, Rules, Hooks, and Tools are now one Customize hub with tabbed sections and live counts. Catalog-backed tabs show what you have installed followed by an inline Browse section, so installing something from the catalog immediately a",
-      "importance": 74,
-      "novelty": 89,
-      "relevance": 100,
-      "socialPotential": 100,
-      "sourceQuality": 78,
-      "practicality": 100,
-      "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "作为市场观察和工具线索使用，关注数据、情绪与结构变化，不把单条信息当作交易建议。",
-      "whatChanged": "Desktop v0.0.17",
-      "angles": [
-        "今天市场里一个容易被忽略的小信号：Desktop v0.0.17",
-        "这个数据应该怎么看，什么情况下容易误判",
-        "只做观察：它接下来值得盯哪个指标"
-      ],
-      "radarScore": 94
-    },
-    {
-      "id": "r164f99i",
-      "title": "llm-anthropic 0.27",
-      "url": "https://simonwillison.net/2026/Aug/24/llm-anthropic/",
-      "publishedAt": "2026-08-24T16:27:04.000Z",
-      "description": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/llm-anthropic/releases/tag/0.27\">llm-anthropic 0.27</a></p> <p>This release of the Anthropic plugin for <a href=\"https://llm.datasette.io/\">LLM</a> mainly provides compatibility with the recently released <a href=\"https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.0.0\">anthropic v1.0.0</a> Python library, which switches from <code>httpx</code> to <a href=\"https://github.com/pydantic/httpx2\">httpx2</a>. OpenAI made the same change in their <a href=\"https://github.com/openai/openai-python/releases/tag/v3.0.0\">v3.0.0 release</a> two weeks ago.</p> <p>Anthropic provide this <a href=\"https://github.com/anthropics/anthropic-sdk-python/blob/v1.0.0/MIGRATION.md\">migration guide</a> for upgrading to 1.0, so I prompted Fable 5 in Claude Code with:</p> <blockquote> <p><code>Upgrade to anthropic&gt;=1 - read https://raw.githubusercontent.com/anthropics/anthropic-sdk-python/refs/heads/main/MIGRATION.md and get the tests passing</code></p> </blockquote> <p>Here's <a href=\"https://github.com/simonw/llm-anthropic/pull/84\">the resulting PR</a>.</p> <p>Tags: <a href=\"https://simonwillison.net/tags/python\">python</a>, <a href=\"https://simonwillison.net/tags/httpx\">httpx</a>, <a href=\"https://simonwillison.net/tags/llm\">llm</a>, <a href=\"https://simonwillison.net/tags/anthropic\">anthropic</a>, <a href=\"https://simonwillison.net/tags/claude\">claude</a></p>",
-      "source": {
-        "id": "simon-willison",
-        "name": "Simon Willison",
-        "tier": "A",
-        "kind": "feed",
-        "tags": [
-          "tool",
-          "coding",
-          "model",
-          "practical"
-        ]
-      },
-      "engagement": null,
-      "isCurrentSignal": false,
-      "relatedSources": [
-        {
-          "id": "simon-willison",
-          "name": "Simon Willison",
-          "tier": "A",
-          "kind": "feed",
-          "tags": [
-            "tool",
-            "coding",
-            "model",
-            "practical"
-          ]
-        }
-      ],
-      "category": "Skill / GitHub",
-      "summary": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/llm-anthropic/releases/tag/0.27\">llm-anthropic 0.27</a></p> <p>This release of the Anthropic plugin for <a href=\"https://llm.datasette.io/\">LLM</a> mainly provides compatibility with the recently ",
-      "importance": 81,
-      "novelty": 81,
-      "relevance": 84,
-      "socialPotential": 70,
-      "sourceQuality": 78,
-      "practicality": 89,
-      "researchIntensity": 24,
-      "confidence": 64,
-      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
-      "whatChanged": "llm-anthropic 0.27",
-      "angles": [
-        "今天 GitHub 上冒出来一个值得试的项目：llm-anthropic 0.27",
-        "它解决的具体麻烦是什么，5 分钟能不能跑通",
-        "有没有可能变成自己的 Skill / 自动化工作流"
-      ],
-      "radarScore": 94
-    },
-    {
       "id": "r1rxkkm1",
       "title": "CLI v3.0.58",
       "url": "https://github.com/cline/cline/releases/tag/cli-v3.0.58",
@@ -1302,59 +1249,6 @@
         "发现一个可能真能省时间的新工具：CLI v3.0.58",
         "它替代了原来哪一步手工操作",
         "免费版够不够用，值不值得长期留在工具箱"
-      ],
-      "radarScore": 93
-    },
-    {
-      "id": "r5p4h9v",
-      "title": "v2.1.246",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246",
-      "publishedAt": "2026-08-25T22:31:52.000Z",
-      "description": "<h2>What's changed</h2> <ul> <li>Added a startup warning for Bash allow rules with a wildcard before the subcommand (e.g. <code>Bash(git * main)</code>), since they also match options inserted before the subcommand</li> <li>Added an Auto mode tab to <code>/permissions</code> for viewing and editing auto mode classifier rules</li> <li>Added the turn's completion time to the end-of-turn duration line, e.g. <code>✻ Sautéed for 23s · done 6:05 PM</code></li> <li>Fixed fullscreen mode showing a blank transcript after resizing the terminal and jumping to the bottom until the next keypress</li> <li>Fixed a severe transcript slowdown when a diff contained a very long single line (e.g. a base64 string); such lines now render truncated with a marker</li> <li>Fixed erratic fullscreen scrolling when positioned at an earlier message, including jump-to-bottom getting stuck mid-transcript</li> <li>Fixed background sessions failing to open after 45 seconds when Claude Code's starting directory had been deleted, the machine had slept, or the host is slow to start processes</li> <li>Fixed background sessions failing to open with \"Couldn't start the background service … EACCES\" when another Claude Code process was re-installing the npm package at that moment</li> <li>Fixed markdown rendering being disabled for a whole message when its first 500 characters contained no markdown, and for <code>+</code>/<code>N)</code> lists and setext headings</li> <li>Fixed MCP tool calls interrupted by an incoming message in headless/remote sessions being reported to the model as \"completed with no output\" in",
-      "source": {
-        "id": "gh-claude-code",
-        "name": "anthropics/claude-code Releases",
-        "tier": "S",
-        "kind": "feed",
-        "tags": [
-          "agent",
-          "coding",
-          "launch",
-          "tool"
-        ]
-      },
-      "engagement": null,
-      "isCurrentSignal": false,
-      "relatedSources": [
-        {
-          "id": "gh-claude-code",
-          "name": "anthropics/claude-code Releases",
-          "tier": "S",
-          "kind": "feed",
-          "tags": [
-            "agent",
-            "coding",
-            "launch",
-            "tool"
-          ]
-        }
-      ],
-      "category": "Skill / GitHub",
-      "summary": "<h2>What's changed</h2> <ul> <li>Added a startup warning for Bash allow rules with a wildcard before the subcommand (e.g. <code>Bash(git * main)</code>), since they also match options inserted before the subcommand</li> <li>Added an Auto mode tab to <code>/per",
-      "importance": 80,
-      "novelty": 92,
-      "relevance": 73,
-      "socialPotential": 63,
-      "sourceQuality": 90,
-      "practicality": 88,
-      "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
-      "whatChanged": "v2.1.246",
-      "angles": [
-        "今天 GitHub 上冒出来一个值得试的项目：v2.1.246",
-        "它解决的具体麻烦是什么，5 分钟能不能跑通",
-        "有没有可能变成自己的 Skill / 自动化工作流"
       ],
       "radarScore": 93
     },
@@ -1678,10 +1572,63 @@
       "radarScore": 83
     },
     {
+      "id": "r1xwj27b",
+      "title": "Release v0.59.0-nightly.20260826.g64b5b79a6",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0-nightly.20260826.g64b5b79a6",
+      "publishedAt": "2026-08-26T01:07:54.000Z",
+      "description": "<h2>What's Changed</h2> <ul> <li>Changelog for v0.58.0-preview.0 by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gemini-cli-robot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/gemini-cli-robot\">@gemini-cli-robot</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5249203210\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/29082\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/29082/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/29082\">#29082</a></li> <li>chore(release): bump version to 0.59.0-nightly.20260825.g812f7a2bc by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gemini-cli-robot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/gemini-cli-robot\">@gemini-cli-robot</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5249318862\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/29083\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/29083/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/29083\">#29083</a></li> </ul> <p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/google-gemini/gemini-cli/compare/v0.56.0-nightly.20260825.g812f7a2bc...v",
+      "source": {
+        "id": "gh-gemini-cli",
+        "name": "google-gemini/gemini-cli Releases",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "agent",
+          "coding",
+          "launch",
+          "tool"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "gh-gemini-cli",
+          "name": "google-gemini/gemini-cli Releases",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "agent",
+            "coding",
+            "launch",
+            "tool"
+          ]
+        }
+      ],
+      "category": "工具 / 网站",
+      "summary": "<h2>What's Changed</h2> <ul> <li>Changelog for v0.58.0-preview.0 by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gemini-cli-robot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:sel",
+      "importance": 69,
+      "novelty": 85,
+      "relevance": 63,
+      "socialPotential": 53,
+      "sourceQuality": 90,
+      "practicality": 76,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "它可能直接降低某个任务的时间或门槛，适合快速试用后决定是否进入工具箱。",
+      "whatChanged": "Release v0.59.0-nightly.20260826.g64b5b79a6",
+      "angles": [
+        "发现一个可能真能省时间的新工具：Release v0.59.0-nightly.20260826.g64b5b79a6",
+        "它替代了原来哪一步手工操作",
+        "免费版够不够用，值不值得长期留在工具箱"
+      ],
+      "radarScore": 82
+    },
+    {
       "id": "r4f7h46",
       "title": "froggeric/Qwen-Fixed-Chat-Templates · Hugging Face trending model",
       "url": "https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates",
-      "publishedAt": "2026-08-26T05:53:13.060Z",
+      "publishedAt": "2026-08-26T05:53:54.674Z",
       "description": "Trending model · model · ♥ 1474 · downloads 0",
       "source": {
         "id": "hf-trending-models",
@@ -1732,7 +1679,7 @@
       "id": "ru3l7pa",
       "title": "Qwen/Qwen3.8-27B · Hugging Face trending model",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "publishedAt": "2026-08-26T05:53:13.060Z",
+      "publishedAt": "2026-08-26T05:53:54.674Z",
       "description": "Trending model · image-text-to-text · ♥ 12751 · downloads 2945415",
       "source": {
         "id": "hf-trending-models",
@@ -1780,10 +1727,63 @@
       "radarScore": 76
     },
     {
+      "id": "r1gwt55g",
+      "title": "How to evaluate LLMs before production",
+      "url": "https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/",
+      "publishedAt": "2026-08-25T21:35:11.000Z",
+      "description": "A language model can perform well on a clean benchmark and still struggle with the cases that matter in production. Benchmarks and curated datasets are useful when prototyping an LLM-based system. They help teams compare models, test an initial prompt, and determine whether an idea is technically plausible. But as a system moves closer to production, the evaluation problem changes. Real inputs are often ambiguous. Labels may be inconsistent. Important context may be missing or truncated. The evaluation set may not reflect the production distribution. Edge cases that rarely appear in benchmarks can become common sources of failure. Even when offline metrics improve, those results may not translate cleanly into production behavior. We encountered these challenges while evaluating an LLM-based system designed to reduce false positives in GitHub secret scanning. Secret scanning identifies credentials such as tokens and keys that may have been committed to a repository. Because some candidate strings resemble secrets, but don&rsquo;t actually represent real credentials, developers may spend time investigating alerts that don&rsquo;t require remediation. Rather than determine whether an LLM could classify a string correctly, we needed to understand whether the system could reduce noisy alerts while preserving enough recall to remain safe for a security workflow. In this post, we share the practices that helped us move from promising prototype results to production. The lessons apply broadly to LLM-powered systems in code analysis, developer tools, security, data analysis, and oth",
+      "source": {
+        "id": "github-ai",
+        "name": "GitHub AI & ML",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "github",
+          "tool",
+          "coding",
+          "agent"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "github-ai",
+          "name": "GitHub AI & ML",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "github",
+            "tool",
+            "coding",
+            "agent"
+          ]
+        }
+      ],
+      "category": "美股 / 币圈",
+      "summary": "A language model can perform well on a clean benchmark and still struggle with the cases that matter in production. Benchmarks and curated datasets are useful when prototyping an LLM-based system. They help teams compare models, test an initial prompt, and det",
+      "importance": 52,
+      "novelty": 79,
+      "relevance": 70,
+      "socialPotential": 70,
+      "sourceQuality": 90,
+      "practicality": 76,
+      "researchIntensity": 48,
+      "confidence": 64,
+      "whyItMatters": "作为市场观察和工具线索使用，关注数据、情绪与结构变化，不把单条信息当作交易建议。",
+      "whatChanged": "How to evaluate LLMs before production",
+      "angles": [
+        "今天市场里一个容易被忽略的小信号：How to evaluate LLMs before production",
+        "这个数据应该怎么看，什么情况下容易误判",
+        "只做观察：它接下来值得盯哪个指标"
+      ],
+      "radarScore": 74
+    },
+    {
       "id": "r1mwhfqv",
       "title": "ornith-ai/Ornith-1.5-35B-A3B · Hugging Face trending model",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B",
-      "publishedAt": "2026-08-26T05:53:13.060Z",
+      "publishedAt": "2026-08-26T05:53:54.674Z",
       "description": "Trending model · text-generation · ♥ 429 · downloads 70158",
       "source": {
         "id": "hf-trending-models",
