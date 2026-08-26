@@ -4,7 +4,7 @@
   {"id":"github-ai","name":"GitHub AI & ML","tier":"S","kind":"feed","url":"https://github.blog/ai-and-ml/feed/","tags":["github","tool","coding","agent"],"enabled":true},
   {"id":"github-changelog","name":"GitHub Changelog","tier":"S","kind":"feed","url":"https://github.blog/changelog/feed/","tags":["github","tool","productivity","coding"],"filter":"practical","enabled":true},
   {"id":"huggingface-blog","name":"Hugging Face Blog","tier":"S","kind":"feed","url":"https://huggingface.co/blog/feed.xml","tags":["model","open-source","launch"],"enabled":true},
-  {"id":"hf-trending-models","name":"Hugging Face Trending Models","tier":"A","kind":"huggingface_trending","url":"https://huggingface.co/models?sort=trending","tags":["model","trending","open-source"],"enabled":true},
+  {"id":"hf-trending-models","name":"Hugging Face Trending Models","tier":"A","kind":"huggingface_trending","url":"https://huggingface.co/models?sort=trending","tags":["model","open-source"],"enabled":true},
 
   {"id":"gh-trending","name":"GitHub Trending · AI/Agent/Tools","tier":"A","kind":"github_trending","url":"https://github.com/trending?since=daily","tags":["github","trending","skill","tool","agent"],"enabled":true},
   {"id":"gh-search-skills","name":"GitHub Discovery · Agent Skills","tier":"A","kind":"github_search","query":"\"agent skill\" in:name,description,readme stars:>10","windowDays":30,"dateField":"created","tags":["github","skill","agent","discovery"],"enabled":true},
@@ -30,7 +30,7 @@
   {"id":"gh-dify","name":"langgenius/dify Releases","tier":"A","kind":"feed","url":"https://github.com/langgenius/dify/releases.atom","tags":["agent","workflow","tool","open-source"],"enabled":true},
   {"id":"gh-cline","name":"cline/cline Releases","tier":"A","kind":"feed","url":"https://github.com/cline/cline/releases.atom","tags":["agent","coding","tool"],"enabled":true},
   {"id":"gh-ollama","name":"ollama/ollama Releases","tier":"A","kind":"feed","url":"https://github.com/ollama/ollama/releases.atom","tags":["model","local-ai","tool"],"enabled":true},
-  {"id":"gh-qwen","name":"QwenLM/Qwen3 Releases","tier":"A","kind":"feed","url":"https://github.com/QwenLM/Qwen3/releases.atom","tags":["model","launch","open-source"],"enabled":true},
+  {"id":"gh-qwen","name":"QwenLM/Qwen3 Releases","tier":"A","kind":"feed","url":"https://github.com/QwenLM/Qwen3/releases.atom","tags":["model","launch","open-source"],"enabled":false},
 
   {"id":"coindesk","name":"CoinDesk","tier":"A","kind":"feed","url":"https://www.coindesk.com/arc/outboundfeeds/rss/","tags":["finance","crypto","market"],"filter":"finance","enabled":true},
   {"id":"coingecko-trending","name":"CoinGecko Trending","tier":"B","kind":"coingecko_trending","url":"https://api.coingecko.com/api/v3/search/trending","tags":["finance","crypto","market","signal"],"enabled":true},
