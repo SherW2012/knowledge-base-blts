@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "status": "ok",
-  "generatedAt": "2026-08-26T03:17:24.114Z",
+  "generatedAt": "2026-08-26T03:19:46.671Z",
   "date": "2026-08-26",
   "timezone": "Asia/Shanghai",
   "llm": {
@@ -10,15 +10,15 @@
     "model": null
   },
   "stats": {
-    "configuredSources": 42,
-    "automatedSources": 35,
+    "configuredSources": 39,
+    "automatedSources": 32,
     "manualSources": 7,
-    "successfulSources": 34,
-    "failedSources": 1,
-    "scannedItems": 503,
-    "recentItems": 132,
-    "dedupedItems": 124,
-    "eventClusters": 116,
+    "successfulSources": 32,
+    "failedSources": 0,
+    "scannedItems": 463,
+    "recentItems": 92,
+    "dedupedItems": 92,
+    "eventClusters": 84,
     "publishedItems": 15
   },
   "sourceRuns": [
@@ -263,15 +263,6 @@
       "items": 20
     },
     {
-      "id": "import-ai",
-      "name": "Import AI",
-      "tier": "A",
-      "kind": "feed",
-      "status": "error",
-      "items": 0,
-      "error": "HTTP 403"
-    },
-    {
       "id": "hackernews-ai",
       "name": "Hacker News AI Signals",
       "tier": "B",
@@ -282,22 +273,6 @@
     {
       "id": "arxiv-cs-ai",
       "name": "arXiv cs.AI",
-      "tier": "B",
-      "kind": "arxiv",
-      "status": "ok",
-      "items": 20
-    },
-    {
-      "id": "arxiv-cs-cl",
-      "name": "arXiv cs.CL",
-      "tier": "B",
-      "kind": "arxiv",
-      "status": "ok",
-      "items": 20
-    },
-    {
-      "id": "arxiv-cs-lg",
-      "name": "arXiv cs.LG",
       "tier": "B",
       "kind": "arxiv",
       "status": "ok",
@@ -709,18 +684,6 @@
       ]
     },
     {
-      "id": "import-ai",
-      "name": "Import AI",
-      "tier": "A",
-      "kind": "feed",
-      "url": "https://importai.substack.com/feed",
-      "tags": [
-        "research",
-        "policy",
-        "industry"
-      ]
-    },
-    {
       "id": "hackernews-ai",
       "name": "Hacker News AI Signals",
       "tier": "B",
@@ -740,28 +703,6 @@
       "url": null,
       "tags": [
         "research"
-      ]
-    },
-    {
-      "id": "arxiv-cs-cl",
-      "name": "arXiv cs.CL",
-      "tier": "B",
-      "kind": "arxiv",
-      "url": null,
-      "tags": [
-        "research",
-        "llm"
-      ]
-    },
-    {
-      "id": "arxiv-cs-lg",
-      "name": "arXiv cs.LG",
-      "tier": "B",
-      "kind": "arxiv",
-      "url": null,
-      "tags": [
-        "research",
-        "ml"
       ]
     },
     {
@@ -1022,98 +963,6 @@
       "whatChanged": "Agentic observability with Amazon OpenSearch Service MCP Apps",
       "angles": [
         "发生了什么：用最短篇幅解释「Agentic observability with Amazon OpenSearch Service MCP Apps」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 87
-    },
-    {
-      "id": "rcxx2ie",
-      "title": "BrowserForge: Scaling Web Episode via Parallel Browser Sandboxes",
-      "url": "https://arxiv.org/abs/2608.24848v1",
-      "publishedAt": "2026-08-25T17:35:42.000Z",
-      "description": "Web agents that act from rendered pixels avoid the fragility and heavy token cost of reading a page's HTML or accessibility tree, but training them depends on large amounts of high-quality interaction trajectories, and how to produce such data at scale remains an open problem. Public datasets typically contain only a few thousand trajectories drawn from a fixed and narrow set of websites, and even recent automated synthesis pipelines stay bound to predefined site lists or tutorial sources, so the number of distinct websites the agent ever sees barely grows. We present BrowserForge, a framework that generates web interaction data at scale by driving many browser sandboxes in parallel over the open web. BrowserForge couples three components: an open-web sourcing stage that exposes the agent to hundreds of thousands of real, openly reachable websites; a sandbox cluster manager that schedules hundreds of concurrent browsers with high utilization; and a Proposer-Solver dual-agent loop that turns a raw page into an executable task and then collects a verified trajectory for it. A rule-plus-model cleaning pipeline removes failed runs and rewrites the surviving reasoning into a single unified chain-of-thought style. Page structure such as the accessibility tree is used only as a synthesis-time signal; the agent we train and release acts purely from the screenshot. The resulting corpus contains 203,238 trajectories, each collected from a distinct website, larger and more diverse than prior trajectory datasets. Fine-tuning a compact multimodal model on this corpus raises its success ",
-      "source": {
-        "id": "arxiv-cs-cl",
-        "name": "arXiv cs.CL",
-        "tier": "B",
-        "kind": "arxiv",
-        "tags": [
-          "research",
-          "llm"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "arxiv-cs-cl",
-          "name": "arXiv cs.CL",
-          "tier": "B",
-          "kind": "arxiv",
-          "tags": [
-            "research",
-            "llm"
-          ]
-        }
-      ],
-      "category": "Agent",
-      "summary": "Web agents that act from rendered pixels avoid the fragility and heavy token cost of reading a page's HTML or accessibility tree, but training them depends on large amounts of high-quality interaction trajectories, and how to produce such d",
-      "importance": 91,
-      "novelty": 97,
-      "relevance": 89,
-      "socialPotential": 73,
-      "sourceQuality": 62,
-      "confidence": 62,
-      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
-      "whatChanged": "BrowserForge: Scaling Web Episode via Parallel Browser Sandboxes",
-      "angles": [
-        "发生了什么：用最短篇幅解释「BrowserForge: Scaling Web Episode via Parallel Browser Sandboxes」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 87
-    },
-    {
-      "id": "razeo2x",
-      "title": "Structurally-bounded Agentic Graph Exploration for Evidence-Grounded Scholarly DeepSearch",
-      "url": "https://arxiv.org/abs/2608.24809v1",
-      "publishedAt": "2026-08-25T16:51:26.000Z",
-      "description": "We present Crase, a bounded and inspectable alternative to deep research agents for scholarly search. Instead of an open-ended search loop, Crase queries a search engine once for seed papers, expands them along their 1.5-hop citation neighborhood, prunes citation edges whose claims lack entailment support, and ranks the remaining papers with a recency-aware random walk. This makes the candidate set, the reason each paper is kept, and the stopping condition explicit and fixed before inference. On LitSearch and one further benchmarks over a 500K-paper arXiv corpus, Crase outperforms deep research agents built on proprietary models by up to 3$\\times$ recall@50 at roughly a third of the cost.",
-      "source": {
-        "id": "arxiv-cs-cl",
-        "name": "arXiv cs.CL",
-        "tier": "B",
-        "kind": "arxiv",
-        "tags": [
-          "research",
-          "llm"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "arxiv-cs-cl",
-          "name": "arXiv cs.CL",
-          "tier": "B",
-          "kind": "arxiv",
-          "tags": [
-            "research",
-            "llm"
-          ]
-        }
-      ],
-      "category": "Agent",
-      "summary": "We present Crase, a bounded and inspectable alternative to deep research agents for scholarly search. Instead of an open-ended search loop, Crase queries a search engine once for seed papers, expands them along their 1.5-hop citation neighb",
-      "importance": 91,
-      "novelty": 97,
-      "relevance": 89,
-      "socialPotential": 73,
-      "sourceQuality": 62,
-      "confidence": 62,
-      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
-      "whatChanged": "Structurally-bounded Agentic Graph Exploration for Evidence-Grounded Scholarly DeepSearch",
-      "angles": [
-        "发生了什么：用最短篇幅解释「Structurally-bounded Agentic Graph Exploration for Evidence-Grounded Scholarly DeepSearch」",
         "为什么值得注意：它改变的是能力、成本还是工作流",
         "个人判断：这件事接下来最可能影响谁"
       ],
@@ -1394,98 +1243,6 @@
       "radarScore": 79
     },
     {
-      "id": "rl5pbym",
-      "title": "MoTE: Mixture of Task Experts for Multi-Task Video Understanding",
-      "url": "https://arxiv.org/abs/2608.24763v1",
-      "publishedAt": "2026-08-25T16:00:11.000Z",
-      "description": "Procedural video-language models must solve heterogeneous tasks from the same visual evidence, including action recognition, forecasting, and procedure prediction. Dense transformer decoders share the same feed-forward networks across tasks, which can entangle task behavior and make controlled capability expansion difficult. Sparse Mixture-of-Experts (MoE) decoders provide conditional computation, but token-level learned routing is not naturally aligned with task-level procedural objectives. We propose MoTE (Mixture of Task Experts), a decoder architecture that converts large language model feed-forward networks into task-specific experts while keeping the multimodal backbone shared. Each example follows one sample-level task route, so active task-expert computation remains independent of the number of stored task experts. We instantiate this design as VideoLLM-MoTE and evaluate it on five COIN benchmarks using explicit task routes. The five-expert model activates ~2B LLM parameters per sample and achieves higher average top-1 accuracy than recent VideoLLM baselines. Under the same expert topology, it improves over dense all-expert activation and learned sparse-routing controls. These results show that task-structured routing provides an interpretable and compute-efficient decoder alternative for multi-task video-language learning.",
-      "source": {
-        "id": "arxiv-cs-lg",
-        "name": "arXiv cs.LG",
-        "tier": "B",
-        "kind": "arxiv",
-        "tags": [
-          "research",
-          "ml"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "arxiv-cs-lg",
-          "name": "arXiv cs.LG",
-          "tier": "B",
-          "kind": "arxiv",
-          "tags": [
-            "research",
-            "ml"
-          ]
-        }
-      ],
-      "category": "模型 / 研究",
-      "summary": "Procedural video-language models must solve heterogeneous tasks from the same visual evidence, including action recognition, forecasting, and procedure prediction. Dense transformer decoders share the same feed-forward networks across tasks",
-      "importance": 80,
-      "novelty": 91,
-      "relevance": 80,
-      "socialPotential": 65,
-      "sourceQuality": 62,
-      "confidence": 62,
-      "whyItMatters": "这条信息具有较强的新鲜度或行业相关性，值得作为后续判断的事实输入。",
-      "whatChanged": "MoTE: Mixture of Task Experts for Multi-Task Video Understanding",
-      "angles": [
-        "发生了什么：用最短篇幅解释「MoTE: Mixture of Task Experts for Multi-Task Video Understanding」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 79
-    },
-    {
-      "id": "r1kyrx0m",
-      "title": "SkillForge: Evolving Verifiable Skills for Reinforcement Learning Agents",
-      "url": "https://arxiv.org/abs/2608.24747v1",
-      "publishedAt": "2026-08-25T15:52:10.000Z",
-      "description": "Large language model (LLM) agents are trained with reinforcement learning (RL) for complex decision-making tasks. However, most RL-trained agents remain episodic and cannot accumulate reusable knowledge across episodes. Recent skill-based approaches, such as SkillRL, attempt to address this issue by extracting skills from raw trajectories, but treat the skill bank as an append-only repository without verifying whether stored skills remain effective. In this paper, we propose SkillForge, a framework for continuous skill evolution that enables skills to be verified and refined through environment interaction. By making skill usage explicit during agent interaction, RL can directly optimize both environment actions and skill invocation decisions. SkillForge further introduces evidence-based skill verification and multi-pathway skill induction, allowing the skill bank to continuously grow while maintaining its quality. Extensive experiments on ALFWorld, WebShop, and AppWorld show that SkillForge consistently outperforms SkillRL, demonstrating the effectiveness of continuously verified skills in training stronger LLM agents.",
-      "source": {
-        "id": "arxiv-cs-cl",
-        "name": "arXiv cs.CL",
-        "tier": "B",
-        "kind": "arxiv",
-        "tags": [
-          "research",
-          "llm"
-        ]
-      },
-      "engagement": null,
-      "relatedSources": [
-        {
-          "id": "arxiv-cs-cl",
-          "name": "arXiv cs.CL",
-          "tier": "B",
-          "kind": "arxiv",
-          "tags": [
-            "research",
-            "llm"
-          ]
-        }
-      ],
-      "category": "Agent",
-      "summary": "Large language model (LLM) agents are trained with reinforcement learning (RL) for complex decision-making tasks. However, most RL-trained agents remain episodic and cannot accumulate reusable knowledge across episodes. Recent skill-based a",
-      "importance": 80,
-      "novelty": 91,
-      "relevance": 80,
-      "socialPotential": 65,
-      "sourceQuality": 62,
-      "confidence": 62,
-      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
-      "whatChanged": "SkillForge: Evolving Verifiable Skills for Reinforcement Learning Agents",
-      "angles": [
-        "发生了什么：用最短篇幅解释「SkillForge: Evolving Verifiable Skills for Reinforcement Learning Agents」",
-        "为什么值得注意：它改变的是能力、成本还是工作流",
-        "个人判断：这件事接下来最可能影响谁"
-      ],
-      "radarScore": 79
-    },
-    {
       "id": "r108i23e",
       "title": "AI-powered metadata correction and harmonization",
       "url": "https://aws.amazon.com/blogs/machine-learning/ai-powered-metadata-correction-and-harmonization/",
@@ -1532,6 +1289,190 @@
         "个人判断：这件事接下来最可能影响谁"
       ],
       "radarScore": 78
+    },
+    {
+      "id": "r3yvpci",
+      "title": "LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training",
+      "url": "https://arxiv.org/abs/2608.24845v1",
+      "publishedAt": "2026-08-25T17:34:19.000Z",
+      "description": "We present LAION-BVD, a large-scale open video dataset for multimodal learning, which contains 1.3B platform-specific video URLs collected from CommonCrawl. From these, we download 80M videos with a total duration of 10 million hours. The dataset is designed for multimodal pre-training across the video, audio, and image modalities. Using content-aware scene detection, we extract clips for which we synthetically generate video and audio captions. Models trained on these data achieve competitive performance on standard video-text and audio-text benchmarks, with consistent improvements as training or model scale increases. Additionally, we explore video frames as an alternative source of image-text data by extracting scene-changing frames. These frames exhibit a visual distribution distinct from standard web image corpora, and models trained on this dataset achieve strong image-text retrieval performance. We release LAION-BVD to the research community. It significantly expands open access to multimodal videos at an unprecedented scale.",
+      "source": {
+        "id": "arxiv-cs-ai",
+        "name": "arXiv cs.AI",
+        "tier": "B",
+        "kind": "arxiv",
+        "tags": [
+          "research"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "arxiv-cs-ai",
+          "name": "arXiv cs.AI",
+          "tier": "B",
+          "kind": "arxiv",
+          "tags": [
+            "research"
+          ]
+        }
+      ],
+      "category": "模型 / 研究",
+      "summary": "We present LAION-BVD, a large-scale open video dataset for multimodal learning, which contains 1.3B platform-specific video URLs collected from CommonCrawl. From these, we download 80M videos with a total duration of 10 million hours. The d",
+      "importance": 78,
+      "novelty": 87,
+      "relevance": 77,
+      "socialPotential": 66,
+      "sourceQuality": 62,
+      "confidence": 62,
+      "whyItMatters": "这条信息具有较强的新鲜度或行业相关性，值得作为后续判断的事实输入。",
+      "whatChanged": "LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training",
+      "angles": [
+        "发生了什么：用最短篇幅解释「LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 77
+    },
+    {
+      "id": "rxgwvnl",
+      "title": "CAFE: Self-Improving Search Agents Need Co-Evolving Feedback",
+      "url": "https://arxiv.org/abs/2608.24794v1",
+      "publishedAt": "2026-08-25T16:39:00.000Z",
+      "description": "Outcome-supervised search agents learn when and how to retrieve evidence, but terminal rewards neither localize intermediate errors nor redirect an ongoing trajectory before those errors compound. Treating corrective feedback as a learned in-trajectory intervention couples the two roles: the agent must decide when to request and use feedback, while the critic must infer useful corrections from outcome-confounded rollouts whose failure patterns shift as the agent improves. We introduce CAFE (Coupled Agent--Feedback Evolution), a framework in which a shared-parameter model alternates between search-agent and critic roles. CAFE initializes feedback-conditioned recovery from trajectories built around the base agent's own failures, then couples online and offline optimization. During online RL, a comparative feedback estimate uses a prompt-level call--skip success gap to shape request returns, while feedback-aware advantage shaping reweights token advantages before and after feedback. Offline, rollout-derived preference optimization learns feedback from matched successful and unsuccessful trajectories. On seven agentic search benchmarks, CAFE outperforms the evaluated RL-based search agents on average, retains its gains across all six out-of-domain benchmarks, and reduces answer-level hallucinations. One-sided ablations show that improving only the agent or only the critic eventually plateaus, whereas alternating the two updates continues to improve performance. These findings suggest that a self-improving search agent needs feedback that co-evolves with the policy it guides.",
+      "source": {
+        "id": "arxiv-cs-ai",
+        "name": "arXiv cs.AI",
+        "tier": "B",
+        "kind": "arxiv",
+        "tags": [
+          "research"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "arxiv-cs-ai",
+          "name": "arXiv cs.AI",
+          "tier": "B",
+          "kind": "arxiv",
+          "tags": [
+            "research"
+          ]
+        }
+      ],
+      "category": "Agent",
+      "summary": "Outcome-supervised search agents learn when and how to retrieve evidence, but terminal rewards neither localize intermediate errors nor redirect an ongoing trajectory before those errors compound. Treating corrective feedback as a learned i",
+      "importance": 78,
+      "novelty": 87,
+      "relevance": 77,
+      "socialPotential": 66,
+      "sourceQuality": 62,
+      "confidence": 62,
+      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
+      "whatChanged": "CAFE: Self-Improving Search Agents Need Co-Evolving Feedback",
+      "angles": [
+        "发生了什么：用最短篇幅解释「CAFE: Self-Improving Search Agents Need Co-Evolving Feedback」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 77
+    },
+    {
+      "id": "r1d1nm4c",
+      "title": "v0.3.0",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.3.0",
+      "publishedAt": "2026-08-25T10:29:52.000Z",
+      "description": "<h2>Overview</h2> <p>llama.cpp 0.3.0 introduces the dots3-note multimodal model (with a new DSA-ISWA KV cache), MTP support for GLM-4.5-Air, and tensor-split (<code>-sm tensor</code>) plus multi-sequence rollback fixes for DeepSeek 4. ggml is bumped to v0.22.0 (meta-backend tensor split, per-op Metal kernels with parallel compilation, non-in-place <code>ggml_clamp</code>), while mtmd gains dots3-note vision/audio, WebP decoding and a Pillow-accurate resize. The server adds a <code>LLAMA_SERVER_SLOTS_N_DIFF</code> debug knob, and the web UI gets tabbed chat navigation.</p> <h3>New models</h3> <ul> <li>Add dots3-note model with a new DSA-ISWA KV cache type (<a href=\"https://github.com/ggml-org/llama.cpp/pull/27060\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/ggml-org/llama.cpp/pull/27060/hovercard\">#27060</a>)</li> </ul> <h3>Core changes</h3> <ul> <li>DeepSeek 4: add tensor-split mode via <code>-sm tensor</code> (<a href=\"https://github.com/ggml-org/llama.cpp/pull/26490\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/ggml-org/llama.cpp/pull/26490/hovercard\">#26490</a>)</li> <li>DeepSeek 4: fix rollback with multiple sequences (<a href=\"https://github.com/ggml-org/llama.cpp/pull/26756\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/ggml-org/llama.cpp/pull/26756/hovercard\">#26756</a>)</li> <li>Fix meta tensor split state propagation for tensor parallel (<a href=\"https://github.com/ggml-org/llama.cpp/pull/27574\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/ggml-org/llama.cpp/pull/27574/hovercard\">#27574</a>)</li> <li>GLM-4.5-Air: add MTP ",
+      "source": {
+        "id": "gh-llamacpp",
+        "name": "ggml-org/llama.cpp Releases",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "inference",
+          "open-source"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "gh-llamacpp",
+          "name": "ggml-org/llama.cpp Releases",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "inference",
+            "open-source"
+          ]
+        }
+      ],
+      "category": "AI Coding",
+      "summary": "<h2>Overview</h2> <p>llama.cpp 0.3.0 introduces the dots3-note multimodal model (with a new DSA-ISWA KV cache), MTP support for GLM-4.5-Air, and tensor-split (<code>-sm tensor</code>) plus multi-sequence rollback fixes for DeepSeek 4. ggml ",
+      "importance": 81,
+      "novelty": 84,
+      "relevance": 71,
+      "socialPotential": 57,
+      "sourceQuality": 88,
+      "confidence": 62,
+      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
+      "whatChanged": "v0.3.0",
+      "angles": [
+        "发生了什么：用最短篇幅解释「v0.3.0」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 77
+    },
+    {
+      "id": "r19rv0nl",
+      "title": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
+      "url": "https://openai.com/index/jalapeno-first-results",
+      "publishedAt": "2026-08-25T07:00:00.000Z",
+      "description": "Jalapeño is a custom inference chip from OpenAI that delivers faster, more power-efficient AI inference, with higher throughput and lower latency for modern models.",
+      "source": {
+        "id": "openai-news",
+        "name": "OpenAI News",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "model",
+          "product",
+          "research",
+          "company"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "openai-news",
+          "name": "OpenAI News",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "model",
+            "product",
+            "research",
+            "company"
+          ]
+        }
+      ],
+      "category": "模型 / 研究",
+      "summary": "Jalapeño is a custom inference chip from OpenAI that delivers faster, more power-efficient AI inference, with higher throughput and lower latency for modern models.",
+      "importance": 81,
+      "novelty": 82,
+      "relevance": 71,
+      "socialPotential": 57,
+      "sourceQuality": 88,
+      "confidence": 62,
+      "whyItMatters": "这条信息具有较强的新鲜度或行业相关性，值得作为后续判断的事实输入。",
+      "whatChanged": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
+      "angles": [
+        "发生了什么：用最短篇幅解释「Jalapeño’s first results show industry-leading speed and efficiency in AI inference」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 76
     }
   ]
 }
