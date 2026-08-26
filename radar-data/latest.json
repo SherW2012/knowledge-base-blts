@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "status": "ok",
-  "generatedAt": "2026-08-26T05:50:18.127Z",
+  "generatedAt": "2026-08-26T05:51:37.694Z",
   "date": "2026-08-26",
   "timezone": "Asia/Shanghai",
   "focus": "launches-tools-skills-productivity-markets",
@@ -14,9 +14,9 @@
     "configuredSources": 41,
     "automatedSources": 35,
     "manualSources": 6,
-    "successfulSources": 31,
-    "failedSources": 4,
-    "scannedItems": 404,
+    "successfulSources": 34,
+    "failedSources": 1,
+    "scannedItems": 458,
     "recentItems": 157,
     "dedupedItems": 157,
     "eventClusters": 136,
@@ -85,27 +85,24 @@
       "name": "GitHub Discovery · Agent Skills",
       "tier": "A",
       "kind": "github_search",
-      "status": "error",
-      "items": 0,
-      "error": "HTTP 403"
+      "status": "ok",
+      "items": 18
     },
     {
       "id": "gh-search-mcp",
       "name": "GitHub Discovery · MCP / Agent Tools",
       "tier": "A",
       "kind": "github_search",
-      "status": "error",
-      "items": 0,
-      "error": "HTTP 403"
+      "status": "ok",
+      "items": 18
     },
     {
       "id": "gh-search-productivity",
       "name": "GitHub Discovery · AI Productivity",
       "tier": "A",
       "kind": "github_search",
-      "status": "error",
-      "items": 0,
-      "error": "HTTP 403"
+      "status": "ok",
+      "items": 18
     },
     {
       "id": "producthunt",
@@ -922,7 +919,7 @@
       "id": "rr7p30n",
       "title": "freestylefly/awesome-gpt-image-2 — Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新",
       "url": "https://github.com/freestylefly/awesome-gpt-image-2",
-      "publishedAt": "2026-08-26T05:50:18.127Z",
+      "publishedAt": "2026-08-26T05:51:37.694Z",
       "description": "GitHub Trending · 1698 stars today · Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
       "source": {
         "id": "gh-trending",
@@ -979,7 +976,7 @@
       "id": "r1ne60iz",
       "title": "Shubhamsaboo/awesome-llm-apps — Star Shubhamsaboo / awesome-llm-apps 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
       "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
-      "publishedAt": "2026-08-26T05:50:18.127Z",
+      "publishedAt": "2026-08-26T05:51:37.694Z",
       "description": "GitHub Trending · 161 stars today · Star Shubhamsaboo / awesome-llm-apps 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
       "source": {
         "id": "gh-trending",
@@ -1089,7 +1086,7 @@
       "id": "rc79xnd",
       "title": "multica-ai/andrej-karpathy-skills — Star multica-ai / andrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Ka",
       "url": "https://github.com/multica-ai/andrej-karpathy-skills",
-      "publishedAt": "2026-08-26T05:50:18.127Z",
+      "publishedAt": "2026-08-26T05:51:37.694Z",
       "description": "GitHub Trending · 830 stars today · Star multica-ai / andrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
       "source": {
         "id": "gh-trending",
