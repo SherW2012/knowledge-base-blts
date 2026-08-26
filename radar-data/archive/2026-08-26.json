@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "status": "ok",
-  "generatedAt": "2026-08-26T03:19:46.671Z",
+  "generatedAt": "2026-08-26T03:39:03.862Z",
   "date": "2026-08-26",
   "timezone": "Asia/Shanghai",
   "llm": {
@@ -15,10 +15,10 @@
     "manualSources": 7,
     "successfulSources": 32,
     "failedSources": 0,
-    "scannedItems": 463,
-    "recentItems": 92,
-    "dedupedItems": 92,
-    "eventClusters": 84,
+    "scannedItems": 464,
+    "recentItems": 93,
+    "dedupedItems": 93,
+    "eventClusters": 85,
     "publishedItems": 15
   },
   "sourceRuns": [
@@ -268,7 +268,7 @@
       "tier": "B",
       "kind": "hackernews",
       "status": "ok",
-      "items": 15
+      "items": 16
     },
     {
       "id": "arxiv-cs-ai",
@@ -1092,7 +1092,7 @@
       "category": "AI Coding",
       "summary": "<h2>What's changed</h2> <ul> <li>Added a startup warning for Bash allow rules with a wildcard before the subcommand (e.g. <code>Bash(git * main)</code>), since they also match options inserted before the subcommand</li> <li>Added an Auto mo",
       "importance": 87,
-      "novelty": 90,
+      "novelty": 89,
       "relevance": 75,
       "socialPotential": 63,
       "sourceQuality": 88,
@@ -1276,7 +1276,7 @@
       "category": "Agent",
       "summary": "<p>As data collection and data generation accelerate, the gap between our ability to produce raw data and our capacity to standardize it continues to widen. Without automation, this gap becomes a critical bottleneck that delays analysis, co",
       "importance": 87,
-      "novelty": 75,
+      "novelty": 74,
       "relevance": 75,
       "socialPotential": 63,
       "sourceQuality": 88,
