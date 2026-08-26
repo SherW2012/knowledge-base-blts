@@ -92,6 +92,13 @@ function flattenDocuments(nodes, output = []) {
   return output;
 }
 
+function appContentPaths(department) {
+  return new Set((department.apps || [])
+    .map((app) => app.contentPath)
+    .filter(Boolean)
+    .map((contentPath) => slash(path.join(department.name, contentPath))));
+}
+
 async function copyContent(source, relative = "") {
   for (const entry of await readdir(source, { withFileTypes: true })) {
     if (entry.name.startsWith(".") || excluded.has(entry.name)) continue;
@@ -118,7 +125,8 @@ for (const department of config.departments) {
   const absolute = path.join(root, department.name);
   if (!(await exists(absolute))) continue;
   const tree = await buildNode(absolute, department.name);
-  const children = tree?.children || [];
+  const hiddenAppPaths = appContentPaths(department);
+  const children = (tree?.children || []).filter((node) => !hiddenAppPaths.has(node.path));
   const documents = flattenDocuments(children);
   const topics = children.filter((node) => node.type === "folder").map((node) => ({
     name: node.name,
@@ -139,4 +147,5 @@ await writeFile(path.join(outRoot, "content-index.json"), JSON.stringify({
 await writeFile(path.join(outRoot, ".nojekyll"), "");
 
 const total = departments.reduce((sum, department) => sum + department.documents, 0);
-console.log(`Built ${departments.length} departments and ${total} Markdown documents into dist/.`);
+const appTotal = departments.reduce((sum, department) => sum + (department.apps?.length || 0), 0);
+console.log(`Built ${departments.length} departments, ${appTotal} applications and ${total} Markdown documents into dist/.`);

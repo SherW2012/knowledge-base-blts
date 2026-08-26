@@ -5,6 +5,8 @@
   "scripts": {
     "build": "node scripts/build-site.mjs",
     "validate": "node scripts/validate-content.mjs",
-    "check": "npm run validate && npm run build"
+    "check": "npm run validate && npm run build",
+    "radar": "node scripts/radar-runtime.mjs",
+    "radar:weekly": "node scripts/radar-runtime.mjs --weekly"
   }
 }

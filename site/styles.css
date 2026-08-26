@@ -751,14 +751,16 @@ button { -webkit-tap-highlight-color: transparent; }
 
 /* ---------------- 沉浸式版面 ----------------
    相册、诗集这类模块需要整幅宽度；同页的正文仍收在易读的宽度里居中。 */
-.reading-layout.immersive {
+/* :not(.workspace-layout) 让位给部门应用工作台的版面 */
+.reading-layout.immersive:not(.workspace-layout) {
   display: grid; grid-template-columns: minmax(0, 1fr); gap: 0;
   width: min(1460px, calc(100% - 56px));
 }
-.reading-layout.immersive .article > * { max-width: 900px; margin-left: auto; margin-right: auto; }
+.reading-layout.immersive:not(.workspace-layout) .article > * { max-width: 900px; margin-left: auto; margin-right: auto; }
 .reading-layout.immersive .article > .portrait-gallery,
 .reading-layout.immersive .article > .poetry,
 .reading-layout.immersive .article > .poetry-shelf { max-width: none; }
+.reading-layout.immersive.workspace-layout .article > * { max-width: none; }
 
 .portrait-gallery.is-full {
   margin: 0; border: 0; border-radius: 0; height: 100vh;
@@ -1031,10 +1033,10 @@ button { -webkit-tap-highlight-color: transparent; }
 .gu-shelf-copy small { color: var(--gu-ink-faint); font-size: 12.5px; line-height: 2; letter-spacing: .04em; }
 
 @media (max-width: 1180px) {
-  .reading-layout.immersive { width: min(1100px, calc(100% - 40px)); }
+  .reading-layout.immersive:not(.workspace-layout) { width: min(1100px, calc(100% - 40px)); }
 }
 @media (max-width: 800px) {
-  .reading-layout.immersive { width: min(100% - 24px, 900px); }
+  .reading-layout.immersive:not(.workspace-layout) { width: min(100% - 24px, 900px); }
   .gu-stage { padding: 16px 12px 4px; }
   .gu-book { --gu-h: min(66vh, 560px); }
   .gu-foot { padding: 12px 12px 16px; gap: 10px; }

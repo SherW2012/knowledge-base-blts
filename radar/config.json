@@ -1,0 +1,61 @@
+{
+  "timezone": "Asia/Shanghai",
+  "lookbackHours": 36,
+  "topK": 15,
+  "maxPerSource": 20,
+  "hackerNewsTopN": 80,
+  "arxivMaxResults": 20,
+  "minimumItemsToPublish": 3,
+  "requestTimeoutMs": 12000,
+  "weights": {
+    "importance": 0.3,
+    "novelty": 0.25,
+    "relevance": 0.2,
+    "socialPotential": 0.15,
+    "sourceQuality": 0.1
+  },
+  "tierBaseScore": {
+    "S": 88,
+    "A": 76,
+    "B": 62
+  },
+  "keywords": {
+    "high": [
+      "gpt",
+      "claude",
+      "gemini",
+      "llm",
+      "agent",
+      "agents",
+      "codex",
+      "model",
+      "models",
+      "multimodal",
+      "reasoning",
+      "inference",
+      "mcp",
+      "open source",
+      "open-source",
+      "robotics",
+      "vibe coding",
+      "ai coding",
+      "artificial intelligence"
+    ],
+    "medium": [
+      "benchmark",
+      "release",
+      "research",
+      "tool",
+      "developer",
+      "workflow",
+      "automation",
+      "startup",
+      "funding",
+      "acquisition",
+      "productivity",
+      "api",
+      "sdk",
+      "framework"
+    ]
+  }
+}

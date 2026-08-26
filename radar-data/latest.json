@@ -1,0 +1,1478 @@
+{
+  "schemaVersion": 1,
+  "status": "ok",
+  "generatedAt": "2026-08-26T03:39:03.862Z",
+  "date": "2026-08-26",
+  "timezone": "Asia/Shanghai",
+  "llm": {
+    "enabled": false,
+    "provider": "https://api.openai.com/v1",
+    "model": null
+  },
+  "stats": {
+    "configuredSources": 39,
+    "automatedSources": 32,
+    "manualSources": 7,
+    "successfulSources": 32,
+    "failedSources": 0,
+    "scannedItems": 464,
+    "recentItems": 93,
+    "dedupedItems": 93,
+    "eventClusters": 85,
+    "publishedItems": 15
+  },
+  "sourceRuns": [
+    {
+      "id": "openai-news",
+      "name": "OpenAI News",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 20
+    },
+    {
+      "id": "google-ai-blog",
+      "name": "Google AI Blog",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 20
+    },
+    {
+      "id": "deepmind-blog",
+      "name": "Google DeepMind Blog",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 20
+    },
+    {
+      "id": "microsoft-research",
+      "name": "Microsoft Research",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "github-ai",
+      "name": "GitHub AI & ML",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "github-changelog",
+      "name": "GitHub Changelog",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "huggingface-blog",
+      "name": "Hugging Face Blog",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 20
+    },
+    {
+      "id": "nvidia-ai",
+      "name": "NVIDIA AI Blog",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 18
+    },
+    {
+      "id": "aws-ml",
+      "name": "AWS Machine Learning Blog",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 20
+    },
+    {
+      "id": "cloudflare-ai",
+      "name": "Cloudflare AI",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 20
+    },
+    {
+      "id": "tensorflow-blog",
+      "name": "TensorFlow Blog",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 20
+    },
+    {
+      "id": "gh-openai-codex",
+      "name": "openai/codex Releases",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "gh-openai-agents",
+      "name": "openai/openai-agents-python Releases",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "gh-claude-code",
+      "name": "anthropics/claude-code Releases",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "gh-gemini-cli",
+      "name": "google-gemini/gemini-cli Releases",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "gh-langgraph",
+      "name": "langchain-ai/langgraph Releases",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "gh-vercel-ai",
+      "name": "vercel/ai Releases",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "gh-ollama",
+      "name": "ollama/ollama Releases",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "gh-llamacpp",
+      "name": "ggml-org/llama.cpp Releases",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "gh-vllm",
+      "name": "vllm-project/vllm Releases",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "gh-transformers",
+      "name": "huggingface/transformers Releases",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "gh-open-webui",
+      "name": "open-webui/open-webui Releases",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "gh-browser-use",
+      "name": "browser-use/browser-use Releases",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "gh-litellm",
+      "name": "BerriAI/litellm Releases",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "gh-mcp-servers",
+      "name": "modelcontextprotocol/servers Releases",
+      "tier": "S",
+      "kind": "feed",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "simon-willison",
+      "name": "Simon Willison",
+      "tier": "A",
+      "kind": "feed",
+      "status": "ok",
+      "items": 20
+    },
+    {
+      "id": "sebastian-raschka",
+      "name": "Sebastian Raschka / Ahead of AI",
+      "tier": "A",
+      "kind": "feed",
+      "status": "ok",
+      "items": 20
+    },
+    {
+      "id": "latent-space",
+      "name": "Latent Space",
+      "tier": "A",
+      "kind": "feed",
+      "status": "ok",
+      "items": 20
+    },
+    {
+      "id": "one-useful-thing",
+      "name": "One Useful Thing / Ethan Mollick",
+      "tier": "A",
+      "kind": "feed",
+      "status": "ok",
+      "items": 20
+    },
+    {
+      "id": "interconnects",
+      "name": "Interconnects",
+      "tier": "A",
+      "kind": "feed",
+      "status": "ok",
+      "items": 20
+    },
+    {
+      "id": "hackernews-ai",
+      "name": "Hacker News AI Signals",
+      "tier": "B",
+      "kind": "hackernews",
+      "status": "ok",
+      "items": 16
+    },
+    {
+      "id": "arxiv-cs-ai",
+      "name": "arXiv cs.AI",
+      "tier": "B",
+      "kind": "arxiv",
+      "status": "ok",
+      "items": 20
+    },
+    {
+      "id": "x-karpathy",
+      "name": "@karpathy",
+      "tier": "A",
+      "kind": "manual",
+      "status": "manual",
+      "items": 0
+    },
+    {
+      "id": "x-chipro",
+      "name": "@chipro",
+      "tier": "A",
+      "kind": "manual",
+      "status": "manual",
+      "items": 0
+    },
+    {
+      "id": "x-swyx",
+      "name": "@swyx",
+      "tier": "A",
+      "kind": "manual",
+      "status": "manual",
+      "items": 0
+    },
+    {
+      "id": "x-drjimfan",
+      "name": "@DrJimFan",
+      "tier": "A",
+      "kind": "manual",
+      "status": "manual",
+      "items": 0
+    },
+    {
+      "id": "x-andrewng",
+      "name": "@AndrewYNg",
+      "tier": "A",
+      "kind": "manual",
+      "status": "manual",
+      "items": 0
+    },
+    {
+      "id": "x-ylecun",
+      "name": "@ylecun",
+      "tier": "A",
+      "kind": "manual",
+      "status": "manual",
+      "items": 0
+    },
+    {
+      "id": "x-fchollet",
+      "name": "@fchollet",
+      "tier": "A",
+      "kind": "manual",
+      "status": "manual",
+      "items": 0
+    }
+  ],
+  "sources": [
+    {
+      "id": "openai-news",
+      "name": "OpenAI News",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://openai.com/news/rss.xml",
+      "tags": [
+        "model",
+        "product",
+        "research",
+        "company"
+      ]
+    },
+    {
+      "id": "google-ai-blog",
+      "name": "Google AI Blog",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://blog.google/technology/ai/rss/",
+      "tags": [
+        "model",
+        "product",
+        "research"
+      ]
+    },
+    {
+      "id": "deepmind-blog",
+      "name": "Google DeepMind Blog",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "tags": [
+        "research",
+        "model",
+        "science"
+      ]
+    },
+    {
+      "id": "microsoft-research",
+      "name": "Microsoft Research",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://www.microsoft.com/en-us/research/feed/",
+      "tags": [
+        "research",
+        "agents",
+        "systems"
+      ]
+    },
+    {
+      "id": "github-ai",
+      "name": "GitHub AI & ML",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.blog/ai-and-ml/feed/",
+      "tags": [
+        "coding",
+        "agents",
+        "developer"
+      ]
+    },
+    {
+      "id": "github-changelog",
+      "name": "GitHub Changelog",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.blog/changelog/feed/",
+      "tags": [
+        "coding",
+        "developer",
+        "product"
+      ]
+    },
+    {
+      "id": "huggingface-blog",
+      "name": "Hugging Face Blog",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "tags": [
+        "open-source",
+        "model",
+        "research"
+      ]
+    },
+    {
+      "id": "nvidia-ai",
+      "name": "NVIDIA AI Blog",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://blogs.nvidia.com/blog/category/deep-learning/feed/",
+      "tags": [
+        "infra",
+        "model",
+        "hardware"
+      ]
+    },
+    {
+      "id": "aws-ml",
+      "name": "AWS Machine Learning Blog",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://aws.amazon.com/blogs/machine-learning/feed/",
+      "tags": [
+        "infra",
+        "agents",
+        "enterprise"
+      ]
+    },
+    {
+      "id": "cloudflare-ai",
+      "name": "Cloudflare AI",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://blog.cloudflare.com/tag/ai/rss/",
+      "tags": [
+        "infra",
+        "agents",
+        "developer"
+      ]
+    },
+    {
+      "id": "tensorflow-blog",
+      "name": "TensorFlow Blog",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://blog.tensorflow.org/feeds/posts/default?alt=rss",
+      "tags": [
+        "open-source",
+        "research",
+        "developer"
+      ]
+    },
+    {
+      "id": "gh-openai-codex",
+      "name": "openai/codex Releases",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.com/openai/codex/releases.atom",
+      "tags": [
+        "coding",
+        "agents"
+      ]
+    },
+    {
+      "id": "gh-openai-agents",
+      "name": "openai/openai-agents-python Releases",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.com/openai/openai-agents-python/releases.atom",
+      "tags": [
+        "agents",
+        "developer"
+      ]
+    },
+    {
+      "id": "gh-claude-code",
+      "name": "anthropics/claude-code Releases",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.com/anthropics/claude-code/releases.atom",
+      "tags": [
+        "coding",
+        "agents"
+      ]
+    },
+    {
+      "id": "gh-gemini-cli",
+      "name": "google-gemini/gemini-cli Releases",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.com/google-gemini/gemini-cli/releases.atom",
+      "tags": [
+        "coding",
+        "agents"
+      ]
+    },
+    {
+      "id": "gh-langgraph",
+      "name": "langchain-ai/langgraph Releases",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.com/langchain-ai/langgraph/releases.atom",
+      "tags": [
+        "agents",
+        "developer"
+      ]
+    },
+    {
+      "id": "gh-vercel-ai",
+      "name": "vercel/ai Releases",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.com/vercel/ai/releases.atom",
+      "tags": [
+        "developer",
+        "agents"
+      ]
+    },
+    {
+      "id": "gh-ollama",
+      "name": "ollama/ollama Releases",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.com/ollama/ollama/releases.atom",
+      "tags": [
+        "local-ai",
+        "open-source"
+      ]
+    },
+    {
+      "id": "gh-llamacpp",
+      "name": "ggml-org/llama.cpp Releases",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.com/ggml-org/llama.cpp/releases.atom",
+      "tags": [
+        "inference",
+        "open-source"
+      ]
+    },
+    {
+      "id": "gh-vllm",
+      "name": "vllm-project/vllm Releases",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.com/vllm-project/vllm/releases.atom",
+      "tags": [
+        "inference",
+        "infra"
+      ]
+    },
+    {
+      "id": "gh-transformers",
+      "name": "huggingface/transformers Releases",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.com/huggingface/transformers/releases.atom",
+      "tags": [
+        "model",
+        "open-source"
+      ]
+    },
+    {
+      "id": "gh-open-webui",
+      "name": "open-webui/open-webui Releases",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.com/open-webui/open-webui/releases.atom",
+      "tags": [
+        "product",
+        "open-source"
+      ]
+    },
+    {
+      "id": "gh-browser-use",
+      "name": "browser-use/browser-use Releases",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.com/browser-use/browser-use/releases.atom",
+      "tags": [
+        "agents",
+        "browser"
+      ]
+    },
+    {
+      "id": "gh-litellm",
+      "name": "BerriAI/litellm Releases",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.com/BerriAI/litellm/releases.atom",
+      "tags": [
+        "infra",
+        "developer"
+      ]
+    },
+    {
+      "id": "gh-mcp-servers",
+      "name": "modelcontextprotocol/servers Releases",
+      "tier": "S",
+      "kind": "feed",
+      "url": "https://github.com/modelcontextprotocol/servers/releases.atom",
+      "tags": [
+        "mcp",
+        "agents"
+      ]
+    },
+    {
+      "id": "simon-willison",
+      "name": "Simon Willison",
+      "tier": "A",
+      "kind": "feed",
+      "url": "https://simonwillison.net/atom/everything/",
+      "tags": [
+        "tools",
+        "coding",
+        "models"
+      ]
+    },
+    {
+      "id": "sebastian-raschka",
+      "name": "Sebastian Raschka / Ahead of AI",
+      "tier": "A",
+      "kind": "feed",
+      "url": "https://magazine.sebastianraschka.com/feed",
+      "tags": [
+        "research",
+        "model",
+        "education"
+      ]
+    },
+    {
+      "id": "latent-space",
+      "name": "Latent Space",
+      "tier": "A",
+      "kind": "feed",
+      "url": "https://www.latent.space/feed",
+      "tags": [
+        "agents",
+        "developer",
+        "industry"
+      ]
+    },
+    {
+      "id": "one-useful-thing",
+      "name": "One Useful Thing / Ethan Mollick",
+      "tier": "A",
+      "kind": "feed",
+      "url": "https://www.oneusefulthing.org/feed",
+      "tags": [
+        "work",
+        "productivity",
+        "industry"
+      ]
+    },
+    {
+      "id": "interconnects",
+      "name": "Interconnects",
+      "tier": "A",
+      "kind": "feed",
+      "url": "https://www.interconnects.ai/feed",
+      "tags": [
+        "model",
+        "industry",
+        "research"
+      ]
+    },
+    {
+      "id": "hackernews-ai",
+      "name": "Hacker News AI Signals",
+      "tier": "B",
+      "kind": "hackernews",
+      "url": "https://hacker-news.firebaseio.com/v0/topstories.json",
+      "tags": [
+        "community",
+        "startup",
+        "developer"
+      ]
+    },
+    {
+      "id": "arxiv-cs-ai",
+      "name": "arXiv cs.AI",
+      "tier": "B",
+      "kind": "arxiv",
+      "url": null,
+      "tags": [
+        "research"
+      ]
+    },
+    {
+      "id": "x-karpathy",
+      "name": "@karpathy",
+      "tier": "A",
+      "kind": "manual",
+      "url": "https://x.com/karpathy",
+      "tags": [
+        "coding",
+        "models"
+      ]
+    },
+    {
+      "id": "x-chipro",
+      "name": "@chipro",
+      "tier": "A",
+      "kind": "manual",
+      "url": "https://x.com/chipro",
+      "tags": [
+        "engineering",
+        "systems"
+      ]
+    },
+    {
+      "id": "x-swyx",
+      "name": "@swyx",
+      "tier": "A",
+      "kind": "manual",
+      "url": "https://x.com/swyx",
+      "tags": [
+        "agents",
+        "developer"
+      ]
+    },
+    {
+      "id": "x-drjimfan",
+      "name": "@DrJimFan",
+      "tier": "A",
+      "kind": "manual",
+      "url": "https://x.com/DrJimFan",
+      "tags": [
+        "agents",
+        "robotics"
+      ]
+    },
+    {
+      "id": "x-andrewng",
+      "name": "@AndrewYNg",
+      "tier": "A",
+      "kind": "manual",
+      "url": "https://x.com/AndrewYNg",
+      "tags": [
+        "applications",
+        "industry"
+      ]
+    },
+    {
+      "id": "x-ylecun",
+      "name": "@ylecun",
+      "tier": "A",
+      "kind": "manual",
+      "url": "https://x.com/ylecun",
+      "tags": [
+        "research",
+        "models"
+      ]
+    },
+    {
+      "id": "x-fchollet",
+      "name": "@fchollet",
+      "tier": "A",
+      "kind": "manual",
+      "url": "https://x.com/fchollet",
+      "tags": [
+        "research",
+        "reasoning"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "rf6b5ro",
+      "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses",
+      "url": "https://arxiv.org/abs/2608.24876v1",
+      "publishedAt": "2026-08-25T17:56:35.000Z",
+      "description": "Recursive self-improvement (RSI) remains hard in long-horizon tasks, where growing histories obscure the task state and misalign skill invocation. We introduce Recuris, a recursive Experiential-Working Memory architecture for long-horizon agent harnesses, in which Working Memory tracks task progress and guides skill selection from Experiential Memory, grounding skill use in current needs rather than the full history. This coupling also turns execution into structured evidence that localizes failures to specific memory components. Across tasks, a fixed Meta-Agent turns that evidence into localized, validation-gated updates to Skill Memory that reshape execution and yield new evidence, forming a bounded recursive memory-evolution loop. Across four long-horizon benchmarks and ten models, Recuris improves task success in 35 of the 37 completed model-benchmark pairs, carrying frontier models to SOTA-level task success: on tau-bench it adds +17.8 points to GPT-5.6 Sol and +15.6 to Claude Opus 5, taking Opus 5 to 87.9%, and +16.6/+13.5 points on Qwen3.6-27B/35B on SkillFlow. The advantage widens as the interaction horizon grows, to +32.2 points on the longest tasks, and common long-horizon failures fall by up to 80%. These results position recursively evolving memory as a scalable foundation for RSI, enabling agents to continuously transform accumulated experience into increasingly effective long-horizon behavior. Code: https://github.com/Gen-Verse/Recuris",
+      "source": {
+        "id": "arxiv-cs-ai",
+        "name": "arXiv cs.AI",
+        "tier": "B",
+        "kind": "arxiv",
+        "tags": [
+          "research"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "arxiv-cs-ai",
+          "name": "arXiv cs.AI",
+          "tier": "B",
+          "kind": "arxiv",
+          "tags": [
+            "research"
+          ]
+        }
+      ],
+      "category": "Agent",
+      "summary": "Recursive self-improvement (RSI) remains hard in long-horizon tasks, where growing histories obscure the task state and misalign skill invocation. We introduce Recuris, a recursive Experiential-Working Memory architecture for long-horizon a",
+      "importance": 96,
+      "novelty": 100,
+      "relevance": 94,
+      "socialPotential": 75,
+      "sourceQuality": 62,
+      "confidence": 62,
+      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
+      "whatChanged": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses",
+      "angles": [
+        "发生了什么：用最短篇幅解释「Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 90
+    },
+    {
+      "id": "rz6l6mq",
+      "title": "StepGuard: Learning Step-Level Guardrails with Scalable Supervision and Safety-Utility Balancing",
+      "url": "https://arxiv.org/abs/2608.24777v1",
+      "publishedAt": "2026-08-25T16:17:27.000Z",
+      "description": "LLM-based agents can interact with external environments through tool invocation, but this capability also introduces security risks such as file modification, information leakage, and unauthorized actions. Existing guardrails often evaluate completed trajectories, leaving pre-execution monitoring of step-level actions underexplored. We propose StepGuard, a step-level guard model that can audit completed agent trajectories and check tool actions before they are executed. To train StepGuard, we introduce StepGen, an automatic data engine that generates safe and unsafe trajectories with the same context but different actions at the risky step. To further reduce over-defense and under-defense, we propose Balance-GRPO, which dynamically balances learning between safe and unsafe actions based on their observed accuracy. Experiments show that StepGuard achieves the highest average accuracy among open-weight guard models, with performance comparable to GPT-5.4. When used to guard agents on AgentDojo and AgentDyn, StepGuard reduces mean attack success rate by 77.3% relative to the no-guard setting, while mean utility drops by only 2.8 percentage points.",
+      "source": {
+        "id": "arxiv-cs-ai",
+        "name": "arXiv cs.AI",
+        "tier": "B",
+        "kind": "arxiv",
+        "tags": [
+          "research"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "arxiv-cs-ai",
+          "name": "arXiv cs.AI",
+          "tier": "B",
+          "kind": "arxiv",
+          "tags": [
+            "research"
+          ]
+        }
+      ],
+      "category": "Agent",
+      "summary": "LLM-based agents can interact with external environments through tool invocation, but this capability also introduces security risks such as file modification, information leakage, and unauthorized actions. Existing guardrails often evaluat",
+      "importance": 96,
+      "novelty": 100,
+      "relevance": 94,
+      "socialPotential": 75,
+      "sourceQuality": 62,
+      "confidence": 62,
+      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
+      "whatChanged": "StepGuard: Learning Step-Level Guardrails with Scalable Supervision and Safety-Utility Balancing",
+      "angles": [
+        "发生了什么：用最短篇幅解释「StepGuard: Learning Step-Level Guardrails with Scalable Supervision and Safety-Utility Balancing」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 90
+    },
+    {
+      "id": "r1jy4z8j",
+      "title": "Agentic Resource Discovery (ARD): An open specification for agent discovery",
+      "url": "https://aws.amazon.com/blogs/machine-learning/agentic-resource-discovery-ard-an-open-specification-for-agent-discovery/",
+      "publishedAt": "2026-08-24T16:22:03.000Z",
+      "description": "<h3>How AWS Agent Registry and the Agentic Resource Discovery (ARD) specification enable cross-environment discovery for your agents</h3> <p>As organizations scale their use of artificial intelligence (AI) agents and tools, finding the right resource becomes the hard part. Teams build Model Context Protocol (MCP) servers, deploy agents, and create specialized tools, but without a central catalog, those resources stay siloed. Developers locate a resource, vet it, connect it, and maintain that connection manually. Worse, configuring an agent for one AI client doesn’t make it available to another.</p> <p>This was manageable when a team wired up a handful of tools. It doesn’t scale to a growing number of agents, MCP servers, skills, and APIs now spread across public registries and private enterprise estates.</p> <h2 id=\"aws-agent-registry-a-centralized-searchable-catalog\">AWS Agent Registry: A centralized, searchable catalog</h2> <p>AWS Agent Registry gives your organization a centralized catalog for agents, MCP servers, tools, agent skills, and custom resources. It’s built around two core concepts:</p> <ul> <li>Registries. A registry is a catalog you create in your AWS account with its own authorization configuration and approval settings. You can run a single org-wide registry or separate registries by resource type, stage, or team. With cross-account sharing, a registry can serve your entire AWS Organization.</li> <li>Registry Records. A record represents an individual resource, capturing metadata that describes what it is, what it does, and how to reach it.</li> </ul> <h2 i",
+      "source": {
+        "id": "aws-ml",
+        "name": "AWS Machine Learning Blog",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "infra",
+          "agents",
+          "enterprise"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "aws-ml",
+          "name": "AWS Machine Learning Blog",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "infra",
+            "agents",
+            "enterprise"
+          ]
+        }
+      ],
+      "category": "AI Coding",
+      "summary": "<h3>How AWS Agent Registry and the Agentic Resource Discovery (ARD) specification enable cross-environment discovery for your agents</h3> <p>As organizations scale their use of artificial intelligence (AI) agents and tools, finding the righ",
+      "importance": 100,
+      "novelty": 85,
+      "relevance": 91,
+      "socialPotential": 76,
+      "sourceQuality": 88,
+      "confidence": 62,
+      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
+      "whatChanged": "Agentic Resource Discovery (ARD): An open specification for agent discovery",
+      "angles": [
+        "发生了什么：用最短篇幅解释「Agentic Resource Discovery (ARD): An open specification for agent discovery」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 90
+    },
+    {
+      "id": "r15h5f6a",
+      "title": "Agentic observability with Amazon OpenSearch Service MCP Apps",
+      "url": "https://aws.amazon.com/blogs/machine-learning/agentic-observability-with-amazon-opensearch-service-mcp-apps/",
+      "publishedAt": "2026-08-25T19:00:09.000Z",
+      "description": "<p>Observability agents are fast. They query alerts, correlate logs with traces, and produce a root cause hypothesis in minutes. The part that still takes time is verification. You read the agent’s text summary, open your observability tools in a browser, navigate to the trace waterfall, check the service map to scope impact, and cross-reference what the agent told you against what you see on screen. The agent saved you the query time. It did not save you the tab-switching, context-carrying, manual-verification time. That is still your job.</p> <p>Amazon OpenSearch Service MCP Apps close that gap. MCP Apps extend the Model Context Protocol so that each tool call responds with an interactive visualization — a trace waterfall, a service topology, a log pattern view — rendered directly in your AI assistant’s chat window alongside the text response. You ask the agent to investigate. The agent queries Amazon OpenSearch Service. The response arrives with both a text explanation and the relevant dashboard widget. You verify in the same thread where you asked the question, without opening a separate browser tab or re-running a query.</p> <p>In this post, we explain how MCP Apps change your observability workflow and walk through setup step by step.</p> <h2 id=\"the-problem-verification-still-requires-leaving-the-agent-loop\">The problem: Verification still requires leaving the agent loop</h2> <p>The typical investigation loop proceeds as follows. First, the engineer asks the agent and gets a text-based root cause hypothesis. Next, they leave the IDE to open a browser and log in to a ",
+      "source": {
+        "id": "aws-ml",
+        "name": "AWS Machine Learning Blog",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "infra",
+          "agents",
+          "enterprise"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "aws-ml",
+          "name": "AWS Machine Learning Blog",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "infra",
+            "agents",
+            "enterprise"
+          ]
+        }
+      ],
+      "category": "Agent",
+      "summary": "<p>Observability agents are fast. They query alerts, correlate logs with traces, and produce a root cause hypothesis in minutes. The part that still takes time is verification. You read the agent’s text summary, open your observability tool",
+      "importance": 95,
+      "novelty": 93,
+      "relevance": 82,
+      "socialPotential": 68,
+      "sourceQuality": 88,
+      "confidence": 62,
+      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
+      "whatChanged": "Agentic observability with Amazon OpenSearch Service MCP Apps",
+      "angles": [
+        "发生了什么：用最短篇幅解释「Agentic observability with Amazon OpenSearch Service MCP Apps」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 87
+    },
+    {
+      "id": "r1gwt55g",
+      "title": "How to evaluate LLMs before production",
+      "url": "https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/",
+      "publishedAt": "2026-08-25T21:35:11.000Z",
+      "description": "A language model can perform well on a clean benchmark and still struggle with the cases that matter in production. Benchmarks and curated datasets are useful when prototyping an LLM-based system. They help teams compare models, test an initial prompt, and determine whether an idea is technically plausible. But as a system moves closer to production, the evaluation problem changes. Real inputs are often ambiguous. Labels may be inconsistent. Important context may be missing or truncated. The evaluation set may not reflect the production distribution. Edge cases that rarely appear in benchmarks can become common sources of failure. Even when offline metrics improve, those results may not translate cleanly into production behavior. We encountered these challenges while evaluating an LLM-based system designed to reduce false positives in GitHub secret scanning. Secret scanning identifies credentials such as tokens and keys that may have been committed to a repository. Because some candidate strings resemble secrets, but don&rsquo;t actually represent real credentials, developers may spend time investigating alerts that don&rsquo;t require remediation. Rather than determine whether an LLM could classify a string correctly, we needed to understand whether the system could reduce noisy alerts while preserving enough recall to remain safe for a security workflow. In this post, we share the practices that helped us move from promising prototype results to production. The lessons apply broadly to LLM-powered systems in code analysis, developer tools, security, data analysis, and oth",
+      "source": {
+        "id": "github-ai",
+        "name": "GitHub AI & ML",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "coding",
+          "agents",
+          "developer"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "github-ai",
+          "name": "GitHub AI & ML",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "coding",
+            "agents",
+            "developer"
+          ]
+        }
+      ],
+      "category": "AI Coding",
+      "summary": "A language model can perform well on a clean benchmark and still struggle with the cases that matter in production. Benchmarks and curated datasets are useful when prototyping an LLM-based system. They help teams compare models, test an ini",
+      "importance": 93,
+      "novelty": 89,
+      "relevance": 79,
+      "socialPotential": 69,
+      "sourceQuality": 88,
+      "confidence": 62,
+      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
+      "whatChanged": "How to evaluate LLMs before production",
+      "angles": [
+        "发生了什么：用最短篇幅解释「How to evaluate LLMs before production」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 85
+    },
+    {
+      "id": "rdggg65",
+      "title": "StarHarness: Evolving Harnesses with Stratified Search for Enterprise Environments",
+      "url": "https://arxiv.org/abs/2608.24804v1",
+      "publishedAt": "2026-08-25T16:48:05.000Z",
+      "description": "We present StarHarness, a framework for evolving environment-specific agent harnesses while keeping model weights fixed. The evolved harness can include prompt and task framing, tool interfaces, skills, MCP-backed providers, subagent structure, and agent-loop configuration. StarHarness constructs a compact evolution pool by stratifying tasks according to baseline failure behavior, separates proposer-visible search tasks from proposer-hidden selection tasks, and reserves held-out tasks for evaluating generalization. Across ITBench SRE, EnterpriseOps-Gym ITSM, and AutomationBench Finance, harness evolution improves full-benchmark performance by 20-35 percentage points over the default harness after 4-12 accepted changes per environment. These gains persist on tasks excluded from evolution and transfer without re-evolution across GPT and Qwen model families. Trace analysis links the improvements to interface repairs, environment conventions, and operational knowledge that compresses search, with fewer false-positive diagnoses and shorter trajectories in several settings. StarHarness therefore offers a practical way to reduce persistent model-environment mismatch in tool-rich enterprise tasks.",
+      "source": {
+        "id": "arxiv-cs-ai",
+        "name": "arXiv cs.AI",
+        "tier": "B",
+        "kind": "arxiv",
+        "tags": [
+          "research"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "arxiv-cs-ai",
+          "name": "arXiv cs.AI",
+          "tier": "B",
+          "kind": "arxiv",
+          "tags": [
+            "research"
+          ]
+        }
+      ],
+      "category": "Agent",
+      "summary": "We present StarHarness, a framework for evolving environment-specific agent harnesses while keeping model weights fixed. The evolved harness can include prompt and task framing, tool interfaces, skills, MCP-backed providers, subagent struct",
+      "importance": 89,
+      "novelty": 92,
+      "relevance": 86,
+      "socialPotential": 74,
+      "sourceQuality": 62,
+      "confidence": 62,
+      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
+      "whatChanged": "StarHarness: Evolving Harnesses with Stratified Search for Enterprise Environments",
+      "angles": [
+        "发生了什么：用最短篇幅解释「StarHarness: Evolving Harnesses with Stratified Search for Enterprise Environments」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 84
+    },
+    {
+      "id": "r5p4h9v",
+      "title": "v2.1.246",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246",
+      "publishedAt": "2026-08-25T22:31:52.000Z",
+      "description": "<h2>What's changed</h2> <ul> <li>Added a startup warning for Bash allow rules with a wildcard before the subcommand (e.g. <code>Bash(git * main)</code>), since they also match options inserted before the subcommand</li> <li>Added an Auto mode tab to <code>/permissions</code> for viewing and editing auto mode classifier rules</li> <li>Added the turn's completion time to the end-of-turn duration line, e.g. <code>✻ Sautéed for 23s · done 6:05 PM</code></li> <li>Fixed fullscreen mode showing a blank transcript after resizing the terminal and jumping to the bottom until the next keypress</li> <li>Fixed a severe transcript slowdown when a diff contained a very long single line (e.g. a base64 string); such lines now render truncated with a marker</li> <li>Fixed erratic fullscreen scrolling when positioned at an earlier message, including jump-to-bottom getting stuck mid-transcript</li> <li>Fixed background sessions failing to open after 45 seconds when Claude Code's starting directory had been deleted, the machine had slept, or the host is slow to start processes</li> <li>Fixed background sessions failing to open with \"Couldn't start the background service … EACCES\" when another Claude Code process was re-installing the npm package at that moment</li> <li>Fixed markdown rendering being disabled for a whole message when its first 500 characters contained no markdown, and for <code>+</code>/<code>N)</code> lists and setext headings</li> <li>Fixed MCP tool calls interrupted by an incoming message in headless/remote sessions being reported to the model as \"completed with no output\" in",
+      "source": {
+        "id": "gh-claude-code",
+        "name": "anthropics/claude-code Releases",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "coding",
+          "agents"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "gh-claude-code",
+          "name": "anthropics/claude-code Releases",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "coding",
+            "agents"
+          ]
+        }
+      ],
+      "category": "AI Coding",
+      "summary": "<h2>What's changed</h2> <ul> <li>Added a startup warning for Bash allow rules with a wildcard before the subcommand (e.g. <code>Bash(git * main)</code>), since they also match options inserted before the subcommand</li> <li>Added an Auto mo",
+      "importance": 87,
+      "novelty": 89,
+      "relevance": 75,
+      "socialPotential": 63,
+      "sourceQuality": 88,
+      "confidence": 62,
+      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
+      "whatChanged": "v2.1.246",
+      "angles": [
+        "发生了什么：用最短篇幅解释「v2.1.246」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 82
+    },
+    {
+      "id": "r1kx0yu6",
+      "title": "Evidence Blindness in Direct Corpus Interaction: Persistent Navigation with AtlasNav",
+      "url": "https://arxiv.org/abs/2608.24764v1",
+      "publishedAt": "2026-08-25T16:03:02.000Z",
+      "description": "Large language model agents are moving beyond conventional retrieval-augmented generation toward direct interaction with external corpora. Direct Corpus Interaction (DCI) keeps the full corpus accessible, yet reachable evidence can remain unusable under finite interaction budgets. Required evidence may fail to surface, a surfaced supporting document may remain unopened, or an opened document may fail to expose its decisive fragment. We call this progressive silent loss Evidence Blindness and quantify it through stage-wise evidence realization. Within the DCI paradigm, raw interaction adds little reusable corpus organization, while dynamic-workspace methods reconstruct a query-conditioned interaction space from each query and trajectory. In both cases, useful structure is recovered largely online. We instead formulate large-scale agentic search as finite-budget navigation over reusable corpus structure. We introduce AtlasNav, a persistent multi-view corpus-navigation framework that retains direct corpus interaction but organizes the corpus once into a Corpus Atlas, allowing each query to navigate adaptively rather than reconstruct shared structure. On BrowseComp-Plus, AtlasNav achieves 92.05% strict accuracy while reducing recorded online inference cost by 30.21% relative to the prior dynamic-workspace state of the art. Under matched budgets, it realizes the complete required evidence earlier and approaches the same model's evidence-supplied empirical reference more rapidly. The same representation principle remains effective under PhantomWiki's distinct corpus organization ",
+      "source": {
+        "id": "arxiv-cs-ai",
+        "name": "arXiv cs.AI",
+        "tier": "B",
+        "kind": "arxiv",
+        "tags": [
+          "research"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "arxiv-cs-ai",
+          "name": "arXiv cs.AI",
+          "tier": "B",
+          "kind": "arxiv",
+          "tags": [
+            "research"
+          ]
+        }
+      ],
+      "category": "Agent",
+      "summary": "Large language model agents are moving beyond conventional retrieval-augmented generation toward direct interaction with external corpora. Direct Corpus Interaction (DCI) keeps the full corpus accessible, yet reachable evidence can remain u",
+      "importance": 83,
+      "novelty": 91,
+      "relevance": 82,
+      "socialPotential": 68,
+      "sourceQuality": 62,
+      "confidence": 62,
+      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
+      "whatChanged": "Evidence Blindness in Direct Corpus Interaction: Persistent Navigation with AtlasNav",
+      "angles": [
+        "发生了什么：用最短篇幅解释「Evidence Blindness in Direct Corpus Interaction: Persistent Navigation with AtlasNav」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 80
+    },
+    {
+      "id": "r1q5a9lq",
+      "title": "Building a restaurant telephony AI host with Amazon Connect",
+      "url": "https://aws.amazon.com/blogs/machine-learning/building-a-restaurant-telephony-ai-host-with-amazon-connect/",
+      "publishedAt": "2026-08-24T16:13:09.000Z",
+      "description": "<p>At many restaurants, a large share of orders still arrive by phone, and those calls usually land on a staff member who is already taking care of customers at the counter. Callers wait on hold, orders get written down by hand, and busy periods make both worse. Adding an app or a website helps customers who prefer to order online, but it does nothing for the person who wants to call and order.</p> <p>In this post, we show you how to build a voice ordering system that answers a phone number and takes the order from greeting to confirmation, with no app, no website, and no sign-in. A caller dials a phone number, and an AI host greets them, answers menu questions, finds a nearby pickup location, and confirms the order out loud. The system uses <a href=\"https://aws.amazon.com/connect/\" target=\"_blank\" rel=\"noopener\">Amazon Connect Customer</a> for the telephony channel, <a href=\"https://aws.amazon.com/lex/\" target=\"_blank\" rel=\"noopener\">Amazon Lex V2</a> with <a href=\"https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-connect-agentic-voice/\" target=\"_blank\" rel=\"noopener\">Amazon Connect Agentic Voice</a> for real-time speech, and <a href=\"https://aws.amazon.com/products/connect/customer/ai-agents/\" target=\"_blank\" rel=\"noopener\">Amazon Connect Customer AI agents</a> to orchestrate the conversation, connected to a restaurant backend through the <a href=\"https://modelcontextprotocol.io/\" target=\"_blank\" rel=\"noopener\">Model Context Protocol (MCP)</a> and <a href=\"https://aws.amazon.com/bedrock/agentcore/\" target=\"_blank\" rel=\"noopener\">Amazon Bedrock AgentCore</a>.</p> <",
+      "source": {
+        "id": "aws-ml",
+        "name": "AWS Machine Learning Blog",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "infra",
+          "agents",
+          "enterprise"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "aws-ml",
+          "name": "AWS Machine Learning Blog",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "infra",
+            "agents",
+            "enterprise"
+          ]
+        }
+      ],
+      "category": "Agent",
+      "summary": "<p>At many restaurants, a large share of orders still arrive by phone, and those calls usually land on a staff member who is already taking care of customers at the counter. Callers wait on hold, orders get written down by hand, and busy pe",
+      "importance": 89,
+      "novelty": 80,
+      "relevance": 78,
+      "socialPotential": 62,
+      "sourceQuality": 88,
+      "confidence": 62,
+      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
+      "whatChanged": "Building a restaurant telephony AI host with Amazon Connect",
+      "angles": [
+        "发生了什么：用最短篇幅解释「Building a restaurant telephony AI host with Amazon Connect」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 80
+    },
+    {
+      "id": "rpbq2g3",
+      "title": "Constrained Entity Selection under Partial Knowledge for LLM-Based Knowledge Graph QA",
+      "url": "https://arxiv.org/abs/2608.24824v1",
+      "publishedAt": "2026-08-25T17:04:32.000Z",
+      "description": "Large language models are increasingly used for knowledge graph question answering (KGQA), but can fail to correctly ground answers in the underlying graph. Current approaches to LLM-based KGQA either rely on full semantic parsing into executable queries such as SPARQL, which is brittle in practice due to complex schemas or incompleteness of real-world KGs, or on LLM-reasoning and answer generation over KGs, which can be more robust but lacks formal guarantees. In this work, we study a complementary setting in which \\emph{candidate} answers are generated by an LLM-based system and subsequently verified using lightweight symbolic constraints derived from the question. We introduce \\emph{Constrained Entity Selection under Partial Knowledge (CES-PK)}, a problem formulation that focuses on eliminating invalid answers and providing symbolic support for valid ones without requiring construction of executable logical forms. To account for incomplete KGs, we employ a three-valued constraint semantics (\\emph{satisfied, violated, unknown}) that avoids incorrect rejections under open-world assumptions. To demonstrate the effects of our method, we instantiate this framework over the Hetionet biomedical knowledge graph and evaluate the impact of type, relation, and exclusion constraints. Experiments show that precision improves by filtering invalid candidates, while recall is preserved due to retaining candidates whose constraints are not explicitly violated. Satisfied constraints provide additional positive symbolic evidence to rank remaining candidates.",
+      "source": {
+        "id": "arxiv-cs-ai",
+        "name": "arXiv cs.AI",
+        "tier": "B",
+        "kind": "arxiv",
+        "tags": [
+          "research"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "arxiv-cs-ai",
+          "name": "arXiv cs.AI",
+          "tier": "B",
+          "kind": "arxiv",
+          "tags": [
+            "research"
+          ]
+        }
+      ],
+      "category": "模型 / 研究",
+      "summary": "Large language models are increasingly used for knowledge graph question answering (KGQA), but can fail to correctly ground answers in the underlying graph. Current approaches to LLM-based KGQA either rely on full semantic parsing into exec",
+      "importance": 80,
+      "novelty": 92,
+      "relevance": 80,
+      "socialPotential": 65,
+      "sourceQuality": 62,
+      "confidence": 62,
+      "whyItMatters": "这条信息具有较强的新鲜度或行业相关性，值得作为后续判断的事实输入。",
+      "whatChanged": "Constrained Entity Selection under Partial Knowledge for LLM-Based Knowledge Graph QA",
+      "angles": [
+        "发生了什么：用最短篇幅解释「Constrained Entity Selection under Partial Knowledge for LLM-Based Knowledge Graph QA」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 79
+    },
+    {
+      "id": "r108i23e",
+      "title": "AI-powered metadata correction and harmonization",
+      "url": "https://aws.amazon.com/blogs/machine-learning/ai-powered-metadata-correction-and-harmonization/",
+      "publishedAt": "2026-08-24T15:53:03.000Z",
+      "description": "<p>As data collection and data generation accelerate, the gap between our ability to produce raw data and our capacity to standardize it continues to widen. Without automation, this gap becomes a critical bottleneck that delays analysis, complicates interpretation, and limits the global value of shared datasets.</p> <p>Metadata harmonization (standardizing labels, identifiers, and formats so datasets from different sources can work together) remains largely manual. AI-powered metadata correction and harmonization offers a way forward, transforming metadata management from a time-consuming responsibility into a process that scales with your data volume and supports open science rather than obstructing it.</p> <p>In this post, we demonstrate how AI-powered metadata correction works in practice, explore two implementation approaches (from human-in-the-loop validation to fully autonomous agent-driven workflows), and provide governance considerations for deploying these solutions in your organization.</p> <h2 id=\"metadata-correction-and-harmonization-workflow\">Metadata correction and harmonization workflow</h2> <p>To address this challenge, we developed a centralized metadata correction and harmonization workflow built on AWS, designed to support consistency, interoperability, and accuracy across disparate metadata sources. The system uses <a href=\"https://aws.amazon.com/bedrock/\" target=\"_blank\" rel=\"noopener\">Amazon Bedrock</a> for large language model (LLM)-powered schema alignment and correction recommendations, <a href=\"https://aws.amazon.com/s3/\" target=\"_blank\" rel=\"noope",
+      "source": {
+        "id": "aws-ml",
+        "name": "AWS Machine Learning Blog",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "infra",
+          "agents",
+          "enterprise"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "aws-ml",
+          "name": "AWS Machine Learning Blog",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "infra",
+            "agents",
+            "enterprise"
+          ]
+        }
+      ],
+      "category": "Agent",
+      "summary": "<p>As data collection and data generation accelerate, the gap between our ability to produce raw data and our capacity to standardize it continues to widen. Without automation, this gap becomes a critical bottleneck that delays analysis, co",
+      "importance": 87,
+      "novelty": 74,
+      "relevance": 75,
+      "socialPotential": 63,
+      "sourceQuality": 88,
+      "confidence": 62,
+      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
+      "whatChanged": "AI-powered metadata correction and harmonization",
+      "angles": [
+        "发生了什么：用最短篇幅解释「AI-powered metadata correction and harmonization」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 78
+    },
+    {
+      "id": "r3yvpci",
+      "title": "LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training",
+      "url": "https://arxiv.org/abs/2608.24845v1",
+      "publishedAt": "2026-08-25T17:34:19.000Z",
+      "description": "We present LAION-BVD, a large-scale open video dataset for multimodal learning, which contains 1.3B platform-specific video URLs collected from CommonCrawl. From these, we download 80M videos with a total duration of 10 million hours. The dataset is designed for multimodal pre-training across the video, audio, and image modalities. Using content-aware scene detection, we extract clips for which we synthetically generate video and audio captions. Models trained on these data achieve competitive performance on standard video-text and audio-text benchmarks, with consistent improvements as training or model scale increases. Additionally, we explore video frames as an alternative source of image-text data by extracting scene-changing frames. These frames exhibit a visual distribution distinct from standard web image corpora, and models trained on this dataset achieve strong image-text retrieval performance. We release LAION-BVD to the research community. It significantly expands open access to multimodal videos at an unprecedented scale.",
+      "source": {
+        "id": "arxiv-cs-ai",
+        "name": "arXiv cs.AI",
+        "tier": "B",
+        "kind": "arxiv",
+        "tags": [
+          "research"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "arxiv-cs-ai",
+          "name": "arXiv cs.AI",
+          "tier": "B",
+          "kind": "arxiv",
+          "tags": [
+            "research"
+          ]
+        }
+      ],
+      "category": "模型 / 研究",
+      "summary": "We present LAION-BVD, a large-scale open video dataset for multimodal learning, which contains 1.3B platform-specific video URLs collected from CommonCrawl. From these, we download 80M videos with a total duration of 10 million hours. The d",
+      "importance": 78,
+      "novelty": 87,
+      "relevance": 77,
+      "socialPotential": 66,
+      "sourceQuality": 62,
+      "confidence": 62,
+      "whyItMatters": "这条信息具有较强的新鲜度或行业相关性，值得作为后续判断的事实输入。",
+      "whatChanged": "LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training",
+      "angles": [
+        "发生了什么：用最短篇幅解释「LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 77
+    },
+    {
+      "id": "rxgwvnl",
+      "title": "CAFE: Self-Improving Search Agents Need Co-Evolving Feedback",
+      "url": "https://arxiv.org/abs/2608.24794v1",
+      "publishedAt": "2026-08-25T16:39:00.000Z",
+      "description": "Outcome-supervised search agents learn when and how to retrieve evidence, but terminal rewards neither localize intermediate errors nor redirect an ongoing trajectory before those errors compound. Treating corrective feedback as a learned in-trajectory intervention couples the two roles: the agent must decide when to request and use feedback, while the critic must infer useful corrections from outcome-confounded rollouts whose failure patterns shift as the agent improves. We introduce CAFE (Coupled Agent--Feedback Evolution), a framework in which a shared-parameter model alternates between search-agent and critic roles. CAFE initializes feedback-conditioned recovery from trajectories built around the base agent's own failures, then couples online and offline optimization. During online RL, a comparative feedback estimate uses a prompt-level call--skip success gap to shape request returns, while feedback-aware advantage shaping reweights token advantages before and after feedback. Offline, rollout-derived preference optimization learns feedback from matched successful and unsuccessful trajectories. On seven agentic search benchmarks, CAFE outperforms the evaluated RL-based search agents on average, retains its gains across all six out-of-domain benchmarks, and reduces answer-level hallucinations. One-sided ablations show that improving only the agent or only the critic eventually plateaus, whereas alternating the two updates continues to improve performance. These findings suggest that a self-improving search agent needs feedback that co-evolves with the policy it guides.",
+      "source": {
+        "id": "arxiv-cs-ai",
+        "name": "arXiv cs.AI",
+        "tier": "B",
+        "kind": "arxiv",
+        "tags": [
+          "research"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "arxiv-cs-ai",
+          "name": "arXiv cs.AI",
+          "tier": "B",
+          "kind": "arxiv",
+          "tags": [
+            "research"
+          ]
+        }
+      ],
+      "category": "Agent",
+      "summary": "Outcome-supervised search agents learn when and how to retrieve evidence, but terminal rewards neither localize intermediate errors nor redirect an ongoing trajectory before those errors compound. Treating corrective feedback as a learned i",
+      "importance": 78,
+      "novelty": 87,
+      "relevance": 77,
+      "socialPotential": 66,
+      "sourceQuality": 62,
+      "confidence": 62,
+      "whyItMatters": "可能改变 Agent 的执行边界、工具调用或落地成本，值得跟踪是否形成新的开发范式。",
+      "whatChanged": "CAFE: Self-Improving Search Agents Need Co-Evolving Feedback",
+      "angles": [
+        "发生了什么：用最短篇幅解释「CAFE: Self-Improving Search Agents Need Co-Evolving Feedback」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 77
+    },
+    {
+      "id": "r1d1nm4c",
+      "title": "v0.3.0",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.3.0",
+      "publishedAt": "2026-08-25T10:29:52.000Z",
+      "description": "<h2>Overview</h2> <p>llama.cpp 0.3.0 introduces the dots3-note multimodal model (with a new DSA-ISWA KV cache), MTP support for GLM-4.5-Air, and tensor-split (<code>-sm tensor</code>) plus multi-sequence rollback fixes for DeepSeek 4. ggml is bumped to v0.22.0 (meta-backend tensor split, per-op Metal kernels with parallel compilation, non-in-place <code>ggml_clamp</code>), while mtmd gains dots3-note vision/audio, WebP decoding and a Pillow-accurate resize. The server adds a <code>LLAMA_SERVER_SLOTS_N_DIFF</code> debug knob, and the web UI gets tabbed chat navigation.</p> <h3>New models</h3> <ul> <li>Add dots3-note model with a new DSA-ISWA KV cache type (<a href=\"https://github.com/ggml-org/llama.cpp/pull/27060\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/ggml-org/llama.cpp/pull/27060/hovercard\">#27060</a>)</li> </ul> <h3>Core changes</h3> <ul> <li>DeepSeek 4: add tensor-split mode via <code>-sm tensor</code> (<a href=\"https://github.com/ggml-org/llama.cpp/pull/26490\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/ggml-org/llama.cpp/pull/26490/hovercard\">#26490</a>)</li> <li>DeepSeek 4: fix rollback with multiple sequences (<a href=\"https://github.com/ggml-org/llama.cpp/pull/26756\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/ggml-org/llama.cpp/pull/26756/hovercard\">#26756</a>)</li> <li>Fix meta tensor split state propagation for tensor parallel (<a href=\"https://github.com/ggml-org/llama.cpp/pull/27574\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/ggml-org/llama.cpp/pull/27574/hovercard\">#27574</a>)</li> <li>GLM-4.5-Air: add MTP ",
+      "source": {
+        "id": "gh-llamacpp",
+        "name": "ggml-org/llama.cpp Releases",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "inference",
+          "open-source"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "gh-llamacpp",
+          "name": "ggml-org/llama.cpp Releases",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "inference",
+            "open-source"
+          ]
+        }
+      ],
+      "category": "AI Coding",
+      "summary": "<h2>Overview</h2> <p>llama.cpp 0.3.0 introduces the dots3-note multimodal model (with a new DSA-ISWA KV cache), MTP support for GLM-4.5-Air, and tensor-split (<code>-sm tensor</code>) plus multi-sequence rollback fixes for DeepSeek 4. ggml ",
+      "importance": 81,
+      "novelty": 84,
+      "relevance": 71,
+      "socialPotential": 57,
+      "sourceQuality": 88,
+      "confidence": 62,
+      "whyItMatters": "可能影响 AI 编程工具链和开发者工作流，适合继续观察真实使用反馈。",
+      "whatChanged": "v0.3.0",
+      "angles": [
+        "发生了什么：用最短篇幅解释「v0.3.0」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 77
+    },
+    {
+      "id": "r19rv0nl",
+      "title": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
+      "url": "https://openai.com/index/jalapeno-first-results",
+      "publishedAt": "2026-08-25T07:00:00.000Z",
+      "description": "Jalapeño is a custom inference chip from OpenAI that delivers faster, more power-efficient AI inference, with higher throughput and lower latency for modern models.",
+      "source": {
+        "id": "openai-news",
+        "name": "OpenAI News",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "model",
+          "product",
+          "research",
+          "company"
+        ]
+      },
+      "engagement": null,
+      "relatedSources": [
+        {
+          "id": "openai-news",
+          "name": "OpenAI News",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "model",
+            "product",
+            "research",
+            "company"
+          ]
+        }
+      ],
+      "category": "模型 / 研究",
+      "summary": "Jalapeño is a custom inference chip from OpenAI that delivers faster, more power-efficient AI inference, with higher throughput and lower latency for modern models.",
+      "importance": 81,
+      "novelty": 82,
+      "relevance": 71,
+      "socialPotential": 57,
+      "sourceQuality": 88,
+      "confidence": 62,
+      "whyItMatters": "这条信息具有较强的新鲜度或行业相关性，值得作为后续判断的事实输入。",
+      "whatChanged": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
+      "angles": [
+        "发生了什么：用最短篇幅解释「Jalapeño’s first results show industry-leading speed and efficiency in AI inference」",
+        "为什么值得注意：它改变的是能力、成本还是工作流",
+        "个人判断：这件事接下来最可能影响谁"
+      ],
+      "radarScore": 76
+    }
+  ]
+}
