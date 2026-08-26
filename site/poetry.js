@@ -70,7 +70,7 @@
       item.order = index + 1;
       item.genre = item.fields.get("体裁") || item.fields.get("词牌") || "";
       item.blocks = item.blocks.filter((block) => block.length);
-      item.prose = /散文|随笔|散记|杂记/.test(item.genre);
+      item.prose = /散文|随笔|散记|杂记|赋|记|序|铭|论|说/.test(item.genre);
       item.lines = item.blocks.flat().length;
     });
     return book;
@@ -201,24 +201,73 @@
       this.opts = opts || {};
       this.book = parseBook(source);
       this.vertical = this.book.layout === "竖排";
-      this.pages = this.buildPages();
+      this.pages = [];
       this.page = 0;
       this.turning = false;
       this.storeKey = `gu:${this.book.title}`;
       this.render();
+      this.relayout();
       this.restore();
       this.paint();
+      // 字体没到位时量出来的行长是错的，字体就绪或有新字体载入后都要重排
+      this.refit = () => {
+        if (!this.host.isConnected) { document.fonts?.removeEventListener?.("loadingdone", this.refit); return; }
+        const before = this.pages.length;
+        this.relayout();
+        if (this.pages.length !== before) this.paint();
+      };
+      document.fonts?.ready?.then(this.refit).catch(() => {});
+      document.fonts?.addEventListener?.("loadingdone", this.refit);
     }
 
     buildPages() {
       const pages = [{ type: "cover" }, { type: "title" }];
       for (const piece of this.book.pieces) {
         piece.page = pages.length;
-        pages.push({ type: "piece", piece });
+        const parts = piece.prose ? this.measureParts(piece) : 1;
+        for (let i = 0; i < parts; i += 1) pages.push({ type: "piece", piece, part: i, parts });
       }
       if (!this.book.pieces.length) pages.push({ type: "empty" });
       if (pages.length % 2) pages.push({ type: "blank" });
       return pages;
+    }
+
+    /* 长文竖排一页放不下：在离屏探针里让它按自然尺寸铺开，量出总长度再决定占几页。
+       探针与真实页面同尺寸同样式，量到的就是实际排版结果。 */
+    measureParts(piece) {
+      if (!this.inner) return 1;
+      const box = this.inner.getBoundingClientRect();
+      if (!box.width || !box.height) return 1;
+      const probe = document.createElement("div");
+      probe.className = "gu-page gu-probe";
+      probe.style.cssText = `position:absolute;left:0;top:0;width:${this.single ? box.width : box.width / 2}px;`
+        + `height:${box.height}px;visibility:hidden;pointer-events:none;z-index:-1`;
+      probe.innerHTML = `<div class="gu-sheet gu-sheet-piece prose measure">${this.pieceInner(piece)}</div>`;
+      this.inner.appendChild(probe);
+
+      const sheet = probe.querySelector(".gu-sheet-piece");
+      const body = probe.querySelector(".gu-piece");
+      const style = getComputedStyle(sheet);
+      const avail = this.vertical
+        ? sheet.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight)
+        : sheet.clientHeight - parseFloat(style.paddingTop) - parseFloat(style.paddingBottom);
+      const rect = body.getBoundingClientRect();
+      const natural = this.vertical ? rect.width : rect.height;
+      probe.remove();
+      if (!(avail > 0) || !(natural > 0)) return 1;
+      return Math.max(1, Math.min(24, Math.ceil((natural - 2) / avail)));
+    }
+
+    /* 版面或书写方向变了要重排，尽量停在原来那一段上 */
+    relayout() {
+      const current = this.pages[this.page];
+      this.measuredWidth = this.inner ? Math.round(this.inner.getBoundingClientRect().width) : 0;
+      this.pages = this.buildPages();
+      if (current && current.type === "piece") {
+        const found = this.pages.findIndex((page) => page.type === "piece"
+          && page.piece === current.piece && (page.part || 0) === (current.part || 0));
+        if (found >= 0) this.page = found;
+      }
     }
 
     get single() { return this.host.clientWidth < SINGLE_WIDTH; }
@@ -288,7 +337,7 @@
       this.bind();
     }
 
-    pieceHtml(piece) {
+    pieceInner(piece) {
       const rows = [...piece.fields.entries()]
         .filter(([key]) => key !== "小序")
         .map(([key, value]) => `<span class="gu-tag">${esc(key)}·${esc(value)}</span>`).join("");
@@ -296,16 +345,29 @@
       const body = piece.blocks.map((block) => `
         <div class="gu-block">${block.map((line) => `<p class="gu-line">${esc(line)}</p>`).join("")}</div>`).join("");
       return `
-        <div class="gu-sheet gu-sheet-piece${piece.prose ? " prose" : ""}">
-          <div class="gu-piece">
-            <div class="gu-piece-title">${esc(piece.title)}</div>
-            ${preface ? `<div class="gu-preface">${esc(preface)}</div>` : ""}
-            <div class="gu-body">${body || '<p class="gu-line">（待录）</p>'}</div>
-            <div class="gu-piece-foot">
-              <span class="gu-seal small" aria-hidden="true">${esc(this.book.seal)}</span>
-              ${rows}
-            </div>
+        <div class="gu-piece">
+          <div class="gu-piece-title">${esc(piece.title)}</div>
+          ${preface ? `<div class="gu-preface">${esc(preface)}</div>` : ""}
+          <div class="gu-body">${body || '<p class="gu-line">（待录）</p>'}</div>
+          <div class="gu-piece-foot">
+            <span class="gu-seal small" aria-hidden="true">${esc(this.book.seal)}</span>
+            ${rows}
           </div>
+        </div>`;
+    }
+
+    pieceHtml(piece, part = 0, parts = 1) {
+      const inner = this.pieceInner(piece);
+      if (!piece.prose) return `<div class="gu-sheet gu-sheet-piece">${inner}</div>`;
+      // 竖排内容向左溢出，右移露出下一段；横排向下溢出，上移露出下一段
+      const axis = this.vertical ? "translateX" : "translateY";
+      const sign = this.vertical ? "" : "-";
+      const shift = part ? ` style="transform:${axis}(calc(${sign}100% * ${part}))"` : "";
+      const folio = parts > 1 ? `<div class="gu-part">${part + 1} / ${parts}</div>` : "";
+      return `
+        <div class="gu-sheet gu-sheet-piece prose">
+          <div class="gu-flow"><div class="gu-shift"${shift}>${inner}</div></div>
+          ${folio}
         </div>`;
     }
 
@@ -332,7 +394,7 @@
             <small>在文档的 poetry 代码块里以 <code>@ 题名</code> 起一篇，下面直接写正文</small>
           </div>`;
       }
-      if (page.type === "piece") return this.pieceHtml(page.piece);
+      if (page.type === "piece") return this.pieceHtml(page.piece, page.part || 0, page.parts || 1);
       return '<div class="gu-sheet gu-sheet-blank"></div>';
     }
 
@@ -436,6 +498,8 @@
           } else if (act === "layout") {
             this.vertical = !this.vertical;
             action.textContent = this.vertical ? "横排" : "竖排";
+            this.host.classList.toggle("horizontal", !this.vertical);
+            this.relayout();
             this.paint();
           }
           return;
@@ -468,7 +532,9 @@
         if (frame) return;
         frame = requestAnimationFrame(() => {
           frame = null;
-          if (this.inner.classList.contains("single") !== this.single) this.paint();
+          const width = Math.round(this.inner.getBoundingClientRect().width);
+          if (this.inner.classList.contains("single") !== this.single
+            || Math.abs(width - this.measuredWidth) > 16) { this.relayout(); this.paint(); }
         });
       };
       window.addEventListener("resize", this.resize);

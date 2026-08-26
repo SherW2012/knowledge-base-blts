@@ -903,8 +903,30 @@ button { -webkit-tap-highlight-color: transparent; }
 .poetry.horizontal .gu-line { line-height: 2.2; }
 .poetry.horizontal .gu-piece-foot { margin: 22px 0 0; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
 .poetry.horizontal .gu-tag { margin: 0; }
-.gu-sheet-piece.prose .gu-piece { overflow: auto; scrollbar-width: thin; }
+/* 长文按页裁切：内容整块渲染，靠位移显示当前是第几段 */
+.gu-sheet-piece.prose { display: block; }
+.gu-sheet-piece.prose .gu-flow { position: relative; height: 100%; overflow: hidden; }
+.gu-sheet-piece.prose .gu-shift { position: absolute; inset: 0; }
+.gu-sheet-piece.prose .gu-piece { position: absolute; inset: 0; max-width: none; overflow: visible; }
+/* 丈量用：让正文按自然尺寸铺开，不裁切也不受页宽限制 */
+.gu-sheet-piece.prose.measure { position: absolute; inset: 0; }
+.gu-sheet-piece.prose.measure .gu-piece {
+  position: static; height: 100%; width: max-content; max-width: none;
+}
+.poetry.horizontal .gu-sheet-piece.prose.measure .gu-piece { width: 100%; height: max-content; }
 .gu-sheet-piece.prose .gu-line { font-size: clamp(14px, 1.25vw, 17px); line-height: 2.15; letter-spacing: .08em; }
+/* 横排下散文同样走裁切流，不能退回 flex 居中，否则 gu-flow 会塌成零宽 */
+.poetry.horizontal .gu-sheet-piece.prose { display: block; }
+.poetry.horizontal .gu-sheet-piece.prose .gu-flow { width: 100%; }
+.poetry.horizontal .gu-sheet-piece.prose .gu-piece {
+  position: absolute; inset: 0; width: auto; max-height: none; overflow: visible; text-align: left;
+}
+.poetry.horizontal .gu-sheet-piece.prose.measure .gu-piece { position: static; width: 100%; height: max-content; }
+.gu-part {
+  position: absolute; left: 0; right: 0; bottom: 8px;
+  color: var(--gu-ink-faint); font-size: 10px; letter-spacing: .18em; text-align: center;
+}
+.gu-probe { contain: layout paint; }
 
 /* 朱砂印 */
 .gu-seal {
