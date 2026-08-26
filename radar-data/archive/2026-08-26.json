@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "status": "ok",
-  "generatedAt": "2026-08-26T05:52:51.342Z",
+  "generatedAt": "2026-08-26T05:53:13.060Z",
   "date": "2026-08-26",
   "timezone": "Asia/Shanghai",
   "focus": "launches-tools-skills-productivity-markets",
@@ -11,15 +11,15 @@
     "model": null
   },
   "stats": {
-    "configuredSources": 40,
-    "automatedSources": 34,
+    "configuredSources": 39,
+    "automatedSources": 33,
     "manualSources": 6,
-    "successfulSources": 34,
+    "successfulSources": 33,
     "failedSources": 0,
-    "scannedItems": 458,
-    "recentItems": 157,
-    "dedupedItems": 157,
-    "eventClusters": 136,
+    "scannedItems": 450,
+    "recentItems": 149,
+    "dedupedItems": 149,
+    "eventClusters": 128,
     "publishedItems": 18,
     "researchItems": 0
   },
@@ -279,14 +279,6 @@
       "kind": "feed",
       "status": "ok",
       "items": 10
-    },
-    {
-      "id": "arxiv-cs-ai",
-      "name": "arXiv cs.AI · Low Weight",
-      "tier": "B",
-      "kind": "arxiv",
-      "status": "ok",
-      "items": 8
     },
     {
       "id": "deepmind-blog",
@@ -788,17 +780,6 @@
       "note": null
     },
     {
-      "id": "arxiv-cs-ai",
-      "name": "arXiv cs.AI · Low Weight",
-      "tier": "B",
-      "kind": "arxiv",
-      "url": null,
-      "tags": [
-        "research"
-      ],
-      "note": null
-    },
-    {
       "id": "deepmind-blog",
       "name": "Google DeepMind Research · Low Weight",
       "tier": "B",
@@ -896,7 +877,7 @@
       "id": "rr7p30n",
       "title": "freestylefly/awesome-gpt-image-2 — Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新",
       "url": "https://github.com/freestylefly/awesome-gpt-image-2",
-      "publishedAt": "2026-08-26T05:52:51.342Z",
+      "publishedAt": "2026-08-26T05:53:13.060Z",
       "description": "GitHub Trending · 1698 stars today · Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
       "source": {
         "id": "gh-trending",
@@ -953,7 +934,7 @@
       "id": "r1ne60iz",
       "title": "Shubhamsaboo/awesome-llm-apps — Star Shubhamsaboo / awesome-llm-apps 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
       "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
-      "publishedAt": "2026-08-26T05:52:51.342Z",
+      "publishedAt": "2026-08-26T05:53:13.060Z",
       "description": "GitHub Trending · 161 stars today · Star Shubhamsaboo / awesome-llm-apps 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
       "source": {
         "id": "gh-trending",
@@ -1063,7 +1044,7 @@
       "id": "rc79xnd",
       "title": "multica-ai/andrej-karpathy-skills — Star multica-ai / andrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Ka",
       "url": "https://github.com/multica-ai/andrej-karpathy-skills",
-      "publishedAt": "2026-08-26T05:52:51.342Z",
+      "publishedAt": "2026-08-26T05:53:13.060Z",
       "description": "GitHub Trending · 830 stars today · Star multica-ai / andrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
       "source": {
         "id": "gh-trending",
@@ -1168,53 +1149,6 @@
         "只做观察：它接下来值得盯哪个指标"
       ],
       "radarScore": 96
-    },
-    {
-      "id": "rf6b5ro",
-      "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses",
-      "url": "https://arxiv.org/abs/2608.24876v1",
-      "publishedAt": "2026-08-25T17:56:35.000Z",
-      "description": "Recursive self-improvement (RSI) remains hard in long-horizon tasks, where growing histories obscure the task state and misalign skill invocation. We introduce Recuris, a recursive Experiential-Working Memory architecture for long-horizon agent harnesses, in which Working Memory tracks task progress and guides skill selection from Experiential Memory, grounding skill use in current needs rather than the full history. This coupling also turns execution into structured evidence that localizes failures to specific memory components. Across tasks, a fixed Meta-Agent turns that evidence into localized, validation-gated updates to Skill Memory that reshape execution and yield new evidence, forming a bounded recursive memory-evolution loop. Across four long-horizon benchmarks and ten models, Recuris improves task success in 35 of the 37 completed model-benchmark pairs, carrying frontier models to SOTA-level task success: on tau-bench it adds +17.8 points to GPT-5.6 Sol and +15.6 to Claude Opus 5, taking Opus 5 to 87.9%, and +16.6/+13.5 points on Qwen3.6-27B/35B on SkillFlow. The advantage widens as the interaction horizon grows, to +32.2 points on the longest tasks, and common long-horizon failures fall by up to 80%. These results position recursively evolving memory as a scalable foundation for RSI, enabling agents to continuously transform accumulated experience into increasingly effective long-horizon behavior. Code: https://github.com/Gen-Verse/Recuris",
-      "source": {
-        "id": "arxiv-cs-ai",
-        "name": "arXiv cs.AI · Low Weight",
-        "tier": "B",
-        "kind": "arxiv",
-        "tags": [
-          "research"
-        ]
-      },
-      "engagement": null,
-      "isCurrentSignal": false,
-      "relatedSources": [
-        {
-          "id": "arxiv-cs-ai",
-          "name": "arXiv cs.AI · Low Weight",
-          "tier": "B",
-          "kind": "arxiv",
-          "tags": [
-            "research"
-          ]
-        }
-      ],
-      "category": "Skill / GitHub",
-      "summary": "Recursive self-improvement (RSI) remains hard in long-horizon tasks, where growing histories obscure the task state and misalign skill invocation. We introduce Recuris, a recursive Experiential-Working Memory architecture for long-horizon agent harnesses, in w",
-      "importance": 89,
-      "novelty": 100,
-      "relevance": 82,
-      "socialPotential": 68,
-      "sourceQuality": 64,
-      "practicality": 81,
-      "researchIntensity": 24,
-      "confidence": 64,
-      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
-      "whatChanged": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses",
-      "angles": [
-        "今天 GitHub 上冒出来一个值得试的项目：Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses",
-        "它解决的具体麻烦是什么，5 分钟能不能跑通",
-        "有没有可能变成自己的 Skill / 自动化工作流"
-      ],
-      "radarScore": 95
     },
     {
       "id": "r17k12t1",
@@ -1368,6 +1302,59 @@
         "发现一个可能真能省时间的新工具：CLI v3.0.58",
         "它替代了原来哪一步手工操作",
         "免费版够不够用，值不值得长期留在工具箱"
+      ],
+      "radarScore": 93
+    },
+    {
+      "id": "r5p4h9v",
+      "title": "v2.1.246",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246",
+      "publishedAt": "2026-08-25T22:31:52.000Z",
+      "description": "<h2>What's changed</h2> <ul> <li>Added a startup warning for Bash allow rules with a wildcard before the subcommand (e.g. <code>Bash(git * main)</code>), since they also match options inserted before the subcommand</li> <li>Added an Auto mode tab to <code>/permissions</code> for viewing and editing auto mode classifier rules</li> <li>Added the turn's completion time to the end-of-turn duration line, e.g. <code>✻ Sautéed for 23s · done 6:05 PM</code></li> <li>Fixed fullscreen mode showing a blank transcript after resizing the terminal and jumping to the bottom until the next keypress</li> <li>Fixed a severe transcript slowdown when a diff contained a very long single line (e.g. a base64 string); such lines now render truncated with a marker</li> <li>Fixed erratic fullscreen scrolling when positioned at an earlier message, including jump-to-bottom getting stuck mid-transcript</li> <li>Fixed background sessions failing to open after 45 seconds when Claude Code's starting directory had been deleted, the machine had slept, or the host is slow to start processes</li> <li>Fixed background sessions failing to open with \"Couldn't start the background service … EACCES\" when another Claude Code process was re-installing the npm package at that moment</li> <li>Fixed markdown rendering being disabled for a whole message when its first 500 characters contained no markdown, and for <code>+</code>/<code>N)</code> lists and setext headings</li> <li>Fixed MCP tool calls interrupted by an incoming message in headless/remote sessions being reported to the model as \"completed with no output\" in",
+      "source": {
+        "id": "gh-claude-code",
+        "name": "anthropics/claude-code Releases",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "agent",
+          "coding",
+          "launch",
+          "tool"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "gh-claude-code",
+          "name": "anthropics/claude-code Releases",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "agent",
+            "coding",
+            "launch",
+            "tool"
+          ]
+        }
+      ],
+      "category": "Skill / GitHub",
+      "summary": "<h2>What's changed</h2> <ul> <li>Added a startup warning for Bash allow rules with a wildcard before the subcommand (e.g. <code>Bash(git * main)</code>), since they also match options inserted before the subcommand</li> <li>Added an Auto mode tab to <code>/per",
+      "importance": 80,
+      "novelty": 92,
+      "relevance": 73,
+      "socialPotential": 63,
+      "sourceQuality": 90,
+      "practicality": 88,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
+      "whatChanged": "v2.1.246",
+      "angles": [
+        "今天 GitHub 上冒出来一个值得试的项目：v2.1.246",
+        "它解决的具体麻烦是什么，5 分钟能不能跑通",
+        "有没有可能变成自己的 Skill / 自动化工作流"
       ],
       "radarScore": 93
     },
@@ -1638,57 +1625,63 @@
       "radarScore": 84
     },
     {
-      "id": "r39fr5q",
-      "title": "SPO++: Stream-Aligned Policy Optimization for Asynchronous Agentic RL",
-      "url": "https://arxiv.org/abs/2608.24870v1",
-      "publishedAt": "2026-08-25T17:52:19.000Z",
-      "description": "Group-relative reinforcement learning waits for sibling rollouts of the same prompt, which is costly for long and variable tool-use trajectories. Single-stream Policy Optimization (SPO) removes this dependency with a persistent prompt-level value estimate, but its recipe whitens one advantage per trajectory before optimizing a token-mean actor loss. We show that trajectory centering generally does not center the token-weighted quantity consumed by the actor, and fix the mismatch by standardizing terminal-outcome advantages under the action-token measure. We additionally organize prompt evidence by the policy event that generated it rather than learner receipt order. Across matched runs on ALFWorld at two model scales and on Math-TIR, SPO++ improves online learning efficiency over SPO. A paired ablation identifies action-token-measure normalization as the strongest tested component.",
+      "id": "r1mjtfad",
+      "title": "v1.16.1 - Bug Fixes and Security Enhancements",
+      "url": "https://github.com/langgenius/dify/releases/tag/1.16.1",
+      "publishedAt": "2026-08-25T12:17:47.000Z",
+      "description": "<h2>What's Changed</h2> <h3>New Features</h3> <p><strong>Tool Multi-Select Input</strong></p> <ul> <li>Workflow tool nodes now support multi-select dropdown inputs, allowing users to choose multiple values from a predefined list when configuring tool parameters. (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4935910649\" data-permission-text=\"Title is private\" data-url=\"https://github.com/langgenius/dify/issues/39346\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/langgenius/dify/pull/39346/hovercard\" href=\"https://github.com/langgenius/dify/pull/39346\">#39346</a>)</li> </ul> <p><strong>Workflow Node Locator</strong></p> <ul> <li>You can now click a node_id in workflow run logs or error messages to locate and highlight the corresponding node in the workflow editor canvas. (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4773369324\" data-permission-text=\"Title is private\" data-url=\"https://github.com/langgenius/dify/issues/38187\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/langgenius/dify/pull/38187/hovercard\" href=\"https://github.com/langgenius/dify/pull/38187\">#38187</a>)</li> </ul> <p><strong>Workflow Block Selector Improvements</strong></p> <ul> <li>The block selector panel now features improved keyboard navigation, category previews, and a more intuitive search experience when adding nodes to workflows. (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4917623861\" data-permission-text=\"Title is private\" data-url=\"https://github.com/langgenius/",
       "source": {
-        "id": "arxiv-cs-ai",
-        "name": "arXiv cs.AI · Low Weight",
-        "tier": "B",
-        "kind": "arxiv",
+        "id": "gh-dify",
+        "name": "langgenius/dify Releases",
+        "tier": "A",
+        "kind": "feed",
         "tags": [
-          "research"
+          "agent",
+          "workflow",
+          "tool",
+          "open-source"
         ]
       },
       "engagement": null,
       "isCurrentSignal": false,
       "relatedSources": [
         {
-          "id": "arxiv-cs-ai",
-          "name": "arXiv cs.AI · Low Weight",
-          "tier": "B",
-          "kind": "arxiv",
+          "id": "gh-dify",
+          "name": "langgenius/dify Releases",
+          "tier": "A",
+          "kind": "feed",
           "tags": [
-            "research"
+            "agent",
+            "workflow",
+            "tool",
+            "open-source"
           ]
         }
       ],
-      "category": "工具 / 网站",
-      "summary": "Group-relative reinforcement learning waits for sibling rollouts of the same prompt, which is costly for long and variable tool-use trajectories. Single-stream Policy Optimization (SPO) removes this dependency with a persistent prompt-level value estimate, but",
-      "importance": 60,
-      "novelty": 85,
-      "relevance": 70,
-      "socialPotential": 64,
-      "sourceQuality": 64,
-      "practicality": 90,
+      "category": "效率 / 工作流",
+      "summary": "<h2>What's Changed</h2> <h3>New Features</h3> <p><strong>Tool Multi-Select Input</strong></p> <ul> <li>Workflow tool nodes now support multi-select dropdown inputs, allowing users to choose multiple values from a predefined list when configuring tool parameter",
+      "importance": 52,
+      "novelty": 75,
+      "relevance": 72,
+      "socialPotential": 66,
+      "sourceQuality": 78,
+      "practicality": 98,
       "researchIntensity": 0,
       "confidence": 64,
-      "whyItMatters": "它可能直接降低某个任务的时间或门槛，适合快速试用后决定是否进入工具箱。",
-      "whatChanged": "SPO++: Stream-Aligned Policy Optimization for Asynchronous Agentic RL",
+      "whyItMatters": "重点不是技术原理，而是它能否减少重复操作、缩短流程或提升个人产出。",
+      "whatChanged": "v1.16.1 - Bug Fixes and Security Enhancements",
       "angles": [
-        "发现一个可能真能省时间的新工具：SPO++: Stream-Aligned Policy Optimization for Asynchronous Agentic RL",
-        "它替代了原来哪一步手工操作",
-        "免费版够不够用，值不值得长期留在工具箱"
+        "我又找到一个能少做几步的工作流：v1.16.1 - Bug Fixes and Security Enhancements",
+        "把它放进自己的日常流程，能省下多少时间",
+        "哪些人最适合直接抄这个用法"
       ],
-      "radarScore": 84
+      "radarScore": 83
     },
     {
       "id": "r4f7h46",
       "title": "froggeric/Qwen-Fixed-Chat-Templates · Hugging Face trending model",
       "url": "https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates",
-      "publishedAt": "2026-08-26T05:52:51.342Z",
+      "publishedAt": "2026-08-26T05:53:13.060Z",
       "description": "Trending model · model · ♥ 1474 · downloads 0",
       "source": {
         "id": "hf-trending-models",
@@ -1739,7 +1732,7 @@
       "id": "ru3l7pa",
       "title": "Qwen/Qwen3.8-27B · Hugging Face trending model",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "publishedAt": "2026-08-26T05:52:51.342Z",
+      "publishedAt": "2026-08-26T05:53:13.060Z",
       "description": "Trending model · image-text-to-text · ♥ 12751 · downloads 2945415",
       "source": {
         "id": "hf-trending-models",
@@ -1790,7 +1783,7 @@
       "id": "r1mwhfqv",
       "title": "ornith-ai/Ornith-1.5-35B-A3B · Hugging Face trending model",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B",
-      "publishedAt": "2026-08-26T05:52:51.342Z",
+      "publishedAt": "2026-08-26T05:53:13.060Z",
       "description": "Trending model · text-generation · ♥ 429 · downloads 70158",
       "source": {
         "id": "hf-trending-models",
