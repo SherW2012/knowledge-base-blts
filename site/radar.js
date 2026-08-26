@@ -27,7 +27,7 @@
   }
 
   function tierLabel(tier) {
-    return tier === "S" ? "一手" : tier === "A" ? "解释者" : tier === "B" ? "异常信号" : tier;
+    return tier === "S" ? "一手" : tier === "A" ? "高价值" : tier === "B" ? "异常信号" : tier;
   }
 
   function scoreClass(score) {
@@ -58,8 +58,9 @@
         ${(item.angles || []).length ? `
           <div class="radar-angles"><span>可做选题</span><ul>${item.angles.map((angle) => `<li>${escapeHtml(angle)}</li>`).join("")}</ul></div>` : ""}
         <div class="radar-metrics">
+          <span class="radar-metric-practical">实用 ${escapeHtml(item.practicality ?? "—")}</span>
           <span>重要 ${escapeHtml(item.importance ?? "—")}</span><span>新颖 ${escapeHtml(item.novelty ?? "—")}</span>
-          <span>相关 ${escapeHtml(item.relevance ?? "—")}</span><span>传播 ${escapeHtml(item.socialPotential ?? "—")}</span>
+          <span>传播 ${escapeHtml(item.socialPotential ?? "—")}</span>
         </div>
         <div class="radar-actions">
           ${item.url ? `<a class="radar-button radar-button-primary" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">查看原文 ↗</a>` : ""}
@@ -70,20 +71,22 @@
   }
 
   function sourceCard(source, run) {
+    const isX = (source.tags || []).includes("x-watchlist");
     const status = run?.status || (source.kind === "manual" ? "manual" : "unknown");
-    const label = status === "ok" ? `已抓取 ${run.items} 条` : status === "error" ? "本次抓取失败" : status === "manual" ? "人工关注" : "等待运行";
+    const label = status === "ok" ? `已抓取 ${run.items} 条` : status === "error" ? "本次抓取失败" : isX ? "X 观察名单" : status === "manual" ? "人工关注" : "等待运行";
     return `
       <div class="radar-source-card">
         <div><span class="radar-tier radar-tier-${escapeHtml((source.tier || "B").toLowerCase())}">${escapeHtml(source.tier || "B")}</span><strong>${escapeHtml(source.name)}</strong></div>
         <small class="radar-source-status radar-source-status-${escapeHtml(status)}">${escapeHtml(label)}</small>
         ${(source.tags || []).length ? `<p>${source.tags.map((tag) => `#${escapeHtml(tag)}`).join(" ")}</p>` : ""}
+        ${source.note ? `<p class="radar-source-note">${escapeHtml(source.note)}</p>` : ""}
         ${source.url ? `<a href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">打开来源 ↗</a>` : ""}
       </div>`;
   }
 
   function copyText(item) {
     return [
-      `# ${item.title}`, "", `来源：${item.source?.name || ""}`, `原文：${item.url || ""}`, `Radar Score：${item.radarScore ?? ""}`,
+      `# ${item.title}`, "", `来源：${item.source?.name || ""}`, `原文：${item.url || ""}`, `Radar Score：${item.radarScore ?? ""}`, `实用度：${item.practicality ?? ""}`,
       "", `事实：${item.summary || item.description || ""}`, "", `为什么值得看：${item.whyItMatters || ""}`, "", "可做选题：",
       ...(item.angles || []).map((angle) => `- ${angle}`), "", "我的观点："
     ].join("\n");
@@ -122,7 +125,7 @@
       root.innerHTML = `
         <section class="radar-shell">
           <header class="radar-hero">
-            <div><div class="radar-kicker">AI INTELLIGENCE RADAR</div><h2>${escapeHtml(data.date || "等待运行")}</h2><p>互联网信息 → 去重聚类 → 情报评分 → 选题。正式知识库仍由人工决定是否沉淀。</p></div>
+            <div><div class="radar-kicker">AI INTELLIGENCE RADAR</div><h2>${escapeHtml(data.date || "等待运行")}</h2><p>优先发现模型 / Agent 上新、GitHub Skills、好用工具、效率工作流与市场小信号。技术研究只保留少量高价值内容。</p></div>
             <div class="radar-run-state"><span>${data.llm?.enabled ? "LLM ON" : "RULE MODE"}</span><small>${data.llm?.enabled ? escapeHtml(data.llm.model || "LLM") : "未配置大模型 API"}</small></div>
           </header>
           <div class="radar-stat-grid">
