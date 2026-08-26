@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "status": "ok",
-  "generatedAt": "2026-08-26T05:51:37.694Z",
+  "generatedAt": "2026-08-26T05:52:00.811Z",
   "date": "2026-08-26",
   "timezone": "Asia/Shanghai",
   "focus": "launches-tools-skills-productivity-markets",
@@ -11,11 +11,11 @@
     "model": null
   },
   "stats": {
-    "configuredSources": 41,
-    "automatedSources": 35,
+    "configuredSources": 40,
+    "automatedSources": 34,
     "manualSources": 6,
     "successfulSources": 34,
-    "failedSources": 1,
+    "failedSources": 0,
     "scannedItems": 458,
     "recentItems": 157,
     "dedupedItems": 157,
@@ -249,15 +249,6 @@
       "items": 10
     },
     {
-      "id": "gh-qwen",
-      "name": "QwenLM/Qwen3 Releases",
-      "tier": "A",
-      "kind": "feed",
-      "status": "error",
-      "items": 0,
-      "error": "feed parsed 0 entries"
-    },
-    {
       "id": "coindesk",
       "name": "CoinDesk",
       "tier": "A",
@@ -432,7 +423,6 @@
       "url": "https://huggingface.co/models?sort=trending",
       "tags": [
         "model",
-        "trending",
         "open-source"
       ],
       "note": null
@@ -743,19 +733,6 @@
       "note": null
     },
     {
-      "id": "gh-qwen",
-      "name": "QwenLM/Qwen3 Releases",
-      "tier": "A",
-      "kind": "feed",
-      "url": "https://github.com/QwenLM/Qwen3/releases.atom",
-      "tags": [
-        "model",
-        "launch",
-        "open-source"
-      ],
-      "note": null
-    },
-    {
       "id": "coindesk",
       "name": "CoinDesk",
       "tier": "A",
@@ -919,7 +896,7 @@
       "id": "rr7p30n",
       "title": "freestylefly/awesome-gpt-image-2 — Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新",
       "url": "https://github.com/freestylefly/awesome-gpt-image-2",
-      "publishedAt": "2026-08-26T05:51:37.694Z",
+      "publishedAt": "2026-08-26T05:52:00.811Z",
       "description": "GitHub Trending · 1698 stars today · Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
       "source": {
         "id": "gh-trending",
@@ -976,7 +953,7 @@
       "id": "r1ne60iz",
       "title": "Shubhamsaboo/awesome-llm-apps — Star Shubhamsaboo / awesome-llm-apps 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
       "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
-      "publishedAt": "2026-08-26T05:51:37.694Z",
+      "publishedAt": "2026-08-26T05:52:00.811Z",
       "description": "GitHub Trending · 161 stars today · Star Shubhamsaboo / awesome-llm-apps 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
       "source": {
         "id": "gh-trending",
@@ -1086,7 +1063,7 @@
       "id": "rc79xnd",
       "title": "multica-ai/andrej-karpathy-skills — Star multica-ai / andrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Ka",
       "url": "https://github.com/multica-ai/andrej-karpathy-skills",
-      "publishedAt": "2026-08-26T05:51:37.694Z",
+      "publishedAt": "2026-08-26T05:52:00.811Z",
       "description": "GitHub Trending · 830 stars today · Star multica-ai / andrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
       "source": {
         "id": "gh-trending",
@@ -1708,159 +1685,157 @@
       "radarScore": 84
     },
     {
-      "id": "r1mjtfad",
-      "title": "v1.16.1 - Bug Fixes and Security Enhancements",
-      "url": "https://github.com/langgenius/dify/releases/tag/1.16.1",
-      "publishedAt": "2026-08-25T12:17:47.000Z",
-      "description": "<h2>What's Changed</h2> <h3>New Features</h3> <p><strong>Tool Multi-Select Input</strong></p> <ul> <li>Workflow tool nodes now support multi-select dropdown inputs, allowing users to choose multiple values from a predefined list when configuring tool parameters. (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4935910649\" data-permission-text=\"Title is private\" data-url=\"https://github.com/langgenius/dify/issues/39346\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/langgenius/dify/pull/39346/hovercard\" href=\"https://github.com/langgenius/dify/pull/39346\">#39346</a>)</li> </ul> <p><strong>Workflow Node Locator</strong></p> <ul> <li>You can now click a node_id in workflow run logs or error messages to locate and highlight the corresponding node in the workflow editor canvas. (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4773369324\" data-permission-text=\"Title is private\" data-url=\"https://github.com/langgenius/dify/issues/38187\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/langgenius/dify/pull/38187/hovercard\" href=\"https://github.com/langgenius/dify/pull/38187\">#38187</a>)</li> </ul> <p><strong>Workflow Block Selector Improvements</strong></p> <ul> <li>The block selector panel now features improved keyboard navigation, category previews, and a more intuitive search experience when adding nodes to workflows. (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4917623861\" data-permission-text=\"Title is private\" data-url=\"https://github.com/langgenius/",
+      "id": "r4f7h46",
+      "title": "froggeric/Qwen-Fixed-Chat-Templates · Hugging Face trending model",
+      "url": "https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates",
+      "publishedAt": "2026-08-26T05:52:00.811Z",
+      "description": "Trending model · model · ♥ 1474 · downloads 0",
       "source": {
-        "id": "gh-dify",
-        "name": "langgenius/dify Releases",
+        "id": "hf-trending-models",
+        "name": "Hugging Face Trending Models",
         "tier": "A",
-        "kind": "feed",
+        "kind": "huggingface_trending",
         "tags": [
-          "agent",
-          "workflow",
-          "tool",
+          "model",
           "open-source"
         ]
       },
-      "engagement": null,
-      "isCurrentSignal": false,
+      "engagement": {
+        "score": 1474
+      },
+      "isCurrentSignal": true,
       "relatedSources": [
         {
-          "id": "gh-dify",
-          "name": "langgenius/dify Releases",
+          "id": "hf-trending-models",
+          "name": "Hugging Face Trending Models",
           "tier": "A",
-          "kind": "feed",
+          "kind": "huggingface_trending",
           "tags": [
-            "agent",
-            "workflow",
-            "tool",
+            "model",
             "open-source"
           ]
         }
       ],
-      "category": "效率 / 工作流",
-      "summary": "<h2>What's Changed</h2> <h3>New Features</h3> <p><strong>Tool Multi-Select Input</strong></p> <ul> <li>Workflow tool nodes now support multi-select dropdown inputs, allowing users to choose multiple values from a predefined list when configuring tool parameter",
-      "importance": 52,
-      "novelty": 75,
-      "relevance": 72,
-      "socialPotential": 66,
+      "category": "模型 / Agent 上新",
+      "summary": "Trending model · model · ♥ 1474 · downloads 0",
+      "importance": 56,
+      "novelty": 96,
+      "relevance": 61,
+      "socialPotential": 71,
       "sourceQuality": 78,
-      "practicality": 98,
+      "practicality": 62,
       "researchIntensity": 0,
       "confidence": 64,
-      "whyItMatters": "重点不是技术原理，而是它能否减少重复操作、缩短流程或提升个人产出。",
-      "whatChanged": "v1.16.1 - Bug Fixes and Security Enhancements",
+      "whyItMatters": "这是能力边界或 Agent 使用方式的直接变化，优先判断它能不能马上改变现有工作流。",
+      "whatChanged": "froggeric/Qwen-Fixed-Chat-Templates · Hugging Face trending model",
       "angles": [
-        "我又找到一个能少做几步的工作流：v1.16.1 - Bug Fixes and Security Enhancements",
-        "把它放进自己的日常流程，能省下多少时间",
-        "哪些人最适合直接抄这个用法"
+        "发生了什么：froggeric/Qwen-Fixed-Chat-Templates · Hugging Face trending model",
+        "这次变化最值得普通用户注意的是什么",
+        "我会不会把它加入自己的 AI 工作流"
       ],
-      "radarScore": 83
+      "radarScore": 79
     },
     {
-      "id": "r1gzis5z",
-      "title": "Granite 4.2 LLMs: How They're Built",
-      "url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
-      "publishedAt": "2026-08-25T15:14:14.000Z",
-      "description": "",
+      "id": "ru3l7pa",
+      "title": "Qwen/Qwen3.8-27B · Hugging Face trending model",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "publishedAt": "2026-08-26T05:52:00.811Z",
+      "description": "Trending model · image-text-to-text · ♥ 12751 · downloads 2945415",
       "source": {
-        "id": "huggingface-blog",
-        "name": "Hugging Face Blog",
-        "tier": "S",
-        "kind": "feed",
+        "id": "hf-trending-models",
+        "name": "Hugging Face Trending Models",
+        "tier": "A",
+        "kind": "huggingface_trending",
         "tags": [
           "model",
-          "open-source",
-          "launch"
+          "open-source"
         ]
       },
-      "engagement": null,
-      "isCurrentSignal": false,
+      "engagement": {
+        "score": 12815.691466416512
+      },
+      "isCurrentSignal": true,
       "relatedSources": [
         {
-          "id": "huggingface-blog",
-          "name": "Hugging Face Blog",
-          "tier": "S",
-          "kind": "feed",
+          "id": "hf-trending-models",
+          "name": "Hugging Face Trending Models",
+          "tier": "A",
+          "kind": "huggingface_trending",
           "tags": [
             "model",
-            "open-source",
-            "launch"
+            "open-source"
           ]
         }
       ],
       "category": "模型 / Agent 上新",
-      "summary": "Hugging Face Blog 出现了一个值得进一步确认的新信号。",
+      "summary": "Trending model · image-text-to-text · ♥ 12751 · downloads 2945415",
       "importance": 56,
-      "novelty": 76,
-      "relevance": 48,
-      "socialPotential": 42,
-      "sourceQuality": 90,
-      "practicality": 48,
+      "novelty": 96,
+      "relevance": 56,
+      "socialPotential": 65,
+      "sourceQuality": 78,
+      "practicality": 53,
       "researchIntensity": 0,
       "confidence": 64,
       "whyItMatters": "这是能力边界或 Agent 使用方式的直接变化，优先判断它能不能马上改变现有工作流。",
-      "whatChanged": "Granite 4.2 LLMs: How They're Built",
+      "whatChanged": "Qwen/Qwen3.8-27B · Hugging Face trending model",
       "angles": [
-        "发生了什么：Granite 4.2 LLMs: How They're Built",
+        "发生了什么：Qwen/Qwen3.8-27B · Hugging Face trending model",
         "这次变化最值得普通用户注意的是什么",
         "我会不会把它加入自己的 AI 工作流"
       ],
-      "radarScore": 67
+      "radarScore": 76
     },
     {
-      "id": "rylzopw",
-      "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
-      "url": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing",
-      "publishedAt": "2026-08-25T11:39:24.000Z",
-      "description": "",
+      "id": "r1mwhfqv",
+      "title": "ornith-ai/Ornith-1.5-35B-A3B · Hugging Face trending model",
+      "url": "https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B",
+      "publishedAt": "2026-08-26T05:52:00.811Z",
+      "description": "Trending model · text-generation · ♥ 429 · downloads 70158",
       "source": {
-        "id": "huggingface-blog",
-        "name": "Hugging Face Blog",
-        "tier": "S",
-        "kind": "feed",
+        "id": "hf-trending-models",
+        "name": "Hugging Face Trending Models",
+        "tier": "A",
+        "kind": "huggingface_trending",
         "tags": [
           "model",
-          "open-source",
-          "launch"
+          "open-source"
         ]
       },
-      "engagement": null,
-      "isCurrentSignal": false,
+      "engagement": {
+        "score": 477.4608339025569
+      },
+      "isCurrentSignal": true,
       "relatedSources": [
         {
-          "id": "huggingface-blog",
-          "name": "Hugging Face Blog",
-          "tier": "S",
-          "kind": "feed",
+          "id": "hf-trending-models",
+          "name": "Hugging Face Trending Models",
+          "tier": "A",
+          "kind": "huggingface_trending",
           "tags": [
             "model",
-            "open-source",
-            "launch"
+            "open-source"
           ]
         }
       ],
       "category": "模型 / Agent 上新",
-      "summary": "Hugging Face Blog 出现了一个值得进一步确认的新信号。",
-      "importance": 56,
-      "novelty": 74,
-      "relevance": 48,
-      "socialPotential": 42,
-      "sourceQuality": 90,
+      "summary": "Trending model · text-generation · ♥ 429 · downloads 70158",
+      "importance": 49,
+      "novelty": 92,
+      "relevance": 50,
+      "socialPotential": 60,
+      "sourceQuality": 78,
       "practicality": 48,
       "researchIntensity": 0,
       "confidence": 64,
       "whyItMatters": "这是能力边界或 Agent 使用方式的直接变化，优先判断它能不能马上改变现有工作流。",
-      "whatChanged": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
+      "whatChanged": "ornith-ai/Ornith-1.5-35B-A3B · Hugging Face trending model",
       "angles": [
-        "发生了什么：Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
+        "发生了什么：ornith-ai/Ornith-1.5-35B-A3B · Hugging Face trending model",
         "这次变化最值得普通用户注意的是什么",
         "我会不会把它加入自己的 AI 工作流"
       ],
-      "radarScore": 67
+      "radarScore": 71
     }
   ]
 }
