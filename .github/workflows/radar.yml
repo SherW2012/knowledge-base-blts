@@ -6,6 +6,8 @@ on:
     paths:
       - "radar/**"
       - "scripts/radar.mjs"
+      - "scripts/radar-runtime.mjs"
+      - "package.json"
       - ".github/workflows/radar.yml"
   schedule:
     - cron: "30 23 * * *"
@@ -59,7 +61,7 @@ jobs:
         run: |
           git config user.name "BLTS AI Radar"
           git config user.email "actions@users.noreply.github.com"
-          git add radar-data "前沿部/AI情报雷达"
+          git add radar-data
           if git diff --cached --quiet; then
             echo "No radar changes to commit."
             exit 0
