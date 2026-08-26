@@ -45,6 +45,7 @@ jobs:
         if: ${{ github.event_name != 'workflow_dispatch' || inputs.weekly != true }}
         run: npm run radar
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
@@ -53,6 +54,7 @@ jobs:
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.weekly == true }}
         run: npm run radar:weekly
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
