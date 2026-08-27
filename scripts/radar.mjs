@@ -283,7 +283,11 @@ function decode(value = "") {
     return Number.isFinite(n) ? String.fromCodePoint(n) : m;
   });
 }
-function strip(value = "") { return decode(String(value).replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim()); }
+function strip(value = "") {
+  let text = String(value).replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1");
+  for (let i = 0; i < 3; i++) { const next = decode(text); if (next === text) break; text = next; }
+  return text.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+}
 function tag(block, name) {
   const n = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   return strip(block.match(new RegExp(`<${n}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${n}>`, "i"))?.[1] || "");
@@ -365,6 +369,15 @@ function category(item) {
   return "AI 综合";
 }
 function clamp(n) { return Math.max(0, Math.min(100, Math.round(n))); }
+function fallbackSummary(item) {
+  const desc = strip(item.description || "").slice(0, 220);
+  const releaseProject = String(item.source?.name || "").replace(/\s+Releases$/i, "");
+  if (releaseProject && /^v?\d+(?:\.\d+){1,3}/i.test(String(item.title || ""))) {
+    return `${releaseProject} 发布 ${item.title} 更新${desc ? `：${desc}` : "。"}`;
+  }
+  if (desc) return `${item.title}：${desc}`.slice(0, 260);
+  return `${item.source.name} 出现了一个值得进一步确认的新信号。`;
+}
 function fallback(item) {
   const text = `${item.title} ${item.description}`.toLowerCase();
   const high = cfg.keywords.high.filter((k) => text.includes(k.toLowerCase())).length;
@@ -378,7 +391,7 @@ function fallback(item) {
   const practicalScore = clamp(48 + practical * 9 + high * 5 + (c === "Skill / GitHub" ? 16 : 0) + (c === "工具 / 网站" ? 14 : 0) + (c === "效率 / 工作流" ? 14 : 0) - research * 13);
   return {
     ...item, category: c,
-    summary: item.description ? item.description.slice(0, 260) : `${item.source.name} 出现了一个值得进一步确认的新信号。`,
+    summary: fallbackSummary(item),
     importance: clamp(46 + high * 7 + medium * 3 + (item.source.tier === "S" ? 10 : 0) - research * 5),
     novelty: clamp(45 + recency * .38 + high * 4 + engagement * .5),
     relevance: clamp(48 + high * 6 + practical * 5 + medium * 2 - research * 6),
@@ -431,10 +444,16 @@ function chooseAnalysisCandidates(sorted, limit) {
 async function analyze(items) {
   const out = new Map(items.map((x) => [x.id, fallback(x)]));
   if (!process.env.LLM_API_KEY || !process.env.LLM_MODEL) return [...out.values()];
-  for (let i = 0; i < items.length; i += 8) {
-    const chunk = items.slice(i, i + 8);
+  for (let i = 0; i < items.length; i += 5) {
+    const chunk = items.slice(i, i + 5);
     try {
-      const result = await llm(chunk);
+      let result = await llm(chunk);
+      const returnedIds = new Set(result.map((x) => String(x?.id || "")));
+      const missing = chunk.filter((x) => !returnedIds.has(String(x.id)));
+      if (missing.length) {
+        console.warn(`[radar] LLM omitted ${missing.length}/${chunk.length} items; retrying missing ids`);
+        try { result = result.concat(await llm(missing)); } catch (retryError) { console.warn(`[radar] LLM missing-item retry failed: ${retryError.message}`); }
+      }
       for (const x of result) {
         const b = out.get(x.id); if (!b) continue;
         out.set(x.id, {
