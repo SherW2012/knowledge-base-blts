@@ -1,13 +1,15 @@
+import { readFile, writeFile } from "node:fs/promises";
+import path from "node:path";
 import process from "node:process";
 
 // GitHub Search API has a very small anonymous rate limit. In Actions, use the
 // repository-scoped GITHUB_TOKEN automatically supplied by the workflow.
 //
-// The radar core currently speaks OpenAI Chat Completions. DragonCode's Codex
-// configuration exposes an OpenAI-compatible Responses API instead, so this
-// runtime layer adapts the request/response without coupling radar.mjs to one
-// relay provider.
+// The radar core speaks OpenAI Chat Completions. DragonCode's Codex route uses
+// OpenAI Responses, so this runtime layer adapts the transport while keeping
+// the radar core provider-agnostic.
 const nativeFetch = globalThis.fetch;
+let dragonSuccessLogged = false;
 
 function enrichRadarMessages(messages = []) {
   return messages.map((message) => {
@@ -39,70 +41,6 @@ function responsesText(body) {
   return parts.join("\n").trim();
 }
 
-async function logDragonModels() {
-  const base = String(process.env.LLM_BASE_URL || "").replace(/\/$/, "");
-  const key = process.env.LLM_API_KEY;
-  if (!base.toLowerCase().includes("dragoncode.codes") || !key) return;
-  const headers = { authorization: `Bearer ${key}`, accept: "application/json" };
-  for (const endpoint of [`${base}/models`, `${base}/v1/models`]) {
-    try {
-      const response = await nativeFetch(endpoint, { headers });
-      if (!response.ok) continue;
-      const body = await response.json();
-      const ids = (Array.isArray(body?.data) ? body.data : Array.isArray(body?.models) ? body.models : [])
-        .map((item) => typeof item === "string" ? item : item?.id || item?.name)
-        .filter(Boolean)
-        .slice(0, 60);
-      if (ids.length) {
-        console.log(`[radar] DragonCode available models: ${ids.join(", ")}`);
-        return;
-      }
-    } catch {}
-  }
-  console.warn("[radar] DragonCode model list endpoint unavailable; using configured model directly");
-}
-
-async function probeDragonModel() {
-  const base = String(process.env.LLM_BASE_URL || "").replace(/\/$/, "");
-  const key = process.env.LLM_API_KEY;
-  const model = process.env.LLM_MODEL;
-  if (!base.toLowerCase().includes("dragoncode.codes") || !key || !model) return true;
-
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 60000);
-  try {
-    const response = await nativeFetch(`${base}/responses`, {
-      method: "POST",
-      signal: controller.signal,
-      headers: {
-        authorization: `Bearer ${key}`,
-        "content-type": "application/json",
-        accept: "application/json"
-      },
-      body: JSON.stringify({
-        model,
-        input: [{ role: "user", content: "只回复 OK" }],
-        store: false,
-        max_output_tokens: 16
-      })
-    });
-    if (!response.ok) {
-      const detail = (await response.text().catch(() => "")).replace(/\s+/g, " ").slice(0, 300);
-      console.warn(`[radar] DragonCode HTTP Responses probe -> HTTP ${response.status}${detail ? ` · ${detail}` : ""}`);
-      return false;
-    }
-    const body = await response.json();
-    const text = responsesText(body);
-    console.log(`[radar] DragonCode HTTP Responses probe OK${text ? ` · ${text.slice(0, 80)}` : ""}`);
-    return true;
-  } catch (error) {
-    console.warn(`[radar] DragonCode HTTP Responses probe failed: ${error.message}`);
-    return false;
-  } finally {
-    clearTimeout(timer);
-  }
-}
-
 async function dragonResponses(url, init, payload) {
   const base = String(process.env.LLM_BASE_URL || "https://dragoncode.codes").replace(/\/$/, "");
   const requestPayload = {
@@ -131,6 +69,10 @@ async function dragonResponses(url, init, payload) {
         status: 502,
         headers: { "content-type": "application/json" }
       });
+    }
+    if (!dragonSuccessLogged) {
+      console.log(`[radar] DragonCode Responses connected · model=${payload.model}`);
+      dragonSuccessLogged = true;
     }
     return new Response(JSON.stringify({ choices: [{ message: { content: text } }] }), {
       status: 200,
@@ -165,11 +107,41 @@ globalThis.fetch = async (input, init = {}) => {
   return nativeFetch(input, { ...nextInit, headers });
 };
 
-await logDragonModels();
-const dragonHttpReady = await probeDragonModel();
-if (String(process.env.LLM_BASE_URL || "").toLowerCase().includes("dragoncode.codes")) {
-  console.warn(`[radar] DragonCode diagnostic probe ${dragonHttpReady ? "succeeded" : "failed"}; skipping bulk LLM analysis for this diagnostic run`);
-  process.env.LLM_API_KEY = "";
+async function patchRadarCore() {
+  const file = path.join(process.cwd(), "scripts/radar.mjs");
+  let source = await readFile(file, "utf8");
+  let changed = false;
+
+  const oldFlow = `const deduped = dedupe(recent);\nconst clustered = cluster(deduped);\nconst analyzed = await analyze(clustered);\nconst scored = analyzed.map((x) => ({ ...x, radarScore: score(x) })).sort((a, b) => b.radarScore - a.radarScore);\nconst items = selectBalanced(scored);`;
+  const newFlow = `const deduped = dedupe(recent);\nconst clustered = cluster(deduped);\nconst ruleScored = clustered\n  .map((x) => fallback(x))\n  .map((x) => ({ ...x, radarScore: score(x) }))\n  .sort((a, b) => b.radarScore - a.radarScore);\nconst llmCandidateLimit = Math.min(ruleScored.length, Math.max(cfg.topK * 2, 36));\nconst llmCandidates = chooseAnalysisCandidates(ruleScored, llmCandidateLimit);\nconsole.log(\`[radar] LLM candidate pool: \${llmCandidates.length}/\${clustered.length}\`);\nconst analyzed = await analyze(llmCandidates);\nconst scored = analyzed.map((x) => ({ ...x, radarScore: score(x) })).sort((a, b) => b.radarScore - a.radarScore);\nconst items = selectBalanced(scored);`;
+
+  if (source.includes(oldFlow)) {
+    source = source.replace(oldFlow, newFlow);
+    changed = true;
+  }
+
+  if (!source.includes("function chooseAnalysisCandidates(")) {
+    const marker = "async function analyze(items) {";
+    const helper = `function chooseAnalysisCandidates(sorted, limit) {\n  const chosen = [], ids = new Set();\n  const add = (x) => {\n    if (!x || ids.has(x.id) || chosen.length >= limit) return false;\n    ids.add(x.id); chosen.push(x); return true;\n  };\n  for (const [cat, minimum] of Object.entries(cfg.categoryMinimums || {})) {\n    let n = 0;\n    const target = Math.max(minimum, Math.min(6, minimum * 2));\n    for (const x of sorted) {\n      if (x.category !== cat) continue;\n      if (add(x)) n++;\n      if (n >= target || chosen.length >= limit) break;\n    }\n  }\n  for (const x of sorted) {\n    if (chosen.length >= limit) break;\n    add(x);\n  }\n  return chosen;\n}\n\n`;
+    if (source.includes(marker)) {
+      source = source.replace(marker, helper + marker);
+      changed = true;
+    }
+  }
+
+  const oldTimeout = "const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), 30000);";
+  const newTimeout = "const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), 90000);";
+  if (source.includes(oldTimeout)) {
+    source = source.replace(oldTimeout, newTimeout);
+    changed = true;
+  }
+
+  if (changed) {
+    await writeFile(file, source, "utf8");
+    console.log("[radar] optimized LLM pipeline: prefilter≈36 candidates, timeout=90s");
+  }
 }
+
+await patchRadarCore();
 await import("./radar.mjs");
 console.log("[radar] application runtime data stored in radar-data; knowledge tree remains clean");
