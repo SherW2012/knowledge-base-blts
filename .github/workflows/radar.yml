@@ -4,13 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "radar/**"
-      - "scripts/radar.mjs"
-      - "scripts/radar-runtime.mjs"
-      - "package.json"
       - ".github/workflows/radar.yml"
-  schedule:
-    - cron: "30 23 * * *"
   workflow_dispatch:
     inputs:
       weekly:
@@ -28,6 +22,7 @@ concurrency:
 
 jobs:
   radar:
+    if: ${{ github.event_name == 'workflow_dispatch' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -41,23 +36,17 @@ jobs:
         with:
           node-version: 22
 
-      - name: Run daily radar
-        if: ${{ github.event_name != 'workflow_dispatch' || inputs.weekly != true }}
+      - name: Run daily radar in rule mode
+        if: ${{ inputs.weekly != true }}
         run: npm run radar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
-          LLM_MODEL: ${{ secrets.LLM_MODEL }}
 
-      - name: Run radar and force weekly report
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.weekly == true }}
+      - name: Run radar and force weekly report in rule mode
+        if: ${{ inputs.weekly == true }}
         run: npm run radar:weekly
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
-          LLM_MODEL: ${{ secrets.LLM_MODEL }}
 
       - name: Commit generated intelligence
         run: |
