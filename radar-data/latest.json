@@ -1,14 +1,14 @@
 {
   "schemaVersion": 2,
   "status": "ok",
-  "generatedAt": "2026-08-27T02:41:38.650Z",
+  "generatedAt": "2026-08-27T02:52:25.988Z",
   "date": "2026-08-27",
   "timezone": "Asia/Shanghai",
   "focus": "launches-tools-skills-productivity-markets",
   "llm": {
-    "enabled": false,
-    "provider": "https://api.openai.com/v1",
-    "model": null
+    "enabled": true,
+    "provider": "https://dragoncode.codes",
+    "model": "gpt-5.6-sol"
   },
   "stats": {
     "configuredSources": 39,
@@ -17,9 +17,9 @@
     "successfulSources": 33,
     "failedSources": 0,
     "scannedItems": 450,
-    "recentItems": 177,
-    "dedupedItems": 175,
-    "eventClusters": 150,
+    "recentItems": 175,
+    "dedupedItems": 173,
+    "eventClusters": 148,
     "publishedItems": 18,
     "researchItems": 0
   },
@@ -877,7 +877,7 @@
       "id": "rr7p30n",
       "title": "freestylefly/awesome-gpt-image-2 — Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新",
       "url": "https://github.com/freestylefly/awesome-gpt-image-2",
-      "publishedAt": "2026-08-27T02:41:38.650Z",
+      "publishedAt": "2026-08-27T02:52:25.988Z",
       "description": "GitHub Trending · 4050 stars today · Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
       "source": {
         "id": "gh-trending",
@@ -934,7 +934,7 @@
       "id": "rd4b90f",
       "title": "Alishahryar1/free-claude-code — Star Alishahryar1 / free-claude-code Use Claude Code, Codex, Pi, and OpenCode for free (1.3B+ free tokens) from your ter",
       "url": "https://github.com/Alishahryar1/free-claude-code",
-      "publishedAt": "2026-08-27T02:41:38.650Z",
+      "publishedAt": "2026-08-27T02:52:25.988Z",
       "description": "GitHub Trending · 536 stars today · Star Alishahryar1 / free-claude-code Use Claude Code, Codex, Pi, and OpenCode for free (1.3B+ free tokens) from your terminal, app, IDE, or phone like OpenClaw (voice supported + ToS friendly)",
       "source": {
         "id": "gh-trending",
@@ -991,7 +991,7 @@
       "id": "r5h72m1",
       "title": "K-Dense-AI/scientific-agent-skills — Star K-Dense-AI / scientific-agent-skills Turn any AI agent into an AI Scientist. The #1 Agent Skills library for scienc",
       "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
-      "publishedAt": "2026-08-27T02:41:38.650Z",
+      "publishedAt": "2026-08-27T02:52:25.988Z",
       "description": "GitHub Trending · 138 stars today · Star K-Dense-AI / scientific-agent-skills Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
       "source": {
         "id": "gh-trending",
@@ -1410,59 +1410,6 @@
       "radarScore": 85
     },
     {
-      "id": "rcfds8c",
-      "title": "5 ways to upgrade your home decor with Google Search",
-      "url": "https://blog.google/products-and-platforms/products/search/home-decor-tips/",
-      "publishedAt": "2026-08-25T16:00:00.000Z",
-      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Home_Decor.max-600x600.format-webp.webp\">Learn how to use Google Search tools to find home decor inspiration, shop for furniture, and tackle DIY projects.",
-      "source": {
-        "id": "google-ai-blog",
-        "name": "Google AI Blog",
-        "tier": "S",
-        "kind": "feed",
-        "tags": [
-          "launch",
-          "model",
-          "agent",
-          "product"
-        ]
-      },
-      "engagement": null,
-      "isCurrentSignal": false,
-      "relatedSources": [
-        {
-          "id": "google-ai-blog",
-          "name": "Google AI Blog",
-          "tier": "S",
-          "kind": "feed",
-          "tags": [
-            "launch",
-            "model",
-            "agent",
-            "product"
-          ]
-        }
-      ],
-      "category": "工具 / 网站",
-      "summary": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Home_Decor.max-600x600.format-webp.webp\">Learn how to use Google Search tools to find home decor inspiration, shop for furniture, and tackle DIY projects.",
-      "importance": 56,
-      "novelty": 67,
-      "relevance": 68,
-      "socialPotential": 66,
-      "sourceQuality": 90,
-      "practicality": 98,
-      "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "它可能直接降低某个任务的时间或门槛，适合快速试用后决定是否进入工具箱。",
-      "whatChanged": "5 ways to upgrade your home decor with Google Search",
-      "angles": [
-        "发现一个可能真能省时间的新工具：5 ways to upgrade your home decor with Google Search",
-        "它替代了原来哪一步手工操作",
-        "免费版够不够用，值不值得长期留在工具箱"
-      ],
-      "radarScore": 84
-    },
-    {
       "id": "r1bat6yr",
       "title": "Google announces Gemini 3.5 Transcribe for AI-powered speech-to-text",
       "url": "https://arstechnica.com/ai/2026/08/google-announces-gemini-3-5-transcribe-for-ai-powered-speech-to-text/",
@@ -1569,6 +1516,59 @@
       "radarScore": 83
     },
     {
+      "id": "rcfds8c",
+      "title": "5 ways to upgrade your home decor with Google Search",
+      "url": "https://blog.google/products-and-platforms/products/search/home-decor-tips/",
+      "publishedAt": "2026-08-25T16:00:00.000Z",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Home_Decor.max-600x600.format-webp.webp\">Learn how to use Google Search tools to find home decor inspiration, shop for furniture, and tackle DIY projects.",
+      "source": {
+        "id": "google-ai-blog",
+        "name": "Google AI Blog",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "launch",
+          "model",
+          "agent",
+          "product"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "google-ai-blog",
+          "name": "Google AI Blog",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "launch",
+            "model",
+            "agent",
+            "product"
+          ]
+        }
+      ],
+      "category": "工具 / 网站",
+      "summary": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Home_Decor.max-600x600.format-webp.webp\">Learn how to use Google Search tools to find home decor inspiration, shop for furniture, and tackle DIY projects.",
+      "importance": 56,
+      "novelty": 66,
+      "relevance": 68,
+      "socialPotential": 66,
+      "sourceQuality": 90,
+      "practicality": 98,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "它可能直接降低某个任务的时间或门槛，适合快速试用后决定是否进入工具箱。",
+      "whatChanged": "5 ways to upgrade your home decor with Google Search",
+      "angles": [
+        "发现一个可能真能省时间的新工具：5 ways to upgrade your home decor with Google Search",
+        "它替代了原来哪一步手工操作",
+        "免费版够不够用，值不值得长期留在工具箱"
+      ],
+      "radarScore": 83
+    },
+    {
       "id": "r1mjtfad",
       "title": "v1.16.1 - Bug Fixes and Security Enhancements",
       "url": "https://github.com/langgenius/dify/releases/tag/1.16.1",
@@ -1625,7 +1625,7 @@
       "id": "r4f7h46",
       "title": "froggeric/Qwen-Fixed-Chat-Templates · Hugging Face trending model",
       "url": "https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates",
-      "publishedAt": "2026-08-27T02:41:38.650Z",
+      "publishedAt": "2026-08-27T02:52:25.988Z",
       "description": "Trending model · model · ♥ 1487 · downloads 0",
       "source": {
         "id": "hf-trending-models",
@@ -1676,8 +1676,8 @@
       "id": "r180sh77",
       "title": "Qwen/Qwen3.8-Flash-Next · Hugging Face trending model",
       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
-      "publishedAt": "2026-08-27T02:41:38.650Z",
-      "description": "Trending model · image-text-to-text · ♥ 3666 · downloads 2551",
+      "publishedAt": "2026-08-27T02:52:25.988Z",
+      "description": "Trending model · image-text-to-text · ♥ 3671 · downloads 2551",
       "source": {
         "id": "hf-trending-models",
         "name": "Hugging Face Trending Models",
@@ -1689,7 +1689,7 @@
         ]
       },
       "engagement": {
-        "score": 3700.068806700491
+        "score": 3705.068806700491
       },
       "isCurrentSignal": true,
       "relatedSources": [
@@ -1705,7 +1705,7 @@
         }
       ],
       "category": "模型 / Agent 上新",
-      "summary": "Trending model · image-text-to-text · ♥ 3666 · downloads 2551",
+      "summary": "Trending model · image-text-to-text · ♥ 3671 · downloads 2551",
       "importance": 56,
       "novelty": 96,
       "relevance": 56,
@@ -1727,8 +1727,8 @@
       "id": "r1y1xk0u",
       "title": "zai-org/GLM-5.3-Flash · Hugging Face trending model",
       "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
-      "publishedAt": "2026-08-27T02:41:38.650Z",
-      "description": "Trending model · text-generation · ♥ 902 · downloads 0",
+      "publishedAt": "2026-08-27T02:52:25.988Z",
+      "description": "Trending model · text-generation · ♥ 915 · downloads 0",
       "source": {
         "id": "hf-trending-models",
         "name": "Hugging Face Trending Models",
@@ -1740,7 +1740,7 @@
         ]
       },
       "engagement": {
-        "score": 902
+        "score": 915
       },
       "isCurrentSignal": true,
       "relatedSources": [
@@ -1756,7 +1756,7 @@
         }
       ],
       "category": "模型 / Agent 上新",
-      "summary": "Trending model · text-generation · ♥ 902 · downloads 0",
+      "summary": "Trending model · text-generation · ♥ 915 · downloads 0",
       "importance": 56,
       "novelty": 96,
       "relevance": 56,
