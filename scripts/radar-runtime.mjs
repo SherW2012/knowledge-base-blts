@@ -113,10 +113,6 @@ async function dragonResponses(url, init, payload) {
   const headers = new Headers(init.headers || {});
   headers.set("content-type", "application/json");
 
-  // Codex appends the Responses path directly to model_providers.*.base_url.
-  // DragonCode's generated config uses base_url=https://dragoncode.codes, so
-  // /responses is the primary endpoint. /v1/responses is kept as a fallback
-  // for other OpenAI-compatible relays.
   const endpoints = [`${base}/responses`, `${base}/v1/responses`];
   let lastResponse = null;
   for (const endpoint of endpoints) {
@@ -136,8 +132,6 @@ async function dragonResponses(url, init, payload) {
         headers: { "content-type": "application/json" }
       });
     }
-    // radar.mjs expects Chat Completions shape; translate the successful
-    // Responses payload back into that tiny interface.
     return new Response(JSON.stringify({ choices: [{ message: { content: text } }] }), {
       status: 200,
       headers: { "content-type": "application/json" }
@@ -173,8 +167,8 @@ globalThis.fetch = async (input, init = {}) => {
 
 await logDragonModels();
 const dragonHttpReady = await probeDragonModel();
-if (!dragonHttpReady && String(process.env.LLM_BASE_URL || "").toLowerCase().includes("dragoncode.codes")) {
-  console.warn("[radar] DragonCode HTTP Responses unavailable; skipping bulk LLM analysis for this diagnostic run");
+if (String(process.env.LLM_BASE_URL || "").toLowerCase().includes("dragoncode.codes")) {
+  console.warn(`[radar] DragonCode diagnostic probe ${dragonHttpReady ? "succeeded" : "failed"}; skipping bulk LLM analysis for this diagnostic run`);
   process.env.LLM_API_KEY = "";
 }
 await import("./radar.mjs");
