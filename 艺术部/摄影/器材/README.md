@@ -10,7 +10,9 @@
 
 ## 新增一台设备
 
-1. 在 `site/gear-data.json` 里加一条：`id`、`name`、`brand`、`category`、`form`、`dimensions`（毫米，宽 × 高 × 厚）、`tags`、`usage`。
+1. 在 `site/gear-data.json` 里加一条：`id`、`name`、`shortName`（顶部图标下面那行短名）、`brand`、`category`、`form`、`dimensions`（毫米，宽 × 高 × 厚）、`tags`、`usage`。
+   - `price` 写成 `{ text, asOf, source, sourceLabel }`，只写查得到出处的数字，查不到就写 `{ text: null, note: "…" }`，不要拍脑袋填。
+   - `samples` 是一组 `{ label, url }` 外链，指向能看到这台机器真实出片的地方（DPReview 样片库、Flickr 机型页之类）。别人的照片不下载进仓库。
 2. 在这个目录下建一篇同名文档，把文件名填进那条数据的 `note`。
 3. 有真实 GLB 模型时，放进 `site/models/`，把路径填进 `modelPath`，场景会自动改用它并缩放到 `dimensions` 给的真实尺寸。
 

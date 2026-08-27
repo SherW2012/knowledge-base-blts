@@ -58,15 +58,15 @@
           "id": "gear-room",
           "title": "虚拟器材室",
           "eyebrow": "VIRTUAL GEAR ROOM",
-          "description": "把随身的相机、手机与视频设备按真实比例摆在一张桌上，可旋转、可聚焦，点开是它的参数与使用经验。",
+          "description": "一次只摆一台设备：顶上的图标换机型，展台上按真实三围建模，可以自由转着看，旁边写参数、参考价和出片范例。",
           "mark": "GEAR",
           "status": "live",
           "renderer": "gear-room",
           "capabilities": [
             "11 台设备",
-            "真实比例",
-            "点击聚焦",
-            "按类型筛选"
+            "真实三围建模",
+            "自由旋转",
+            "参考价与样片"
           ]
         }
       ]

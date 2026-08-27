@@ -47,6 +47,47 @@
 }
 .gr-tools button:hover:not(:disabled) { border-color: var(--gr-ink-soft); color: var(--gr-ink); }
 .gr-tools button:disabled { opacity: .35; cursor: default; }
+.gr-tools button.off { opacity: .45; }
+
+/* 顶部图标条：一次只展示一台，切换靠这排剪影 */
+.gr-rail {
+  display: flex; gap: 4px; align-items: stretch;
+  padding: 10px 18px; border-bottom: 1px solid var(--gr-line);
+  overflow-x: auto; scrollbar-width: thin;
+}
+.gr-rail::-webkit-scrollbar { height: 4px; }
+.gr-rail::-webkit-scrollbar-thumb { background: var(--gr-line); border-radius: 2px; }
+.gr-rail-empty { margin: 4px 4px; color: var(--gr-ink-faint); font-size: 11px; }
+.gr-chip {
+  flex: 0 0 auto; display: grid; justify-items: center; gap: 5px;
+  min-width: 74px; padding: 9px 10px 8px;
+  border: 1px solid transparent; border-radius: 3px; background: transparent;
+  color: var(--gr-ink-faint); cursor: pointer;
+  transition: color .16s ease, border-color .16s ease, background .16s ease;
+}
+.gr-chip svg {
+  width: 26px; height: 26px; display: block;
+  fill: none; stroke: currentColor; stroke-width: 1.2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.gr-chip span { font-size: 10px; letter-spacing: .04em; white-space: nowrap; }
+.gr-chip:hover { color: var(--gr-ink); border-color: var(--gr-line); }
+.gr-chip.on {
+  color: var(--gr-hot); border-color: var(--gr-line);
+  background: color-mix(in srgb, var(--gr-ink) 9%, transparent);
+}
+.gr-chip.on svg { stroke-width: 1.5; }
+.gear-room[data-view="list"] .gr-rail { display: none; }
+
+/* 展台铭牌 */
+.gr-plate {
+  position: absolute; left: 16px; top: 14px; display: grid; gap: 3px; pointer-events: none;
+  padding: 8px 12px; border: 1px solid var(--gr-line); border-radius: 2px;
+  background: color-mix(in srgb, var(--gr-ground) 86%, transparent);
+  backdrop-filter: blur(8px);
+}
+.gr-plate strong { font-size: 13px; font-weight: 550; letter-spacing: .02em; color: var(--gr-ink); }
+.gr-plate span { font-size: 10px; letter-spacing: .08em; color: var(--gr-ink-soft); }
 
 .gr-body { display: grid; grid-template-columns: minmax(0, 1fr) 268px; min-height: 0; }
 .gear-room[data-view="list"] .gr-body { display: none; }
@@ -56,8 +97,11 @@
 .gr-canvas { position: absolute; inset: 0; }
 .gr-canvas canvas { display: block; width: 100%; height: 100%; cursor: grab; }
 .gr-hint {
-  position: absolute; left: 20px; bottom: 14px; margin: 0;
-  color: var(--gr-ink-faint); font-size: 10px; letter-spacing: .08em; pointer-events: none;
+  position: absolute; left: 16px; bottom: 12px; margin: 0;
+  padding: 6px 11px; border-radius: 2px;
+  background: color-mix(in srgb, var(--gr-ground) 80%, transparent);
+  backdrop-filter: blur(8px);
+  color: var(--gr-ink-soft); font-size: 10px; letter-spacing: .08em; pointer-events: none;
 }
 .gr-tip {
   position: absolute; left: 0; top: 0; padding: 7px 11px; pointer-events: none;
@@ -85,6 +129,19 @@
   padding: 3px 9px; border: 1px solid var(--gr-line); border-radius: 2px;
   color: var(--gr-ink-soft); font-size: 10px; letter-spacing: .06em;
 }
+.gr-price, .gr-samples { margin-top: 20px; }
+.gr-price-text { margin: 8px 0 0; color: var(--gr-ink); font-size: 12px; line-height: 1.75; }
+.gr-price-meta { margin: 6px 0 0; color: var(--gr-ink-faint); font-size: 10px; letter-spacing: .04em; }
+.gr-price-meta a { color: var(--gr-ink-soft); text-decoration: none; border-bottom: 1px solid var(--gr-line); }
+.gr-price-meta a:hover { color: var(--gr-ink); border-color: var(--gr-ink-soft); }
+.gr-price-none { margin: 8px 0 0; color: var(--gr-ink-faint); font-size: 11px; line-height: 1.7; }
+.gr-samples ul { margin: 8px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.gr-samples a {
+  color: var(--gr-ink-soft); font-size: 11.5px; text-decoration: none;
+  border-bottom: 1px solid var(--gr-line); padding-bottom: 2px;
+}
+.gr-samples a:hover { color: var(--gr-ink); border-color: var(--gr-ink-soft); }
+
 .gr-usage { margin-top: 18px; }
 .gr-label { color: var(--gr-ink-faint); font-size: 10px; letter-spacing: .16em; }
 .gr-usage ul { margin: 8px 0 0; padding: 0; list-style: none; }
@@ -123,6 +180,7 @@
 .gear-room.is-full .gr-stage { height: auto; flex: 1; }
 .gear-room.is-full .gr-body { flex: 1; min-height: 0; }
 .gear-room.is-full .gr-note { display: none; }
+.gear-room.is-full .gr-rail { padding: 12px 22px; }
 
 @media (max-width: 900px) {
   .gr-body { grid-template-columns: minmax(0, 1fr); }
@@ -133,6 +191,12 @@
   .gr-row { grid-template-columns: minmax(0, 1fr) auto; gap: 10px; padding: 12px 16px; }
   .gr-row-spec { display: none; }
   .gr-note { padding: 12px 16px 16px; }
+  .gr-rail { padding: 8px 12px; }
+  .gr-chip { min-width: 62px; padding: 7px 8px 6px; }
+  .gr-chip svg { width: 22px; height: 22px; }
+  .gr-plate { left: 14px; top: 12px; }
+  /* 触屏上这句提示会压住模型，而且手指一碰就知道怎么转了 */
+  .gr-hint { display: none; }
 }
 
 .gr-step { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; }

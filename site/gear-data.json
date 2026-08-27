@@ -2,11 +2,12 @@
   "title": "Virtual Gear Room",
   "subtitle": "艺术部 · 摄影器材",
   "notesDir": "艺术部/摄影/器材",
-  "note": "尺寸为各机型公布的标称三围（宽 × 高 × 厚，毫米），用于在场景里还原真实比例。发现出入直接改这个文件即可，场景会自动跟着变。",
+  "note": "三围与重量按官方规格写，模型是照着这些数字参数化生成的，不是照片贴图。参考价只写查得到出处的，标注了日期与来源，其余留待补。样片是外链，指向能看到该机型真实出片的地方，不把别人的照片存进仓库。",
   "gear": [
     {
       "id": "ricoh-gr3x",
       "name": "GR IIIx",
+      "shortName": "GR IIIx",
       "brand": "Ricoh",
       "category": "camera",
       "form": "compact",
@@ -39,11 +40,28 @@
         "lens": 30,
         "barrel": 7,
         "grip": true
-      }
+      },
+      "price": {
+        "text": "首发约 ¥6,499（2021 上市），现行在售",
+        "asOf": "2021 发布",
+        "source": "https://qicai.fengniao.com/537/5372319.html",
+        "sourceLabel": "蜂鸟网"
+      },
+      "samples": [
+        {
+          "label": "DPReview 样片库",
+          "url": "https://www.dpreview.com/sample-galleries/5482325071/ricoh-gr-iiix-sample-gallery"
+        },
+        {
+          "label": "Flickr 真实出片",
+          "url": "https://www.flickr.com/cameras/ricoh/gr_iiix"
+        }
+      ]
     },
     {
       "id": "ricoh-gr3-hdf",
       "name": "GR III HDF",
+      "shortName": "GR III HDF",
       "brand": "Ricoh",
       "category": "camera",
       "form": "compact",
@@ -75,11 +93,32 @@
         "lens": 30,
         "barrel": 6,
         "grip": true
-      }
+      },
+      "price": {
+        "text": "发布价 $1,069.95（2024-04 上市），现行在售",
+        "asOf": "2024-03 发布",
+        "source": "https://petapixel.com/2024/03/27/ricohs-new-gr-iii-hdf-and-gr-iiix-hdf-cameras-feature-a-dreamy-filter/",
+        "sourceLabel": "PetaPixel"
+      },
+      "samples": [
+        {
+          "label": "PetaPixel HDF 实拍评测",
+          "url": "https://petapixel.com/2024/07/13/ricoh-gr-iii-hdf-review-pocket-sized-diffused-nostalgia/"
+        },
+        {
+          "label": "DPReview 样片库（GR III 同机身）",
+          "url": "https://www.dpreview.com/samples/8776863861/ricoh-gr-iii-sample-gallery/"
+        },
+        {
+          "label": "Flickr 真实出片（GR III）",
+          "url": "https://www.flickr.com/cameras/ricoh/gr_iii"
+        }
+      ]
     },
     {
       "id": "canon-g12",
       "name": "PowerShot G12",
+      "shortName": "G12",
       "brand": "Canon",
       "category": "camera",
       "form": "compact-zoom",
@@ -112,11 +151,28 @@
         "barrel": 16,
         "hotshoe": true,
         "dials": 2
-      }
+      },
+      "price": {
+        "text": "发布价 $499.99（2010-10 上市），早已停产，只剩二手，成色差价大",
+        "asOf": "2010 发布",
+        "source": "https://www.dpreview.com/articles/0240243906/canong12",
+        "sourceLabel": "DPReview"
+      },
+      "samples": [
+        {
+          "label": "DPReview 样片库",
+          "url": "https://www.dpreview.com/sample-galleries/7273391865/canon-powershot-g12-review-samples"
+        },
+        {
+          "label": "Flickr 真实出片",
+          "url": "https://www.flickr.com/cameras/canon/powershot_g12"
+        }
+      ]
     },
     {
       "id": "canon-g7x2",
       "name": "PowerShot G7 X Mark II",
+      "shortName": "G7X II",
       "brand": "Canon",
       "category": "camera",
       "form": "compact",
@@ -146,11 +202,28 @@
         "body": "black",
         "lens": 38,
         "barrel": 14
-      }
+      },
+      "price": {
+        "text": "发布价 $699（2016-02 上市），已停产，二手反而涨价",
+        "asOf": "2016 发布",
+        "source": "https://apotelyt.com/camera-deal/canon-g7-x-mark-ii-bargain",
+        "sourceLabel": "Apotelyt"
+      },
+      "samples": [
+        {
+          "label": "DPReview 样片库",
+          "url": "https://www.dpreview.com/sample-galleries/5500389509/canon-powershot-g7-x-mark-ii-sample-gallery"
+        },
+        {
+          "label": "Flickr 真实出片",
+          "url": "https://www.flickr.com/cameras/canon/powershot_g7_x_mark_ii"
+        }
+      ]
     },
     {
       "id": "samsung-wb150",
       "name": "WB150F",
+      "shortName": "WB150F",
       "brand": "Samsung",
       "category": "camera",
       "form": "compact",
@@ -180,11 +253,28 @@
         "body": "silver",
         "lens": 32,
         "barrel": 10
-      }
+      },
+      "price": {
+        "text": "发布价约 $229（2012 上市；DPReview 记为 $299.99，口径不一），只剩二手",
+        "asOf": "2012 发布",
+        "source": "https://www.dpreview.com/products/samsung/compacts/samsung_wb150f/",
+        "sourceLabel": "DPReview"
+      },
+      "samples": [
+        {
+          "label": "ExploreCams 样片",
+          "url": "https://explorecams.com/photos/model/wb150-wb150f-wb152-wb152f-wb151"
+        },
+        {
+          "label": "pbase 机型样片",
+          "url": "https://pbase.com/cameras/samsung/wb150f"
+        }
+      ]
     },
     {
       "id": "fujifilm-xs10",
       "name": "X-S10",
+      "shortName": "X-S10",
       "brand": "Fujifilm",
       "category": "camera",
       "form": "mirrorless",
@@ -219,11 +309,28 @@
         "evf": true,
         "grip": true,
         "dials": 3
-      }
+      },
+      "price": {
+        "text": "发布价 $999（机身，2020-10 上市），2024 停产，二手 £534 起",
+        "asOf": "2026-08",
+        "source": "https://www.camerapricebuster.co.uk/Fujifilm/Fujifilm-X-System-Cameras/Fujifilm-X-S10-Camera-Body/Used",
+        "sourceLabel": "Camera Price Buster"
+      },
+      "samples": [
+        {
+          "label": "DPReview 样片库",
+          "url": "https://www.dpreview.com/samples/2269403456/fujifilm-x-s10-sample-gallery"
+        },
+        {
+          "label": "Flickr 真实出片",
+          "url": "https://www.flickr.com/cameras/fujifilm/x-s10"
+        }
+      ]
     },
     {
       "id": "dji-pocket3",
       "name": "Osmo Pocket 3",
+      "shortName": "Pocket 3",
       "brand": "DJI",
       "category": "video",
       "form": "pocket-gimbal",
@@ -250,11 +357,28 @@
       "modelPath": null,
       "style": {
         "body": "graphite"
-      }
+      },
+      "price": {
+        "text": "美国 $399–530 区间，官翻 $459，现行在售",
+        "asOf": "2026-08",
+        "source": "https://camelcamelcamel.com/product/B0CG19QXWD",
+        "sourceLabel": "camelcamelcamel"
+      },
+      "samples": [
+        {
+          "label": "SampleShots 实拍库",
+          "url": "https://www.sampleshots.com/cameras/dji-osmo-pocket-3/"
+        },
+        {
+          "label": "DPReview 论坛实拍帖",
+          "url": "https://www.dpreview.com/forums/threads/the-dji-pocket-3-is-a-breakthrough-video-camera-a-brief-review-with-examples.4733722/"
+        }
+      ]
     },
     {
       "id": "iphone-16-pro-max",
       "name": "iPhone 16 Pro Max",
+      "shortName": "16 Pro Max",
       "brand": "Apple",
       "category": "phone",
       "form": "phone",
@@ -281,11 +405,24 @@
       "style": {
         "body": "titanium",
         "cameras": 3
-      }
+      },
+      "price": {
+        "text": "发布价 $1,199（256GB 起步，2024-09 上市）",
+        "asOf": "2024-09 发布",
+        "source": "https://www.apple.com/newsroom/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/",
+        "sourceLabel": "Apple Newsroom"
+      },
+      "samples": [
+        {
+          "label": "Flickr 真实出片",
+          "url": "https://www.flickr.com/cameras/apple/iphone_16_pro_max"
+        }
+      ]
     },
     {
       "id": "iphone-xs-max",
       "name": "iPhone XS Max",
+      "shortName": "XS Max",
       "brand": "Apple",
       "category": "phone",
       "form": "phone",
@@ -310,11 +447,28 @@
         "body": "steel",
         "cameras": 2,
         "cameraLayout": "vertical"
-      }
+      },
+      "price": {
+        "text": "发布价 $1,099（64GB，2018-09 上市），已停产，只剩二手",
+        "asOf": "2018-09 发布",
+        "source": "https://www.apple.com/newsroom/2018/09/iphone-xs-and-iphone-xs-max-bring-the-best-and-biggest-displays-to-iphone/",
+        "sourceLabel": "Apple Newsroom"
+      },
+      "samples": [
+        {
+          "label": "DPReview 样片库",
+          "url": "https://www.dpreview.com/sample-galleries/7780769194/iphone-xs-sample-gallery"
+        },
+        {
+          "label": "ExploreCams 样片",
+          "url": "https://explorecams.com/photos/model/iphone-xs-max"
+        }
+      ]
     },
     {
       "id": "iphone-7-plus",
       "name": "iPhone 7 Plus",
+      "shortName": "7 Plus",
       "brand": "Apple",
       "category": "phone",
       "form": "phone",
@@ -339,11 +493,24 @@
         "body": "aluminium",
         "cameras": 2,
         "cameraLayout": "horizontal"
-      }
+      },
+      "price": {
+        "text": "发布价 $769（32GB，2016-09 上市），已停产，只剩二手",
+        "asOf": "2016-09 发布",
+        "source": "https://www.apple.com/newsroom/2016/09/apple-introduces-iphone-7-iphone-7-plus/",
+        "sourceLabel": "Apple Newsroom"
+      },
+      "samples": [
+        {
+          "label": "SampleShots 实拍库",
+          "url": "https://www.sampleshots.com/cameras/apple-iphone-7-plus/"
+        }
+      ]
     },
     {
       "id": "iphone-18-pro-max",
       "name": "iPhone 18 Pro Max",
+      "shortName": "18 Pro Max",
       "brand": "Apple",
       "category": "phone",
       "form": "phone",
@@ -359,7 +526,12 @@
       "style": {
         "body": "titanium",
         "cameras": 3
-      }
+      },
+      "price": {
+        "text": null,
+        "note": "尚未发布，等上市了再补官方定价"
+      },
+      "samples": []
     }
   ]
 }
