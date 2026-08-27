@@ -37,7 +37,14 @@ const cutoff = now.getTime() - cfg.lookbackHours * 3600_000;
 const recent = collected.filter((x) => x.isCurrentSignal || !Date.parse(x.publishedAt) || Date.parse(x.publishedAt) >= cutoff);
 const deduped = dedupe(recent);
 const clustered = cluster(deduped);
-const analyzed = await analyze(clustered);
+const ruleScored = clustered
+  .map((x) => fallback(x))
+  .map((x) => ({ ...x, radarScore: score(x) }))
+  .sort((a, b) => b.radarScore - a.radarScore);
+const llmCandidateLimit = Math.min(ruleScored.length, Math.max(cfg.topK * 2, 36));
+const llmCandidates = chooseAnalysisCandidates(ruleScored, llmCandidateLimit);
+console.log(`[radar] LLM candidate pool: ${llmCandidates.length}/${clustered.length}`);
+const analyzed = await analyze(llmCandidates);
 const scored = analyzed.map((x) => ({ ...x, radarScore: score(x) })).sort((a, b) => b.radarScore - a.radarScore);
 const items = selectBalanced(scored);
 
@@ -399,6 +406,28 @@ function angles(c, title) {
   return [`发生了什么：${title}`, "这次变化最值得普通用户注意的是什么", "我会不会把它加入自己的 AI 工作流"];
 }
 
+function chooseAnalysisCandidates(sorted, limit) {
+  const chosen = [], ids = new Set();
+  const add = (x) => {
+    if (!x || ids.has(x.id) || chosen.length >= limit) return false;
+    ids.add(x.id); chosen.push(x); return true;
+  };
+  for (const [cat, minimum] of Object.entries(cfg.categoryMinimums || {})) {
+    let n = 0;
+    const target = Math.max(minimum, Math.min(6, minimum * 2));
+    for (const x of sorted) {
+      if (x.category !== cat) continue;
+      if (add(x)) n++;
+      if (n >= target || chosen.length >= limit) break;
+    }
+  }
+  for (const x of sorted) {
+    if (chosen.length >= limit) break;
+    add(x);
+  }
+  return chosen;
+}
+
 async function analyze(items) {
   const out = new Map(items.map((x) => [x.id, fallback(x)]));
   if (!process.env.LLM_API_KEY || !process.env.LLM_MODEL) return [...out.values()];
@@ -429,7 +458,7 @@ function num(value, fallbackValue) { const n = Number(value); return Number.isFi
 async function llm(items) {
   const url = `${(process.env.LLM_BASE_URL || "https://api.openai.com/v1").replace(/\/$/, "")}/chat/completions`;
   const input = items.map((x) => ({ id: x.id, title: x.title, source: x.source, publishedAt: x.publishedAt, description: x.description.slice(0, 900) }));
-  const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), 30000);
+  const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), 90000);
   try {
     const res = await fetch(url, {
       method: "POST", signal: controller.signal,
