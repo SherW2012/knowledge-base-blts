@@ -16,13 +16,13 @@ function enrichRadarMessages(messages = []) {
     if (message.role === "system") {
       return {
         ...message,
-        content: `${message.content}\n你输出给普通用户看的情报摘要必须是你基于输入重新分析后的中文解释，不得复制RSS正文、Release Notes、README片段或原始HTML。先判断“这到底是什么东西/哪个公司或项目发生了什么”，再用1到2句话讲清楚。遇到类似“Desktop v0.0.17”这种只有版本号的Release标题，必须结合来源名称和描述指出真正的项目及核心变化，不得把版本名误写成一个新项目。任何HTML标签、转义后的HTML标签、Markdown残片、列表符号都不能出现在summary里。`
+        content: `${message.content}\n你输出给普通用户看的情报摘要必须是你基于输入重新分析后的中文解释，不得复制RSS正文、Release Notes、README片段或原始HTML。先判断“这到底是什么东西/哪个公司或项目发生了什么”，再用1到2句话讲清楚。遇到类似“Desktop v0.0.17”或“v4.1.16”这种只有版本号的Release标题，必须结合source.name和description指出真正的项目及核心变化，不得把版本名误写成一个新项目。任何HTML标签、转义后的HTML标签、Markdown残片、列表符号都不能出现在summary里。`
       };
     }
     if (message.role === "user" && String(message.content).includes("summary")) {
       return {
         ...message,
-        content: `${message.content}\n额外要求：summary不是原文摘要，而是分析员写给用户的“这是什么”简介。控制在45-100个中文字符左右，优先包含主体名称、产品/项目类型、这次发生的关键变化以及它解决什么问题；不要用“值得关注”“发生了什么”这类空话开头，不要逐字复述title，不要输出任何HTML或Markdown标签。`
+        content: `${message.content}\n额外硬性要求：summary不是原文摘要，而是分析员写给用户的“这是什么”简介，控制在45-100个中文字符左右，优先包含主体名称、产品/项目类型、这次发生的关键变化以及它解决什么问题；不要用“值得关注”“发生了什么”这类空话开头，不要逐字复述title，不要输出任何HTML或Markdown标签。输入有几条就必须输出几条，所有输入id必须原样且各出现一次，禁止漏项、合并或新增id。`
       };
     }
     return message;
@@ -45,7 +45,7 @@ async function dragonResponses(url, init, payload) {
   const base = String(process.env.LLM_BASE_URL || "https://dragoncode.codes").replace(/\/$/, "");
   const requestPayload = {
     model: payload.model,
-    input: enrichRadarMessages(payload.messages || []).map(({ role, content }) => ({ role, content })),
+    input: payload.messages.map(({ role, content }) => ({ role, content })),
     store: false
   };
   const headers = new Headers(init.headers || {});
@@ -129,6 +129,43 @@ async function patchRadarCore() {
     }
   }
 
+  const oldStrip = `function strip(value = "") { return decode(String(value).replace(/<!\\[CDATA\\[([\\s\\S]*?)\\]\\]>/g, "$1").replace(/<[^>]+>/g, " ").replace(/\\s+/g, " ").trim()); }`;
+  const newStrip = `function strip(value = "") {\n  let text = String(value).replace(/<!\\[CDATA\\[([\\s\\S]*?)\\]\\]>/g, "$1");\n  for (let i = 0; i < 3; i++) { const next = decode(text); if (next === text) break; text = next; }\n  return text.replace(/<[^>]+>/g, " ").replace(/\\s+/g, " ").trim();\n}`;
+  if (source.includes(oldStrip)) {
+    source = source.replace(oldStrip, newStrip);
+    changed = true;
+  }
+
+  const oldFallbackSummary = `summary: item.description ? item.description.slice(0, 260) : \`${'${item.source.name}'} 出现了一个值得进一步确认的新信号。\`,`;
+  const newFallbackSummary = `summary: fallbackSummary(item),`;
+  if (source.includes(oldFallbackSummary)) {
+    source = source.replace(oldFallbackSummary, newFallbackSummary);
+    changed = true;
+  }
+
+  if (!source.includes("function fallbackSummary(item)")) {
+    const marker = "function fallback(item) {";
+    const helper = `function fallbackSummary(item) {\n  const desc = strip(item.description || "").slice(0, 220);\n  const releaseProject = String(item.source?.name || "").replace(/\\s+Releases$/i, "");\n  if (releaseProject && /^v?\\d+(?:\\.\\d+){1,3}/i.test(String(item.title || ""))) {\n    return \`${'${releaseProject}'} 发布 ${'${item.title}'} 更新${'${desc ? `：${desc}` : "。"}'}\`;\n  }\n  if (desc) return \`${'${item.title}'}：${'${desc}'}\`.slice(0, 260);\n  return \`${'${item.source.name}'} 出现了一个值得进一步确认的新信号。\`;\n}\n`;
+    if (source.includes(marker)) {
+      source = source.replace(marker, helper + marker);
+      changed = true;
+    }
+  }
+
+  const oldBatch = `for (let i = 0; i < items.length; i += 8) {\n    const chunk = items.slice(i, i + 8);`;
+  const newBatch = `for (let i = 0; i < items.length; i += 5) {\n    const chunk = items.slice(i, i + 5);`;
+  if (source.includes(oldBatch)) {
+    source = source.replace(oldBatch, newBatch);
+    changed = true;
+  }
+
+  const oldResult = `      const result = await llm(chunk);\n      for (const x of result) {`;
+  const newResult = `      let result = await llm(chunk);\n      const returnedIds = new Set(result.map((x) => String(x?.id || "")));\n      const missing = chunk.filter((x) => !returnedIds.has(String(x.id)));\n      if (missing.length) {\n        console.warn(\`[radar] LLM omitted \${missing.length}/\${chunk.length} items; retrying missing ids\`);\n        try { result = result.concat(await llm(missing)); } catch (retryError) { console.warn(\`[radar] LLM missing-item retry failed: \${retryError.message}\`); }\n      }\n      for (const x of result) {`;
+  if (source.includes(oldResult)) {
+    source = source.replace(oldResult, newResult);
+    changed = true;
+  }
+
   const oldTimeout = "const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), 30000);";
   const newTimeout = "const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), 90000);";
   if (source.includes(oldTimeout)) {
@@ -138,7 +175,7 @@ async function patchRadarCore() {
 
   if (changed) {
     await writeFile(file, source, "utf8");
-    console.log("[radar] optimized LLM pipeline: prefilter≈36 candidates, timeout=90s");
+    console.log("[radar] hardened LLM pipeline: clean HTML, 5-item batches, missing-item retry, timeout=90s");
   }
 }
 
