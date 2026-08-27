@@ -6,7 +6,23 @@
       "name": "本部",
       "description": "健康管理、生活习惯与日常系统",
       "mark": "本",
-      "apps": []
+      "apps": [
+        {
+          "id": "core-persona",
+          "title": "本部人格中枢",
+          "eyebrow": "CORE PERSONA SYSTEM",
+          "description": "把座右铭、行动准则、四重人格调度、五忌三议、潜龙模式与金鸡湖协定整合成一套可交互的核心人格系统。",
+          "mark": "CORE",
+          "status": "live",
+          "renderer": "core-persona",
+          "capabilities": [
+            "行动准则",
+            "四重人格",
+            "五忌三议",
+            "金鸡湖协定"
+          ]
+        }
+      ]
     },
     {
       "name": "外交部",
