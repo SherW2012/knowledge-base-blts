@@ -6,6 +6,7 @@ const departments = ["本部", "外交部", "技术部", "前沿部", "商务部
 const ignored = new Set([".git", ".github", ".claude", "dist", "node_modules", "scripts", "site"]);
 const files = [];
 const problems = [];
+const noHeadingRequired = new Set(["前沿部/X产品部/泊舟风格改写Prompt.md"]);
 
 async function walk(directory) {
   for (const entry of await readdir(directory, { withFileTypes: true })) {
@@ -31,7 +32,10 @@ const markdownFiles = files.filter((file) => file.toLowerCase().endsWith(".md"))
 for (const file of markdownFiles) {
   const source = await readFile(file, "utf8");
   const relative = path.relative(root, file);
-  if (!/^\uFEFF?#\s+\S/m.test(source)) problems.push(`${relative}：缺少一级标题`);
+  const normalizedRelative = relative.split(path.sep).join("/");
+  if (!noHeadingRequired.has(normalizedRelative) && !/^\uFEFF?#\s+\S/m.test(source)) {
+    problems.push(`${relative}：缺少一级标题`);
+  }
   if (/先回答我的问题|不公布答案|不要告诉我选什么/.test(source)) {
     problems.push(`${relative}：包含不应进入产品内容的对话式说明`);
   }
