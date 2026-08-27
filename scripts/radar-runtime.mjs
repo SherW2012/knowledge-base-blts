@@ -52,7 +52,7 @@ async function logDragonModels() {
       const ids = (Array.isArray(body?.data) ? body.data : Array.isArray(body?.models) ? body.models : [])
         .map((item) => typeof item === "string" ? item : item?.id || item?.name)
         .filter(Boolean)
-        .slice(0, 40);
+        .slice(0, 60);
       if (ids.length) {
         console.log(`[radar] DragonCode available models: ${ids.join(", ")}`);
         return;
@@ -60,6 +60,47 @@ async function logDragonModels() {
     } catch {}
   }
   console.warn("[radar] DragonCode model list endpoint unavailable; using configured model directly");
+}
+
+async function probeDragonModel() {
+  const base = String(process.env.LLM_BASE_URL || "").replace(/\/$/, "");
+  const key = process.env.LLM_API_KEY;
+  const model = process.env.LLM_MODEL;
+  if (!base.toLowerCase().includes("dragoncode.codes") || !key || !model) return true;
+
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 60000);
+  try {
+    const response = await nativeFetch(`${base}/responses`, {
+      method: "POST",
+      signal: controller.signal,
+      headers: {
+        authorization: `Bearer ${key}`,
+        "content-type": "application/json",
+        accept: "application/json"
+      },
+      body: JSON.stringify({
+        model,
+        input: [{ role: "user", content: "只回复 OK" }],
+        store: false,
+        max_output_tokens: 16
+      })
+    });
+    if (!response.ok) {
+      const detail = (await response.text().catch(() => "")).replace(/\s+/g, " ").slice(0, 300);
+      console.warn(`[radar] DragonCode HTTP Responses probe -> HTTP ${response.status}${detail ? ` · ${detail}` : ""}`);
+      return false;
+    }
+    const body = await response.json();
+    const text = responsesText(body);
+    console.log(`[radar] DragonCode HTTP Responses probe OK${text ? ` · ${text.slice(0, 80)}` : ""}`);
+    return true;
+  } catch (error) {
+    console.warn(`[radar] DragonCode HTTP Responses probe failed: ${error.message}`);
+    return false;
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 async function dragonResponses(url, init, payload) {
@@ -131,5 +172,10 @@ globalThis.fetch = async (input, init = {}) => {
 };
 
 await logDragonModels();
+const dragonHttpReady = await probeDragonModel();
+if (!dragonHttpReady && String(process.env.LLM_BASE_URL || "").toLowerCase().includes("dragoncode.codes")) {
+  console.warn("[radar] DragonCode HTTP Responses unavailable; skipping bulk LLM analysis for this diagnostic run");
+  process.env.LLM_API_KEY = "";
+}
 await import("./radar.mjs");
 console.log("[radar] application runtime data stored in radar-data; knowledge tree remains clean");
