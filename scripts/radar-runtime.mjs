@@ -39,6 +39,29 @@ function responsesText(body) {
   return parts.join("\n").trim();
 }
 
+async function logDragonModels() {
+  const base = String(process.env.LLM_BASE_URL || "").replace(/\/$/, "");
+  const key = process.env.LLM_API_KEY;
+  if (!base.toLowerCase().includes("dragoncode.codes") || !key) return;
+  const headers = { authorization: `Bearer ${key}`, accept: "application/json" };
+  for (const endpoint of [`${base}/models`, `${base}/v1/models`]) {
+    try {
+      const response = await nativeFetch(endpoint, { headers });
+      if (!response.ok) continue;
+      const body = await response.json();
+      const ids = (Array.isArray(body?.data) ? body.data : Array.isArray(body?.models) ? body.models : [])
+        .map((item) => typeof item === "string" ? item : item?.id || item?.name)
+        .filter(Boolean)
+        .slice(0, 40);
+      if (ids.length) {
+        console.log(`[radar] DragonCode available models: ${ids.join(", ")}`);
+        return;
+      }
+    } catch {}
+  }
+  console.warn("[radar] DragonCode model list endpoint unavailable; using configured model directly");
+}
+
 async function dragonResponses(url, init, payload) {
   const base = String(process.env.LLM_BASE_URL || "https://dragoncode.codes").replace(/\/$/, "");
   const requestPayload = {
@@ -107,5 +130,6 @@ globalThis.fetch = async (input, init = {}) => {
   return nativeFetch(input, { ...nextInit, headers });
 };
 
+await logDragonModels();
 await import("./radar.mjs");
 console.log("[radar] application runtime data stored in radar-data; knowledge tree remains clean");
