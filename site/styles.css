@@ -901,6 +901,8 @@ button { -webkit-tap-highlight-color: transparent; }
 .poetry.horizontal .gu-preface { margin: 0 0 16px; }
 .poetry.horizontal .gu-block + .gu-block { margin: 16px 0 0; }
 .poetry.horizontal .gu-line { line-height: 2.2; }
+/* 一句一行：横排时把诗句字号收一点，七言也不至于折行 */
+.poetry.horizontal .gu-sheet-piece:not(.prose) .gu-line { font-size: clamp(15px, 1.5vw, 23px); letter-spacing: .1em; }
 .poetry.horizontal .gu-piece-foot { margin: 22px 0 0; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
 .poetry.horizontal .gu-tag { margin: 0; }
 /* 长文按页裁切：内容整块渲染，靠位移显示当前是第几段 */
@@ -1070,3 +1072,76 @@ button { -webkit-tap-highlight-color: transparent; }
   .gu-shelf-copy strong { font-size: 19px; }
   .gu-sheet-piece { padding: 22px 18px; }
 }
+
+/* ---------------- 水墨背景 ----------------
+   画在书页里，压在正文之下。浓淡只靠透明度分层，正文始终读得清。 */
+.poetry { --gu-wash: #2c3a38; --ink-strength: .82; }
+[data-theme="dark"] .poetry { --gu-wash: #9fb2ad; --ink-strength: .66; }
+
+.gu-ink {
+  position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none;
+  color: var(--gu-wash);
+  opacity: var(--ink-strength);
+  animation: gu-ink-in .9s ease both;
+}
+@keyframes gu-ink-in { from { opacity: 0; } to { opacity: var(--ink-strength); } }
+/* 一页一幅，各段各景 */
+.gu-ink .ink-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+/* 纸veil：正文所在的上半张压回纸色，重墨留在下半张；
+   靠书脊的一侧也淡出成纸，相邻两幅就不会硬碰硬地拼在一起。 */
+.gu-ink::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--gu-paper) 66%, transparent) 0%,
+    color-mix(in srgb, var(--gu-paper) 30%, transparent) 36%,
+    transparent 62%);
+}
+.gu-page-left .gu-ink::after, .gu-leaf-back .gu-ink::after {
+  background:
+    linear-gradient(90deg, transparent 74%, color-mix(in srgb, var(--gu-paper) 88%, transparent) 100%),
+    linear-gradient(180deg,
+      color-mix(in srgb, var(--gu-paper) 66%, transparent) 0%,
+      color-mix(in srgb, var(--gu-paper) 30%, transparent) 36%,
+      transparent 62%);
+}
+.gu-page-right .gu-ink::after, .gu-leaf-front .gu-ink::after {
+  background:
+    linear-gradient(270deg, transparent 74%, color-mix(in srgb, var(--gu-paper) 88%, transparent) 100%),
+    linear-gradient(180deg,
+      color-mix(in srgb, var(--gu-paper) 66%, transparent) 0%,
+      color-mix(in srgb, var(--gu-paper) 30%, transparent) 36%,
+      transparent 62%);
+}
+
+.ink-canvas { fill: currentColor; stroke: none; stroke-linecap: round; stroke-linejoin: round; }
+.ink-canvas [fill="none"] { stroke: currentColor; }
+.ink-ridge {
+  filter: url(#ink-rough);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 46%, rgb(0 0 0 / 22%) 100%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 46%, rgb(0 0 0 / 22%) 100%);
+}
+.ink-cloud { filter: url(#ink-soft); }
+.ink-mist { fill: var(--gu-paper); filter: url(#ink-soft); }
+.ink-disc { fill: var(--gu-paper); }
+.ink-halo { filter: url(#ink-soft); }
+.ink-flake { fill: currentColor; }
+
+/* 动效只留漂移、摇曳、落雪三处，周期都很长，余光里几乎察觉不到 */
+@keyframes gu-drift { from { transform: translateX(-20px); } to { transform: translateX(20px); } }
+@keyframes gu-sway { from { transform: rotate(-1.4deg); } to { transform: rotate(1.4deg); } }
+@keyframes gu-fall { from { transform: translateY(-60px); } to { transform: translateY(780px); } }
+@keyframes gu-fly { from { transform: translateX(-30px); } to { transform: translateX(110px); } }
+.ink-cloud.drift, .ink-mist.drift { animation: gu-drift var(--d, 30s) ease-in-out var(--o, 0s) infinite alternate; }
+.ink-reed.sway { transform-box: fill-box; transform-origin: bottom center; animation: gu-sway 11s ease-in-out var(--o, 0s) infinite alternate; }
+.ink-flake.fall { animation: gu-fall var(--d, 20s) linear var(--o, 0s) infinite; }
+.ink-birds.fly { animation: gu-fly 110s ease-in-out infinite alternate; }
+@media (prefers-reduced-motion: reduce) {
+  .gu-ink, .ink-cloud.drift, .ink-mist.drift, .ink-reed.sway, .ink-flake.fall, .ink-birds.fly { animation: none; }
+  .gu-ink { opacity: var(--ink-strength); }
+}
+
+/* 正文压在画面之上 */
+.gu-piece, .gu-flow, .gu-title-block, .gu-sheet-empty > * { position: relative; z-index: 1; }
+.gu-part { z-index: 1; }
+.gu-sheet-piece.prose .gu-piece { z-index: auto; }

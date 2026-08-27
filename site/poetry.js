@@ -24,11 +24,11 @@
   const META = /^([^\s，。、；：！？「」（）]{1,8})[:：]\s*(.+)$/;
 
   function parseBook(source) {
-    const book = { title: "诗集", subtitle: "", ink: "青", seal: "", intro: "", layout: "竖排", pieces: [] };
+    const book = { title: "诗集", subtitle: "", ink: "青", seal: "", intro: "", layout: "横排", scene: "", pieces: [] };
     const HEAD = {
       "集名": "title", "标题": "title", "title": "title",
       "副题": "subtitle", "副标题": "subtitle",
-      "色": "ink", "印": "seal", "说明": "intro", "简介": "intro", "排版": "layout"
+      "色": "ink", "印": "seal", "说明": "intro", "简介": "intro", "排版": "layout", "景": "scene"
     };
     let piece = null;
 
@@ -64,13 +64,18 @@
       pushLine(piece, line);
     }
 
-    book.layout = /横/.test(book.layout) ? "横排" : "竖排";
+    book.layout = /竖|纵/.test(book.layout) ? "竖排" : "横排";
     book.seal = book.seal || book.title.slice(0, 1);
     book.pieces.forEach((item, index) => {
       item.order = index + 1;
       item.genre = item.fields.get("体裁") || item.fields.get("词牌") || "";
       item.blocks = item.blocks.filter((block) => block.length);
       item.prose = /散文|随笔|散记|杂记|赋|记|序|铭|论|说/.test(item.genre);
+      item.scenes = (item.fields.get("景") || "")
+        .split(/[,，、\/]+/).map((part) => part.trim()).filter(Boolean);
+      item.blockStarts = [0];
+      item.pageOffsets = [0];
+      item.pageSpan = [];
       item.lines = item.blocks.flat().length;
     });
     return book;
@@ -253,9 +258,48 @@
         : sheet.clientHeight - parseFloat(style.paddingTop) - parseFloat(style.paddingBottom);
       const rect = body.getBoundingClientRect();
       const natural = this.vertical ? rect.width : rect.height;
+      const starts = [...probe.querySelectorAll(".gu-block")].map((block) => {
+        const box = block.getBoundingClientRect();
+        return Math.max(0, Math.round(this.vertical ? rect.right - box.right : box.top - rect.top));
+      });
       probe.remove();
-      if (!(avail > 0) || !(natural > 0)) return 1;
-      return Math.max(1, Math.min(24, Math.ceil((natural - 2) / avail)));
+      if (!(avail > 0) || !(natural > 0)) {
+        piece.blockStarts = [0];
+        piece.pageOffsets = [0];
+        return 1;
+      }
+      piece.blockStarts = starts.length ? starts : [0];
+      // 写了几段就配了几幅景时，一段一页，让每幅画都出得来
+      const perBlock = piece.scenes.length > 1 && piece.scenes.length === piece.blocks.length;
+      // 断页只发生在段与段之间：题与首段同页，所以第一段的起点不作分界
+      piece.pageOffsets = this.packPages(natural, avail, piece.blockStarts.slice(1), perBlock);
+      piece.pageSpan = piece.pageOffsets.map((at, i) => {
+        const end = i + 1 < piece.pageOffsets.length ? piece.pageOffsets[i + 1] : natural;
+        return Math.max(24, Math.min(avail, Math.ceil(end - at)));
+      });
+      return piece.pageOffsets.length;
+    }
+
+    /* 每页从一个段落起头。perBlock 时一段一页，否则一页尽量多装几段；
+       段落本身比一页长就硬切。返回每页的起始偏移。 */
+    packPages(natural, avail, starts, perBlock) {
+      const offsets = [];
+      let cursor = 0;
+      while (cursor < natural - 2 && offsets.length < 24) {
+        offsets.push(cursor);
+        let next = cursor + avail;
+        if (perBlock) {
+          const head = starts.find((start) => start > cursor + 8);
+          if (head != null && head <= cursor + avail + 2) next = head;
+        } else {
+          for (const start of starts) {
+            if (start > cursor + 8 && start <= cursor + avail + 2) next = start;
+          }
+        }
+        if (next <= cursor) next = cursor + avail;
+        cursor = next;
+      }
+      return offsets.length ? offsets : [0];
     }
 
     /* 版面或书写方向变了要重排，尽量停在原来那一段上 */
@@ -337,9 +381,25 @@
       this.bind();
     }
 
+    /* 这一页从哪一段起头，就配那一段的景 */
+    sceneFor(piece, part) {
+      const starts = piece.blockStarts || [0];
+      const at = (piece.pageOffsets || [0])[part] || 0;
+      let index = 0;
+      for (let i = 0; i < starts.length; i += 1) if (starts[i] <= at + 8) index = i;
+      if (piece.scenes.length) return piece.scenes[Math.min(index, piece.scenes.length - 1)];
+      const text = (piece.blocks[index] || []).join("") || piece.title;
+      return window.InkScenes ? window.InkScenes.guess(text) : "";
+    }
+
+    inkLayer(scene, text) {
+      if (!window.InkScenes) return "";
+      return `<div class="gu-ink" data-scene="${esc(scene || "")}">${window.InkScenes.svg(scene, text)}</div>`;
+    }
+
     pieceInner(piece) {
       const rows = [...piece.fields.entries()]
-        .filter(([key]) => key !== "小序")
+        .filter(([key]) => key !== "小序" && key !== "景")
         .map(([key, value]) => `<span class="gu-tag">${esc(key)}·${esc(value)}</span>`).join("");
       const preface = piece.fields.get("小序");
       const body = piece.blocks.map((block) => `
@@ -358,15 +418,22 @@
 
     pieceHtml(piece, part = 0, parts = 1) {
       const inner = this.pieceInner(piece);
-      if (!piece.prose) return `<div class="gu-sheet gu-sheet-piece">${inner}</div>`;
-      // 竖排内容向左溢出，右移露出下一段；横排向下溢出，上移露出下一段
+      const ink = this.inkLayer(this.sceneFor(piece, part), piece.title);
+      if (!piece.prose) return `<div class="gu-sheet gu-sheet-piece">${ink}${inner}</div>`;
+      // 竖排内容向左溢出，右移露出后文；横排向下溢出，上移露出后文
+      const at = (piece.pageOffsets || [0])[part] || 0;
+      const span = (piece.pageSpan || [])[part];
       const axis = this.vertical ? "translateX" : "translateY";
-      const sign = this.vertical ? "" : "-";
-      const shift = part ? ` style="transform:${axis}(calc(${sign}100% * ${part}))"` : "";
+      const shift = at ? ` style="transform:${axis}(${this.vertical ? at : -at}px)"` : "";
+      // 这一页只露出属于自己的那一段，多出来的裁掉
+      const clip = span
+        ? ` style="${this.vertical ? `width:${span}px;margin-left:auto` : `height:${span}px`}"`
+        : "";
       const folio = parts > 1 ? `<div class="gu-part">${part + 1} / ${parts}</div>` : "";
       return `
         <div class="gu-sheet gu-sheet-piece prose">
-          <div class="gu-flow"><div class="gu-shift"${shift}>${inner}</div></div>
+          ${ink}
+          <div class="gu-flow"${clip}><div class="gu-shift"${shift}>${inner}</div></div>
           ${folio}
         </div>`;
     }
@@ -378,6 +445,7 @@
       if (page.type === "title") {
         return `
           <div class="gu-sheet gu-sheet-title">
+            ${this.inkLayer(this.book.scene || (this.book.pieces[0] && this.book.pieces[0].scenes[0]) || "", this.book.intro || this.book.title)}
             <div class="gu-title-block">
               <div class="gu-title-name">${esc(this.book.title)}</div>
               ${this.book.subtitle ? `<div class="gu-title-sub">${esc(this.book.subtitle)}</div>` : ""}
@@ -545,7 +613,19 @@
     }
   }
 
+  /* 墨迹滤镜只需在文档里存在一份，各页的画面共用 */
+  function ensureInkDefs() {
+    if (!window.InkScenes || document.getElementById("gu-ink-defs")) return;
+    const holder = document.createElement("div");
+    holder.id = "gu-ink-defs";
+    holder.setAttribute("aria-hidden", "true");
+    holder.style.cssText = "position:absolute;width:0;height:0;overflow:hidden;pointer-events:none";
+    holder.innerHTML = window.InkScenes.defs();
+    document.body.appendChild(holder);
+  }
+
   function mount(container, selector, Klass, opts) {
+    ensureInkDefs();
     container.querySelectorAll(selector).forEach((host) => {
       if (host.dataset.mounted) return;
       const holder = host.querySelector(".gu-source");
