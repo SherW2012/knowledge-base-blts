@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "status": "ok",
-  "generatedAt": "2026-08-27T03:26:51.845Z",
+  "generatedAt": "2026-08-27T04:36:21.203Z",
   "date": "2026-08-27",
   "timezone": "Asia/Shanghai",
   "focus": "launches-tools-skills-productivity-markets",
@@ -17,9 +17,9 @@
     "successfulSources": 33,
     "failedSources": 0,
     "scannedItems": 450,
-    "recentItems": 179,
-    "dedupedItems": 177,
-    "eventClusters": 152,
+    "recentItems": 178,
+    "dedupedItems": 176,
+    "eventClusters": 151,
     "publishedItems": 18,
     "researchItems": 0
   },
@@ -874,10 +874,62 @@
   ],
   "items": [
     {
+      "id": "r1dq7thj",
+      "title": "MiniMaxAI/MiniMax-H3 · Hugging Face trending model",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3",
+      "publishedAt": "2026-08-27T04:36:21.203Z",
+      "description": "Trending model · image-text-to-video · ♥ 4504 · downloads 4793098",
+      "source": {
+        "id": "hf-trending-models",
+        "name": "Hugging Face Trending Models",
+        "tier": "A",
+        "kind": "huggingface_trending",
+        "tags": [
+          "model",
+          "open-source"
+        ]
+      },
+      "engagement": {
+        "score": 4570.8061639930465
+      },
+      "isCurrentSignal": true,
+      "relatedSources": [
+        {
+          "id": "hf-trending-models",
+          "name": "Hugging Face Trending Models",
+          "tier": "A",
+          "kind": "huggingface_trending",
+          "tags": [
+            "model",
+            "open-source"
+          ]
+        }
+      ],
+      "category": "模型 / Agent 上新",
+      "summary": "MiniMax-H3 是 MiniMaxAI 的图文生成视频模型，已进入 Hugging Face 趋势榜，获 4504 次点赞并记录约 479 万次下载。",
+      "importance": 93,
+      "novelty": 89,
+      "relevance": 94,
+      "socialPotential": 96,
+      "sourceQuality": 89,
+      "practicality": 91,
+      "researchIntensity": 52,
+      "confidence": 93,
+      "whyItMatters": "图像与文本联合生成视频覆盖广告、短剧和商品内容等高需求场景，数百万下载量也提供了较强的采用信号。",
+      "whatChanged": "MiniMax-H3 登上 Hugging Face 趋势榜，下载量达到 4793098 次，为本批模型中最高。",
+      "angles": [
+        "MiniMax-H3 图文联合控制视频的实际效果",
+        "用 H3 制作商品广告视频的完整流程",
+        "数百万下载量背后的开源视频模型需求",
+        "与其他图生视频模型做一致性对比"
+      ],
+      "radarScore": 100
+    },
+    {
       "id": "rr7p30n",
       "title": "freestylefly/awesome-gpt-image-2 — Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新",
       "url": "https://github.com/freestylefly/awesome-gpt-image-2",
-      "publishedAt": "2026-08-27T03:26:51.845Z",
+      "publishedAt": "2026-08-27T04:36:21.203Z",
       "description": "GitHub Trending · 4050 stars today · Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
       "source": {
         "id": "gh-trending",
@@ -912,134 +964,75 @@
         }
       ],
       "category": "Skill / GitHub",
-      "summary": "awesome-gpt-image-2是面向GPT-Image2的提示词工程库，整理530多个案例、20多套模板及相关Skills，单日新增4050星。",
+      "summary": "awesome-gpt-image-2 是 GPT-Image2 提示词工程库，整理 530 多个案例、20 多套模板及可复用 Skills，单日新增约 4050 星。",
       "importance": 88,
-      "novelty": 79,
-      "relevance": 93,
+      "novelty": 78,
+      "relevance": 94,
       "socialPotential": 96,
-      "sourceQuality": 82,
-      "practicality": 94,
+      "sourceQuality": 84,
+      "practicality": 96,
       "researchIntensity": 16,
-      "confidence": 91,
-      "whyItMatters": "它把零散的图像提示词整理成可复用模板和Skill，普通用户可立即用于出图、营销、电商和内容创作，单日星标增量也显示传播势头很强。",
-      "whatChanged": "项目登上GitHub趋势榜，输入显示单日新增4050星，并持续扩充案例、模板和Skills。",
+      "confidence": 94,
+      "whyItMatters": "项目把图片提示词沉淀为模板和 Skills，普通用户可直接用于内容生产，开发者也能将其接入自动化生成流程。",
+      "whatChanged": "该项目进入 GitHub Trending，输入显示单日新增约 4050 星，并持续扩充案例、模板和 Skills。",
       "angles": [
-        "把提示词当代码管理，能否稳定复现商业图片",
-        "从530多个案例中提炼高成功率出图公式",
-        "20套模板如何接入电商和自媒体工作流",
-        "单日新增4050星的图像提示词项目实测"
+        "把图片提示词当代码管理能解决什么问题",
+        "从 530 个案例中筛选最实用的生成模板",
+        "如何把提示词 Skills 接入内容生产 Agent",
+        "小红书封面和商品图的模板化生成实测"
       ],
       "radarScore": 100
     },
     {
-      "id": "r6v4wc9",
-      "title": "anthropics/claude-plugins-official — Star anthropics / claude-plugins-official Official, Anthropic-managed directory of high quality Claude Code Plugins.",
-      "url": "https://github.com/anthropics/claude-plugins-official",
-      "publishedAt": "2026-08-27T03:26:51.845Z",
-      "description": "GitHub Trending · 308 stars today · Star anthropics / claude-plugins-official Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "id": "r82pjfi",
+      "title": "v4.1.16",
+      "url": "https://github.com/cline/cline/releases/tag/v4.1.16",
+      "publishedAt": "2026-08-26T08:42:46.000Z",
+      "description": "<p>Everything here lands through the SDK bundle, so it applies to windows running that bundle.</p> <h3>Fixed</h3> <ul> <li>Cost estimates are no longer shown for providers billed by a flat-rate subscription (ClinePass, ChatGPT via Codex, and Claude Code). The task header and model pricing rows rendered API-rate dollar figures that read as real charges on top of the subscription, including a flash of them on every chat-view mount while provider listings were loading.</li> <li>Signing back in no longer moves your last-used provider off ClinePass on credential refresh.</li> <li>Hooks now resolve their workspace from the VS Code window instead of shared global state in <code>~/.cline</code>. With a second window open on another project, a workspace's <code>.clinerules/hooks</code> scripts were never discovered, and hook cwd and the workspace paths passed to hook scripts resolved against whatever project some other or older Cline instance last recorded.</li> <li>New files are now created with your platform's native line endings.</li> <li>Fixed the codebase search tool crashing on files containing a single enormous line.</li> <li>Credentials embedded in git remote URLs are now redacted from the workspace information sent to the model, which also now carries richer workspace metadata.</li> <li>Installing an MCP server from the marketplace no longer misreads the catalog's <code>--</code> separator as part of the server command.</li> <li>The hub's event log can no longer grow until it fills your disk.</li> </ul> <h3>Changed</h3> <ul> <li>The per-tool MCP auto-approve checkboxes are ",
       "source": {
-        "id": "gh-trending",
-        "name": "GitHub Trending · AI/Agent/Tools",
+        "id": "gh-cline",
+        "name": "cline/cline Releases",
         "tier": "A",
-        "kind": "github_trending",
+        "kind": "feed",
         "tags": [
-          "github",
-          "trending",
-          "skill",
-          "tool",
-          "agent"
+          "agent",
+          "coding",
+          "tool"
         ]
       },
-      "engagement": {
-        "score": 308
-      },
-      "isCurrentSignal": true,
+      "engagement": null,
+      "isCurrentSignal": false,
       "relatedSources": [
         {
-          "id": "gh-trending",
-          "name": "GitHub Trending · AI/Agent/Tools",
+          "id": "gh-cline",
+          "name": "cline/cline Releases",
           "tier": "A",
-          "kind": "github_trending",
+          "kind": "feed",
           "tags": [
-            "github",
-            "trending",
-            "skill",
-            "tool",
-            "agent"
+            "agent",
+            "coding",
+            "tool"
           ]
         }
       ],
       "category": "Skill / GitHub",
-      "summary": "Anthropic 的 claude-plugins-official 是官方维护的 Claude Code 插件目录，用于集中分发经过筛选的扩展，单日新增约308星。",
-      "importance": 85,
-      "novelty": 79,
-      "relevance": 94,
-      "socialPotential": 83,
-      "sourceQuality": 89,
-      "practicality": 91,
-      "researchIntensity": 18,
-      "confidence": 94,
-      "whyItMatters": "官方插件目录能降低用户筛选扩展的成本，并为 Claude Code 插件开发者提供更明确的分发渠道和生态入口。",
-      "whatChanged": "Anthropic 管理的官方 Claude Code 插件目录进入 GitHub Trending，输入显示单日新增约308星。",
+      "summary": "<p>Everything here lands through the SDK bundle, so it applies to windows running that bundle.</p> <h3>Fixed</h3> <ul> <li>Cost estimates are no longer shown for providers billed by a flat-rate subscription (ClinePass, ChatGPT via Codex, and Claude Code). The ",
+      "importance": 81,
+      "novelty": 94,
+      "relevance": 100,
+      "socialPotential": 100,
+      "sourceQuality": 78,
+      "practicality": 100,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
+      "whatChanged": "v4.1.16",
       "angles": [
-        "Claude Code 官方插件目录里可以寻找哪些效率扩展",
-        "Anthropic 如何建立 Claude Code 的插件分发体系",
-        "开发者进入 Claude 插件生态的早期机会",
-        "官方目录与社区市场的定位差异"
+        "今天 GitHub 上冒出来一个值得试的项目：v4.1.16",
+        "它解决的具体麻烦是什么，5 分钟能不能跑通",
+        "有没有可能变成自己的 Skill / 自动化工作流"
       ],
-      "radarScore": 99
-    },
-    {
-      "id": "r1dq7thj",
-      "title": "MiniMaxAI/MiniMax-H3 · Hugging Face trending model",
-      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3",
-      "publishedAt": "2026-08-27T03:26:51.845Z",
-      "description": "Trending model · image-text-to-video · ♥ 4503 · downloads 4793098",
-      "source": {
-        "id": "hf-trending-models",
-        "name": "Hugging Face Trending Models",
-        "tier": "A",
-        "kind": "huggingface_trending",
-        "tags": [
-          "model",
-          "open-source"
-        ]
-      },
-      "engagement": {
-        "score": 4569.8061639930465
-      },
-      "isCurrentSignal": true,
-      "relatedSources": [
-        {
-          "id": "hf-trending-models",
-          "name": "Hugging Face Trending Models",
-          "tier": "A",
-          "kind": "huggingface_trending",
-          "tags": [
-            "model",
-            "open-source"
-          ]
-        }
-      ],
-      "category": "模型 / Agent 上新",
-      "summary": "MiniMax-H3是MiniMax的图文到视频模型，当前进入Hugging Face趋势榜，获4503次点赞和约479万次下载。",
-      "importance": 91,
-      "novelty": 84,
-      "relevance": 90,
-      "socialPotential": 94,
-      "sourceQuality": 83,
-      "practicality": 87,
-      "researchIntensity": 54,
-      "confidence": 87,
-      "whyItMatters": "接近480万次下载与较高点赞数共同表明其传播和试用规模突出，适合优先评估短视频、营销素材及多模态内容生产能力。",
-      "whatChanged": "MiniMax-H3进入Hugging Face趋势榜，页面记录4793098次下载和4503次点赞。",
-      "angles": [
-        "MiniMax-H3为何能快速获得近480万次下载",
-        "图文联合输入如何提升视频生成可控性",
-        "用商业广告脚本实测MiniMax-H3",
-        "国产视频模型的可用性与内容生产机会"
-      ],
-      "radarScore": 98
+      "radarScore": 100
     },
     {
       "id": "r8v5jg8",
@@ -1075,76 +1068,130 @@
           ]
         }
       ],
-      "category": "效率 / 工作流",
-      "summary": "GitHub Copilot 应用的 Customize 标签正式开放，将 MCP 服务器、插件、技能和画布集中到统一入口，方便团队发现并配置工作流扩展。",
-      "importance": 87,
-      "novelty": 78,
-      "relevance": 94,
-      "socialPotential": 85,
-      "sourceQuality": 98,
-      "practicality": 92,
-      "researchIntensity": 16,
-      "confidence": 98,
-      "whyItMatters": "Copilot 的扩展能力从分散配置转向统一发现入口，降低团队接入内部工具和现有流程的门槛，也提高 MCP 与技能的分发效率。",
-      "whatChanged": "Customize 标签进入正式可用状态，支持按类型或类别浏览 MCP 服务器、插件、技能和画布，并展示精选及热门扩展。",
+      "category": "Skill / GitHub",
+      "summary": "GitHub Copilot is more useful when it works with the tools, knowledge, and workflows your team already relies on. The new Customize tab in the GitHub Copilot app brings MCP servers, plugins, skills, and canvases together in one place. Explore featured customiz",
+      "importance": 90,
+      "novelty": 84,
+      "relevance": 96,
+      "socialPotential": 86,
+      "sourceQuality": 90,
+      "practicality": 100,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
+      "whatChanged": "GitHub Copilot app Customize tab is generally available",
       "angles": [
-        "Copilot 正在从代码补全工具变成团队智能体入口",
-        "GitHub 给 MCP 服务器增加了类似应用商店的发现渠道",
-        "团队如何用 Customize 标签快速搭建定制 Copilot",
-        "插件、技能、MCP 和画布分别适合解决什么问题"
+        "今天 GitHub 上冒出来一个值得试的项目：GitHub Copilot app Customize tab is generally available",
+        "它解决的具体麻烦是什么，5 分钟能不能跑通",
+        "有没有可能变成自己的 Skill / 自动化工作流"
       ],
-      "radarScore": 97
+      "radarScore": 100
     },
     {
-      "id": "r5f4vkw",
-      "title": "v2.1.247",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.247",
-      "publishedAt": "2026-08-26T23:06:39.000Z",
-      "description": "<h2>What's changed</h2> <ul> <li>Added the <code>SendFeedback</code> tool: when something goes wrong in a session, Claude can draft a feedback report for you to review and send from <code>/feedback</code> (turn off with the <code>feedbackDrafts</code> setting)</li> <li>Added <code>{id, text, cooldownSessions, priority}</code> entries, <code>tipsFile</code>, and <code>label</code> to <code>spinnerTipsOverride</code>, so organizations can rotate their own tips alongside the built-in ones</li> <li>Added a tip on Bash permission prompts pointing to auto mode, with a one-keystroke \"Yes, and switch to auto mode\" option</li> <li>Added <code>/claude-api cost-optimize</code> to profile an existing project's Claude API spend and work through cost levers (caching, token hygiene, batch, effort, model choice) one measured change at a time</li> <li>Updated the <code>/claude-api</code> skill with Admin API coverage (organization members, invites, workspaces, API keys, rate limit reports, workload identity federation, CMEK)</li> <li>Fixed fast arrow-key + Enter sequences acting on the row above the one you navigated to in history search, <code>/config</code>, <code>/mcp</code>, <code>/skills</code>, background tasks, and <code>/model</code></li> <li>Fixed sub-agents dying on a first-call model 404: they now use the session's fallback model chain, and the error returned to the parent includes the error type, status, request id, and model</li> <li>Fixed a hook or background agent that printed megabytes of error output being able to overflow the conversation and wedge the session on \"Prompt i",
+      "id": "rr3b0gd",
+      "title": "VoltAgent/awesome-agent-skills — Sponsor Star VoltAgent / awesome-agent-skills A curated collection of 1000+ agent skills from official dev teams and the",
+      "url": "https://github.com/VoltAgent/awesome-agent-skills",
+      "publishedAt": "2026-08-27T04:36:21.203Z",
+      "description": "GitHub Trending · 242 stars today · Sponsor Star VoltAgent / awesome-agent-skills A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more.",
       "source": {
-        "id": "gh-claude-code",
-        "name": "anthropics/claude-code Releases",
-        "tier": "S",
-        "kind": "feed",
+        "id": "gh-trending",
+        "name": "GitHub Trending · AI/Agent/Tools",
+        "tier": "A",
+        "kind": "github_trending",
         "tags": [
-          "agent",
-          "coding",
-          "launch",
-          "tool"
+          "github",
+          "trending",
+          "skill",
+          "tool",
+          "agent"
         ]
       },
-      "engagement": null,
-      "isCurrentSignal": false,
+      "engagement": {
+        "score": 242
+      },
+      "isCurrentSignal": true,
       "relatedSources": [
         {
-          "id": "gh-claude-code",
-          "name": "anthropics/claude-code Releases",
-          "tier": "S",
-          "kind": "feed",
+          "id": "gh-trending",
+          "name": "GitHub Trending · AI/Agent/Tools",
+          "tier": "A",
+          "kind": "github_trending",
           "tags": [
-            "agent",
-            "coding",
-            "launch",
-            "tool"
+            "github",
+            "trending",
+            "skill",
+            "tool",
+            "agent"
           ]
         }
       ],
-      "category": "效率 / 工作流",
-      "summary": "Anthropic更新Claude Code，新增反馈草稿、组织级提示配置和Claude API成本优化命令，帮助团队反馈问题并降低项目调用费用。",
-      "importance": 86,
+      "category": "Skill / GitHub",
+      "summary": "VoltAgent维护了一个收集1000多项Agent技能的开源目录，汇总官方团队和社区资源，方便开发者为不同编程Agent快速挑选能力模块。",
+      "importance": 80,
       "novelty": 78,
-      "relevance": 91,
-      "socialPotential": 79,
-      "sourceQuality": 96,
+      "relevance": 86,
+      "socialPotential": 87,
+      "sourceQuality": 90,
       "practicality": 94,
-      "researchIntensity": 12,
-      "confidence": 97,
-      "whyItMatters": "Claude Code开始同时优化开发者体验和模型使用成本，API费用分析与自动化调优对团队规模化部署尤其直接。",
-      "whatChanged": "Claude Code v2.1.247加入SendFeedback工具、可定制组织提示和自动模式引导，并新增用于分析Claude API支出的cost-optimize命令。",
+      "researchIntensity": 35,
+      "confidence": 93,
+      "whyItMatters": "Agent能力正在从单一模型竞争转向技能组合竞争，集中式目录能减少开发者寻找、比较和复用Skills的时间。",
+      "whatChanged": "该项目在GitHub Trending中获得较高日增星数，目录规模达到1000多项，并覆盖Claude Code、Codex、Gemini CLI和Cursor等工具。",
       "angles": [
-        "Claude Code开始帮用户管理自己的API账单",
-        "AI编程工具从写代码转向优化整个开发闭环",
-        "团队如何用自动化成本分析减少模型浪费"
+        "1000多个Agent技能集中出现，开发者可以直接抄作业",
+        "Skills会不会成为Agent时代的应用商店",
+        "从写Prompt转向给Agent安装能力模块"
+      ],
+      "radarScore": 98
+    },
+    {
+      "id": "rjr2gsv",
+      "title": "Lightricks/LTX-2.5 · Hugging Face trending model",
+      "url": "https://huggingface.co/Lightricks/LTX-2.5",
+      "publishedAt": "2026-08-27T04:36:21.203Z",
+      "description": "Trending model · image-to-video · ♥ 1874 · downloads 894094",
+      "source": {
+        "id": "hf-trending-models",
+        "name": "Hugging Face Trending Models",
+        "tier": "A",
+        "kind": "huggingface_trending",
+        "tags": [
+          "model",
+          "open-source"
+        ]
+      },
+      "engagement": {
+        "score": 1933.513836662051
+      },
+      "isCurrentSignal": true,
+      "relatedSources": [
+        {
+          "id": "hf-trending-models",
+          "name": "Hugging Face Trending Models",
+          "tier": "A",
+          "kind": "huggingface_trending",
+          "tags": [
+            "model",
+            "open-source"
+          ]
+        }
+      ],
+      "category": "模型 / Agent 上新",
+      "summary": "Lightricks 的 LTX-2.5 是图生视频模型，现已进入 Hugging Face 趋势榜，累计 1874 次点赞和约 89.4 万次下载。",
+      "importance": 86,
+      "novelty": 81,
+      "relevance": 88,
+      "socialPotential": 92,
+      "sourceQuality": 87,
+      "practicality": 84,
+      "researchIntensity": 48,
+      "confidence": 91,
+      "whyItMatters": "较高下载量表明它已获得实际试用，可用于短视频制作、素材动画化和图生视频工具链评测。",
+      "whatChanged": "LTX-2.5 进入趋势榜，输入数据显示其下载量达到 894094 次。",
+      "angles": [
+        "用同一张图测试 LTX-2.5 的运动与一致性",
+        "图生视频模型如何接入短视频批量生产",
+        "LTX-2.5 与主流视频模型的成本效果对比"
       ],
       "radarScore": 96
     },
@@ -1183,132 +1230,23 @@
         }
       ],
       "category": "模型 / Agent 上新",
-      "summary": "Google推出Gemini 3.5 Transcribe语音转文字模型，能自动整理口头停顿和修正内容，目标是让实时语音输入更快、更接近可直接使用的文本。",
+      "summary": "Google发布Gemini 3.5 Transcribe语音转文字模型，可自动清理口头语和自我更正，目标是让语音输入更快生成接近成稿的文本。",
       "importance": 81,
-      "novelty": 83,
-      "relevance": 87,
-      "socialPotential": 82,
+      "novelty": 85,
+      "relevance": 84,
+      "socialPotential": 86,
       "sourceQuality": 91,
-      "practicality": 88,
-      "researchIntensity": 24,
-      "confidence": 90,
-      "whyItMatters": "更少需要手动清理的语音转写，会直接改善手机输入、会议记录、无障碍交互和语音驱动Agent的输入质量。",
-      "whatChanged": "Gemini 3.5 Transcribe将替代部分旧语音识别能力，主打自动去除口头填充词和改口内容，并已用于Pixel相关语音输入功能。",
+      "practicality": 90,
+      "researchIntensity": 28,
+      "confidence": 92,
+      "whyItMatters": "语音输入的关键瓶颈不只是识别准确率，还包括整理和润色。模型直接输出更干净的文本，可能提升移动办公、会议记录和内容创作效率。",
+      "whatChanged": "Gemini 3.5 Transcribe已用于Pixel 11的Gboard Rambler功能，并将扩展到Google生态；相较Chirp 3，端到端语音转写速度提升约70%。",
       "angles": [
-        "语音输入终于开始输出可直接发送的文字",
-        "语音转写质量提升会如何改变手机输入习惯",
-        "更干净的语音输入是语音Agent普及的关键基础设施"
+        "语音输入正在从听写变成自动成稿",
+        "Google的新语音模型如何减少口头语和返工",
+        "手机语音办公会不会取代一部分键盘输入"
       ],
-      "radarScore": 95
-    },
-    {
-      "id": "rv5yvoc",
-      "title": "tinyhumansai/openhuman — Star tinyhumansai / openhuman Your Personal AI super intelligence. A brain that builds a local-first memory of your life",
-      "url": "https://github.com/tinyhumansai/openhuman",
-      "publishedAt": "2026-08-27T03:26:51.845Z",
-      "description": "GitHub Trending · 525 stars today · Star tinyhumansai / openhuman Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.",
-      "source": {
-        "id": "gh-trending",
-        "name": "GitHub Trending · AI/Agent/Tools",
-        "tier": "A",
-        "kind": "github_trending",
-        "tags": [
-          "github",
-          "trending",
-          "skill",
-          "tool",
-          "agent"
-        ]
-      },
-      "engagement": {
-        "score": 525
-      },
-      "isCurrentSignal": true,
-      "relatedSources": [
-        {
-          "id": "gh-trending",
-          "name": "GitHub Trending · AI/Agent/Tools",
-          "tier": "A",
-          "kind": "github_trending",
-          "tags": [
-            "github",
-            "trending",
-            "skill",
-            "tool",
-            "agent"
-          ]
-        }
-      ],
-      "category": "模型 / Agent 上新",
-      "summary": "tinyhumansai的openhuman是本地优先的个人AI系统，尝试用长期记忆、Agent编排和深度研究能力管理用户的生活信息与任务。",
-      "importance": 84,
-      "novelty": 87,
-      "relevance": 90,
-      "socialPotential": 88,
-      "sourceQuality": 90,
-      "practicality": 78,
-      "researchIntensity": 18,
-      "confidence": 86,
-      "whyItMatters": "个人AI的竞争重点正从单次问答转向长期记忆、任务协作和隐私控制，openhuman集中展示了这一产品方向。",
-      "whatChanged": "该项目进入GitHub Trending，单日新增约525颗星，公开定位为本地优先的个人超级智能与多Agent工作流编排器。",
-      "angles": [
-        "个人AI不只会聊天，还要记住你的一生",
-        "本地优先的超级智能：隐私和Agent能力能否兼得",
-        "多Agent管家会怎样重构个人效率工具"
-      ],
-      "radarScore": 95
-    },
-    {
-      "id": "r1g4xbph",
-      "title": "v0.11.1",
-      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.11.1",
-      "publishedAt": "2026-08-25T21:17:57.000Z",
-      "description": "<h3>Added</h3> <ul> <li>🚦 <strong>Human in the loop tool approval.</strong> Where an administrator has turned it on, you can switch a conversation from letting tools run freely to being asked first, so a model that wants to use a tool stops and waits for you to allow or deny it, one call at a time in a saved conversation, by button or by keyboard shortcut, with your choice remembered for this conversation and for future ones, switching back to running freely releasing anything already waiting, and automations, channel replies, and temporary chats unaffected. <a href=\"https://github.com/open-webui/open-webui/commit/7d99b2716a0472b2100b3a71825d8eb3fcbbe877\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/ec36972c2b5a8d48713f1a240b0ed305e535b4cc\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/653562d660398c32a9a193450bbbee300d7195c3\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/fa94a5ab2431edba064150651a14dd4992ef29e8\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/55c202e841e76cd69679206cd0ecb4a65b039ea4\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/30f82788bc75e6965da3766e3bf43840dd971eed\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/bbfdbd59f29e246db1d8b5c2401bc7b11aa32c99\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/7fc5fa1ff3f6cd6f0efcbf847064ca8d21620ba6\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/3eb65f47151af4fb4ccfaf33d6e77154546e7259\">Commit</a>, <a href=\"https://github.com/open-we",
-      "source": {
-        "id": "gh-open-webui",
-        "name": "open-webui/open-webui Releases",
-        "tier": "A",
-        "kind": "feed",
-        "tags": [
-          "tool",
-          "product",
-          "open-source"
-        ]
-      },
-      "engagement": null,
-      "isCurrentSignal": false,
-      "relatedSources": [
-        {
-          "id": "gh-open-webui",
-          "name": "open-webui/open-webui Releases",
-          "tier": "A",
-          "kind": "feed",
-          "tags": [
-            "tool",
-            "product",
-            "open-source"
-          ]
-        }
-      ],
-      "category": "Skill / GitHub",
-      "summary": "开源AI交互平台Open WebUI在0.11.1版加入工具调用人工审批，可逐次允许或拒绝模型操作，降低Agent误执行风险。",
-      "importance": 84,
-      "novelty": 72,
-      "relevance": 89,
-      "socialPotential": 75,
-      "sourceQuality": 88,
-      "practicality": 91,
-      "researchIntensity": 24,
-      "confidence": 94,
-      "whyItMatters": "人工确认是Agent接入真实工具时的重要安全闸门，尤其适合企业内部部署、敏感操作和高权限自动化场景。",
-      "whatChanged": "管理员可启用人工审批，用户能在保存的会话中逐个确认工具调用，并在审批模式与自由执行模式间切换。",
-      "angles": [
-        "给本地Agent加一道人工审批安全闸门",
-        "Open WebUI新功能如何降低工具误调用风险",
-        "企业部署AI工具时为什么需要逐次授权",
-        "从自由执行切换到人在回路的实操体验"
-      ],
-      "radarScore": 95
+      "radarScore": 96
     },
     {
       "id": "r1t7jkzv",
@@ -1345,21 +1283,133 @@
         }
       ],
       "category": "工具 / 网站",
-      "summary": "Particle推出播客智能检索平台Radar，已转录分析超过13万档节目，并通过网页、API和MCP让人和AI Agent都能搜索播客内容。",
-      "importance": 81,
-      "novelty": 85,
-      "relevance": 83,
+      "summary": "Particle 推出播客智能平台 Radar，已转录分析超过 13 万档播客，并通过网页搜索、API 和 MCP 将节目内容开放给用户及 AI Agent 调用。",
+      "importance": 85,
+      "novelty": 83,
+      "relevance": 88,
       "socialPotential": 84,
-      "sourceQuality": 94,
-      "practicality": 86,
-      "researchIntensity": 15,
+      "sourceQuality": 92,
+      "practicality": 85,
+      "researchIntensity": 20,
       "confidence": 94,
-      "whyItMatters": "长音频正在从难以检索的内容库变成可被搜索、引用和自动处理的数据源，为研究、媒体监测和内容创作提供新入口。",
-      "whatChanged": "Particle发布Radar，将超过13万档播客的转录与分析能力开放给网页用户及AI Agent，并提供API和MCP接入。",
+      "whyItMatters": "大量播客中的观点原本难以检索和引用，Radar 将其变成结构化、机器可访问的数据，可用于研究、内容选题、事实追踪和 Agent 自动化。",
+      "whatChanged": "Radar 正式提供超过 13 万档播客的转录与分析结果，并新增面向开发者和 Agent 的 API、MCP 接入方式。",
       "angles": [
-        "播客终于可以像网页一样被搜索和调用",
-        "AI Agent接入13万档播客后，内容研究会变快多少",
-        "播客数据库如何变成新的情报和选题工具"
+        "让 AI Agent 自动检索 13 万档播客能做什么",
+        "播客内容从不可搜索音频变成研究数据库",
+        "用 Radar 快速寻找行业观点和内容选题",
+        "MCP 正在把垂直内容平台变成 Agent 数据源"
+      ],
+      "radarScore": 96
+    },
+    {
+      "id": "r5f4vkw",
+      "title": "v2.1.247",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.247",
+      "publishedAt": "2026-08-26T23:06:39.000Z",
+      "description": "<h2>What's changed</h2> <ul> <li>Added the <code>SendFeedback</code> tool: when something goes wrong in a session, Claude can draft a feedback report for you to review and send from <code>/feedback</code> (turn off with the <code>feedbackDrafts</code> setting)</li> <li>Added <code>{id, text, cooldownSessions, priority}</code> entries, <code>tipsFile</code>, and <code>label</code> to <code>spinnerTipsOverride</code>, so organizations can rotate their own tips alongside the built-in ones</li> <li>Added a tip on Bash permission prompts pointing to auto mode, with a one-keystroke \"Yes, and switch to auto mode\" option</li> <li>Added <code>/claude-api cost-optimize</code> to profile an existing project's Claude API spend and work through cost levers (caching, token hygiene, batch, effort, model choice) one measured change at a time</li> <li>Updated the <code>/claude-api</code> skill with Admin API coverage (organization members, invites, workspaces, API keys, rate limit reports, workload identity federation, CMEK)</li> <li>Fixed fast arrow-key + Enter sequences acting on the row above the one you navigated to in history search, <code>/config</code>, <code>/mcp</code>, <code>/skills</code>, background tasks, and <code>/model</code></li> <li>Fixed sub-agents dying on a first-call model 404: they now use the session's fallback model chain, and the error returned to the parent includes the error type, status, request id, and model</li> <li>Fixed a hook or background agent that printed megabytes of error output being able to overflow the conversation and wedge the session on \"Prompt i",
+      "source": {
+        "id": "gh-claude-code",
+        "name": "anthropics/claude-code Releases",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "agent",
+          "coding",
+          "launch",
+          "tool"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "gh-claude-code",
+          "name": "anthropics/claude-code Releases",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "agent",
+            "coding",
+            "launch",
+            "tool"
+          ]
+        }
+      ],
+      "category": "效率 / 工作流",
+      "summary": "Anthropic更新Claude Code，新增反馈报告草拟、组织级提示词配置和API成本优化技能，帮助团队减少调试沟通成本并系统控制模型开支。",
+      "importance": 84,
+      "novelty": 82,
+      "relevance": 91,
+      "socialPotential": 79,
+      "sourceQuality": 96,
+      "practicality": 93,
+      "researchIntensity": 25,
+      "confidence": 96,
+      "whyItMatters": "Claude Code开始补齐企业使用中的运营环节：问题反馈、权限引导、组织配置和API成本管理，这些往往比单次代码生成更影响长期采用。",
+      "whatChanged": "v2.1.247加入SendFeedback工具、可定制spinner提示和自动模式引导，并新增用于分析缓存、批处理、Token与模型选择的成本优化命令。",
+      "angles": [
+        "Claude Code不只会写代码，开始管理自己的使用成本",
+        "AI编程工具进入企业运营阶段的三个信号",
+        "一次更新解决反馈、权限提示和API账单问题"
+      ],
+      "radarScore": 96
+    },
+    {
+      "id": "rd4b90f",
+      "title": "Alishahryar1/free-claude-code — Star Alishahryar1 / free-claude-code Use Claude Code, Codex, Pi, and OpenCode for free (1.3B+ free tokens) from your ter",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "publishedAt": "2026-08-27T04:36:21.203Z",
+      "description": "GitHub Trending · 536 stars today · Star Alishahryar1 / free-claude-code Use Claude Code, Codex, Pi, and OpenCode for free (1.3B+ free tokens) from your terminal, app, IDE, or phone like OpenClaw (voice supported + ToS friendly)",
+      "source": {
+        "id": "gh-trending",
+        "name": "GitHub Trending · AI/Agent/Tools",
+        "tier": "A",
+        "kind": "github_trending",
+        "tags": [
+          "github",
+          "trending",
+          "skill",
+          "tool",
+          "agent"
+        ]
+      },
+      "engagement": {
+        "score": 536
+      },
+      "isCurrentSignal": true,
+      "relatedSources": [
+        {
+          "id": "gh-trending",
+          "name": "GitHub Trending · AI/Agent/Tools",
+          "tier": "A",
+          "kind": "github_trending",
+          "tags": [
+            "github",
+            "trending",
+            "skill",
+            "tool",
+            "agent"
+          ]
+        }
+      ],
+      "category": "工具 / 网站",
+      "summary": "free-claude-code 是多终端 AI 编程接入工具，项目宣称可免费使用 Claude Code、Codex、Pi 和 OpenCode，并提供超过 13 亿免费令牌。",
+      "importance": 81,
+      "novelty": 76,
+      "relevance": 91,
+      "socialPotential": 94,
+      "sourceQuality": 70,
+      "practicality": 90,
+      "researchIntensity": 12,
+      "confidence": 72,
+      "whyItMatters": "若免费额度和服务条款声明可验证，它可能显著降低 AI 编程工具的试用成本，并覆盖终端、IDE、应用和手机场景。",
+      "whatChanged": "该项目进入 GitHub Trending，单日新增约 536 星；免费令牌规模和合规性目前来自项目自身声明。",
+      "angles": [
+        "13 亿免费令牌从哪里来，能否持续使用",
+        "免费接入 Claude Code 与 Codex 的安全检查",
+        "终端、IDE 和手机端 AI 编程体验对比",
+        "低成本搭建个人 AI 编程工作流"
       ],
       "radarScore": 95
     },
@@ -1398,82 +1448,85 @@
         }
       ],
       "category": "模型 / Agent 上新",
-      "summary": "IBM发布Granite 4.2开放权重模型，提供3B、8B和30B版本，支持128K上下文；较大版本强化了终端、网页搜索和工具调用。",
+      "summary": "IBM发布开源权重Granite 4.2系列，提供3B、8B和30B版本及128K上下文，其中8B和30B强化了终端、网页搜索和工具调用能力。",
       "importance": 84,
       "novelty": 82,
-      "relevance": 86,
-      "socialPotential": 78,
+      "relevance": 88,
+      "socialPotential": 80,
       "sourceQuality": 91,
-      "practicality": 81,
-      "researchIntensity": 34,
+      "practicality": 86,
+      "researchIntensity": 38,
       "confidence": 92,
-      "whyItMatters": "开放权重模型同时覆盖小型本地部署和具备工具使用能力的较大模型，有助于企业在私有环境运行长上下文Agent。",
-      "whatChanged": "Granite 4.2新增3B、8B和30B规格，全部支持128K上下文；8B和30B经过面向工具使用的Agent强化训练。",
+      "whyItMatters": "小到中等规模的可自托管模型持续增强Agent能力，有利于对数据隐私、成本和本地部署有要求的企业减少对闭源API的依赖。",
+      "whatChanged": "Granite 4.2新增3B、8B和30B参数版本，统一支持128K上下文，8B和30B经过Agent强化训练以提升工具和终端操作能力。",
       "angles": [
-        "企业本地部署Agent又多了一个开放权重选择",
-        "30B模型能否在终端和网页操作上替代云端Agent",
-        "IBM如何用Granite切入本地大模型市场"
+        "30B以内的本地模型也开始认真做Agent",
+        "IBM Granite 4.2适合哪些私有化部署场景",
+        "开源权重模型如何在成本和隐私上挑战云端API"
       ],
-      "radarScore": 93
+      "radarScore": 95
     },
     {
-      "id": "rjr2gsv",
-      "title": "Lightricks/LTX-2.5 · Hugging Face trending model",
-      "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "publishedAt": "2026-08-27T03:26:51.845Z",
-      "description": "Trending model · image-to-video · ♥ 1871 · downloads 894094",
+      "id": "rnkhrl7",
+      "title": "DeployHermes",
+      "url": "https://www.producthunt.com/products/deployhermes",
+      "publishedAt": "2026-08-25T19:40:09.000Z",
+      "description": "<p> Hire persistent Hermes agents with roles, memory + skills </p> <p> <a href=\"https://www.producthunt.com/products/deployhermes?utm_campaign=producthunt-atom-posts-feed&amp;utm_medium=rss-feed&amp;utm_source=producthunt-atom-posts-feed\">Discussion</a> | <a href=\"https://www.producthunt.com/r/p/1232269?app_id=339\">Link</a> </p>",
       "source": {
-        "id": "hf-trending-models",
-        "name": "Hugging Face Trending Models",
+        "id": "producthunt",
+        "name": "Product Hunt",
         "tier": "A",
-        "kind": "huggingface_trending",
+        "kind": "feed",
         "tags": [
-          "model",
-          "open-source"
+          "tool",
+          "website",
+          "product",
+          "productivity",
+          "discovery"
         ]
       },
-      "engagement": {
-        "score": 1930.513836662051
-      },
-      "isCurrentSignal": true,
+      "engagement": null,
+      "isCurrentSignal": false,
       "relatedSources": [
         {
-          "id": "hf-trending-models",
-          "name": "Hugging Face Trending Models",
+          "id": "producthunt",
+          "name": "Product Hunt",
           "tier": "A",
-          "kind": "huggingface_trending",
+          "kind": "feed",
           "tags": [
-            "model",
-            "open-source"
+            "tool",
+            "website",
+            "product",
+            "productivity",
+            "discovery"
           ]
         }
       ],
-      "category": "模型 / Agent 上新",
-      "summary": "Lightricks的LTX-2.5图生视频模型登上Hugging Face趋势榜，累计下载约89.4万次，显示已有较大规模的试用需求。",
-      "importance": 81,
-      "novelty": 75,
+      "category": "Skill / GitHub",
+      "summary": "<p> Hire persistent Hermes agents with roles, memory + skills </p> <p> <a href=\"https://www.producthunt.com/products/deployhermes?utm_campaign=producthunt-atom-posts-feed&amp;utm_medium=rss-feed&amp;utm_source=producthunt-atom-posts-feed\">Discussion</a> | <a h",
+      "importance": 74,
+      "novelty": 83,
       "relevance": 82,
-      "socialPotential": 88,
-      "sourceQuality": 80,
-      "practicality": 79,
-      "researchIntensity": 52,
-      "confidence": 84,
-      "whyItMatters": "图生视频可直接服务短视频、广告素材和视觉原型制作，接近90万次下载意味着它比仅有榜单热度的模型更值得安排实测。",
-      "whatChanged": "LTX-2.5进入Hugging Face趋势榜，页面显示1871次点赞和894094次下载。",
+      "socialPotential": 74,
+      "sourceQuality": 78,
+      "practicality": 100,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
+      "whatChanged": "DeployHermes",
       "angles": [
-        "LTX-2.5能否降低图片转短视频的制作门槛",
-        "用同一张图横测主流图生视频模型",
-        "近90万次下载背后的创作者需求",
-        "从广告素材到电商视频的实际工作流测试"
+        "今天 GitHub 上冒出来一个值得试的项目：DeployHermes",
+        "它解决的具体麻烦是什么，5 分钟能不能跑通",
+        "有没有可能变成自己的 Skill / 自动化工作流"
       ],
-      "radarScore": 91
+      "radarScore": 95
     },
     {
       "id": "r180sh77",
       "title": "Qwen/Qwen3.8-Flash-Next · Hugging Face trending model",
       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
-      "publishedAt": "2026-08-27T03:26:51.845Z",
-      "description": "Trending model · image-text-to-text · ♥ 3682 · downloads 2551",
+      "publishedAt": "2026-08-27T04:36:21.203Z",
+      "description": "Trending model · image-text-to-text · ♥ 3702 · downloads 2551",
       "source": {
         "id": "hf-trending-models",
         "name": "Hugging Face Trending Models",
@@ -1485,7 +1538,7 @@
         ]
       },
       "engagement": {
-        "score": 3716.068806700491
+        "score": 3736.068806700491
       },
       "isCurrentSignal": true,
       "relatedSources": [
@@ -1501,94 +1554,38 @@
         }
       ],
       "category": "模型 / Agent 上新",
-      "summary": "Qwen3.8-Flash-Next登上Hugging Face趋势榜，被标注为图文到文本模型，当前获3682次点赞和2551次下载。",
-      "importance": 78,
-      "novelty": 76,
-      "relevance": 84,
-      "socialPotential": 82,
-      "sourceQuality": 78,
-      "practicality": 72,
+      "summary": "阿里 Qwen 团队的 Qwen3.8-Flash-Next 登上 Hugging Face 趋势榜，定位图文到文本任务，已有 3702 次点赞和 2551 次下载。",
+      "importance": 84,
+      "novelty": 82,
+      "relevance": 91,
+      "socialPotential": 86,
+      "sourceQuality": 88,
+      "practicality": 79,
       "researchIntensity": 45,
-      "confidence": 79,
-      "whyItMatters": "Qwen的新Flash型号若能提供更低延迟或更低成本，可能直接影响多模态应用选型；但输入未提供参数、许可证和性能数据。",
-      "whatChanged": "Qwen3.8-Flash-Next进入Hugging Face趋势榜，并已产生2551次下载。",
+      "confidence": 88,
+      "whyItMatters": "Qwen 官方多模态模型的新条目可能为图像理解、文档处理和视觉问答提供新的可部署选择。",
+      "whatChanged": "Qwen3.8-Flash-Next 进入 Hugging Face 趋势榜，页面将其标注为图文到文本模型。",
       "angles": [
-        "Qwen新Flash型号可能适合哪些图文理解任务",
-        "用实际测试判断Flash定位是否意味着更快或更省",
-        "与现有Qwen多模态模型做成本、速度和效果对比",
-        "只有趋势数据时，如何验证一个新模型是否真能用"
+        "Qwen3.8-Flash-Next 首轮图像理解能力实测",
+        "Flash 型多模态模型适合哪些低成本工作流",
+        "与现有 Qwen 视觉模型做速度和效果对比"
       ],
-      "radarScore": 88
+      "radarScore": 94
     },
     {
-      "id": "r1gwt55g",
-      "title": "How to evaluate LLMs before production",
-      "url": "https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/",
-      "publishedAt": "2026-08-25T21:35:11.000Z",
-      "description": "A language model can perform well on a clean benchmark and still struggle with the cases that matter in production. Benchmarks and curated datasets are useful when prototyping an LLM-based system. They help teams compare models, test an initial prompt, and determine whether an idea is technically plausible. But as a system moves closer to production, the evaluation problem changes. Real inputs are often ambiguous. Labels may be inconsistent. Important context may be missing or truncated. The evaluation set may not reflect the production distribution. Edge cases that rarely appear in benchmarks can become common sources of failure. Even when offline metrics improve, those results may not translate cleanly into production behavior. We encountered these challenges while evaluating an LLM-based system designed to reduce false positives in GitHub secret scanning. Secret scanning identifies credentials such as tokens and keys that may have been committed to a repository. Because some candidate strings resemble secrets, but don&rsquo;t actually represent real credentials, developers may spend time investigating alerts that don&rsquo;t require remediation. Rather than determine whether an LLM could classify a string correctly, we needed to understand whether the system could reduce noisy alerts while preserving enough recall to remain safe for a security workflow. In this post, we share the practices that helped us move from promising prototype results to production. The lessons apply broadly to LLM-powered systems in code analysis, developer tools, security, data analysis, and oth",
+      "id": "r1g4xbph",
+      "title": "v0.11.1",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.11.1",
+      "publishedAt": "2026-08-25T21:17:57.000Z",
+      "description": "<h3>Added</h3> <ul> <li>🚦 <strong>Human in the loop tool approval.</strong> Where an administrator has turned it on, you can switch a conversation from letting tools run freely to being asked first, so a model that wants to use a tool stops and waits for you to allow or deny it, one call at a time in a saved conversation, by button or by keyboard shortcut, with your choice remembered for this conversation and for future ones, switching back to running freely releasing anything already waiting, and automations, channel replies, and temporary chats unaffected. <a href=\"https://github.com/open-webui/open-webui/commit/7d99b2716a0472b2100b3a71825d8eb3fcbbe877\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/ec36972c2b5a8d48713f1a240b0ed305e535b4cc\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/653562d660398c32a9a193450bbbee300d7195c3\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/fa94a5ab2431edba064150651a14dd4992ef29e8\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/55c202e841e76cd69679206cd0ecb4a65b039ea4\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/30f82788bc75e6965da3766e3bf43840dd971eed\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/bbfdbd59f29e246db1d8b5c2401bc7b11aa32c99\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/7fc5fa1ff3f6cd6f0efcbf847064ca8d21620ba6\">Commit</a>, <a href=\"https://github.com/open-webui/open-webui/commit/3eb65f47151af4fb4ccfaf33d6e77154546e7259\">Commit</a>, <a href=\"https://github.com/open-we",
       "source": {
-        "id": "github-ai",
-        "name": "GitHub AI & ML",
-        "tier": "S",
-        "kind": "feed",
-        "tags": [
-          "github",
-          "tool",
-          "coding",
-          "agent"
-        ]
-      },
-      "engagement": null,
-      "isCurrentSignal": false,
-      "relatedSources": [
-        {
-          "id": "github-ai",
-          "name": "GitHub AI & ML",
-          "tier": "S",
-          "kind": "feed",
-          "tags": [
-            "github",
-            "tool",
-            "coding",
-            "agent"
-          ]
-        }
-      ],
-      "category": "效率 / 工作流",
-      "summary": "GitHub分享生产环境评估大模型的方法，强调真实输入、数据分布与边缘案例，案例来自降低密钥扫描误报的系统。",
-      "importance": 80,
-      "novelty": 57,
-      "relevance": 86,
-      "socialPotential": 70,
-      "sourceQuality": 95,
-      "practicality": 82,
-      "researchIntensity": 48,
-      "confidence": 94,
-      "whyItMatters": "它指出离线基准提升不等于线上效果改善，可帮助团队建立更贴近真实业务的评测集和上线验收流程。",
-      "whatChanged": "GitHub公开其生产级大模型评估经验，并以密钥扫描误报治理说明基准测试与线上表现的差异。",
-      "angles": [
-        "为什么排行榜高分模型上线后仍可能失效",
-        "从GitHub案例搭建生产级LLM评测流程",
-        "真实用户输入如何暴露离线评测盲区",
-        "降低AI误报不能只看单一指标"
-      ],
-      "radarScore": 86
-    },
-    {
-      "id": "r1mjtfad",
-      "title": "v1.16.1 - Bug Fixes and Security Enhancements",
-      "url": "https://github.com/langgenius/dify/releases/tag/1.16.1",
-      "publishedAt": "2026-08-25T12:17:47.000Z",
-      "description": "<h2>What's Changed</h2> <h3>New Features</h3> <p><strong>Tool Multi-Select Input</strong></p> <ul> <li>Workflow tool nodes now support multi-select dropdown inputs, allowing users to choose multiple values from a predefined list when configuring tool parameters. (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4935910649\" data-permission-text=\"Title is private\" data-url=\"https://github.com/langgenius/dify/issues/39346\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/langgenius/dify/pull/39346/hovercard\" href=\"https://github.com/langgenius/dify/pull/39346\">#39346</a>)</li> </ul> <p><strong>Workflow Node Locator</strong></p> <ul> <li>You can now click a node_id in workflow run logs or error messages to locate and highlight the corresponding node in the workflow editor canvas. (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4773369324\" data-permission-text=\"Title is private\" data-url=\"https://github.com/langgenius/dify/issues/38187\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/langgenius/dify/pull/38187/hovercard\" href=\"https://github.com/langgenius/dify/pull/38187\">#38187</a>)</li> </ul> <p><strong>Workflow Block Selector Improvements</strong></p> <ul> <li>The block selector panel now features improved keyboard navigation, category previews, and a more intuitive search experience when adding nodes to workflows. (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4917623861\" data-permission-text=\"Title is private\" data-url=\"https://github.com/langgenius/",
-      "source": {
-        "id": "gh-dify",
-        "name": "langgenius/dify Releases",
+        "id": "gh-open-webui",
+        "name": "open-webui/open-webui Releases",
         "tier": "A",
         "kind": "feed",
         "tags": [
-          "agent",
-          "workflow",
           "tool",
+          "product",
           "open-source"
         ]
       },
@@ -1596,35 +1593,33 @@
       "isCurrentSignal": false,
       "relatedSources": [
         {
-          "id": "gh-dify",
-          "name": "langgenius/dify Releases",
+          "id": "gh-open-webui",
+          "name": "open-webui/open-webui Releases",
           "tier": "A",
           "kind": "feed",
           "tags": [
-            "agent",
-            "workflow",
             "tool",
+            "product",
             "open-source"
           ]
         }
       ],
       "category": "效率 / 工作流",
-      "summary": "开源Agent工作流平台Dify发布1.16.1版，新增工具参数多选和日志节点定位，简化复杂流程配置与故障排查。",
-      "importance": 76,
-      "novelty": 54,
-      "relevance": 84,
-      "socialPotential": 66,
-      "sourceQuality": 88,
-      "practicality": 88,
-      "researchIntensity": 19,
-      "confidence": 94,
-      "whyItMatters": "两项更新都直接改善工作流开发效率：多选输入增强工具配置能力，节点定位则减少从报错日志回查画布的时间。",
-      "whatChanged": "工具节点支持预定义参数多选；运行日志或错误信息中的节点编号可直接定位并高亮画布节点。",
+      "summary": "<h3>Added</h3> <ul> <li>🚦 <strong>Human in the loop tool approval.</strong> Where an administrator has turned it on, you can switch a conversation from letting tools run freely to being asked first, so a model that wants to use a tool stops and waits for you ",
+      "importance": 49,
+      "novelty": 68,
+      "relevance": 80,
+      "socialPotential": 78,
+      "sourceQuality": 78,
+      "practicality": 100,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "重点不是技术原理，而是它能否减少重复操作、缩短流程或提升个人产出。",
+      "whatChanged": "v0.11.1",
       "angles": [
-        "Dify复杂工作流排错终于可以直达问题节点",
-        "工具参数多选能解锁哪些Agent流程",
-        "用新版Dify缩短工作流调试时间",
-        "Dify 1.16.1最实用的两项效率更新"
+        "我又找到一个能少做几步的工作流：v0.11.1",
+        "把它放进自己的日常流程，能省下多少时间",
+        "哪些人最适合直接抄这个用法"
       ],
       "radarScore": 85
     },
@@ -1663,129 +1658,23 @@
         }
       ],
       "category": "AI 综合",
-      "summary": "Lovable正把AI应用平台从生成传统软件，扩展到构建Agent可直接调用的能力，让团队通过一个入口连接和执行日常工作。",
-      "importance": 84,
+      "summary": "Lovable正把AI应用开发平台延伸为Agent可调用的能力层，让团队通过一个入口连接日常工具和业务流程，减少人工打开多个软件操作。",
+      "importance": 83,
       "novelty": 88,
-      "relevance": 86,
-      "socialPotential": 88,
-      "sourceQuality": 86,
-      "practicality": 78,
-      "researchIntensity": 22,
-      "confidence": 84,
-      "whyItMatters": "软件产品可能不再主要面向人类点击，而是提供可被Agent调用的业务能力，这会改变SaaS设计和自动化入口。",
-      "whatChanged": "Lovable CTO公开阐述产品方向：除了用AI构建应用，还要让应用中的功能成为Agent可直接调用的能力模块。",
+      "relevance": 87,
+      "socialPotential": 86,
+      "sourceQuality": 88,
+      "practicality": 81,
+      "researchIntensity": 30,
+      "confidence": 88,
+      "whyItMatters": "如果软件功能能直接被Agent调用，传统应用的界面将不再是唯一入口，SaaS产品可能从给人使用转向同时给Agent编排。",
+      "whatChanged": "Lovable提出从AI建应用扩展到构建可被Agent直接调用的capabilities，并设想用统一入口连接团队常用工具和工作。",
       "angles": [
-        "未来SaaS可能不是给人用，而是给Agent调用",
-        "Lovable从AI建站工具转向Agent能力平台",
-        "一个入口连接所有工作，是真效率还是新一层抽象"
+        "未来SaaS可能不是给人点，而是给Agent调用",
+        "Lovable从建应用转向建Agent能力",
+        "一个入口替代一堆后台软件，企业工作流会怎么变"
       ],
-      "radarScore": 84
-    },
-    {
-      "id": "r82pjfi",
-      "title": "v4.1.16",
-      "url": "https://github.com/cline/cline/releases/tag/v4.1.16",
-      "publishedAt": "2026-08-26T08:42:46.000Z",
-      "description": "<p>Everything here lands through the SDK bundle, so it applies to windows running that bundle.</p> <h3>Fixed</h3> <ul> <li>Cost estimates are no longer shown for providers billed by a flat-rate subscription (ClinePass, ChatGPT via Codex, and Claude Code). The task header and model pricing rows rendered API-rate dollar figures that read as real charges on top of the subscription, including a flash of them on every chat-view mount while provider listings were loading.</li> <li>Signing back in no longer moves your last-used provider off ClinePass on credential refresh.</li> <li>Hooks now resolve their workspace from the VS Code window instead of shared global state in <code>~/.cline</code>. With a second window open on another project, a workspace's <code>.clinerules/hooks</code> scripts were never discovered, and hook cwd and the workspace paths passed to hook scripts resolved against whatever project some other or older Cline instance last recorded.</li> <li>New files are now created with your platform's native line endings.</li> <li>Fixed the codebase search tool crashing on files containing a single enormous line.</li> <li>Credentials embedded in git remote URLs are now redacted from the workspace information sent to the model, which also now carries richer workspace metadata.</li> <li>Installing an MCP server from the marketplace no longer misreads the catalog's <code>--</code> separator as part of the server command.</li> <li>The hub's event log can no longer grow until it fills your disk.</li> </ul> <h3>Changed</h3> <ul> <li>The per-tool MCP auto-approve checkboxes are ",
-      "source": {
-        "id": "gh-cline",
-        "name": "cline/cline Releases",
-        "tier": "A",
-        "kind": "feed",
-        "tags": [
-          "agent",
-          "coding",
-          "tool"
-        ]
-      },
-      "engagement": null,
-      "isCurrentSignal": false,
-      "relatedSources": [
-        {
-          "id": "gh-cline",
-          "name": "cline/cline Releases",
-          "tier": "A",
-          "kind": "feed",
-          "tags": [
-            "agent",
-            "coding",
-            "tool"
-          ]
-        }
-      ],
-      "category": "模型 / Agent 上新",
-      "summary": "编程智能体 Cline 发布 4.1.16，修正订阅渠道费用误显、登录后提供商切换及多窗口工作区钩子定位错误。",
-      "importance": 75,
-      "novelty": 48,
-      "relevance": 85,
-      "socialPotential": 61,
-      "sourceQuality": 92,
-      "practicality": 84,
-      "researchIntensity": 18,
-      "confidence": 96,
-      "whyItMatters": "费用误显会让订阅用户误以为产生额外 API 支出，多窗口钩子修复则直接影响并行项目中的自动化可靠性。",
-      "whatChanged": "Cline 通过 SDK bundle 修复三类问题：隐藏固定订阅提供商的 API 计价、保留最近使用的 ClinePass，以及按当前 VS Code 窗口解析工作区钩子。",
-      "angles": [
-        "Cline 用户升级前后最容易感知的三个变化",
-        "为什么多窗口开发会让智能体钩子找错项目",
-        "AI 编程工具如何避免把参考价格显示成真实账单"
-      ],
-      "radarScore": 83
-    },
-    {
-      "id": "r14x1mvz",
-      "title": "Basedash for Grok Bot",
-      "url": "https://www.producthunt.com/products/basedash",
-      "publishedAt": "2026-08-25T16:42:13.000Z",
-      "description": "<p> Company data answers, right inside Grok Bot </p> <p> <a href=\"https://www.producthunt.com/products/basedash?utm_campaign=producthunt-atom-posts-feed&amp;utm_medium=rss-feed&amp;utm_source=producthunt-atom-posts-feed\">Discussion</a> | <a href=\"https://www.producthunt.com/r/p/1232122?app_id=339\">Link</a> </p>",
-      "source": {
-        "id": "producthunt",
-        "name": "Product Hunt",
-        "tier": "A",
-        "kind": "feed",
-        "tags": [
-          "tool",
-          "website",
-          "product",
-          "productivity",
-          "discovery"
-        ]
-      },
-      "engagement": null,
-      "isCurrentSignal": false,
-      "relatedSources": [
-        {
-          "id": "producthunt",
-          "name": "Product Hunt",
-          "tier": "A",
-          "kind": "feed",
-          "tags": [
-            "tool",
-            "website",
-            "product",
-            "productivity",
-            "discovery"
-          ]
-        }
-      ],
-      "category": "工具 / 网站",
-      "summary": "Basedash推出面向Grok Bot的公司数据查询能力，让用户可在对话中直接获取企业信息，但输入未说明数据范围与权限机制。",
-      "importance": 55,
-      "novelty": 61,
-      "relevance": 65,
-      "socialPotential": 64,
-      "sourceQuality": 72,
-      "practicality": 62,
-      "researchIntensity": 10,
-      "confidence": 64,
-      "whyItMatters": "把内部公司数据接入聊天机器人可减少后台查询和跨工具切换，对运营、销售支持与管理问答有直接价值。",
-      "whatChanged": "Basedash将公司数据问答能力接入Grok Bot，支持在机器人对话界面内查询。",
-      "angles": [
-        "在Grok Bot里直接查询公司数据是什么体验",
-        "企业数据问答正在从独立后台进入聊天入口",
-        "Basedash接入Grok Bot适合哪些团队"
-      ],
-      "radarScore": 72
+      "radarScore": 85
     },
     {
       "id": "rcfds8c",
@@ -1822,23 +1711,129 @@
         }
       ],
       "category": "工具 / 网站",
-      "summary": "Google展示搜索工具在家居场景中的组合用法，覆盖装修灵感发现、家具选购和DIY项目规划，并非独立新品发布。",
-      "importance": 42,
-      "novelty": 25,
-      "relevance": 48,
-      "socialPotential": 58,
-      "sourceQuality": 94,
-      "practicality": 67,
-      "researchIntensity": 5,
-      "confidence": 94,
-      "whyItMatters": "它提供了普通用户可直接复用的消费搜索流程，也适合转化为家居内容、电商导购和搜索技巧教程。",
-      "whatChanged": "Google发布家居装修主题指南，集中介绍现有搜索能力的五种使用方式。",
+      "summary": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Home_Decor.max-600x600.format-webp.webp\">Learn how to use Google Search tools to find home decor inspiration, shop for furniture, and tackle DIY projects.",
+      "importance": 56,
+      "novelty": 66,
+      "relevance": 68,
+      "socialPotential": 66,
+      "sourceQuality": 90,
+      "practicality": 98,
+      "researchIntensity": 0,
+      "confidence": 64,
+      "whyItMatters": "它可能直接降低某个任务的时间或门槛，适合快速试用后决定是否进入工具箱。",
+      "whatChanged": "5 ways to upgrade your home decor with Google Search",
       "angles": [
-        "用Google搜索完成家居灵感到购买的完整流程",
-        "家居博主可复用的搜索与选品方法",
-        "这不是新产品，而是Google搜索的场景化教学"
+        "发现一个可能真能省时间的新工具：5 ways to upgrade your home decor with Google Search",
+        "它替代了原来哪一步手工操作",
+        "免费版够不够用，值不值得长期留在工具箱"
       ],
-      "radarScore": 62
+      "radarScore": 83
+    },
+    {
+      "id": "rdgjif4",
+      "title": "[AINews] NVIDIA buys HuggingFace for $13B, as OpenAI publishes their HF incident retro",
+      "url": "https://www.latent.space/p/ainews-nvidia-buys-huggingface-for",
+      "publishedAt": "2026-08-27T01:50:54.000Z",
+      "description": "TheInformation had the scoop , and now they have the confirmation — Nvidia is buying HuggingFace for $13B, roughly 80x their $150M ARR , having doubled its customer base in 2026 . This is almost double Nvidia’s initial $7B offer in Jan 2026. What can we say? We love it when the good guys win. But in the backdrop of GLM-5.3-Flash (aka Ox Alpha) impressing everyone (except GDM vaguepoasters ) and Qwen also shipping an impressive Flash model on chinese chips, perhaps the post Hot Chips conversation about Western open AI is a great backdrop for this. AI News for 8/25/2026-8/26/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews’ website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! AI Twitter Recap Top Story: GLM 5.3 Flash launch and reactions What happened Z.ai formally launched GLM-5.3-Flash, revealing that the previously previewed “Ox Alpha” model is its public identity. Z.ai announced GLM-5.3-Flash as a natively multimodal model with a 1M-token context window , 320B total parameters / 18B active parameters , released under the MIT License , and available via weights, API, chat, coding plan, and AutoClaw. Z.ai simultaneously positioned it as a highly price-competitive successor to GLM-5.2, claiming on its internal benchmark that it outperforms GLM-5.2 at every effort level and is on par with Claude Opus 4.8 on coding . The launch also resolved the long-running Ox Alpha mystery: multiple posters explicitly connected Ox Alpha to GLM-5.3-Flash, including SemiAnalysis , ",
+      "source": {
+        "id": "latent-space",
+        "name": "Latent Space",
+        "tier": "A",
+        "kind": "feed",
+        "tags": [
+          "agent",
+          "tool",
+          "developer",
+          "industry"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "latent-space",
+          "name": "Latent Space",
+          "tier": "A",
+          "kind": "feed",
+          "tags": [
+            "agent",
+            "tool",
+            "developer",
+            "industry"
+          ]
+        }
+      ],
+      "category": "AI 综合",
+      "summary": "Latent Space报道英伟达将以130亿美元收购Hugging Face，交易将把开源模型社区、模型工具链与英伟达计算生态进一步整合。",
+      "importance": 96,
+      "novelty": 98,
+      "relevance": 89,
+      "socialPotential": 98,
+      "sourceQuality": 83,
+      "practicality": 46,
+      "researchIntensity": 20,
+      "confidence": 76,
+      "whyItMatters": "若交易属实，英伟达将获得开源模型分发、社区和开发者基础设施，AI产业竞争可能从芯片与模型延伸到开源生态控制权。",
+      "whatChanged": "输入信息称英伟达确认以130亿美元收购Hugging Face，价格约为其年经常性收入的80倍，且Hugging Face在2026年客户数翻倍。",
+      "angles": [
+        "英伟达为什么要买开源模型社区",
+        "130亿美元收购Hugging Face意味着什么",
+        "AI产业的下一场竞争是算力、模型还是开发者生态"
+      ],
+      "radarScore": 83
+    },
+    {
+      "id": "r1gwt55g",
+      "title": "How to evaluate LLMs before production",
+      "url": "https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/",
+      "publishedAt": "2026-08-25T21:35:11.000Z",
+      "description": "A language model can perform well on a clean benchmark and still struggle with the cases that matter in production. Benchmarks and curated datasets are useful when prototyping an LLM-based system. They help teams compare models, test an initial prompt, and determine whether an idea is technically plausible. But as a system moves closer to production, the evaluation problem changes. Real inputs are often ambiguous. Labels may be inconsistent. Important context may be missing or truncated. The evaluation set may not reflect the production distribution. Edge cases that rarely appear in benchmarks can become common sources of failure. Even when offline metrics improve, those results may not translate cleanly into production behavior. We encountered these challenges while evaluating an LLM-based system designed to reduce false positives in GitHub secret scanning. Secret scanning identifies credentials such as tokens and keys that may have been committed to a repository. Because some candidate strings resemble secrets, but don&rsquo;t actually represent real credentials, developers may spend time investigating alerts that don&rsquo;t require remediation. Rather than determine whether an LLM could classify a string correctly, we needed to understand whether the system could reduce noisy alerts while preserving enough recall to remain safe for a security workflow. In this post, we share the practices that helped us move from promising prototype results to production. The lessons apply broadly to LLM-powered systems in code analysis, developer tools, security, data analysis, and oth",
+      "source": {
+        "id": "github-ai",
+        "name": "GitHub AI & ML",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "github",
+          "tool",
+          "coding",
+          "agent"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "github-ai",
+          "name": "GitHub AI & ML",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "github",
+            "tool",
+            "coding",
+            "agent"
+          ]
+        }
+      ],
+      "category": "美股 / 币圈",
+      "summary": "A language model can perform well on a clean benchmark and still struggle with the cases that matter in production. Benchmarks and curated datasets are useful when prototyping an LLM-based system. They help teams compare models, test an initial prompt, and det",
+      "importance": 52,
+      "novelty": 68,
+      "relevance": 70,
+      "socialPotential": 70,
+      "sourceQuality": 90,
+      "practicality": 76,
+      "researchIntensity": 48,
+      "confidence": 64,
+      "whyItMatters": "作为市场观察和工具线索使用，关注数据、情绪与结构变化，不把单条信息当作交易建议。",
+      "whatChanged": "How to evaluate LLMs before production",
+      "angles": [
+        "今天市场里一个容易被忽略的小信号：How to evaluate LLMs before production",
+        "这个数据应该怎么看，什么情况下容易误判",
+        "只做观察：它接下来值得盯哪个指标"
+      ],
+      "radarScore": 72
     }
   ]
 }
