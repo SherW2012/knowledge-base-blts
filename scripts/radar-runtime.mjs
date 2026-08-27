@@ -49,16 +49,19 @@ async function dragonResponses(url, init, payload) {
   const headers = new Headers(init.headers || {});
   headers.set("content-type", "application/json");
 
-  // Different OpenAI-compatible relays expose either /v1/responses or
-  // /responses. Try the conventional /v1 path first and only fall back when
-  // the endpoint itself is unavailable.
-  const endpoints = [`${base}/v1/responses`, `${base}/responses`];
+  // Codex appends the Responses path directly to model_providers.*.base_url.
+  // DragonCode's generated config uses base_url=https://dragoncode.codes, so
+  // /responses is the primary endpoint. /v1/responses is kept as a fallback
+  // for other OpenAI-compatible relays.
+  const endpoints = [`${base}/responses`, `${base}/v1/responses`];
   let lastResponse = null;
   for (const endpoint of endpoints) {
     const response = await nativeFetch(endpoint, { ...init, headers, body: JSON.stringify(requestPayload) });
     lastResponse = response;
     if (!response.ok) {
-      if (response.status === 404 || response.status === 405) continue;
+      const detail = (await response.clone().text().catch(() => "")).replace(/\s+/g, " ").slice(0, 240);
+      console.warn(`[radar] DragonCode ${endpoint.replace(base, "<base>")} -> HTTP ${response.status}${detail ? ` · ${detail}` : ""}`);
+      if ([400, 401, 403, 404, 405].includes(response.status)) continue;
       return response;
     }
     const body = await response.json();
