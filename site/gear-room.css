@@ -1,0 +1,148 @@
+/* Virtual Gear Room：中性、安静、实体感。不用卡片堆叠，靠细线与留白分区。 */
+.gear-room {
+  --gr-ink: #e8e9ea;
+  --gr-ink-soft: #9ea3a8;
+  --gr-ink-faint: #6b7075;
+  --gr-line: #2c2f33;
+  --gr-ground: #16181a;
+  --gr-ground-2: #101214;
+  --gr-hot: #d8dadc;
+  display: flex; flex-direction: column; min-height: 0;
+  margin: 0 0 8px;
+  border: 1px solid var(--gr-line); border-radius: 3px;
+  background: linear-gradient(180deg, var(--gr-ground), var(--gr-ground-2));
+  color: var(--gr-ink);
+  font-feature-settings: "tnum" 1;
+  overflow: hidden;
+}
+:root:not([data-theme="dark"]) .gear-room {
+  --gr-ink: #1b1d1f;
+  --gr-ink-soft: #5c6166;
+  --gr-ink-faint: #8c9196;
+  --gr-line: #dcdee1;
+  --gr-ground: #f2f3f4;
+  --gr-ground-2: #e7e9ea;
+  --gr-hot: #1b1d1f;
+}
+
+.gr-head {
+  display: flex; align-items: center; gap: 18px 26px; flex-wrap: wrap;
+  padding: 16px 22px; border-bottom: 1px solid var(--gr-line);
+}
+.gr-eyebrow { display: block; color: var(--gr-ink-faint); font-size: 9.5px; font-weight: 600; letter-spacing: .3em; }
+.gr-title h2 { margin: 5px 0 0; font-size: 18px; font-weight: 500; letter-spacing: .02em; }
+.gr-filters { display: flex; gap: 2px; flex-wrap: wrap; margin-left: auto; }
+.gr-filters button {
+  padding: 6px 13px; border: 0; border-radius: 2px; background: transparent;
+  color: var(--gr-ink-faint); font-size: 10.5px; font-weight: 600; letter-spacing: .16em;
+  cursor: pointer; transition: color .16s ease, background .16s ease;
+}
+.gr-filters button:hover { color: var(--gr-ink); }
+.gr-filters button.on { color: var(--gr-hot); background: color-mix(in srgb, var(--gr-ink) 10%, transparent); }
+.gr-tools { display: flex; gap: 6px; }
+.gr-tools button {
+  min-width: 30px; height: 28px; padding: 0 11px;
+  border: 1px solid var(--gr-line); border-radius: 2px; background: transparent;
+  color: var(--gr-ink-soft); font-size: 11px; letter-spacing: .1em; cursor: pointer; transition: .16s ease;
+}
+.gr-tools button:hover:not(:disabled) { border-color: var(--gr-ink-soft); color: var(--gr-ink); }
+.gr-tools button:disabled { opacity: .35; cursor: default; }
+
+.gr-body { display: grid; grid-template-columns: minmax(0, 1fr) 268px; min-height: 0; }
+.gear-room[data-view="list"] .gr-body { display: none; }
+.gear-room[data-view="stage"] .gr-list { display: none; }
+
+.gr-stage { position: relative; min-width: 0; height: min(62vh, 620px); }
+.gr-canvas { position: absolute; inset: 0; }
+.gr-canvas canvas { display: block; width: 100%; height: 100%; cursor: grab; }
+.gr-hint {
+  position: absolute; left: 20px; bottom: 14px; margin: 0;
+  color: var(--gr-ink-faint); font-size: 10px; letter-spacing: .08em; pointer-events: none;
+}
+.gr-tip {
+  position: absolute; left: 0; top: 0; padding: 7px 11px; pointer-events: none;
+  border: 1px solid var(--gr-line); border-radius: 2px;
+  background: color-mix(in srgb, var(--gr-ground) 88%, transparent);
+  backdrop-filter: blur(6px);
+  display: grid; gap: 2px; white-space: nowrap;
+}
+.gr-tip[hidden] { display: none; }
+.gr-tip strong { font-size: 12px; font-weight: 550; letter-spacing: .02em; }
+.gr-tip span { color: var(--gr-ink-faint); font-size: 10px; letter-spacing: .06em; }
+
+.gr-panel { border-left: 1px solid var(--gr-line); padding: 22px 20px; overflow-y: auto; min-height: 0; }
+.gr-idle-count { margin: 0; color: var(--gr-ink); font-size: 26px; font-weight: 300; letter-spacing: .04em; }
+.gr-idle-hint { margin: 12px 0 0; color: var(--gr-ink-faint); font-size: 11.5px; line-height: 1.95; }
+.gr-brand { margin: 0; color: var(--gr-ink-faint); font-size: 10px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; }
+.gr-detail h3 { margin: 7px 0 18px; font-size: 21px; font-weight: 450; letter-spacing: .01em; }
+.gr-pending { margin: -10px 0 16px; color: var(--gr-ink-faint); font-size: 11px; line-height: 1.8; }
+.gr-specs { margin: 0; display: flex; flex-direction: column; }
+.gr-spec { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 12px; padding: 7px 0; border-top: 1px solid var(--gr-line); }
+.gr-spec dt { color: var(--gr-ink-faint); font-size: 10px; letter-spacing: .1em; }
+.gr-spec dd { margin: 0; font-size: 11.5px; line-height: 1.5; color: var(--gr-ink); }
+.gr-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 16px 0 0; }
+.gr-tags span {
+  padding: 3px 9px; border: 1px solid var(--gr-line); border-radius: 2px;
+  color: var(--gr-ink-soft); font-size: 10px; letter-spacing: .06em;
+}
+.gr-usage { margin-top: 18px; }
+.gr-label { color: var(--gr-ink-faint); font-size: 10px; letter-spacing: .16em; }
+.gr-usage ul { margin: 8px 0 0; padding: 0; list-style: none; }
+.gr-usage li { padding: 4px 0; color: var(--gr-ink-soft); font-size: 11.5px; }
+.gr-usage li::before { content: "—"; margin-right: 8px; color: var(--gr-ink-faint); }
+.gr-actions { display: flex; align-items: center; gap: 14px; margin-top: 24px; flex-wrap: wrap; }
+.gr-link { color: var(--gr-ink); font-size: 11.5px; letter-spacing: .06em; text-decoration: none; border-bottom: 1px solid var(--gr-line); padding-bottom: 2px; }
+.gr-link:hover { border-color: var(--gr-ink); }
+.gr-link.muted { color: var(--gr-ink-faint); border-color: transparent; }
+.gr-back {
+  padding: 5px 12px; border: 1px solid var(--gr-line); border-radius: 2px;
+  background: transparent; color: var(--gr-ink-soft); font-size: 10.5px; letter-spacing: .08em; cursor: pointer;
+}
+.gr-back:hover { color: var(--gr-ink); border-color: var(--gr-ink-soft); }
+
+.gr-list { margin: 0; padding: 8px 0; list-style: none; }
+.gr-row {
+  width: 100%; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) auto;
+  gap: 18px; align-items: baseline; padding: 13px 22px;
+  border: 0; border-bottom: 1px solid var(--gr-line); background: transparent;
+  color: var(--gr-ink); text-align: left; cursor: pointer; transition: background .16s ease;
+}
+.gr-row:hover { background: color-mix(in srgb, var(--gr-ink) 6%, transparent); }
+.gr-row.on { background: color-mix(in srgb, var(--gr-ink) 10%, transparent); }
+.gr-row-name strong { font-size: 13px; font-weight: 500; }
+.gr-row-name small { display: block; margin-top: 3px; color: var(--gr-ink-faint); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; }
+.gr-row-spec { color: var(--gr-ink-soft); font-size: 11px; }
+.gr-row-size { color: var(--gr-ink-faint); font-size: 10.5px; white-space: nowrap; }
+
+.gr-note { margin: 0; padding: 14px 22px 18px; border-top: 1px solid var(--gr-line); color: var(--gr-ink-faint); font-size: 10.5px; line-height: 1.85; }
+.gr-loading, .gr-error, .gr-fallback { padding: 40px 24px; color: var(--gr-ink-faint); font-size: 12.5px; line-height: 1.9; }
+.gr-fallback { display: grid; place-content: center; text-align: center; gap: 6px; height: 100%; }
+.gr-fallback strong, .gr-error strong { display: block; color: var(--gr-ink); font-size: 14px; font-weight: 500; }
+
+.gear-room.is-full { border: 0; border-radius: 0; height: 100vh; }
+.gear-room.is-full .gr-stage { height: auto; flex: 1; }
+.gear-room.is-full .gr-body { flex: 1; min-height: 0; }
+.gear-room.is-full .gr-note { display: none; }
+
+@media (max-width: 900px) {
+  .gr-body { grid-template-columns: minmax(0, 1fr); }
+  .gr-panel { border-left: 0; border-top: 1px solid var(--gr-line); max-height: 300px; }
+  .gr-stage { height: min(52vh, 420px); }
+  .gr-head { padding: 14px 16px; gap: 12px 16px; }
+  .gr-filters { margin-left: 0; width: 100%; overflow-x: auto; }
+  .gr-row { grid-template-columns: minmax(0, 1fr) auto; gap: 10px; padding: 12px 16px; }
+  .gr-row-spec { display: none; }
+  .gr-note { padding: 12px 16px 16px; }
+}
+
+.gr-step { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; }
+.gr-step button {
+  padding: 6px 12px; border: 1px solid var(--gr-line); border-radius: 2px;
+  background: transparent; color: var(--gr-ink-soft);
+  font-size: 10.5px; letter-spacing: .08em; cursor: pointer; transition: .16s ease;
+}
+.gr-step button:hover { color: var(--gr-ink); border-color: var(--gr-ink-soft); }
+.gr-step button:focus-visible, .gr-filters button:focus-visible,
+.gr-tools button:focus-visible, .gr-row:focus-visible {
+  outline: 1px solid var(--gr-ink); outline-offset: 2px;
+}

@@ -2,9 +2,24 @@
   "title": "BLTS 知识库",
   "subtitle": "知识、工具与工作流组成的个人系统",
   "departments": [
-    { "name": "本部", "description": "健康管理、生活习惯与日常系统", "mark": "本", "apps": [] },
-    { "name": "外交部", "description": "个人成长、心理模式、人际关系与人格体系", "mark": "外", "apps": [] },
-    { "name": "技术部", "description": "技术积累、软考、工程实践与技术壁垒", "mark": "技", "apps": [] },
+    {
+      "name": "本部",
+      "description": "健康管理、生活习惯与日常系统",
+      "mark": "本",
+      "apps": []
+    },
+    {
+      "name": "外交部",
+      "description": "个人成长、心理模式、人际关系与人格体系",
+      "mark": "外",
+      "apps": []
+    },
+    {
+      "name": "技术部",
+      "description": "技术积累、软考、工程实践与技术壁垒",
+      "mark": "技",
+      "apps": []
+    },
     {
       "name": "前沿部",
       "description": "AI 前沿、内容研究、创意与待验证方向",
@@ -19,11 +34,42 @@
           "status": "live",
           "renderer": "ai-radar",
           "contentPath": "AI情报雷达",
-          "capabilities": ["每日自动扫描", "Top 15", "选题池", "信息源管理"]
+          "capabilities": [
+            "每日自动扫描",
+            "Top 15",
+            "选题池",
+            "信息源管理"
+          ]
         }
       ]
     },
-    { "name": "商务部", "description": "理财、投资、商业研究与 CFA", "mark": "商", "apps": [] },
-    { "name": "艺术部", "description": "审美、摄影、创作技巧与作品复盘", "mark": "艺", "apps": [] }
+    {
+      "name": "商务部",
+      "description": "理财、投资、商业研究与 CFA",
+      "mark": "商",
+      "apps": []
+    },
+    {
+      "name": "艺术部",
+      "description": "审美、摄影、创作技巧与作品复盘",
+      "mark": "艺",
+      "apps": [
+        {
+          "id": "gear-room",
+          "title": "虚拟器材室",
+          "eyebrow": "VIRTUAL GEAR ROOM",
+          "description": "把随身的相机、手机与视频设备按真实比例摆在一张桌上，可旋转、可聚焦，点开是它的参数与使用经验。",
+          "mark": "GEAR",
+          "status": "live",
+          "renderer": "gear-room",
+          "capabilities": [
+            "11 台设备",
+            "真实比例",
+            "点击聚焦",
+            "按类型筛选"
+          ]
+        }
+      ]
+    }
   ]
 }

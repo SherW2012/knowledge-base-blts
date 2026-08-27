@@ -1,0 +1,365 @@
+{
+  "title": "Virtual Gear Room",
+  "subtitle": "艺术部 · 摄影器材",
+  "notesDir": "艺术部/摄影/器材",
+  "note": "尺寸为各机型公布的标称三围（宽 × 高 × 厚，毫米），用于在场景里还原真实比例。发现出入直接改这个文件即可，场景会自动跟着变。",
+  "gear": [
+    {
+      "id": "ricoh-gr3x",
+      "name": "GR IIIx",
+      "brand": "Ricoh",
+      "category": "camera",
+      "form": "compact",
+      "dimensions": [
+        109.4,
+        61.9,
+        35.2
+      ],
+      "weight": 262,
+      "year": 2021,
+      "sensor": "APS-C CMOS",
+      "focalLength": "40mm 等效",
+      "aperture": "F2.8",
+      "tags": [
+        "扫街",
+        "日常",
+        "轻便",
+        "人文"
+      ],
+      "usage": [
+        "城市扫街",
+        "旅行",
+        "日常记录"
+      ],
+      "favorite": true,
+      "note": "理光GR3x.md",
+      "modelPath": null,
+      "style": {
+        "body": "graphite",
+        "lens": 30,
+        "barrel": 7,
+        "grip": true
+      }
+    },
+    {
+      "id": "ricoh-gr3-hdf",
+      "name": "GR III HDF",
+      "brand": "Ricoh",
+      "category": "camera",
+      "form": "compact",
+      "dimensions": [
+        109.4,
+        61.9,
+        33.2
+      ],
+      "weight": 257,
+      "year": 2024,
+      "sensor": "APS-C CMOS",
+      "focalLength": "28mm 等效",
+      "aperture": "F2.8",
+      "tags": [
+        "扫街",
+        "广角",
+        "轻便",
+        "柔光"
+      ],
+      "usage": [
+        "街头",
+        "空间感",
+        "夜景光晕"
+      ],
+      "note": "理光GR3-HDF.md",
+      "modelPath": null,
+      "style": {
+        "body": "graphite",
+        "lens": 30,
+        "barrel": 6,
+        "grip": true
+      }
+    },
+    {
+      "id": "canon-g12",
+      "name": "PowerShot G12",
+      "brand": "Canon",
+      "category": "camera",
+      "form": "compact-zoom",
+      "dimensions": [
+        112.1,
+        76.2,
+        48.3
+      ],
+      "weight": 401,
+      "year": 2010,
+      "sensor": "1/1.7\" CCD",
+      "focalLength": "28–140mm 等效",
+      "aperture": "F2.8–4.5",
+      "tags": [
+        "CCD",
+        "复古",
+        "直出",
+        "胶片感"
+      ],
+      "usage": [
+        "日系氛围",
+        "复古色调",
+        "阴天出片"
+      ],
+      "note": "佳能G12.md",
+      "modelPath": null,
+      "style": {
+        "body": "black",
+        "lens": 40,
+        "barrel": 16,
+        "hotshoe": true,
+        "dials": 2
+      }
+    },
+    {
+      "id": "canon-g7x2",
+      "name": "PowerShot G7 X Mark II",
+      "brand": "Canon",
+      "category": "camera",
+      "form": "compact",
+      "dimensions": [
+        105.5,
+        60.9,
+        42.2
+      ],
+      "weight": 319,
+      "year": 2016,
+      "sensor": "1\" CMOS",
+      "focalLength": "24–100mm 等效",
+      "aperture": "F1.8–2.8",
+      "tags": [
+        "随身",
+        "大光圈",
+        "视频"
+      ],
+      "usage": [
+        "人像特写",
+        "vlog",
+        "室内"
+      ],
+      "note": "佳能G7X2.md",
+      "modelPath": null,
+      "style": {
+        "body": "black",
+        "lens": 38,
+        "barrel": 14
+      }
+    },
+    {
+      "id": "samsung-wb150",
+      "name": "WB150F",
+      "brand": "Samsung",
+      "category": "camera",
+      "form": "compact",
+      "dimensions": [
+        106.5,
+        59.9,
+        23.4
+      ],
+      "weight": 188,
+      "year": 2012,
+      "sensor": "1/2.3\" CCD",
+      "focalLength": "24–432mm 等效",
+      "aperture": "F3.2–5.8",
+      "tags": [
+        "CCD",
+        "长焦",
+        "复古",
+        "口袋"
+      ],
+      "usage": [
+        "CCD 色彩",
+        "远摄抓拍"
+      ],
+      "note": "三星WB150.md",
+      "modelPath": null,
+      "style": {
+        "body": "silver",
+        "lens": 32,
+        "barrel": 10
+      }
+    },
+    {
+      "id": "fujifilm-xs10",
+      "name": "X-S10",
+      "brand": "Fujifilm",
+      "category": "camera",
+      "form": "mirrorless",
+      "dimensions": [
+        126,
+        85.1,
+        65.4
+      ],
+      "weight": 465,
+      "year": 2020,
+      "sensor": "APS-C X-Trans CMOS 4",
+      "focalLength": "可换镜头",
+      "tags": [
+        "主力",
+        "胶片模拟",
+        "防抖",
+        "换镜头"
+      ],
+      "usage": [
+        "约拍主力",
+        "人像",
+        "视频"
+      ],
+      "favorite": true,
+      "note": "富士X-S10.md",
+      "modelPath": null,
+      "style": {
+        "body": "black",
+        "lens": 62,
+        "barrel": 46,
+        "hotshoe": true,
+        "evf": true,
+        "grip": true,
+        "dials": 3
+      }
+    },
+    {
+      "id": "dji-pocket3",
+      "name": "Osmo Pocket 3",
+      "brand": "DJI",
+      "category": "video",
+      "form": "pocket-gimbal",
+      "dimensions": [
+        42.2,
+        139.7,
+        33.5
+      ],
+      "weight": 179,
+      "year": 2023,
+      "sensor": "1\" CMOS",
+      "tags": [
+        "云台",
+        "视频",
+        "口袋",
+        "跟拍"
+      ],
+      "usage": [
+        "拍摄花絮",
+        "旅行视频",
+        "移动跟拍"
+      ],
+      "note": "大疆Pocket3.md",
+      "modelPath": null,
+      "style": {
+        "body": "graphite"
+      }
+    },
+    {
+      "id": "iphone-16-pro-max",
+      "name": "iPhone 16 Pro Max",
+      "brand": "Apple",
+      "category": "phone",
+      "form": "phone",
+      "dimensions": [
+        77.6,
+        163.0,
+        8.25
+      ],
+      "weight": 227,
+      "year": 2024,
+      "tags": [
+        "随手",
+        "视频",
+        "夜景"
+      ],
+      "usage": [
+        "随手记录",
+        "竖屏视频",
+        "现场沟通"
+      ],
+      "favorite": true,
+      "note": "iPhone16ProMax.md",
+      "modelPath": null,
+      "style": {
+        "body": "titanium",
+        "cameras": 3
+      }
+    },
+    {
+      "id": "iphone-xs-max",
+      "name": "iPhone XS Max",
+      "brand": "Apple",
+      "category": "phone",
+      "form": "phone",
+      "dimensions": [
+        77.4,
+        157.5,
+        7.7
+      ],
+      "weight": 208,
+      "year": 2018,
+      "tags": [
+        "备用",
+        "怀旧"
+      ],
+      "usage": [
+        "备用机",
+        "旧色调"
+      ],
+      "note": "iPhoneXSMax.md",
+      "modelPath": null,
+      "style": {
+        "body": "steel",
+        "cameras": 2,
+        "cameraLayout": "vertical"
+      }
+    },
+    {
+      "id": "iphone-7-plus",
+      "name": "iPhone 7 Plus",
+      "brand": "Apple",
+      "category": "phone",
+      "form": "phone",
+      "dimensions": [
+        77.9,
+        158.2,
+        7.3
+      ],
+      "weight": 188,
+      "year": 2016,
+      "tags": [
+        "怀旧",
+        "双摄"
+      ],
+      "usage": [
+        "旧机成像",
+        "怀旧色"
+      ],
+      "note": "iPhone7Plus.md",
+      "modelPath": null,
+      "style": {
+        "body": "aluminium",
+        "cameras": 2,
+        "cameraLayout": "horizontal"
+      }
+    },
+    {
+      "id": "iphone-18-pro-max",
+      "name": "iPhone 18 Pro Max",
+      "brand": "Apple",
+      "category": "phone",
+      "form": "phone",
+      "dimensions": null,
+      "year": null,
+      "status": "pending",
+      "tags": [
+        "待补"
+      ],
+      "usage": [],
+      "note": "iPhone18ProMax.md",
+      "modelPath": null,
+      "style": {
+        "body": "titanium",
+        "cameras": 3
+      }
+    }
+  ]
+}
