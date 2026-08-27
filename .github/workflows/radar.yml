@@ -63,10 +63,11 @@ jobs:
         run: |
           git config user.name "BLTS AI Radar"
           git config user.email "actions@users.noreply.github.com"
-          git add radar-data
+          git add radar-data scripts/radar.mjs
           if git diff --cached --quiet; then
             echo "No radar changes to commit."
             exit 0
           fi
           git commit -m "前沿部：更新 AI 情报雷达"
+          git pull --rebase origin main
           git push
