@@ -166,6 +166,20 @@ async function patchRadarCore() {
     changed = true;
   }
 
+  const oldCatch = `    } catch (error) { console.warn(\`[radar] LLM fallback: \${error.message}\`); }`;
+  const newCatch = `    } catch (error) {\n      console.warn(\`[radar] LLM batch fallback: \${error.message}; retrying items individually\`);\n      if (chunk.length > 1) {\n        const recovered = await mapLimit(chunk, 2, async (item) => {\n          const one = await analyze([item]);\n          return one[0];\n        });\n        for (const item of recovered) if (item?.id) out.set(item.id, item);\n      }\n    }`;
+  if (source.includes(oldCatch)) {
+    source = source.replace(oldCatch, newCatch);
+    changed = true;
+  }
+
+  const verbosePrompt = "为每条输出 id,category,summary,importance,novelty,relevance,socialPotential,sourceQuality,practicality,researchIntensity,confidence,whyItMatters,whatChanged,angles。评分0-100。practicality重点衡量能否马上试用/省时间/形成内容或商业机会；researchIntensity衡量学术生涩程度。summary只写事实；angles给2-4个适合X/小红书的角度。";
+  const compactPrompt = "为每条只输出 id,category,summary,whyItMatters,whatChanged,angles 六个字段，不要输出importance等评分字段，评分由程序规则层计算。summary只写事实；whyItMatters用1-2句说明实际价值；angles给2-4个适合X/小红书的具体角度。";
+  if (source.includes(verbosePrompt)) {
+    source = source.replace(verbosePrompt, compactPrompt);
+    changed = true;
+  }
+
   const oldTimeout = "const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), 30000);";
   const newTimeout = "const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), 90000);";
   if (source.includes(oldTimeout)) {
@@ -175,7 +189,7 @@ async function patchRadarCore() {
 
   if (changed) {
     await writeFile(file, source, "utf8");
-    console.log("[radar] hardened LLM pipeline: clean HTML, 5-item batches, missing-item retry, timeout=90s");
+    console.log("[radar] lean LLM pipeline: clean HTML, compact analysis output, timeout split-retry");
   }
 }
 
