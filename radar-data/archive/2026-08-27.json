@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "status": "ok",
-  "generatedAt": "2026-08-27T02:03:52.924Z",
+  "generatedAt": "2026-08-27T02:41:38.650Z",
   "date": "2026-08-27",
   "timezone": "Asia/Shanghai",
   "focus": "launches-tools-skills-productivity-markets",
@@ -17,9 +17,9 @@
     "successfulSources": 33,
     "failedSources": 0,
     "scannedItems": 450,
-    "recentItems": 175,
-    "dedupedItems": 173,
-    "eventClusters": 147,
+    "recentItems": 177,
+    "dedupedItems": 175,
+    "eventClusters": 150,
     "publishedItems": 18,
     "researchItems": 0
   },
@@ -877,7 +877,7 @@
       "id": "rr7p30n",
       "title": "freestylefly/awesome-gpt-image-2 — Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新",
       "url": "https://github.com/freestylefly/awesome-gpt-image-2",
-      "publishedAt": "2026-08-27T02:03:52.924Z",
+      "publishedAt": "2026-08-27T02:41:38.650Z",
       "description": "GitHub Trending · 4050 stars today · Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
       "source": {
         "id": "gh-trending",
@@ -934,7 +934,7 @@
       "id": "rd4b90f",
       "title": "Alishahryar1/free-claude-code — Star Alishahryar1 / free-claude-code Use Claude Code, Codex, Pi, and OpenCode for free (1.3B+ free tokens) from your ter",
       "url": "https://github.com/Alishahryar1/free-claude-code",
-      "publishedAt": "2026-08-27T02:03:52.924Z",
+      "publishedAt": "2026-08-27T02:41:38.650Z",
       "description": "GitHub Trending · 536 stars today · Star Alishahryar1 / free-claude-code Use Claude Code, Codex, Pi, and OpenCode for free (1.3B+ free tokens) from your terminal, app, IDE, or phone like OpenClaw (voice supported + ToS friendly)",
       "source": {
         "id": "gh-trending",
@@ -991,7 +991,7 @@
       "id": "r5h72m1",
       "title": "K-Dense-AI/scientific-agent-skills — Star K-Dense-AI / scientific-agent-skills Turn any AI agent into an AI Scientist. The #1 Agent Skills library for scienc",
       "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
-      "publishedAt": "2026-08-27T02:03:52.924Z",
+      "publishedAt": "2026-08-27T02:41:38.650Z",
       "description": "GitHub Trending · 138 stars today · Star K-Dense-AI / scientific-agent-skills Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
       "source": {
         "id": "gh-trending",
@@ -1238,7 +1238,7 @@
       "category": "Skill / GitHub",
       "summary": "<p>Everything here lands through the SDK bundle, so it applies to windows running that bundle.</p> <h3>Fixed</h3> <ul> <li>Cost estimates are no longer shown for providers billed by a flat-rate subscription (ClinePass, ChatGPT via Codex, and Claude Code). The ",
       "importance": 81,
-      "novelty": 95,
+      "novelty": 94,
       "relevance": 100,
       "socialPotential": 100,
       "sourceQuality": 78,
@@ -1499,7 +1499,7 @@
       "category": "工具 / 网站",
       "summary": "While we wait ( possibly in vain ) for Gemini 3.5 Pro to launch, Google is releasing a different model in the 3.5 branch. The company has announced Gemini 3.5 Transcribe, an AI model designed to streamline voice input by editing out \"ums\" and corrections, outp",
       "importance": 63,
-      "novelty": 88,
+      "novelty": 87,
       "relevance": 67,
       "socialPotential": 58,
       "sourceQuality": 78,
@@ -1625,7 +1625,7 @@
       "id": "r4f7h46",
       "title": "froggeric/Qwen-Fixed-Chat-Templates · Hugging Face trending model",
       "url": "https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates",
-      "publishedAt": "2026-08-27T02:03:52.924Z",
+      "publishedAt": "2026-08-27T02:41:38.650Z",
       "description": "Trending model · model · ♥ 1487 · downloads 0",
       "source": {
         "id": "hf-trending-models",
@@ -1676,8 +1676,8 @@
       "id": "r180sh77",
       "title": "Qwen/Qwen3.8-Flash-Next · Hugging Face trending model",
       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
-      "publishedAt": "2026-08-27T02:03:52.924Z",
-      "description": "Trending model · image-text-to-text · ♥ 3646 · downloads 2551",
+      "publishedAt": "2026-08-27T02:41:38.650Z",
+      "description": "Trending model · image-text-to-text · ♥ 3666 · downloads 2551",
       "source": {
         "id": "hf-trending-models",
         "name": "Hugging Face Trending Models",
@@ -1689,7 +1689,7 @@
         ]
       },
       "engagement": {
-        "score": 3680.068806700491
+        "score": 3700.068806700491
       },
       "isCurrentSignal": true,
       "relatedSources": [
@@ -1705,7 +1705,7 @@
         }
       ],
       "category": "模型 / Agent 上新",
-      "summary": "Trending model · image-text-to-text · ♥ 3646 · downloads 2551",
+      "summary": "Trending model · image-text-to-text · ♥ 3666 · downloads 2551",
       "importance": 56,
       "novelty": 96,
       "relevance": 56,
@@ -1727,8 +1727,8 @@
       "id": "r1y1xk0u",
       "title": "zai-org/GLM-5.3-Flash · Hugging Face trending model",
       "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
-      "publishedAt": "2026-08-27T02:03:52.924Z",
-      "description": "Trending model · text-generation · ♥ 866 · downloads 0",
+      "publishedAt": "2026-08-27T02:41:38.650Z",
+      "description": "Trending model · text-generation · ♥ 902 · downloads 0",
       "source": {
         "id": "hf-trending-models",
         "name": "Hugging Face Trending Models",
@@ -1740,7 +1740,7 @@
         ]
       },
       "engagement": {
-        "score": 866
+        "score": 902
       },
       "isCurrentSignal": true,
       "relatedSources": [
@@ -1756,7 +1756,7 @@
         }
       ],
       "category": "模型 / Agent 上新",
-      "summary": "Trending model · text-generation · ♥ 866 · downloads 0",
+      "summary": "Trending model · text-generation · ♥ 902 · downloads 0",
       "importance": 56,
       "novelty": 96,
       "relevance": 56,
