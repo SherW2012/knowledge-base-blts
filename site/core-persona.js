@@ -102,6 +102,26 @@
   }
 
   /* 生辰八字：只排盘，不写断语。四柱、十神、藏干、纳音、星运都是按规则推出来的。 */
+  /* 十二长生是个循环表，顺排必然走满一圈；单独看那几个字容易吓人，说明白。 */
+  function changsheng(b) {
+    const c = b.changsheng;
+    if (!c) return "";
+    return `
+      <section class="cp-cs">
+        <h5>${esc(c.title)}</h5>
+        <p class="cp-cs-lead">${esc(c.lead)}</p>
+        <ol class="cp-cs-ring">${c.stages.map((x) => `
+          <li class="${x.inLuck ? "in-luck" : ""}${x.inNatal ? " in-natal" : ""}">
+            <b>${esc(x.zhi)}</b><span>${esc(x.stage)}</span>
+          </li>`).join("")}</ol>
+        ${c.legend ? `<p class="cp-cs-legend">${esc(c.legend)}</p>` : ""}
+        <p class="cp-cs-note">${esc(c.cycleNote)}</p>
+        <dl class="cp-cs-points">${c.points.map(([k, v]) => `
+          <div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>
+        <p class="cp-cs-close">${esc(c.closing)}</p>
+      </section>`;
+  }
+
   /* 解读：按传统命理的路子推演，末尾附「该怎么看」的说明。 */
   function reading(b) {
     const r = b.reading;
@@ -247,13 +267,14 @@
             ${i === at ? '<em class="cp-luck-flag">当前</em>' : ""}
             <span class="cp-luck-god">${esc(p.god)}</span>
             <b class="cp-luck-gz">${esc(p.gz)}</b>
-            <span class="cp-luck-star">${esc(p.star)}</span>
+            <span class="cp-luck-star" title="十二长生：日主戊土在${esc(p.gz[1])}的气之阶段，非吉凶断语">星运 ${esc(p.star)}</span>
             <span class="cp-luck-age">${esc(p.age)}</span>
             <span class="cp-luck-year">${esc(p.startYear)} 起</span>
           </article>`).join("")}</div>
         ${list.some((x) => x.note) ? `<ol class="cp-luck-notes">${list.map((x, i) => `
           <li class="${i === at ? "is-now" : ""}"><b>${esc(x.gz)}</b><span>${esc(x.god)} · ${esc(x.age)}</span><p>${esc(x.note || "")}</p></li>`).join("")}</ol>` : ""}
         ${b.reading?.luckSummary ? `<p class="cp-luck-sum">${esc(b.reading.luckSummary)}</p>` : ""}
+        ${changsheng(b)}
         <p class="cp-source">${esc(b.luck.startNote)}</p>
         <p class="cp-source">${esc(b.nowNote || "")}</p>
       </section>`;
