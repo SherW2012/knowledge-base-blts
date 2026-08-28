@@ -1,14 +1,14 @@
 {
   "schemaVersion": 2,
   "status": "ok",
-  "generatedAt": "2026-08-28T06:10:21.650Z",
+  "generatedAt": "2026-08-28T06:11:21.209Z",
   "date": "2026-08-28",
   "timezone": "Asia/Shanghai",
   "focus": "launches-tools-skills-productivity-markets",
   "llm": {
-    "enabled": false,
-    "provider": "https://api.openai.com/v1",
-    "model": null
+    "enabled": true,
+    "provider": "https://dragoncode.codes",
+    "model": "gpt-5.6-sol"
   },
   "stats": {
     "configuredSources": 39,
@@ -874,279 +874,54 @@
   ],
   "items": [
     {
-      "id": "rr7p30n",
-      "title": "freestylefly/awesome-gpt-image-2 — Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新",
-      "url": "https://github.com/freestylefly/awesome-gpt-image-2",
-      "publishedAt": "2026-08-28T06:10:21.650Z",
-      "description": "GitHub Trending · 2096 stars today · Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+      "id": "rb3n8qz",
+      "title": "Desktop v0.0.20",
+      "url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.20",
+      "publishedAt": "2026-08-28T01:33:12.000Z",
+      "description": "Cline Desktop now ships on Windows: releases include a code-signed x64 installer, and installed apps auto-update on the same feed macOS does Windows shell fixes: background processes (the sidecar, git) no longer pop visible console windows; updates now download in the background and install when you restart the app; the MCP settings path falls back to USERPROFILE when HOME is unset Tool results that return images — screenshots from browser or MCP tools — now render as inline images you can click to expand, with a carousel for stepping through multiple images, instead of raw base64 text Session search now covers your full indexed history. The sidebar search icon opens the command bar (Cmd/Ctrl+P) with server-ranked results, instead of a sidebar-local dialog that first loaded every session into memory Onboarding has a new GitHub integration step Fixed scheduled tasks disappearing after the app updated — hub-managed schedules were being wiped by cron reconciliation on restart Agent-created schedules now live in one user-level home ( ~/.cline/schedules ) instead of being scattered across whichever chat folder created them, and they now appear on the Schedules page A finished scheduled session now surfaces its final answer: the completing step auto-expands, is labeled \"Scheduled task completed\" (or failed), and its summary renders as markdown Suggested routine templates now ask for a specific final report, so a scheduled run ends with something readable Providers no longer show as \"Configured\" on the strength of a leftover settings entry with no real credentials, and the badge n",
       "source": {
-        "id": "gh-trending",
-        "name": "GitHub Trending · AI/Agent/Tools",
-        "tier": "A",
-        "kind": "github_trending",
-        "tags": [
-          "github",
-          "trending",
-          "skill",
-          "tool",
-          "agent"
-        ]
-      },
-      "engagement": {
-        "score": 2096
-      },
-      "isCurrentSignal": true,
-      "relatedSources": [
-        {
-          "id": "gh-trending",
-          "name": "GitHub Trending · AI/Agent/Tools",
-          "tier": "A",
-          "kind": "github_trending",
-          "tags": [
-            "github",
-            "trending",
-            "skill",
-            "tool",
-            "agent"
-          ]
-        }
-      ],
-      "category": "Skill / GitHub",
-      "summary": "freestylefly/awesome-gpt-image-2 — Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新：GitHub Trending · 2096 stars today · Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2",
-      "importance": 77,
-      "novelty": 100,
-      "relevance": 84,
-      "socialPotential": 92,
-      "sourceQuality": 78,
-      "practicality": 100,
-      "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
-      "whatChanged": "freestylefly/awesome-gpt-image-2 — Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新",
-      "angles": [
-        "今天 GitHub 上冒出来一个值得试的项目：freestylefly/awesome-gpt-image-2 — Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新",
-        "它解决的具体麻烦是什么，5 分钟能不能跑通",
-        "有没有可能变成自己的 Skill / 自动化工作流"
-      ],
-      "radarScore": 100
-    },
-    {
-      "id": "r5h72m1",
-      "title": "K-Dense-AI/scientific-agent-skills — Star K-Dense-AI / scientific-agent-skills Turn any AI agent into an AI Scientist. The #1 Agent Skills library for scienc",
-      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
-      "publishedAt": "2026-08-28T06:10:21.650Z",
-      "description": "GitHub Trending · 498 stars today · Star K-Dense-AI / scientific-agent-skills Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
-      "source": {
-        "id": "gh-trending",
-        "name": "GitHub Trending · AI/Agent/Tools",
-        "tier": "A",
-        "kind": "github_trending",
-        "tags": [
-          "github",
-          "trending",
-          "skill",
-          "tool",
-          "agent"
-        ]
-      },
-      "engagement": {
-        "score": 498
-      },
-      "isCurrentSignal": true,
-      "relatedSources": [
-        {
-          "id": "gh-trending",
-          "name": "GitHub Trending · AI/Agent/Tools",
-          "tier": "A",
-          "kind": "github_trending",
-          "tags": [
-            "github",
-            "trending",
-            "skill",
-            "tool",
-            "agent"
-          ]
-        }
-      ],
-      "category": "Skill / GitHub",
-      "summary": "K-Dense-AI/scientific-agent-skills — Star K-Dense-AI / scientific-agent-skills Turn any AI agent into an AI Scientist. The #1 Agent Skills library for scienc：GitHub Trending · 498 stars today · Star K-Dense-AI / scientific-agent-skills Turn any AI agent into a",
-      "importance": 98,
-      "novelty": 100,
-      "relevance": 92,
-      "socialPotential": 95,
-      "sourceQuality": 78,
-      "practicality": 99,
-      "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
-      "whatChanged": "K-Dense-AI/scientific-agent-skills — Star K-Dense-AI / scientific-agent-skills Turn any AI agent into an AI Scientist. The #1 Agent Skills library for scienc",
-      "angles": [
-        "今天 GitHub 上冒出来一个值得试的项目：K-Dense-AI/scientific-agent-skills — Star K-Dense-AI / scientific-agent-skills Turn any AI agent into an AI Scientist. The #1 Agent Skills library for scienc",
-        "它解决的具体麻烦是什么，5 分钟能不能跑通",
-        "有没有可能变成自己的 Skill / 自动化工作流"
-      ],
-      "radarScore": 100
-    },
-    {
-      "id": "rurapsm",
-      "title": "calesthio/OpenMontage — Sponsor Star calesthio / OpenMontage World's first open-source, agentic video production system. 12 production pipelines",
-      "url": "https://github.com/calesthio/OpenMontage",
-      "publishedAt": "2026-08-28T06:10:21.650Z",
-      "description": "GitHub Trending · 1292 stars today · Sponsor Star calesthio / OpenMontage World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
-      "source": {
-        "id": "gh-trending",
-        "name": "GitHub Trending · AI/Agent/Tools",
-        "tier": "A",
-        "kind": "github_trending",
-        "tags": [
-          "github",
-          "trending",
-          "skill",
-          "tool",
-          "agent"
-        ]
-      },
-      "engagement": {
-        "score": 1292
-      },
-      "isCurrentSignal": true,
-      "relatedSources": [
-        {
-          "id": "gh-trending",
-          "name": "GitHub Trending · AI/Agent/Tools",
-          "tier": "A",
-          "kind": "github_trending",
-          "tags": [
-            "github",
-            "trending",
-            "skill",
-            "tool",
-            "agent"
-          ]
-        }
-      ],
-      "category": "Skill / GitHub",
-      "summary": "calesthio/OpenMontage — Sponsor Star calesthio / OpenMontage World's first open-source, agentic video production system. 12 production pipelines：GitHub Trending · 1292 stars today · Sponsor Star calesthio / OpenMontage World's first open-source, agentic video ",
-      "importance": 84,
-      "novelty": 100,
-      "relevance": 100,
-      "socialPotential": 100,
-      "sourceQuality": 78,
-      "practicality": 100,
-      "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
-      "whatChanged": "calesthio/OpenMontage — Sponsor Star calesthio / OpenMontage World's first open-source, agentic video production system. 12 production pipelines",
-      "angles": [
-        "今天 GitHub 上冒出来一个值得试的项目：calesthio/OpenMontage — Sponsor Star calesthio / OpenMontage World's first open-source, agentic video production system. 12 production pipelines",
-        "它解决的具体麻烦是什么，5 分钟能不能跑通",
-        "有没有可能变成自己的 Skill / 自动化工作流"
-      ],
-      "radarScore": 100
-    },
-    {
-      "id": "r1f4nz7s",
-      "title": "Claude, Codex, and Hermes installed unowned code inside corporate networks",
-      "url": "https://arstechnica.com/security/2026/08/claude-codex-and-hermes-installed-unowned-code-inside-corporate-networks/",
-      "publishedAt": "2026-08-27T14:00:13.000Z",
-      "description": "Documentation files on more than 100 websites are referencing potentially dangerous executable content that gets installed automatically when visited by many AI agents. A few dozen companies, some of them Fortune 500s, are among those that executed proof-of-concept code. At least one misconfigured site is directing visitors, human or AI, to live malware. The potentially dangerous content is in llms.txt and llms-full.txt files, an emerging convention websites employ to provide machine-readable summaries of the site’s content and its high-level structure. These files are the AI equivalent of the robots.txt standard that instructs search engines how to index the site's content. Google Lighthouse, a tool for helping web developers, has more here . Correctly configured llms.txt and llms-full.txt files for Cloudflare are here and here . How the researchers found it Researchers at a stealth startup in Israel scanned 6,214 live domains belonging to defense contractors, Fortune 500, and Big Tech companies. Of the 8,265 llms.txt and llms-full.txt files they found (many sites hosted both an llms.txt and an llms-full.txt file), 120 of them, each on a different site, pointed to one or more code packages or domain names that weren’t registered. To test what happens when an AI agent processes such files, the researchers registered a handful of the unclaimed names and hosted packages that caused any machine executing them to reach out to their server. Within an hour, the researchers received a phone-home response from a Fortune 500 company. Over time, they got a few dozen more, some from m",
-      "source": {
-        "id": "ars-ai",
-        "name": "Ars Technica AI",
-        "tier": "A",
-        "kind": "feed",
-        "tags": [
-          "launch",
-          "product",
-          "tool",
-          "industry"
-        ]
-      },
-      "engagement": null,
-      "isCurrentSignal": false,
-      "relatedSources": [
-        {
-          "id": "ars-ai",
-          "name": "Ars Technica AI",
-          "tier": "A",
-          "kind": "feed",
-          "tags": [
-            "launch",
-            "product",
-            "tool",
-            "industry"
-          ]
-        }
-      ],
-      "category": "工具 / 网站",
-      "summary": "Claude, Codex, and Hermes installed unowned code inside corporate networks：Documentation files on more than 100 websites are referencing potentially dangerous executable content that gets installed automatically when visited by many AI agents. A few dozen comp",
-      "importance": 80,
-      "novelty": 91,
-      "relevance": 96,
-      "socialPotential": 86,
-      "sourceQuality": 78,
-      "practicality": 100,
-      "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "它可能直接降低某个任务的时间或门槛，适合快速试用后决定是否进入工具箱。",
-      "whatChanged": "Claude, Codex, and Hermes installed unowned code inside corporate networks",
-      "angles": [
-        "发现一个可能真能省时间的新工具：Claude, Codex, and Hermes installed unowned code inside corporate networks",
-        "它替代了原来哪一步手工操作",
-        "免费版够不够用，值不值得长期留在工具箱"
-      ],
-      "radarScore": 100
-    },
-    {
-      "id": "rdgjif4",
-      "title": "[AINews] NVIDIA buys HuggingFace for $13B, as OpenAI publishes their HF incident retro",
-      "url": "https://www.latent.space/p/ainews-nvidia-buys-huggingface-for",
-      "publishedAt": "2026-08-27T01:50:54.000Z",
-      "description": "TheInformation had the scoop , and now they have the confirmation — Nvidia is buying HuggingFace for $13B, roughly 80x their $150M ARR , having doubled its customer base in 2026 . This is almost double Nvidia’s initial $7B offer in Jan 2026. What can we say? We love it when the good guys win. But in the backdrop of GLM-5.3-Flash (aka Ox Alpha) impressing everyone (except GDM vaguepoasters ) and Qwen also shipping an impressive Flash model on chinese chips, perhaps the post Hot Chips conversation about Western open AI is a great backdrop for this. AI News for 8/25/2026-8/26/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews’ website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! AI Twitter Recap Top Story: GLM 5.3 Flash launch and reactions What happened Z.ai formally launched GLM-5.3-Flash, revealing that the previously previewed “Ox Alpha” model is its public identity. Z.ai announced GLM-5.3-Flash as a natively multimodal model with a 1M-token context window , 320B total parameters / 18B active parameters , released under the MIT License , and available via weights, API, chat, coding plan, and AutoClaw. Z.ai simultaneously positioned it as a highly price-competitive successor to GLM-5.2, claiming on its internal benchmark that it outperforms GLM-5.2 at every effort level and is on par with Claude Opus 4.8 on coding . The launch also resolved the long-running Ox Alpha mystery: multiple posters explicitly connected Ox Alpha to GLM-5.3-Flash, including SemiAnalysis , ",
-      "source": {
-        "id": "latent-space",
-        "name": "Latent Space",
+        "id": "gh-cline",
+        "name": "cline/cline Releases",
         "tier": "A",
         "kind": "feed",
         "tags": [
           "agent",
-          "tool",
-          "developer",
-          "industry"
+          "coding",
+          "tool"
         ]
       },
       "engagement": null,
       "isCurrentSignal": false,
       "relatedSources": [
         {
-          "id": "latent-space",
-          "name": "Latent Space",
+          "id": "gh-cline",
+          "name": "cline/cline Releases",
           "tier": "A",
           "kind": "feed",
           "tags": [
             "agent",
-            "tool",
-            "developer",
-            "industry"
+            "coding",
+            "tool"
           ]
         }
       ],
-      "category": "工具 / 网站",
-      "summary": "[AINews] NVIDIA buys HuggingFace for $13B, as OpenAI publishes their HF incident retro：TheInformation had the scoop , and now they have the confirmation — Nvidia is buying HuggingFace for $13B, roughly 80x their $150M ARR , having doubled its customer base in ",
-      "importance": 82,
-      "novelty": 90,
-      "relevance": 96,
-      "socialPotential": 87,
+      "category": "模型 / Agent 上新",
+      "summary": "Cline Desktop 0.0.20 新增 Windows 签名安装包与自动更新，并支持图片工具结果预览、全历史会话搜索和 GitHub 集成引导。",
+      "importance": 72,
+      "novelty": 89,
+      "relevance": 100,
+      "socialPotential": 94,
       "sourceQuality": 78,
       "practicality": 100,
-      "researchIntensity": 24,
-      "confidence": 64,
-      "whyItMatters": "它可能直接降低某个任务的时间或门槛，适合快速试用后决定是否进入工具箱。",
-      "whatChanged": "[AINews] NVIDIA buys HuggingFace for $13B, as OpenAI publishes their HF incident retro",
+      "researchIntensity": 0,
+      "confidence": 75,
+      "whyItMatters": "Windows 用户现在能更顺畅地使用独立版编程 Agent，图片结果展示和全量历史检索也减少了调试、回看任务时的操作成本。",
+      "whatChanged": "Cline Desktop 首次提供 Windows x64 安装与后台更新，同时修复控制台弹窗和路径兼容问题，并升级图片展示、会话搜索及新手引导。",
       "angles": [
-        "发现一个可能真能省时间的新工具：[AINews] NVIDIA buys HuggingFace for $13B, as OpenAI publishes their HF incident retro",
-        "它替代了原来哪一步手工操作",
-        "免费版够不够用，值不值得长期留在工具箱"
+        "Cline Desktop Windows 版的安装与自动更新体验",
+        "编程 Agent 为什么需要完整的历史会话搜索",
+        "用浏览器截图和 MCP 图片结果调试前端任务",
+        "独立桌面编程 Agent 与编辑器插件的使用差异"
       ],
       "radarScore": 100
     },
@@ -1184,8 +959,8 @@
           ]
         }
       ],
-      "category": "效率 / 工作流",
-      "summary": "anthropics/claude-code 发布 v2.1.248 更新：What's changed Added --restricted (or CLAUDE_CODE_RESTRICTED=1 ): removes the built-in tools that run commands or code and WebFetch (unless named in --tools ), keeps file tools inside the working directory, refuses bypas",
+      "category": "模型 / Agent 上新",
+      "summary": "Anthropic更新Claude Code至v2.1.248，新增受限运行模式、智能体缓存时长配置及自托管运行器标签等安全运维能力。",
       "importance": 86,
       "novelty": 91,
       "relevance": 97,
@@ -1193,64 +968,242 @@
       "sourceQuality": 90,
       "practicality": 100,
       "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "重点不是技术原理，而是它能否减少重复操作、缩短流程或提升个人产出。",
-      "whatChanged": "v2.1.248",
+      "confidence": 75,
+      "whyItMatters": "受限模式可移除命令执行和默认网页访问，并把文件操作限制在工作目录，更适合企业受控环境。新增诊断信息也便于排查托管配置加载失败。",
+      "whatChanged": "新增restricted模式；支持为智能体设置5分钟或1小时提示缓存；自托管运行器可覆盖注册标签；补充服务端设置加载诊断和GitHub CLI权限警告。",
       "angles": [
-        "我又找到一个能少做几步的工作流：v2.1.248",
-        "把它放进自己的日常流程，能省下多少时间",
-        "哪些人最适合直接抄这个用法"
+        "Claude Code受限模式如何降低自动执行风险",
+        "企业部署Claude Code时新增了哪些管控能力",
+        "智能体提示缓存时长会怎样影响成本和响应速度",
+        "自托管Claude Code运行器的运维配置变化"
       ],
       "radarScore": 100
     },
     {
-      "id": "rb3n8qz",
-      "title": "Desktop v0.0.20",
-      "url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.20",
-      "publishedAt": "2026-08-28T01:33:12.000Z",
-      "description": "Cline Desktop now ships on Windows: releases include a code-signed x64 installer, and installed apps auto-update on the same feed macOS does Windows shell fixes: background processes (the sidecar, git) no longer pop visible console windows; updates now download in the background and install when you restart the app; the MCP settings path falls back to USERPROFILE when HOME is unset Tool results that return images — screenshots from browser or MCP tools — now render as inline images you can click to expand, with a carousel for stepping through multiple images, instead of raw base64 text Session search now covers your full indexed history. The sidebar search icon opens the command bar (Cmd/Ctrl+P) with server-ranked results, instead of a sidebar-local dialog that first loaded every session into memory Onboarding has a new GitHub integration step Fixed scheduled tasks disappearing after the app updated — hub-managed schedules were being wiped by cron reconciliation on restart Agent-created schedules now live in one user-level home ( ~/.cline/schedules ) instead of being scattered across whichever chat folder created them, and they now appear on the Schedules page A finished scheduled session now surfaces its final answer: the completing step auto-expands, is labeled \"Scheduled task completed\" (or failed), and its summary renders as markdown Suggested routine templates now ask for a specific final report, so a scheduled run ends with something readable Providers no longer show as \"Configured\" on the strength of a leftover settings entry with no real credentials, and the badge n",
+      "id": "r18iokr0",
+      "title": "Lovable CTO: The Future of SaaS Is Apps That Agents Can Use",
+      "url": "https://www.latent.space/p/lovable-future-of-saas",
+      "publishedAt": "2026-08-26T16:16:25.000Z",
+      "description": "Lovable is well known as an AI-powered platform to build applications. But ironically, it is now moving towards a future where fewer and fewer people will be using conventional apps . That is, of course, because of the growing impact of agents. In a recent blog post , Lovable outlined a vision for “a digital brain for your team connecting your daily tools.” Or as Lovable CTO Fabian Hedin put it in an interview with Latent Space, “you can get to a place where you’re using one entry point to all the work that you’re doing.” Diagram by Latent Space based on an internal diagram shown to us by Lovable. To be clear, Lovable still wants to be the tool you use to build apps — but increasingly, it will also enable you to build what Hedin calls “capabilities.” Lovable defines a capability as a useful part of an application that an agent can call directly; bypassing the need for a human user to open the app. Lovable can turn a published application into agent-accessible capabilities by exposing selected functions from the app as tools through a hosted MCP server. The result is essentially one application with two interfaces: a traditional human UI and a new agent interface that can be used from ChatGPT, Claude and other MCP-compatible AI clients. Diagram supplied by Lovable This is how fast an AI business evolves This shift towards capabilities is the latest evolution from Lovable, in an already fast-moving 3 years in business. Lovable emerged from GPT Engineer, an open source coding tool that launched in 2023, initially focusing on prototyping. In November 2024, it became a commercia",
       "source": {
-        "id": "gh-cline",
-        "name": "cline/cline Releases",
+        "id": "latent-space",
+        "name": "Latent Space",
         "tier": "A",
         "kind": "feed",
         "tags": [
           "agent",
-          "coding",
-          "tool"
+          "tool",
+          "developer",
+          "industry"
         ]
       },
       "engagement": null,
       "isCurrentSignal": false,
       "relatedSources": [
         {
-          "id": "gh-cline",
-          "name": "cline/cline Releases",
+          "id": "latent-space",
+          "name": "Latent Space",
           "tier": "A",
           "kind": "feed",
           "tags": [
             "agent",
-            "coding",
-            "tool"
+            "tool",
+            "developer",
+            "industry"
+          ]
+        }
+      ],
+      "category": "模型 / Agent 上新",
+      "summary": "AI应用构建平台Lovable正引入可被代理直接调用的“能力”概念，让代理绕过传统界面，通过统一入口操作团队日常工具。",
+      "importance": 88,
+      "novelty": 89,
+      "relevance": 100,
+      "socialPotential": 100,
+      "sourceQuality": 78,
+      "practicality": 100,
+      "researchIntensity": 0,
+      "confidence": 75,
+      "whyItMatters": "这意味着应用开发可能从设计人类操作界面，转向同时封装代理可调用的功能单元。企业也有机会减少跨应用切换和重复操作。",
+      "whatChanged": "Lovable仍提供应用构建服务，但产品方向扩展到构建代理可直接调用的应用能力，并设想以统一入口连接团队工具。",
+      "angles": [
+        "SaaS的下一代用户可能不是人，而是代理",
+        "开发产品时为什么要同时设计界面和代理能力",
+        "Lovable从AI建站工具走向团队工作入口",
+        "传统SaaS会不会被可调用能力拆解"
+      ],
+      "radarScore": 100
+    },
+    {
+      "id": "rr7p30n",
+      "title": "freestylefly/awesome-gpt-image-2 — Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新",
+      "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "publishedAt": "2026-08-28T06:11:21.209Z",
+      "description": "GitHub Trending · 2096 stars today · Star freestylefly / awesome-gpt-image-2 Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+      "source": {
+        "id": "gh-trending",
+        "name": "GitHub Trending · AI/Agent/Tools",
+        "tier": "A",
+        "kind": "github_trending",
+        "tags": [
+          "github",
+          "trending",
+          "skill",
+          "tool",
+          "agent"
+        ]
+      },
+      "engagement": {
+        "score": 2096
+      },
+      "isCurrentSignal": true,
+      "relatedSources": [
+        {
+          "id": "gh-trending",
+          "name": "GitHub Trending · AI/Agent/Tools",
+          "tier": "A",
+          "kind": "github_trending",
+          "tags": [
+            "github",
+            "trending",
+            "skill",
+            "tool",
+            "agent"
           ]
         }
       ],
       "category": "Skill / GitHub",
-      "summary": "Desktop v0.0.20：Cline Desktop now ships on Windows: releases include a code-signed x64 installer, and installed apps auto-update on the same feed macOS does Windows shell fixes: background processes (the sidecar, git) no longer pop visi",
-      "importance": 72,
-      "novelty": 89,
-      "relevance": 100,
-      "socialPotential": 94,
+      "summary": "awesome-gpt-image-2是面向GPT-Image2的开源提示词工程与模板库，新增并整理530多个案例、20多套工业模板和可复用Skills，帮助用户稳定产出图片。",
+      "importance": 77,
+      "novelty": 100,
+      "relevance": 84,
+      "socialPotential": 92,
       "sourceQuality": 78,
       "practicality": 100,
       "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
-      "whatChanged": "Desktop v0.0.20",
+      "confidence": 75,
+      "whyItMatters": "它把零散的图片提示词经验整理成可复用的工程化资产，降低高质量生图的试错成本。对设计、营销和内容创作者来说，可直接借鉴模板并持续迭代工作流。",
+      "whatChanged": "项目在GitHub Trending获得快速增长，现已汇集530多个案例、20多套工业级模板，并从实践中提炼出可复用Skills。",
       "angles": [
-        "今天 GitHub 上冒出来一个值得试的项目：Desktop v0.0.20",
-        "它解决的具体麻烦是什么，5 分钟能不能跑通",
-        "有没有可能变成自己的 Skill / 自动化工作流"
+        "GPT-Image2提示词从灵感写作走向工程化",
+        "530多个案例里能提炼出哪些生图规律",
+        "把图片提示词做成可复用Skill的实践方法",
+        "设计师和内容团队如何用模板减少生图试错"
+      ],
+      "radarScore": 100
+    },
+    {
+      "id": "r5h72m1",
+      "title": "K-Dense-AI/scientific-agent-skills — Star K-Dense-AI / scientific-agent-skills Turn any AI agent into an AI Scientist. The #1 Agent Skills library for scienc",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "publishedAt": "2026-08-28T06:11:21.209Z",
+      "description": "GitHub Trending · 498 stars today · Star K-Dense-AI / scientific-agent-skills Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "source": {
+        "id": "gh-trending",
+        "name": "GitHub Trending · AI/Agent/Tools",
+        "tier": "A",
+        "kind": "github_trending",
+        "tags": [
+          "github",
+          "trending",
+          "skill",
+          "tool",
+          "agent"
+        ]
+      },
+      "engagement": {
+        "score": 498
+      },
+      "isCurrentSignal": true,
+      "relatedSources": [
+        {
+          "id": "gh-trending",
+          "name": "GitHub Trending · AI/Agent/Tools",
+          "tier": "A",
+          "kind": "github_trending",
+          "tags": [
+            "github",
+            "trending",
+            "skill",
+            "tool",
+            "agent"
+          ]
+        }
+      ],
+      "category": "Skill / GitHub",
+      "summary": "K-Dense-AI推出面向科研的Agent技能库，新增163个经过验证的技能和100多个科学数据库，帮助AI处理生物、化学、医学及药物研发任务。",
+      "importance": 98,
+      "novelty": 100,
+      "relevance": 92,
+      "socialPotential": 95,
+      "sourceQuality": 78,
+      "practicality": 99,
+      "researchIntensity": 0,
+      "confidence": 75,
+      "whyItMatters": "它把科研检索、数据分析和实验相关工作封装成可复用能力，降低通用AI进入专业研究场景的门槛。兼容多种主流编码型Agent，有机会成为科研自动化的基础组件。",
+      "whatChanged": "项目进入GitHub Trending，新增或公开了163个可直接使用的科研技能及100多个科学数据库接入，覆盖生物学、化学、医学和药物发现，并支持Cursor、Claude Code、Codex、Pi、Antigravity及Agent Skills标准。",
+      "angles": [
+        "一个科研Agent如何从通用聊天机器人变成能查数据库、做分析的研究助手",
+        "163个科研技能实测：生物、化学和药物研发哪些任务最适合自动化",
+        "Cursor、Claude Code和Codex接入同一套科研技能库的使用体验",
+        "科研人员如何用Agent Skills搭建自己的文献与实验分析工作流"
+      ],
+      "radarScore": 100
+    },
+    {
+      "id": "rurapsm",
+      "title": "calesthio/OpenMontage — Sponsor Star calesthio / OpenMontage World's first open-source, agentic video production system. 12 production pipelines",
+      "url": "https://github.com/calesthio/OpenMontage",
+      "publishedAt": "2026-08-28T06:11:21.209Z",
+      "description": "GitHub Trending · 1292 stars today · Sponsor Star calesthio / OpenMontage World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+      "source": {
+        "id": "gh-trending",
+        "name": "GitHub Trending · AI/Agent/Tools",
+        "tier": "A",
+        "kind": "github_trending",
+        "tags": [
+          "github",
+          "trending",
+          "skill",
+          "tool",
+          "agent"
+        ]
+      },
+      "engagement": {
+        "score": 1292
+      },
+      "isCurrentSignal": true,
+      "relatedSources": [
+        {
+          "id": "gh-trending",
+          "name": "GitHub Trending · AI/Agent/Tools",
+          "tier": "A",
+          "kind": "github_trending",
+          "tags": [
+            "github",
+            "trending",
+            "skill",
+            "tool",
+            "agent"
+          ]
+        }
+      ],
+      "category": "Skill / GitHub",
+      "summary": "OpenMontage 是开源智能体视频制作系统，集成12条制作流程、100多种工具和700多份技能与制作知识文件，登上 GitHub Trending 并单日新增1292星。",
+      "importance": 84,
+      "novelty": 100,
+      "relevance": 100,
+      "socialPotential": 100,
+      "sourceQuality": 78,
+      "practicality": 100,
+      "researchIntensity": 0,
+      "confidence": 75,
+      "whyItMatters": "它把脚本、素材处理和视频生产能力封装成可复用流程，可让 AI 编程助手承担更多视频制作环节，减少手工拼接多个工具的成本。",
+      "whatChanged": "项目进入 GitHub 热门榜，披露了覆盖12条生产流程的开源体系，以及100多种工具和700多份智能体技能与制作知识文件。",
+      "angles": [
+        "把 AI 编程助手改造成视频工作室：OpenMontage 能做哪些环节",
+        "单日新增1292星背后，开源智能体视频生产开始升温",
+        "拆解12条视频生产流程：哪些工作最适合交给 Agent",
+        "700多份技能文件能否降低搭建视频 Agent 的门槛"
       ],
       "radarScore": 100
     },
@@ -1289,7 +1242,7 @@
         }
       ],
       "category": "Skill / GitHub",
-      "summary": "anthropics/claude-code 发布 v2.1.247 更新：What's changed Added the SendFeedback tool: when something goes wrong in a session, Claude can draft a feedback report for you to review and send from /feedback (turn off with the feedbackDrafts setting) Added {id, text,",
+      "summary": "Anthropic 发布 Claude Code v2.1.247，新增故障反馈草稿、API 成本优化流程，并扩展组织级管理接口支持。",
       "importance": 100,
       "novelty": 92,
       "relevance": 100,
@@ -1297,121 +1250,68 @@
       "sourceQuality": 90,
       "practicality": 100,
       "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
-      "whatChanged": "v2.1.247",
+      "confidence": 75,
+      "whyItMatters": "开发者可在会话内整理故障反馈，并按缓存、令牌、批处理和模型选择逐步压降 API 成本。企业团队也获得更完整的成员、密钥和限流管理覆盖。",
+      "whatChanged": "新增 SendFeedback 工具和成本优化命令，扩展 Claude API Skill 的 Admin API 能力，并改进 Bash 权限提示、自定义旋转提示及键盘操作问题。",
       "angles": [
-        "今天 GitHub 上冒出来一个值得试的项目：v2.1.247",
-        "它解决的具体麻烦是什么，5 分钟能不能跑通",
-        "有没有可能变成自己的 Skill / 自动化工作流"
+        "用 Claude Code 的新命令逐项降低 API 成本",
+        "故障反馈自动起草会不会提升编程 Agent 的迭代效率",
+        "Claude Code 补齐组织管理接口后更适合哪些企业团队",
+        "从缓存到模型选择，Claude API 成本优化的实操路径"
       ],
       "radarScore": 100
     },
     {
-      "id": "r18iokr0",
-      "title": "Lovable CTO: The Future of SaaS Is Apps That Agents Can Use",
-      "url": "https://www.latent.space/p/lovable-future-of-saas",
-      "publishedAt": "2026-08-26T16:16:25.000Z",
-      "description": "Lovable is well known as an AI-powered platform to build applications. But ironically, it is now moving towards a future where fewer and fewer people will be using conventional apps . That is, of course, because of the growing impact of agents. In a recent blog post , Lovable outlined a vision for “a digital brain for your team connecting your daily tools.” Or as Lovable CTO Fabian Hedin put it in an interview with Latent Space, “you can get to a place where you’re using one entry point to all the work that you’re doing.” Diagram by Latent Space based on an internal diagram shown to us by Lovable. To be clear, Lovable still wants to be the tool you use to build apps — but increasingly, it will also enable you to build what Hedin calls “capabilities.” Lovable defines a capability as a useful part of an application that an agent can call directly; bypassing the need for a human user to open the app. Lovable can turn a published application into agent-accessible capabilities by exposing selected functions from the app as tools through a hosted MCP server. The result is essentially one application with two interfaces: a traditional human UI and a new agent interface that can be used from ChatGPT, Claude and other MCP-compatible AI clients. Diagram supplied by Lovable This is how fast an AI business evolves This shift towards capabilities is the latest evolution from Lovable, in an already fast-moving 3 years in business. Lovable emerged from GPT Engineer, an open source coding tool that launched in 2023, initially focusing on prototyping. In November 2024, it became a commercia",
+      "id": "r82pjfi",
+      "title": "v4.1.16",
+      "url": "https://github.com/cline/cline/releases/tag/v4.1.16",
+      "publishedAt": "2026-08-26T08:42:46.000Z",
+      "description": "Everything here lands through the SDK bundle, so it applies to windows running that bundle. Fixed Cost estimates are no longer shown for providers billed by a flat-rate subscription (ClinePass, ChatGPT via Codex, and Claude Code). The task header and model pricing rows rendered API-rate dollar figures that read as real charges on top of the subscription, including a flash of them on every chat-view mount while provider listings were loading. Signing back in no longer moves your last-used provider off ClinePass on credential refresh. Hooks now resolve their workspace from the VS Code window instead of shared global state in ~/.cline . With a second window open on another project, a workspace's .clinerules/hooks scripts were never discovered, and hook cwd and the workspace paths passed to hook scripts resolved against whatever project some other or older Cline instance last recorded. New files are now created with your platform's native line endings. Fixed the codebase search tool crashing on files containing a single enormous line. Credentials embedded in git remote URLs are now redacted from the workspace information sent to the model, which also now carries richer workspace metadata. Installing an MCP server from the marketplace no longer misreads the catalog's -- separator as part of the server command. The hub's event log can no longer grow until it fills your disk. Changed The per-tool MCP auto-approve checkboxes are hidden. MCP auto-approval is governed solely by the global \"Use MCP servers\" toggle — the per-tool checkboxes were no-ops that implied granularity the appr",
       "source": {
-        "id": "latent-space",
-        "name": "Latent Space",
+        "id": "gh-cline",
+        "name": "cline/cline Releases",
         "tier": "A",
         "kind": "feed",
         "tags": [
           "agent",
-          "tool",
-          "developer",
-          "industry"
+          "coding",
+          "tool"
         ]
       },
       "engagement": null,
       "isCurrentSignal": false,
       "relatedSources": [
         {
-          "id": "latent-space",
-          "name": "Latent Space",
+          "id": "gh-cline",
+          "name": "cline/cline Releases",
           "tier": "A",
           "kind": "feed",
           "tags": [
             "agent",
-            "tool",
-            "developer",
-            "industry"
+            "coding",
+            "tool"
           ]
         }
       ],
-      "category": "Skill / GitHub",
-      "summary": "Lovable CTO: The Future of SaaS Is Apps That Agents Can Use：Lovable is well known as an AI-powered platform to build applications. But ironically, it is now moving towards a future where fewer and fewer people will be using conventional apps . That is, of cour",
-      "importance": 88,
-      "novelty": 89,
+      "category": "模型 / Agent 上新",
+      "summary": "AI编程代理Cline发布v4.1.16，修正订阅制模型的费用误显，并解决多窗口项目中钩子脚本读取错误工作区的问题。",
+      "importance": 81,
+      "novelty": 82,
       "relevance": 100,
       "socialPotential": 100,
       "sourceQuality": 78,
       "practicality": 100,
       "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "这是可直接试用、复用或二次开发的信号，优先看 star 增长、真实场景和安装成本。",
-      "whatChanged": "Lovable CTO: The Future of SaaS Is Apps That Agents Can Use",
+      "confidence": 75,
+      "whyItMatters": "订阅用户不会再把API估算价误认为额外扣费。多项目并行开发时，规则、脚本路径和执行目录也更可靠。",
+      "whatChanged": "Cline不再为ClinePass、经Codex使用的ChatGPT及Claude Code显示API费率估算；重新登录会保留原服务商，多窗口钩子改为按当前VS Code窗口解析工作区。",
       "angles": [
-        "今天 GitHub 上冒出来一个值得试的项目：Lovable CTO: The Future of SaaS Is Apps That Agents Can Use",
-        "它解决的具体麻烦是什么，5 分钟能不能跑通",
-        "有没有可能变成自己的 Skill / 自动化工作流"
+        "Cline订阅用户最容易误解的费用显示终于修复",
+        "同时打开多个VS Code项目时钩子为何会串工作区",
+        "Cline v4.1.16对多项目AI编程工作流的影响",
+        "AI编程工具如何区分订阅费用与API计费"
       ],
       "radarScore": 100
-    },
-    {
-      "id": "rndy6nh",
-      "title": "Breaking Claude Code Opus 5 Auto Mode",
-      "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
-      "publishedAt": "2026-08-27T22:50:25.000Z",
-      "description": "Breaking Claude Code Opus 5 Auto Mode Anthropic are putting a great deal of faith in Claude Code's auto mode for protecting their coding agent users against prompt injection attacks. They recently made that the default and have made bold claims about its effectiveness. Johann Rehberger is one of the most credible prompt injection researchers active today. He found an attack against auto mode which he claims works 80% of the time, by tricking Claude Code into downloading and uncompressing a zip archive, then executing code that imports base64 without noticing that this will import and execute a local struct.py file extracted from the archive. In a few cases auto mode directly prevented the agent from preventing harmful code from continuing to execute! In a few runs Claude tried to terminate the malware process once it noticed the compromise, but Auto Mode denied the cleanup command. Claude detects the compromise, but Auto Mode blocks its cleanup command The safety mechanism itself can become part of the failure. The classifier allowed the creation of the malware process, but then it blocked the command intended to stop it! I agree with Johann's conclusion here: the only safe way to run agents if there's any risk of attracting the attention of an adversarial attack is with a sandbox: Run unattended coding agents in a container, VM or OS sandbox. Restrict network egress. Monitor your agents. Do not expose home directories, SSH keys, cloud credentials,… to the agent runtime. [...] Tags: sandboxing , security , ai , prompt-injection , generative-ai , llms , anthropic , claude , ",
-      "source": {
-        "id": "simon-willison",
-        "name": "Simon Willison",
-        "tier": "A",
-        "kind": "feed",
-        "tags": [
-          "tool",
-          "coding",
-          "model",
-          "practical"
-        ]
-      },
-      "engagement": null,
-      "isCurrentSignal": false,
-      "relatedSources": [
-        {
-          "id": "simon-willison",
-          "name": "Simon Willison",
-          "tier": "A",
-          "kind": "feed",
-          "tags": [
-            "tool",
-            "coding",
-            "model",
-            "practical"
-          ]
-        }
-      ],
-      "category": "工具 / 网站",
-      "summary": "Breaking Claude Code Opus 5 Auto Mode：Breaking Claude Code Opus 5 Auto Mode Anthropic are putting a great deal of faith in Claude Code's auto mode for protecting their coding agent users against prompt injection attacks. They recently made that the default a",
-      "importance": 77,
-      "novelty": 96,
-      "relevance": 89,
-      "socialPotential": 80,
-      "sourceQuality": 78,
-      "practicality": 100,
-      "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "它可能直接降低某个任务的时间或门槛，适合快速试用后决定是否进入工具箱。",
-      "whatChanged": "Breaking Claude Code Opus 5 Auto Mode",
-      "angles": [
-        "发现一个可能真能省时间的新工具：Breaking Claude Code Opus 5 Auto Mode",
-        "它替代了原来哪一步手工操作",
-        "免费版够不够用，值不值得长期留在工具箱"
-      ],
-      "radarScore": 98
     },
     {
       "id": "rknezwb",
@@ -1447,8 +1347,8 @@
           ]
         }
       ],
-      "category": "工具 / 网站",
-      "summary": "IBM's new Granite 4.2 models ride the wave of interest in local LLMs：IBM has rolled out the newest models in its family of open-weight large language models designed to be downloaded and self-hosted. The newly launched Granite 4.2 comes in 3B, 8B, and 30B para",
+      "category": "模型 / Agent 上新",
+      "summary": "IBM推出可下载、自托管的Granite 4.2开放权重模型，覆盖3B、8B和30B参数，原生支持12.8万上下文及工具调用。",
       "importance": 70,
       "novelty": 75,
       "relevance": 88,
@@ -1456,15 +1356,178 @@
       "sourceQuality": 78,
       "practicality": 100,
       "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "它可能直接降低某个任务的时间或门槛，适合快速试用后决定是否进入工具箱。",
-      "whatChanged": "IBM's new Granite 4.2 models ride the wave of interest in local LLMs",
+      "confidence": 75,
+      "whyItMatters": "它为本地部署提供了从轻量到中型的多种选择。8B和30B经过智能体强化学习，能更直接用于终端、搜索和外部工具操作。",
+      "whatChanged": "Granite系列升级至4.2，新增3B、8B、30B版本；三款均支持工具，8B和30B额外接受智能体强化学习训练。",
       "angles": [
-        "发现一个可能真能省时间的新工具：IBM's new Granite 4.2 models ride the wave of interest in local LLMs",
-        "它替代了原来哪一步手工操作",
-        "免费版够不够用，值不值得长期留在工具箱"
+        "IBM Granite 4.2能否成为本地智能体的新底座",
+        "3B、8B、30B三个版本分别适合哪些设备和任务",
+        "12.8万上下文对私有文档处理的实际意义",
+        "开放权重模型开始专门训练终端与工具使用能力"
       ],
       "radarScore": 93
+    },
+    {
+      "id": "r1kg6rii",
+      "title": "Copilot code review: Resolution reasons and expanded capabilities",
+      "url": "https://github.blog/changelog/2026-08-27-copilot-code-review-resolution-reasons-and-expanded-capabilities",
+      "publishedAt": "2026-08-27T22:46:04.000Z",
+      "description": "Copilot code review can now review two types of pull requests it didn&rsquo;t cover before: Reviews requested automatically on pull requests authored by bots, including Copilot cloud agent Very large pull requests Additionally, you can now submit the reason for why you&rsquo;re resolving a particular Copilot code review comment. 🤖 Expanded capabilities Pull requests authored by bots When a pull request is authored by a bot and requested automatically, there&rsquo;s no Copilot-licensed account to attribute the review to. With the &ldquo;Allow members without a Copilot license to use Copilot code review in GitHub.com&rdquo; policy enabled, Copilot code review can now review these pull requests and bill the usage directly to your organization. To learn more, see Copilot code review without a Copilot license . Copilot cloud agent pull requests Previously, when Copilot code review was automatically requested due to automatic review settings on pull requests authored by Copilot cloud agent, Copilot code review would fall back to a limited experience. Copilot code review can now give pull requests opened by Copilot cloud agent a full agentic review. Large pull requests Copilot code review previously had a 300 file or 20,000 lines of code limit on the size of a pull request it could review. This limitation no longer applies. ☑️ Comment resolution reasons You can now specify the reason for resolving a Copilot code review comment by either selecting &ldquo;Addressed&rdquo;, &ldquo;Won&rsquo;t fix&rdquo;, or &ldquo;Incorrect&rdquo;, after clicking the new dropdown next to the &ldquo;",
+      "source": {
+        "id": "github-changelog",
+        "name": "GitHub Changelog",
+        "tier": "S",
+        "kind": "feed",
+        "tags": [
+          "github",
+          "tool",
+          "productivity",
+          "coding"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "github-changelog",
+          "name": "GitHub Changelog",
+          "tier": "S",
+          "kind": "feed",
+          "tags": [
+            "github",
+            "tool",
+            "productivity",
+            "coding"
+          ]
+        }
+      ],
+      "category": "效率 / 工作流",
+      "summary": "GitHub扩展Copilot代码审查，可处理机器人创建及超大型拉取请求，并允许开发者记录关闭审查意见的具体原因。",
+      "importance": 73,
+      "novelty": 87,
+      "relevance": 77,
+      "socialPotential": 70,
+      "sourceQuality": 90,
+      "practicality": 100,
+      "researchIntensity": 0,
+      "confidence": 75,
+      "whyItMatters": "自动化代理提交的代码和大型改动现在也能进入同一套AI审查流程。记录意见解决原因则有助于团队保留决策依据。",
+      "whatChanged": "Copilot代码审查新增对机器人拉取请求、Copilot云端代理拉取请求及超大型拉取请求的覆盖；组织启用相应策略后可为无许可证成员触发的审查直接计费，并可提交审查意见的解决原因。",
+      "angles": [
+        "机器人写代码后由Copilot再审一遍是否合理",
+        "超大型拉取请求进入AI审查能解决哪些痛点",
+        "为什么关闭代码审查意见时应该记录原因",
+        "GitHub正在补齐代理提交到自动审查的闭环"
+      ],
+      "radarScore": 92
+    },
+    {
+      "id": "rdgjif4",
+      "title": "[AINews] NVIDIA buys HuggingFace for $13B, as OpenAI publishes their HF incident retro",
+      "url": "https://www.latent.space/p/ainews-nvidia-buys-huggingface-for",
+      "publishedAt": "2026-08-27T01:50:54.000Z",
+      "description": "TheInformation had the scoop , and now they have the confirmation — Nvidia is buying HuggingFace for $13B, roughly 80x their $150M ARR , having doubled its customer base in 2026 . This is almost double Nvidia’s initial $7B offer in Jan 2026. What can we say? We love it when the good guys win. But in the backdrop of GLM-5.3-Flash (aka Ox Alpha) impressing everyone (except GDM vaguepoasters ) and Qwen also shipping an impressive Flash model on chinese chips, perhaps the post Hot Chips conversation about Western open AI is a great backdrop for this. AI News for 8/25/2026-8/26/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews’ website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! AI Twitter Recap Top Story: GLM 5.3 Flash launch and reactions What happened Z.ai formally launched GLM-5.3-Flash, revealing that the previously previewed “Ox Alpha” model is its public identity. Z.ai announced GLM-5.3-Flash as a natively multimodal model with a 1M-token context window , 320B total parameters / 18B active parameters , released under the MIT License , and available via weights, API, chat, coding plan, and AutoClaw. Z.ai simultaneously positioned it as a highly price-competitive successor to GLM-5.2, claiming on its internal benchmark that it outperforms GLM-5.2 at every effort level and is on par with Claude Opus 4.8 on coding . The launch also resolved the long-running Ox Alpha mystery: multiple posters explicitly connected Ox Alpha to GLM-5.3-Flash, including SemiAnalysis , ",
+      "source": {
+        "id": "latent-space",
+        "name": "Latent Space",
+        "tier": "A",
+        "kind": "feed",
+        "tags": [
+          "agent",
+          "tool",
+          "developer",
+          "industry"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "latent-space",
+          "name": "Latent Space",
+          "tier": "A",
+          "kind": "feed",
+          "tags": [
+            "agent",
+            "tool",
+            "developer",
+            "industry"
+          ]
+        }
+      ],
+      "category": "AI 综合",
+      "summary": "Latent Space 援引 The Information 称英伟达将以130亿美元收购 Hugging Face，本期同时汇总了 OpenAI 事故复盘及 GLM、Qwen 新模型动态。",
+      "importance": 82,
+      "novelty": 90,
+      "relevance": 96,
+      "socialPotential": 87,
+      "sourceQuality": 78,
+      "practicality": 100,
+      "researchIntensity": 24,
+      "confidence": 75,
+      "whyItMatters": "若交易按报道落地，英伟达将进一步控制模型分发、数据集和开发者基础设施入口，也会改变开放模型生态与云平台之间的竞争关系。",
+      "whatChanged": "报道给出的收购价格为130亿美元，高于2026年1月据称提出的70亿美元初始报价；输入未提供英伟达或 Hugging Face 的直接声明。",
+      "angles": [
+        "英伟达为什么愿意为 Hugging Face 支付高额溢价",
+        "收购可能如何影响开放模型托管与开发者生态",
+        "从芯片供应商到模型平台，英伟达的 AI 全栈布局",
+        "Hugging Face 用户需要关注哪些平台中立性风险"
+      ],
+      "radarScore": 90
+    },
+    {
+      "id": "r1t7jkzv",
+      "title": "Radar makes podcasts searchable — and usable by AI agents",
+      "url": "https://techcrunch.com/2026/08/26/radar-makes-podcasts-searchable-and-usable-by-ai-agents/",
+      "publishedAt": "2026-08-26T15:47:28.000Z",
+      "description": "Particle’s new podcast intelligence platform transcribes and analyzes more than 130,000 podcasts, making their conversations searchable on the web and accessible to AI agents through an API and MCP.",
+      "source": {
+        "id": "techcrunch-ai",
+        "name": "TechCrunch AI",
+        "tier": "A",
+        "kind": "feed",
+        "tags": [
+          "launch",
+          "product",
+          "startup",
+          "tool"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "tier": "A",
+          "kind": "feed",
+          "tags": [
+            "launch",
+            "product",
+            "startup",
+            "tool"
+          ]
+        }
+      ],
+      "category": "工具 / 网站",
+      "summary": "Particle推出Radar播客情报平台，覆盖超13万档播客并提供搜索、分析、API和MCP接入，让人和AI Agent都能使用播客内容。",
+      "importance": 67,
+      "novelty": 77,
+      "relevance": 76,
+      "socialPotential": 69,
+      "sourceQuality": 78,
+      "practicality": 97,
+      "researchIntensity": 0,
+      "confidence": 75,
+      "whyItMatters": "它把分散在播客中的访谈和观点转化为可检索、可调用的数据源。AI Agent可通过API或MCP直接获取播客信息，为研究、内容创作和市场分析提供新素材。",
+      "whatChanged": "Particle上线Radar，将超过13万档播客转录并分析，同时开放网页搜索、API和MCP接口，使播客内容能够被AI Agent访问和处理。",
+      "angles": [
+        "播客终于变成AI Agent可调用的数据源",
+        "Radar如何把13万档播客变成搜索引擎",
+        "MCP接入后，AI能从播客里自动找答案吗",
+        "内容研究者的新资料库：用播客替代部分网页搜索"
+      ],
+      "radarScore": 88
     },
     {
       "id": "r1r8q8fb",
@@ -1500,8 +1563,8 @@
           ]
         }
       ],
-      "category": "工具 / 网站",
-      "summary": "Anthropic's new hardware standard lets AI agents control the physical world：For all the interest in and uptake of agentic AI systems over the past year or so , the world of automated AI has thus far been primarily limited to text, images, code, and other data ",
+      "category": "模型 / Agent 上新",
+      "summary": "Anthropic发布Model Hardware Standard研究预览，以统一驱动、接口和数据格式，让AI智能体连接并控制实验设备等物理硬件。",
       "importance": 73,
       "novelty": 91,
       "relevance": 75,
@@ -1509,71 +1572,16 @@
       "sourceQuality": 78,
       "practicality": 86,
       "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "它可能直接降低某个任务的时间或门槛，适合快速试用后决定是否进入工具箱。",
-      "whatChanged": "Anthropic's new hardware standard lets AI agents control the physical world",
+      "confidence": 75,
+      "whyItMatters": "该标准试图减少不同设备之间反复开发定制集成软件的成本。若形成生态，智能体的应用范围将从电脑内任务扩展到实验室和现实设备。",
+      "whatChanged": "Anthropic把智能体工具接口推进到硬件层，提出可跨网络连接不同设备的标准化驱动与数据交换方式，目前主要面向科研实验场景。",
       "angles": [
-        "发现一个可能真能省时间的新工具：Anthropic's new hardware standard lets AI agents control the physical world",
-        "它替代了原来哪一步手工操作",
-        "免费版够不够用，值不值得长期留在工具箱"
+        "Anthropic为什么开始为AI智能体制定硬件标准",
+        "AI智能体从操作软件走向控制实验设备",
+        "Model Hardware Standard与MCP式工具连接思路有何不同",
+        "科研实验室可能最先被智能体自动化的环节"
       ],
       "radarScore": 88
-    },
-    {
-      "id": "r1jw85f9",
-      "title": "Terminal-Bench-Science: Evaluating AI agents on scientific research workflows",
-      "url": "https://www.terminal-bench-science.ai/announcement",
-      "publishedAt": "2026-08-28T00:06:51.000Z",
-      "description": "Hacker News · 62 points · 16 comments",
-      "source": {
-        "id": "hackernews-ai",
-        "name": "Hacker News · AI Tool Signals",
-        "tier": "B",
-        "kind": "hackernews",
-        "tags": [
-          "tool",
-          "startup",
-          "developer",
-          "community"
-        ]
-      },
-      "engagement": {
-        "score": 62,
-        "comments": 16
-      },
-      "isCurrentSignal": false,
-      "relatedSources": [
-        {
-          "id": "hackernews-ai",
-          "name": "Hacker News · AI Tool Signals",
-          "tier": "B",
-          "kind": "hackernews",
-          "tags": [
-            "tool",
-            "startup",
-            "developer",
-            "community"
-          ]
-        }
-      ],
-      "category": "效率 / 工作流",
-      "summary": "Terminal-Bench-Science: Evaluating AI agents on scientific research workflows：Hacker News · 62 points · 16 comments",
-      "importance": 60,
-      "novelty": 95,
-      "relevance": 70,
-      "socialPotential": 77,
-      "sourceQuality": 64,
-      "practicality": 90,
-      "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "重点不是技术原理，而是它能否减少重复操作、缩短流程或提升个人产出。",
-      "whatChanged": "Terminal-Bench-Science: Evaluating AI agents on scientific research workflows",
-      "angles": [
-        "我又找到一个能少做几步的工作流：Terminal-Bench-Science: Evaluating AI agents on scientific research workflows",
-        "把它放进自己的日常流程，能省下多少时间",
-        "哪些人最适合直接抄这个用法"
-      ],
-      "radarScore": 86
     },
     {
       "id": "r1qnxs2w",
@@ -1613,7 +1621,7 @@
         }
       ],
       "category": "工具 / 网站",
-      "summary": "AI Engineer Notebooks – free, framework-free RAG/agents/evals on Colab：Hacker News · 79 points · 9 comments",
+      "summary": "AI Engineer Notebooks是一套可在Colab免费运行的无框架教程笔记本，集中演示RAG、智能体和模型评测的基础实现。",
       "importance": 60,
       "novelty": 94,
       "relevance": 65,
@@ -1621,13 +1629,69 @@
       "sourceQuality": 64,
       "practicality": 81,
       "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "它可能直接降低某个任务的时间或门槛，适合快速试用后决定是否进入工具箱。",
-      "whatChanged": "AI Engineer Notebooks – free, framework-free RAG/agents/evals on Colab",
+      "confidence": 75,
+      "whyItMatters": "它降低了学习和验证AI工程流程的环境门槛，也避免初学者被特定框架的封装细节限制。适合快速理解核心机制并制作原型。",
+      "whatChanged": "该项目以免费的Colab笔记本形式进入开发者社区视野，重点覆盖不依赖专用框架的RAG、智能体与评测实践。",
       "angles": [
-        "发现一个可能真能省时间的新工具：AI Engineer Notebooks – free, framework-free RAG/agents/evals on Colab",
-        "它替代了原来哪一步手工操作",
-        "免费版够不够用，值不值得长期留在工具箱"
+        "不用LangChain如何从零实现RAG和智能体",
+        "适合AI工程入门的免费Colab学习路线",
+        "无框架实现为何更容易看懂智能体底层逻辑",
+        "用一套笔记本串起RAG、Agent和Evals"
+      ],
+      "radarScore": 84
+    },
+    {
+      "id": "rxjpsw4",
+      "title": "GitNexus (Akon Labs)",
+      "url": "https://www.producthunt.com/products/gitnexus-akon-labs",
+      "publishedAt": "2026-08-26T07:30:19.000Z",
+      "description": "The open-source kernel for coding agents Discussion | Link",
+      "source": {
+        "id": "producthunt",
+        "name": "Product Hunt",
+        "tier": "A",
+        "kind": "feed",
+        "tags": [
+          "tool",
+          "website",
+          "product",
+          "productivity",
+          "discovery"
+        ]
+      },
+      "engagement": null,
+      "isCurrentSignal": false,
+      "relatedSources": [
+        {
+          "id": "producthunt",
+          "name": "Product Hunt",
+          "tier": "A",
+          "kind": "feed",
+          "tags": [
+            "tool",
+            "website",
+            "product",
+            "productivity",
+            "discovery"
+          ]
+        }
+      ],
+      "category": "Skill / GitHub",
+      "summary": "Akon Labs 的 GitNexus 在 Product Hunt 上线，这是一个面向编程 Agent 的开源内核，旨在提供可复用的底层能力。",
+      "importance": 60,
+      "novelty": 70,
+      "relevance": 70,
+      "socialPotential": 64,
+      "sourceQuality": 78,
+      "practicality": 90,
+      "researchIntensity": 0,
+      "confidence": 75,
+      "whyItMatters": "开源内核可减少开发者从零搭建编程 Agent 基础设施的工作量，也便于团队检查、修改和自行部署核心组件。",
+      "whatChanged": "GitNexus 作为开源编程 Agent 内核公开亮相，当前输入未提供具体功能列表或代码仓库数据。",
+      "angles": [
+        "编程 Agent 为什么开始争夺开源底层内核",
+        "用 GitNexus 搭建自有 Coding Agent 的可行性",
+        "开源 Agent 内核与封闭式编程助手的差异"
       ],
       "radarScore": 84
     },
@@ -1635,7 +1699,7 @@
       "id": "r4f7h46",
       "title": "froggeric/Qwen-Fixed-Chat-Templates · Hugging Face trending model",
       "url": "https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates",
-      "publishedAt": "2026-08-28T06:10:21.650Z",
+      "publishedAt": "2026-08-28T06:11:21.209Z",
       "description": "Trending model · model · ♥ 1504 · downloads 0",
       "source": {
         "id": "hf-trending-models",
@@ -1664,7 +1728,7 @@
         }
       ],
       "category": "模型 / Agent 上新",
-      "summary": "froggeric/Qwen-Fixed-Chat-Templates · Hugging Face trending model：Trending model · model · ♥ 1504 · downloads 0",
+      "summary": "froggeric 发布的 Qwen-Fixed-Chat-Templates 是一个修复 Qwen 系列模型对话模板问题的 Hugging Face 开源模型项目，目前进入平台趋势榜。",
       "importance": 56,
       "novelty": 96,
       "relevance": 61,
@@ -1672,117 +1736,70 @@
       "sourceQuality": 78,
       "practicality": 62,
       "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "这是能力边界或 Agent 使用方式的直接变化，优先判断它能不能马上改变现有工作流。",
-      "whatChanged": "froggeric/Qwen-Fixed-Chat-Templates · Hugging Face trending model",
+      "confidence": 75,
+      "whyItMatters": "统一或修正聊天模板有助于提升 Qwen 模型在推理框架、对话应用和 Agent 工作流中的兼容性。开发者可进一步验证它是否解决特定部署场景中的格式问题。",
+      "whatChanged": "该项目登上 Hugging Face Trending Models，页面显示获得 1504 个赞；输入信息未提供具体修复内容或模型下载量。",
       "angles": [
-        "发生了什么：froggeric/Qwen-Fixed-Chat-Templates · Hugging Face trending model",
-        "这次变化最值得普通用户注意的是什么",
-        "我会不会把它加入自己的 AI 工作流"
+        "Qwen 对话模板为什么会影响模型效果",
+        "一个修复 Chat Template 的开源项目登上 Hugging Face 趋势榜",
+        "部署 Qwen 模型前需要检查哪些模板兼容性问题"
       ],
       "radarScore": 79
     },
     {
-      "id": "r180sh77",
-      "title": "Qwen/Qwen3.8-Flash-Next · Hugging Face trending model",
-      "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
-      "publishedAt": "2026-08-28T06:10:21.650Z",
-      "description": "Trending model · image-text-to-text · ♥ 4002 · downloads 4810",
+      "id": "r1uuy9p8",
+      "title": "Wondering Canvas",
+      "url": "https://www.producthunt.com/products/wondering-2",
+      "publishedAt": "2026-08-27T06:40:56.000Z",
+      "description": "Visual ChatGPT in Parallel Discussion | Link",
       "source": {
-        "id": "hf-trending-models",
-        "name": "Hugging Face Trending Models",
+        "id": "producthunt",
+        "name": "Product Hunt",
         "tier": "A",
-        "kind": "huggingface_trending",
+        "kind": "feed",
         "tags": [
-          "model",
-          "open-source"
+          "tool",
+          "website",
+          "product",
+          "productivity",
+          "discovery"
         ]
       },
-      "engagement": {
-        "score": 4038.822353569026
-      },
-      "isCurrentSignal": true,
+      "engagement": null,
+      "isCurrentSignal": false,
       "relatedSources": [
         {
-          "id": "hf-trending-models",
-          "name": "Hugging Face Trending Models",
+          "id": "producthunt",
+          "name": "Product Hunt",
           "tier": "A",
-          "kind": "huggingface_trending",
+          "kind": "feed",
           "tags": [
-            "model",
-            "open-source"
+            "tool",
+            "website",
+            "product",
+            "productivity",
+            "discovery"
           ]
         }
       ],
-      "category": "模型 / Agent 上新",
-      "summary": "Qwen/Qwen3.8-Flash-Next · Hugging Face trending model：Trending model · image-text-to-text · ♥ 4002 · downloads 4810",
-      "importance": 56,
-      "novelty": 96,
-      "relevance": 56,
-      "socialPotential": 65,
+      "category": "工具 / 网站",
+      "summary": "Wondering Canvas 在 Product Hunt 上线，它把多路 ChatGPT 对话放进可视化画布，支持并行展开和整理探索过程。",
+      "importance": 53,
+      "novelty": 76,
+      "relevance": 54,
+      "socialPotential": 47,
       "sourceQuality": 78,
-      "practicality": 53,
+      "practicality": 67,
       "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "这是能力边界或 Agent 使用方式的直接变化，优先判断它能不能马上改变现有工作流。",
-      "whatChanged": "Qwen/Qwen3.8-Flash-Next · Hugging Face trending model",
+      "confidence": 75,
+      "whyItMatters": "画布式交互比单一聊天时间线更适合比较多个思路、保留分支和组织复杂问题，可能降低长对话中的信息混乱。",
+      "whatChanged": "产品以“并行可视化 ChatGPT”为核心定位公开亮相，输入未说明定价、支持模型或协作能力。",
       "angles": [
-        "发生了什么：Qwen/Qwen3.8-Flash-Next · Hugging Face trending model",
-        "这次变化最值得普通用户注意的是什么",
-        "我会不会把它加入自己的 AI 工作流"
+        "把 ChatGPT 从聊天框搬到无限画布是什么体验",
+        "并行对话如何用于选题、研究和方案比较",
+        "画布式 AI 工具能否解决长对话信息丢失"
       ],
-      "radarScore": 76
-    },
-    {
-      "id": "r1y1xk0u",
-      "title": "zai-org/GLM-5.3-Flash · Hugging Face trending model",
-      "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
-      "publishedAt": "2026-08-28T06:10:21.650Z",
-      "description": "Trending model · text-generation · ♥ 1370 · downloads 34",
-      "source": {
-        "id": "hf-trending-models",
-        "name": "Hugging Face Trending Models",
-        "tier": "A",
-        "kind": "huggingface_trending",
-        "tags": [
-          "model",
-          "open-source"
-        ]
-      },
-      "engagement": {
-        "score": 1385.4406804435027
-      },
-      "isCurrentSignal": true,
-      "relatedSources": [
-        {
-          "id": "hf-trending-models",
-          "name": "Hugging Face Trending Models",
-          "tier": "A",
-          "kind": "huggingface_trending",
-          "tags": [
-            "model",
-            "open-source"
-          ]
-        }
-      ],
-      "category": "模型 / Agent 上新",
-      "summary": "zai-org/GLM-5.3-Flash · Hugging Face trending model：Trending model · text-generation · ♥ 1370 · downloads 34",
-      "importance": 56,
-      "novelty": 96,
-      "relevance": 56,
-      "socialPotential": 65,
-      "sourceQuality": 78,
-      "practicality": 53,
-      "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "这是能力边界或 Agent 使用方式的直接变化，优先判断它能不能马上改变现有工作流。",
-      "whatChanged": "zai-org/GLM-5.3-Flash · Hugging Face trending model",
-      "angles": [
-        "发生了什么：zai-org/GLM-5.3-Flash · Hugging Face trending model",
-        "这次变化最值得普通用户注意的是什么",
-        "我会不会把它加入自己的 AI 工作流"
-      ],
-      "radarScore": 76
+      "radarScore": 72
     },
     {
       "id": "r1l27lee",
@@ -1817,7 +1834,7 @@
         }
       ],
       "category": "美股 / 币圈",
-      "summary": "CoinDesk 出现了一个值得进一步确认的新信号。",
+      "summary": "MoonPay 新增 Solana 生态集成，使 AI Agent 能够代为处理加密借贷操作，把代理执行能力延伸到链上金融场景。",
       "importance": 63,
       "novelty": 84,
       "relevance": 62,
@@ -1825,13 +1842,14 @@
       "sourceQuality": 78,
       "practicality": 58,
       "researchIntensity": 0,
-      "confidence": 64,
-      "whyItMatters": "作为市场观察和工具线索使用，关注数据、情绪与结构变化，不把单条信息当作交易建议。",
-      "whatChanged": "MoonPay’s newest integration lets AI agents handle crypto lending on Solana",
+      "confidence": 75,
+      "whyItMatters": "这让 Agent 不只提供信息，还可能直接参与借贷等链上操作；同时也会放大授权边界、资产安全和自动化风控的重要性。",
+      "whatChanged": "MoonPay 将 AI Agent 与 Solana 上的加密借贷流程连接起来，但输入未披露支持的协议、权限机制及上线范围。",
       "angles": [
-        "今天市场里一个容易被忽略的小信号：MoonPay’s newest integration lets AI agents handle crypto lending on Solana",
-        "这个数据应该怎么看，什么情况下容易误判",
-        "只做观察：它接下来值得盯哪个指标"
+        "AI Agent 开始代做链上借贷，用户需要开放哪些权限",
+        "MoonPay 为什么选择 Solana 承载 Agent 金融操作",
+        "自动化加密借贷的效率收益与资产安全风险",
+        "从聊天助手到链上执行者，AI Agent 的边界如何变化"
       ],
       "radarScore": 68
     }
