@@ -13,7 +13,10 @@
 .cp-tabs button{border:0;background:transparent;color:var(--cp-soft);font:inherit;font-size:13px;font-weight:700;padding:11px 16px;border-radius:12px;white-space:nowrap;cursor:pointer}
 .cp-tabs button:hover{background:var(--cp-accent-soft);color:var(--cp-ink)}.cp-tabs button.active{background:var(--cp-ink);color:var(--cp-panel)}
 [data-theme="dark"] .cp-tabs button.active{color:#111;background:#f4f0e8}
+/* grid 子项默认 min-width:auto=min-content，大运那条横向滚动区的最小宽度
+   会顺着往上顶，把整个应用撑到 1000px 开外，窄屏正文就被裁掉半边 */
 .cp-stage{display:grid;gap:24px;min-height:520px}
+.cp-stage>*{min-width:0}
 .cp-dashboard{display:grid;gap:24px}
 .cp-motto-block,.cp-command-card,.cp-content-section,.cp-dispatch-matrix,.cp-core-quote,.cp-taboo-panel,.cp-proposal-panel,.cp-dragon-panel,.cp-agreement{border:1px solid var(--cp-line);border-radius:24px;background:var(--cp-panel)}
 .cp-motto-block{padding:26px}
@@ -83,7 +86,7 @@
 .cp-relation-list strong{font-size:14px}
 .core-persona .cp-relation-list p{margin:5px 0 0;color:var(--cp-soft);font-size:12.5px;line-height:1.7}
 .cp-method-list{margin:0;display:grid}
-.cp-method-list>div{display:grid;grid-template-columns:76px 1fr;gap:16px;padding:13px 0;border-top:1px solid var(--cp-line)}
+.cp-method-list>div{display:grid;grid-template-columns:76px minmax(0,1fr);gap:16px;padding:13px 0;border-top:1px solid var(--cp-line)}
 .cp-method-list>div:first-child{border-top:0;padding-top:0}
 .cp-method-list dt{font-weight:800;color:var(--cp-accent)}
 .core-persona .cp-method-list dd{margin:0;color:var(--cp-soft);line-height:1.75;font-size:13px}
@@ -100,7 +103,7 @@
 .cp-now strong{font-size:17px;letter-spacing:.02em}
 .cp-now span{font-size:12px;color:var(--cp-soft)}
 /* 横向滚动容器会裁掉溢出，「当前」角标要靠上留白让位 */
-.cp-luck-strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(96px,1fr);gap:9px;overflow-x:auto;padding:14px 2px 4px;scrollbar-width:thin}
+.cp-luck-strip{min-width:0;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(96px,1fr);gap:9px;overflow-x:auto;padding:14px 2px 4px;scrollbar-width:thin}
 .cp-luck{position:relative;display:grid;justify-items:center;gap:5px;padding:15px 8px 13px;border:1px solid var(--cp-line);border-radius:14px;background:rgba(255,255,255,.18);text-align:center}
 [data-theme="dark"] .cp-luck{background:rgba(255,255,255,.03)}
 .cp-luck.is-now{border-color:var(--cp-accent);background:var(--cp-accent-soft)}
@@ -112,3 +115,53 @@
 .cp-luck-year{font-size:10px;color:var(--cp-soft);font-variant-numeric:tabular-nums}
 @media(max-width:900px){.cp-now{grid-template-columns:1fr}
   .cp-luck-strip{grid-auto-columns:minmax(88px,auto)}}
+
+/* 八字解读 */
+.cp-read-lead{padding:24px 26px;border:1px solid var(--cp-line);border-radius:24px;background:linear-gradient(135deg,var(--cp-accent-soft),var(--cp-panel))}
+.core-persona .cp-read-lead p{margin:12px 0 0;max-width:860px;color:var(--cp-soft);line-height:1.95;font-size:14px}
+.cp-yong-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.cp-yong-chip{display:grid;justify-items:center;gap:5px;text-align:center;padding:16px 10px;border:1px solid var(--cp-line);border-radius:16px;background:rgba(255,255,255,.18)}
+[data-theme="dark"] .cp-yong-chip{background:rgba(255,255,255,.03)}
+.cp-yong-chip small{font-size:10px;letter-spacing:.14em;font-weight:800;color:var(--cp-accent)}
+.core-persona .cp-yong-chip b{font-size:26px;font-weight:800;line-height:1.15}
+.cp-yong-chip strong{font-size:12.5px}
+.cp-yong-chip span{font-size:11px;color:var(--cp-soft);line-height:1.6}
+.cp-read-blocks{display:grid;gap:4px}
+.cp-read-blocks article{padding:16px 0;border-top:1px solid var(--cp-line)}
+.cp-read-blocks article:first-child{border-top:0;padding-top:0}
+.core-persona .cp-read-blocks h5{margin:0 0 9px;font-size:15px;font-weight:700;letter-spacing:-.01em}
+.core-persona .cp-read-blocks p{margin:0 0 9px;color:var(--cp-soft);line-height:1.95;font-size:13.5px;max-width:900px}
+.core-persona .cp-read-blocks p:last-child{margin-bottom:0}
+.cp-luck-notes{list-style:none;margin:20px 0 0;padding:0;display:grid}
+.cp-luck-notes li{display:grid;grid-template-columns:56px 116px minmax(0,1fr);gap:14px;align-items:baseline;padding:13px 0;border-top:1px solid var(--cp-line)}
+.core-persona .cp-luck-notes b{font-size:17px;font-weight:800}
+.cp-luck-notes>li>span{font-size:11px;color:var(--cp-soft)}
+.core-persona .cp-luck-notes p{margin:0;color:var(--cp-soft);line-height:1.85;font-size:13px}
+.cp-luck-notes li.is-now{background:var(--cp-accent-soft);border-radius:12px;padding-left:12px;padding-right:12px;margin:0 -12px}
+.cp-luck-notes li.is-now b{color:var(--cp-accent)}
+.core-persona .cp-luck-sum{margin:18px 0 0;padding:15px 17px;border-left:2px solid var(--cp-accent);background:var(--cp-accent-soft);border-radius:0 12px 12px 0;line-height:1.9;font-size:13.5px}
+.cp-verdict{padding:26px;border:1px solid var(--cp-line);border-radius:24px;background:linear-gradient(135deg,var(--cp-accent-soft),var(--cp-panel))}
+.cp-verdict ol{list-style:none;counter-reset:v;margin:16px 0 0;padding:0;display:grid;gap:14px}
+.cp-verdict li{counter-increment:v;display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:start}
+.cp-verdict li:before{content:counter(v,decimal-leading-zero);font-size:22px;font-weight:900;color:var(--cp-accent);opacity:.5;line-height:1.3}
+/* strong 与 p 是同级，各占一个网格位；不指到第二列，p 会掉进序号那一窄列 */
+.cp-verdict li>strong,.core-persona .cp-verdict li>p{grid-column:2}
+.cp-verdict strong{font-size:16px}
+.core-persona .cp-verdict p{margin:6px 0 0;color:var(--cp-soft);line-height:1.85;font-size:13.5px}
+.cp-disclaimer{padding:24px 26px;border:1px dashed var(--cp-line);border-radius:24px}
+.core-persona .cp-disclaimer p{margin:12px 0 0;color:var(--cp-soft);line-height:1.9;font-size:12.5px;max-width:900px}
+@media(max-width:900px){.cp-yong-grid{grid-template-columns:repeat(2,1fr)}
+  .cp-luck-notes li{grid-template-columns:52px minmax(0,1fr);gap:6px 12px}
+  .cp-luck-notes li>span{grid-column:2}
+  .cp-luck-notes li p{grid-column:1/-1}}
+@media(max-width:560px){.cp-read-lead,.cp-verdict,.cp-disclaimer{padding:20px}
+  .cp-verdict li{grid-template-columns:32px minmax(0,1fr);gap:10px}}
+
+/* 1fr 的最小尺寸是 min-content，长段落会把网格轨道撑爆；上面都改成了 minmax(0,1fr)，这里再兜一层 */
+.core-persona .cp-luck-notes p,.core-persona .cp-verdict li>p,.core-persona .cp-method-list dd{min-width:0;overflow-wrap:anywhere}
+/* 窄屏让 eyebrow 独占一行，标题换行时不会和它挤在一起 */
+@media(max-width:560px){
+  .cp-section-title{flex-wrap:wrap;align-items:baseline;gap:6px 10px}
+  .cp-section-title>span{flex:0 0 100%}
+  .cp-section-title b{margin-left:0}
+}

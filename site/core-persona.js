@@ -102,6 +102,57 @@
   }
 
   /* 生辰八字：只排盘，不写断语。四柱、十神、藏干、纳音、星运都是按规则推出来的。 */
+  /* 解读：按传统命理的路子推演，末尾附「该怎么看」的说明。 */
+  function reading(b) {
+    const r = b.reading;
+    if (!r) return "";
+    const chip = (g) => `<div class="cp-yong-chip"><small>${esc(g.tag)}</small>`
+      + `<b class="cp-wx" data-wx="${esc(g.wx)}">${esc(g.wx)}</b>`
+      + `<strong>${esc(g.name)}</strong><span>${esc(g.why)}</span></div>`;
+    const g = r.useGod;
+    return `
+      <section class="cp-read-lead">
+        <div class="cp-section-label">READING / 解读</div>
+        <p>${esc(r.intro)}</p>
+      </section>
+
+      ${g ? `<section class="cp-content-section">
+        <div class="cp-section-title"><span>YONG SHEN</span><h4>用神取舍</h4></div>
+        <div class="cp-yong-grid">
+          ${chip(g.yong)}${chip(g.xi)}${g.ji.map(chip).join("")}${chip(g.half)}
+        </div>
+        <p class="cp-source">${esc(g.note)}</p>
+      </section>` : ""}
+
+      ${r.sections.map((sec) => `
+        <section class="cp-content-section">
+          <div class="cp-section-title"><span>${esc(sec.no)} · ${esc(sec.en)}</span><h4>${esc(sec.title)}</h4></div>
+          <div class="cp-read-blocks">${sec.blocks.map((blk) => `
+            <article><h5>${esc(blk.h)}</h5>${blk.p.map((t) => `<p>${esc(t)}</p>`).join("")}</article>`).join("")}</div>
+        </section>`).join("")}
+
+      <section class="cp-content-section">
+        <div class="cp-section-title"><span>NOW</span><h4>${esc(r.nowTitle)}</h4></div>
+        <div class="cp-read-blocks"><article>${r.now.map((t) => `<p>${esc(t)}</p>`).join("")}</article></div>
+      </section>
+
+      <section class="cp-content-section">
+        <div class="cp-section-title"><span>IN PRACTICE</span><h4>${esc(r.applyTitle)}</h4></div>
+        <dl class="cp-method-list">${r.apply.map(([k, v]) => `
+          <div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>
+      </section>
+
+      <section class="cp-verdict">
+        <div class="cp-section-label">${esc(r.verdictTitle)}</div>
+        <ol>${r.verdict.map(([k, v]) => `<li><strong>${esc(k)}</strong><p>${esc(v)}</p></li>`).join("")}</ol>
+      </section>
+
+      <section class="cp-disclaimer">
+        <div class="cp-section-label">${esc(r.disclaimerTitle)}</div>
+        ${r.disclaimer.map((t) => `<p>${esc(t)}</p>`).join("")}
+      </section>`;
+  }
+
   function bazi(data) {
     const b = data.bazi;
     if (!b) return "";
@@ -152,6 +203,7 @@
       </div>
 
       ${luck(b)}
+      ${reading(b)}
 
       <section class="cp-content-section">
         <div class="cp-section-title"><span>METHOD</span><h4>起算口径</h4></div>
@@ -199,6 +251,9 @@
             <span class="cp-luck-age">${esc(p.age)}</span>
             <span class="cp-luck-year">${esc(p.startYear)} 起</span>
           </article>`).join("")}</div>
+        ${list.some((x) => x.note) ? `<ol class="cp-luck-notes">${list.map((x, i) => `
+          <li class="${i === at ? "is-now" : ""}"><b>${esc(x.gz)}</b><span>${esc(x.god)} · ${esc(x.age)}</span><p>${esc(x.note || "")}</p></li>`).join("")}</ol>` : ""}
+        ${b.reading?.luckSummary ? `<p class="cp-luck-sum">${esc(b.reading.luckSummary)}</p>` : ""}
         <p class="cp-source">${esc(b.luck.startNote)}</p>
         <p class="cp-source">${esc(b.nowNote || "")}</p>
       </section>`;
