@@ -37,8 +37,10 @@
 
 
 /* 生辰八字排盘 */
-.core-persona{--wx-mu:#4e8c5c;--wx-huo:#bb5230;--wx-tu:#a3762c;--wx-jin:#78818c;--wx-shui:#3f6f9f}
-[data-theme="dark"] .core-persona{--wx-mu:#74bd85;--wx-huo:#e8825c;--wx-tu:#d6a751;--wx-jin:#a8b2bd;--wx-shui:#6ea3d6}
+/* 传统五行色里金是「白」，但页面上写着「金」，白/银看着别扭；
+   所以金给真金色，土往褐里压，两条黄不至于糊在一起。 */
+.core-persona{--wx-mu:#4e8c5c;--wx-huo:#bb5230;--wx-tu:#8a6446;--wx-jin:#b3891a;--wx-shui:#3f6f9f}
+[data-theme="dark"] .core-persona{--wx-mu:#74bd85;--wx-huo:#e8825c;--wx-tu:#a98d6c;--wx-jin:#e3bb44;--wx-shui:#6ea3d6}
 .cp-wx[data-wx="木"]{color:var(--wx-mu)}.cp-wx[data-wx="火"]{color:var(--wx-huo)}
 .cp-wx[data-wx="土"]{color:var(--wx-tu)}.cp-wx[data-wx="金"]{color:var(--wx-jin)}
 .cp-wx[data-wx="水"]{color:var(--wx-shui)}
