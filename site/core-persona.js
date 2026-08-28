@@ -204,7 +204,7 @@
       </section>`;
   }
 
-  function mount(host, app, data) {
+  function mount(host, app, data, view, department) {
     const tabs = [
       { id: "dashboard", label: "人格中枢", render: () => dashboard(data) },
       { id: "principles", label: "行动准则", render: () => principles(data) },
@@ -213,7 +213,11 @@
       { id: "agreement", label: "金鸡湖协定", render: () => agreement(data) },
       { id: "bazi", label: "生辰八字", render: () => bazi(data) }
     ];
-    let active = tabs[0];
+    // 支持 #/app/本部/core-persona/<页签> 直接落到某一页
+    let active = tabs.find((tab) => tab.id === view) || tabs[0];
+    const hashFor = (id) =>
+      `#/app/${encodeURIComponent(department?.name || "本部")}/${encodeURIComponent(app?.id || "core-persona")}`
+      + (id === tabs[0].id ? "" : `/${encodeURIComponent(id)}`);
 
     host.innerHTML = `
       <section class="core-persona">
@@ -221,7 +225,7 @@
           <div><span class="cp-kicker">${esc(data.eyebrow || app?.eyebrow || "CORE PERSONA SYSTEM")}</span><h2>${esc(data.title || app?.title || "本部人格中枢")}</h2><p>不是文章集合，而是一套用于日常判断、行动与人格调度的核心操作系统。</p></div>
           <div class="cp-state"><i></i><span>CORE ONLINE</span></div>
         </header>
-        <nav class="cp-tabs" role="tablist">${tabs.map((tab, index) => `<button type="button" role="tab" data-cp-tab="${tab.id}" class="${index === 0 ? "active" : ""}" aria-selected="${index === 0 ? "true" : "false"}">${esc(tab.label)}</button>`).join("")}</nav>
+        <nav class="cp-tabs" role="tablist">${tabs.map((tab) => `<button type="button" role="tab" data-cp-tab="${tab.id}" class="${tab === active ? "active" : ""}" aria-selected="${tab === active ? "true" : "false"}">${esc(tab.label)}</button>`).join("")}</nav>
         <div class="cp-stage" data-cp-stage></div>
       </section>`;
 
@@ -242,16 +246,18 @@
         tabButton.setAttribute("aria-selected", on ? "true" : "false");
       });
       render();
+      // replaceState 不触发 hashchange，应用不会被工作台重建
+      history.replaceState(null, "", hashFor(active.id));
       host.closest(".reading-scroll")?.scrollTo?.({ top: 0, behavior: "smooth" });
     });
     render();
   }
 
-  function render({ host, app }) {
+  function render({ host, app, view, department }) {
     host.innerHTML = '<div class="cp-loading">正在启动人格中枢…</div>';
     fetch(`${DATA_URL}?v=${Date.now()}`, { cache: "no-store" })
       .then((response) => { if (!response.ok) throw new Error(`core-persona-data ${response.status}`); return response.json(); })
-      .then((data) => mount(host, app, data))
+      .then((data) => mount(host, app, data, view, department))
       .catch((error) => { host.innerHTML = `<div class="cp-error"><strong>人格中枢数据读取失败</strong><p>${esc(error.message)}</p></div>`; });
   }
 

@@ -27,7 +27,13 @@
     const parts = raw.split("/");
     try {
       if (parts[0] === "app" && parts[1] && parts[2]) {
-        return { kind: "app", department: decodeURIComponent(parts[1]), appId: decodeURIComponent(parts.slice(2).join("/")) };
+        // 第四段是应用内部视图（页签），可省略；应用 id 本身不含斜杠
+        return {
+          kind: "app",
+          department: decodeURIComponent(parts[1]),
+          appId: decodeURIComponent(parts[2]),
+          view: parts[3] ? decodeURIComponent(parts.slice(3).join("/")) : ""
+        };
       }
       if (parts[0] === "department" && parts[1]) return { kind: "department", department: decodeURIComponent(parts[1]) };
     } catch {}
@@ -160,7 +166,7 @@
     appSidebar(dep, app);
   }
 
-  function renderApp(index, name, appId) {
+  function renderApp(index, name, appId, view) {
     const dep = department(index, name);
     const app = dep?.apps?.find((item) => item.id === appId);
     if (!dep || !app || !el.article) return;
@@ -185,7 +191,7 @@
 
     const host = el.article.querySelector("[data-workspace-host]");
     const renderer = renderers.get(app.renderer || app.id);
-    if (renderer) renderer({ host, app, department: dep, index });
+    if (renderer) renderer({ host, app, department: dep, index, view });
     else host.innerHTML = `<div class="workspace-missing-app"><strong>应用渲染器未注册</strong><p>${escapeHtml(app.renderer || app.id)}</p></div>`;
   }
 
@@ -201,7 +207,7 @@
     try { index = await loadIndex(); } catch { return; }
     const latest = route();
     if (JSON.stringify(current) !== JSON.stringify(latest)) return schedule();
-    if (latest.kind === "app") renderApp(index, latest.department, latest.appId);
+    if (latest.kind === "app") renderApp(index, latest.department, latest.appId, latest.view);
     else if (latest.kind === "department") injectDepartmentApps(index, latest.department);
     else restoreKnowledgeLayout();
   }
