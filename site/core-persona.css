@@ -34,3 +34,58 @@
 .cp-agreement{overflow:hidden}.cp-agreement header{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;padding:24px;border-bottom:1px solid var(--cp-line);background:var(--cp-accent-soft)}.cp-lock{font-size:10px;font-weight:900;letter-spacing:.16em;color:var(--cp-accent);padding:7px 10px;border:1px solid currentColor;border-radius:999px}.cp-signatures{display:flex;flex-direction:column;text-align:right;font-size:12px;color:var(--cp-soft);line-height:1.7}.cp-agreement ol{list-style:none;counter-reset:agreement;padding:0;margin:0}.cp-agreement li{counter-increment:agreement;display:grid;grid-template-columns:72px 1fr;gap:18px;padding:24px;border-bottom:1px solid var(--cp-line);line-height:1.85}.cp-agreement li:last-child{border-bottom:0}.cp-agreement li:before{content:counter(agreement,decimal-leading-zero);font-size:24px;font-weight:900;color:var(--cp-accent);opacity:.55}.cp-agreement li span{font-size:14px}
 @media(max-width:900px){.cp-motto-grid,.cp-persona-mini-grid,.cp-fast-grid{grid-template-columns:repeat(2,1fr)}.cp-rule-grid,.cp-persona-grid,.cp-focus-layout{grid-template-columns:1fr}.cp-hero{align-items:flex-start;flex-direction:column}.cp-dragon-panel{grid-template-columns:1fr}.cp-dragon-orbit{margin:auto}.cp-page-head{grid-template-columns:64px 1fr}.cp-page-head>span{font-size:42px}}
 @media(max-width:560px){.cp-motto-grid,.cp-persona-mini-grid,.cp-fast-grid{grid-template-columns:1fr}.cp-motto-word{min-height:96px}.cp-page-head{grid-template-columns:1fr;gap:6px}.cp-page-head>span{font-size:28px}.cp-rule-card{grid-template-columns:34px 1fr}.cp-dispatch-row{grid-template-columns:1fr}.cp-dispatch-row i{transform:rotate(90deg)}.cp-agreement header{flex-direction:column}.cp-signatures{text-align:left}.cp-agreement li{grid-template-columns:44px 1fr;padding:18px}.cp-hero,.cp-motto-block,.cp-command-card,.cp-content-section,.cp-taboo-panel,.cp-proposal-panel,.cp-dragon-panel{padding:20px}}
+
+
+/* 生辰八字排盘 */
+.core-persona{--wx-mu:#4e8c5c;--wx-huo:#bb5230;--wx-tu:#a3762c;--wx-jin:#78818c;--wx-shui:#3f6f9f}
+[data-theme="dark"] .core-persona{--wx-mu:#74bd85;--wx-huo:#e8825c;--wx-tu:#d6a751;--wx-jin:#a8b2bd;--wx-shui:#6ea3d6}
+.cp-wx[data-wx="木"]{color:var(--wx-mu)}.cp-wx[data-wx="火"]{color:var(--wx-huo)}
+.cp-wx[data-wx="土"]{color:var(--wx-tu)}.cp-wx[data-wx="金"]{color:var(--wx-jin)}
+.cp-wx[data-wx="水"]{color:var(--wx-shui)}
+.cp-bazi-card{border:1px solid var(--cp-line);border-radius:24px;background:var(--cp-panel);padding:25px}
+.cp-bazi-chart{margin:0 0 20px;font-size:clamp(17px,2.4vw,24px);letter-spacing:.08em;color:var(--cp-soft)}
+.cp-pillar-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.cp-pillar{display:flex;flex-direction:column;gap:13px;padding:20px 16px;border:1px solid var(--cp-line);border-radius:18px;background:rgba(255,255,255,.18);text-align:center}
+[data-theme="dark"] .cp-pillar{background:rgba(255,255,255,.03)}
+.cp-pillar.is-self{border-color:var(--cp-accent);background:var(--cp-accent-soft)}
+.cp-pillar header{display:grid;gap:3px}
+.cp-pillar header small{font-size:10px;letter-spacing:.16em;font-weight:800;color:var(--cp-accent)}
+.cp-pillar header span{font-size:12px;color:var(--cp-soft);font-weight:700}
+.cp-pillar-god{margin:0;font-size:13px;font-weight:700}
+.cp-pillar-chars{display:grid;gap:6px}
+/* .cp-pillar b 会被正文的 b 规则吃掉，这里靠模块名提权 */
+.core-persona .cp-pillar-chars b{font-size:clamp(30px,4.6vw,46px);font-weight:800;line-height:1.06;letter-spacing:.02em}
+.cp-pillar-hide{list-style:none;margin:0;padding:11px 0 0;border-top:1px solid var(--cp-line);display:grid;gap:5px}
+.cp-pillar-hide li{display:flex;justify-content:center;align-items:baseline;gap:7px;font-size:12px}
+.core-persona .cp-pillar-hide b{font-weight:800;color:var(--cp-ink)}
+.cp-pillar-hide span{color:var(--cp-soft)}
+.cp-pillar-meta{margin:0;padding-top:10px;border-top:1px solid var(--cp-line);display:grid;gap:5px}
+.cp-pillar-meta>div{display:flex;justify-content:space-between;gap:8px;font-size:12px}
+.cp-pillar-meta dt{color:var(--cp-soft)}.cp-pillar-meta dd{margin:0;font-weight:700}
+.cp-bazi-split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.cp-wx-bars{display:grid;gap:11px}
+.cp-wx-head{display:grid;grid-template-columns:26px 1fr 62px;align-items:center;gap:12px;margin-bottom:2px;font-size:10px;letter-spacing:.1em;font-weight:800;color:var(--cp-soft)}
+.cp-wx-head i,.cp-wx-head em{font-style:normal}.cp-wx-head em{text-align:right}
+.cp-wx-bar{display:grid;grid-template-columns:26px 1fr 62px;align-items:center;gap:12px}
+.cp-wx-bar>span{font-size:17px;font-weight:800}
+.cp-wx-bar i{height:9px;border-radius:999px;background:var(--cp-accent-soft);overflow:hidden}
+.cp-wx-bar u{display:block;height:100%;border-radius:999px;text-decoration:none}
+.cp-wx-bar u[data-wx="木"]{background:var(--wx-mu)}.cp-wx-bar u[data-wx="火"]{background:var(--wx-huo)}
+.cp-wx-bar u[data-wx="土"]{background:var(--wx-tu)}.cp-wx-bar u[data-wx="金"]{background:var(--wx-jin)}
+.cp-wx-bar u[data-wx="水"]{background:var(--wx-shui)}
+.cp-wx-bar em{font-style:normal;font-weight:800;text-align:right;font-variant-numeric:tabular-nums}
+.cp-wx-bar em small{font-weight:600;color:var(--cp-soft)}
+.cp-relation-list{list-style:none;margin:0;padding:0;display:grid}
+.cp-relation-list li{padding:12px 0;border-top:1px solid var(--cp-line)}
+.cp-relation-list li:first-child{border-top:0;padding-top:0}
+.cp-relation-list strong{font-size:14px}
+.core-persona .cp-relation-list p{margin:5px 0 0;color:var(--cp-soft);font-size:12.5px;line-height:1.7}
+.cp-method-list{margin:0;display:grid}
+.cp-method-list>div{display:grid;grid-template-columns:76px 1fr;gap:16px;padding:13px 0;border-top:1px solid var(--cp-line)}
+.cp-method-list>div:first-child{border-top:0;padding-top:0}
+.cp-method-list dt{font-weight:800;color:var(--cp-accent)}
+.core-persona .cp-method-list dd{margin:0;color:var(--cp-soft);line-height:1.75;font-size:13px}
+.core-persona .cp-source{margin:16px 0 0;color:var(--cp-soft);font-size:12.5px;line-height:1.8}
+@media(max-width:900px){.cp-bazi-split{grid-template-columns:1fr}}
+@media(max-width:560px){.cp-pillar-grid{grid-template-columns:repeat(2,1fr)}.cp-bazi-card{padding:20px}
+  .cp-pillar{padding:16px 10px;gap:10px}.cp-method-list>div{grid-template-columns:1fr;gap:4px}}

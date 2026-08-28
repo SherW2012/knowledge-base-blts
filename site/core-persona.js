@@ -101,13 +101,73 @@
       </section>`;
   }
 
+  /* 生辰八字：只排盘，不写断语。四柱、十神、藏干、纳音、星运都是按规则推出来的。 */
+  function bazi(data) {
+    const b = data.bazi;
+    if (!b) return "";
+    const col = (p) => `
+      <article class="cp-pillar${p.self ? " is-self" : ""}">
+        <header><small>${esc(p.en)}</small><span>${esc(p.label)}</span></header>
+        <p class="cp-pillar-god">${esc(p.god)}</p>
+        <div class="cp-pillar-chars">
+          <b class="cp-wx" data-wx="${esc(p.ganWx)}">${esc(p.gan)}</b>
+          <b class="cp-wx" data-wx="${esc(p.zhiWx)}">${esc(p.zhi)}</b>
+        </div>
+        <ul class="cp-pillar-hide">${p.hide.map(([gan, god]) =>
+          `<li><b>${esc(gan)}</b><span>${esc(god)}</span></li>`).join("")}</ul>
+        <dl class="cp-pillar-meta">
+          <div><dt>纳音</dt><dd>${esc(p.nayin)}</dd></div>
+          <div><dt>星运</dt><dd>${esc(p.star)}</dd></div>
+        </dl>
+      </article>`;
+    const most = Math.max(...b.elements.map((e) => e.full)) || 1;
+    return `
+      <section class="cp-page-head"><span>05</span><div><small>FOUR PILLARS</small><h3>生辰八字</h3><p>${esc(b.birth.solar)} · ${esc(b.birth.place)}</p></div></section>
+
+      <section class="cp-bazi-card">
+        <div class="cp-section-title"><span>CHART</span><h4>排盘</h4><b>日主 ${esc(b.dayMaster)}</b></div>
+        <p class="cp-bazi-chart">${esc(b.chart)}</p>
+        <div class="cp-pillar-grid">${b.pillars.map(col).join("")}</div>
+      </section>
+
+      <div class="cp-bazi-split">
+        <section class="cp-content-section">
+          <div class="cp-section-title"><span>ELEMENTS</span><h4>五行分布</h4></div>
+          <div class="cp-wx-bars">
+            <div class="cp-wx-head"><span></span><i>条长按含藏干计</i><em>本气 / 藏干</em></div>
+            ${b.elements.map((e) => `
+            <div class="cp-wx-bar">
+              <span class="cp-wx" data-wx="${esc(e.name)}">${esc(e.name)}</span>
+              <i><u style="width:${Math.round((e.full / most) * 100)}%" data-wx="${esc(e.name)}"></u></i>
+              <em>${e.main} <small>/ ${e.full}</small></em>
+            </div>`).join("")}</div>
+          <p class="cp-source">${esc(b.elementNote)}</p>
+        </section>
+        <section class="cp-content-section">
+          <div class="cp-section-title"><span>RELATIONS</span><h4>支间关系</h4><b>旬空 ${esc(b.empty)}</b></div>
+          <ul class="cp-relation-list">${b.relations.map(([name, text]) => `
+            <li><strong>${esc(name)}</strong><p>${esc(text)}</p></li>`).join("")}</ul>
+          <p class="cp-source">${esc(b.emptyNote)}</p>
+        </section>
+      </div>
+
+      <section class="cp-content-section">
+        <div class="cp-section-title"><span>METHOD</span><h4>起算口径</h4></div>
+        <dl class="cp-method-list">${b.method.map(([name, text]) => `
+          <div><dt>${esc(name)}</dt><dd>${esc(text)}</dd></div>`).join("")}</dl>
+        <p class="cp-source">${esc(b.birth.hourNote)}</p>
+        <p class="cp-source">${esc(b.scope)}</p>
+      </section>`;
+  }
+
   function mount(host, app, data) {
     const tabs = [
       { id: "dashboard", label: "人格中枢", render: () => dashboard(data) },
       { id: "principles", label: "行动准则", render: () => principles(data) },
       { id: "persona", label: "四重人格", render: () => persona(data) },
       { id: "focus", label: "五忌三议 · 潜龙", render: () => focus(data) },
-      { id: "agreement", label: "金鸡湖协定", render: () => agreement(data) }
+      { id: "agreement", label: "金鸡湖协定", render: () => agreement(data) },
+      { id: "bazi", label: "生辰八字", render: () => bazi(data) }
     ];
     let active = tabs[0];
 
