@@ -89,3 +89,24 @@
 @media(max-width:900px){.cp-bazi-split{grid-template-columns:1fr}}
 @media(max-width:560px){.cp-pillar-grid{grid-template-columns:repeat(2,1fr)}.cp-bazi-card{padding:20px}
   .cp-pillar{padding:16px 10px;gap:10px}.cp-method-list>div{grid-template-columns:1fr;gap:4px}}
+
+/* 大运 */
+.cp-luck-rule{margin-top:0}
+.cp-now{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0 18px}
+.cp-now>div{padding:14px 16px;border:1px solid var(--cp-line);border-radius:16px;background:var(--cp-accent-soft);display:grid;gap:4px}
+.cp-now small{font-size:10px;letter-spacing:.14em;font-weight:800;color:var(--cp-accent)}
+.cp-now strong{font-size:17px;letter-spacing:.02em}
+.cp-now span{font-size:12px;color:var(--cp-soft)}
+/* 横向滚动容器会裁掉溢出，「当前」角标要靠上留白让位 */
+.cp-luck-strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(96px,1fr);gap:9px;overflow-x:auto;padding:14px 2px 4px;scrollbar-width:thin}
+.cp-luck{position:relative;display:grid;justify-items:center;gap:5px;padding:15px 8px 13px;border:1px solid var(--cp-line);border-radius:14px;background:rgba(255,255,255,.18);text-align:center}
+[data-theme="dark"] .cp-luck{background:rgba(255,255,255,.03)}
+.cp-luck.is-now{border-color:var(--cp-accent);background:var(--cp-accent-soft)}
+.cp-luck-flag{position:absolute;top:-10px;left:50%;transform:translateX(-50%);font-style:normal;font-size:10px;font-weight:800;letter-spacing:.1em;padding:2px 8px;border-radius:999px;background:var(--cp-accent);color:#fff;white-space:nowrap}
+.cp-luck-god{font-size:11px;color:var(--cp-soft);font-weight:700}
+.core-persona .cp-luck-gz{font-size:22px;font-weight:800;letter-spacing:.04em;line-height:1.2}
+.cp-luck-star{font-size:11px;color:var(--cp-soft)}
+.cp-luck-age{font-size:11px;font-weight:700;margin-top:3px;padding-top:7px;border-top:1px solid var(--cp-line);width:100%}
+.cp-luck-year{font-size:10px;color:var(--cp-soft);font-variant-numeric:tabular-nums}
+@media(max-width:900px){.cp-now{grid-template-columns:1fr}
+  .cp-luck-strip{grid-auto-columns:minmax(88px,auto)}}

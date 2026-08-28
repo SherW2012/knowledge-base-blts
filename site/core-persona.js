@@ -122,7 +122,7 @@
       </article>`;
     const most = Math.max(...b.elements.map((e) => e.full)) || 1;
     return `
-      <section class="cp-page-head"><span>05</span><div><small>FOUR PILLARS</small><h3>生辰八字</h3><p>${esc(b.birth.solar)} · ${esc(b.birth.place)}</p></div></section>
+      <section class="cp-page-head"><span>05</span><div><small>FOUR PILLARS</small><h3>生辰八字</h3><p>${esc(b.birth.solar)} · ${esc(b.birth.place)} · ${esc(b.gender)}</p></div></section>
 
       <section class="cp-bazi-card">
         <div class="cp-section-title"><span>CHART</span><h4>排盘</h4><b>日主 ${esc(b.dayMaster)}</b></div>
@@ -151,12 +151,56 @@
         </section>
       </div>
 
+      ${luck(b)}
+
       <section class="cp-content-section">
         <div class="cp-section-title"><span>METHOD</span><h4>起算口径</h4></div>
         <dl class="cp-method-list">${b.method.map(([name, text]) => `
           <div><dt>${esc(name)}</dt><dd>${esc(text)}</dd></div>`).join("")}</dl>
         <p class="cp-source">${esc(b.birth.hourNote)}</p>
         <p class="cp-source">${esc(b.scope)}</p>
+      </section>`;
+  }
+
+  const GAN = "甲乙丙丁戊己庚辛壬癸";
+  const ZHI = "子丑寅卯辰巳午未申酉戌亥";
+  /* 1984 甲子起算。流年以立春分界，1 月到 2 月初仍算上一年。 */
+  const yearGz = (year) => {
+    const n = (((year - 1984) % 60) + 60) % 60;
+    return GAN[n % 10] + ZHI[n % 12];
+  };
+
+  function luck(b) {
+    if (!b.luck) return "";
+    const now = new Date();
+    // 立春前仍属上一年，2 月 5 日之前一律按上一年取，宁可保守
+    const solarYear = (now.getMonth() === 0 || (now.getMonth() === 1 && now.getDate() < 5))
+      ? now.getFullYear() - 1 : now.getFullYear();
+    const gz = yearGz(solarYear);
+    const list = b.luck.pillars;
+    let at = -1;
+    list.forEach((p, i) => { if (solarYear >= p.startYear) at = i; });
+    const live = at >= 0 ? list[at] : null;
+    return `
+      <section class="cp-content-section">
+        <div class="cp-section-title"><span>LUCK PILLARS</span><h4>大运</h4><b>${esc(b.luck.startAge)}起运</b></div>
+        <p class="cp-source cp-luck-rule">${esc(b.luck.rule)}${live ? "" : ""}</p>
+        <div class="cp-now">
+          <div><small>本年流年</small><strong>${esc(solarYear)} · ${esc(gz)}</strong><span>${esc(b.godMap[gz[0]] || "")}</span></div>
+          ${live ? `<div><small>现行大运</small><strong>${esc(live.gz)}</strong><span>${esc(live.god)} · ${esc(live.age)}</span></div>` : ""}
+          <div><small>交运</small><strong>${esc(b.luck.startDate)}</strong><span>${esc(b.luck.startAge)}</span></div>
+        </div>
+        <div class="cp-luck-strip">${list.map((p, i) => `
+          <article class="cp-luck${i === at ? " is-now" : ""}">
+            ${i === at ? '<em class="cp-luck-flag">当前</em>' : ""}
+            <span class="cp-luck-god">${esc(p.god)}</span>
+            <b class="cp-luck-gz">${esc(p.gz)}</b>
+            <span class="cp-luck-star">${esc(p.star)}</span>
+            <span class="cp-luck-age">${esc(p.age)}</span>
+            <span class="cp-luck-year">${esc(p.startYear)} 起</span>
+          </article>`).join("")}</div>
+        <p class="cp-source">${esc(b.luck.startNote)}</p>
+        <p class="cp-source">${esc(b.nowNote || "")}</p>
       </section>`;
   }
 
