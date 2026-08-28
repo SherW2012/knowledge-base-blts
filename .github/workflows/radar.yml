@@ -38,17 +38,23 @@ jobs:
         with:
           node-version: 22
 
-      - name: Run daily radar in rule mode
+      - name: Run daily radar
         if: ${{ inputs.weekly != true }}
         run: npm run radar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
 
-      - name: Run radar and force weekly report in rule mode
+      - name: Run radar and force weekly report
         if: ${{ inputs.weekly == true }}
         run: npm run radar:weekly
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
 
       - name: Commit generated intelligence
         run: |
