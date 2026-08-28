@@ -468,7 +468,16 @@ async function analyze(items) {
           angles: Array.isArray(x.angles) ? x.angles.map(String).slice(0, 4) : b.angles
         });
       }
-    } catch (error) { console.warn(`[radar] LLM fallback: ${error.message}`); }
+    } catch (error) {
+      console.warn(`[radar] LLM batch fallback: ${error.message}; retrying items individually`);
+      if (chunk.length > 1) {
+        const recovered = await mapLimit(chunk, 2, async (item) => {
+          const one = await analyze([item]);
+          return one[0];
+        });
+        for (const item of recovered) if (item?.id) out.set(item.id, item);
+      }
+    }
   }
   return [...out.values()];
 }
@@ -486,7 +495,7 @@ async function llm(items) {
         model: process.env.LLM_MODEL, temperature: .15,
         messages: [
           { role: "system", content: "你是个人前沿情报分析员。优先发现新模型/Agent上线、GitHub Trending里的Skill和项目、好用工具网站、效率工作流，其次是美股/币圈可验证的小信号；纯学术论文只保留极少数可能很快改变产品能力的内容。不要因为技术深就给高分，只基于输入，不编造，只返回JSON数组。" },
-          { role: "user", content: `分类只能是：模型 / Agent 上新、Skill / GitHub、工具 / 网站、效率 / 工作流、美股 / 币圈、技术研究、AI 综合。为每条输出 id,category,summary,importance,novelty,relevance,socialPotential,sourceQuality,practicality,researchIntensity,confidence,whyItMatters,whatChanged,angles。评分0-100。practicality重点衡量能否马上试用/省时间/形成内容或商业机会；researchIntensity衡量学术生涩程度。summary只写事实；angles给2-4个适合X/小红书的角度。输入：${JSON.stringify(input)}` }
+          { role: "user", content: `分类只能是：模型 / Agent 上新、Skill / GitHub、工具 / 网站、效率 / 工作流、美股 / 币圈、技术研究、AI 综合。为每条只输出 id,category,summary,whyItMatters,whatChanged,angles 六个字段，不要输出importance等评分字段，评分由程序规则层计算。summary只写事实；whyItMatters用1-2句说明实际价值；angles给2-4个适合X/小红书的具体角度。输入：${JSON.stringify(input)}` }
         ]
       })
     });
