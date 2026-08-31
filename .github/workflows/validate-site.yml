@@ -5,9 +5,6 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-  workflow_run:
-    workflows: ["Update AI intelligence radar"]
-    types: [completed]
 
 permissions:
   contents: read
@@ -20,7 +17,6 @@ concurrency:
 
 jobs:
   validate-and-build:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -52,7 +48,7 @@ jobs:
           path: dist
 
   deploy:
-    if: github.event_name != 'pull_request' && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
+    if: github.event_name != 'pull_request'
     needs: validate-and-build
     runs-on: ubuntu-latest
     environment:
