@@ -1,70 +1,17 @@
 name: Update AI intelligence radar
 
 on:
-  schedule:
-    # 每天北京时间 08:30 自动刷新（GitHub Actions cron 使用 UTC）
-    - cron: "30 0 * * *"
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/radar.yml"
   workflow_dispatch:
-    inputs:
-      weekly:
-        description: "Force weekly report"
-        required: false
-        default: false
-        type: boolean
 
 permissions:
-  contents: write
-
-concurrency:
-  group: ai-intelligence-radar
-  cancel-in-progress: true
+  contents: read
 
 jobs:
-  radar:
+  deprecated:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - name: Run daily radar
-        if: ${{ inputs.weekly != true }}
-        run: npm run radar
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
-          LLM_MODEL: ${{ secrets.LLM_MODEL }}
-
-      - name: Run radar and force weekly report
-        if: ${{ inputs.weekly == true }}
-        run: npm run radar:weekly
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
-          LLM_MODEL: ${{ secrets.LLM_MODEL }}
-
-      - name: Commit generated intelligence
+      - name: Legacy radar disabled
         run: |
-          git config user.name "BLTS AI Radar"
-          git config user.email "actions@users.noreply.github.com"
-          git add radar-data scripts/radar.mjs
-          if git diff --cached --quiet; then
-            echo "No radar changes to commit."
-            exit 0
-          fi
-          git commit -m "前沿部：更新 AI 情报雷达"
-          git pull --rebase origin main
-          git push
+          echo "Legacy automated radar is disabled."
+          echo "Current rule: when the user asks for X 情报雷达 / 雷达, ChatGPT must use its own web research capabilities and directly update the 前沿部 radar data in the repository."
+          echo "Do not use DragonCode or any external LLM API for radar generation."
