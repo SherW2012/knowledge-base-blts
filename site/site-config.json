@@ -43,18 +43,18 @@
       "apps": [
         {
           "id": "ai-radar",
-          "title": "AI 情报雷达",
-          "eyebrow": "INTELLIGENCE RADAR",
-          "description": "每日自动扫描 AI 信息源，完成去重聚类、价值评分，并把高价值情报送入选题池。",
+          "title": "X 情报雷达",
+          "eyebrow": "X INTELLIGENCE RADAR",
+          "description": "由 ChatGPT 使用自身 Web 搜索能力抓取、交叉验证和筛选近期 X / AI 高信号情报；由对话触发更新，不调用 DragonCode 或其他外部 LLM API。",
           "mark": "RADAR",
           "status": "live",
           "renderer": "ai-radar",
           "contentPath": "AI情报雷达",
           "capabilities": [
-            "每日自动扫描",
-            "Top 15",
-            "选题池",
-            "信息源管理"
+            "ChatGPT Web 搜索",
+            "近期高信号情报",
+            "去重与核验",
+            "选题池"
           ]
         }
       ]
