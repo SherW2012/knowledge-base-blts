@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+  <rect width="1200" height="620" fill="#f7f8fa"/>
+  <text x="600" y="46" text-anchor="middle" font-size="30" font-family="sans-serif" fill="#111827">RISC：Load / Store 与寄存器执行路径</text>
+  <rect x="70" y="160" width="250" height="230" rx="24" fill="#ffffff" stroke="#64748b" stroke-width="3"/>
+  <text x="195" y="210" text-anchor="middle" font-size="25" font-family="sans-serif" fill="#111827">主存 / Cache</text>
+  <text x="195" y="255" text-anchor="middle" font-size="20" font-family="sans-serif" fill="#475569">A</text>
+  <text x="195" y="295" text-anchor="middle" font-size="20" font-family="sans-serif" fill="#475569">B</text>
+  <text x="195" y="335" text-anchor="middle" font-size="20" font-family="sans-serif" fill="#475569">C</text>
+  <rect x="475" y="115" width="250" height="320" rx="24" fill="#ffffff" stroke="#334155" stroke-width="3"/>
+  <text x="600" y="165" text-anchor="middle" font-size="25" font-family="sans-serif" fill="#111827">CPU寄存器</text>
+  <rect x="525" y="205" width="150" height="48" rx="10" fill="#eef2ff" stroke="#6366f1"/>
+  <text x="600" y="237" text-anchor="middle" font-size="20" font-family="sans-serif">R1 = A</text>
+  <rect x="525" y="273" width="150" height="48" rx="10" fill="#eef2ff" stroke="#6366f1"/>
+  <text x="600" y="305" text-anchor="middle" font-size="20" font-family="sans-serif">R2 = B</text>
+  <rect x="525" y="341" width="150" height="48" rx="10" fill="#eef2ff" stroke="#6366f1"/>
+  <text x="600" y="373" text-anchor="middle" font-size="20" font-family="sans-serif">R3 = 结果</text>
+  <rect x="875" y="190" width="250" height="190" rx="24" fill="#ffffff" stroke="#0f766e" stroke-width="3"/>
+  <text x="1000" y="240" text-anchor="middle" font-size="25" font-family="sans-serif" fill="#111827">ALU</text>
+  <text x="1000" y="290" text-anchor="middle" font-size="22" font-family="sans-serif" fill="#0f766e">ADD / AND / CMP</text>
+  <text x="1000" y="330" text-anchor="middle" font-size="18" font-family="sans-serif" fill="#475569">主要对寄存器操作数运算</text>
+  <line x1="320" y1="235" x2="475" y2="235" stroke="#2563eb" stroke-width="5" marker-end="url(#arrow)"/>
+  <text x="397" y="215" text-anchor="middle" font-size="19" font-family="sans-serif" fill="#2563eb">LOAD</text>
+  <line x1="475" y1="365" x2="320" y2="365" stroke="#7c3aed" stroke-width="5" marker-end="url(#arrow2)"/>
+  <text x="397" y="345" text-anchor="middle" font-size="19" font-family="sans-serif" fill="#7c3aed">STORE</text>
+  <line x1="725" y1="285" x2="875" y2="285" stroke="#0f766e" stroke-width="5" marker-end="url(#arrow3)"/>
+  <line x1="875" y1="330" x2="725" y2="330" stroke="#0f766e" stroke-width="5" marker-end="url(#arrow4)"/>
+  <rect x="160" y="475" width="880" height="90" rx="18" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="600" y="515" text-anchor="middle" font-size="22" font-family="sans-serif" fill="#92400e">RISC常见思路：内存访问交给 Load / Store，算术逻辑运算主要在寄存器之间完成</text>
+  <text x="600" y="548" text-anchor="middle" font-size="18" font-family="sans-serif" fill="#92400e">指令更规整，便于译码和流水线；并不意味着现代RISC只能这样实现</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#2563eb"/></marker>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#7c3aed"/></marker>
+    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#0f766e"/></marker>
+    <marker id="arrow4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#0f766e"/></marker>
+  </defs>
+</svg>
