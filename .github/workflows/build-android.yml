@@ -30,6 +30,20 @@ jobs:
       - name: Install Android SDK packages
         run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
 
+      - name: Download official QooBee icon
+        env:
+          QOOBEE_ICON_URL: 'https://play-lh.googleusercontent.com/CEzIHSLbuE1wzleiwx2m9FuxS60YPh1xIKMKtKJ-hgft-wE-AkSFjlgqsBdVO-fekZyHRFler4xX37IU4q5iOA=w240-h480'
+        run: |
+          python -m pip install --quiet pillow
+          curl --fail --location "$QOOBEE_ICON_URL" --output /tmp/qoobee-icon
+          mkdir -p mobile/android/app/src/main/res/drawable
+          python - <<'PY'
+          from PIL import Image, ImageOps
+          img = Image.open('/tmp/qoobee-icon').convert('RGBA')
+          img = ImageOps.fit(img, (512, 512), method=Image.Resampling.LANCZOS)
+          img.save('mobile/android/app/src/main/res/drawable/app_icon.png', 'PNG')
+          PY
+
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
@@ -40,11 +54,11 @@ jobs:
         run: gradle :app:assembleDebug
 
       - name: Rename APK
-        run: cp mobile/android/app/build/outputs/apk/debug/app-debug.apk BLTS-v1.0.0.apk
+        run: cp mobile/android/app/build/outputs/apk/debug/app-debug.apk BLTS-v1.0.1-QooBee.apk
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: BLTS-v1.0.0-apk
-          path: BLTS-v1.0.0.apk
+          name: BLTS-v1.0.1-QooBee-apk
+          path: BLTS-v1.0.1-QooBee.apk
           retention-days: 90
