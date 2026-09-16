@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 3,
+  "status": "ok",
+  "generatedAt": "2026-09-16T07:56:00Z",
+  "date": "2026-09-16",
+  "timezone": "Asia/Shanghai",
+  "focus": "x-useful-viral-actionable",
+  "research": {
+    "mode": "X Radar Execution Prompt v2 + major-product dual-track",
+    "provider": "ChatGPT Web + GitHub Connector",
+    "model": "GPT-5.6 Sol",
+    "externalLlmApi": false,
+    "windowStart": "2026-09-15T15:56:00+08:00",
+    "windowEnd": "2026-09-16T15:56:00+08:00",
+    "notes": [
+      "本轮双通道扫描：一边覆盖 GitHub Trending、Skill、Vibe Coding、开源工具，一边独立检查官方重大模型、产品和平台发布，避免再漏 Siri AI 类型事件。",
+      "GitHub 原生 Daily 页面在公开抓取时仍显示旧缓存，改用带 2026-09-16 日期的当日 Trending 快照发现候选，并返回 GitHub 官方 README 核对；未冒称直接获得原生页面实时 stars today。",
+      "9 月 15 日已发布 Siri AI、ElevenLabs MCP、Agent-Reach、VoiceStudio、Bolt Forge、Cline Desktop、Perplexity Portable Computer Windows、shadcn/lint、Oats、Sunk Cost、OpenCodeReview，本轮不重复。",
+      "Gemini 3.8 Live 系列由 Google Gemini API 官方更新日志确认 9 月 15 日 GA；是面向开发者 Live API 的音频模型，不误写成所有 Gemini App 用户已自动开放。",
+      "Anthropic 9 月 15 日新增 43 个小企业工作流和 27 个新集成；Salesforce in Claude 是另一项 37 个销售 Skills 的 beta，限获得 Salesforce 批准的组织及 Claude 付费计划，二者不混为一条。",
+      "Product Hunt 9 月 15 日榜单覆盖本轮窗口，Kilo Mobile、tiun、Voiskey 和创业 Skills 以当日产品发布/传播为新鲜度；涉及收费模式以官方为准，不夸大免费。",
+      "Capsule 本轮 Show HN 热度高，确认桌面 macOS/Windows/Linux 免费播放器、单文件 SQLite 容器及 AI 创建功能；iOS/Android 仍未上线。",
+      "AI HOT 公开直读出现错误；Reddit 和 X 的公开结果不能覆盖完整 24h，均诚实标记 partial，不能以其他新闻聚合站冒充。",
+      "GitHub Trending 中前日已经刊发或纯底层基础设施项目去重/淘汰；最终 11 条，不设置工具占比硬指标。"
+    ]
+  },
+  "stats": {"configuredSources": 11, "automatedSources": 0, "manualSources": 11, "successfulSources": 8, "failedSources": 0, "publishedItems": 11, "researchItems": 11},
+  "sourceRuns": [
+    {"id":"src-github","name":"GitHub Trending / Repos","tier":"S","kind":"web_research","status":"ok","items":3},
+    {"id":"src-major","name":"重大产品 / 平台事件","tier":"S","kind":"web_research","status":"ok","items":3},
+    {"id":"src-official","name":"官方 / 原项目一手源","tier":"S","kind":"verification","status":"ok","items":11},
+    {"id":"src-hn","name":"Hacker News","tier":"S","kind":"web_research","status":"ok","items":1},
+    {"id":"src-ph","name":"Product Hunt","tier":"S","kind":"web_research","status":"ok","items":4},
+    {"id":"src-aihot","name":"AI HOT","tier":"S","kind":"discovery","status":"partial","items":0},
+    {"id":"src-reddit","name":"Reddit","tier":"S","kind":"web_research","status":"partial","items":0},
+    {"id":"src-hf","name":"Hugging Face Trending","tier":"S","kind":"web_research","status":"no-signal","items":0},
+    {"id":"src-pwc","name":"Papers with Code / HF Papers","tier":"S","kind":"web_research","status":"no-signal","items":0},
+    {"id":"src-newsletter","name":"AI Newsletter / 日更聚合","tier":"A","kind":"discovery","status":"ok","items":0},
+    {"id":"src-x","name":"X 原生情报网","tier":"S","kind":"web_research","status":"partial","items":0}
+  ],
+  "sources": [
+    {"id":"src-github","name":"GitHub Trending / Repos","tier":"S","kind":"web_research","url":"https://github.com/trending?since=daily","tags":["github","open-source","top-priority"],"note":"优先检查；原生公开页面缓存滞后，使用 9 月 16 日按日更新的 Trending 快照找候选，回 GitHub 原仓核验 Addy Skills、Atlas、OpenResearch。部分其他项目已在旧 archive，剔除。"},
+    {"id":"src-major","name":"重大产品 / 平台事件","tier":"S","kind":"web_research","url":"https://ai.google.dev/gemini-api/docs/changelog","tags":["must-not-miss","consumer","platform"],"note":"独立检查 Google Gemini 3.8 Live、Anthropic 小企业工作流和 Salesforce in Claude 等实质上线，不按开源与否过滤。"},
+    {"id":"src-official","name":"官方 / 原项目一手源","tier":"S","kind":"verification","url":"https://claude.com/blog","tags":["primary","verification"],"note":"通过 Google API 更新日志、Anthropic 博客/帮助中心、Kilo 博客、Capsule、tiun、Voiskey 产品页及 GitHub 官方 README 交叉核对可用性和成本。"},
+    {"id":"src-hn","name":"Hacker News","tier":"S","kind":"web_research","url":"https://news.ycombinator.com/show","tags":["community","discovery"],"note":"本轮 Show HN 中 Capsule 热度明显，原始发布时间 9 月 15 日 13:31 UTC，位于北京时间本轮窗口内；回官方核验。"},
+    {"id":"src-ph","name":"Product Hunt","tier":"S","kind":"web_research","url":"https://www.producthunt.com/leaderboard/daily/2026/9/15","tags":["products","launch"],"note":"9 月 15 日榜单同本轮窗口重叠；入选 Kilo Mobile、tiun、Voiskey、Minimalist Entrepreneur Skills，均有官方产品或仓库说明。"},
+    {"id":"src-aihot","name":"AI HOT","tier":"S","kind":"discovery","url":"https://aihot.news/","tags":["x-index","partial"],"note":"本轮直接打开出现错误，公开索引不能可靠覆盖 24h，标 partial。"},
+    {"id":"src-reddit","name":"Reddit","tier":"S","kind":"web_research","url":"https://www.reddit.com/r/LocalLLaMA/new/","tags":["community","partial"],"note":"可见部分公开帖子但无法全面查证时间窗，partial，不声称完整扫描。"},
+    {"id":"src-hf","name":"Hugging Face Trending","tier":"S","kind":"web_research","url":"https://huggingface.co/models?sort=trending","tags":["models"],"note":"已检查热门模型，暂无比本轮可体验产品更有用户获取感的新增候选。"},
+    {"id":"src-pwc","name":"Papers with Code / HF Papers","tier":"S","kind":"web_research","url":"https://huggingface.co/papers/trending","tags":["papers"],"note":"已检查，未发现同时满足当日新鲜度和直接演示/使用价值的候选。"},
+    {"id":"src-newsletter","name":"AI Newsletter / 日更聚合","tier":"A","kind":"discovery","url":"https://ai.tldr.tech/","tags":["coverage-check"],"note":"复查 TLDR AI 和 9 月 16 日日更聚合源做漏报比对，原始事件时间与事实仍以官网/产品方为准。"},
+    {"id":"src-x","name":"X 原生情报网","tier":"S","kind":"web_research","url":"https://x.com/","tags":["x","partial"],"note":"公开 X 原生搜索不稳定，未能完整覆盖 24h，标 partial。"}
+  ],
+  "items": [
+    {
+      "id":"x-20260916-01","title":"Google 正式发布 Gemini 3.8 Live：边语音聊天边后台思考、调用工具，不用等 AI 想完再说话","url":"https://ai.google.dev/gemini-api/docs/changelog","publishedAt":"2026-09-15","category":"大事件 / Google / 语音 Agent","summary":"Google 9 月 15 日确认 Gemini 3.8 Live 与 3.8 Live Extended Thinking 两款实时音频到音频模型正式 GA。标准版适合低延迟语音对话，支持交错推理、默认异步函数调用；Extended Thinking 可在实时音频交互中后台推理。它们是 Gemini Live API 的开发者模型，不能说所有 Gemini App 用户已直接切换。","whyItMatters":"做实时语音客服、AI 语音助手和语音操控 App 的开发者，可让 AI 在对话不中断时查数据或继续推理；普通用户可直观看到语音 Agent 的体验变化。","angles":["Gemini 3.8 Live 正式发布：你和 AI 说话时，它可以同时思考和查工具","Google 的新语音 Agent 不再只能‘听完—想完—再开口’，现在可以并行处理任务"],"source":{"id":"src-major","name":"Google Gemini API Release Notes","tier":"S","kind":"primary"},"relatedSources":[{"name":"Live API Docs","url":"https://ai.google.dev/gemini-api/docs/live"}],"practicality":94,"socialPotential":97,"novelty":98,"importance":98,"radarScore":96
+    },
+    {
+      "id":"x-20260916-02","title":"Claude 给一人公司配好 43 套工作流和 27 个新集成：Shopify、Stripe、TikTok、Zapier 都能接","url":"https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs","publishedAt":"2026-09-15","category":"大事件 / Claude / 一人公司","summary":"Anthropic 9 月 15 日更新 Claude for Small Business，提供 43 套预置工作流与 27 个新增集成，覆盖 Shopify、Salesforce、TikTok、Stripe、Zapier、Zoom 等；包括线索跟进、客户沟通、销售及财务流程，另有培训活动。工作流可使用 Claude 付费计划；对外发送或付款等动作仍须按流程确认，不是全自动无人值守。","whyItMatters":"做独立产品、咨询服务或小店的人不必从零设计全部 Prompt 和自动化：先从现成的业务工作流选一套，再接自己实际使用的软件。","angles":["Anthropic 直接给小公司打包了 43 套 AI 工作流：线索、客服、财务、营销都覆盖","做一人公司不用先成为 Agent 工程师：Claude 的业务工作流现在能直接接 Shopify 和 Stripe"],"source":{"id":"src-major","name":"Anthropic / Claude for Small Business","tier":"S","kind":"primary"},"relatedSources":[],"practicality":97,"socialPotential":96,"novelty":96,"importance":94,"radarScore":96
+    },
+    {
+      "id":"x-20260916-03","title":"手机终于能直接跑 Coding Agent 了：Kilo 发布 iOS / Android App，发任务、看 Diff、审 PR","url":"https://blog.kilo.ai/p/kilo-mobile-update-run-your-engineering","publishedAt":"2026-09-15","category":"Product Hunt / 移动端 Agent / Coding","summary":"Kilo Mobile 9 月 15 日随 Product Hunt 发布新版 iOS 与 Android 应用。手机上可以启动远端会话或 Cloud Agent，选择 GitHub 仓库与分支，跟进任务，查看代码变更，评论和审核 PR。iPhone 的实时活动与 Android 通知可提示 Agent 进度；实际代码执行发生在云端或已连接远程机器，并非手机本地运行整个模型。Kilo 源码开放，远程/模型资源成本依所选服务。","whyItMatters":"坐地铁或在外面不方便开电脑，也能把需求交给 Coding Agent、收到审查请求后看差异和回复，不用等回到桌面才继续开发。","angles":["手机也能开 Coding Agent 了：iPhone 上发任务，Agent 干活，你看 PR 再决定合不合并","Kilo 的新手机 App 终于把‘远程启动—审代码—继续下一轮’串成完整工作流"],"source":{"id":"src-ph","name":"Kilo Code / Official Product Hunt Launch","tier":"S","kind":"launch-primary"},"relatedSources":[{"name":"Product Hunt","url":"https://www.producthunt.com/products/kilocode"}],"practicality":99,"socialPotential":98,"novelty":96,"importance":95,"radarScore":97
+    },
+    {
+      "id":"x-20260916-04","title":"Show HN 爆火：AI 做的网页可以打包成一个文件发微信，数据库跟着走，不用服务器","url":"https://withcapsule.app/","publishedAt":"2026-09-15T21:31:40+08:00","category":"Hacker News / Vibe Coding / 本地应用","summary":"Capsule 在本轮 Show HN 发布并获得数百 points。它把 HTML UI、素材和 SQLite 数据放进单个 .capsule 文件，AI 可根据描述生成和修改小应用；macOS、Windows、Linux 有免费的桌面播放器，可离线使用，也可把文件当文档分享。网页预览版不能直接操作本机文件，iOS 与 Android 播放器仍是 Coming Soon。","whyItMatters":"用 AI 随手写一个客户登记表、旅行清单或个人小工具，不必先部署服务器和数据库：打包成文件发给别人，对方用 Capsule 播放器打开就能用。","angles":["现在连网站都可以像 Word 文档一样发给别人：一个文件连 SQLite 数据库一起带走","Vibe Coding 做的小工具不想部署？Show HN 这个 Capsule 直接打包成文件分享"],"source":{"id":"src-hn","name":"Show HN / Capsule","tier":"S","kind":"community-primary"},"relatedSources":[{"name":"Official product","url":"https://withcapsule.app/"}],"practicality":96,"socialPotential":99,"novelty":99,"importance":90,"radarScore":96
+    },
+    {
+      "id":"x-20260916-05","title":"Salesforce 直接装进 Claude：37 个销售 Skills，准备客户电话、查商机、更新 CRM","url":"https://claude.com/blog/salesforce-in-claude","publishedAt":"2026-09-15","category":"大事件 / Claude / 销售自动化","summary":"Anthropic 9 月 15 日推出 Salesforce in Claude beta，内置 37 项销售 Skills，可在 Claude 中查询客户、商机、销售管道，准备会议、制作预测，获得用户批准后写回 Salesforce。Beta 面向获得 Salesforce 批准的组织和 Claude 付费计划，并非所有用户现已开放。","whyItMatters":"依赖 Salesforce 跑销售的团队可以少在 CRM 页面和聊天工具之间来回跳，把查数据、准备电话、整理和更新商机集中在一个对话入口。","angles":["Claude 终于能直接操作 Salesforce 了：37 个销售 Skills，从客户研究到 CRM 回写","销售不用先打开十个报表，先问 Claude，再决定是否批准它更新商机"],"source":{"id":"src-major","name":"Anthropic / Salesforce in Claude","tier":"S","kind":"primary"},"relatedSources":[{"name":"Availability","url":"https://support.claude.com/en/articles/12138966-release-notes"}],"practicality":91,"socialPotential":94,"novelty":97,"importance":94,"radarScore":94
+    },
+    {
+      "id":"x-20260916-06","title":"Vibe Coding 最后一公里：tiun 把登录、订阅、按量收费、税务和收款做成一个服务","url":"https://tiun.io/","publishedAt":"2026-09-15","category":"Product Hunt / AI 变现 / 轻量 SaaS","summary":"tiun 于 9 月 15 日在 Product Hunt 发布，把身份登录、客户数据库、结账、订阅、一次性与按量收费集中处理，提供 SDK/MCP 和 Merchant of Record 模式。官方基础平台标示可免费使用，但收款不是免费：官网列出交易费、订阅处理费、提现费和争议费，另有付费分析功能；具体费率及支持地区以官网为准。","whyItMatters":"用 AI 做出第一个 SaaS 后，经常卡在注册登录、支付订阅、开票税务。它提供一个集成入口，但选型时要把手续费算进毛利，不能只看‘Free’标签。","angles":["Vibe Coding 做完网站想开始收费？这个新品把登录、Stripe 式订阅和税务一次接上","AI 做产品最麻烦的不是生成页面，是用户登录和钱到底怎么收：tiun 正在做这部分"],"source":{"id":"src-ph","name":"Product Hunt / tiun","tier":"A","kind":"launch"},"relatedSources":[{"name":"Pricing","url":"https://tiun.io/pricing"}],"practicality":95,"socialPotential":95,"novelty":91,"importance":95,"radarScore":94
+    },
+    {
+      "id":"x-20260916-07","title":"GitHub 当日 Trending：Addy Osmani 整理 25 个生产级 Agent Skills，从 PRD 到上线一条命令安装","url":"https://github.com/addyosmani/agent-skills","publishedAt":"2026-09-16","category":"GitHub Trending / Skills / AI Coding","summary":"Addy Osmani 的 agent-skills 本轮进入 9 月 16 日 GitHub Daily Trending 快照。仓库提供 25 个工程 Skills 与 /spec、/plan、/build、/test、/review、/ship 等命令，通过 npx skills add addyosmani/agent-skills 安装，覆盖 Claude Code、Cursor、Codex 等；是免费公开的可复制流程，但部分 Coding Agent 本身有订阅或模型费用。今日新鲜度来自 Trending 信号，不谎称仓库今天刚创建。","whyItMatters":"已经在用 Coding Agent 的人可以直接装一套成型的需求、编码、验证和发布步骤，减少每个项目都重写提示词、忘记验收或遗漏质量门槛。","angles":["别再给 Coding Agent 塞 100 行提示词了：25 个 Skills 把 PRD、测试、Review、发布拆好了","GitHub 今天这套工程 Skills 很实用：一个 npx 命令给 Claude Code / Codex 配全流程"],"source":{"id":"src-github","name":"GitHub Daily Trending / addyosmani/agent-skills","tier":"S","kind":"trending-primary"},"relatedSources":[],"practicality":99,"socialPotential":95,"novelty":91,"importance":94,"radarScore":96
+    },
+    {
+      "id":"x-20260916-08","title":"Atlas：Claude Code 和 Codex 共用一份记忆，每次代码提交还能追溯是哪轮 Agent 改的","url":"https://github.com/pacifio/atlas","publishedAt":"2026-09-16","category":"GitHub Trending / Agent 记忆 / 开发工作台","summary":"Atlas 本轮出现在 9 月 16 日 GitHub Daily Trending 快照。它把 Git commit 与执行该改动的 Agent 会话、提示词、工具调用、文件修改关联起来，并在 Claude Code、Codex 等不同 Agent 间共享本地上下文；Windows 和 macOS 有安装包，本地模式可离线且无需账号，提供 MIT 开源路径。模型的原有订阅或调用费用不由 Atlas 免除。","whyItMatters":"同一仓库在 Claude Code 和 Codex 之间切换，不必每次重新解释上个 Agent 改了什么；出了问题还可以从 commit 追到对应会话和操作证据。","angles":["Claude Code 改完一半交给 Codex，之前的思路终于不用重新讲一遍了","有了 Atlas，每次 Agent 的 commit 都有‘案底’：是谁改的、看过什么、执行了什么"],"source":{"id":"src-github","name":"GitHub Daily Trending / pacifio/atlas","tier":"S","kind":"trending-primary"},"relatedSources":[{"name":"Site","url":"https://www.tryatlas.cc/"}],"practicality":97,"socialPotential":97,"novelty":94,"importance":93,"radarScore":96
+    },
+    {
+      "id":"x-20260916-09","title":"Gumroad 创始人的《极简创业者》被做成 10 个 Claude Skills：验证想法、做 MVP、找第一批客户、定价","url":"https://github.com/slavingia/skills","publishedAt":"2026-09-15","category":"Product Hunt / 一人公司 / Skill","summary":"Sahil Lavingia 的 The Minimalist Entrepreneur 被整理成 10 个 Claude Code Skills，涵盖找社区、验证需求、做 MVP、手动交付、首批客户、定价、内容营销和审查商业决策。9 月 15 日在 Product Hunt 作为新品传播；官方仓库公开安装命令 /plugin marketplace add slavingia/skills 与 /plugin install minimalist-entrepreneur。Skills 文件可自行查看，调用模型仍按 Claude 自身方案计费。","whyItMatters":"想靠 AI 做产品变现的人可以直接拿到一套从验证需求到定价获客的操作清单，不用一上来就把 SaaS 做满功能再想谁来买。","angles":["Gumroad 创始人把创业方法做成了 10 个 Claude Skills：从想法验证到第一批客户直接照着做","你用 AI 把网站做出来了，下一步怎么卖？这套免费创业 Skills 刚好补上"],"source":{"id":"src-ph","name":"Product Hunt / Minimalist Entrepreneur Skills","tier":"A","kind":"launch"},"relatedSources":[{"name":"GitHub README","url":"https://github.com/slavingia/skills"}],"practicality":98,"socialPotential":95,"novelty":95,"importance":94,"radarScore":96
+    },
+    {
+      "id":"x-20260916-10","title":"Voiskey 新品：对着手机随便说一段话，它按微信聊天、工作邮件或 AI Prompt 自动整理成合适语气","url":"https://www.producthunt.com/products/voiskey","publishedAt":"2026-09-15","category":"Product Hunt / AI 输入法 / 语音","summary":"Voiskey 9 月 15 日在 Product Hunt 推出语音输入产品，支持 iOS、macOS、Android、Windows 及官方宣称的 100 多种语言。它不是简单逐字听写，而是按正在输入的场景整理口语、去掉口头禅、适配聊天/邮件/AI Prompt，并可记住用户修正的术语。官方称免费入门、上线活动提供一月 Pro 试用；具体长期免费额度需以应用页面为准。","whyItMatters":"发消息或写提示词不用先把脑子里的半成品整理成文字：直接说出来，让工具按目标场景整理，再由自己检查发送。","angles":["AI 输入法又有新玩法：同一句口语，发微信和写工作邮件会自动用不同语气","不想再一个字一个字敲 Prompt？Voiskey 让你先乱讲一遍，再整理成能直接发的文字"],"source":{"id":"src-ph","name":"Product Hunt / Voiskey","tier":"A","kind":"launch"},"relatedSources":[{"name":"iOS App","url":"https://apps.apple.com/us/app/voiskey-ai-voice-typing/id6766791501"}],"practicality":96,"socialPotential":97,"novelty":91,"importance":89,"radarScore":94
+    },
+    {
+      "id":"x-20260916-11","title":"OpenResearch 上 GitHub 今日榜：直接把 Claude Code、Codex 变成并行研究实验室","url":"https://github.com/alphaXiv/OpenResearch","publishedAt":"2026-09-16","category":"GitHub Trending / Deep Research / Agent","summary":"alphaXiv 的 OpenResearch 本轮出现在 9 月 16 日 GitHub Daily Trending 快照。MIT 开源、local-first，把 Claude Code、Codex、OpenCode 或 Cursor 组织成独立研究会话与 Git worktree，用来查论文、提出假设、运行可复现实验、保留日志和报告。macOS 提供桌面版，Windows 为 beta，Linux 可通过 CLI 安装；本地运行无需发布研究项目，选用云端 LLM 或托管算力可能付费。","whyItMatters":"做论文调研、产品技术验证或长期专题研究时，能够并行让不同 Agent 验证不同路线，同时保留每次试验用的代码、资料和结果，避免写完一篇研究报告后证据散落。","angles":["Claude Code 除了写代码，还能当研究员：并行查资料、做实验，所有结果都可追溯","这个开源工具把多个 Codex/Claude 会话变成实验室：研究流程和证据都留在本地"],"source":{"id":"src-github","name":"GitHub Daily Trending / alphaXiv/OpenResearch","tier":"S","kind":"trending-primary"},"relatedSources":[{"name":"Official site","url":"https://openresearch.sh/"}],"practicality":92,"socialPotential":93,"novelty":95,"importance":91,"radarScore":93
+    }
+  ]
+}
