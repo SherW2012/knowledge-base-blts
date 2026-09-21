@@ -1,0 +1,574 @@
+{
+  "schemaVersion": 3,
+  "status": "ok",
+  "generatedAt": "2026-09-21T03:12:00Z",
+  "date": "2026-09-21",
+  "timezone": "Asia/Shanghai",
+  "focus": "x-useful-viral-actionable",
+  "research": {
+    "mode": "X Radar Execution Prompt v2 + major-product dual track",
+    "provider": "ChatGPT Web + GitHub Connector",
+    "model": "GPT-5.6 Sol",
+    "externalLlmApi": false,
+    "windowStart": "2026-09-20T11:12:00+08:00",
+    "windowEnd": "2026-09-21T11:12:00+08:00",
+    "notes": [
+      "严格使用北京时间滚动 24h；9/19、9/20 仓库报告不存在，仍以历史 latest/archive 搜索逐项去重，不拿周末旧闻补数量。",
+      "GitHub Trending 为头等发现源：9/21 GitHub Explore 与带日期趋势监测发现 Laya、Jev Ultrafast、Cua、json-render、Agent-Native、Anthropic Financial Services；旧仓库只以今日热度事件收录，不声称今日首发。",
+      "重大产品通道确认 Qwen-Image-2.1 于 9/20 正式发布；官方权重许可证是 Qwen Research License，限非商业研究/评估，不能误写成可自由商用开源模型。",
+      "Product Hunt 9/20 官方榜单收录 Mycel #1、Minicart #2、Morsa Signals #4；Context.dev Answers 原始官方发布为 9/16，因此不把 9/20 PH 上榜包装成全新功能。",
+      "Thoughtbot 9/21 官方博客确认正式公开其 Agent Skills 集合，为本轮真正今日发布。",
+      "AI HOT 首页直读超时，记 error；Reddit/X 无法保证完整时间线记 partial；HN 用于发现 Qwen 热度，最终事实回官方。"
+    ]
+  },
+  "stats": {
+    "configuredSources": 11,
+    "automatedSources": 0,
+    "manualSources": 11,
+    "successfulSources": 8,
+    "failedSources": 1,
+    "publishedItems": 11,
+    "researchItems": 11
+  },
+  "sourceRuns": [
+    {
+      "id": "src-github",
+      "name": "GitHub Daily Trending / Repos",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 6
+    },
+    {
+      "id": "src-major",
+      "name": "重大产品/平台事件",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 1
+    },
+    {
+      "id": "src-official",
+      "name": "官方一手核验",
+      "tier": "S",
+      "kind": "verification",
+      "status": "ok",
+      "items": 11
+    },
+    {
+      "id": "src-ph",
+      "name": "Product Hunt Sep20",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 3
+    },
+    {
+      "id": "src-hn",
+      "name": "Hacker News",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 1
+    },
+    {
+      "id": "src-aihot",
+      "name": "AI HOT",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "error",
+      "items": 0
+    },
+    {
+      "id": "src-reddit",
+      "name": "Reddit",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 1
+    },
+    {
+      "id": "src-hf",
+      "name": "Hugging Face Trending",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 2
+    },
+    {
+      "id": "src-pwc",
+      "name": "HF Papers / Papers with Code",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "no-signal",
+      "items": 0
+    },
+    {
+      "id": "src-newsletter",
+      "name": "AI Newsletter / 聚合复查",
+      "tier": "A",
+      "kind": "discovery",
+      "status": "no-signal",
+      "items": 0
+    },
+    {
+      "id": "src-x",
+      "name": "X 原生情报网",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-github",
+      "name": "GitHub Trending / Explore",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://github.com/explore",
+      "tags": [
+        "github",
+        "top-priority"
+      ],
+      "note": "GitHub 今日 Explore + 9/21 带日期星速监测；所有入选项目回官方 README 核验。"
+    },
+    {
+      "id": "src-major",
+      "name": "重大产品发布",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://qwen.ai/blog?id=qwen-image-2.1",
+      "tags": [
+        "model",
+        "consumer",
+        "creator"
+      ],
+      "note": "Qwen-Image-2.1 9/20 一手发布。"
+    },
+    {
+      "id": "src-official",
+      "name": "官方一手核验",
+      "tier": "S",
+      "kind": "verification",
+      "url": "",
+      "tags": [
+        "primary"
+      ],
+      "note": "官方博客、仓库 README/LICENSE、产品帮助与定价。"
+    },
+    {
+      "id": "src-ph",
+      "name": "Product Hunt",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/9/20",
+      "tags": [
+        "launch"
+      ],
+      "note": "Mycel #1、Minicart #2、Morsa Signals #4；旧功能原始发布日期优先。"
+    },
+    {
+      "id": "src-hn",
+      "name": "Hacker News",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://news.ycombinator.com/",
+      "tags": [
+        "community"
+      ],
+      "note": "Qwen Image 2.1 高讨论用于热度发现；事实回 Qwen 官方。"
+    },
+    {
+      "id": "src-aihot",
+      "name": "AI HOT",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://aihot.news/",
+      "tags": [
+        "error"
+      ],
+      "note": "首页请求超时，不能冒充已完整扫描。"
+    },
+    {
+      "id": "src-reddit",
+      "name": "Reddit / LocalLLaMA",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://www.reddit.com/r/LocalLLaMA/new/",
+      "tags": [
+        "partial"
+      ],
+      "note": "Qwen 发布帖可读，但公开搜索不能保证完整 24h。"
+    },
+    {
+      "id": "src-hf",
+      "name": "Hugging Face Trending",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://huggingface.co/models?sort=trending",
+      "tags": [
+        "models"
+      ],
+      "note": "当前榜单含 Laya 与 Qwen-Image-2.1。"
+    },
+    {
+      "id": "src-pwc",
+      "name": "Hugging Face Papers",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://huggingface.co/papers/trending",
+      "tags": [
+        "papers"
+      ],
+      "note": "榜单多为较早论文，未发现比本轮工具/新品更直接的新信号。"
+    },
+    {
+      "id": "src-newsletter",
+      "name": "AI Newsletter / 聚合复查",
+      "tier": "A",
+      "kind": "discovery",
+      "url": "https://ai.tldr.tech/",
+      "tags": [
+        "secondary"
+      ],
+      "note": "用于查漏，不作为最终事实背书。"
+    },
+    {
+      "id": "src-x",
+      "name": "X 原生情报网",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://x.com/",
+      "tags": [
+        "partial"
+      ],
+      "note": "公开检索不能保证完整 24h。"
+    }
+  ],
+  "items": [
+    {
+      "id": "x-20260921-01",
+      "title": "Qwen-Image-2.1 正式放出权重：7B 图像模型原生 2K、透明背景、最多 10 张参考图统一编辑",
+      "url": "https://github.com/QwenLM/Qwen-Image-2.1",
+      "publishedAt": "2026-09-20",
+      "category": "重大发布 / Qwen / 图像生成",
+      "summary": "Qwen 9 月 20 日发布 Qwen-Image-2.1，统一文生图与图片编辑，视觉生成部分 7B 参数，支持原生 RGBA 透明图、2K 分辨率、最多 10 张参考图以及圈选/涂画/Mask 局部编辑。Diffusers、ComfyUI、vLLM-Omni、SGLang 等均提供 Day-0 支持。需要特别注意：官方 LICENSE 是 Qwen Research License，只授权非商业研究与评估；商业使用模型材料需另行取得许可。",
+      "whyItMatters": "做商品图、贴纸、人物一致性、多图合成和透明素材的人可以直接试权重或 ComfyUI 工作流，但拿去做收费产品前必须先解决商业许可。",
+      "angles": [
+        "Qwen-Image-2.1 真开了：7B、原生透明 PNG、一次喂 10 张参考图",
+        "别只写“开源”：Qwen-Image-2.1 权重公开，但默认许可证禁止商用"
+      ],
+      "source": {
+        "id": "src-major",
+        "name": "Qwen official repo/blog + HF Trending",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "Official blog",
+          "url": "https://qwen.ai/blog?id=qwen-image-2.1"
+        },
+        {
+          "name": "Hugging Face",
+          "url": "https://huggingface.co/Qwen/Qwen-Image-2.1"
+        }
+      ],
+      "practicality": 96,
+      "socialPotential": 100,
+      "novelty": 100,
+      "importance": 98,
+      "radarScore": 98
+    },
+    {
+      "id": "x-20260921-02",
+      "title": "Thoughtbot 把团队经验做成 Agent Skills 公开了：TDD、Dependabot 审查、React、设计和咨询流程都能直接装",
+      "url": "https://github.com/thoughtbot/skills",
+      "publishedAt": "2026-09-21",
+      "category": "新发布 / Agent Skills / 工程",
+      "summary": "Thoughtbot 9 月 21 日正式公开内部长期积累的 Agent Skills/Claude Code 插件市场，覆盖 test-driven-development、Dependabot 升级审查、React/Next.js、Rails、设计、咨询等。Claude Code 可订阅 marketplace，其他支持 skills CLI 的 Agent 可用 `npx skills add thoughtbot/skills` 复制本地技能。官方明确称这些技能来自真实项目实践，不是一次性演示。",
+      "whyItMatters": "不用自己从零写工程规范 Prompt，可以直接把成熟咨询公司的 TDD、代码审查和设计流程装进 Agent，再按项目改。",
+      "angles": [
+        "Thoughtbot 把“工程师脑子里的经验”直接做成 Claude Skills 开源了",
+        "Vibe Coding 最容易烂在测试上，他们直接放了一个 TDD Skill"
+      ],
+      "source": {
+        "id": "src-official",
+        "name": "thoughtbot official blog + GitHub",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "Announcement",
+          "url": "https://thoughtbot.com/blog/thoughtbot-s-agent-skills"
+        }
+      ],
+      "practicality": 100,
+      "socialPotential": 97,
+      "novelty": 99,
+      "importance": 94,
+      "radarScore": 98
+    },
+    {
+      "id": "x-20260921-03",
+      "title": "Mycel 拿下 Product Hunt 日榜第一：把服务型一人公司的客户、交付、审批和发票交给 Agent 跑",
+      "url": "https://www.producthunt.com/products/mycel",
+      "publishedAt": "2026-09-20",
+      "category": "Product Hunt / 一人公司 / Agent",
+      "summary": "Mycel 9 月 20 日 Product Hunt 日榜第 1。它面向咨询、设计、代理服务等“卖交付物”的业务：拿一份过去交付样例作为基准，后续任务在一次性沙盒中执行，客户、交付、审批、发票和定时任务集中管理，默认所有对外动作经过人工审批。云版从 $299/月起；官方称核心 kernel 可免费自托管，并在条款中注明 kernel 为 Apache-2.0。官方也明确当前无 SOC2、无特殊类别数据分级，不适合医疗/生物等敏感数据。",
+      "whyItMatters": "对真正想做一人公司的用户，这不是“再做一个聊天机器人”，而是把重复交付流程变成可复用、可审核的 Agent 流水线；同时能直接研究它如何卖高客单价自动化服务。",
+      "angles": [
+        "这可能比“做个 SaaS”更接近一人公司：AI 直接跑客户交付",
+        "Product Hunt 第一 Mycel：$299/月，但核心可以自托管免费"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt Sep20 + Mycel official terms/security",
+        "tier": "S",
+        "kind": "launch-primary"
+      },
+      "relatedSources": [
+        {
+          "name": "Official site",
+          "url": "https://www.mycelai.dev/"
+        },
+        {
+          "name": "Security",
+          "url": "https://www.mycelai.dev/security"
+        }
+      ],
+      "practicality": 96,
+      "socialPotential": 100,
+      "novelty": 98,
+      "importance": 98,
+      "radarScore": 98
+    },
+    {
+      "id": "x-20260921-04",
+      "title": "Minicart：拍一张商品照片就开店，再让 3 个 AI 队友管页面、营销、物流和客服",
+      "url": "https://minicart.com/",
+      "publishedAt": "2026-09-20",
+      "category": "Product Hunt / 电商 / 一人公司",
+      "summary": "Minicart 9 月 20 日 Product Hunt 日榜第 2，面向手工艺、收藏、转售等小卖家。用户可从一张商品照片开始建站，Sloane 管店面/商品，Milo 管营销，Logan 管库存、订单、物流、退款和客服，改动先展示给用户确认。免费计划无月费、AI 队友也可用，但目前卖家仅限美国；免费档每笔标准卡交易费为 6%+$0.30，付费档可降到 2.9%+$0.30 起。",
+      "whyItMatters": "它把“建店 + 日常运营”直接做成对话式工作流，很适合观察 AI 电商如何从建站工具变成真正的运营代理；但国内用户目前不能直接作为卖家落地。",
+      "angles": [
+        "拍张商品照，AI 直接给你开店：Minicart 上线",
+        "免费开店不收月费，但每单 6%+$0.30，这个成本要先算"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt Sep20 + Minicart official/help center",
+        "tier": "S",
+        "kind": "launch-primary"
+      },
+      "relatedSources": [
+        {
+          "name": "Fees",
+          "url": "https://help.minicart.app/en/articles/16149806-what-you-pay-per-sale"
+        }
+      ],
+      "practicality": 91,
+      "socialPotential": 99,
+      "novelty": 97,
+      "importance": 92,
+      "radarScore": 95
+    },
+    {
+      "id": "x-20260921-05",
+      "title": "Morsa Signals：直接帮开发者工具找第一批用户，还顺手检查你的网站能不能被 AI 搜索正确理解",
+      "url": "https://signals.morsa.io/",
+      "publishedAt": "2026-09-20",
+      "category": "Product Hunt / 获客 / GEO",
+      "summary": "Morsa Signals 9 月 20 日 Product Hunt 日榜第 4，核心有 First Users、Contact Search、AI Visibility Audit 和竞品追踪等工作流。它会从公开 GitHub 活动等技术信号里找潜在用户，并给出“为什么适合联系”和个性化开场。官方 First Users/Contact Search 价格为 $29 一次性 100 个联系人、$99 一次性 1000 个联系人（或 500 LinkedIn profiles），另有按量定制；部分竞品/定位工作流有免费入口或 early access。",
+      "whyItMatters": "它正好解决一人公司最难的前半步：产品做出来后第一批用户去哪找，以及你的产品描述能不能被 ChatGPT/AI 搜索准确复述。",
+      "angles": [
+        "别再让我“先找 5 个客户”了：有人专门做了第一批用户搜索器",
+        "除了 SEO，现在连“AI 能不能正确理解你的网站”都有人做成产品了"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt Sep20 + Morsa official",
+        "tier": "S",
+        "kind": "launch-primary"
+      },
+      "relatedSources": [
+        {
+          "name": "First Users pricing",
+          "url": "https://signals.morsa.io/first-users"
+        }
+      ],
+      "practicality": 100,
+      "socialPotential": 100,
+      "novelty": 98,
+      "importance": 97,
+      "radarScore": 99
+    },
+    {
+      "id": "x-20260921-06",
+      "title": "Jev 火了之后，GitHub 今天第一名冒出本地替代 Laya：不用生成文字，直接做 choice / score / yes-no 决策",
+      "url": "https://github.com/NandhaKishorM/laya",
+      "publishedAt": "2026-09-21T11:12:00+08:00",
+      "category": "GitHub Trending / System 1 / 本地模型",
+      "summary": "Laya 在 9 月 21 日 GitHub 趋势监测中约 +2,194 stars/day，同时位列 Hugging Face Trending 前列。它用 ModernBERT/mmBERT 做非自回归 typed decisions：对文本、邮件、工单或 JSON 一次前向直接输出 choice、score、yes/no 概率，不做文本生成；仓库提供 PyPI、Colab 和 Hugging Face 权重，README 标注 Apache-2.0。作者报告 T4 单问题约 33ms、批量约 7.2ms/题，这些是项目自测，不应当作通用性能保证。",
+      "whyItMatters": "Jev 最大门槛之一是 early access/API；Laya 给了一个可本地部署、可看权重、可自己验证的同类思路，适合路由、分类、审批条件和 Agent 快速决策。",
+      "angles": [
+        "Jev 还在排队？GitHub 今天爆了个本地开源替代 Laya",
+        "Agent 不是什么都需要大模型长篇思考：有些决策 30ms 直接给概率"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Sep21 breakout + Laya official repo + HF Trending",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [
+        {
+          "name": "Hugging Face",
+          "url": "https://huggingface.co/convaiinnovations/laya"
+        }
+      ],
+      "practicality": 91,
+      "socialPotential": 99,
+      "novelty": 100,
+      "importance": 94,
+      "radarScore": 96
+    },
+    {
+      "id": "x-20260921-07",
+      "title": "Browser Use 把 Jev 塞进浏览器 Agent：Google Flights 演示 7 秒完成，默认循环甚至不需要截图",
+      "url": "https://github.com/browser-use/jev-ultrafast",
+      "publishedAt": "2026-09-21T11:12:00+08:00",
+      "category": "GitHub Trending / Browser Agent / Jev",
+      "summary": "browser-use/jev-ultrafast 9 月 21 日继续高速 Trending，监测约 +2,174 stars/day。它把页面变成编号控件表，让 Jev 一次请求选 operation + target，仅在 TYPE_TEXT 时调用一个小型文本模型。项目展示 Google Flights Zürich→London 7.073s 的实测录像；6 次配对实验中优化版与基线各 3/3 通过，作者明确说明这只是单任务小样本，不代表通用可靠性。运行仍需要 TypeSafe API Key 和文本模型 API Key，Shadow DOM、iframe、canvas、上传等能力尚有限。",
+      "whyItMatters": "这是 Jev 从“概念模型”落到真实网页操作的最好演示之一，能直接看到结构化决策为何可能比每一步截屏+大模型推理更快。",
+      "angles": [
+        "浏览器 Agent 终于不磨叽了：查一趟 Google Flights 只用了 7 秒",
+        "它快的关键不是更强大模型，而是根本不让大模型每一步看截图"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Sep21 trend + browser-use official repo/performance",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [
+        {
+          "name": "Performance notes",
+          "url": "https://github.com/browser-use/jev-ultrafast/blob/main/docs/performance.md"
+        }
+      ],
+      "practicality": 88,
+      "socialPotential": 100,
+      "novelty": 99,
+      "importance": 94,
+      "radarScore": 95
+    },
+    {
+      "id": "x-20260921-08",
+      "title": "Vercel json-render 再次爆发：让 AI 只生成 JSON，不准乱写 UI 代码",
+      "url": "https://github.com/vercel-labs/json-render",
+      "publishedAt": "2026-09-21T11:12:00+08:00",
+      "category": "GitHub Trending / Generative UI / Vibe Coding",
+      "summary": "Vercel Labs 的 json-render 在 9 月 21 日重新进入 GitHub Trending，监测约 +381 stars/day；最新 v0.21.0 为 9 月 18 日。开发者先定义可用组件和动作 catalog，模型只能返回符合 schema 的 JSON，再由受控 renderer 渲染，避免模型随意生成不受控 JSX/HTML。Apache-2.0，现支持 React、Vue、Svelte、Solid、React Native、Next.js、PDF、邮件、Remotion 视频、3D 和终端界面，内置 36 个 shadcn 组件。",
+      "whyItMatters": "做 Vibe Coding 或动态 AI 界面时，可以同时保留生成式 UI 的灵活性和设计系统/权限的硬约束，特别适合避免页面越改越乱。",
+      "angles": [
+        "Vercel 的办法很直接：AI 可以设计页面，但不准自己写组件",
+        "同一份 AI JSON 能渲染网页、App、PDF、邮件甚至 3D"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Sep21 trend + Vercel Labs repo",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [],
+      "practicality": 98,
+      "socialPotential": 97,
+      "novelty": 94,
+      "importance": 95,
+      "radarScore": 96
+    },
+    {
+      "id": "x-20260921-09",
+      "title": "Builder.io Agent-Native 今日 Trending：Agent 干活和人类 UI 共用同一套 Action，不再靠 AI 点自己的网页",
+      "url": "https://github.com/BuilderIO/agent-native",
+      "publishedAt": "2026-09-21T11:12:00+08:00",
+      "category": "GitHub Trending / Agent App / TypeScript",
+      "summary": "BuilderIO/agent-native 9 月 21 日列入 GitHub Explore Trending。它把每项业务能力定义一次为 action：Agent 作为 tool 调用，人类 UI 从代码里调用同一实现，校验、权限、数据和状态共享；同一个 action 还能暴露为 HTTP、MCP、A2A 和 CLI。框架包含 auth、permissions、skills、memory、automations、agent teams 和 PostgreSQL/PGlite。README 称其为 open-source，但 GitHub 当前未识别明确 License，商业采用前应自行确认许可。",
+      "whyItMatters": "真正做 Agent 产品时，比“让 Agent 操作自己网站按钮”更干净：人和 Agent 走相同业务接口，UI 只负责让用户检查、修改和批准。",
+      "angles": [
+        "Agent 产品不应该让 AI 在自己网页上点按钮：Builder.io 给了另一种架构",
+        "一个 Action 同时给 UI、Agent、MCP、API 用，Agent App 的代码终于不用写两套"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Explore Sep21 + BuilderIO repo",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [],
+      "practicality": 94,
+      "socialPotential": 95,
+      "novelty": 96,
+      "importance": 94,
+      "radarScore": 95
+    },
+    {
+      "id": "x-20260921-10",
+      "title": "Anthropic 金融 Skills 仓库今日 Trending：DCF、LBO、财报、投行 Pitch、KYC 都已经拆成可安装 Agent 工作流",
+      "url": "https://github.com/anthropics/financial-services",
+      "publishedAt": "2026-09-21T11:12:00+08:00",
+      "category": "GitHub Trending / Claude / 金融 Agent",
+      "summary": "Anthropic 官方 financial-services 仓库 9 月 21 日出现在 GitHub Explore Trending。它把投资银行、股票研究、私募、基金运营和财富管理流程做成 Cowork/Claude Code 插件与 Managed Agent 模板，包括 Pitch Agent、Market Researcher、Earnings Reviewer、Model Builder（DCF/LBO/三表）、GL Reconciler、KYC Screener 等，并连接 Morningstar、FactSet、S&P、LSEG、PitchBook 等 MCP。大量数据源需要各自订阅/API 权限；官方明确这些 Agent 只起草分析材料并等待专业人士签核，不执行投资交易。",
+      "whyItMatters": "如果想研究“AI+股票/金融”到底怎么落地，这个仓库比看模型 benchmark 更有用：完整展示了金融工作流如何拆成 Skills、Agent 和数据连接器。",
+      "angles": [
+        "Anthropic 把投行和研究员的工作流直接拆成 Agent Skills 放 GitHub 了",
+        "DCF、LBO、财报更新、KYC：金融 Agent 到底怎么做，可以直接抄架构"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Explore Sep21 + Anthropic official repo",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [],
+      "practicality": 89,
+      "socialPotential": 98,
+      "novelty": 95,
+      "importance": 96,
+      "radarScore": 94
+    },
+    {
+      "id": "x-20260921-11",
+      "title": "Cua 今日 Trending：给 Agent 一台真正可操控的电脑，本地 Mac VM 和云桌面都能跑",
+      "url": "https://github.com/trycua/cua",
+      "publishedAt": "2026-09-21T11:12:00+08:00",
+      "category": "GitHub Trending / Computer Use / Agent",
+      "summary": "trycua/cua 9 月 21 日同时出现在 GitHub Explore 和趋势监测，约 +441 stars/day。项目提供 computer-use Agent 的桌面自动化驱动、隔离云桌面、本地 macOS VM、跨 OS fleet 和 benchmark，可用于训练、评测与真实自动化。核心工具公开在 GitHub，但托管云桌面/模型/算力并不等于全部免费；使用真实账号或桌面时仍应隔离凭证和高风险操作。",
+      "whyItMatters": "需要 Agent 操作 GUI 软件、浏览器之外的桌面应用，或同时跑多个隔离环境时，不必从虚拟机和远程桌面控制层自己搭起。",
+      "angles": [
+        "Browser Agent 之后是 Computer Agent：Cua 直接给 AI 一台可控电脑",
+        "一台电脑跑多个 Agent 太挤？这个项目把本地 VM 和云桌面统一了"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Explore Sep21 + Cua official repo",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [
+        {
+          "name": "Website",
+          "url": "https://cua.ai/"
+        }
+      ],
+      "practicality": 88,
+      "socialPotential": 96,
+      "novelty": 93,
+      "importance": 92,
+      "radarScore": 92
+    }
+  ]
+}
