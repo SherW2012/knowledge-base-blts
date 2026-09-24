@@ -1,0 +1,617 @@
+{
+  "schemaVersion": 3,
+  "status": "ok",
+  "generatedAt": "2026-09-24T02:35:00Z",
+  "date": "2026-09-24",
+  "timezone": "Asia/Shanghai",
+  "focus": "x-useful-viral-actionable",
+  "research": {
+    "mode": "X Radar Execution Prompt v2 + major-product dual track",
+    "provider": "ChatGPT Web + GitHub Connector",
+    "model": "GPT-5.6 Sol",
+    "externalLlmApi": false,
+    "windowStart": "2026-09-23T10:35:00+08:00",
+    "windowEnd": "2026-09-24T10:35:00+08:00",
+    "notes": [
+      "严格按北京时间滚动 24h 执行。9/22 与 9/23 仓库没有独立雷达报告，因此以 9/21 latest/report 与全库关键词搜索做去重，同时不拿 9/22 原始发布在 9/23 的二次宣传冒充新事件。",
+      "重大产品通道确认 9/23 真正新发布：ChatGPT Voice 支持 plugins/connected apps 与 Work 语音执行、Gemini 新一批 Connected Apps、Claude Marketplace。",
+      "时间复核纠偏：GPT-6 Sol/Luna 的 API 原始 changelog 日期为 9/22，GPT-Live-1 API GA 为 9/10；Gemini 3.8 TTS API changelog GA 为 9/22。虽然 9/23 有社区/博客再次传播，本轮按原始事件时间排除。",
+      "GitHub Trending 为头等发现源：video-use 约 +746 stars today、Univer +1,142、Treg +506、PanWatch +95；Google AX +1,543、Agent Substrate +558 等偏底层基础设施按普通用户获得感降权未收。",
+      "Product Hunt 9/23 收录 Solid #1、Naise #2、AgentScore #5、GBrain #8、Speechka、Jev State；Claude Opus 5.5 原始官宣 9/22，虽在 9/23 PH 上榜仍排除。",
+      "Show HN 发现 Parcha AgentRun，9/23 新开源且与 Jev/Agent workflow 高度相关，回官方 GitHub README/LICENSE 核验。",
+      "AI HOT 直读继续超时记 error；Reddit 可读个别当日帖但不能保证完整时间线记 partial；HF Papers 当前热榜多为 9/21 及更早论文，本轮 no-signal。"
+    ]
+  },
+  "stats": {
+    "configuredSources": 11,
+    "automatedSources": 0,
+    "manualSources": 11,
+    "successfulSources": 8,
+    "failedSources": 1,
+    "publishedItems": 14,
+    "researchItems": 14
+  },
+  "sourceRuns": [
+    {
+      "id": "src-github",
+      "name": "GitHub Daily Trending / Repos",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 4
+    },
+    {
+      "id": "src-major",
+      "name": "重大产品/平台事件",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 3
+    },
+    {
+      "id": "src-official",
+      "name": "官方一手核验",
+      "tier": "S",
+      "kind": "verification",
+      "status": "ok",
+      "items": 14
+    },
+    {
+      "id": "src-ph",
+      "name": "Product Hunt Sep23",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 6
+    },
+    {
+      "id": "src-hn",
+      "name": "Hacker News / Show HN",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 1
+    },
+    {
+      "id": "src-aihot",
+      "name": "AI HOT",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "error",
+      "items": 0
+    },
+    {
+      "id": "src-reddit",
+      "name": "Reddit",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0
+    },
+    {
+      "id": "src-hf",
+      "name": "Hugging Face Trending",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "no-signal",
+      "items": 0
+    },
+    {
+      "id": "src-pwc",
+      "name": "HF Papers / Papers with Code",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "no-signal",
+      "items": 0
+    },
+    {
+      "id": "src-newsletter",
+      "name": "AI Newsletter / 聚合复查",
+      "tier": "A",
+      "kind": "discovery",
+      "status": "ok",
+      "items": 0
+    },
+    {
+      "id": "src-x",
+      "name": "X 原生情报网",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-github",
+      "name": "GitHub Daily Trending",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://github.com/trending?since=daily",
+      "tags": [
+        "github",
+        "top-priority"
+      ],
+      "note": "9/24 当日榜单发现候选后逐一回官方 README/LICENSE；历史发过的 financial-services、agent-native 等去重。"
+    },
+    {
+      "id": "src-major",
+      "name": "重大产品/平台发布",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "tags": [
+        "platform",
+        "consumer",
+        "must-not-miss"
+      ],
+      "note": "9/23 OpenAI、Google、Anthropic 官方新事件。"
+    },
+    {
+      "id": "src-official",
+      "name": "官方一手核验",
+      "tier": "S",
+      "kind": "verification",
+      "url": "",
+      "tags": [
+        "primary"
+      ],
+      "note": "官方 release notes/blog、产品定价、GitHub README/LICENSE。"
+    },
+    {
+      "id": "src-ph",
+      "name": "Product Hunt",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/9/23",
+      "tags": [
+        "launch"
+      ],
+      "note": "Solid、Naise、AgentScore、GBrain、Speechka、Jev State 入选；原始发布较早的项目按时间排除。"
+    },
+    {
+      "id": "src-hn",
+      "name": "Hacker News / Show HN",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://news.ycombinator.com/show",
+      "tags": [
+        "community"
+      ],
+      "note": "入选 9/23 Parcha AgentRun，并回官方 repo 核验。"
+    },
+    {
+      "id": "src-aihot",
+      "name": "AI HOT",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://aihot.news/",
+      "tags": [
+        "error"
+      ],
+      "note": "直读超时，不能冒充已完整扫描。"
+    },
+    {
+      "id": "src-reddit",
+      "name": "Reddit / LocalLLaMA",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://www.reddit.com/r/LocalLLaMA/new/",
+      "tags": [
+        "partial"
+      ],
+      "note": "可读取部分 9/23 帖，但公开索引无法保证完整 24h。"
+    },
+    {
+      "id": "src-hf",
+      "name": "Hugging Face Trending",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://huggingface.co/models?period=daily&sort=trending",
+      "tags": [
+        "models"
+      ],
+      "note": "当前热榜无比本轮候选更直接的新 24h 模型事件。"
+    },
+    {
+      "id": "src-pwc",
+      "name": "Hugging Face Papers",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://huggingface.co/papers/trending",
+      "tags": [
+        "papers"
+      ],
+      "note": "高热论文原始发布日期多在 9/21 或更早，本轮不为数量重复。"
+    },
+    {
+      "id": "src-newsletter",
+      "name": "AI Newsletter / 聚合复查",
+      "tier": "A",
+      "kind": "discovery",
+      "url": "https://ai.tldr.tech/",
+      "tags": [
+        "secondary"
+      ],
+      "note": "只用于查漏与时间交叉检查，最终事实回一手来源。"
+    },
+    {
+      "id": "src-x",
+      "name": "X 原生情报网",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://x.com/",
+      "tags": [
+        "partial"
+      ],
+      "note": "公开检索不能保证完整原生 24h 时间线。"
+    }
+  ],
+  "items": [
+    {
+      "id": "x-20260924-01",
+      "title": "ChatGPT Voice 正式接入插件和连接应用：边说边查你的 App，Work 里还能直接做文档、PPT 和浏览器任务",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "publishedAt": "2026-09-23",
+      "category": "重大产品 / OpenAI / Voice / Plugins",
+      "summary": "OpenAI 9 月 23 日更新 ChatGPT：Voice 在 Web、iOS、Android 中正式支持用户账户已有的 plugins 和 connected apps，语音对话中可以直接调用这些应用，书面结果继续显示在聊天里。Voice 同时进入 ChatGPT Work，可用语音要求创建文档、演示文稿、电子表格、调用连接应用或操作浏览器；结束语音通话后，未完成任务可以继续在文本中执行。Free/Go 可在 Chat 中使用其套餐支持的插件；Voice in Work 需要同时具备 Voice 与 Work 访问权限，原有插件权限、审批和额度限制继续生效。",
+      "whyItMatters": "语音不再只是“聊天输入法”，而开始变成真正的操作入口：走路、开会或不方便打字时也能调用已有工具和长任务工作流。",
+      "angles": [
+        "ChatGPT Voice 终于能直接调用插件了：一句话查 App、做表格、跑浏览器",
+        "语音结束任务不会停：Work 能继续在文本里把剩下的活干完"
+      ],
+      "source": {
+        "id": "src-major",
+        "name": "OpenAI ChatGPT release notes",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [],
+      "practicality": 100,
+      "socialPotential": 100,
+      "novelty": 100,
+      "importance": 100,
+      "radarScore": 100
+    },
+    {
+      "id": "x-20260924-02",
+      "title": "Gemini 一口气接上 Airtable、Linear、Adobe、Webflow 等 15+ App：@一下就能跨工具办事",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini/",
+      "publishedAt": "2026-09-23",
+      "category": "重大产品 / Google / Gemini / Connected Apps",
+      "summary": "Google 9 月 23 日开始滚动开放新一批 Gemini Connected Apps。生产力侧包括 Airtable、Linear、monday.com、PandaDoc、Wispr AI、Zoho；创作侧有 Adobe、Picsart、Squarespace、Webflow；生活侧加入 apartments.com、Experian、Peloton、SeatGeek。用户可在 Gemini 设置中连接，也能在对话里 @ 提及或直接描述任务。具体可用能力仍受各连接 App 的账户、权限和地区限制。",
+      "whyItMatters": "Gemini 从“能回答问题”进一步变成跨 SaaS 的统一入口，项目管理、做设计、搭网站不必频繁切页面。",
+      "angles": [
+        "Gemini 今天一次接了十几个 App：Linear、Airtable、Adobe、Webflow 都能 @",
+        "AI 助手真正开始变成软件入口：你说目标，它去不同 App 里做"
+      ],
+      "source": {
+        "id": "src-major",
+        "name": "Google official blog",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [],
+      "practicality": 98,
+      "socialPotential": 100,
+      "novelty": 98,
+      "importance": 99,
+      "radarScore": 99
+    },
+    {
+      "id": "x-20260924-03",
+      "title": "Anthropic 上线 Claude Marketplace：2,000+ 插件/连接器集中上架，Agent 和服务商也能直接卖给 Claude 企业客户",
+      "url": "https://claude.com/blog/claude-marketplace",
+      "publishedAt": "2026-09-23",
+      "category": "重大产品 / Anthropic / Marketplace / Agent Economy",
+      "summary": "Anthropic 9 月 23 日正式上线 Claude Marketplace。当前可发现 2,000+ connectors/plugins，包括 Atlassian、Google、Microsoft、Notion、Salesforce 等；企业客户还能把部分已承诺给 Anthropic 的采购额度用于购买 CrowdStrike、Cursor、Harvey、Lovable、Snowflake 等 Claude-powered 产品。开发者可以用 MCP + Agent Skills 构建 connector/plugin 并申请上架，也可以申请销售 Claude-powered Agent/产品或加入服务商网络。",
+      "whyItMatters": "这不只是插件目录，而是新的 Agent 分发和变现渠道：做 Skill、Connector、Agent 产品的人开始有机会直接触达已经在买 Claude 的企业预算。",
+      "angles": [
+        "Claude Marketplace 正式开门：Skill/Connector 不只是开源项目，开始能卖了",
+        "Anthropic 把企业预算也接进 Marketplace：Agent 生态进入分发阶段"
+      ],
+      "source": {
+        "id": "src-major",
+        "name": "Anthropic official blog",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [],
+      "practicality": 95,
+      "socialPotential": 100,
+      "novelty": 100,
+      "importance": 100,
+      "radarScore": 98
+    },
+    {
+      "id": "x-20260924-04",
+      "title": "Product Hunt 第一 Solid：给 Agent 自己的电脑、账号和预算，你关掉电脑它还会继续把活做完",
+      "url": "https://solid.tech/",
+      "publishedAt": "2026-09-23",
+      "category": "Product Hunt / 一人公司 / Autonomous Agent",
+      "summary": "Solid 9 月 23 日 Product Hunt 日榜第 1。它给 Agent 独立的 Windows/macOS/Linux 电脑、iPhone/Android 设备以及 Google/Apple 账号，并允许在用户设定的预算和审批规则内注册服务、购买工具、搭建缺失集成并持续运行。Agent 可以继续在用户离线时工作，也能再调度 Codex、Claude Code 等子 Agent。官方定价 Starter $40/月、Pro $160/月、Max $640/月，整笔月费进入可用于模型、机器与获批采购的余额；新用户有 $20 试用额度。",
+      "whyItMatters": "它非常接近“数字员工”而不是聊天机器人：有自己的设备、账号和花钱边界，适合研究 OPC 真正能委托出去的业务流程。",
+      "angles": [
+        "这次 Agent 真有自己的电脑和信用卡预算了：你下线它继续干",
+        "Solid 的有意思之处不是模型，而是终于给 Agent 配齐了“工作条件”"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt Sep23 + Solid official",
+        "tier": "S",
+        "kind": "launch-primary"
+      },
+      "relatedSources": [
+        {
+          "name": "Product Hunt",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/9/23"
+        }
+      ],
+      "practicality": 96,
+      "socialPotential": 100,
+      "novelty": 100,
+      "importance": 98,
+      "radarScore": 98
+    },
+    {
+      "id": "x-20260924-05",
+      "title": "Product Hunt 第二 Naise AI：一个 brief 直接跑社媒、图片、达人、PR 和市场研究，不只是给你写几段文案",
+      "url": "https://naise.ai/",
+      "publishedAt": "2026-09-23",
+      "category": "Product Hunt / 一人公司 / AI Marketing",
+      "summary": "Naise AI 9 月 23 日 Product Hunt 日榜第 2，定位为完整营销执行 Agent。用户给一个 brief 后，它能做市场研究、写文案、生成视觉素材、筛选并联系达人、排期发布、做 PR 外联和最终报告；支持 Instagram、TikTok、Facebook、LinkedIn，多语言，并持久保存品牌 voice。Entry $59.90/月含 2 个 campaign，Middle $119/月含 6 个，Advanced $199/月含 16 个；所有档位都包含完整 Agent 套件。3 天免费试用需要先绑卡，试用结束自动计费。",
+      "whyItMatters": "对一人公司或小团队，真正缺的往往不是“再写一段文案”，而是把研究→素材→分发→外联→复盘整个链条执行掉。",
+      "angles": [
+        "AI 营销工具终于不只交作业了：Naise 直接找达人、发内容、投 PR",
+        "一个人做品牌最耗时间的那一串杂活，它想全部包掉"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt Sep23 + Naise official pricing",
+        "tier": "S",
+        "kind": "launch-primary"
+      },
+      "relatedSources": [
+        {
+          "name": "Pricing",
+          "url": "https://naise.ai/pricing"
+        }
+      ],
+      "practicality": 98,
+      "socialPotential": 99,
+      "novelty": 97,
+      "importance": 96,
+      "radarScore": 98
+    },
+    {
+      "id": "x-20260924-06",
+      "title": "Jev State 上线：把一次 AI 对话保存成回归测试，再直接导出 TypeScript、JSON 和 SKILL.md",
+      "url": "https://www.producthunt.com/products/jev-state",
+      "publishedAt": "2026-09-23",
+      "category": "Product Hunt / Jev / Agent Testing",
+      "summary": "Jev State 9 月 23 日上榜 Product Hunt。它用可视化状态和 Jev typed decisions 构建对话工作流，能逐步查看为什么发生状态跳转，把真实会话保存成可重复测试，修改规则后重跑，最终导出 runnable TypeScript、workflow JSON、测试以及给 Coding Agent 使用的 SKILL.md。应用免费开源，支持不需要 Key 的 simulation；真实 Jev 运行需要用户自己的 TypeSafe API Key，并由服务商计费。",
+      "whyItMatters": "Agent 最难测试的是“最终答对了但中间走错路”。它把一次聊天变成测试样本，特别适合客服路由、审批、onboarding 等可枚举状态流程。",
+      "angles": [
+        "Jev 最实用的新玩法来了：把一段聊天直接变成单元测试",
+        "不是只测最终答案，Agent 每一次状态跳转都能回归测试"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt Sep23 / Jev State",
+        "tier": "S",
+        "kind": "launch"
+      },
+      "relatedSources": [],
+      "practicality": 97,
+      "socialPotential": 98,
+      "novelty": 99,
+      "importance": 94,
+      "radarScore": 97
+    },
+    {
+      "id": "x-20260924-07",
+      "title": "AgentScore：每天给生产环境 Agent 打一次总分，终于能回答“它到底是在变好还是变差”",
+      "url": "https://www.producthunt.com/products/latitude-4",
+      "publishedAt": "2026-09-23",
+      "category": "Product Hunt / Agent Evals / Observability",
+      "summary": "Latitude 9 月 23 日发布 AgentScore。接入生产环境 traces 后，它从 outcome、reliability、cost、speed、safety 五个维度自动评估并汇成一个每天更新的质量分数，同时保留拉低分数的真实生产会话，方便定位重复 failure mode，再把证据交给 Coding Agent 修复。Product Hunt 标注 Free / Open Source；需要把生产 Agent 接入 Latitude 才能形成持续评分。",
+      "whyItMatters": "很多团队只有局部 benchmark，却说不清一次 Prompt/模型/工具改动之后产品整体是更好还是更差；日更总分至少给了一条持续回归线。",
+      "angles": [
+        "Agent 上线之后最难的问题：改了一版，到底变好了还是变坏了？",
+        "Latitude 新做的 AgentScore，每天拿真实生产会话给 Agent 体检"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt Sep23 / Latitude",
+        "tier": "S",
+        "kind": "launch"
+      },
+      "relatedSources": [],
+      "practicality": 95,
+      "socialPotential": 94,
+      "novelty": 96,
+      "importance": 94,
+      "radarScore": 95
+    },
+    {
+      "id": "x-20260924-08",
+      "title": "GBrain：Claude Code 记下的东西，ChatGPT / Cursor 也能继续用——给所有 AI 共用一份 Markdown 记忆",
+      "url": "https://gbrain.io/",
+      "publishedAt": "2026-09-23",
+      "category": "Product Hunt / Memory / Multi-Agent",
+      "summary": "GBrain 9 月 23 日 Product Hunt 日榜第 8。它提供一份团队共享、可编辑、可导出的 Markdown 记忆，并把 Gmail、Calendar、Web 等账号连接一次后暴露给不同 AI 使用；例如 Claude Code 写的 note 可以被 ChatGPT 读取，Cursor 也能通过统一层访问连接数据。Explorer 为 $199/月/Workspace，团队不限席位，并包含每月 $100 AI/工具 usage credits；官方称开源部分可自行运行。",
+      "whyItMatters": "多 Agent 最大的隐性成本是背景信息散落在各家记忆里。Markdown 可读可带走至少让“共享上下文”不再完全绑定某一家模型。",
+      "angles": [
+        "Claude、ChatGPT、Cursor 各记各的？GBrain 干脆给它们共用一个脑子",
+        "$199/月不便宜，但“记忆能导出成 Markdown”这个方向很值得抄"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt Sep23 + GBrain official pricing",
+        "tier": "S",
+        "kind": "launch-primary"
+      },
+      "relatedSources": [
+        {
+          "name": "Pricing",
+          "url": "https://gbrain.io/pricing"
+        }
+      ],
+      "practicality": 92,
+      "socialPotential": 97,
+      "novelty": 96,
+      "importance": 94,
+      "radarScore": 94
+    },
+    {
+      "id": "x-20260924-09",
+      "title": "Speechka：你说中文，对方实时听到“还是你声音”的外语，44 种语言直接进 Zoom / Meet / 直播",
+      "url": "https://speechka.io/",
+      "publishedAt": "2026-09-23",
+      "category": "Product Hunt / Voice AI / Translation",
+      "summary": "Speechka 9 月 23 日 Product Hunt 上榜，可在 macOS/Windows 或浏览器里进行 44 种语言的双向实时语音翻译，并用约 10 秒录音建立 Personal Voice，让翻译后的声音保持用户自己的音色。Broadcast 模式可以把译音作为麦克风输入送进 Zoom、Google Meet、Teams、Discord、OBS 等。网页可先试约 5 分钟；正式提供 7 天试用（10 credits），Pro $19.99/月含 180 credits，额外 credits 单买。",
+      "whyItMatters": "跨语言访谈、海外客户电话、直播或远程会议不再需要盯字幕，且比通用合成音更保留本人身份感。",
+      "angles": [
+        "你说中文，对方直接听到“你本人在说英文”：实时翻译又往前走了一步",
+        "Speechka 不是字幕翻译，而是把你的声音实时换成另一种语言"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt Sep23 + Speechka official",
+        "tier": "S",
+        "kind": "launch-primary"
+      },
+      "relatedSources": [],
+      "practicality": 98,
+      "socialPotential": 99,
+      "novelty": 97,
+      "importance": 92,
+      "radarScore": 97
+    },
+    {
+      "id": "x-20260924-10",
+      "title": "GitHub 今日爆发 video-use：把原始视频丢进文件夹，Claude Code / Codex 自己剪停顿、字幕、调色和动画",
+      "url": "https://github.com/browser-use/video-use",
+      "publishedAt": "2026-09-24T10:35:00+08:00",
+      "category": "GitHub Trending / Agent Skill / 视频创作",
+      "summary": "browser-use/video-use 本轮 GitHub Daily Trending 约 +746 stars today，MIT。它把视频编辑做成 Agent Skill：读取 ElevenLabs Scribe 的逐词时间戳和 speaker diarization，删除 filler words/空白，自动调色、加字幕、给 cut 加音频 fade，并可并行生成 Remotion/Manim/HyperFrames 动画，最终在每个切点自检后再输出 final.mp4。支持 Claude Code、Codex、Hermes、OpenClaw 等 shell-capable Agent。项目本身开源，但当前默认转录依赖 ElevenLabs API Key，模型/API 费用另算。",
+      "whyItMatters": "对做 X 视频、教程、访谈或产品演示的人，最机械的剪辑工作可以直接变成一句话任务，而且编辑规则可以留在 Skill 里反复复用。",
+      "angles": [
+        "终于有人把“用 Claude Code 剪视频”做成完整 Skill 了",
+        "它不让大模型看三万帧视频：先把视频压成 12KB 文本再决定怎么剪"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Daily Trending + browser-use repo",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [],
+      "practicality": 100,
+      "socialPotential": 100,
+      "novelty": 99,
+      "importance": 94,
+      "radarScore": 99
+    },
+    {
+      "id": "x-20260924-11",
+      "title": "Univer 今日 +1,100 Star：给 Agent 一套真正可编辑的 Excel / Word / PPT Office Harness",
+      "url": "https://github.com/dream-num/univer",
+      "publishedAt": "2026-09-24T10:35:00+08:00",
+      "category": "GitHub Trending / Office Harness / Agent",
+      "summary": "dream-num/univer 本轮 GitHub Trending 约 +1,142 stars today。核心仓库 Apache-2.0，是一套可嵌入的 Office SDK，覆盖 Spreadsheet、Document、Presentation、Bases、Boards，并能在浏览器和 Node.js headless 环境用同一套 Facade API 处理公式、单元格和文档。官方还维护 Univer Workspace、Univer CLI、DeepSeek Harness、OpenClaw 等 Agent 集成，让人和 Agent 在同一份 Office 内容上创建、检查和修改。",
+      "whyItMatters": "Agent 生成 Office 文件常见问题是“只能导出，无法持续编辑”。Univer 更像把 Excel/Word/PPT 本身变成 Agent 能可靠调用的工作表面。",
+      "angles": [
+        "AI 做 Excel/PPT 终于不是每次重新导出文件：它直接拿到一套 Office Harness",
+        "GitHub 今天暴涨的 Univer，本质上是在把 Office 变成 Agent 的可编程工作区"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Daily Trending + Univer official repo",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [],
+      "practicality": 96,
+      "socialPotential": 98,
+      "novelty": 95,
+      "importance": 96,
+      "radarScore": 96
+    },
+    {
+      "id": "x-20260924-12",
+      "title": "Treg 今日 Trending：一个 Token 调 3,000+ Agent 工具，需要 Semrush / Apollo / 视频模型时按次付费",
+      "url": "https://github.com/superdesigndev/treg",
+      "publishedAt": "2026-09-24T10:35:00+08:00",
+      "category": "GitHub Trending / Agent Tools / API Router",
+      "summary": "superdesigndev/treg 本轮 GitHub Trending 约 +506 stars today。它把自己定位成“OpenRouter for tools”：一个 base URL + token 接入 60+ providers、3,000+ endpoints，覆盖 SEO、社媒趋势、联系人 enrichment、广告、抓取、图片/视频生成等；没有供应商账号时可以用 Treg 自己的账户按 call 付费，已有自己的 API Key 则优先走自己的凭据且不收 Treg balance。新符合条件的 team 有 $1 credit。源码可 self-host，但许可证在 Apache-2.0 之上增加了 hosted-service 限制：未经授权不能把它再做成对第三方收费的 SaaS/托管服务。",
+      "whyItMatters": "Agent 做真实业务时经常为了偶尔调用一次数据服务被迫开月费；按调用买工具能力，比每家 API 都注册订阅更适合长尾任务。",
+      "angles": [
+        "OpenRouter 解决模型路由，有人开始做“OpenRouter for Tools”了",
+        "Agent 偶尔查一次 Apollo/Semrush，不值得订 $100/月：Treg 按次付"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Daily Trending + Treg repo/license",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [],
+      "practicality": 97,
+      "socialPotential": 99,
+      "novelty": 99,
+      "importance": 94,
+      "radarScore": 98
+    },
+    {
+      "id": "x-20260924-13",
+      "title": "Show HN 新项目 AgentRun：固定步骤用代码和 Jev，真需要调查时才叫大 Agent，避免每一步都烧 Agent Loop",
+      "url": "https://github.com/Parcha-ai/agentrun",
+      "publishedAt": "2026-09-23",
+      "category": "Show HN / Jev / Agent Workflow",
+      "summary": "Parcha 9 月 23 日开源 AgentRun（Apache-2.0），是一套给现有 Agent 加可检查 workflow 的 DSL。工作流里可以混合普通工具调用、JavaScript、Jev typed decision 和完整 Agent 节点；例如先搜索答案→用 Jev 判断是否满足证据/置信度→失败时才让 Agent 深挖→再次校验→仍不通过就人工升级。脚本化 demo 不需要 API Key；真实 Jev 运行需要 TYPESAFE_API_KEY。项目当前版本仍是 0.1.0 beta。",
+      "whyItMatters": "很多任务只有少数步骤真的需要“大模型自主调查”。把确定步骤固化成 workflow、把快速判断交给 Jev，可以让 Agent 更可测、更便宜，也更容易复盘。",
+      "angles": [
+        "Agent 不应该每一步都自由发挥：AgentRun 把确定步骤重新变回工作流",
+        "Jev + Agent 的新组合：先 30ms 判断，只有搞不定才叫大 Agent"
+      ],
+      "source": {
+        "id": "src-hn",
+        "name": "Show HN Sep23 + Parcha official repo",
+        "tier": "S",
+        "kind": "community-primary"
+      },
+      "relatedSources": [],
+      "practicality": 93,
+      "socialPotential": 97,
+      "novelty": 98,
+      "importance": 95,
+      "radarScore": 95
+    },
+    {
+      "id": "x-20260924-14",
+      "title": "PanWatch：自托管 AI 盯盘助手上 Trending，9 个 Agent 做 A/H/美股分析、辩论、风控再给 PM 结论",
+      "url": "https://github.com/TNT-Likely/PanWatch",
+      "publishedAt": "2026-09-24T10:35:00+08:00",
+      "category": "GitHub Trending / AI+股票 / 自托管",
+      "summary": "TNT-Likely/PanWatch 本轮 GitHub Trending 约 +95 stars today，MIT。它支持 A 股、港股、美股实时监控、多账户持仓、技术指标、价格提醒、模拟盘和全渠道通知；深度分析接入 TradingAgents，让技术/情绪/新闻/基本面分析师→多空辩论→风控→PM 决策。官方示例默认 deepseek-chat，称单次深度分析约 $0.05；实际费用取决于模型和调用量。Docker 可一键自托管，持仓数据留在自己的实例中。所有结论仅供分析，不应视为投资建议。",
+      "whyItMatters": "AI+股票终于不是“把 K 线截图丢给 ChatGPT”，而是一个可部署、可定时、可推送、能保留持仓上下文的完整 Agent 工作流。",
+      "angles": [
+        "AI 盯盘这次有点像产品了：9 个 Agent 辩论完再让 PM 下结论",
+        "A股/港股/美股都能自托管，单次深度分析作者估算约 5 美分"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Daily Trending + PanWatch official repo",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [],
+      "practicality": 95,
+      "socialPotential": 98,
+      "novelty": 94,
+      "importance": 90,
+      "radarScore": 95
+    }
+  ]
+}
