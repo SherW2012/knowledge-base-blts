@@ -1,0 +1,578 @@
+{
+  "schemaVersion": 3,
+  "status": "ok",
+  "generatedAt": "2026-09-26T09:52:00Z",
+  "date": "2026-09-26",
+  "timezone": "Asia/Shanghai",
+  "focus": "x-useful-viral-actionable",
+  "research": {
+    "mode": "X Radar Execution Prompt v2 + major-product dual track",
+    "provider": "ChatGPT Web + GitHub Connector",
+    "model": "GPT-5.6 Sol",
+    "externalLlmApi": false,
+    "windowStart": "2026-09-25T17:52:00+08:00",
+    "windowEnd": "2026-09-26T17:52:00+08:00",
+    "notes": [
+      "严格按北京时间滚动 24h 执行。9/25 仓库没有独立雷达报告，因此以 9/24 latest/report + 全库关键词搜索做历史去重。",
+      "重大产品通道确认本轮真正新事件：Anthropic 9/25 开放 Claude plugin submission portal；OpenAI 9/25 上线 ChatGPT Security history。",
+      "GitHub Trending 为头等发现源：Paperclip、Hindsight、mattpocock/skills、Superpowers 本轮均有显著当日涨星信号；所有功能、安装路径和许可证均回官方 GitHub 核验。旧仓库今天爆红只记为今日热度，不宣称今日创建。",
+      "Product Hunt 9/25 选入 Bleetz Network、Quiver GTM、Jango、Promptic、SocialGPT、Howseen AI；每条回产品官网或官方 launch 页面核验费用/免费边界。",
+      "PixVerse R2 虽为 9/25 Product Hunt 高位新品，但官方原始发布时间是 9/22，本轮严格按原始事件时间排除；Once UI 2.0 等同理不拿二次上榜包装成今日新品。",
+      "Hacker News 当日高热的 Claude Opus 5.5、GPT-6 Sol/Luna、Claude enzyme discovery 等原始发布日期均早于本轮窗口；Show HN Recurse 热度和成熟度不足，未入主雷达。",
+      "HF Trending 已扫：DeepSeek-V4.1-Flash、MiniCPM5-2B 等当前高热，但原始发布时间/更新早于本轮或没有比最终候选更直接的新用户事件；记 no-signal。",
+      "AI HOT 公开直读/索引仍不稳定，记 error；Reddit 公开搜索不能保证完整 24h，记 partial；X 原生公开检索同样记 partial。"
+    ]
+  },
+  "stats": {
+    "configuredSources": 11,
+    "automatedSources": 0,
+    "manualSources": 11,
+    "successfulSources": 8,
+    "failedSources": 1,
+    "publishedItems": 12,
+    "researchItems": 12
+  },
+  "sourceRuns": [
+    {
+      "id": "src-github",
+      "name": "GitHub Daily Trending / Repos",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 4
+    },
+    {
+      "id": "src-major",
+      "name": "重大产品/平台事件",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 2
+    },
+    {
+      "id": "src-official",
+      "name": "官方一手核验",
+      "tier": "S",
+      "kind": "verification",
+      "status": "ok",
+      "items": 12
+    },
+    {
+      "id": "src-ph",
+      "name": "Product Hunt Sep25",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 6
+    },
+    {
+      "id": "src-hn",
+      "name": "Hacker News / Show HN",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 0
+    },
+    {
+      "id": "src-aihot",
+      "name": "AI HOT",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "error",
+      "items": 0
+    },
+    {
+      "id": "src-reddit",
+      "name": "Reddit",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0
+    },
+    {
+      "id": "src-hf",
+      "name": "Hugging Face Trending",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "no-signal",
+      "items": 0
+    },
+    {
+      "id": "src-pwc",
+      "name": "HF Papers / Papers with Code",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "no-signal",
+      "items": 0
+    },
+    {
+      "id": "src-newsletter",
+      "name": "AI Newsletter / 聚合复查",
+      "tier": "A",
+      "kind": "discovery",
+      "status": "ok",
+      "items": 0
+    },
+    {
+      "id": "src-x",
+      "name": "X 原生情报网",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-github",
+      "name": "GitHub Daily Trending",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://github.com/trending?since=daily",
+      "tags": [
+        "github",
+        "top-priority"
+      ],
+      "note": "9/26 趋势监测发现候选后回官方 repo/API/README/LICENSE 核验；已发布历史项目去重。"
+    },
+    {
+      "id": "src-major",
+      "name": "重大产品/平台发布",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://claude.com/blog/build-plugins-for-claude",
+      "tags": [
+        "product",
+        "platform",
+        "must-not-miss"
+      ],
+      "note": "Anthropic + OpenAI 9/25 官方新发布。"
+    },
+    {
+      "id": "src-official",
+      "name": "官方一手核验",
+      "tier": "S",
+      "kind": "verification",
+      "url": "",
+      "tags": [
+        "primary"
+      ],
+      "note": "官方博客、release notes、GitHub、官网定价和文档。"
+    },
+    {
+      "id": "src-ph",
+      "name": "Product Hunt",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/9/25",
+      "tags": [
+        "launch"
+      ],
+      "note": "选入 6 条真正 9/25 launch；原始发布时间更早的产品排除。"
+    },
+    {
+      "id": "src-hn",
+      "name": "Hacker News / Show HN",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://news.ycombinator.com/",
+      "tags": [
+        "community"
+      ],
+      "note": "已扫；当日高热多为窗口外旧事件，Show HN 无更强主雷达候选。"
+    },
+    {
+      "id": "src-aihot",
+      "name": "AI HOT",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://aihot.news/",
+      "tags": [
+        "error"
+      ],
+      "note": "公开直读/索引不稳定，不能冒充完整扫描。"
+    },
+    {
+      "id": "src-reddit",
+      "name": "Reddit / LocalLLaMA",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://www.reddit.com/r/LocalLLaMA/new/",
+      "tags": [
+        "partial"
+      ],
+      "note": "公开搜索只可靠读取部分帖子，不能保证完整 24h。"
+    },
+    {
+      "id": "src-hf",
+      "name": "Hugging Face Trending",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://huggingface.co/models?period=daily&sort=trending",
+      "tags": [
+        "models"
+      ],
+      "note": "已扫；当前高热模型原始事件不在本轮或缺乏更强可直接试的新事件。"
+    },
+    {
+      "id": "src-pwc",
+      "name": "Hugging Face Papers",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://huggingface.co/papers/trending",
+      "tags": [
+        "papers"
+      ],
+      "note": "已扫，无比主雷达更强的当日可用型信号。"
+    },
+    {
+      "id": "src-newsletter",
+      "name": "AI Newsletter / 聚合复查",
+      "tier": "A",
+      "kind": "discovery",
+      "url": "https://ai.tldr.tech/",
+      "tags": [
+        "secondary"
+      ],
+      "note": "用于查漏和时间交叉核验，事实最终回一手。"
+    },
+    {
+      "id": "src-x",
+      "name": "X 原生情报网",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://x.com/",
+      "tags": [
+        "partial"
+      ],
+      "note": "公开检索不能保证完整原生 24h 时间线。"
+    }
+  ],
+  "items": [
+    {
+      "id": "x-20260926-01",
+      "title": "Claude 插件终于能正式投稿了：MCP + Skills 直接进目录，还能看审核状态、安装量和搜索曝光",
+      "url": "https://claude.com/blog/build-plugins-for-claude",
+      "publishedAt": "2026-09-25",
+      "category": "重大产品 / Anthropic / Plugins / Agent Economy",
+      "summary": "Anthropic 9 月 25 日开放 Claude Directory 的开发者投稿门户。付费 Claude 用户可以提交单个远程 MCP connector，或把 MCP Server + Agent Skills 打包成 plugin bundle；Claude Code 插件还可包含 LSP、commands、hooks 和 agents。提交后会自动校验和 safety scan，可查看审核状态与反馈；上线后能看不同产品面的安装量、版本使用情况、listing 浏览量和搜索来源。",
+      "whyItMatters": "9 月 23 日 Marketplace 只是“市场开门”，今天则是开发者真正拿到上架入口。做 Skill、MCP、Agent 产品的人终于有正式分发渠道和使用数据，而不是只靠 GitHub/X 自己吆喝。",
+      "angles": [
+        "Claude 插件商店终于开放投稿：Skill 不只是开源文件，开始有正式分发了",
+        "做 MCP/Skill 的人注意：现在能看到谁搜到你、谁装了你"
+      ],
+      "source": {
+        "id": "src-major",
+        "name": "Anthropic official blog",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [],
+      "practicality": 100,
+      "socialPotential": 100,
+      "novelty": 100,
+      "importance": 100,
+      "radarScore": 100
+    },
+    {
+      "id": "x-20260926-02",
+      "title": "ChatGPT 新增 Security History：登录、退出、MFA 和 Passkey 变更终于能自己查",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "publishedAt": "2026-09-25",
+      "category": "重大产品 / OpenAI / 账号安全",
+      "summary": "OpenAI 9 月 25 日在 ChatGPT Web 推出 Security history。用户可在 Settings → Security and login → Security history 查看近期登录、退出，以及 MFA、Passkey 和其他安全设置变更；事件会显示时间、位置与设备信息，部分位置或设备细节可能近似或缺失。",
+      "whyItMatters": "ChatGPT 现在连接插件、文件和越来越多外部账户，账号被盗的代价也越来越高。这个入口至少让用户能自己检查异常登录和安全设置是否被改过。",
+      "angles": [
+        "ChatGPT 终于有“登录历史”了：先去看看有没有陌生设备",
+        "插件越接越多以后，这个不起眼的新功能反而很重要"
+      ],
+      "source": {
+        "id": "src-major",
+        "name": "OpenAI ChatGPT release notes",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [],
+      "practicality": 100,
+      "socialPotential": 92,
+      "novelty": 92,
+      "importance": 95,
+      "radarScore": 96
+    },
+    {
+      "id": "x-20260926-03",
+      "title": "Paperclip 今日爆发：把 Claude Code / Codex / OpenClaw 当员工，给它们组织架构、预算、老板和工单",
+      "url": "https://github.com/paperclipai/paperclip",
+      "publishedAt": "2026-09-26T17:52:00+08:00",
+      "category": "GitHub Trending / 多 Agent / 一人公司",
+      "summary": "Paperclip 本轮 GitHub Trending 监测约 +2,109 stars today，MIT。它不是再造一个 Agent，而是给现有 Agent 做“公司管理后台”：Claude Code、Codex、OpenClaw、Cursor、Bash/HTTP Bot 都可以接入，配置职位、汇报关系、目标、任务、审批、定时 heartbeat 和每个 Agent 的月度预算；达到预算上限就停止，所有工作和决策可审计。项目可自托管，是 Node.js server + React UI。",
+      "whyItMatters": "如果一个人同时跑十几个 Coding/Research/Marketing Agent，真正的问题已经不是模型够不够聪明，而是谁在干什么、花了多少钱、有没有跑偏。Paperclip 正好把这层“Agent 公司治理”做成产品。",
+      "angles": [
+        "OpenClaw 是员工，Paperclip 想当公司：AI 团队开始需要组织架构了",
+        "20 个 Claude Code 窗口看不过来？有人直接做了 Agent 版 Jira + HR + 财务"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Sep26 breakout + Paperclip official repo",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [],
+      "practicality": 98,
+      "socialPotential": 100,
+      "novelty": 99,
+      "importance": 97,
+      "radarScore": 99
+    },
+    {
+      "id": "x-20260926-04",
+      "title": "Hindsight 今日 +1,600 Star：Agent Memory 不只“记住”，还会从长期经历里形成 mental model",
+      "url": "https://github.com/vectorize-io/hindsight",
+      "publishedAt": "2026-09-26T17:52:00+08:00",
+      "category": "GitHub Trending / Agent Memory / 开源",
+      "summary": "vectorize-io/Hindsight 本轮趋势监测约 +1,653 stars today，MIT。它把 Agent memory 拆成 retain / recall / reflect，并进一步维护 mental models 与 knowledge pages，目标是让 Agent 从长期交互中更新理解而不只是检索聊天记录。可 Docker、pip、Kubernetes 或嵌入式运行，支持 25+ 模型提供商及 Ollama/LM Studio/llama.cpp 等本地模型；也提供 MCP、Python/Node/Go 客户端和两行代码的 LLM wrapper。托管 Cloud 按使用量计费，有起始免费 credits。",
+      "whyItMatters": "长期 Agent 最常见的问题是每次“记住了很多碎片”，但没有形成稳定理解。Hindsight 这个方向更接近让记忆产生持续偏好、知识和判断，而不是把历史对话再塞回上下文。",
+      "angles": [
+        "Agent Memory 开始从“聊天记录搜索”进化成“会形成看法”了",
+        "两行代码给现有 Agent 加长期记忆：Hindsight 今天爆了"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Sep26 breakout + Hindsight official repo",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [
+        {
+          "name": "Docs",
+          "url": "https://hindsight.vectorize.io/"
+        }
+      ],
+      "practicality": 97,
+      "socialPotential": 98,
+      "novelty": 98,
+      "importance": 97,
+      "radarScore": 98
+    },
+    {
+      "id": "x-20260926-05",
+      "title": "Matt Pocock 的“真实工程师 Skills”爆了：不是教 Agent Vibe Coding，而是逼它先问清楚、写测试、做架构和 Code Review",
+      "url": "https://github.com/mattpocock/skills",
+      "publishedAt": "2026-09-26T17:52:00+08:00",
+      "category": "GitHub Trending / Agent Skills / 软件工程",
+      "summary": "mattpocock/skills 本轮 GitHub Trending 监测约 +583 stars today，MIT。作者把日常真实工程实践做成小型可组合 Skills，包括 `/grill-with-docs` 先把需求问透并建立 CONTEXT/ADR、`/tdd` 红绿重构、`/diagnosing-bugs`、`/code-review`、`/improve-codebase-architecture`、`/to-spec`、`/implement` 等。Claude Code 可直接安装官方 marketplace 插件，Codex/其他 Agent 可用 skills CLI 安装并按项目修改。",
+      "whyItMatters": "现在 Coding Agent 最缺的往往不是“多写代码”，而是成熟工程师的工作纪律。这套 Skill 很适合直接拿来约束需求、测试、调试和架构，而不是再写一大段泛泛的 system prompt。",
+      "angles": [
+        "Matt Pocock 把自己每天真用的工程 Skills 全放出来了",
+        "不是“让 AI 更会写代码”，而是强迫它像工程师一样先问、再测、再审"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Sep26 breakout + Matt Pocock official repo",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [],
+      "practicality": 100,
+      "socialPotential": 99,
+      "novelty": 96,
+      "importance": 96,
+      "radarScore": 98
+    },
+    {
+      "id": "x-20260926-06",
+      "title": "Superpowers 再次冲上 Trending：一套 Skill 把需求澄清 → 设计 → TDD → 子 Agent 开发 → Review 串成完整开发方法",
+      "url": "https://github.com/obra/superpowers",
+      "publishedAt": "2026-09-26T17:52:00+08:00",
+      "category": "GitHub Trending / Agent Skills / Coding Workflow",
+      "summary": "obra/superpowers 本轮趋势监测约 +468 stars today，MIT。它是一套完整 Coding Agent 开发方法：先把需求问清楚并让人审核设计，再生成足够具体的实施计划，随后用 subagent-driven development、TDD、YAGNI/DRY 执行并复核。已支持 Claude Code、Codex App/CLI、Cursor、Gemini CLI、Grok Build、Kimi Code、Devin 等多个 Agent，其中 Claude 和 Codex 都可从各自官方插件市场安装。",
+      "whyItMatters": "相比零散 Prompt，它更像“给 Coding Agent 装一套工作制度”。如果你已经发现 AI 写得快但项目越来越乱，这类方法论型 Skill 比换模型更直接。",
+      "angles": [
+        "Coding Agent 的下一轮竞争可能不是模型，而是谁给它装了更好的“工作制度”",
+        "Superpowers 把 AI 写代码改成一套强制流程：先设计，批准后才开工"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Sep26 breakout + Superpowers official repo",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [],
+      "practicality": 99,
+      "socialPotential": 98,
+      "novelty": 94,
+      "importance": 95,
+      "radarScore": 97
+    },
+    {
+      "id": "x-20260926-07",
+      "title": "Bleetz：先让你的 AI 去和 2,000 个“模拟 VC Agent”路演，YES 了再给真人基金联系方式",
+      "url": "https://www.producthunt.com/products/bleetz-network",
+      "publishedAt": "2026-09-25",
+      "category": "Product Hunt / 融资 / Agent-to-Agent",
+      "summary": "Bleetz Network 9 月 25 日 Product Hunt 上线。创始人把约 2,000 家真实 VC 的公开资料抓取和 enrichment 后做成“模拟 VC agents”，创业者的 Agent 先按行业、阶段、地域和 thesis 匹配，再获得 YES / NO / MAYBE；YES 会解锁基金和投资团队联系方式，MAYBE 会继续问问题。平台当前免费。需要强调：这些默认是根据真实基金资料模拟出来的 Agent，并不是 2,000 家基金都已经授权 Agent 在线投资；基金后续可以 claim 自己的 Agent。",
+      "whyItMatters": "它把最浪费创始人时间的“先查 500 家基金再群发”改成一次机器筛选和模拟 pitch。即使最终仍要真人沟通，这种 Agent-to-Agent 前置过滤很值得研究。",
+      "angles": [
+        "融资也开始 Agent-to-Agent 了：先让 AI VC 拒绝你，再决定要不要找真人",
+        "注意别写错：Bleetz 的 2,000 个 VC 是模拟 Agent，不是 2,000 个真人 VC 已入驻"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt Sep25 / Bleetz Network",
+        "tier": "S",
+        "kind": "launch-primary"
+      },
+      "relatedSources": [],
+      "practicality": 92,
+      "socialPotential": 100,
+      "novelty": 100,
+      "importance": 91,
+      "radarScore": 96
+    },
+    {
+      "id": "x-20260926-08",
+      "title": "Quiver GTM：把开发者营销做成工程系统，内容也有版本、状态、MCP 和人工审批",
+      "url": "https://www.producthunt.com/products/quiver-gtm",
+      "publishedAt": "2026-09-25",
+      "category": "Product Hunt / Developer Marketing / 一人公司",
+      "summary": "Quiver GTM 9 月 25 日 Product Hunt 上线。它不是单纯 AI 文案工具，而是把产品上下文、客户证据、campaign、内容、任务与结果放进同一系统，给 Agent 提供 durable context、版本历史、Draft→Review→Live 等明确生产状态、Content API、MCP 和 human-approved feedback loop。可以使用托管版，也可以自托管免费的 MIT-licensed edition。",
+      "whyItMatters": "做开发者产品最容易出现“代码在 Git，营销散在 Notion/ChatGPT/X 草稿里”。Quiver 的价值是把营销也变成可版本化、可审查、Agent 可持续工作的生产流程。",
+      "angles": [
+        "有人开始把营销当代码管理了：版本、Review、MCP 一个不少",
+        "一人公司最值得抄的不是 AI 写文案，而是 Quiver 这套营销工作流"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt Sep25 / Quiver GTM",
+        "tier": "S",
+        "kind": "launch-primary"
+      },
+      "relatedSources": [
+        {
+          "name": "Website",
+          "url": "https://quivergtm.dev/"
+        }
+      ],
+      "practicality": 100,
+      "socialPotential": 99,
+      "novelty": 98,
+      "importance": 96,
+      "radarScore": 99
+    },
+    {
+      "id": "x-20260926-09",
+      "title": "Jango：给你的 SaaS 同时放进去一群 AI 用户，测试多人协作不用再开 5 个浏览器和假账号",
+      "url": "https://www.producthunt.com/products/jango",
+      "publishedAt": "2026-09-25",
+      "category": "Product Hunt / Testing / AI Users",
+      "summary": "Jango 9 月 25 日 Product Hunt 上线。它给被测应用生成一组 AI users，每个用户拥有独立浏览器、账号、目标和记忆；指向 dev URL 后可以实时看它们登录、互动和协作，开发者可给指令、以真人身份加入，或直接接管任一用户屏幕。最终生成包含操作、错误和截图的报告。可用自己的模型 Key 或 Jango managed AI；当前提供 Mac 版，并标注 Free Options。",
+      "whyItMatters": "协作 SaaS、聊天、多人编辑、邀请/权限流程最难靠单人手测。让一批 Agent 同时扮演不同用户，比传统单浏览器 E2E 更接近真实使用情境。",
+      "angles": [
+        "测试多人 SaaS 最烦的事：自己开 5 个账号。Jango 直接放 5 个 AI 用户进去",
+        "不是让 Agent 测按钮，而是让一群 Agent 真正在你的 App 里互相协作"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt Sep25 / Jango",
+        "tier": "S",
+        "kind": "launch-primary"
+      },
+      "relatedSources": [],
+      "practicality": 99,
+      "socialPotential": 99,
+      "novelty": 99,
+      "importance": 95,
+      "radarScore": 98
+    },
+    {
+      "id": "x-20260926-10",
+      "title": "Promptic：别再凭感觉选 Prompt / 模型 / Agent 架构，把它们放同一批真实数据上比质量、成本和延迟",
+      "url": "https://promptic.eu/",
+      "publishedAt": "2026-09-25",
+      "category": "Product Hunt / Agent Evals / Optimization",
+      "summary": "Promptic 9 月 25 日面向所有用户开放，并登上 Product Hunt。它把 OpenTelemetry tracing、模型 benchmark、prompt tuning、Agent 架构对比和 tool selection optimization 放进同一个优化循环；用户上传自己的输入/期望输出与业务 KPI，然后在同一 dataset 上比较质量、成本、延迟，结果也可交给 Coding Agent 自动提出和验证改动。Free 计划 €0，1 用户、1 个 AI Application、每月 200K Promptic Credits、14 天 retention，BYOK；Team €149/月，Business €599/月。",
+      "whyItMatters": "生产 Agent 最危险的是“新 Prompt 看起来更聪明，所以就上线”。它把模型、Prompt、工具路由和 Agent 架构统一拉到你的真实业务数据上做证据驱动比较。",
+      "angles": [
+        "Prompt 工程终于开始像软件工程：别凭感觉，跑测试再上线",
+        "同一个 Agent：质量更高但贵 50%，到底换不换？Promptic 把账算给你看"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt Sep25 + Promptic official",
+        "tier": "S",
+        "kind": "launch-primary"
+      },
+      "relatedSources": [
+        {
+          "name": "Pricing",
+          "url": "https://promptic.eu/pricing"
+        }
+      ],
+      "practicality": 100,
+      "socialPotential": 97,
+      "novelty": 96,
+      "importance": 97,
+      "radarScore": 98
+    },
+    {
+      "id": "x-20260926-11",
+      "title": "SocialGPT 新视频编辑器：聊天让 AI 剪，但你随时能进真正的时间线手改",
+      "url": "https://gpt.social/",
+      "publishedAt": "2026-09-25",
+      "category": "Product Hunt / 视频创作 / AI Editor",
+      "summary": "SocialGPT 9 月 25 日正式在 Product Hunt 发布 AI Video Editor。上传自己的 footage 后，可以用聊天要求紧缩剪辑、删片段、加字幕、B-roll、音乐和音效；AI 修改的是可编辑 timeline，用户随时能直接拖动/修改某个 clip，再继续让 AI 迭代。Web editor 需要付费计划，Pro 年付折合 $8/月或月付 $10；移动 App 有独立免费档和使用限制。",
+      "whyItMatters": "很多 AI 视频工具要么全自动、要么最后只能接受结果。SocialGPT 把“自然语言大改 + 时间线精修”放在一起，更接近真正能持续用的创作者工作流。",
+      "angles": [
+        "AI 剪视频最怕“改一点就得重新生成”：SocialGPT 这次保留了真时间线",
+        "你可以一句话剪完，再像 Premiere 一样手动拖，AI 和传统剪辑终于没二选一"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "SocialGPT official Sep25 launch + Product Hunt",
+        "tier": "S",
+        "kind": "launch-primary"
+      },
+      "relatedSources": [
+        {
+          "name": "Launch post",
+          "url": "https://gpt.social/blog/socialgpt-ai-video-editor-product-hunt-launch"
+        }
+      ],
+      "practicality": 98,
+      "socialPotential": 99,
+      "novelty": 96,
+      "importance": 92,
+      "radarScore": 97
+    },
+    {
+      "id": "x-20260926-12",
+      "title": "Howseen AI：不只告诉你“ChatGPT 有没有推荐我”，还会找缺口、写 GEO 内容并自动发到网站",
+      "url": "https://howseen.ai/",
+      "publishedAt": "2026-09-25",
+      "category": "Product Hunt / GEO / 一人公司获客",
+      "summary": "Howseen AI 9 月 25 日 Product Hunt 上线。它监控 ChatGPT、Gemini、Perplexity、Google AI Overviews/AI Mode 对品牌的 visibility、position、sentiment 与引用来源，找出“竞品被推荐但你缺席”的 buyer questions，再生成 SEO/GEO 内容并按优先级自动发布到网站。官网提供 30 秒免费品牌 audit、无需绑卡；默认每日刷新，Top 5 prompts 可设为小时级。还提供 MCP endpoint，可直接接 Claude、Cursor、ChatGPT 等 Agent，连接时不需要单独 API Key。完整产品为付费服务。",
+      "whyItMatters": "GEO 工具正在从“给一个分数”变成“发现缺口→生成修复→自动发布→继续监控”。对一人公司来说，这类闭环获客工具比又一套 SEO dashboard 更有实际价值。",
+      "angles": [
+        "SEO 之后是 GEO，但这次不只是看分数：Howseen 直接把缺的文章写了发掉",
+        "先免费扫 30 秒：看看 ChatGPT 推荐你的竞品时，到底为什么没提你"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt Sep25 + Howseen official",
+        "tier": "S",
+        "kind": "launch-primary"
+      },
+      "relatedSources": [
+        {
+          "name": "MCP",
+          "url": "https://mcp.howseen.ai/mcp"
+        }
+      ],
+      "practicality": 99,
+      "socialPotential": 100,
+      "novelty": 97,
+      "importance": 96,
+      "radarScore": 98
+    }
+  ]
+}
