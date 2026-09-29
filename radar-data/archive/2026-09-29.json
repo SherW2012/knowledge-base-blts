@@ -1,0 +1,587 @@
+{
+  "schemaVersion": 3,
+  "status": "ok",
+  "generatedAt": "2026-09-29T06:09:00Z",
+  "date": "2026-09-29",
+  "timezone": "Asia/Shanghai",
+  "focus": "x-useful-viral-actionable",
+  "research": {
+    "mode": "X Radar Execution Prompt v2 + major-product dual track",
+    "provider": "ChatGPT Web + GitHub Connector",
+    "model": "GPT-5.6 Sol",
+    "externalLlmApi": false,
+    "windowStart": "2026-09-28T14:09:00+08:00",
+    "windowEnd": "2026-09-29T14:09:00+08:00",
+    "notes": [
+      "严格按北京时间滚动 24h 执行；仓库最近发布到 9/26，9/27、9/28 无 report，因此以 9/26 latest + 全库搜索做去重。",
+      "重大产品独立通道确认：Anthropic Claude Sonnet 5.5、SpaceXAI Team Bots、NVIDIA Open Agent Safety/OpenShell、H Company Holo4 均为 9/28 官方发布。",
+      "GitHub Trending/Trendshift 作为头等发现源：AIHOT 约 +1.1k today、AutoHarness、OpenRig、PRINTFILM、TradingView MCP 等本轮有真实当日增长；旧仓库只以今日热度事件收录，不冒充今日首发。",
+      "Product Hunt 9/28 重点核验 MCP Connectors by Databox、Statable Analytics、VibeDefend；Databox 获 Launch of the Day，Statable 为日榜第 2。",
+      "AIHOT 今天可正常直读，并帮助完成漏报检查；OpenAI 模型失准披露框架原始发布日期其实是 9/16，GitHub fuzzing Taskflow 原始发布为 9/24，均未被二次传播冒充今日新品。9/28 GitHub Security Lab 新发布的“24 个 Android 漏洞”实战结果单独作为新进展收录。",
+      "Hugging Face Trending 当前主要仍是 Laya、Qwen-Image-2.1 等已知项目；本轮真正新的 HF 信号是 H Company 9/28 发布 Holo4。",
+      "Reddit/X 原生公开索引仍不能保证完整 24h，标 partial；Newsletter/聚合站只用于查漏，最终事实回官方源。"
+    ]
+  },
+  "stats": {
+    "configuredSources": 11,
+    "automatedSources": 0,
+    "manualSources": 11,
+    "successfulSources": 9,
+    "failedSources": 0,
+    "publishedItems": 13,
+    "researchItems": 13
+  },
+  "sourceRuns": [
+    {
+      "id": "src-github",
+      "name": "GitHub Trending / Repos",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 6
+    },
+    {
+      "id": "src-major",
+      "name": "重大产品/平台事件",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 4
+    },
+    {
+      "id": "src-official",
+      "name": "官方一手核验",
+      "tier": "S",
+      "kind": "verification",
+      "status": "ok",
+      "items": 13
+    },
+    {
+      "id": "src-ph",
+      "name": "Product Hunt Sep28",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 3
+    },
+    {
+      "id": "src-hn",
+      "name": "Hacker News / Show HN",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 2
+    },
+    {
+      "id": "src-aihot",
+      "name": "AI HOT",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 5
+    },
+    {
+      "id": "src-reddit",
+      "name": "Reddit",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 1
+    },
+    {
+      "id": "src-hf",
+      "name": "Hugging Face Trending",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 1
+    },
+    {
+      "id": "src-pwc",
+      "name": "HF Papers / Papers with Code",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "no-signal",
+      "items": 0
+    },
+    {
+      "id": "src-newsletter",
+      "name": "AI Newsletter / 聚合复查",
+      "tier": "A",
+      "kind": "discovery",
+      "status": "ok",
+      "items": 0
+    },
+    {
+      "id": "src-x",
+      "name": "X 原生情报网",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-github",
+      "name": "GitHub Trending / Trendshift",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://github.com/trending?since=daily",
+      "tags": [
+        "github",
+        "top-priority"
+      ],
+      "note": "当日爆发项目回官方 README/LICENSE 核验，旧 repo 明确写为今日热度而非今日首发。"
+    },
+    {
+      "id": "src-major",
+      "name": "重大产品发布",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://www.anthropic.com/claude-sonnet-5-5",
+      "tags": [
+        "platform",
+        "must-not-miss"
+      ],
+      "note": "Anthropic、SpaceXAI、NVIDIA、H Company 9/28 官方发布。"
+    },
+    {
+      "id": "src-official",
+      "name": "一手核验",
+      "tier": "S",
+      "kind": "verification",
+      "url": "",
+      "tags": [
+        "primary"
+      ],
+      "note": "官方博客、GitHub README/LICENSE、产品 docs/pricing。"
+    },
+    {
+      "id": "src-ph",
+      "name": "Product Hunt",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/9/28",
+      "tags": [
+        "launch"
+      ],
+      "note": "Databox、Statable、CybeDefend 为本轮重点。"
+    },
+    {
+      "id": "src-hn",
+      "name": "Hacker News",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://news.ycombinator.com/",
+      "tags": [
+        "community"
+      ],
+      "note": "用于发现 Sonnet/Holo4/安全实战等讨论，事实回一手。"
+    },
+    {
+      "id": "src-aihot",
+      "name": "AI HOT",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://aihot.news/",
+      "tags": [
+        "discovery",
+        "coverage-check"
+      ],
+      "note": "本轮直读成功，用于漏报与原始时间复核。"
+    },
+    {
+      "id": "src-reddit",
+      "name": "Reddit",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://www.reddit.com/r/LocalLLaMA/new/",
+      "tags": [
+        "partial"
+      ],
+      "note": "仅作补充，公开索引无法保证完整。"
+    },
+    {
+      "id": "src-hf",
+      "name": "Hugging Face Trending / Blog",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://huggingface.co/models?sort=trending",
+      "tags": [
+        "models"
+      ],
+      "note": "Holo4 9/28 新发布；其余高热多为旧项目。"
+    },
+    {
+      "id": "src-pwc",
+      "name": "HF Papers / Papers with Code",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://huggingface.co/papers/trending",
+      "tags": [
+        "papers"
+      ],
+      "note": "无更强用户向新信号。"
+    },
+    {
+      "id": "src-newsletter",
+      "name": "AI Newsletter / 聚合复查",
+      "tier": "A",
+      "kind": "discovery",
+      "url": "https://ai.tldr.tech/",
+      "tags": [
+        "secondary"
+      ],
+      "note": "只查漏，不作为最终事实背书。"
+    },
+    {
+      "id": "src-x",
+      "name": "X 原生情报网",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://x.com/",
+      "tags": [
+        "partial"
+      ],
+      "note": "公开搜索不能冒充完整 24h 时间线。"
+    }
+  ],
+  "items": [
+    {
+      "id": "x-20260929-01",
+      "title": "Claude Sonnet 5.5 正式发布：输出快 30%+，多数任务总成本最高降约 30%，但 token 单价没涨",
+      "url": "https://www.anthropic.com/claude-sonnet-5-5",
+      "publishedAt": "2026-09-28",
+      "category": "重大产品 / Anthropic / Claude",
+      "summary": "Anthropic 9 月 28 日发布 Claude Sonnet 5.5。官方称其相对 Sonnet 5 输出速度提升 30% 以上，并因更少 token 使用让多数任务总成本最高降低约 30%；API token 单价仍为输入 $2/百万、输出 $10/百万。它定位为 Opus 5.5 的更快低成本补充，重点覆盖日常 coding、bug 修复，以及文档、幻灯片和表格等工作；已在 Claude 平台及 AWS、Google Cloud、Azure 等渠道提供。",
+      "whyItMatters": "对日常 Coding Agent 和内容工作，真正变化不是“再多一个模型名”，而是更低任务总成本和更快反馈，且无需接受更高 token 单价。",
+      "angles": [
+        "Sonnet 5.5 不是单纯变强：同价、更快、任务总成本反而更低",
+        "日常 coding 不一定再需要一直上 Opus：Anthropic 给 Sonnet 重新定了位"
+      ],
+      "source": {
+        "id": "src-major",
+        "name": "Anthropic official",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [],
+      "practicality": 99,
+      "socialPotential": 100,
+      "novelty": 100,
+      "importance": 100,
+      "radarScore": 100
+    },
+    {
+      "id": "x-20260929-02",
+      "title": "Grok Team Bots 上线：把 Slack、Notion、Linear、GitHub 和团队记忆塞进一个共享 AI 同事",
+      "url": "https://x.ai/news/team-bots",
+      "publishedAt": "2026-09-28",
+      "category": "重大产品 / SpaceXAI / Team Agent",
+      "summary": "SpaceXAI 9 月 28 日推出 Team Bots public beta。一个 Team Bot 围绕共享角色或工作流组合 Context、Plugins、Credentials、Memories，可连接 Salesforce、Notion、GitHub 等应用，也能进入 Slack 频道；每个人与 Bot 的私聊仍保持独立。官方内部案例包括销售晨报、工程 bug 分诊与创建 Linear ticket、启动 Cloud Agents、品牌审稿和 Databricks 数据分析。当前面向 Teams 和 Enterprise 计划开放。",
+      "whyItMatters": "这比“团队共享一个 Prompt”更接近真正的数字岗位：工具、凭据、技能、记忆和协作入口都绑定到同一个长期 Bot。",
+      "angles": [
+        "Grok Team Bots 把共享 Agent 做成了真正的团队成员：有工具、有记忆、有 Slack 工号",
+        "五人团队让 Team Bot 协调数百个 Cloud Agent，这种组织方式比单 Agent 更值得看"
+      ],
+      "source": {
+        "id": "src-major",
+        "name": "SpaceXAI official",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [],
+      "practicality": 96,
+      "socialPotential": 100,
+      "novelty": 100,
+      "importance": 99,
+      "radarScore": 99
+    },
+    {
+      "id": "x-20260929-03",
+      "title": "NVIDIA 发布 Open Agent Safety：Agent 越权不只靠 Prompt 拦，开始下沉到内核和 BlueField 硬件",
+      "url": "https://developer.nvidia.com/blog/nvidia-open-agent-safety-platform-a-reference-for-continuous-in-silicon-agent-monitoring/",
+      "publishedAt": "2026-09-28",
+      "category": "重大产品 / NVIDIA / Agent Safety",
+      "summary": "NVIDIA 9 月 28 日发布 Open Agent Safety Platform，由开源 OpenShell 安全运行时和 Sentry 参考系统组成。OpenShell 在沙箱内通过内核级控制约束文件、系统调用、网络和凭据，策略变更还可先做形式验证；Sentry 则把独立监控下沉到 BlueField-4 DPU，可在 Agent 越界时进行隔离。OpenShell 为 Apache-2.0，也可扩展到第三方计算平台，并提供 Agent Skills、Python/TS/Go/Rust SDK。",
+      "whyItMatters": "Agent 能读文件、装包、调 API 以后，安全边界不能只靠 system prompt。OpenShell 给开发者一条今天就能试的“Agent 沙箱 + 权限策略”路线。",
+      "angles": [
+        "NVIDIA 的新思路：不相信 Agent 自己守规矩，直接在内核和硬件旁边盯着它",
+        "OpenShell 开源：给 Claude/Codex 这类 Agent 套一个真正能限制文件、网络和凭据的笼子"
+      ],
+      "source": {
+        "id": "src-major",
+        "name": "NVIDIA official",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "OpenShell",
+          "url": "https://github.com/NVIDIA/OpenShell"
+        }
+      ],
+      "practicality": 94,
+      "socialPotential": 99,
+      "novelty": 100,
+      "importance": 100,
+      "radarScore": 98
+    },
+    {
+      "id": "x-20260929-04",
+      "title": "H Company 开源 Holo4：同一个 27B Agent 模型能点 GUI、写代码、调 MCP/API，还开放全部 benchmark 轨迹",
+      "url": "https://huggingface.co/blog/Hcompany/holo4",
+      "publishedAt": "2026-09-28",
+      "category": "重大模型 / Open Weights / Computer Use",
+      "summary": "H Company 9 月 28 日发布 Holo4 系列：27B dense、35B-A3B MoE，以及 Holotron4 Nano。Holo4 不绑定单一接口，可在桌面、网页、Android、代码沙箱及业务 API 环境里同时使用 GUI、代码、MCP 和 API。官方开放 BF16/FP8/NVFP4/4-bit GGUF 权重，并公开 benchmark 轨迹与数据；API 也同步可用。官方自测中 Holo4-27B 在 OSWorld 2.0 得 61.7%，但不同模型的 harness、任务子集和评测设置并不完全一致。",
+      "whyItMatters": "Computer-use Agent 不再只能依赖闭源大模型；权重和轨迹一起放出来，开发者可以自己跑、自己复现失败路径、自己改 harness。",
+      "angles": [
+        "真正的 open computer-use 模型来了：GUI、代码、MCP、API 一个模型全包",
+        "Holo4 最值得看的不是分数，是它连完整操作轨迹也一起开了"
+      ],
+      "source": {
+        "id": "src-hf",
+        "name": "H Company / Hugging Face official",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [],
+      "practicality": 92,
+      "socialPotential": 99,
+      "novelty": 100,
+      "importance": 97,
+      "radarScore": 97
+    },
+    {
+      "id": "x-20260929-05",
+      "title": "卡兹克把 AIHOT 整套雷达框架开源了：采集、双评分、事件聚簇、热点算法、日报和 MCP 全放出来",
+      "url": "https://github.com/KKKKhazix/AIHOT",
+      "publishedAt": "2026-09-29T14:09:00+08:00",
+      "category": "GitHub Trending / AI 情报 / 一人公司",
+      "summary": "数字生命卡兹克的 AIHOT 在本轮 Trendshift 日榜冲到前列，约 +1.1k stars today。仓库不是只开页面，而是 MIT 开放完整热点站框架：RSS/网页/JSON/X/微信公众号等采集，判重预筛，同一标准独立打两次分，中文摘要写作，事件聚簇，按独立来源计算 48h 热度，以及日报/周报/月报、RSS/API/MCP/llms.txt、后台预算熔断和 SelectBench 校准。真实 AIHOT 的私有信源名单和运营数据没有公开；示例带 18 个海外 AI 源。运行需要 Docker 和 OpenAI-compatible API Key。",
+      "whyItMatters": "这几乎就是“把自己的行业雷达产品化”的现成底座。换信源、评分 Prompt 和 taxonomy，就可以做法律、金融、HR、贵金属或任何垂直行业的自动情报站。",
+      "angles": [
+        "卡兹克把 AIHOT 开源了，而且不是壳：连选题 Prompt 和入选阈值都给了",
+        "一人公司新项目模板：把 AIHOT 换一套信源，直接做一个垂直行业情报站"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub repo + current Trendshift",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [
+        {
+          "name": "Live site",
+          "url": "https://aihot.news/"
+        }
+      ],
+      "practicality": 100,
+      "socialPotential": 100,
+      "novelty": 100,
+      "importance": 98,
+      "radarScore": 100
+    },
+    {
+      "id": "x-20260929-06",
+      "title": "Databox MCP Connectors 拿下 9/28 Product Hunt Launch of the Day：让 AI Analytics 去 Slack、Linear、CRM 里找“为什么”",
+      "url": "https://databox.com/ai-analyst",
+      "publishedAt": "2026-09-28",
+      "category": "Product Hunt / MCP / Analytics / 一人公司",
+      "summary": "Databox 9 月 28 日推出 MCP Connectors，并获得当日 Product Hunt Launch of the Day。它让 AI Analyst 不只看到指标变化，还能连接 HubSpot、Slack、Notion、Linear、Klaviyo 等业务工具，或直接粘贴任意 MCP server URL；例如注册量下降时去 Linear 查最近发布、去 Slack 看上下文，再给出原因和下一步。Databox 官方强调可对动作设置审批，AI 建议的后续操作需要用户确认。",
+      "whyItMatters": "一人公司真正需要的不是多一个 dashboard，而是让 AI 把“指标变了”和“业务里刚发生了什么”关联起来，再把下一步动作交回来审批。",
+      "angles": [
+        "数据分析 Agent 最缺的不是图表，而是知道公司昨天到底发生了什么",
+        "Databox 把 MCP 接到 BI 里：注册量跌了，AI 自己去 Linear 和 Slack 找原因"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt Sep28 + Databox official",
+        "tier": "S",
+        "kind": "launch-primary"
+      },
+      "relatedSources": [],
+      "practicality": 98,
+      "socialPotential": 98,
+      "novelty": 97,
+      "importance": 95,
+      "radarScore": 97
+    },
+    {
+      "id": "x-20260929-07",
+      "title": "VibeDefend：安全规则直接塞进 Claude Code / Codex，危险命令和读密钥在执行前就拦",
+      "url": "https://www.cybedefend.com/en/vibedefend",
+      "publishedAt": "2026-09-28",
+      "category": "Product Hunt / Vibe Coding / Security",
+      "summary": "CybeDefend 的 VibeDefend 9 月 28 日登上 Product Hunt。一个 npx 命令可接入 Claude Code、Cursor、Codex、Windsurf、Copilot 等 Agent：从代码仓抽取业务规则，把安全/合规规则放进 Agent 上下文，在 diff 生成期间扫描，并用 Action Guard 在执行前阻断 `rm -rf`、`sudo`、读取 secret 等危险动作。VibeDefend 包含在免费档，无需绑卡；付费平台能力主要是审计轨迹、dashboard 和多团队治理。",
+      "whyItMatters": "Vibe Coding 的安全不能只靠“写完再扫描”。把业务规则和危险动作 guard 直接放进 Agent 工作时点，能更早阻断低级事故。",
+      "angles": [
+        "别等 AI 把代码写完再扫漏洞：VibeDefend 直接在 Claude Code 写的时候拦",
+        "最实用的不是 SAST，而是 Agent 想读密钥、sudo、rm -rf 时直接不让它干"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt Sep28 + CybeDefend official",
+        "tier": "S",
+        "kind": "launch-primary"
+      },
+      "relatedSources": [],
+      "practicality": 100,
+      "socialPotential": 98,
+      "novelty": 97,
+      "importance": 96,
+      "radarScore": 98
+    },
+    {
+      "id": "x-20260929-08",
+      "title": "AutoHarness 今日爆发：Claude Code 不用你手写 Skill，它会从真实工作会话里自己提炼、合并、更新和淘汰",
+      "url": "https://github.com/tigerless-labs/autoharness",
+      "publishedAt": "2026-09-29T14:09:00+08:00",
+      "category": "GitHub Trending / Skills / Self-learning Harness",
+      "summary": "tigerless-labs/autoharness 本轮 GitHub/Trendshift 出现明显当日增长。它是 MIT 的 Claude Code 插件，监听真实 coding sessions，在工作量达到阈值后后台反思，把可复用经验写成 `.claude/skills/`；遇到同场景不会无脑堆新 Skill，而会合并/更新，并基于后续真实使用率把长期没用的自生成 Skill 归档。它只管理自己写的 Skill，不碰人工或第三方 Skill；无 daemon，Python 3.11+，可通过 Claude plugin marketplace 安装。",
+      "whyItMatters": "Skill 最大的维护成本正是“什么时候该写、写完会不会过期”。AutoHarness 把这件事变成从真实工作中自动积累，而不是每次靠人总结。",
+      "angles": [
+        "Claude Code 开始自己养 Skill 了：干过一次，下次自动记成流程",
+        "最关键的是它会删：不是让 `.claude/skills` 最后堆成垃圾场"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub current trend + Tigerless official repo",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [],
+      "practicality": 99,
+      "socialPotential": 100,
+      "novelty": 100,
+      "importance": 96,
+      "radarScore": 99
+    },
+    {
+      "id": "x-20260929-09",
+      "title": "Statable Analytics：网站数据直接接 Claude / ChatGPT / Cursor / Codex，Agent 还能自己建目标和漏斗",
+      "url": "https://statable.com/",
+      "publishedAt": "2026-09-28",
+      "category": "Product Hunt / Analytics / MCP",
+      "summary": "Statable Analytics 9 月 28 日 Product Hunt 日榜第 2，定位为“Web analytics built for you and your AI agents”。它提供 cookieless analytics，并通过 remote MCP 让 Claude、ChatGPT、Cursor、Codex 查询访问量、页面、来源和 goals，也能创建站点、目标、漏斗和调整 tracking settings，但不能篡改或删除历史 analytics。价格从 10K pageviews 的 $9/月起，30 天试用无需卡；`.edu`、GitHub Pages 和 GitLab Pages 站点安装其 widget 后可申请免费完整访问。",
+      "whyItMatters": "做独立站或 Vibe Coding 产品时，Agent 不只可以“看 Analytics”，还能自己搭追踪目标和漏斗；对于 GitHub Pages 项目尤其低门槛。",
+      "angles": [
+        "连 Google Analytics 替代品都 Agent 化了：Claude 直接问“昨天哪个页面掉了”",
+        "你的网站如果在 GitHub Pages，Statable 甚至给免费完整档"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt Sep28 + Statable official docs/pricing",
+        "tier": "S",
+        "kind": "launch-primary"
+      },
+      "relatedSources": [],
+      "practicality": 99,
+      "socialPotential": 96,
+      "novelty": 95,
+      "importance": 92,
+      "radarScore": 96
+    },
+    {
+      "id": "x-20260929-10",
+      "title": "GitHub Security Lab 用开源 AI Agent 真找到了 24 个 Android 漏洞，还给了自己项目复跑命令",
+      "url": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
+      "publishedAt": "2026-09-28",
+      "category": "实战案例 / AI Security / GitHub",
+      "summary": "GitHub Security Lab 9 月 28 日公布其 Android 审计 taskflows 已发现并报告 24 个漏洞。团队把移动端入口点、常见漏洞类型、跨组件威胁建模拆成针对性 taskflow，让 LLM 多轮审计。Taskflow Agent 和 prompts 均开源，自己的仓库可在 Codespace 中运行 `./scripts/audit/run_mobile.sh myorg/myrepo`；官方提醒需要 GitHub Copilot 许可，会消耗大量 premium model requests，中型仓库可能跑 1–2 小时。",
+      "whyItMatters": "这不是“AI 将来能审代码”的 demo，而是已经有真实漏洞产出的可复用流程。安全审计开始从一句“帮我看看漏洞”变成可重复 taskflow。",
+      "angles": [
+        "AI 安全审计这次不是 benchmark：GitHub 真拿它找出了 24 个 Android 漏洞",
+        "GitHub 把找漏洞的 Prompt 流程开源了，你可以直接丢自己的 repo 跑"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Security Lab official",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [],
+      "practicality": 91,
+      "socialPotential": 99,
+      "novelty": 98,
+      "importance": 97,
+      "radarScore": 95
+    },
+    {
+      "id": "x-20260929-11",
+      "title": "OpenRig 今日继续升温：Claude Code + Codex 不再开两个终端，而是组成一个有 Lead 和 Specialist 的 Agent 团队",
+      "url": "https://github.com/mvschwarz/openrig",
+      "publishedAt": "2026-09-29T14:09:00+08:00",
+      "category": "GitHub Trending / Multi-Agent / Coding",
+      "summary": "OpenRig 本轮 Trendshift 约 +168 stars today，Apache-2.0。它用本地 daemon + CLI/TUI + tmux，把 Claude Code 与 Codex 等 coding harness 组成长期存在的团队；团队结构写在 YAML，用户和 lead agent 讨论目标，lead 再协调 specialists。任务、上下文和团队地址可以跨会话保留。需要 Node.js 22/24 与 tmux，当前面向 macOS/Linux；Windows 原生尚不支持。",
+      "whyItMatters": "多 Agent Coding 最大的问题往往不是模型不够强，而是十几个 terminal 没人管。OpenRig 把“Agent 编队”变成可保存的工程结构。",
+      "angles": [
+        "Claude Code + Codex 终于不只是两个窗口：OpenRig 让它们变成一个团队",
+        "Agent 多开到失控之后，下一个工具层就是“谁当 Lead、谁负责哪块”"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub current trend + OpenRig official repo",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [],
+      "practicality": 94,
+      "socialPotential": 98,
+      "novelty": 97,
+      "importance": 93,
+      "radarScore": 95
+    },
+    {
+      "id": "x-20260929-12",
+      "title": "PRINTFILM 今日重新冲榜：开源 AI 短视频/漫剧流水线，从主题→剧本→分镜→生图→视频→成片",
+      "url": "https://github.com/yi1108/printfilm",
+      "publishedAt": "2026-09-29T14:09:00+08:00",
+      "category": "GitHub Trending / 内容创作 / AI 视频",
+      "summary": "yi1108/printfilm 本轮 Trendshift 约 +194 stars today。项目本身 v0.2.0 在 9 月 17 日已发布，因此本轮明确收的是“今天重新爆发的 GitHub 热度”，不是假装今天首发。它提供主题/剧本→分镜→生图→生视频→成片的模板化流水线，带用户端、管理后台、计费和开放 API，可 Docker 自托管，MIT。真实生成依赖 TokenFree New API/Seedance 等外部模型服务及余额；无 Key 可用 mock 看界面。",
+      "whyItMatters": "做短视频、AI 漫剧或内容型产品时，可以直接研究一套完整“前台 + 生成流水线 + 计费 + 后台”的产品源码，而不只是单个生成脚本。",
+      "angles": [
+        "AI 短剧不是只写 Prompt：有人把从剧本到成片连同后台和计费都开源了",
+        "今天爆红但不是今天发布——真正有价值的是它是一套完整 AI 内容产品源码"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub current trend + PRINTFILM repo",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [],
+      "practicality": 96,
+      "socialPotential": 98,
+      "novelty": 91,
+      "importance": 90,
+      "radarScore": 94
+    },
+    {
+      "id": "x-20260929-13",
+      "title": "TradingView MCP：Claude / ChatGPT 直接查股票、币、外汇，做 37 种工具调用和策略回测，不需要 TradingView 账号",
+      "url": "https://github.com/atilaahmettaner/tradingview-mcp",
+      "publishedAt": "2026-09-29T14:09:00+08:00",
+      "category": "GitHub Trending / AI+股票 / MCP",
+      "summary": "atilaahmettaner/tradingview-mcp 本轮 Trendshift 继续增长，MIT。它给 Claude、ChatGPT、Cursor、Copilot 等 MCP client 提供 37 个市场数据/技术分析工具，覆盖股票、加密货币、外汇、期货、screeners、多周期分析和 9 类回测策略，并支持 walk-forward backtest。它不是驱动你的 TradingView Desktop，也不需要 TradingView 账号，而是读取第三方市场数据。自托管免费；官方托管版 $9/月起，Pro+ $29/月，3 天试用。市场数据可能延迟或不完整，输出不构成投资建议。",
+      "whyItMatters": "AI+股票最实用的形态不是让模型猜涨跌，而是把实时数据、筛选器和回测能力做成 Agent 可调用的工具层。",
+      "angles": [
+        "别再截图 K 线问 ChatGPT 了：TradingView MCP 直接把筛选、指标和回测变成 37 个工具",
+        "AI 股票助手最该先补的不是“预测能力”，而是可靠的数据和回测接口"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub current trend + tradingview-mcp repo",
+        "tier": "S",
+        "kind": "trending-primary"
+      },
+      "relatedSources": [],
+      "practicality": 97,
+      "socialPotential": 99,
+      "novelty": 93,
+      "importance": 91,
+      "radarScore": 95
+    }
+  ]
+}
