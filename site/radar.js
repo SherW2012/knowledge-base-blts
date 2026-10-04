@@ -33,10 +33,11 @@
 
   function formatDate(value) {
     if (!value) return "未知时间";
+    if (/^\d{4}-\d{2}-\d{2}$/.test(String(value))) return value;
     const date = new Date(value);
     if (Number.isNaN(date.getTime())) return value;
     return new Intl.DateTimeFormat("zh-CN", {
-      month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false
+      timeZone: "Asia/Shanghai", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false
     }).format(date);
   }
 
@@ -121,7 +122,7 @@
   function sourceCard(source, run) {
     const isX = (source.tags || []).includes("x-watchlist");
     const status = run?.status || (source.kind === "manual" ? "manual" : "unknown");
-    const label = status === "ok" ? `已抓取 ${run.items} 条` : status === "error" ? "本次抓取失败" : isX ? "X 观察名单" : status === "manual" ? "人工关注" : "等待运行";
+    const label = status === "ok" ? `已抓取 ${run.items} 条` : status === "error" ? "本次抓取失败" : status === "partial" ? "部分覆盖" : status === "no-signal" ? "已查看，无入选信号" : isX ? "X 观察名单" : status === "manual" ? "人工关注" : "等待运行";
     return `
       <div class="radar-source-card">
         <div><span class="radar-tier radar-tier-${escapeHtml((source.tier || "B").toLowerCase())}">${escapeHtml(source.tier || "B")}</span><strong>${escapeHtml(source.name)}</strong></div>
@@ -186,6 +187,7 @@
 
     function render() {
       const data = currentData();
+      const isWeek = data.periodType === "week";
       const pool = loadPool();
       const poolMap = new Map(pool.map((item) => [item.id, item]));
       const runs = new Map((latest.sourceRuns || []).map((run) => [run.id, run]));
@@ -223,14 +225,14 @@
       root.innerHTML = `
         <section class="radar-shell">
           <header class="radar-hero">
-            <div><div class="radar-kicker">AI INTELLIGENCE RADAR</div><h2>${escapeHtml(data.date || "等待运行")}</h2><p>先告诉你“这是什么、值不值得看”，再决定要不要展开分析。历史情报按日期保留，所有情报都可以按分类筛选。</p></div>
-            <div class="radar-run-state"><span>${latest.llm?.enabled ? "LLM ON" : "RULE MODE"}</span><small>${latest.llm?.enabled ? escapeHtml(latest.llm.model || "LLM") : "未配置大模型 API"}</small></div>
+            <div><div class="radar-kicker">AI INTELLIGENCE RADAR</div><h2>${escapeHtml(data.displayTitle || data.date || "等待运行")}</h2><p>${escapeHtml(data.periodNote || "先告诉你“这是什么、值不值得看”，再决定要不要展开分析。历史情报按日期保留，所有情报都可以按分类筛选。")}</p></div>
+            <div class="radar-run-state"><span>${latest.research ? "RESEARCH" : latest.llm?.enabled ? "LLM ON" : "RULE MODE"}</span><small>${latest.research ? "多源核验" : latest.llm?.enabled ? escapeHtml(latest.llm.model || "LLM") : "未配置大模型 API"}</small></div>
           </header>
           <div class="radar-stat-grid">
             <div><strong>${escapeHtml(latest.stats?.configuredSources ?? 0)}</strong><span>信息源</span></div>
-            <div><strong>${escapeHtml(data.stats?.scannedItems ?? latest.stats?.scannedItems ?? 0)}</strong><span>当日抓取</span></div>
-            <div><strong>${escapeHtml(data.stats?.eventClusters ?? latest.stats?.eventClusters ?? 0)}</strong><span>当日事件</span></div>
-            <div><strong>${escapeHtml(data.items?.length || 0)}</strong><span>当日精选</span></div>
+            <div><strong>${escapeHtml(data.stats?.researchItems ?? data.stats?.scannedItems ?? 0)}</strong><span>${isWeek ? "本周核验入选" : "核验入选"}</span></div>
+            <div><strong>${escapeHtml(data.stats?.eventClusters ?? data.items?.length ?? 0)}</strong><span>${isWeek ? "本周选题" : "当日事件"}</span></div>
+            <div><strong>${escapeHtml(data.items?.length || 0)}</strong><span>${isWeek ? "本周精选" : "当日精选"}</span></div>
           </div>
           <nav class="radar-tabs">
             <button class="${activeTab === "today" ? "active" : ""}" data-radar-tab="today">情报 <span>${escapeHtml(data.items?.length || 0)}</span></button>
@@ -239,7 +241,7 @@
           </nav>
           ${activeTab === "today" ? `${dateNav}${categoryNav}` : ""}
           <div class="radar-panel">${activeTab === "today" ? dayContent : activeTab === "pool" ? poolContent : sourceContent}</div>
-          <footer class="radar-footer-note">最近生成：${escapeHtml(formatDate(latest.generatedAt))} · 自动源成功 ${escapeHtml(latest.stats?.successfulSources ?? 0)} / ${escapeHtml(latest.stats?.automatedSources ?? 0)}${latest.stats?.failedSources ? ` · <span>${escapeHtml(latest.stats.failedSources)} 个源失败，已隔离</span>` : ""}</footer>
+          <footer class="radar-footer-note">最近生成：${escapeHtml(formatDate(latest.generatedAt))} · 成功来源 ${escapeHtml(latest.stats?.successfulSources ?? 0)} / ${escapeHtml(latest.stats?.configuredSources ?? 0)}${latest.stats?.partialSources ? ` · 部分覆盖 ${escapeHtml(latest.stats.partialSources)} 个来源` : ""}${latest.stats?.failedSources ? ` · <span>${escapeHtml(latest.stats.failedSources)} 个源失败，已隔离</span>` : ""}</footer>
         </section>`;
 
       root.querySelectorAll("[data-radar-tab]").forEach((button) => button.addEventListener("click", () => {
