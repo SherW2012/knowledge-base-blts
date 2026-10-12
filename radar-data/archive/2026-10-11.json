@@ -1,0 +1,607 @@
+{
+  "schemaVersion": 3,
+  "status": "partial",
+  "generatedAt": "2026-10-12T13:58:30+08:00",
+  "date": "2026-10-11",
+  "timezone": "Asia/Shanghai",
+  "focus": "x-useful-viral-actionable",
+  "periodType": "daily",
+  "periodLabel": "昨日回补｜10月11日",
+  "displayTitle": "昨日回补｜10月11日",
+  "periodDescription": "8条去重精选｜北京时间10月10日 13:58—10月11日 13:58。昨日回补，区分官方版本发布与PH上榜事件。",
+  "periodNote": "一手用途、时间与使用条件已逐条核验；来源覆盖边界见信息源。",
+  "research": {
+    "mode": "editorial web research",
+    "provider": "ChatGPT Web + primary publisher metadata",
+    "externalLlmApi": false,
+    "windowStart": "2026-10-10T13:58:30+08:00",
+    "windowEnd": "2026-10-11T13:58:30+08:00",
+    "backfill": true,
+    "notes": [
+      "时间窗口按北京时间滚动24小时，昨日为前一个等长窗口；回补抓取时间保留为实际今日，不伪造昨日抓取。",
+      "PH内嵌featuredAt可核对至秒，但只代表该次上榜/发布活动，不等于产品首次上线。",
+      "当日趋势观察与官方版本发布分开；不将仓库创建日期、README更新或转载时间当首发。",
+      "WordCraft昨日归档记录v0.5.0发布；今日记录趋势延续和CLI/MCP用法，不宣称两次新品发布。",
+      "Claude Dashboards & Motion官方文章日期为10月8日，虽出现在PH10月10日榜，但未当作新功能加入本期。",
+      "BetterWispr中文应选支持中文的模型，Parakeet v3不支持中文；SimpleSpread已在v1.3.0加入透视表，旧PH介绍已校正。",
+      "评分为编辑筛选：实用35%、传播30%、新鲜20%、用户影响15%；没有虚构亲测、模型速度或收益。"
+    ]
+  },
+  "stats": {
+    "configuredSources": 11,
+    "automatedSources": 0,
+    "manualSources": 11,
+    "successfulSources": 1,
+    "partialSources": 10,
+    "failedSources": 0,
+    "researchItems": 8,
+    "eventClusters": 8,
+    "publishedItems": 8
+  },
+  "sources": [
+    {
+      "id": "src-github",
+      "name": "GitHub Trending / Releases",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://github.com/trending",
+      "tags": [
+        "daily"
+      ],
+      "note": "本轮优先扫描了当前GitHub日榜；昨日历史榜快照未取得，不倒填今日stars today。回补使用WordCraft/PdfCraft官方Release精确时间。"
+    },
+    {
+      "id": "src-trendshift",
+      "name": "Trendshift 实时趋势",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://trendshift.io/",
+      "tags": [
+        "daily"
+      ],
+      "note": "可读的是当前Today榜，未取得昨日可验证快照，因此不将今日趋势项目填入昨日。"
+    },
+    {
+      "id": "src-hn",
+      "name": "Hacker News / Show HN",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://news.ycombinator.com/",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取10月11日UTC历史首页和相关帖子，UTC自然日不等同北京时间滚动窗口；本期未从不确定时间的条目补数。"
+    },
+    {
+      "id": "src-ph",
+      "name": "Product Hunt 发布榜",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/10",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取10月10日发布榜17项，六个入选条目的featuredAt均为当地00:01（北京时间15:01），处于回补窗口。"
+    },
+    {
+      "id": "src-hf",
+      "name": "Hugging Face Trending",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://huggingface.co/models?sort=trending",
+      "tags": [
+        "daily"
+      ],
+      "note": "当前模型榜可读，未恢复昨日完整榜；未把最新更新时间当作模型首发。"
+    },
+    {
+      "id": "src-pwc",
+      "name": "Papers with Code / HF Papers",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://paperswithcode.com/",
+      "tags": [
+        "daily"
+      ],
+      "note": "原站跳转HF Papers；历史24小时逐篇核验未完成。"
+    },
+    {
+      "id": "src-aihot",
+      "name": "AI今日热榜",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://aihot.today/",
+      "tags": [
+        "daily"
+      ],
+      "note": "当前聚合页可读，但未取得昨日完整历史快照；仅作线索，不用于倒填日期。"
+    },
+    {
+      "id": "src-reddit",
+      "name": "Reddit / LocalLLaMA",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://www.reddit.com/r/LocalLLaMA/new/",
+      "tags": [
+        "daily"
+      ],
+      "note": "公开索引不能完整还原昨日窗口，未宣称完整覆盖。"
+    },
+    {
+      "id": "src-newsletter",
+      "name": "The Rundown AI",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://www.therundown.ai/",
+      "tags": [
+        "daily"
+      ],
+      "note": "公开首页已读，昨日完整刊期未取得。"
+    },
+    {
+      "id": "src-official",
+      "name": "官方产品文档与发布记录",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://github.com/",
+      "tags": [
+        "daily"
+      ],
+      "note": "回官方Release、产品文档和作者PH说明核验；Maildun/Skymir官网未成功读取，明确降为作者发布页证据。"
+    },
+    {
+      "id": "src-x",
+      "name": "X 原生线索",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://x.com/bozhou_ai",
+      "tags": [
+        "daily"
+      ],
+      "note": "公开搜索无法还原昨日完整时间线，未据此伪造热度与互动数据。"
+    }
+  ],
+  "sourceRuns": [
+    {
+      "id": "src-github",
+      "name": "GitHub Trending / Releases",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 2,
+      "note": "本轮优先扫描了当前GitHub日榜；昨日历史榜快照未取得，不倒填今日stars today。回补使用WordCraft/PdfCraft官方Release精确时间。"
+    },
+    {
+      "id": "src-trendshift",
+      "name": "Trendshift 实时趋势",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "可读的是当前Today榜，未取得昨日可验证快照，因此不将今日趋势项目填入昨日。"
+    },
+    {
+      "id": "src-hn",
+      "name": "Hacker News / Show HN",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "读取10月11日UTC历史首页和相关帖子，UTC自然日不等同北京时间滚动窗口；本期未从不确定时间的条目补数。"
+    },
+    {
+      "id": "src-ph",
+      "name": "Product Hunt 发布榜",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 6,
+      "note": "读取10月10日发布榜17项，六个入选条目的featuredAt均为当地00:01（北京时间15:01），处于回补窗口。"
+    },
+    {
+      "id": "src-hf",
+      "name": "Hugging Face Trending",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "当前模型榜可读，未恢复昨日完整榜；未把最新更新时间当作模型首发。"
+    },
+    {
+      "id": "src-pwc",
+      "name": "Papers with Code / HF Papers",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "原站跳转HF Papers；历史24小时逐篇核验未完成。"
+    },
+    {
+      "id": "src-aihot",
+      "name": "AI今日热榜",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "当前聚合页可读，但未取得昨日完整历史快照；仅作线索，不用于倒填日期。"
+    },
+    {
+      "id": "src-reddit",
+      "name": "Reddit / LocalLLaMA",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "公开索引不能完整还原昨日窗口，未宣称完整覆盖。"
+    },
+    {
+      "id": "src-newsletter",
+      "name": "The Rundown AI",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "公开首页已读，昨日完整刊期未取得。"
+    },
+    {
+      "id": "src-official",
+      "name": "官方产品文档与发布记录",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "回官方Release、产品文档和作者PH说明核验；Maildun/Skymir官网未成功读取，明确降为作者发布页证据。"
+    },
+    {
+      "id": "src-x",
+      "name": "X 原生线索",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "公开搜索无法还原昨日完整时间线，未据此伪造热度与互动数据。"
+    }
+  ],
+  "items": [
+    {
+      "id": "x-2026-10-11-wordcraft-release",
+      "title": "WordCraft v0.5.0：补齐Zotero、朗读与多项DOCX编辑细节",
+      "url": "https://github.com/storytold/wordcraft/releases/tag/v0.5.0",
+      "publishedAt": "2026-10-11T08:36:07+08:00",
+      "observedAt": "2026-10-12T13:58:30+08:00",
+      "category": "文档效率",
+      "summary": "窗口内发布v0.5.0，发布记录包含Zotero写作引用集成、可调速度朗读、Word旧.doc导入、公式编辑，以及修订、浮动图片和中文界面显示等修复。开源且有Windows/Mac/Linux发行包。",
+      "whyItMatters": "有旧Word文件、参考文献和修订稿的人可用副本验证：导入、编辑、导出后检查公式、引用和分页。",
+      "angles": [
+        "文档工具是否好用，先拿自己的引用、公式和修订稿走一遍。"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Trending / Releases / 一手核验",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "项目说明",
+          "url": "https://github.com/storytold/wordcraft"
+        }
+      ],
+      "practicality": 91,
+      "socialPotential": 85,
+      "novelty": 88,
+      "importance": 88,
+      "radarScore": 88,
+      "signalType": "release",
+      "datePrecision": "second",
+      "freshnessEvidence": "官方Release元数据published_at=2026-10-11T00:36:07Z，属于昨日回补窗口。",
+      "quickStart": [
+        "下载v0.5.0对应系统发行包。",
+        "打开一份旧.doc或带引用的.docx副本，试Zotero与修订流程。",
+        "导出PDF与DOCX，核对引用、字体、公式和浮动对象。"
+      ],
+      "costAndLimits": "MIT/Apache-2.0；免费离线编辑。兼容性仍依文件而异，不宣称完全替代Word。"
+    },
+    {
+      "id": "x-2026-10-11-pdfcraft-release",
+      "title": "PdfCraft v0.6.0：PDF批处理、页面提取和Windows使用细节改进",
+      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.6.0",
+      "publishedAt": "2026-10-11T09:34:01+08:00",
+      "observedAt": "2026-10-12T13:58:30+08:00",
+      "category": "PDF效率",
+      "summary": "v0.6.0在窗口内发布，包含提取页面命名、按词表遮盖、批处理同名文件结果保留、Windows单实例和高DPI等改进。项目支持本地合并、拆分、提取和CLI/MCP处理。",
+      "whyItMatters": "把报告、附件和选定页整理为交付包；重复处理可以写成CLI脚本。批处理先用副本检查顺序和结果文件名。",
+      "angles": [
+        "合并、抽页、每十页拆一份，这类PDF操作可以固定成三条命令。"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Trending / Releases / 一手核验",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "项目与CLI文档",
+          "url": "https://github.com/storytold/pdfcraft"
+        }
+      ],
+      "practicality": 91,
+      "socialPotential": 86,
+      "novelty": 87,
+      "importance": 87,
+      "radarScore": 88,
+      "signalType": "release",
+      "datePrecision": "second",
+      "freshnessEvidence": "官方Release published_at=2026-10-11T01:34:01Z；功能增量来自该版发布说明。",
+      "quickStart": [
+        "下载对应系统安装包；普通操作可在图形界面完成。",
+        "CLI合并：pdfcraft-cli combine report.pdf appendix.pdf --out combined.pdf。",
+        "抽页：pdfcraft-cli extract report.pdf --pages 1,3,5 --out highlights.pdf。"
+      ],
+      "costAndLimits": "开源、离线，无账号要求；Agent调用仍可能使用外部模型。增量保存保留原始字节，敏感内容的最终遮盖需按工具专用流程复核，不能只加黑色形状。"
+    },
+    {
+      "id": "x-2026-10-11-onepin",
+      "title": "Onepin：配音前检查人名、金额和日期，局部修错词",
+      "url": "https://onepin.ai/",
+      "publishedAt": "2026-10-10T15:01:00+08:00",
+      "observedAt": "2026-10-12T13:58:30+08:00",
+      "category": "音频与内容创作",
+      "summary": "10月10日PH发布榜入选。产品面向多语种配音，支持现有语音供应商，对姓名发音、金额与日期做准备，并逐句给出质量信号；可修正错词而不必重做整段。",
+      "whyItMatters": "制作课程、产品视频时，先把品牌名和数字读法固定下来，再生成整段，减少反复试听整片找错字。",
+      "angles": [
+        "AI配音听起来像真人还不够，产品名和价格读错照样得返工。"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt 发布榜 / 一手核验",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "原作者发布页",
+          "url": "https://www.producthunt.com/products/onepin"
+        },
+        {
+          "name": "日期证据",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/10/10"
+        }
+      ],
+      "practicality": 90,
+      "socialPotential": 89,
+      "novelty": 86,
+      "importance": 85,
+      "radarScore": 88,
+      "signalType": "product-hunt-launch",
+      "datePrecision": "second",
+      "freshnessEvidence": "PH榜单内嵌featuredAt=2026-10-10T00:01:00-07:00，即北京时间15:01，落在昨日回补窗口。",
+      "quickStart": [
+        "从官方入口建立短配音任务。",
+        "先核对人名、品牌、金额和日期的读法，再选声音。",
+        "检查逐句评分与试听，有误处局部修改。"
+      ],
+      "costAndLimits": "官方提供免费起步入口；持续生成使用额度/付费方案。不承诺自动检查零错误，也不把免费起步当无限免费。"
+    },
+    {
+      "id": "x-2026-10-11-gitglow",
+      "title": "GitGlow：把Agent改动和审查状态放回本地Git工作区",
+      "url": "https://www.gitglow.dev/",
+      "publishedAt": "2026-10-10T15:01:00+08:00",
+      "observedAt": "2026-10-12T13:58:30+08:00",
+      "category": "代码审查",
+      "summary": "窗口内PH上榜。GitGlow支持精确暂存、历史、差异和跟随checkout的终端；Pro增加会随代码修改而过期的审查标记及验证状态。免费版支持单个活跃本地仓库、无需账号和只读MCP。",
+      "whyItMatters": "审查过的文件被Agent再次修改后，旧勾选不应继续代表已审；可以把“看过”和“当前代码验证过”分清。",
+      "angles": [
+        "上午看过的diff，下午又改了，那个“已审查”标记就该失效。"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt 发布榜 / 一手核验",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "发布页",
+          "url": "https://www.producthunt.com/products/gitglow-2"
+        },
+        {
+          "name": "日期证据",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/10/10"
+        }
+      ],
+      "practicality": 90,
+      "socialPotential": 84,
+      "novelty": 87,
+      "importance": 86,
+      "radarScore": 87,
+      "signalType": "product-hunt-launch",
+      "datePrecision": "second",
+      "freshnessEvidence": "PH10月10日发布榜的featuredAt为北京时间15:01；用途与分层回官网FAQ核验。",
+      "quickStart": [
+        "打开一个已有本地仓库，先用免费版查看diff和逐段暂存。",
+        "需要审查状态随编辑过期时，再评估Pro的review freshness。",
+        "按实际checkout运行检查，核对后提交。"
+      ],
+      "costAndLimits": "官网Pro为€2.99/月或€29/年；模型费用另计。Windows/Linux发行包经过构建验证，官网未把它写成完整运行实测。"
+    },
+    {
+      "id": "x-2026-10-11-skreno",
+      "title": "Skreno：浏览器录屏、转录与按秒评论放在同一链接",
+      "url": "https://www.skreno.ai/",
+      "publishedAt": "2026-10-10T15:01:00+08:00",
+      "observedAt": "2026-10-12T13:58:30+08:00",
+      "category": "视频与协作",
+      "summary": "窗口内PH上榜。浏览器内录屏、编辑和分享，屏幕与摄像头分轨，支持字幕、剪静音、转录与摘要；观看者可按视频时间点评论。录制请求链接让对方无需账号提交视频。",
+      "whyItMatters": "收集Bug复现、客户反馈或异步讲解时，用一个链接对应画面和评论，少来回问“你说的是第几秒”。",
+      "angles": [
+        "给Bug反馈配上时间点和录屏，沟通就不用靠猜。"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt 发布榜 / 一手核验",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "原作者发布页",
+          "url": "https://www.producthunt.com/products/skreno"
+        },
+        {
+          "name": "日期证据",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/10/10"
+        }
+      ],
+      "practicality": 89,
+      "socialPotential": 86,
+      "novelty": 84,
+      "importance": 85,
+      "radarScore": 86,
+      "signalType": "product-hunt-launch",
+      "datePrecision": "second",
+      "freshnessEvidence": "PH10月10日榜featuredAt为北京时间15:01；官网确认免费编辑器与云端分享功能区分。",
+      "quickStart": [
+        "从官网Start Recording选择屏幕或窗口。",
+        "剪掉等待和重复片段，补字幕与必要遮盖。",
+        "用分享链接收按秒评论；录制技术问题时再按需附日志。"
+      ],
+      "costAndLimits": "有免费方案，官网说明所有方案无水印；云存储、AI转录等额度以当前价格页为准。分享和日志上传应按实际受众范围设置。"
+    },
+    {
+      "id": "x-2026-10-11-maildun",
+      "title": "Maildun for Mac：复用品牌邮件版式，让Agent提交可接受的修改",
+      "url": "https://www.producthunt.com/products/maildun-for-mac",
+      "publishedAt": "2026-10-10T15:01:00+08:00",
+      "observedAt": "2026-10-12T13:58:30+08:00",
+      "category": "营销与内容工作流",
+      "summary": "窗口内PH上榜，作者介绍确认：原生Mac邮件设计器支持拖拽、自有模型API、内置MCP；AI修改先形成提议，由人接受或拒绝。可按客户设置工作区、品牌样式和保存区块。",
+      "whyItMatters": "给不同客户做营销邮件时，把页眉、页脚、按钮和品牌规范存下来；以后只替换内容，不必每封重新搭版。",
+      "angles": [
+        "让Agent写邮件时，连品牌颜色、按钮样式和页脚一起复用。"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt 发布榜 / 一手核验",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "官方入口",
+          "url": "https://maildun.com/"
+        },
+        {
+          "name": "日期证据",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/10/10"
+        }
+      ],
+      "practicality": 87,
+      "socialPotential": 86,
+      "novelty": 85,
+      "importance": 81,
+      "radarScore": 85,
+      "signalType": "product-hunt-launch",
+      "datePrecision": "second",
+      "freshnessEvidence": "PH10月10日榜featuredAt为北京时间15:01；产品作者Dunn的发布说明是一手证据。官网本轮403，未据此编写未核验定价。",
+      "quickStart": [
+        "从作者发布页进入Mac下载入口。",
+        "先设置一个客户工作区、品牌字体颜色和常用页眉页脚。",
+        "接自有模型或开启MCP，逐项接受设计修改后预览桌面/移动版。"
+      ],
+      "costAndLimits": "发布页标Free，模型API及自有R2/S3媒体存储另计费。官网本轮访问失败，不推断完整免费额度，也不宣称已核验实际群发能力。"
+    },
+    {
+      "id": "x-2026-10-11-fluence",
+      "title": "Fluence：把PDF和电子书留在手机里离线朗读",
+      "url": "https://fluencereader.com/",
+      "publishedAt": "2026-10-10T15:01:00+08:00",
+      "observedAt": "2026-10-12T13:58:30+08:00",
+      "category": "阅读与学习",
+      "summary": "窗口内PH上榜。Android文档朗读工具支持PDF、EPUB、Word、ODT、RTF与Markdown，内置多语种声音，边听边高亮；官方介绍可基于文档段落问答，无账号和订阅。",
+      "whyItMatters": "把已有学习材料在通勤时听一遍，再回到命中段落复习；先用自己的文件检查排版提取和语言表现。",
+      "angles": [
+        "收藏的PDF一直没读，可以先从通勤时听完其中一章开始。"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt 发布榜 / 一手核验",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "作者发布页",
+          "url": "https://www.producthunt.com/products/fluence"
+        },
+        {
+          "name": "日期证据",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/10/10"
+        }
+      ],
+      "practicality": 86,
+      "socialPotential": 85,
+      "novelty": 83,
+      "importance": 82,
+      "radarScore": 84,
+      "signalType": "product-hunt-launch",
+      "datePrecision": "second",
+      "freshnessEvidence": "PH10月10日榜featuredAt为北京时间15:01；官网与原作者发布页核验离线路径，不把今天抓取时间当首发。",
+      "quickStart": [
+        "从官网跳转官方安装入口。",
+        "导入一份PDF/EPUB，选对应语言并检查文字提取。",
+        "试听一小段，确认朗读顺序后继续；问题回答回原段落核对。"
+      ],
+      "costAndLimits": "官网当前显示前10份文档免费，完整版一次性€14.99、无订阅；导出整本音频属于完整版。具体地区结算以官方入口为准。"
+    },
+    {
+      "id": "x-2026-10-11-skymir",
+      "title": "Skymir：给Linux桌面补上Google Drive双向同步",
+      "url": "https://skymir.app/",
+      "publishedAt": "2026-10-10T15:01:00+08:00",
+      "observedAt": "2026-10-12T13:58:30+08:00",
+      "category": "文件与桌面效率",
+      "summary": "窗口内PH上榜。作者说明支持选定Drive文件夹双向同步，Google Docs作为可双击快捷方式，带GTK托盘。删除进入双方回收站，默认拒绝会删除超过半数文件的同步，可配置阈值。",
+      "whyItMatters": "Linux用户可把云端文档和本地工作目录连接起来；先选一个小目录确认双向行为，再扩大同步范围。",
+      "angles": [
+        "Linux上要的是选几个文件夹自动同步，不必每次回网页找文件。"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt 发布榜 / 一手核验",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "原作者功能说明",
+          "url": "https://www.producthunt.com/products/skymir"
+        },
+        {
+          "name": "安装入口",
+          "url": "https://skymir.app/install"
+        },
+        {
+          "name": "日期证据",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/10/10"
+        }
+      ],
+      "practicality": 85,
+      "socialPotential": 82,
+      "novelty": 82,
+      "importance": 81,
+      "radarScore": 83,
+      "signalType": "product-hunt-launch",
+      "datePrecision": "second",
+      "freshnessEvidence": "PH10月10日发布榜featuredAt为北京时间15:01；作者说明表明产品更早已存在，此处记录PH发布榜事件。",
+      "quickStart": [
+        "按skymir.app/install安装对应Linux包。",
+        "登录自己的Google Drive，只选择一个测试文件夹。",
+        "分别验证新增、修改和回收站行为，确认后再扩大范围。"
+      ],
+      "costAndLimits": "作者公布$19一次性购买、14天完整试用。官网本轮抓取失败，功能与价格以作者PH说明为核验依据，购买前再看结算页。"
+    }
+  ]
+}
