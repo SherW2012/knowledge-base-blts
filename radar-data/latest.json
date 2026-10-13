@@ -1,30 +1,29 @@
 {
   "schemaVersion": 3,
   "status": "partial",
-  "generatedAt": "2026-10-12T13:58:30+08:00",
-  "date": "2026-10-12",
+  "generatedAt": "2026-10-13T10:50:47+08:00",
+  "date": "2026-10-13",
   "timezone": "Asia/Shanghai",
   "focus": "x-useful-viral-actionable",
   "periodType": "daily",
-  "periodLabel": "今日雷达｜10月12日",
-  "displayTitle": "今日雷达｜10月12日",
-  "periodDescription": "10条去重精选｜北京时间10月11日 13:58—10月12日 13:58。新版本、发布榜和当日趋势分别标注。",
-  "periodNote": "一手用途、时间与使用条件已逐条核验；来源覆盖边界见信息源。",
+  "periodLabel": "今日雷达｜10月13日",
+  "displayTitle": "今日雷达｜10月13日",
+  "periodDescription": "5条去重精选｜北京时间10月12日 10:50—10月13日 10:50。当日趋势与PH发布榜事件分开标注。",
+  "periodNote": "已核验用途、入口、费用与平台条件；不重复前两期选题。来源覆盖边界见信息源。",
   "research": {
     "mode": "editorial web research",
     "provider": "ChatGPT Web + primary publisher metadata",
     "externalLlmApi": false,
-    "windowStart": "2026-10-11T13:58:30+08:00",
-    "windowEnd": "2026-10-12T13:58:30+08:00",
+    "windowStart": "2026-10-12T10:50:47+08:00",
+    "windowEnd": "2026-10-13T10:50:47+08:00",
     "backfill": false,
     "notes": [
-      "时间窗口按北京时间滚动24小时，昨日为前一个等长窗口；回补抓取时间保留为实际今日，不伪造昨日抓取。",
-      "PH内嵌featuredAt可核对至秒，但只代表该次上榜/发布活动，不等于产品首次上线。",
-      "当日趋势观察与官方版本发布分开；不将仓库创建日期、README更新或转载时间当首发。",
-      "WordCraft昨日归档记录v0.5.0发布；今日记录趋势延续和CLI/MCP用法，不宣称两次新品发布。",
-      "Claude Dashboards & Motion官方文章日期为10月8日，虽出现在PH10月10日榜，但未当作新功能加入本期。",
-      "BetterWispr中文应选支持中文的模型，Parakeet v3不支持中文；SimpleSpread已在v1.3.0加入透视表，旧PH介绍已校正。",
-      "评分为编辑筛选：实用35%、传播30%、新鲜20%、用户影响15%；没有虚构亲测、模型速度或收益。"
+      "以北京时间滚动24小时筛选。趋势条目记录本轮观察日，PH条目记录榜单日期；日期精度均明确到日，不伪造首发秒数。",
+      "优先读取GitHub原生Daily列表，再扫描Trendshift、HN、PH、HF、论文索引、AI HOT、Reddit、Newsletter与公开X线索。",
+      "剔除已归档的Matt Pocock Skills、ArtCraft、Diagram Design、God’s Eye View等同一用途内容；REA已有独立长文，本轮不重复展开。",
+      "Atticus原始HN时间戳早于窗口。Muse Wonder官方日期字段落在10月12日00:00 UTC，未用稍后的HN讨论时间替换原始发布日期。",
+      "Context Mode为ELv2源码可用项目；ngram免费积分一次性，Ancher免费积分按月；ESP32报价只含板卡且当前主机流程为Mac/Linux。",
+      "评分权重：实用35%、传播30%、新鲜20%、用户实际影响15%。未虚构本地安装、亲测体验、节省比例或收益。"
     ]
   },
   "stats": {
@@ -34,9 +33,9 @@
     "successfulSources": 7,
     "partialSources": 4,
     "failedSources": 0,
-    "researchItems": 10,
-    "eventClusters": 10,
-    "publishedItems": 10
+    "researchItems": 5,
+    "eventClusters": 5,
+    "publishedItems": 5
   },
   "sources": [
     {
@@ -48,7 +47,7 @@
       "tags": [
         "daily"
       ],
-      "note": "优先读取GitHub原生日榜全部8个可见条目，核对stars today；保留ArtCraft，淘汰底层框架、旧代码集和本轮不适合普通读者的项目。"
+      "note": "优先扫描GitHub原生日榜，读取9个可见项目及stars today；Context Mode本轮+246。REA、ArtCraft、Diagram Design等已讲过的题材不重复入选；底层推理框架降权。"
     },
     {
       "id": "src-trendshift",
@@ -59,7 +58,7 @@
       "tags": [
         "daily"
       ],
-      "note": "读取Today前25项，逐一筛选可用性；Anatomy、DigUp、WordCraft、Orca入选。第三方榜与GitHub官方日榜分开标注。"
+      "note": "读取Today前25项；Lertaro与ESP32 iPhone Agent入选。第三方实时趋势与GitHub官方Trending明确区分，不将今日上榜说成今日首发。"
     },
     {
       "id": "src-hn",
@@ -70,18 +69,18 @@
       "tags": [
         "daily"
       ],
-      "note": "读取实时首页，核对Doory与BetterWispr帖子时间，并回项目README/官网核验；社区发现不代表软件首次上线。"
+      "note": "读取首页30项并核对候选原帖时间。Atticus的HTML时间戳为10月12日08:15北京时间，早于本轮窗口，不因页面相对时间而收录。"
     },
     {
       "id": "src-ph",
       "name": "Product Hunt 发布榜",
       "tier": "S",
       "kind": "web_research",
-      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/11",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/12",
       "tags": [
         "daily"
       ],
-      "note": "读取10月11日榜17项、原作者页和内嵌featuredAt；OpenScreen与SimpleSpread入选，SimpleSpread功能以新版Release校正。"
+      "note": "读取10月12日发布榜10项及ngram、Ancher原作者介绍；两条按该次PH发布榜事件收录。日期精度到日，不虚构分钟级首发时间。"
     },
     {
       "id": "src-hf",
@@ -92,7 +91,7 @@
       "tags": [
         "daily"
       ],
-      "note": "读取模型趋势榜；更新日期不自动算功能发布，本轮未选纯榜单模型以凑数。"
+      "note": "读取Hugging Face模型趋势列表；区分模型更新时间与正式发布，未用旧模型再上榜凑数。"
     },
     {
       "id": "src-pwc",
@@ -103,7 +102,7 @@
       "tags": [
         "daily"
       ],
-      "note": "Papers with Code跳转HF Papers；读取论文索引，未逐篇核验完整24小时。"
+      "note": "Papers with Code跳转到Hugging Face Papers；读取论文索引，未逐篇核验完整24小时。"
     },
     {
       "id": "src-aihot",
@@ -114,7 +113,7 @@
       "tags": [
         "daily"
       ],
-      "note": "实际读取aihot.today的聚合列表，用于交叉发现；不把聚合抓取时刻当原始事件时间。"
+      "note": "读取aihot.today的10月13日聚合页，包含HN与科技媒体线索；聚合抓取时刻不当作原事件时间。"
     },
     {
       "id": "src-reddit",
@@ -125,7 +124,7 @@
       "tags": [
         "daily"
       ],
-      "note": "读取LocalLLaMA公开新帖页；索引缓存及时间信息限制，不能视作完整24小时覆盖。"
+      "note": "读取LocalLLaMA公开新帖内容；页面未稳定提供每条准确时间，未将其视为完整24小时覆盖。"
     },
     {
       "id": "src-newsletter",
@@ -136,7 +135,7 @@
       "tags": [
         "daily"
       ],
-      "note": "读取The Rundown公开首页，未获取完整订阅邮件或全部历史刊期。"
+      "note": "读取The Rundown公开首页、最新刊期与工具线索；Ben's Bites返回空正文，未获取完整订阅邮件。"
     },
     {
       "id": "src-official",
@@ -147,7 +146,7 @@
       "tags": [
         "daily"
       ],
-      "note": "所有入选项目回作者README、Release、产品页核验；只核验入选范围，不宣称大厂新闻全覆盖。"
+      "note": "5个入选项目回到作者README、官方使用手册、产品页与定价页核验。Muse Wonder的官方日期元数据不足以确认在窗口内，未以HN转述时间替代首发时间。"
     },
     {
       "id": "src-x",
@@ -158,7 +157,7 @@
       "tags": [
         "daily"
       ],
-      "note": "检索公开X线索与泊舟样例，索引命中不足；不宣称读过完整X时间线。"
+      "note": "检索泊舟与近24小时公开X线索，索引命中不足；未宣称完整读取X时间线。"
     }
   ],
   "sourceRuns": [
@@ -169,7 +168,7 @@
       "kind": "web_research",
       "status": "ok",
       "items": 1,
-      "note": "优先读取GitHub原生日榜全部8个可见条目，核对stars today；保留ArtCraft，淘汰底层框架、旧代码集和本轮不适合普通读者的项目。"
+      "note": "优先扫描GitHub原生日榜，读取9个可见项目及stars today；Context Mode本轮+246。REA、ArtCraft、Diagram Design等已讲过的题材不重复入选；底层推理框架降权。"
     },
     {
       "id": "src-trendshift",
@@ -177,8 +176,8 @@
       "tier": "A",
       "kind": "web_research",
       "status": "ok",
-      "items": 4,
-      "note": "读取Today前25项，逐一筛选可用性；Anatomy、DigUp、WordCraft、Orca入选。第三方榜与GitHub官方日榜分开标注。"
+      "items": 2,
+      "note": "读取Today前25项；Lertaro与ESP32 iPhone Agent入选。第三方实时趋势与GitHub官方Trending明确区分，不将今日上榜说成今日首发。"
     },
     {
       "id": "src-hn",
@@ -186,8 +185,8 @@
       "tier": "S",
       "kind": "web_research",
       "status": "ok",
-      "items": 2,
-      "note": "读取实时首页，核对Doory与BetterWispr帖子时间，并回项目README/官网核验；社区发现不代表软件首次上线。"
+      "items": 0,
+      "note": "读取首页30项并核对候选原帖时间。Atticus的HTML时间戳为10月12日08:15北京时间，早于本轮窗口，不因页面相对时间而收录。"
     },
     {
       "id": "src-ph",
@@ -196,7 +195,7 @@
       "kind": "web_research",
       "status": "ok",
       "items": 2,
-      "note": "读取10月11日榜17项、原作者页和内嵌featuredAt；OpenScreen与SimpleSpread入选，SimpleSpread功能以新版Release校正。"
+      "note": "读取10月12日发布榜10项及ngram、Ancher原作者介绍；两条按该次PH发布榜事件收录。日期精度到日，不虚构分钟级首发时间。"
     },
     {
       "id": "src-hf",
@@ -205,7 +204,7 @@
       "kind": "web_research",
       "status": "ok",
       "items": 0,
-      "note": "读取模型趋势榜；更新日期不自动算功能发布，本轮未选纯榜单模型以凑数。"
+      "note": "读取Hugging Face模型趋势列表；区分模型更新时间与正式发布，未用旧模型再上榜凑数。"
     },
     {
       "id": "src-pwc",
@@ -214,7 +213,7 @@
       "kind": "web_research",
       "status": "partial",
       "items": 0,
-      "note": "Papers with Code跳转HF Papers；读取论文索引，未逐篇核验完整24小时。"
+      "note": "Papers with Code跳转到Hugging Face Papers；读取论文索引，未逐篇核验完整24小时。"
     },
     {
       "id": "src-aihot",
@@ -223,7 +222,7 @@
       "kind": "web_research",
       "status": "ok",
       "items": 0,
-      "note": "实际读取aihot.today的聚合列表，用于交叉发现；不把聚合抓取时刻当原始事件时间。"
+      "note": "读取aihot.today的10月13日聚合页，包含HN与科技媒体线索；聚合抓取时刻不当作原事件时间。"
     },
     {
       "id": "src-reddit",
@@ -232,7 +231,7 @@
       "kind": "web_research",
       "status": "partial",
       "items": 0,
-      "note": "读取LocalLLaMA公开新帖页；索引缓存及时间信息限制，不能视作完整24小时覆盖。"
+      "note": "读取LocalLLaMA公开新帖内容；页面未稳定提供每条准确时间，未将其视为完整24小时覆盖。"
     },
     {
       "id": "src-newsletter",
@@ -241,7 +240,7 @@
       "kind": "web_research",
       "status": "partial",
       "items": 0,
-      "note": "读取The Rundown公开首页，未获取完整订阅邮件或全部历史刊期。"
+      "note": "读取The Rundown公开首页、最新刊期与工具线索；Ben's Bites返回空正文，未获取完整订阅邮件。"
     },
     {
       "id": "src-official",
@@ -249,8 +248,8 @@
       "tier": "S",
       "kind": "web_research",
       "status": "ok",
-      "items": 1,
-      "note": "所有入选项目回作者README、Release、产品页核验；只核验入选范围，不宣称大厂新闻全覆盖。"
+      "items": 0,
+      "note": "5个入选项目回到作者README、官方使用手册、产品页与定价页核验。Muse Wonder的官方日期元数据不足以确认在窗口内，未以HN转述时间替代首发时间。"
     },
     {
       "id": "src-x",
@@ -259,334 +258,21 @@
       "kind": "web_research",
       "status": "partial",
       "items": 0,
-      "note": "检索公开X线索与泊舟样例，索引命中不足；不宣称读过完整X时间线。"
+      "note": "检索泊舟与近24小时公开X线索，索引命中不足；未宣称完整读取X时间线。"
     }
   ],
   "items": [
     {
-      "id": "x-2026-10-12-openscreen",
-      "title": "OpenScreen 2：录屏自动放大，删转录文字就能剪视频",
-      "url": "https://github.com/getopenscreen/openscreen",
-      "publishedAt": "2026-10-11T15:01:00+08:00",
-      "observedAt": "2026-10-12T13:58:30+08:00",
-      "category": "视频创作",
-      "summary": "10月11日PH发布榜入选。社区接续维护的MIT录屏器支持按点击规划缩放、平滑光标、摄像头布局、本地字幕和按转录文字剪辑；提供CLI、MCP和openscreen-demo Skill。Windows、macOS、Linux均有安装路径。",
-      "whyItMatters": "做软件教程和产品演示时，可以先完成操作录屏，再删口误、加重点缩放、导出横竖版；Windows用户可直接走Store安装路径。",
+      "id": "x-2026-10-13-context-mode",
+      "title": "Context Mode：先筛日志和工具输出，再交给Agent",
+      "url": "https://github.com/mksglu/context-mode",
+      "publishedAt": "2026-10-13",
+      "observedAt": "2026-10-13T10:50:47+08:00",
+      "category": "Agent效率",
+      "summary": "本轮GitHub原生日榜显示+246 stars today。通过MCP工具执行、索引和检索，将原始工具输出留在处理环境中，只把需要的结果送进上下文；提供用量统计和安装诊断。",
+      "whyItMatters": "分析测试日志、浏览器快照或大量Issue时，可先提取失败项和相关片段，减少反复把整份原始输出送给模型。",
       "angles": [
-        "录屏时先把操作讲清楚，剪辑时直接删那句说错的话。"
-      ],
-      "source": {
-        "id": "src-ph",
-        "name": "Product Hunt 发布榜 / 一手核验",
-        "tier": "S",
-        "kind": "primary"
-      },
-      "relatedSources": [
-        {
-          "name": "官方产品与安装",
-          "url": "https://getopenscreen.com/"
-        },
-        {
-          "name": "PH发布页",
-          "url": "https://www.producthunt.com/products/openscreen-2"
-        },
-        {
-          "name": "当日发布榜",
-          "url": "https://www.producthunt.com/leaderboard/daily/2026/10/11"
-        }
-      ],
-      "practicality": 95,
-      "socialPotential": 94,
-      "novelty": 90,
-      "importance": 89,
-      "radarScore": 93,
-      "signalType": "product-hunt-launch",
-      "datePrecision": "second",
-      "freshnessEvidence": "PH榜单内嵌featuredAt为2026-10-11T00:01:00-07:00，即北京时间15:01；标记发布榜事件，不冒充项目首次上线。",
-      "quickStart": [
-        "Windows：winget install --source msstore OpenScreen；Mac/Linux按官方安装页选择安装包。",
-        "录制一个窗口，生成本地转录；删除不要的句子并检查切点。",
-        "需要Agent协作时再接MCP，并安装：npx skills add getopenscreen/openscreen --skill openscreen-demo。"
-      ],
-      "costAndLimits": "软件MIT免费，无水印；本地字幕需要对应模型。外接AI Agent仍使用其账号/API额度。Windows 1903+、内存至少8GB；Win10 2.0.0录制条存在官方已列出的兼容问题。"
-    },
-    {
-      "id": "x-2026-10-12-anatomy",
-      "title": "Anatomy：把技术概念做成可交互的机械图解",
-      "url": "https://github.com/wheresryan22/anatomy",
-      "publishedAt": "2026-10-12",
-      "observedAt": "2026-10-12T13:58:30+08:00",
-      "category": "图解与教学",
-      "summary": "本轮Trendshift Today出现。这个MIT Skill可把概念画成等距SVG机械装置，并加入交互、可选WebGL效果和3D模式。输出独立HTML、SVG或React组件，支持Claude Code、Codex和OpenCode。",
-      "whyItMatters": "用滑块和动态读数讲清限流、缓存、连接池等概念，适合课程、技术文章和产品说明；可直接复用已提交的HTML示例。",
-      "angles": [
-        "讲限流时，让读者亲手把请求量拉过上限，比再加一段定义好懂。"
-      ],
-      "source": {
-        "id": "src-trendshift",
-        "name": "Trendshift 实时趋势 / 一手核验",
-        "tier": "S",
-        "kind": "primary"
-      },
-      "relatedSources": [
-        {
-          "name": "今日趋势",
-          "url": "https://trendshift.io/"
-        },
-        {
-          "name": "示例与演示",
-          "url": "https://skills.wheresryan.sh/anatomy"
-        },
-        {
-          "name": "实际版本日期",
-          "url": "https://github.com/wheresryan22/anatomy/releases/tag/v1.0.0"
-        }
-      ],
-      "practicality": 93,
-      "socialPotential": 95,
-      "novelty": 91,
-      "importance": 87,
-      "radarScore": 92,
-      "signalType": "trending-observation",
-      "datePrecision": "day",
-      "freshnessEvidence": "2026-10-12读取Trendshift Today包含该仓库。v1.0.0实际发布于10月10日23:44北京时间，本条明确是当日趋势观察。",
-      "quickStart": [
-        "Codex安装：npx skills add wheresryan22/anatomy -g -a codex。",
-        "输入：$anatomy 用可交互装置解释令牌桶，容量10、每秒补2个令牌，显示请求是否通过，输出独立HTML。",
-        "核对模型数值、交互读数和导出图，不把概念类比当作工程仿真。"
-      ],
-      "costAndLimits": "MIT；生成仍需自备Agent额度。构建需Node 20.10+；skills CLI本身可能要求更高版本。浏览器验收需Chrome；静态SVG不保留完整HTML交互。"
-    },
-    {
-      "id": "x-2026-10-12-doory",
-      "title": "Doory：浏览器里做海报，访客也能编辑和导出",
-      "url": "https://github.com/shaongitbd/doory",
-      "publishedAt": "2026-10-12T08:48:27+08:00",
-      "observedAt": "2026-10-12T13:58:30+08:00",
-      "category": "设计与内容创作",
-      "summary": "本轮HN首页发现，帖子时间为北京时间10月12日08:48。浏览器设计编辑器支持海报、封面、多页设计、图层、动画与抠图，导出PNG/JPG/SVG/PDF及视频/GIF。访客作品保存在当前浏览器，可自行部署。",
-      "whyItMatters": "先从现成版式改标题、配色和图片；需要固定品牌样式时再使用账号与品牌套件，不必先搭建自己的服务。",
-      "angles": [
-        "做一张封面可以直接开编辑器，先改好，再决定要不要账号和协作。"
-      ],
-      "source": {
-        "id": "src-hn",
-        "name": "Hacker News / Show HN / 一手核验",
-        "tier": "S",
-        "kind": "primary"
-      },
-      "relatedSources": [
-        {
-          "name": "在线编辑器",
-          "url": "https://doory.art/"
-        },
-        {
-          "name": "HN发现帖",
-          "url": "https://news.ycombinator.com/item?id=50049872"
-        }
-      ],
-      "practicality": 92,
-      "socialPotential": 93,
-      "novelty": 88,
-      "importance": 85,
-      "radarScore": 90,
-      "signalType": "community-discovery",
-      "datePrecision": "second",
-      "freshnessEvidence": "HN首页条目50049872的时间属性为2026-10-12T00:48:27Z；时间指本轮发现帖子，并非仓库首发。",
-      "quickStart": [
-        "打开doory.art，先以访客身份选择模板或空白画布。",
-        "调整文字、图层和颜色，完成后导出PNG或PDF。",
-        "需要自托管时按README配置环境变量、启动Docker，并单独导入模板、字体和抠图模型。"
-      ],
-      "costAndLimits": "官方README说明编辑器功能免费、无水印。许可为Attribution Assurance，分发/自托管需保留署名；图库搜索需自备Unsplash/Pexels Key。访客草稿局限于该设备浏览器。"
-    },
-    {
-      "id": "x-2026-10-12-digup",
-      "title": "DigUp：按画面和内容找文件，直接定位到页或时间点",
-      "url": "https://github.com/ARahim3/DigUp",
-      "publishedAt": "2026-10-12",
-      "observedAt": "2026-10-12T13:58:30+08:00",
-      "category": "本地搜索",
-      "summary": "本轮Trendshift Today出现。基于EmbeddingGemma 2的Mac搜索工具，可以用自然语言找照片、PDF、文档、录音和视频，并跳到命中页或片段；结合语义与精确词匹配，只索引指定文件夹。",
-      "whyItMatters": "忘记文件名时仍可按画面、谈话主题或条款内容找回资料；先索引一个素材目录，避免把第一次索引拖得太长。",
-      "angles": [
-        "文件名叫最终版3没关系，搜索“那张海边有狗的照片”也能试着找。"
-      ],
-      "source": {
-        "id": "src-trendshift",
-        "name": "Trendshift 实时趋势 / 一手核验",
-        "tier": "S",
-        "kind": "primary"
-      },
-      "relatedSources": [
-        {
-          "name": "今日趋势",
-          "url": "https://trendshift.io/"
-        },
-        {
-          "name": "安装包",
-          "url": "https://github.com/ARahim3/DigUp/releases"
-        }
-      ],
-      "practicality": 92,
-      "socialPotential": 92,
-      "novelty": 89,
-      "importance": 85,
-      "radarScore": 90,
-      "signalType": "trending-observation",
-      "datePrecision": "day",
-      "freshnessEvidence": "2026-10-12 Trendshift Today列出DigUp；v0.6.0是10月10日03:04北京时间发布，未当作今日新版本。",
-      "quickStart": [
-        "安装DMG，或brew install --cask arahim3/tap/digup。",
-        "首次下载约865MB模型，只选一个常用文件夹开始建立索引。",
-        "按Shift+Command+Space描述内容；代码检索需单独开启，查询以code:开头。"
-      ],
-      "costAndLimits": "MIT免费；仅Apple Silicon、macOS14+。本地模型和索引占磁盘；长目录首次索引可能较久。中文等无空格语言的精确分词有已知限制，不能承诺全语言同等效果。"
-    },
-    {
-      "id": "x-2026-10-12-betterwispr",
-      "title": "BetterWispr：按住快捷键说话，文字直接落到当前输入框",
-      "url": "https://github.com/opennookorg/betterwispr",
-      "publishedAt": "2026-10-11T20:01:28+08:00",
-      "observedAt": "2026-10-12T13:58:30+08:00",
-      "category": "语音与写作",
-      "summary": "作者在窗口内发布Show HN。macOS开源听写工具支持Option+Space按住说话、松开转录，本地Whisper、Parakeet和Apple语音模型可选；词汇表能记录姓名和术语，保留原始与修正文本。",
-      "whyItMatters": "长提示词和文章初稿可以先口述；把常见产品名加进词汇表，再回到原始转录确认数字和专名。",
-      "angles": [
-        "给AI讲需求时，先一口气讲完，再改文字，少在输入框里反复组织句子。"
-      ],
-      "source": {
-        "id": "src-hn",
-        "name": "Hacker News / Show HN / 一手核验",
-        "tier": "S",
-        "kind": "primary"
-      },
-      "relatedSources": [
-        {
-          "name": "作者Show HN",
-          "url": "https://news.ycombinator.com/item?id=50042333"
-        },
-        {
-          "name": "官方功能与语言限制",
-          "url": "https://betterwispr.com/"
-        }
-      ],
-      "practicality": 92,
-      "socialPotential": 92,
-      "novelty": 87,
-      "importance": 88,
-      "radarScore": 90,
-      "signalType": "author-launch",
-      "datePrecision": "second",
-      "freshnessEvidence": "Show HN 50042333时间为2026-10-11T12:01:28Z，即北京时间20:01；已核对作者项目README与官网。",
-      "quickStart": [
-        "安装对应Mac版本，按引导配置麦克风和自动粘贴权限。",
-        "中文听写优先选择覆盖中文的Whisper模型；模型文件首次下载后可离线运行。",
-        "光标放入输入框，按住Option+Space说话，松开后检查并继续编辑。"
-      ],
-      "costAndLimits": "Apache-2.0免费，macOS14+，Apple Silicon推荐。Parakeet v3不支持中文；口头语清理、风格和语音指令主要面向英语。主动选择外部API后音频会发往该服务。"
-    },
-    {
-      "id": "x-2026-10-12-magpie",
-      "title": "magpie：集中切换Agent模型，新增图像识别MCP入口",
-      "url": "https://github.com/yetone/magpie",
-      "publishedAt": "2026-10-12T08:31:48+08:00",
-      "observedAt": "2026-10-12T13:58:30+08:00",
-      "category": "Agent与模型配置",
-      "summary": "v0.1.1203于北京时间10月12日08:31发布，新增/mcp/magpie/vision与analyze_image工具。主应用可集中管理不同Agent的模型/供应商配置、配置档和额度，支持Windows、macOS、Linux。",
-      "whyItMatters": "同时使用Codex、Claude Code等工具时，先添加自己的API供应商，再从一个界面选择模型；保存常用配置，减少重复修改配置文件。",
-      "angles": [
-        "切模型前先保存配置档，下次不用重新找base URL和模型名。"
-      ],
-      "source": {
-        "id": "src-official",
-        "name": "官方产品文档与发布记录 / 一手核验",
-        "tier": "S",
-        "kind": "primary"
-      },
-      "relatedSources": [
-        {
-          "name": "官方应用",
-          "url": "https://usemagpie.ai/"
-        },
-        {
-          "name": "本次版本",
-          "url": "https://github.com/yetone/magpie/releases/tag/v0.1.1203"
-        },
-        {
-          "name": "今日趋势",
-          "url": "https://trendshift.io/"
-        }
-      ],
-      "practicality": 93,
-      "socialPotential": 89,
-      "novelty": 90,
-      "importance": 88,
-      "radarScore": 90,
-      "signalType": "release",
-      "datePrecision": "second",
-      "freshnessEvidence": "GitHub Release元数据published_at=2026-10-12T00:31:48Z；release body明确列出新图像识别服务。",
-      "quickStart": [
-        "从usemagpie.ai下载自己系统的版本。",
-        "Providers → Add provider添加自有API Key；Agents页选择模型，开启新会话生效。",
-        "用Profiles保存常用组合；需要图像识别工具时查看本版/mcp/magpie/vision说明。"
-      ],
-      "costAndLimits": "MIT工具免费；模型调用仍按自己的供应商计费。这里只给官方API接入主路径，不承诺任意订阅可跨工具使用，也不把配置切换当成免费额度。"
-    },
-    {
-      "id": "x-2026-10-12-wordcraft",
-      "title": "WordCraft：文档批量转换、结构检查和MCP在同一个工具里",
-      "url": "https://github.com/storytold/wordcraft",
-      "publishedAt": "2026-10-12",
-      "observedAt": "2026-10-12T13:58:30+08:00",
-      "category": "文档效率",
-      "summary": "本轮Trendshift Today出现。开源文字处理器提供DOCX读写、修订、样式和PDF导出；CLI可转换格式、提取文字、检查结构，MCP可让Agent直接执行文档命令。Windows、Mac和Linux均有发行包。",
-      "whyItMatters": "定期整理报告时，先检查结构、统一样式，再导出PDF；保留DOCX作为可编辑版本，避免只留下聊天里的纯文本。",
-      "angles": [
-        "让Agent处理文档，最好连检查结构和导出这两步一起交代。"
-      ],
-      "source": {
-        "id": "src-trendshift",
-        "name": "Trendshift 实时趋势 / 一手核验",
-        "tier": "S",
-        "kind": "primary"
-      },
-      "relatedSources": [
-        {
-          "name": "今日趋势",
-          "url": "https://trendshift.io/"
-        },
-        {
-          "name": "安装包与实际版本日期",
-          "url": "https://github.com/storytold/wordcraft/releases/tag/v0.5.0"
-        }
-      ],
-      "practicality": 92,
-      "socialPotential": 87,
-      "novelty": 84,
-      "importance": 87,
-      "radarScore": 88,
-      "signalType": "trending-observation",
-      "datePrecision": "day",
-      "freshnessEvidence": "2026-10-12 Trendshift Today列出WordCraft；最近v0.5.0发布时间为10月11日08:36，已单独进入昨日版本归档，此处仅为今日趋势延续与使用角度。",
-      "quickStart": [
-        "从GitHub Releases选择Windows安装包或其他系统版本。",
-        "已安装CLI后：wordcraft-cli inspect report.docx；wordcraft-cli convert report.docx report.pdf。",
-        "需要Agent时按README接wordcraft-cli mcp，输出后检查页数、字体和图表位置。"
-      ],
-      "costAndLimits": "MIT/Apache-2.0；普通编辑可离线。复杂DOCX兼容性仍应以具体文件检查结果为准，不将当前功能清单当作与Word完全等价。外接Agent另用其额度。"
-    },
-    {
-      "id": "x-2026-10-12-artcraft",
-      "title": "ArtCraft：先摆人物、道具和镜头，再生成图片或视频",
-      "url": "https://github.com/storytold/artcraft",
-      "publishedAt": "2026-10-12",
-      "observedAt": "2026-10-12T13:58:30+08:00",
-      "category": "图像与视频创作",
-      "summary": "优先扫描的GitHub原生日榜显示本轮+2,957 stars today。ArtCraft提供2D合成、3D场景摆放、角色姿势和相机控制，可把抠图、背景、道具和3D资产放进同一场景，再调用生成模型。",
-      "whyItMatters": "需要连续镜头、固定人物位置或产品构图时，先搭出具体位置关系，把反复改提示词变成调整场景；适合有明确画面要求的创作者。",
-      "angles": [
-        "人物总往错误位置站，可以先把人物和相机的位置摆好再生成。"
+        "一次测试刷出几百行日志，真正要看的可能只有三个失败项。"
       ],
       "source": {
         "id": "src-github",
@@ -596,44 +282,91 @@
       },
       "relatedSources": [
         {
-          "name": "GitHub官方日榜",
+          "name": "GitHub今日趋势",
           "url": "https://github.com/trending"
         },
         {
-          "name": "官方产品",
-          "url": "https://getartcraft.com/"
+          "name": "许可证",
+          "url": "https://github.com/mksglu/context-mode/blob/main/LICENSE"
         },
         {
-          "name": "生成服务价格",
-          "url": "https://getartcraft.com/pricing"
+          "name": "作者基准",
+          "url": "https://github.com/mksglu/context-mode/blob/main/BENCHMARK.md"
         }
       ],
-      "practicality": 87,
-      "socialPotential": 92,
-      "novelty": 87,
-      "importance": 85,
-      "radarScore": 88,
-      "signalType": "github-trending",
+      "practicality": 93,
+      "socialPotential": 91,
+      "novelty": 82,
+      "importance": 90,
+      "radarScore": 90,
+      "signalType": "trending-observation",
       "datePrecision": "day",
-      "freshnessEvidence": "2026-10-12实际读取github.com/trending Today榜，artcraft条目标注2,957 stars today；此数字是观察值，非版本首发证据。",
+      "freshnessEvidence": "2026-10-13优先读取GitHub Trending原生Daily列表，当前快照显示context-mode +246 stars today；事件类型是当日热度观察，不宣称软件今日首发。",
       "quickStart": [
-        "从getartcraft.com选择Windows/Mac客户端或网页版。",
-        "用自己的背景、人物抠图和道具搭一个场景，先确定构图和机位。",
-        "确定画面后选择可用模型生成；连续镜头复用场景再调整相机。"
+        "/plugin marketplace add mksglu/context-mode；随后在Claude Code输入 /plugin install context-mode@context-mode。",
+        "重启或 /reload-plugins 后，运行 /context-mode:ctx-doctor 检查安装。",
+        "拿一个日志任务测试，再运行 /context-mode:ctx-stats 查看实际输出量与节省比例。"
       ],
-      "costAndLimits": "客户端MIT/Apache-2.0开放；生成模型/托管服务另有收费，官网价格页提供付费额度套餐。不能把“开源编辑器”写成“所有模型免费”。"
+      "costAndLimits": "采用Elastic License 2.0，源码可读、可修改，本地核心工具可免费使用；不是MIT或无条件开源许可证。Agent额度照常消耗。README的约98%缩减是作者特定基准，不等于总账单下降98%。各客户端的hooks与恢复能力有差异。"
     },
     {
-      "id": "x-2026-10-12-simplespread",
-      "title": "SimpleSpread 1.3：轻量Mac表格加入数据透视表",
-      "url": "https://github.com/baudehlo/SimpleSpread",
-      "publishedAt": "2026-10-12T05:23:54+08:00",
-      "observedAt": "2026-10-12T13:58:30+08:00",
-      "category": "表格与数据整理",
-      "summary": "v1.3.0于北京时间10月12日05:23发布，加入数据透视表：拖字段到行/列/值/筛选，可按月分组和刷新。XLSX为原生格式，CSV导入保留前导零；旧PH介绍“没有透视表”已过时。",
-      "whyItMatters": "拿内容表现或订单CSV做按平台、月份、产品的汇总；轻量打开XLSX编辑后交回，不必转为专有格式。",
+      "id": "x-2026-10-13-lertaro",
+      "title": "Lertaro：Windows文件搜索直接接进打开和保存窗口",
+      "url": "https://github.com/Lertaro/Lertaro",
+      "publishedAt": "2026-10-13",
+      "observedAt": "2026-10-13T10:50:47+08:00",
+      "category": "Windows效率",
+      "summary": "本轮Trendshift Today出现。Windows本地文件搜索器支持模糊匹配、拼音别名、排除词和后缀匹配；搜索条可嵌入原生打开/保存对话框，并提供预览和磁盘空间树图。",
+      "whyItMatters": "上传附件、选封面或另存文件时，可以在当前窗口搜索目标文件或目录，减少逐层点文件夹与复制路径。",
       "angles": [
-        "CSV里的编号00123别变123；按月份汇总也终于能直接拖透视表了。"
+        "做封面最烦的几秒，可能花在“选择文件”窗口里。"
+      ],
+      "source": {
+        "id": "src-trendshift",
+        "name": "Trendshift 实时趋势 / 一手核验",
+        "tier": "A",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "今日趋势",
+          "url": "https://trendshift.io/"
+        },
+        {
+          "name": "用户手册",
+          "url": "https://lertaro.github.io/user-guide/"
+        },
+        {
+          "name": "官方发行包",
+          "url": "https://github.com/Lertaro/Lertaro/releases"
+        }
+      ],
+      "practicality": 93,
+      "socialPotential": 89,
+      "novelty": 81,
+      "importance": 88,
+      "radarScore": 89,
+      "signalType": "trending-observation",
+      "datePrecision": "day",
+      "freshnessEvidence": "2026-10-13读取Trendshift Today，第4项为Lertaro；详情页当日记录+60 stars。第三方实时趋势是本轮发现信号，未声称GitHub官方总榜排名或新版本发布。",
+      "quickStart": [
+        "从官方Releases选择x64安装包（Intel/AMD）或ARM64包；也提供便携ZIP。",
+        "等待文件索引建立，用“报告 .pdf$ !草稿”这类组合筛选文件名，按实际命名调整关键词。",
+        "在打开/保存窗口使用内嵌搜索；Ctrl+O打开操作菜单，Alt+P预览选中文件。"
+      ],
+      "costAndLimits": "MIT免费，适用于Windows 10/11；本地索引，官方说明无遥测。安装版支持后台服务，便携版无需安装。索引与文件名搜索不等于昨天DigUp的多模态语义检索。"
+    },
+    {
+      "id": "x-2026-10-13-ngram",
+      "title": "ngram 2.0：把产品录屏和说明文档整理成讲解视频",
+      "url": "https://www.ngram.com/",
+      "publishedAt": "2026-10-12",
+      "observedAt": "2026-10-13T10:50:47+08:00",
+      "category": "视频创作",
+      "summary": "10月12日PH发布榜入选2.0。可从说明文档、截图和产品录屏生成脚本、分镜与配音讲解；能用聊天继续调整，也保留时间线编辑，支持MP4导出。",
+      "whyItMatters": "把一次功能演示改成适合新用户的教程，先约束观众、时长和必要步骤，再逐段修正；已有录屏可作为素材。",
+      "angles": [
+        "录了一段操作，下一步是把它变成别人看得懂的教程。"
       ],
       "source": {
         "id": "src-ph",
@@ -643,49 +376,96 @@
       },
       "relatedSources": [
         {
-          "name": "发布记录",
-          "url": "https://github.com/baudehlo/SimpleSpread/releases/tag/v1.3.0"
+          "name": "PH 2.0发布页",
+          "url": "https://www.producthunt.com/products/ngram"
         },
         {
-          "name": "PH原作者说明",
-          "url": "https://www.producthunt.com/products/simplespread"
+          "name": "官方定价",
+          "url": "https://www.ngram.com/pricing"
         },
         {
-          "name": "透视表文档",
-          "url": "https://github.com/baudehlo/SimpleSpread/blob/main/docs/PIVOTS.md"
+          "name": "当日发布榜",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/10/12"
         }
       ],
-      "practicality": 90,
-      "socialPotential": 85,
-      "novelty": 89,
-      "importance": 84,
+      "practicality": 89,
+      "socialPotential": 88,
+      "novelty": 86,
+      "importance": 83,
       "radarScore": 87,
-      "signalType": "release",
-      "datePrecision": "second",
-      "freshnessEvidence": "GitHub Release v1.3.0 published_at=2026-10-11T21:23:54Z；PH10月11日榜和作者更新评论为辅助证据，以Release和最新README校正旧介绍。",
+      "signalType": "product-hunt-launch",
+      "datePrecision": "day",
+      "freshnessEvidence": "Product Hunt的2026-10-12日榜明确列出ngram 2.0，并在产品页标注该次发布。榜单按美国太平洋日期，10月12日榜对应北京时间10月12日15:00起；本轮抓取时已出现，处于24h窗口。只记录到日，不虚构featuredAt秒级时间。",
       "quickStart": [
-        "在GitHub Releases下载v1.3.0或更新版；当前发行包为Apple Silicon。",
-        "打开XLSX/CSV，在数据区选择Insert → PivotTable。",
-        "将平台放Rows、月份放Columns、数值放Values；源数据变动后Data → Refresh。"
+        "打开ngram，上传一段自己的产品录屏或说明文档，先说明目标观众与视频用途。",
+        "给出具体要求，例如“为第一次使用的人解释导入到导出的步骤，保留按钮名称，先列分镜”。",
+        "通过聊天修改旁白或某一场景，再检查时间线和导出的MP4。"
       ],
-      "costAndLimits": "MIT免费；macOS14+、当前arm64发行包。部分Excel高级透视表特性只能保留，不能重新计算；不把作者特定机器上的速度测试当作通用承诺。"
+      "costAndLimits": "免费档一次性600积分，无需信用卡，720p；AI视频素材生成基础费率10积分/秒起，AI剪辑1积分/秒。600积分不是每月赠送，也不是保证600秒生成视频；最终视频长度与生成素材额度不同。收费档与功能以官方定价页为准。"
     },
     {
-      "id": "x-2026-10-12-orca",
-      "title": "Orca：分开运行多个Coding Agent，直接在差异上提修改意见",
-      "url": "https://github.com/stablyai/orca",
+      "id": "x-2026-10-13-ancher",
+      "title": "Ancher 2.0：按模糊描述找回收藏里的原句和片段",
+      "url": "https://ancher.ai/",
       "publishedAt": "2026-10-12",
-      "observedAt": "2026-10-12T13:58:30+08:00",
-      "category": "Agent工作流",
-      "summary": "本轮Trendshift Today出现。MIT桌面工作区支持把Codex、Claude Code等CLI Agent放进独立git worktree，集中看进度和差异；可点击页面元素发送HTML/CSS与截图，也可在diff行上给Agent留修改意见。",
-      "whyItMatters": "同时改界面、文案和测试时，先划清任务和文件范围，再分工作树执行；审查具体差异后合并，减少几个Agent抢同一份文件。",
+      "observedAt": "2026-10-13T10:50:47+08:00",
+      "category": "知识与内容创作",
+      "summary": "10月12日PH发布榜入选2.0。可保存文章、视频、PDF和社交帖子，按内容检索并回到原始来源；把指定资料组成Collection后，可用于起草报告、简报或内容。",
+      "whyItMatters": "为一个具体选题积累少量资料，再按问题取回证据并写稿，减少“收藏过但想不起标题”的搜索成本。",
       "angles": [
-        "多个Agent一起干活，先把工作目录分开，最后才谈合并。"
+        "收藏夹里那段有用的解释，能不能只凭半句印象找回来？"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt 发布榜 / 一手核验",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "PH作者说明",
+          "url": "https://www.producthunt.com/products/ancher-ai"
+        },
+        {
+          "name": "官方定价",
+          "url": "https://ancher.ai/pricing"
+        },
+        {
+          "name": "当日发布榜",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/10/12"
+        }
+      ],
+      "practicality": 87,
+      "socialPotential": 88,
+      "novelty": 84,
+      "importance": 84,
+      "radarScore": 86,
+      "signalType": "product-hunt-launch",
+      "datePrecision": "day",
+      "freshnessEvidence": "Product Hunt的2026-10-12日榜明确列出Ancher 2.0；该次榜单日从北京时间10月12日15:00开始，且本轮抓取时已显示。按发布榜事件记录，不把5天前的预热评论或旧版本上线当作今日首发。",
+      "quickStart": [
+        "从一个选题开始，保存3—5篇资料或视频，放入同一Collection。",
+        "用模糊描述提问并检查返回的原句、视频片段及来源是否对应。",
+        "要求只依据所选Collection起草内容，标出分歧与缺失信息，再补充个人判断。"
+      ],
+      "costAndLimits": "免费档每月100积分；官方当前年付展示Digest为59.99美元/年、Pro为179.99美元/年。云端知识工作区，需要账号。作者在本次PH回复中说明：一键Notion导入尚未支持、整库导出仍在路线图，不能宣传成完整本地知识库替代品。"
+    },
+    {
+      "id": "x-2026-10-13-esp32-iphone-agent",
+      "title": "ESP32 iPhone Agent：用一块小板子给AI接上手机鼠标和键盘",
+      "url": "https://github.com/onehumanbeing/esp32-iphone-agent",
+      "publishedAt": "2026-10-13",
+      "observedAt": "2026-10-13T10:50:47+08:00",
+      "category": "AI硬件与手机自动化",
+      "summary": "本轮Trendshift Today出现。AirPlay将iPhone画面传到电脑，ESP32-S3通过USB模拟鼠标键盘，视觉模型根据截图选择点击、滑动和输入；网页显示计划、日志和逐步截图。",
+      "whyItMatters": "有闲置iPhone、Mac/Linux电脑和开发板的用户，可以搭一个真实设备Agent演示，观察每一步操作及纠错，而不只看录制Demo。",
+      "angles": [
+        "AI看手机屏幕，开发板替它按键：这套iPhone Agent怎么接起来？"
       ],
       "source": {
         "id": "src-trendshift",
         "name": "Trendshift 实时趋势 / 一手核验",
-        "tier": "S",
+        "tier": "A",
         "kind": "primary"
       },
       "relatedSources": [
@@ -694,28 +474,28 @@
           "url": "https://trendshift.io/"
         },
         {
-          "name": "官方下载",
-          "url": "https://onorca.dev/"
+          "name": "中文说明",
+          "url": "https://github.com/onehumanbeing/esp32-iphone-agent/blob/main/README.zh-CN.md"
         },
         {
-          "name": "差异批注说明",
-          "url": "https://www.onorca.dev/docs/review/annotate-ai-diff"
+          "name": "作者演示",
+          "url": "https://www.youtube.com/watch?v=Ly4im-P4jYg"
         }
       ],
-      "practicality": 89,
-      "socialPotential": 86,
-      "novelty": 83,
-      "importance": 86,
+      "practicality": 78,
+      "socialPotential": 94,
+      "novelty": 90,
+      "importance": 80,
       "radarScore": 86,
       "signalType": "trending-observation",
       "datePrecision": "day",
-      "freshnessEvidence": "2026-10-12读取Trendshift Today包含Orca；不把3月创建的项目包装成今天首次发布。",
+      "freshnessEvidence": "2026-10-13读取Trendshift Today，第3项为该项目；当前观察标记为趋势信号。用途与硬件限制逐项回作者README核验，不宣称今天创建或无需电脑。",
       "quickStart": [
-        "从onOrca.dev下载Windows、macOS或Linux版本，接入已有CLI Agent。",
-        "每项任务建独立worktree，明确要改的文件和验收条件。",
-        "查看diff，直接在对应行留意见；确认结果后再合并。"
+        "准备ESP32-S3（作者实测XIAO ESP32S3）、iPhone，以及同网的macOS或Linux电脑。",
+        "按仓库说明刷固件，安装UxPlay和Python服务，在本地.env设置视觉模型接口。",
+        "开启iPhone辅助触控与屏幕镜像，接上开发板，进入网页校准；先测试打开时钟、设闹钟这类短流程。"
       ],
-      "costAndLimits": "MIT免费；使用自己的Agent订阅/API与算力。手机伴侣需与桌面配对，远程运行另需服务器；多Agent也会增加模型用量。"
+      "costAndLimits": "MIT免费；约7美元只是开发板参考价，作者给出的国内参考为40—50元，均不是完整设备成本。还需主机、手机及自备模型；云API另计费。Lightning机型需要相机转接器，USB-C机型可直连。当前官方主机流程覆盖Mac/Linux，不声称Windows开箱即用。"
     }
   ]
 }

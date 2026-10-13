@@ -1,0 +1,501 @@
+{
+  "schemaVersion": 3,
+  "status": "partial",
+  "generatedAt": "2026-10-13T10:50:47+08:00",
+  "date": "2026-10-13",
+  "timezone": "Asia/Shanghai",
+  "focus": "x-useful-viral-actionable",
+  "periodType": "daily",
+  "periodLabel": "今日雷达｜10月13日",
+  "displayTitle": "今日雷达｜10月13日",
+  "periodDescription": "5条去重精选｜北京时间10月12日 10:50—10月13日 10:50。当日趋势与PH发布榜事件分开标注。",
+  "periodNote": "已核验用途、入口、费用与平台条件；不重复前两期选题。来源覆盖边界见信息源。",
+  "research": {
+    "mode": "editorial web research",
+    "provider": "ChatGPT Web + primary publisher metadata",
+    "externalLlmApi": false,
+    "windowStart": "2026-10-12T10:50:47+08:00",
+    "windowEnd": "2026-10-13T10:50:47+08:00",
+    "backfill": false,
+    "notes": [
+      "以北京时间滚动24小时筛选。趋势条目记录本轮观察日，PH条目记录榜单日期；日期精度均明确到日，不伪造首发秒数。",
+      "优先读取GitHub原生Daily列表，再扫描Trendshift、HN、PH、HF、论文索引、AI HOT、Reddit、Newsletter与公开X线索。",
+      "剔除已归档的Matt Pocock Skills、ArtCraft、Diagram Design、God’s Eye View等同一用途内容；REA已有独立长文，本轮不重复展开。",
+      "Atticus原始HN时间戳早于窗口。Muse Wonder官方日期字段落在10月12日00:00 UTC，未用稍后的HN讨论时间替换原始发布日期。",
+      "Context Mode为ELv2源码可用项目；ngram免费积分一次性，Ancher免费积分按月；ESP32报价只含板卡且当前主机流程为Mac/Linux。",
+      "评分权重：实用35%、传播30%、新鲜20%、用户实际影响15%。未虚构本地安装、亲测体验、节省比例或收益。"
+    ]
+  },
+  "stats": {
+    "configuredSources": 11,
+    "automatedSources": 0,
+    "manualSources": 11,
+    "successfulSources": 7,
+    "partialSources": 4,
+    "failedSources": 0,
+    "researchItems": 5,
+    "eventClusters": 5,
+    "publishedItems": 5
+  },
+  "sources": [
+    {
+      "id": "src-github",
+      "name": "GitHub Trending / Releases",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://github.com/trending",
+      "tags": [
+        "daily"
+      ],
+      "note": "优先扫描GitHub原生日榜，读取9个可见项目及stars today；Context Mode本轮+246。REA、ArtCraft、Diagram Design等已讲过的题材不重复入选；底层推理框架降权。"
+    },
+    {
+      "id": "src-trendshift",
+      "name": "Trendshift 实时趋势",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://trendshift.io/",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取Today前25项；Lertaro与ESP32 iPhone Agent入选。第三方实时趋势与GitHub官方Trending明确区分，不将今日上榜说成今日首发。"
+    },
+    {
+      "id": "src-hn",
+      "name": "Hacker News / Show HN",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://news.ycombinator.com/",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取首页30项并核对候选原帖时间。Atticus的HTML时间戳为10月12日08:15北京时间，早于本轮窗口，不因页面相对时间而收录。"
+    },
+    {
+      "id": "src-ph",
+      "name": "Product Hunt 发布榜",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/12",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取10月12日发布榜10项及ngram、Ancher原作者介绍；两条按该次PH发布榜事件收录。日期精度到日，不虚构分钟级首发时间。"
+    },
+    {
+      "id": "src-hf",
+      "name": "Hugging Face Trending",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://huggingface.co/models?sort=trending",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取Hugging Face模型趋势列表；区分模型更新时间与正式发布，未用旧模型再上榜凑数。"
+    },
+    {
+      "id": "src-pwc",
+      "name": "Papers with Code / HF Papers",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://paperswithcode.com/",
+      "tags": [
+        "daily"
+      ],
+      "note": "Papers with Code跳转到Hugging Face Papers；读取论文索引，未逐篇核验完整24小时。"
+    },
+    {
+      "id": "src-aihot",
+      "name": "AI今日热榜",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://aihot.today/",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取aihot.today的10月13日聚合页，包含HN与科技媒体线索；聚合抓取时刻不当作原事件时间。"
+    },
+    {
+      "id": "src-reddit",
+      "name": "Reddit / LocalLLaMA",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://www.reddit.com/r/LocalLLaMA/new/",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取LocalLLaMA公开新帖内容；页面未稳定提供每条准确时间，未将其视为完整24小时覆盖。"
+    },
+    {
+      "id": "src-newsletter",
+      "name": "The Rundown AI",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://www.therundown.ai/",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取The Rundown公开首页、最新刊期与工具线索；Ben's Bites返回空正文，未获取完整订阅邮件。"
+    },
+    {
+      "id": "src-official",
+      "name": "官方产品文档与发布记录",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://github.com/",
+      "tags": [
+        "daily"
+      ],
+      "note": "5个入选项目回到作者README、官方使用手册、产品页与定价页核验。Muse Wonder的官方日期元数据不足以确认在窗口内，未以HN转述时间替代首发时间。"
+    },
+    {
+      "id": "src-x",
+      "name": "X 原生线索",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://x.com/bozhou_ai",
+      "tags": [
+        "daily"
+      ],
+      "note": "检索泊舟与近24小时公开X线索，索引命中不足；未宣称完整读取X时间线。"
+    }
+  ],
+  "sourceRuns": [
+    {
+      "id": "src-github",
+      "name": "GitHub Trending / Releases",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 1,
+      "note": "优先扫描GitHub原生日榜，读取9个可见项目及stars today；Context Mode本轮+246。REA、ArtCraft、Diagram Design等已讲过的题材不重复入选；底层推理框架降权。"
+    },
+    {
+      "id": "src-trendshift",
+      "name": "Trendshift 实时趋势",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 2,
+      "note": "读取Today前25项；Lertaro与ESP32 iPhone Agent入选。第三方实时趋势与GitHub官方Trending明确区分，不将今日上榜说成今日首发。"
+    },
+    {
+      "id": "src-hn",
+      "name": "Hacker News / Show HN",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 0,
+      "note": "读取首页30项并核对候选原帖时间。Atticus的HTML时间戳为10月12日08:15北京时间，早于本轮窗口，不因页面相对时间而收录。"
+    },
+    {
+      "id": "src-ph",
+      "name": "Product Hunt 发布榜",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 2,
+      "note": "读取10月12日发布榜10项及ngram、Ancher原作者介绍；两条按该次PH发布榜事件收录。日期精度到日，不虚构分钟级首发时间。"
+    },
+    {
+      "id": "src-hf",
+      "name": "Hugging Face Trending",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 0,
+      "note": "读取Hugging Face模型趋势列表；区分模型更新时间与正式发布，未用旧模型再上榜凑数。"
+    },
+    {
+      "id": "src-pwc",
+      "name": "Papers with Code / HF Papers",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "Papers with Code跳转到Hugging Face Papers；读取论文索引，未逐篇核验完整24小时。"
+    },
+    {
+      "id": "src-aihot",
+      "name": "AI今日热榜",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 0,
+      "note": "读取aihot.today的10月13日聚合页，包含HN与科技媒体线索；聚合抓取时刻不当作原事件时间。"
+    },
+    {
+      "id": "src-reddit",
+      "name": "Reddit / LocalLLaMA",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "读取LocalLLaMA公开新帖内容；页面未稳定提供每条准确时间，未将其视为完整24小时覆盖。"
+    },
+    {
+      "id": "src-newsletter",
+      "name": "The Rundown AI",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "读取The Rundown公开首页、最新刊期与工具线索；Ben's Bites返回空正文，未获取完整订阅邮件。"
+    },
+    {
+      "id": "src-official",
+      "name": "官方产品文档与发布记录",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 0,
+      "note": "5个入选项目回到作者README、官方使用手册、产品页与定价页核验。Muse Wonder的官方日期元数据不足以确认在窗口内，未以HN转述时间替代首发时间。"
+    },
+    {
+      "id": "src-x",
+      "name": "X 原生线索",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "检索泊舟与近24小时公开X线索，索引命中不足；未宣称完整读取X时间线。"
+    }
+  ],
+  "items": [
+    {
+      "id": "x-2026-10-13-context-mode",
+      "title": "Context Mode：先筛日志和工具输出，再交给Agent",
+      "url": "https://github.com/mksglu/context-mode",
+      "publishedAt": "2026-10-13",
+      "observedAt": "2026-10-13T10:50:47+08:00",
+      "category": "Agent效率",
+      "summary": "本轮GitHub原生日榜显示+246 stars today。通过MCP工具执行、索引和检索，将原始工具输出留在处理环境中，只把需要的结果送进上下文；提供用量统计和安装诊断。",
+      "whyItMatters": "分析测试日志、浏览器快照或大量Issue时，可先提取失败项和相关片段，减少反复把整份原始输出送给模型。",
+      "angles": [
+        "一次测试刷出几百行日志，真正要看的可能只有三个失败项。"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Trending / Releases / 一手核验",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "GitHub今日趋势",
+          "url": "https://github.com/trending"
+        },
+        {
+          "name": "许可证",
+          "url": "https://github.com/mksglu/context-mode/blob/main/LICENSE"
+        },
+        {
+          "name": "作者基准",
+          "url": "https://github.com/mksglu/context-mode/blob/main/BENCHMARK.md"
+        }
+      ],
+      "practicality": 93,
+      "socialPotential": 91,
+      "novelty": 82,
+      "importance": 90,
+      "radarScore": 90,
+      "signalType": "trending-observation",
+      "datePrecision": "day",
+      "freshnessEvidence": "2026-10-13优先读取GitHub Trending原生Daily列表，当前快照显示context-mode +246 stars today；事件类型是当日热度观察，不宣称软件今日首发。",
+      "quickStart": [
+        "/plugin marketplace add mksglu/context-mode；随后在Claude Code输入 /plugin install context-mode@context-mode。",
+        "重启或 /reload-plugins 后，运行 /context-mode:ctx-doctor 检查安装。",
+        "拿一个日志任务测试，再运行 /context-mode:ctx-stats 查看实际输出量与节省比例。"
+      ],
+      "costAndLimits": "采用Elastic License 2.0，源码可读、可修改，本地核心工具可免费使用；不是MIT或无条件开源许可证。Agent额度照常消耗。README的约98%缩减是作者特定基准，不等于总账单下降98%。各客户端的hooks与恢复能力有差异。"
+    },
+    {
+      "id": "x-2026-10-13-lertaro",
+      "title": "Lertaro：Windows文件搜索直接接进打开和保存窗口",
+      "url": "https://github.com/Lertaro/Lertaro",
+      "publishedAt": "2026-10-13",
+      "observedAt": "2026-10-13T10:50:47+08:00",
+      "category": "Windows效率",
+      "summary": "本轮Trendshift Today出现。Windows本地文件搜索器支持模糊匹配、拼音别名、排除词和后缀匹配；搜索条可嵌入原生打开/保存对话框，并提供预览和磁盘空间树图。",
+      "whyItMatters": "上传附件、选封面或另存文件时，可以在当前窗口搜索目标文件或目录，减少逐层点文件夹与复制路径。",
+      "angles": [
+        "做封面最烦的几秒，可能花在“选择文件”窗口里。"
+      ],
+      "source": {
+        "id": "src-trendshift",
+        "name": "Trendshift 实时趋势 / 一手核验",
+        "tier": "A",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "今日趋势",
+          "url": "https://trendshift.io/"
+        },
+        {
+          "name": "用户手册",
+          "url": "https://lertaro.github.io/user-guide/"
+        },
+        {
+          "name": "官方发行包",
+          "url": "https://github.com/Lertaro/Lertaro/releases"
+        }
+      ],
+      "practicality": 93,
+      "socialPotential": 89,
+      "novelty": 81,
+      "importance": 88,
+      "radarScore": 89,
+      "signalType": "trending-observation",
+      "datePrecision": "day",
+      "freshnessEvidence": "2026-10-13读取Trendshift Today，第4项为Lertaro；详情页当日记录+60 stars。第三方实时趋势是本轮发现信号，未声称GitHub官方总榜排名或新版本发布。",
+      "quickStart": [
+        "从官方Releases选择x64安装包（Intel/AMD）或ARM64包；也提供便携ZIP。",
+        "等待文件索引建立，用“报告 .pdf$ !草稿”这类组合筛选文件名，按实际命名调整关键词。",
+        "在打开/保存窗口使用内嵌搜索；Ctrl+O打开操作菜单，Alt+P预览选中文件。"
+      ],
+      "costAndLimits": "MIT免费，适用于Windows 10/11；本地索引，官方说明无遥测。安装版支持后台服务，便携版无需安装。索引与文件名搜索不等于昨天DigUp的多模态语义检索。"
+    },
+    {
+      "id": "x-2026-10-13-ngram",
+      "title": "ngram 2.0：把产品录屏和说明文档整理成讲解视频",
+      "url": "https://www.ngram.com/",
+      "publishedAt": "2026-10-12",
+      "observedAt": "2026-10-13T10:50:47+08:00",
+      "category": "视频创作",
+      "summary": "10月12日PH发布榜入选2.0。可从说明文档、截图和产品录屏生成脚本、分镜与配音讲解；能用聊天继续调整，也保留时间线编辑，支持MP4导出。",
+      "whyItMatters": "把一次功能演示改成适合新用户的教程，先约束观众、时长和必要步骤，再逐段修正；已有录屏可作为素材。",
+      "angles": [
+        "录了一段操作，下一步是把它变成别人看得懂的教程。"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt 发布榜 / 一手核验",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "PH 2.0发布页",
+          "url": "https://www.producthunt.com/products/ngram"
+        },
+        {
+          "name": "官方定价",
+          "url": "https://www.ngram.com/pricing"
+        },
+        {
+          "name": "当日发布榜",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/10/12"
+        }
+      ],
+      "practicality": 89,
+      "socialPotential": 88,
+      "novelty": 86,
+      "importance": 83,
+      "radarScore": 87,
+      "signalType": "product-hunt-launch",
+      "datePrecision": "day",
+      "freshnessEvidence": "Product Hunt的2026-10-12日榜明确列出ngram 2.0，并在产品页标注该次发布。榜单按美国太平洋日期，10月12日榜对应北京时间10月12日15:00起；本轮抓取时已出现，处于24h窗口。只记录到日，不虚构featuredAt秒级时间。",
+      "quickStart": [
+        "打开ngram，上传一段自己的产品录屏或说明文档，先说明目标观众与视频用途。",
+        "给出具体要求，例如“为第一次使用的人解释导入到导出的步骤，保留按钮名称，先列分镜”。",
+        "通过聊天修改旁白或某一场景，再检查时间线和导出的MP4。"
+      ],
+      "costAndLimits": "免费档一次性600积分，无需信用卡，720p；AI视频素材生成基础费率10积分/秒起，AI剪辑1积分/秒。600积分不是每月赠送，也不是保证600秒生成视频；最终视频长度与生成素材额度不同。收费档与功能以官方定价页为准。"
+    },
+    {
+      "id": "x-2026-10-13-ancher",
+      "title": "Ancher 2.0：按模糊描述找回收藏里的原句和片段",
+      "url": "https://ancher.ai/",
+      "publishedAt": "2026-10-12",
+      "observedAt": "2026-10-13T10:50:47+08:00",
+      "category": "知识与内容创作",
+      "summary": "10月12日PH发布榜入选2.0。可保存文章、视频、PDF和社交帖子，按内容检索并回到原始来源；把指定资料组成Collection后，可用于起草报告、简报或内容。",
+      "whyItMatters": "为一个具体选题积累少量资料，再按问题取回证据并写稿，减少“收藏过但想不起标题”的搜索成本。",
+      "angles": [
+        "收藏夹里那段有用的解释，能不能只凭半句印象找回来？"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt 发布榜 / 一手核验",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "PH作者说明",
+          "url": "https://www.producthunt.com/products/ancher-ai"
+        },
+        {
+          "name": "官方定价",
+          "url": "https://ancher.ai/pricing"
+        },
+        {
+          "name": "当日发布榜",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/10/12"
+        }
+      ],
+      "practicality": 87,
+      "socialPotential": 88,
+      "novelty": 84,
+      "importance": 84,
+      "radarScore": 86,
+      "signalType": "product-hunt-launch",
+      "datePrecision": "day",
+      "freshnessEvidence": "Product Hunt的2026-10-12日榜明确列出Ancher 2.0；该次榜单日从北京时间10月12日15:00开始，且本轮抓取时已显示。按发布榜事件记录，不把5天前的预热评论或旧版本上线当作今日首发。",
+      "quickStart": [
+        "从一个选题开始，保存3—5篇资料或视频，放入同一Collection。",
+        "用模糊描述提问并检查返回的原句、视频片段及来源是否对应。",
+        "要求只依据所选Collection起草内容，标出分歧与缺失信息，再补充个人判断。"
+      ],
+      "costAndLimits": "免费档每月100积分；官方当前年付展示Digest为59.99美元/年、Pro为179.99美元/年。云端知识工作区，需要账号。作者在本次PH回复中说明：一键Notion导入尚未支持、整库导出仍在路线图，不能宣传成完整本地知识库替代品。"
+    },
+    {
+      "id": "x-2026-10-13-esp32-iphone-agent",
+      "title": "ESP32 iPhone Agent：用一块小板子给AI接上手机鼠标和键盘",
+      "url": "https://github.com/onehumanbeing/esp32-iphone-agent",
+      "publishedAt": "2026-10-13",
+      "observedAt": "2026-10-13T10:50:47+08:00",
+      "category": "AI硬件与手机自动化",
+      "summary": "本轮Trendshift Today出现。AirPlay将iPhone画面传到电脑，ESP32-S3通过USB模拟鼠标键盘，视觉模型根据截图选择点击、滑动和输入；网页显示计划、日志和逐步截图。",
+      "whyItMatters": "有闲置iPhone、Mac/Linux电脑和开发板的用户，可以搭一个真实设备Agent演示，观察每一步操作及纠错，而不只看录制Demo。",
+      "angles": [
+        "AI看手机屏幕，开发板替它按键：这套iPhone Agent怎么接起来？"
+      ],
+      "source": {
+        "id": "src-trendshift",
+        "name": "Trendshift 实时趋势 / 一手核验",
+        "tier": "A",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "今日趋势",
+          "url": "https://trendshift.io/"
+        },
+        {
+          "name": "中文说明",
+          "url": "https://github.com/onehumanbeing/esp32-iphone-agent/blob/main/README.zh-CN.md"
+        },
+        {
+          "name": "作者演示",
+          "url": "https://www.youtube.com/watch?v=Ly4im-P4jYg"
+        }
+      ],
+      "practicality": 78,
+      "socialPotential": 94,
+      "novelty": 90,
+      "importance": 80,
+      "radarScore": 86,
+      "signalType": "trending-observation",
+      "datePrecision": "day",
+      "freshnessEvidence": "2026-10-13读取Trendshift Today，第3项为该项目；当前观察标记为趋势信号。用途与硬件限制逐项回作者README核验，不宣称今天创建或无需电脑。",
+      "quickStart": [
+        "准备ESP32-S3（作者实测XIAO ESP32S3）、iPhone，以及同网的macOS或Linux电脑。",
+        "按仓库说明刷固件，安装UxPlay和Python服务，在本地.env设置视觉模型接口。",
+        "开启iPhone辅助触控与屏幕镜像，接上开发板，进入网页校准；先测试打开时钟、设闹钟这类短流程。"
+      ],
+      "costAndLimits": "MIT免费；约7美元只是开发板参考价，作者给出的国内参考为40—50元，均不是完整设备成本。还需主机、手机及自备模型；云API另计费。Lightning机型需要相机转接器，USB-C机型可直连。当前官方主机流程覆盖Mac/Linux，不声称Windows开箱即用。"
+    }
+  ]
+}
