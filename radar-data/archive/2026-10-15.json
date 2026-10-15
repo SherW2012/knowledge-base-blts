@@ -1,0 +1,509 @@
+{
+  "schemaVersion": 3,
+  "status": "partial",
+  "generatedAt": "2026-10-15T10:58:28+08:00",
+  "date": "2026-10-15",
+  "timezone": "Asia/Shanghai",
+  "focus": "x-useful-viral-actionable",
+  "periodType": "daily",
+  "periodLabel": "今日雷达｜10月15日",
+  "displayTitle": "今日雷达｜10月15日",
+  "periodDescription": "5条去重精选｜北京时间10月14日 10:58—10月15日 10:58。趋势观察、PH发布榜与Show HN分别标注。",
+  "periodNote": "已核验具体用途、上手入口、费用与平台条件；不重复VoiceStudio、iFixAi等历史选题。",
+  "research": {
+    "mode": "editorial web research",
+    "provider": "ChatGPT Web + primary publisher metadata",
+    "externalLlmApi": false,
+    "windowStart": "2026-10-14T10:58:28+08:00",
+    "windowEnd": "2026-10-15T10:58:28+08:00",
+    "backfill": false,
+    "notes": [
+      "按北京时间滚动24小时筛选；趋势条目记录观察日，PH条目记录榜单日，Petal记录Show HN绝对时间。发现信号不混写为产品首发。",
+      "先扫描GitHub原生Daily，再扫描Trendshift、HN、PH、HF、论文索引、AI HOT、Reddit、Newsletter、官方和公开X线索；覆盖不完整者标partial。",
+      "按全部现存历史归档去重，VoiceStudio、iFixAi、REA、Context Mode、Anatomy、PhotoCraft、magpie、Orca等不重复。",
+      "OpenCode 2.0可读到官方说明，但原发布时间线索有冲突，未仅凭本轮HN转述时间收录。Jev 1.14实验能力没有本轮更强的直接上手价值，不强塞。",
+      "费用和状态明确：TokenTab为估算，Cursor适配未完；daily.dev免费200请求/月且Beta；Specreel定时检查属付费档；xtool需要WSL和官方SDK；Petal Windows早期。",
+      "评分权重：实用35%、传播30%、新鲜20%、用户实际影响15%。未本地安装候选工具，不编造亲测、节省比例或效果保证。"
+    ]
+  },
+  "stats": {
+    "configuredSources": 11,
+    "automatedSources": 0,
+    "manualSources": 11,
+    "successfulSources": 7,
+    "partialSources": 4,
+    "failedSources": 0,
+    "researchItems": 5,
+    "eventClusters": 5,
+    "publishedItems": 5
+  },
+  "sources": [
+    {
+      "id": "src-github",
+      "name": "GitHub Trending / Releases",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://github.com/trending",
+      "tags": [
+        "daily"
+      ],
+      "note": "优先读取GitHub原生日榜12项及stars today。xtool当前快照+1,502；VoiceStudio、iFixAi、REA、Context Mode等与历史内容重复，未再收录。"
+    },
+    {
+      "id": "src-trendshift",
+      "name": "Trendshift 实时趋势",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://trendshift.io/",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取Today前25项，TokenTab为第4项。与GitHub官方Trending分开记录；Anatomy、magpie、PhotoCraft、Orca等按历史去重。"
+    },
+    {
+      "id": "src-hn",
+      "name": "Hacker News / Show HN",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://news.ycombinator.com/",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取首页30项及候选官网，核对Petal原帖HTML绝对时间2026-10-14T18:23:14 UTC。OpenCode 2.0的首发时间证据有冲突，未用新HN讨论时间代替产品发布时间。"
+    },
+    {
+      "id": "src-ph",
+      "name": "Product Hunt 发布榜",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/14",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取10月14日日榜17项，选入Specreel和daily.dev for agents，并回官方README、使用文档、费用说明核验。按PH发布榜事件收录，不将旧文档更新时间写成新功能首发。"
+    },
+    {
+      "id": "src-hf",
+      "name": "Hugging Face Trending",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://huggingface.co/models?sort=trending",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取模型趋势页30个可见条目。MiniCPM-V、Drama 3、LFM2.5等作为线索，未把模型卡更新时间当作正式发布，也未为凑数增加模型参数新闻。"
+    },
+    {
+      "id": "src-pwc",
+      "name": "Papers with Code / HF Papers",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://paperswithcode.com/",
+      "tags": [
+        "daily"
+      ],
+      "note": "Papers with Code跳转到Hugging Face Papers，读取趋势索引；未逐篇核验完整24小时，不把旧论文再上榜写成新论文。"
+    },
+    {
+      "id": "src-aihot",
+      "name": "AI今日热榜",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://aihot.today/",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取aihot.today的10月15日聚合页与科技媒体、HN线索；聚合抓取时刻不当作原始事件时间。"
+    },
+    {
+      "id": "src-reddit",
+      "name": "Reddit / LocalLLaMA",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://www.reddit.com/r/LocalLLaMA/new/",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取LocalLLaMA公开新帖页，页面时间信息不完整；未将其视为完整24小时覆盖，未据此收录。"
+    },
+    {
+      "id": "src-newsletter",
+      "name": "The Rundown AI",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://www.therundown.ai/",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取The Rundown公开首页、最新刊期标题与工具列表；未获取全部订阅邮件，旧工具与重复题材未补入。"
+    },
+    {
+      "id": "src-official",
+      "name": "官方产品文档与发布记录",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://github.com/",
+      "tags": [
+        "daily"
+      ],
+      "note": "5个项目均回作者README、安装文档、产品页核验。重点确认TokenTab估算口径、daily.dev每月200次额度、xtool的WSL与SDK前置条件、Specreel免费档边界和Petal的Windows早期状态。"
+    },
+    {
+      "id": "src-x",
+      "name": "X 原生线索",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://x.com/bozhou_ai",
+      "tags": [
+        "daily"
+      ],
+      "note": "尝试近两日公开X搜索，索引命中不足且出现旧结果；未宣称完整读取X时间线，未据此增加未经验证的热点。"
+    }
+  ],
+  "sourceRuns": [
+    {
+      "id": "src-github",
+      "name": "GitHub Trending / Releases",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 1,
+      "note": "优先读取GitHub原生日榜12项及stars today。xtool当前快照+1,502；VoiceStudio、iFixAi、REA、Context Mode等与历史内容重复，未再收录。"
+    },
+    {
+      "id": "src-trendshift",
+      "name": "Trendshift 实时趋势",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 1,
+      "note": "读取Today前25项，TokenTab为第4项。与GitHub官方Trending分开记录；Anatomy、magpie、PhotoCraft、Orca等按历史去重。"
+    },
+    {
+      "id": "src-hn",
+      "name": "Hacker News / Show HN",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 1,
+      "note": "读取首页30项及候选官网，核对Petal原帖HTML绝对时间2026-10-14T18:23:14 UTC。OpenCode 2.0的首发时间证据有冲突，未用新HN讨论时间代替产品发布时间。"
+    },
+    {
+      "id": "src-ph",
+      "name": "Product Hunt 发布榜",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 2,
+      "note": "读取10月14日日榜17项，选入Specreel和daily.dev for agents，并回官方README、使用文档、费用说明核验。按PH发布榜事件收录，不将旧文档更新时间写成新功能首发。"
+    },
+    {
+      "id": "src-hf",
+      "name": "Hugging Face Trending",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 0,
+      "note": "读取模型趋势页30个可见条目。MiniCPM-V、Drama 3、LFM2.5等作为线索，未把模型卡更新时间当作正式发布，也未为凑数增加模型参数新闻。"
+    },
+    {
+      "id": "src-pwc",
+      "name": "Papers with Code / HF Papers",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "Papers with Code跳转到Hugging Face Papers，读取趋势索引；未逐篇核验完整24小时，不把旧论文再上榜写成新论文。"
+    },
+    {
+      "id": "src-aihot",
+      "name": "AI今日热榜",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 0,
+      "note": "读取aihot.today的10月15日聚合页与科技媒体、HN线索；聚合抓取时刻不当作原始事件时间。"
+    },
+    {
+      "id": "src-reddit",
+      "name": "Reddit / LocalLLaMA",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "读取LocalLLaMA公开新帖页，页面时间信息不完整；未将其视为完整24小时覆盖，未据此收录。"
+    },
+    {
+      "id": "src-newsletter",
+      "name": "The Rundown AI",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "读取The Rundown公开首页、最新刊期标题与工具列表；未获取全部订阅邮件，旧工具与重复题材未补入。"
+    },
+    {
+      "id": "src-official",
+      "name": "官方产品文档与发布记录",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 0,
+      "note": "5个项目均回作者README、安装文档、产品页核验。重点确认TokenTab估算口径、daily.dev每月200次额度、xtool的WSL与SDK前置条件、Specreel免费档边界和Petal的Windows早期状态。"
+    },
+    {
+      "id": "src-x",
+      "name": "X 原生线索",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "尝试近两日公开X搜索，索引命中不足且出现旧结果；未宣称完整读取X时间线，未据此增加未经验证的热点。"
+    }
+  ],
+  "items": [
+    {
+      "id": "x-2026-10-15-specreel",
+      "title": "Specreel：把产品测试记录变成会随版本更新的演示",
+      "url": "https://specreel.dev/",
+      "publishedAt": "2026-10-14",
+      "observedAt": "2026-10-15T10:58:28+08:00",
+      "category": "产品演示与内容创作",
+      "summary": "进入10月14日PH发布榜。开源CLI把Playwright trace.zip渲染为可分享演示、单文件画廊或MP4；接入CI后，每次测试通过都能重新生成。Cloud也提供粘贴网址、发现演示流程的入口。",
+      "whyItMatters": "产品按钮和页面改动后，可用同一条真实操作流程重建演示，减少教程录屏与当前界面不一致；适合已经有端到端测试的独立产品。",
+      "angles": [
+        "产品刚改了一个按钮，介绍视频又得重录？先看看测试里已经录下了什么。"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt 发布榜 / 一手核验",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "官方代码与用法",
+          "url": "https://github.com/specreel/specreel"
+        },
+        {
+          "name": "官网费用说明",
+          "url": "https://specreel.dev/#pricing"
+        },
+        {
+          "name": "PH发布页",
+          "url": "https://www.producthunt.com/products/specreel"
+        },
+        {
+          "name": "当日发布榜",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/10/14"
+        }
+      ],
+      "practicality": 92,
+      "socialPotential": 92,
+      "novelty": 88,
+      "importance": 86,
+      "radarScore": 90,
+      "signalType": "product-hunt-launch",
+      "datePrecision": "day",
+      "freshnessEvidence": "Product Hunt的2026-10-14日榜列出Specreel。该榜单日从北京时间10月14日15:00起，本轮抓取时已出现，处于滚动24小时窗口；按PH发布榜事件记到日，不虚构首发分钟。",
+      "quickStart": [
+        "已有Playwright测试时打开trace记录与screenshots，确保产出包含画面的trace.zip。",
+        "pip install specreel；运行specreel path/to/trace.zip -o out，生成自包含demo.html。批量流程可用specreel test-results/ -o site/ --bundle。",
+        "需要MP4时安装specreel[mp4]并加--mp4；没有测试可从Cloud粘贴自己的产品网址，或用specreel recommend <url>生成流程脚本。"
+      ],
+      "costAndLimits": "CLI采用AGPL-3.0，免费本地运行；默认字幕按操作记录生成，不调用AI。AI改写字幕需自备Anthropic Key并另付调用费。Cloud免费1个项目；前14天含Team试用，Team当前39美元/月，定时检查与提醒属于Team，不能写成永久免费自动巡检。MP4额外依赖见官方安装说明。"
+    },
+    {
+      "id": "x-2026-10-15-tokentab",
+      "title": "TokenTab：把Claude Code、Codex和Gemini CLI的用量摊开看",
+      "url": "https://github.com/yakuikai/tokentab",
+      "publishedAt": "2026-10-15",
+      "observedAt": "2026-10-15T10:58:28+08:00",
+      "category": "Agent用量与成本",
+      "summary": "本轮Trendshift Today第4项。读取本地会话日志，按模型、项目、日期和活动汇总Token与估算费用，提供终端表格及本地网页看板；不需要账号或API Key。",
+      "whyItMatters": "同时使用多个Coding Agent时，可以查明哪个项目、哪类任务消耗最多，再挑具体会话检查上下文、模型选择和反复重试。",
+      "angles": [
+        "额度掉得快，先查是哪个项目在吃，再讨论换模型。"
+      ],
+      "source": {
+        "id": "src-trendshift",
+        "name": "Trendshift 实时趋势 / 一手核验",
+        "tier": "A",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "今日趋势",
+          "url": "https://trendshift.io/"
+        },
+        {
+          "name": "官方README",
+          "url": "https://github.com/yakuikai/tokentab/blob/main/README.md"
+        },
+        {
+          "name": "价格表",
+          "url": "https://github.com/yakuikai/tokentab/blob/main/tokentab/pricing/prices.py"
+        }
+      ],
+      "practicality": 93,
+      "socialPotential": 89,
+      "novelty": 85,
+      "importance": 87,
+      "radarScore": 89,
+      "signalType": "trending-observation",
+      "datePrecision": "day",
+      "freshnessEvidence": "2026-10-15读取Trendshift Today，TokenTab位列第4。只记录当日趋势观察，未宣称今日首发或GitHub官方榜单排名。",
+      "quickStart": [
+        "准备Python环境，运行git clone https://github.com/yakuikai/tokentab，然后进入tokentab目录并执行pip install .。",
+        "运行python cli.py -today查看今天；python cli.py -web打开本地看板，默认地址http://localhost:4747。",
+        "先按项目和模型定位高用量，再回原始会话看原因；活动分类只作为线索，不直接下效率结论。"
+      ],
+      "costAndLimits": "MIT免费，本地读取现有日志，无额外模型调用。价格表由项目人工维护，费用是按Token单价估算，不是订阅账单或剩余额度；未知模型显示$0.00不代表免费。Cursor目前只有未完成的占位适配，不能写成已支持。"
+    },
+    {
+      "id": "x-2026-10-15-daily-dev-agents",
+      "title": "daily.dev for agents：让AI按你的技术兴趣筛文章和讨论",
+      "url": "https://docs.daily.dev/mcp-server/",
+      "publishedAt": "2026-10-14",
+      "observedAt": "2026-10-15T10:58:28+08:00",
+      "category": "信息筛选与MCP",
+      "summary": "进入10月14日PH发布榜。官方远程MCP可读取个性化信息流、搜索文章与评论、访问书签；Claude Code、Cursor、Codex等可连接，支持通过daily.dev账号登录授权。",
+      "whyItMatters": "围绕一个选题，让Agent先筛少量相关资料、列出原链接和评论里的争议点，再决定读哪篇；把泛泛“总结今日AI新闻”变成有筛选标准的资料清单。",
+      "angles": [
+        "给AI接资讯源之后，提示词要先写清楚哪些东西不要。"
+      ],
+      "source": {
+        "id": "src-ph",
+        "name": "Product Hunt 发布榜 / 一手核验",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "官方API额度",
+          "url": "https://docs.daily.dev/welcome-to-the-daily-dev-api/"
+        },
+        {
+          "name": "PH本次发布",
+          "url": "https://www.producthunt.com/products/daily-dev"
+        },
+        {
+          "name": "当日发布榜",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/10/14"
+        }
+      ],
+      "practicality": 90,
+      "socialPotential": 87,
+      "novelty": 86,
+      "importance": 87,
+      "radarScore": 88,
+      "signalType": "product-hunt-launch",
+      "datePrecision": "day",
+      "freshnessEvidence": "Product Hunt的2026-10-14日榜列出daily.dev for agents，位列第4。按本次PH发布榜事件收录；MCP文档更新于10月13日，API更早存在，不将发布榜日期说成接口首次可用日期。",
+      "quickStart": [
+        "Claude Code运行claude mcp add --transport http daily.dev https://api.daily.dev/mcp，再在会话输入/mcp完成登录；其他客户端按官方文档配置同一URL。",
+        "第一次只读信息流即可，OAuth授权页可以拒绝write权限；无需为了查资料开放收藏或改筛选规则。",
+        "给出具体任务：只找与我的技术栈相关、过去24小时出现的3篇实操文章；每篇保留原链接、一个可执行步骤和一个使用限制，不足3篇就少给。"
+      ],
+      "costAndLimits": "MCP连接本身免费，免费账号每月200次API请求；每次工具调用计1次，MCP与个人Token共用额度。Plus提高额度，所用AI客户端或模型费用另算。当前仍为Beta、逐步开放，不能保证所有账号立刻可接入。文章详情与社区讨论也不能代替阅读原文核验。"
+    },
+    {
+      "id": "x-2026-10-15-xtool",
+      "title": "xtool：用Windows或Linux构建并装上自己的iOS App",
+      "url": "https://github.com/xtool-org/xtool",
+      "publishedAt": "2026-10-15",
+      "observedAt": "2026-10-15T10:58:28+08:00",
+      "category": "跨平台开发与个人App",
+      "summary": "本轮GitHub原生日榜快照显示+1,502 stars today。可将SwiftPM项目构建为iOS App，并完成签名、安装和设备操作；Windows通过WSL使用，Linux与macOS也有官方路径。",
+      "whyItMatters": "只有Windows电脑但想做一个自己用的iPhone小工具时，可以从SwiftPM模板走到真机运行；适合先完成最小原型，再判断后续开发投入。",
+      "angles": [
+        "Windows写iPhone App已经有路可走，但入口里的WSL和SDK要求要先看清。"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Trending / Releases / 一手核验",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "GitHub今日趋势",
+          "url": "https://github.com/trending"
+        },
+        {
+          "name": "Linux与Windows安装",
+          "url": "https://github.com/xtool-org/xtool/blob/main/Documentation/xtool.docc/Installation-Linux.md"
+        },
+        {
+          "name": "首个App教程",
+          "url": "https://xtool.sh/tutorials/xtooldocs/first-app"
+        },
+        {
+          "name": "官方发行包",
+          "url": "https://github.com/xtool-org/xtool/releases"
+        }
+      ],
+      "practicality": 83,
+      "socialPotential": 93,
+      "novelty": 85,
+      "importance": 82,
+      "radarScore": 86,
+      "signalType": "trending-observation",
+      "datePrecision": "day",
+      "freshnessEvidence": "2026-10-15优先读取GitHub Trending Daily原生列表，xtool快照为+1,502 stars today。事件是今日热度观察；项目并非今日首次发布。安装条件回仓库当前官方文档逐项核验。",
+      "quickStart": [
+        "Windows先准备WSL与USB透传；按官方文档安装Swift工具链和usbmuxd，确认WSL能识别iPhone。",
+        "从Apple官方开发者下载页获取文档要求的Xcode.xip，再安装对应架构的xtool AppImage并运行xtool setup，配置账号和SDK。",
+        "运行xtool new创建模板，进入项目运行xtool dev，在手机完成配对、开发者模式和证书信任；先把默认页面跑通，再加实际功能。"
+      ],
+      "costAndLimits": "xtool本身MIT免费，但仍需Apple账号、从官方获取的Xcode SDK与真机；Windows不是原生双击即用，需WSL/USB透传。API Key登录路径要求付费开发者会员，密码路径支持普通Apple ID但依赖私有接口。本文只验证SwiftPM构建与真机安装能力，不承诺完整替代Xcode、任意工程兼容或免费App Store上架。"
+    },
+    {
+      "id": "x-2026-10-15-petal",
+      "title": "Petal：把同事共享的窗口直接摆到自己桌面上",
+      "url": "https://petal.live/",
+      "publishedAt": "2026-10-15T02:23:14+08:00",
+      "observedAt": "2026-10-15T10:58:28+08:00",
+      "category": "远程协作与屏幕共享",
+      "summary": "本轮Show HN出现Petal。支持同时共享多个窗口，每个远端窗口在接收者桌面上独立移动、缩放，可显示指针、临时画线，并在授权后远程操作；提供macOS、Windows客户端下载和浏览器加入入口。",
+      "whyItMatters": "一起排查网页问题时，可以把同事的浏览器窗口放在自己的编辑器旁，直接指到出错位置；不用来回说“再往下一点、点左边那个”。",
+      "angles": [
+        "远程排查最耗人的一句话：你把鼠标再往左一点。"
+      ],
+      "source": {
+        "id": "src-hn",
+        "name": "Hacker News / Show HN / 一手核验",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "官方代码与平台状态",
+          "url": "https://github.com/kiruna-labs/petal"
+        },
+        {
+          "name": "用户文档",
+          "url": "https://petal.live/docs/"
+        },
+        {
+          "name": "原始Show HN",
+          "url": "https://news.ycombinator.com/item?id=50092470"
+        }
+      ],
+      "practicality": 86,
+      "socialPotential": 89,
+      "novelty": 84,
+      "importance": 81,
+      "radarScore": 86,
+      "signalType": "show-hn",
+      "datePrecision": "second",
+      "freshnessEvidence": "Show HN原帖HTML记录2026-10-14T18:23:14 UTC，即北京时间10月15日02:23:14，位于本轮窗口。记录社区展示事件，不声称项目当日创建；功能与成熟度按作者README核验。",
+      "quickStart": [
+        "从官网安装客户端；macOS需要13或更新版本，Windows当前为早期版本。",
+        "创建固定房间，邀请对方加入；先只共享需要讨论的浏览器或编辑器窗口，把远端窗口摆到自己的工作区旁边。",
+        "先用指针和画线说明问题，需要代操作时再由共享者批准控制请求；未装客户端的人可以通过浏览器邀请入口加入。"
+      ],
+      "costAndLimits": "Apache-2.0开源，官网当前标注免费；自建LiveKit后端需承担服务器成本。项目尚未到1.0，远程控制仍早期；官方明确Windows功能不完整、有Bug且安装包尚无Authenticode签名，macOS更成熟。Linux桌面端仍在计划中。可选Gemini窗口聊天默认关闭，不属于免费无限模型额度。"
+    }
+  ]
+}
