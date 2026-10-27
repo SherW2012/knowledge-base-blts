@@ -73,6 +73,9 @@
     const originalTitle = cleanText(item.title || "未命名情报");
     const why = cleanText(item.whyItMatters || "");
     const angles = (item.angles || []).map(cleanText).filter(Boolean);
+    const quickStart = (item.quickStart || []).map(cleanText).filter(Boolean);
+    const costAndLimits = cleanText(item.costAndLimits || "");
+    const freshnessEvidence = cleanText(item.freshnessEvidence || "");
     return `
       <article class="radar-card" data-item-id="${escapeHtml(item.id)}">
         <div class="radar-card-top">
@@ -100,11 +103,14 @@
           </div>
         </div>
 
-        ${(why || angles.length) ? `
+        ${(why || angles.length || quickStart.length || costAndLimits || freshnessEvidence) ? `
           <details class="radar-detail">
             <summary>展开分析</summary>
             ${why ? `<div class="radar-why"><span>为什么值得看</span><p>${escapeHtml(why)}</p></div>` : ""}
             ${angles.length ? `<div class="radar-angles"><span>可做选题</span><ul>${angles.map((angle) => `<li>${escapeHtml(angle)}</li>`).join("")}</ul></div>` : ""}
+            ${quickStart.length ? `<div class="radar-angles"><span>如何开始</span><ol>${quickStart.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}</ol></div>` : ""}
+            ${costAndLimits ? `<div class="radar-why"><span>费用与限制</span><p>${escapeHtml(costAndLimits)}</p></div>` : ""}
+            ${freshnessEvidence ? `<div class="radar-why"><span>时间与来源依据</span><p>${escapeHtml(freshnessEvidence)}</p></div>` : ""}
             <div class="radar-metrics">
               <span>实用 ${escapeHtml(item.practicality ?? "—")}</span>
               <span>重要 ${escapeHtml(item.importance ?? "—")}</span>
