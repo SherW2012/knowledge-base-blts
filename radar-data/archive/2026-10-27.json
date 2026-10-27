@@ -1,0 +1,460 @@
+{
+  "schemaVersion": 3,
+  "status": "partial",
+  "generatedAt": "2026-10-27T17:10:34+08:00",
+  "date": "2026-10-27",
+  "timezone": "Asia/Shanghai",
+  "focus": "x-useful-viral-actionable",
+  "periodType": "daily",
+  "periodLabel": "今日雷达｜10月27日",
+  "displayTitle": "今日雷达｜10月27日",
+  "periodDescription": "5条去重精选｜北京时间10月26日 17:10—10月27日 17:10。均为 GitHub 当日趋势观察，非项目首发。",
+  "periodNote": "已阅读项目官方说明并核对安装入口、开源许可与费用边界；未实际安装。",
+  "research": {
+    "mode": "editorial web research",
+    "provider": "ChatGPT Web + GitHub primary README",
+    "externalLlmApi": false,
+    "windowStart": "2026-10-26T17:10:34+08:00",
+    "windowEnd": "2026-10-27T17:10:34+08:00",
+    "backfill": false,
+    "notes": [
+      "优先扫描 GitHub Daily；今日抓取的 Trending 是热度快照，不是项目创建或首次发布时间。",
+      "核对31份现存历史归档的标题和链接；Agent Reach 已在9月15日收录，因此排除。",
+      "GitHub README 用于核验用途和使用条件，未安装运行，未把作者宣传写成实测结果。",
+      "X、Reddit、PH免费额度核验受限，标注 partial；其他发现来源未因没有高质量候选而凑数。",
+      "评分权重：实用35%、传播30%、新鲜20%、实际影响15%。"
+    ]
+  },
+  "stats": {
+    "configuredSources": 10,
+    "automatedSources": 0,
+    "manualSources": 10,
+    "successfulSources": 4,
+    "partialSources": 6,
+    "failedSources": 0,
+    "researchItems": 5,
+    "eventClusters": 5,
+    "publishedItems": 5
+  },
+  "sources": [
+    {
+      "id": "src-github",
+      "name": "GitHub Trending Daily",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://github.com/trending",
+      "tags": [
+        "daily"
+      ],
+      "note": "优先读取原生 Daily 榜，记录网页检索返回的当日趋势快照；数值会变化，不把上榜写成产品首次发布。"
+    },
+    {
+      "id": "src-hn",
+      "name": "Hacker News",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://news.ycombinator.com/",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取首页及10月26日归档；对本轮候选未发现需要重复收录的额外产品。"
+    },
+    {
+      "id": "src-ph",
+      "name": "Product Hunt 日榜",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/26",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取10月26日榜。SurgePix提供免费选项，但官网价格页面无法读取，免费额度和限制不足以确认，暂不收录。"
+    },
+    {
+      "id": "src-hf",
+      "name": "Hugging Face Trending",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://huggingface.co/models?sort=trending",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取模型趋势列表；模型卡更新不等同于发布，未把参数新闻硬塞进实用工具雷达。"
+    },
+    {
+      "id": "src-reddit",
+      "name": "Reddit / LocalLLaMA",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://www.reddit.com/r/LocalLLaMA/new/",
+      "tags": [
+        "daily"
+      ],
+      "note": "读取公开新帖，页面未提供可完整核验的24小时覆盖；未据此添加候选。"
+    },
+    {
+      "id": "src-x",
+      "name": "X 原生线索",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://x.com/",
+      "tags": [
+        "daily"
+      ],
+      "note": "通过公开网页搜索候选名称，结果陈旧或无关，未宣称读取时间线和近24小时帖子。"
+    },
+    {
+      "id": "src-official",
+      "name": "项目官方文档",
+      "tier": "S",
+      "kind": "web_research",
+      "url": "https://github.com/",
+      "tags": [
+        "daily"
+      ],
+      "note": "逐项阅读5个项目README核验安装、授权、平台和费用；未实际安装或亲测效果。"
+    },
+    {
+      "id": "src-aihot",
+      "name": "AI HOT / 工具聚合",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://aihot.tech/new/",
+      "tags": [
+        "daily"
+      ],
+      "note": "检索聚合线索，未逐条完整核验滚动24小时。"
+    },
+    {
+      "id": "src-papers",
+      "name": "Hugging Face Papers",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://huggingface.co/papers",
+      "tags": [
+        "daily"
+      ],
+      "note": "检索论文线索但未完成独立论文榜全量核验，不标为完整覆盖。"
+    },
+    {
+      "id": "src-newsletter",
+      "name": "公开 AI 资讯",
+      "tier": "A",
+      "kind": "web_research",
+      "url": "https://futuretools.io/news",
+      "tags": [
+        "daily"
+      ],
+      "note": "公开资讯用于发现线索，未读取完整订阅邮件。"
+    }
+  ],
+  "sourceRuns": [
+    {
+      "id": "src-github",
+      "name": "GitHub Trending Daily",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 5,
+      "note": "优先读取原生 Daily 榜，记录网页检索返回的当日趋势快照；数值会变化，不把上榜写成产品首次发布。"
+    },
+    {
+      "id": "src-hn",
+      "name": "Hacker News",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 0,
+      "note": "读取首页及10月26日归档；对本轮候选未发现需要重复收录的额外产品。"
+    },
+    {
+      "id": "src-ph",
+      "name": "Product Hunt 日榜",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "读取10月26日榜。SurgePix提供免费选项，但官网价格页面无法读取，免费额度和限制不足以确认，暂不收录。"
+    },
+    {
+      "id": "src-hf",
+      "name": "Hugging Face Trending",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 0,
+      "note": "读取模型趋势列表；模型卡更新不等同于发布，未把参数新闻硬塞进实用工具雷达。"
+    },
+    {
+      "id": "src-reddit",
+      "name": "Reddit / LocalLLaMA",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "读取公开新帖，页面未提供可完整核验的24小时覆盖；未据此添加候选。"
+    },
+    {
+      "id": "src-x",
+      "name": "X 原生线索",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "通过公开网页搜索候选名称，结果陈旧或无关，未宣称读取时间线和近24小时帖子。"
+    },
+    {
+      "id": "src-official",
+      "name": "项目官方文档",
+      "tier": "S",
+      "kind": "web_research",
+      "status": "ok",
+      "items": 0,
+      "note": "逐项阅读5个项目README核验安装、授权、平台和费用；未实际安装或亲测效果。"
+    },
+    {
+      "id": "src-aihot",
+      "name": "AI HOT / 工具聚合",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "检索聚合线索，未逐条完整核验滚动24小时。"
+    },
+    {
+      "id": "src-papers",
+      "name": "Hugging Face Papers",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "检索论文线索但未完成独立论文榜全量核验，不标为完整覆盖。"
+    },
+    {
+      "id": "src-newsletter",
+      "name": "公开 AI 资讯",
+      "tier": "A",
+      "kind": "web_research",
+      "status": "partial",
+      "items": 0,
+      "note": "公开资讯用于发现线索，未读取完整订阅邮件。"
+    }
+  ],
+  "items": [
+    {
+      "id": "x-2026-10-27-huashu",
+      "title": "Huashu Design：让 Agent 先给你看三个设计方向，再做 PPT 和网页",
+      "url": "https://github.com/alchaincyf/huashu-design",
+      "publishedAt": "2026-10-27",
+      "observedAt": "2026-10-27T17:10:34+08:00",
+      "category": "设计 Skill",
+      "summary": "中文设计 Skill，可生成网页、App 原型、信息图和 HTML 幻灯片，并可导出可编辑 PPTX；作者提供84种带样张的风格。",
+      "whyItMatters": "先用同一个培训主题比较三个视觉方向，选中后再继续做全套，可以减少整套做完才发现风格不对的返工。",
+      "angles": [
+        "一份 PPT 先出三个方向，选完再做整套。"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Trending Daily / 官方 README",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "GitHub 当日趋势",
+          "url": "https://github.com/trending"
+        },
+        {
+          "name": "项目 README",
+          "url": "https://github.com/alchaincyf/huashu-design#readme"
+        }
+      ],
+      "practicality": 94,
+      "socialPotential": 94,
+      "novelty": 83,
+      "importance": 88,
+      "radarScore": 91,
+      "signalType": "trending-observation",
+      "datePrecision": "day",
+      "freshnessEvidence": "网页检索返回 GitHub Trending Today 快照，页面标注今日抓取：该项目显示 +251 stars today。此处记录10月27日趋势观察，不把上榜时间写成项目首发时间；榜单和数字会变化。",
+      "quickStart": [
+        "安装 Node.js 后运行 npx skills add alchaincyf/huashu-design。",
+        "在支持 Skill 的 Agent 中输入：做一份 WorkBuddy 入门培训 PPT，先给三个视觉方向。",
+        "安装后检查 references、assets、scripts、demos 是否齐全，再挑选方向；导出后在 PowerPoint 逐页检查可编辑性。"
+      ],
+      "costAndLimits": "MIT，个人和商用可免费使用；Skill 本身不等于免费模型，Agent 或 API 费用另算。作者称核心设计和导出可本地运行，可选云功能需自备 Key。PPTX 可编辑文本框不代表复杂元素都能完整还原；README 同时列出不支持图层级可编辑 PPTX 到 Figma 等限制。"
+    },
+    {
+      "id": "x-2026-10-27-hallmark",
+      "title": "Hallmark：给 AI 加一套“去模板味”的网页设计 Skill",
+      "url": "https://github.com/Nutlope/hallmark",
+      "publishedAt": "2026-10-27",
+      "observedAt": "2026-10-27T17:10:34+08:00",
+      "category": "网页设计 Skill",
+      "summary": "为 Claude Code、Codex、Cursor、OpenCode 提供网页设计规则；提供48套主题，支持指定已有页面做 redesign 或 audit。",
+      "whyItMatters": "做个人网站时，先看实际主题样例，再让 Agent 基于真实内容生成或审查页面，减少同一种模板反复出现。",
+      "angles": [
+        "你的 AI 网站为什么总像同一个模板？先让它审查一遍。"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Trending Daily / 官方 README",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "GitHub 当日趋势",
+          "url": "https://github.com/trending"
+        },
+        {
+          "name": "项目 README",
+          "url": "https://github.com/Nutlope/hallmark#readme"
+        }
+      ],
+      "practicality": 92,
+      "socialPotential": 92,
+      "novelty": 83,
+      "importance": 84,
+      "radarScore": 89,
+      "signalType": "trending-observation",
+      "datePrecision": "day",
+      "freshnessEvidence": "网页检索返回 GitHub Trending Today 快照，页面标注今日抓取：该项目显示 +2,244 stars today。此处记录10月27日趋势观察，不把上榜时间写成项目首发时间；榜单和数字会变化。",
+      "quickStart": [
+        "打开 https://www.usehallmark.com/themes/ 浏览样式。",
+        "Node 18+ 环境运行 npx skills add nutlope/hallmark；需要全局安装时按 README 加 -g。",
+        "在兼容 Agent 里请求新页面，或按客户端调用 /hallmark audit ./index.html 审查已有页面。"
+      ],
+      "costAndLimits": "MIT，Skill 可免费使用；所用 Agent 或模型费用另算。完整浏览器渲染检查需 Chrome 和 puppeteer-core；不安装时仍可运行静态检查。检查项不是效果保证。"
+    },
+    {
+      "id": "x-2026-10-27-cindy",
+      "title": "Cindy：在一个桌面里使用 Codex、Claude Code 和自己的文件",
+      "url": "https://github.com/makecindy/cindy",
+      "publishedAt": "2026-10-27",
+      "observedAt": "2026-10-27T17:10:34+08:00",
+      "category": "桌面 Agent",
+      "summary": "开源桌面与移动客户端，将 Claude Code、Codex 等 Agent 及工具放进同一工作空间，提供记忆、Skill 和自动化入口。",
+      "whyItMatters": "已经同时用多个 Agent 时，可以尝试把一个实际任务留在同一工作空间处理，而不是反复搬运上下文。",
+      "angles": [
+        "把不同 Coding Agent 放进一个工作台，能不能少复制几次？"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Trending Daily / 官方 README",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "GitHub 当日趋势",
+          "url": "https://github.com/trending"
+        },
+        {
+          "name": "项目 README",
+          "url": "https://github.com/makecindy/cindy#readme"
+        }
+      ],
+      "practicality": 89,
+      "socialPotential": 90,
+      "novelty": 83,
+      "importance": 86,
+      "radarScore": 88,
+      "signalType": "trending-observation",
+      "datePrecision": "day",
+      "freshnessEvidence": "网页检索返回 GitHub Trending Today 快照，页面标注今日抓取：该项目显示 +1,296 stars today。此处记录10月27日趋势观察，不把上榜时间写成项目首发时间；榜单和数字会变化。",
+      "quickStart": [
+        "打开 https://cindy.app/download/ 选择对应系统的安装包。",
+        "首次进入可按 README 选择 Skip Sign-In 使用本地 Agent，或登录官方服务。",
+        "先在测试文件夹里连接已有 Agent，让它整理几份公开资料，检查实际访问范围和结果。"
+      ],
+      "costAndLimits": "客户端 Apache-2.0 开源且免费；后端不在仓库中，官方云服务有自己的计费。使用既有订阅、自带 API 或本地模型时，分别受对应服务条款、额度与计算资源限制；跳过登录不可使用依赖服务器的功能。"
+    },
+    {
+      "id": "x-2026-10-27-thinkrail",
+      "title": "ThinkRail：把 Agent 对话、代码修改和工作区放在同一个界面",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "publishedAt": "2026-10-27",
+      "observedAt": "2026-10-27T17:10:34+08:00",
+      "category": "AI 编程工作台",
+      "summary": "JetBrains 孵化项目，以 pi 编程 Agent 为核心，集成文件、终端、改动对比和基于 Git worktree 的独立工作区，内置简体中文界面。",
+      "whyItMatters": "让 Agent 改一个小功能时，可以一边查看它的对话，一边检查具体代码差异；不同方案使用独立工作区，便于比较。",
+      "angles": [
+        "让 Agent 改代码时，我更想先看它到底动了哪几行。"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Trending Daily / 官方 README",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "GitHub 当日趋势",
+          "url": "https://github.com/trending"
+        },
+        {
+          "name": "项目 README",
+          "url": "https://github.com/JetBrains/thinkrail#readme"
+        }
+      ],
+      "practicality": 87,
+      "socialPotential": 86,
+      "novelty": 82,
+      "importance": 84,
+      "radarScore": 85,
+      "signalType": "trending-observation",
+      "datePrecision": "day",
+      "freshnessEvidence": "网页检索返回 GitHub Trending Today 快照，页面标注今日抓取：该项目显示 +1,173 stars today。此处记录10月27日趋势观察，不把上榜时间写成项目首发时间；榜单和数字会变化。",
+      "quickStart": [
+        "打开 https://github.com/JetBrains/thinkrail/releases 下载适合系统的桌面安装包；Windows 解压完整 ZIP 后运行安装程序。",
+        "准备 Git 仓库和可用模型供应商，打开项目并连接自己的账号或凭据。",
+        "从小改动开始，在界面查看对话和 diff；确认结果再自行决定是否合并。"
+      ],
+      "costAndLimits": "Apache-2.0，客户端开源；需要 JetBrains AI 或其他模型供应商，模型费用及免费额度以相应服务为准。Windows x64 可用；这是孵化项目，使用情况统计及错误报告的范围和开关见 README。"
+    },
+    {
+      "id": "x-2026-10-27-skillspector",
+      "title": "SkillSpector：装新 Skill 前，先扫描有没有可疑指令",
+      "url": "https://github.com/NVIDIA/SkillSpector",
+      "publishedAt": "2026-10-27",
+      "observedAt": "2026-10-27T17:10:34+08:00",
+      "category": "Skill 安全检查",
+      "summary": "NVIDIA 的扫描器可检查 Skill 文件夹、单个文件、Git 仓库或 ZIP，提供静态检查和可选的模型语义分析。",
+      "whyItMatters": "从网上收藏 Skill 后，可以先生成一份检查报告，找出可疑的数据外传、命令或提示注入线索，再决定是否安装。",
+      "angles": [
+        "好用的 Skill 装之前，先看看它准备访问什么。"
+      ],
+      "source": {
+        "id": "src-github",
+        "name": "GitHub Trending Daily / 官方 README",
+        "tier": "S",
+        "kind": "primary"
+      },
+      "relatedSources": [
+        {
+          "name": "GitHub 当日趋势",
+          "url": "https://github.com/trending"
+        },
+        {
+          "name": "项目 README",
+          "url": "https://github.com/NVIDIA/SkillSpector#readme"
+        }
+      ],
+      "practicality": 88,
+      "socialPotential": 86,
+      "novelty": 82,
+      "importance": 88,
+      "radarScore": 86,
+      "signalType": "trending-observation",
+      "datePrecision": "day",
+      "freshnessEvidence": "网页检索返回 GitHub Trending Today 快照，页面标注今日抓取：该项目显示 +214 stars today。此处记录10月27日趋势观察，不把上榜时间写成项目首发时间；榜单和数字会变化。",
+      "quickStart": [
+        "准备 Python 3.12+ 与 uv，运行 uv tool install git+https://github.com/NVIDIA/skillspector.git。",
+        "执行 skillspector scan ./my-skill/ --no-llm 扫描本地文件夹，或传入仓库地址。",
+        "按报告定位可疑内容并人工阅读；需要语义分析时再按文档配置模型。"
+      ],
+      "costAndLimits": "Apache-2.0，静态扫描可免费使用；可选模型分析需自行配置服务，可能产生模型费用。扫描可能误报或漏报，不能把通过报告当作安全保证；项目会安装第三方依赖。"
+    }
+  ]
+}
